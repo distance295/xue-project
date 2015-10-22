@@ -19,6 +19,7 @@ p{
   padding-right: @LRpadding;
 }
 .que{
+  float:left;
   background-color: rgb(255,255,255);
   padding: 0;
   .que-tips{
@@ -85,5 +86,43 @@ p{
   .explanace{
     font-weight: normal;
     color:#333;
+  }
+  .img-answer{
+    margin: 0;
+    vertical-align: top;
+    display:inline-block;
+  }
+  .que-answer-exp{
+    font-weight: bold;
+  }
+}
+
+.que-img{
+  padding: 0.9rem @LRpadding;
+  .que-voice{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 4.8rem;
+    height: 1.6rem;
+    vertical-align: middle;
+    background-color:rgb(55,188,155);
+    border:rgb(56,188,156);
+    .que-voice-play{
+      position: absolute;
+      top: 25%;
+      left:10%;
+    }
+    .que-voice-img{
+      position: absolute;
+      top: 24%;
+      left:29%;
+    }
+  }
+}
+
+.links{
+  .alert-box{
+    margin-bottom: 0;
   }
 }

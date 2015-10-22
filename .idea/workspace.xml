@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4791af1-7fab-4759-a020-c7598e87be84" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/widget/errorQuestion/img/answer-img.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/widget/errorQuestion/img/arrow_down.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/widget/errorQuestion/img/arrow_up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/widget/errorQuestion/img/vocie-img.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/widget/errorQuestion/img/voice-play.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/widget/errorQuestion/css/ie_project.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/widget/errorQuestion/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/widget/errorQuestion/showError.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/widget/errorQuestion/showLinks.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/widget/errorQuestion/css/error_question.css" afterPath="$PROJECT_DIR$/source/widget/errorQuestion/css/error_question.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/widget/errorQuestion/error_question.html" afterPath="$PROJECT_DIR$/source/widget/errorQuestion/error_question.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/widget/errorQuestion/css/error_question.less" afterPath="$PROJECT_DIR$/source/widget/errorQuestion/css/error_question.less" />
@@ -35,28 +32,28 @@
       <file leaf-file-name="error_question.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/error_question.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.0">
-              <caret line="41" column="12" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="30" />
+            <state vertical-scroll-proportion="-11.172414">
+              <caret line="29" column="37" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="error_question.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="error_question.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/css/error_question.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.2454307">
-              <caret line="86" column="15" selection-start-line="86" selection-start-column="15" selection-end-line="86" selection-end-column="15" />
+            <state vertical-scroll-proportion="-8.344828">
+              <caret line="125" column="21" selection-start-line="125" selection-start-column="21" selection-end-line="125" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="error_question.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/error_question.js">
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/readme.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.19393939">
+              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -67,9 +64,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Html5" />
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="readme" />
+        <option value="Html5" />
       </list>
     </option>
   </component>
@@ -82,8 +80,11 @@
         <option value="$PROJECT_DIR$/source/widget/errorQuestion/error_question.js" />
         <option value="$PROJECT_DIR$/source/widget/errorQuestion/error_question.less" />
         <option value="$PROJECT_DIR$/source/widget/errorQuestion/css/ie_project.css" />
-        <option value="$PROJECT_DIR$/source/widget/errorQuestion/css/error_question.less" />
+        <option value="$PROJECT_DIR$/source/widget/errorQuestion/readme.md" />
+        <option value="$PROJECT_DIR$/source/widget/errorQuestion/showError.html" />
+        <option value="$PROJECT_DIR$/source/widget/errorQuestion/showLinks.html" />
         <option value="$PROJECT_DIR$/source/widget/errorQuestion/error_question.html" />
+        <option value="$PROJECT_DIR$/source/widget/errorQuestion/css/error_question.less" />
       </list>
     </option>
   </component>
@@ -311,8 +312,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1040" extended-state="1" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1920" height="1040" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25132838" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -460,18 +461,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/showError.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.413794">
+          <caret line="18" column="46" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="46" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/showLinks.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.413794">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/error_question.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.0">
-          <caret line="41" column="12" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="30" />
+        <state vertical-scroll-proportion="-11.172414">
+          <caret line="29" column="37" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/css/error_question.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2454307">
-          <caret line="86" column="15" selection-start-line="86" selection-start-column="15" selection-end-line="86" selection-end-column="15" />
+        <state vertical-scroll-proportion="-8.344828">
+          <caret line="125" column="21" selection-start-line="125" selection-start-column="21" selection-end-line="125" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/readme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19393939">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
           <folding />
         </state>
       </provider>
