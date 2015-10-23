@@ -1,0 +1,689 @@
+/**
+ * 新鲜事Style
+ * @author duxinli
+ * @version 4.0
+ */
+.fresh-notCourse {
+  background: #fcfcfc;
+  border: 1px solid #ececec;
+  color: #999999;
+  font-size: 16px;
+  line-height: 125px;
+  text-align: center;
+  overflow: hidden;
+}
+.fresh-list {
+  background: #fff;
+  border-bottom: 1px solid #eaeaea;
+  padding: 12px;
+  overflow: hidden;
+  /** 
+   * 热门新鲜事Style
+   */
+}
+.fresh-list em,
+.fresh-list i {
+  font-style: normal;
+}
+.fresh-list .fresh-avatar {
+  width: 60px;
+  height: 60px;
+  margin: 8px 14px 0 0;
+  display: inline;
+  overflow: hidden;
+}
+.fresh-list .fresh-avatar img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+.fresh-list .fresh-detail {
+  display: block;
+  overflow: hidden;
+  line-height: 30px;
+  font-size: 14px;
+  font-family: "SimSun";
+  color: #333333;
+}
+.fresh-list .fresh-detail .fresh-info-uptop {
+  background: url("img/fresh-uptop.jpg") no-repeat scroll left 7px;
+  padding-left: 21px;
+  vertical-align: text-top;
+}
+.fresh-list .fresh-detail .fresh-text {
+  overflow: hidden;
+}
+.fresh-list .fresh-detail .fresh-text .fresh-course-fans {
+  overflow: hidden;
+  color: #999999;
+}
+.fresh-list .fresh-detail .fresh-text .fresh-course-fans strong {
+  color: #e74c3c;
+  padding-right: 10px;
+}
+.fresh-list .fresh-detail .fresh-text .fresh-course-fans .fresh-course-attention {
+  font-size: 12px;
+}
+.fresh-list .fresh-detail .fresh-text .fresh-course-fans .fresh-course-attention .fresh-attention-btn {
+  background: #ffbc3c;
+  margin-top: 4px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  line-height: 20px;
+  color: #fff;
+  padding: 0 8px;
+}
+.fresh-list .fresh-detail .fresh-text .fresh-course-fans .fresh-course-attention .fresh-attention-btn .fresh-add {
+  font-size: 14px;
+  margin-top: 1px;
+  padding-right: 2px;
+}
+.fresh-list .fresh-detail .fresh-text .fresh-course-fans .fresh-course-attention .fresh-attention-btn:hover {
+  background: #fbae1a;
+}
+.fresh-list .fresh-detail .fresh-text .fresh-course-fans .fresh-course-attention em {
+  float: left;
+}
+.fresh-list .fresh-detail .fresh-text .fresh-course-fans .fresh-course-attention a {
+  float: left;
+  color: #3bafda;
+}
+.fresh-list .fresh-detail .fresh-text .fresh-course-fans .fresh-course-attention a:hover {
+  text-decoration: underline;
+}
+.fresh-list .fresh-detail .fresh-text .fresh-course-fans .fresh-course-attention .fresh-course-line {
+  float: left;
+  padding: 0 5px;
+}
+.fresh-list .fresh-detail .fresh-text .fresh-myname {
+  display: inline;
+  padding-right: 8px;
+}
+.fresh-list .fresh-detail .fresh-text .fresh-v {
+  width: 18px;
+  height: 14px;
+  vertical-align: text-top;
+  margin: 1px 0 0 4px;
+  display: inline-block;
+}
+.fresh-list .fresh-detail .fresh-text .fresh-v.fresh-v-red {
+  background: url('img/freshV_Red.png') no-repeat;
+}
+.fresh-list .fresh-detail .fresh-text .fresh-v.fresh-v-blue {
+  background: url('img/freshV_blue.png') no-repeat;
+}
+.fresh-list .fresh-detail .fresh-text .fresh-v.fresh-v-yellow {
+  background: url('img/freshV_Yellow.png') no-repeat;
+}
+.fresh-list .fresh-detail .fresh-text a {
+  color: #3bafda;
+  text-decoration: none;
+}
+.fresh-list .fresh-detail .fresh-text a:hover {
+  text-decoration: underline;
+}
+.fresh-list .fresh-detail .fresh-text img {
+  vertical-align: -6px;
+}
+.fresh-list .fresh-detail .fresh-text .fresh-info {
+  display: inline;
+}
+.fresh-list .fresh-detail .fresh-text .fresh-info .fresh-Myinfo {
+  padding: 5px 0;
+  line-height: 26px;
+  overflow: hidden;
+  margin: 0;
+  font-size: 12px;
+}
+.fresh-list .fresh-detail .fresh-text .fresh-info.fresh-contact-my {
+  display: block;
+  overflow: hidden;
+}
+.fresh-list .fresh-detail .fresh-media {
+  margin-top: 15px;
+  overflow: hidden;
+}
+.fresh-list .fresh-detail .fresh-media .fresh-media-small-img {
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+  min-width: 36px;
+  text-align: center;
+  position: relative;
+  cursor: url("img/big.cur"), auto !important;
+}
+.fresh-list .fresh-detail .fresh-media .fresh-media-small-img .fresh-examIcon {
+  background: url("img/fresh-exam.gif") no-repeat;
+  display: inline-block;
+  height: 41px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 41px;
+  z-index: 10;
+}
+.fresh-list .fresh-detail .fresh-media .fresh-media-small-img .fresh-examIcon.fresh-examIcon-error {
+  background: url("img/fresh-exam-error.gif") no-repeat;
+}
+.fresh-list .fresh-detail .fresh-media .fresh-media-small-img .fresh-examIcon.fresh-examIcon-right {
+  background: url("img/fresh-exam-right.gif") no-repeat;
+}
+.fresh-list .fresh-detail .fresh-media .fresh-media-small-img img {
+  max-width: 200px;
+  vertical-align: top;
+}
+.fresh-list .fresh-detail .fresh-media .fresh-media-small-img.fresh-media-small-video img {
+  cursor: pointer;
+  height: 150px;
+  width: 200px;
+}
+.fresh-list .fresh-detail .fresh-media .fresh-media-small-img.fresh-media-small-video .fresh-video-play {
+  background: url("img/fresh_videoplay.png") no-repeat;
+  display: block;
+  height: 57px;
+  left: 50%;
+  margin: -28px 0 0 -28px;
+  position: absolute;
+  top: 50%;
+  width: 57px;
+  z-index: 100;
+}
+.fresh-list .fresh-detail .fresh-media .fresh-media-small-img.fresh-media-small-video .fresh-video-play:hover {
+  background: url("img/fresh_videoplay_hover.png") no-repeat;
+}
+.fresh-list .fresh-detail .fresh-media-expand {
+  border: 1px solid #eaeaea;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  cursor: url("img/small.cur"), auto !important;
+}
+.fresh-list .fresh-detail .fresh-media-expand .fresh-big-sign-exam {
+  overflow: hidden;
+  text-align: center;
+  padding-top: 20px;
+}
+.fresh-list .fresh-detail .fresh-media-expand .fresh-big-sign-exam img {
+  max-width: 100%;
+}
+.fresh-list .fresh-detail .fresh-media-expand .fresh-big-analysis {
+  overflow: hidden;
+}
+.fresh-list .fresh-detail .fresh-media-expand .fresh-big-analysis strong {
+  font-weight: bold;
+  line-height: 40px;
+  text-align: left;
+  overflow: hidden;
+  display: block;
+}
+.fresh-list .fresh-detail .fresh-media-expand .fresh-big-analysis img {
+  max-width: 100%;
+}
+.fresh-list .fresh-detail .fresh-media-expand .fresh-big-answer {
+  overflow: hidden;
+  padding: 20px 0 10px 0;
+  text-align: left;
+  font-size: 12px;
+}
+.fresh-list .fresh-detail .fresh-media-expand .fresh-big-answer em {
+  color: #cc0000;
+}
+.fresh-list .fresh-detail .fresh-media-expand .fresh-big-answer .fresh-big-selectAnswer {
+  float: left;
+  color: #999999;
+  text-align: left;
+}
+.fresh-list .fresh-detail .fresh-media-expand .fresh-big-answer .fresh-big-selectAnswer em {
+  line-height: 34px;
+  color: #999999;
+}
+.fresh-list .fresh-detail .fresh-media-expand .fresh-big-answer .fresh-big-selectAnswer a {
+  float: left;
+  padding: 4px 24px;
+  background: #ccd1d9;
+  color: #fff;
+  font-size: 18px;
+  font-family: 'Microsoft YaHei';
+  margin: 0 10px 0 0;
+}
+.fresh-list .fresh-detail .fresh-media-expand .fresh-big-answer .fresh-big-selectAnswer a:hover {
+  background: #3bafda;
+}
+.fresh-list .fresh-detail .fresh-media-expand.fresh-media-expand-video {
+  cursor: default !important;
+}
+.fresh-list .fresh-detail .fresh-media-expand .fresh-bigimg-examIcon {
+  display: inline-block;
+  height: 41px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 41px;
+  z-index: 10;
+}
+.fresh-list .fresh-detail .fresh-media-expand .fresh-bigimg-examIcon.fresh-bigimg-examIcon-error {
+  background: url("img/fresh-exam-error.gif") no-repeat;
+}
+.fresh-list .fresh-detail .fresh-media-expand .fresh-bigimg-examIcon.fresh-bigimg-examIcon-right {
+  background: url("img/fresh-exam-right.gif") no-repeat;
+}
+.fresh-list .fresh-detail .fresh-media-expand .fresh-media-big-img {
+  overflow: hidden;
+}
+.fresh-list .fresh-detail .fresh-media-expand .fresh-media-big-img img {
+  max-width: 100%;
+}
+.fresh-list .fresh-detail .fresh-media-expand .fresh-media-big-video {
+  overflow: hidden;
+}
+.fresh-list .fresh-detail .fresh-media-expand .fresh-media-big-video .fresh-media-packUp {
+  text-align: left;
+  line-height: 21px;
+  padding-bottom: 10px;
+  margin: 0;
+}
+.fresh-list .fresh-detail .fresh-media-expand .fresh-media-big-video .fresh-media-packUp a {
+  background: rgba(0, 0, 0, 0) url("img/fresh_packup.png") no-repeat 0px 5px;
+  color: #3bafda;
+  background-size: 7px 11px;
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 12px;
+  font-size: 12px;
+}
+.fresh-list .fresh-detail .fresh-media-expand .fresh-media-big-video .fresh-media-packUp a:hover {
+  text-decoration: underline;
+}
+.fresh-list .fresh-detail .fresh-barinfo {
+  overflow: hidden;
+  padding-top: 8px;
+  font-size: 12px;
+  color: #a0a0a0;
+}
+.fresh-list .fresh-detail .fresh-barinfo .fresh-addGold {
+  float: left;
+  background: #f9e68e;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  height: 22px;
+  line-height: 22px;
+  padding: 0 10px;
+  margin-top: 4px;
+}
+.fresh-list .fresh-detail .fresh-barinfo .fresh-addGold .fresh-addGold-icon {
+  float: left;
+  background: url('img/fresh_addGold.png') no-repeat;
+  width: 27px;
+  height: 14px;
+  display: inline-block;
+  margin: 4px 3px 0 0;
+}
+.fresh-list .fresh-detail .fresh-barinfo .fresh-addGold strong {
+  color: #cc0000;
+}
+.fresh-list .fresh-detail .fresh-barinfo .fresh-time {
+  display: inline;
+  text-align: left;
+}
+.fresh-list .fresh-detail .fresh-barinfo .fresh-right {
+  display: inline;
+}
+.fresh-list .fresh-detail .fresh-barinfo .fresh-right .fresh-right-btn {
+  float: left;
+  padding-left: 10px;
+  display: inline-block;
+}
+.fresh-list .fresh-detail .fresh-barinfo .fresh-right .fresh-right-btn a {
+  float: left;
+  color: #3bafda;
+  text-decoration: none;
+}
+.fresh-list .fresh-detail .fresh-barinfo .fresh-right .fresh-right-btn a:hover {
+  text-decoration: underline;
+}
+.fresh-list .fresh-detail .fresh-barinfo .fresh-right .fresh-right-btn em {
+  float: left;
+  font-style: normal;
+  font-family: "SimSun";
+}
+.fresh-list .fresh-detail .fresh-comment-box {
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
+  font-size: 12px;
+}
+.fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form {
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+.fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-title {
+  overflow: hidden;
+}
+.fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-title .fresh-comment-title-text {
+  color: #999999;
+}
+.fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-title .fresh-comment-close-btn {
+  width: 18px;
+  height: 18px;
+  margin-top: 6px;
+  background: url(img/comment-close.png) no-repeat;
+}
+.fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-textarea {
+  overflow: hidden;
+  position: relative;
+  padding: 10px 0;
+}
+.fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-textarea textarea {
+  border: 1px solid #eaeaea;
+  height: 136px;
+  padding: 5px;
+  overflow-y: auto;
+  resize: none;
+  line-height: 20px;
+  box-shadow: none;
+  font-size: 12px;
+  margin: 0;
+}
+.fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-textarea .fresh-comment-status {
+  background: #fcfcfc;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  top: 11px;
+  bottom: 11px;
+  text-align: center;
+  z-index: 10;
+}
+.fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-textarea .fresh-comment-status .fresh-comment-success {
+  background: url("img/fresh-check.png") no-repeat left 0;
+  display: inline-block;
+  height: 32px;
+  line-height: 32px;
+  padding-left: 40px;
+  margin: 50px auto;
+  width: auto;
+}
+.fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-textarea .fresh-comment-status .fresh-comment-loading {
+  background: url("img/fresh-load.gif") no-repeat left 10px;
+  display: inline-block;
+  height: 32px;
+  line-height: 32px;
+  padding-left: 20px;
+  margin: 50px auto;
+  width: auto;
+}
+.fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-textarea .fresh-comment-status .fresh-comment-warning {
+  background: url("img/fresh-warn.png") no-repeat left 0;
+  display: inline-block;
+  height: 32px;
+  line-height: 32px;
+  margin: 50px auto;
+  padding-left: 40px;
+  width: auto;
+}
+.fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-func {
+  overflow: hidden;
+  line-height: 45px;
+  height: 45px;
+}
+.fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-func .fresh-comment-emote-btn {
+  float: left;
+  cursor: pointer;
+  width: 21px;
+  height: 21px;
+  margin: 12px 5px 0 0;
+  background: url('img/fresh-emote.png') no-repeat;
+}
+.fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-func .fresh-comment-emotetext {
+  float: left;
+  font-size: 12px;
+}
+.fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-func .fresh-comment-emotetext:hover {
+  text-decoration: underline;
+}
+.fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-func .fresh-comment-btn {
+  float: right;
+}
+.fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-func .fresh-comment-btn .fresh-comment-size {
+  float: left;
+  color: #999999;
+  margin-right: 10px;
+}
+.fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-func .fresh-comment-btn .fresh-comment-size .fresh-comment-text-num {
+  font-size: 16px;
+  font-family: 'Microsoft YaHei';
+  font-style: normal;
+}
+.fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-func .fresh-comment-btn .fresh-comment-submit-btn {
+  float: left;
+  cursor: pointer;
+}
+.fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-func .fresh-comment-btn .fresh-comment-submit-btn a {
+  padding: 8px 26px;
+  font-size: 14px;
+  font-family: "SimSun";
+  margin: 0;
+}
+.fresh-list .fresh-detail .fresh-comment-detail-info {
+  overflow: hidden;
+  font-size: 12px;
+}
+.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-list {
+  padding: 20px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-list .fresh-text {
+  font-size: 12px;
+}
+.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-list .fresh-avatar-mini {
+  width: 40px;
+  height: 40px;
+  margin: 0 14px 0 0;
+}
+.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-list .fresh-uesr {
+  display: inline;
+  padding-right: 4px;
+}
+.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-list .fresh-uesr .fresh-v {
+  width: 18px;
+  height: 14px;
+  margin: 8px 4px 0 4px;
+  display: inline-block;
+}
+.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-list .fresh-uesr .fresh-v.fresh-v-red {
+  background: url('img/freshV_Red.png') no-repeat;
+}
+.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-list .fresh-uesr .fresh-v.fresh-v-blue {
+  background: url('img/freshV_blue.png') no-repeat;
+}
+.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-list .fresh-uesr .fresh-v.fresh-v-yellow {
+  background: url('img/freshV_Yellow.png') no-repeat;
+}
+.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-list em {
+  font-style: normal;
+  font-family: '"SimSun"';
+}
+.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-list .fresh-font-blue {
+  color: #3bafda;
+}
+.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-more {
+  overflow: hidden;
+  line-height: 40px;
+  text-align: right;
+}
+.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-line {
+  height: 30px;
+  border-bottom: 1px solid #ededed;
+  margin: 8px 0;
+  text-align: center;
+}
+.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-line .fresh-line-tip {
+  background: #fff;
+  color: #999;
+  height: 60px;
+  display: inline-block;
+  line-height: 60px;
+  width: auto;
+  z-index: 10;
+  padding: 0 15px;
+}
+.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-line .fresh-line-tip strong {
+  color: #cc0000;
+}
+.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-speak {
+  background: #f1f1f1;
+  border: 1px solid #eaeaea;
+  padding: 15px 10px 10px 10px;
+  margin-top: 10px;
+}
+.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-speak .fresh-comment-textarea {
+  padding: 0;
+}
+.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-speak .fresh-comment-textarea textarea {
+  padding: 10px 5px;
+  min-height: 20px;
+  line-height: 20px;
+  height: 42px;
+}
+.fresh-list.fresh-popular-list {
+  border: none;
+}
+.fresh-list.fresh-popular-list .fresh-avatar {
+  margin: 2px 10px 0 0;
+  width: 40px;
+  height: 40px;
+}
+.fresh-list.fresh-popular-list .fresh-detail {
+  line-height: 18px;
+}
+.fresh-list.fresh-popular-list .fresh-detail .fresh-text .fresh-info {
+  display: block;
+  overflow: hidden;
+  font-size: 12px;
+}
+/** 
+ * 发送新鲜事Style
+ */
+.fresh-send-box {
+  background: #fff;
+  padding: 10px;
+  font-family: "SimSun";
+  overflow: hidden;
+}
+.fresh-send-box em,
+.fresh-send-box i {
+  font-style: normal;
+}
+.fresh-send-box .fresh-send-textareaBox {
+  border: 1px solid #eaeaea;
+  padding: 7px 10px;
+  font-size: 14px;
+  box-shadow: none;
+  line-height: 20px;
+  color: #333333;
+  margin: 0;
+  height: 136px;
+  resize: none;
+  overflow-y: auto;
+}
+.fresh-send-box .fresh-send-preview {
+  overflow: hidden;
+  height: 120px;
+  border: 1px solid #eaeaea;
+  border-top: none;
+  padding: 10px;
+}
+.fresh-send-box .fresh-send-preview .fresh-send-preview-imgvideo {
+  float: left;
+  position: relative;
+  height: 100px;
+}
+.fresh-send-box .fresh-send-preview .fresh-send-preview-imgvideo .fresh-preview-close {
+  background: url('img/comment-close.png') no-repeat;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  position: absolute;
+  right: -18px;
+  top: 0;
+}
+.fresh-send-box .fresh-send-form {
+  overflow: hidden;
+  margin-top: 10px;
+  line-height: 34px;
+  height: 34px;
+  padding: 0 6px;
+  color: #999999;
+  font-size: 12px;
+}
+.fresh-send-box .fresh-send-emote {
+  float: left;
+  background: url('img/fresh-smile.png') no-repeat;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-top: 6px;
+}
+.fresh-send-box a {
+  float: left;
+  color: #3bafda;
+  padding-left: 5px;
+}
+.fresh-send-box a:hover {
+  text-decoration: underline;
+}
+.fresh-send-box .fresh-send-upload {
+  float: left;
+  width: 22px;
+  height: 19px;
+  margin-top: 7px;
+  background: red;
+  position: relative;
+  margin-left: 20px;
+  background: url('img/fresh-upload.png') no-repeat;
+}
+.fresh-send-box .fresh-send-upload .fresh-fileToUpload {
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
+  width: 22px;
+  height: 19px;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.fresh-send-box .fresh-send-text-num {
+  font-size: 16px;
+  font-family: 'Microsoft YaHei';
+  font-style: normal;
+  padding: 0 5px;
+}
+.fresh-send-box .fresh-send-submit-btn {
+  float: left;
+  cursor: pointer;
+  margin-left: 15px;
+}
+.fresh-send-box .fresh-send-submit-btn a {
+  padding: 8px 26px;
+  font-size: 14px;
+  font-family: "SimSun";
+  color: #fff;
+  margin: 0;
+}
+.fresh-send-box .fresh-send-submit-btn a:hover {
+  text-decoration: none;
+}
