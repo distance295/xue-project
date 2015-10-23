@@ -13,31 +13,21 @@
 @fw:					"Microsoft YaHei";
 @fd:					"verdana";
 @fs:					"SimSun";
-.red{
-	color: #e74c3c;
-}
-.f-left {
-	float: left;display: inline;
-}
-.f-right {
-	float: right;display: inline;
-}
-table {
-    background-color: #fbfbfb;
-    border-collapse: collapse;
-    border-spacing: 0;
-    max-width: 100%;
-}
-.table {
-    border: 1px solid #e2e2e2;
-    color: #333333;
-    font-size: 12px;
-    margin-bottom: 20px;
-    width: 100%;
-}
+
+
+
 //课程详情页---包含直播--录播--免费课
 .ui-course-infor-wrap {
 	width: 1190px;margin:20px auto;overflow: hidden;
+	.red{
+		color: #e74c3c;
+	}
+	.f-left {
+		float: left;display: inline;
+	}
+	.f-right {
+		float: right;display: inline;
+	}
 	// 课程视频----左侧
 	.course-left-player {
 		overflow: hidden;
@@ -193,10 +183,10 @@ table {
 .columns-wrap {
 	width: 1190px;margin:0 auto;overflow: hidden;
 	.columns-left {
-		width:930px;
+		float: left;display: inline;width:930px;
 	}
 	.columns-right {
-		width: 240px;border: 1px solid #ccc;height: 500px;
+		float: right;display: inline;width: 240px;border: 1px solid #ccc;height: 500px;
 	}
 }
 
@@ -301,5 +291,18 @@ table {
 			    background: #ff9900;
 			}
 		}
+	}
+	table {
+	    background-color: #fbfbfb;
+	    border-collapse: collapse;
+	    border-spacing: 0;
+	    max-width: 100%;
+	}
+	.table {
+	    border: 1px solid #e2e2e2;
+	    color: #333333;
+	    font-size: 12px;
+	    margin-bottom: 20px;
+	    width: 100%;
 	}
 }

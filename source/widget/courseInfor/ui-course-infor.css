@@ -5,34 +5,21 @@
  * @date    2015-10-21 14:22:33
  * @version $Id$
  */
-.red {
-  color: #e74c3c;
-}
-.f-left {
-  float: left;
-  display: inline;
-}
-.f-right {
-  float: right;
-  display: inline;
-}
-table {
-  background-color: #fbfbfb;
-  border-collapse: collapse;
-  border-spacing: 0;
-  max-width: 100%;
-}
-.table {
-  border: 1px solid #e2e2e2;
-  color: #333333;
-  font-size: 12px;
-  margin-bottom: 20px;
-  width: 100%;
-}
 .ui-course-infor-wrap {
   width: 1190px;
   margin: 20px auto;
   overflow: hidden;
+}
+.ui-course-infor-wrap .red {
+  color: #e74c3c;
+}
+.ui-course-infor-wrap .f-left {
+  float: left;
+  display: inline;
+}
+.ui-course-infor-wrap .f-right {
+  float: right;
+  display: inline;
 }
 .ui-course-infor-wrap .course-left-player {
   overflow: hidden;
@@ -319,9 +306,13 @@ table {
   overflow: hidden;
 }
 .columns-wrap .columns-left {
+  float: left;
+  display: inline;
   width: 930px;
 }
 .columns-wrap .columns-right {
+  float: right;
+  display: inline;
   width: 240px;
   border: 1px solid #ccc;
   height: 500px;
@@ -479,4 +470,17 @@ table {
 }
 .course-detail .table_outline td .goline {
   background: #ff9900;
+}
+.course-detail table {
+  background-color: #fbfbfb;
+  border-collapse: collapse;
+  border-spacing: 0;
+  max-width: 100%;
+}
+.course-detail .table {
+  border: 1px solid #e2e2e2;
+  color: #333333;
+  font-size: 12px;
+  margin-bottom: 20px;
+  width: 100%;
 }
