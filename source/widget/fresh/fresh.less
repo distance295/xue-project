@@ -1,0 +1,710 @@
+
+/**
+ * 新鲜事Style
+ * @author duxinli
+ * @version 4.0
+ */
+
+@blue-color: #3bafda;
+@font-color:#333;
+
+.border-radius(@radius) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+        -ms-border-radius: @radius;
+         -o-border-radius: @radius;
+            border-radius: @radius;
+}
+.font-size(@fontszie:12px) {
+    font-size: @fontszie;
+}
+
+.font-family(@fontfamily:"SimSun") {
+    font-family:@fontfamily; 
+}
+
+//没有课程的提示框信息
+.fresh-notCourse {
+    background: #fcfcfc;
+    border: 1px solid #ececec;
+    color: #999999;
+    font-size: 16px;
+    line-height: 125px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.fresh-list{
+  background:#fff;
+  border-bottom:1px solid #eaeaea;
+  padding:12px;
+  overflow:hidden;
+  em,i{
+    font-style: normal;
+  }
+  .fresh-avatar{
+     width:60px;
+     height:60px;
+     margin:8px 14px 0 0;
+     display:inline;
+     overflow:hidden;
+     img{
+        .border-radius(50%);
+     }
+  }
+  .fresh-detail{
+    display:block;
+    overflow:hidden;
+    line-height: 30px;
+    .font-size(14px);
+    .font-family;
+    color: @font-color;
+    .fresh-info-uptop {
+        background:url("img/fresh-uptop.jpg") no-repeat scroll left 7px;
+        padding-left: 21px;
+        vertical-align: text-top;
+    }
+    .fresh-text{
+       overflow: hidden;
+       .fresh-course-fans{
+          overflow: hidden;
+          color:@font-color*3; 
+          strong{
+             color: #e74c3c;
+             padding-right: 10px;
+          }
+          .fresh-course-attention{
+             .font-size(12px);
+             .fresh-attention-btn{
+                background: #ffbc3c;
+                margin-top: 4px;
+                .border-radius(2px);
+                line-height: 20px;
+                color: #fff;
+                padding: 0 8px;
+                .fresh-add{
+                   .font-size(14px);
+                   margin-top: 1px;
+                   padding-right: 2px;
+                }
+                &:hover{
+                   background: #fbae1a;
+                }
+             }
+             em{
+               float: left;
+             }
+             a{
+                 float: left;
+                 color: @blue-color;
+                 &:hover{
+                   text-decoration: underline;
+                 }
+             }
+             .fresh-course-line {
+                float: left;
+                padding: 0 5px;
+            }
+          }
+       }
+       .fresh-myname{
+         display: inline;
+         padding-right: 8px;
+       }
+       .fresh-v{
+             width: 18px;
+             height: 14px;
+             vertical-align:text-top;
+             margin: 1px 0 0 4px;
+             display: inline-block;
+             &.fresh-v-red{
+                background:url('img/freshV_Red.png') no-repeat; 
+             }
+             &.fresh-v-blue{
+                background:url('img/freshV_blue.png') no-repeat; 
+             }
+             &.fresh-v-yellow{
+                background:url('img/freshV_Yellow.png') no-repeat; 
+             }
+       }
+       a{
+          color:@blue-color;
+          text-decoration:none;
+          &:hover{
+            text-decoration:underline;
+          }
+       }
+       img {
+          vertical-align: -6px;
+       }
+       .fresh-info{
+         display: inline;
+         .fresh-Myinfo{
+           padding: 5px 0;
+           line-height: 26px;
+           overflow:hidden;
+           margin: 0;
+           .font-size(12px) 
+         }
+         &.fresh-contact-my{
+             display: block;
+             overflow: hidden;
+         }
+       }
+    }
+    .fresh-media{
+       margin-top: 15px;
+       overflow: hidden;
+       .fresh-media-small-img{
+            display: inline-block;
+            float: left;
+            margin-right: 10px;
+            min-width: 36px;
+            text-align: center;
+            position: relative;
+            cursor: url("img/big.cur"), auto !important;
+            .fresh-examIcon{
+                background: url("img/fresh-exam.gif") no-repeat;
+                display: inline-block;
+                height: 41px;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                width: 41px;
+                z-index: 10;
+                &.fresh-examIcon-error{
+                    background: url("img/fresh-exam-error.gif") no-repeat; 
+                }
+                &.fresh-examIcon-right{
+                     background: url("img/fresh-exam-right.gif") no-repeat; 
+                }
+            }
+            img{
+               max-width: 200px;
+               vertical-align: top;
+            }
+            &.fresh-media-small-video{
+                 img{
+                     cursor:pointer;
+                     height: 150px;
+                     width: 200px;
+                 }
+                 .fresh-video-play {
+                      background:url("img/fresh_videoplay.png") no-repeat ;
+                      display: block;
+                      height: 57px;
+                      left: 50%;
+                      margin: -28px 0 0 -28px;
+                      position: absolute;
+                      top: 50%;
+                      width: 57px;
+                      z-index: 100;
+                      &:hover{
+                        background:url("img/fresh_videoplay_hover.png") no-repeat ;
+                      }
+                 }
+            } 
+       }
+    }
+    .fresh-media-expand{
+       border: 1px solid #eaeaea;
+       overflow:hidden;
+       position: relative;
+       text-align:center; 
+       padding:10px;
+       cursor: url("img/small.cur"), auto !important;
+       .fresh-big-sign-exam{
+            overflow: hidden;
+            text-align: center;
+            padding-top: 20px;
+            img{
+              max-width: 100%;
+            }
+       }
+       .fresh-big-analysis{
+           overflow: hidden;
+           strong{
+              font-weight: bold;
+              line-height: 40px;
+              text-align: left;
+              overflow: hidden;
+              display: block;
+           }
+           img{
+             max-width: 100%;
+           }
+       }
+       .fresh-big-answer{
+         overflow: hidden;
+         padding: 20px 0 10px 0;
+         text-align: left;
+         .font-size;
+         em{
+             color: #cc0000;
+         }
+         .fresh-big-selectAnswer{
+            float: left;
+            color: @font-color*3;
+            text-align: left;
+            em{
+              line-height: 34px;
+              color: @font-color*3;
+            }
+            a{
+               float: left;
+               padding:4px 24px;
+               background: #ccd1d9;
+               color: #fff;
+               .font-size(18px);
+               .font-family('Microsoft YaHei');
+               margin: 0 10px 0 0;
+               &:hover{
+                   background: @blue-color;
+               }
+            }
+         }
+       }
+       &.fresh-media-expand-video{
+          cursor: default !important;
+       }
+       .fresh-bigimg-examIcon{
+          display: inline-block;
+          height: 41px;
+          position: absolute;
+          right: 0px;
+          top: 0px;
+          width: 41px;
+          z-index: 10;
+          &.fresh-bigimg-examIcon-error{
+              background: url("img/fresh-exam-error.gif") no-repeat; 
+          }
+          &.fresh-bigimg-examIcon-right{
+              background: url("img/fresh-exam-right.gif") no-repeat; 
+          }
+       }
+       .fresh-media-big-img{
+           overflow: hidden;
+           img{
+              max-width: 100%;
+           }
+       }
+       .fresh-media-big-video{
+           overflow: hidden;
+           .fresh-media-packUp {
+              text-align: left;
+              line-height: 21px;
+              padding-bottom: 10px;
+              margin: 0;
+              a{
+                  background: rgba(0, 0, 0, 0) url("img/fresh_packup.png") no-repeat 0px 5px;
+                  color: @blue-color;
+                  background-size: 7px 11px;
+                  cursor: pointer;
+                  display: inline-block;
+                  padding-left: 12px;
+                  .font-size(12px);
+                  &:hover{
+                     text-decoration: underline;
+                  }
+              }
+           }
+       }
+    }
+    .fresh-barinfo{
+        overflow: hidden;
+        padding-top:8px;
+        .font-size;
+        color: #a0a0a0;
+        .fresh-addGold{
+           float: left;
+           background: #f9e68e;
+           .border-radius(8px);
+           height: 22px;
+           line-height: 22px;
+           padding: 0 10px;
+           margin-top: 4px;
+           .fresh-addGold-icon{
+               float: left;
+               background: url('img/fresh_addGold.png') no-repeat;
+               width: 27px;
+               height: 14px;
+               display: inline-block;
+               margin: 4px 3px 0 0;
+           }
+           strong{
+              color: #cc0000;
+           }
+        }
+        .fresh-time{
+             display: inline;
+             text-align: left;
+             
+        }
+        .fresh-right{
+          display: inline;
+          .fresh-right-btn{
+             float: left;
+             padding-left:10px;
+             display: inline-block;
+             a{
+                float: left;
+                color:@blue-color;
+                text-decoration:none;
+                &:hover{
+                  text-decoration:underline;
+                }
+             }
+             em{
+                float: left;
+                font-style: normal;
+                .font-family;
+             }
+          }
+        }
+    } 
+    .fresh-comment-box{
+      overflow: hidden;
+      position: relative;
+      padding:10px;
+      .font-size;
+      .fresh-comment-form{
+          overflow: hidden;
+          padding-bottom:10px;
+          .fresh-comment-title{
+              overflow: hidden;
+              .fresh-comment-title-text{
+                  color:@font-color*3; 
+              }
+              .fresh-comment-close-btn{
+                  width: 18px;
+                  height: 18px;
+                  margin-top:6px;
+                  background:url(img/comment-close.png) no-repeat;
+              }
+          }
+          .fresh-comment-textarea{
+              overflow: hidden;
+              position: relative;
+              padding:10px 0;
+              textarea {
+                  border: 1px solid #eaeaea;
+                  height: 136px;
+                  padding: 5px;
+                  overflow-y: auto;
+                  resize: none;
+                  line-height: 20px;
+                  box-shadow:none;
+                  .font-size;
+                  margin: 0;
+              }
+              .fresh-comment-status{
+                  background: #fcfcfc;
+                  opacity: 0.7;
+                  filter:alpha(opacity=70);
+                  position: absolute;
+                  left: 1px;
+                  right: 1px;
+                  top: 11px;
+                  bottom: 11px;
+                  text-align: center;
+                  z-index: 10;
+                  .fresh-comment-success {
+                      background:url("img/fresh-check.png") no-repeat left 0;
+                      display: inline-block;
+                      height: 32px;
+                      line-height: 32px;
+                      padding-left: 40px;
+                      margin: 50px auto;
+                      width: auto;
+                  }
+                  .fresh-comment-loading {
+                      background:url("img/fresh-load.gif") no-repeat left 10px;
+                      display: inline-block;
+                      height: 32px;
+                      line-height: 32px;
+                      padding-left: 20px;
+                      margin: 50px auto;
+                      width: auto;
+                  }
+                  .fresh-comment-warning {
+                      background:url("img/fresh-warn.png") no-repeat left 0;
+                      display: inline-block;
+                      height: 32px;
+                      line-height: 32px;
+                      margin: 50px auto;
+                      padding-left: 40px;
+                      width: auto;
+                  }
+              }
+          }
+          .fresh-comment-func{
+             overflow: hidden;
+             line-height: 45px;
+             height: 45px;
+             .fresh-comment-emote-btn{
+                  float: left;
+                  cursor:pointer;
+                  width: 21px;
+                  height: 21px;
+                  margin: 12px 5px 0 0;
+                  background:url('img/fresh-emote.png') no-repeat;
+             }
+             .fresh-comment-emotetext{
+                 float: left;
+                 .font-size(12px);
+                 &:hover{
+                    text-decoration: underline;
+                 }
+             }
+             .fresh-comment-btn{
+                  float: right;
+                  .fresh-comment-size{
+                      float: left;
+                      color:@font-color*3; 
+                      margin-right: 10px;
+                      .fresh-comment-text-num{
+                          .font-size(16px);
+                          .font-family('Microsoft YaHei');
+                          font-style:normal;
+                      }
+                  }
+                  .fresh-comment-submit-btn{
+                      float: left;
+                      cursor: pointer;
+                      a{
+                         padding:8px 26px;
+                         .font-size(14px);
+                         .font-family;
+                         margin: 0;
+                      }
+                  }
+             }
+          }
+      }
+      
+    }
+    .fresh-comment-detail-info{
+        overflow:hidden;
+        .font-size;
+        .fresh-comment-list{
+            padding: 20px 0;
+            border-bottom: 1px solid #eaeaea;
+            .fresh-text{
+               .font-size;
+            }
+            .fresh-avatar-mini{
+               width: 40px;
+               height: 40px;
+               margin: 0 14px 0 0;
+            }
+            .fresh-uesr{
+               display: inline;
+               padding-right: 4px;
+               .fresh-v{
+                    width: 18px;
+                    height: 14px;
+                    margin: 8px 4px 0 4px;
+                    display: inline-block;
+                     &.fresh-v-red{
+                       background: url('img/freshV_Red.png') no-repeat;
+                    }
+                    &.fresh-v-blue{
+                       background: url('img/freshV_blue.png') no-repeat;
+                    }
+                    &.fresh-v-yellow{
+                       background: url('img/freshV_Yellow.png') no-repeat;
+                    }
+               }
+            }
+            em{
+              font-style: normal;
+              .font-family('"SimSun"');
+            }
+            .fresh-font-blue{
+                color: @blue-color;
+            }
+        }
+        .fresh-comment-more{
+            overflow:hidden;
+            line-height: 40px;
+            text-align: right;
+        }
+        .fresh-comment-line{
+            height: 30px;
+            border-bottom: 1px solid #ededed;
+            margin: 8px 0;
+            text-align: center;
+            .fresh-line-tip {
+              background:#fff;
+              color: #999;
+              height: 60px;
+              display: inline-block;
+              line-height: 60px;
+              width: auto;
+              z-index: 10;
+              padding: 0 15px;
+              strong{
+                 color: #cc0000;
+              }
+          }
+        }
+        .fresh-comment-speak{
+             background: #f1f1f1;
+             border: 1px solid #eaeaea;
+             padding: 15px 10px 10px 10px;
+             margin-top:10px;
+             .fresh-comment-textarea{
+                padding: 0;
+                 textarea{
+                     padding: 10px 5px;
+                     min-height: 20px;
+                     line-height: 20px;
+                     height: 42px;
+                 }
+             }
+        }
+
+    }
+
+  }
+  /** 
+   * 热门新鲜事Style
+   */
+  &.fresh-popular-list{
+       border: none;
+       .fresh-avatar{
+          margin:2px 10px 0 0;
+          width: 40px;
+          height: 40px;
+       }
+       .fresh-detail{
+          line-height: 18px;
+          .fresh-text .fresh-info{
+              display: block;
+              overflow: hidden;
+              .font-size(12px);
+          }
+       }
+  }
+
+}
+
+/** 
+ * 发送新鲜事Style
+ */
+
+.fresh-send-box{
+   background: #fff;
+   padding: 10px;
+   .font-family;
+   overflow: hidden;
+   em,i{
+       font-style: normal;
+   }
+   .fresh-send-textareaBox{
+       border: 1px solid #eaeaea;
+       padding: 7px 10px;
+       .font-size(14px);
+       box-shadow:none;
+       line-height: 20px;
+       color: @font-color;
+       margin: 0;
+       height: 136px;
+       resize:none;
+       overflow-y: auto;
+
+   }
+   .fresh-send-preview{
+       overflow: hidden;
+       height: 120px;
+       border: 1px solid #eaeaea;
+       border-top: none;
+       padding: 10px;
+       .fresh-send-preview-imgvideo{
+           float: left;
+           position: relative;
+           height: 100px;
+           .fresh-preview-close{
+               background: url('img/comment-close.png') no-repeat;
+               width: 18px;
+               height: 18px;
+               display: inline-block;
+               position: absolute;
+               right: -18px;
+               top: 0;
+           }
+       }
+   }
+   .fresh-send-form{
+       overflow:hidden;
+       margin-top: 10px;
+       line-height: 34px;
+       height: 34px;
+       padding: 0 6px;
+       color:@font-color*3; 
+       .font-size(12px);
+   }
+   .fresh-send-emote{
+       float: left;
+       background: url('img/fresh-smile.png') no-repeat;
+       display: inline-block;
+       width: 22px;
+       height: 22px; 
+       margin-top: 6px; 
+   }
+   a{
+       float: left;
+       color: @blue-color;
+       padding-left: 5px;
+       &:hover{
+          text-decoration: underline;
+       }
+   }
+   .fresh-send-upload{
+       float: left;
+       width: 22px;
+       height: 19px;
+       margin-top: 7px;
+       background: red;
+       position: relative;
+       margin-left: 20px;
+       background: url('img/fresh-upload.png') no-repeat;
+       .fresh-fileToUpload{
+           position: absolute;
+           z-index: 100;
+           bottom: 0;
+           width: 22px;
+           height: 19px;
+           left: 0;
+           top: 0;
+           margin: 0;
+           padding: 0;
+           opacity: 0;
+           cursor: pointer;
+       }
+   }
+   .fresh-send-text-num{
+        .font-size(16px);
+        .font-family('Microsoft YaHei');
+        font-style:normal;
+        padding: 0 5px;
+    }
+    .fresh-send-submit-btn{
+        float: left;
+        cursor: pointer;
+        margin-left: 15px;
+        a{
+           padding:8px 26px;
+           .font-size(14px);
+           .font-family;
+           color: #fff;
+           margin: 0;
+           &:hover{
+              text-decoration: none;
+           }
+        }
+    }
+   
+}
+
+
