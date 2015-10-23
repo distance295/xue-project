@@ -18,7 +18,7 @@ p {
 a {
   color: #333333;
 }
-.label {
+.course-label {
   font-family: "SimSun";
   display: inline-block;
   padding: 2px 8px;
@@ -30,28 +30,28 @@ a {
   -ms-border-radius: 2px;
   border-radius: 2px;
 }
-.blue-label {
+.course-blue-label {
   background: #5abdeb;
 }
-.green-label {
+.course-green-label {
   background: #37bc9b;
 }
-.btn-gray,
-.btn-gray[disabled] {
+.course-btn-gray,
+.course-btn-gray[disabled] {
   background: #ccd1d9;
   border: 1px solid #ccd1d9;
 }
-.btn-gray:hover,
-.btn-gray[disabled]:hover {
+.course-btn-gray:hover,
+.course-btn-gray[disabled]:hover {
   background: #ccd1d9;
   border: 1px solid #ccd1d9;
 }
-.btn-gray:focus,
-.btn-gray[disabled]:focus {
+.course-btn-gray:focus,
+.course-btn-gray[disabled]:focus {
   background: #ccd1d9;
   border: 1px solid #ccd1d9;
 }
-.button.btn {
+.button.course-btn {
   border-radius: 2px;
   font-family: "SimSun";
   margin-bottom: 0;
@@ -68,17 +68,17 @@ a {
   margin-right: 6px;
   width: 13px;
 }
-.button.gray {
+.button.course-gray {
   background-color: #fcfcfc;
   border: 1px solid #eaeaea;
   color: #333333;
   line-height: 30px;
 }
-.button.gray:hover {
+.button.course-gray:hover {
   background-color: #e2e2e2;
   border: 1px solid #d2d2d2;
 }
-.button.gray:focus {
+.button.course-gray:focus {
   background-color: #e2e2e2;
   border: 1px solid #d2d2d2;
 }
@@ -157,11 +157,11 @@ a {
 .courseList .courseList-body .end-time span strong {
   color: #e74c3c;
 }
-.courseList .courseList-body .amount-show .btn {
+.courseList .courseList-body .amount-show .course-btn {
   margin-right: 10px;
   position: relative;
 }
-.courseList .courseList-body .amount-show .btn .newLabel {
+.courseList .courseList-body .amount-show .course-btn .newLabel {
   position: absolute;
   height: 20px;
   border-radius: 10px;
@@ -173,10 +173,10 @@ a {
   right: -10px;
   top: -10px;
 }
-.courseList .courseList-body .amount-show .btn .homeworkLabel {
+.courseList .courseList-body .amount-show .course-btn .homeworkLabel {
   right: -15px;
 }
-.courseList .courseList-body .amount-show .btn .live-label {
+.courseList .courseList-body .amount-show .course-btn .live-label {
   border-radius: 3px;
   right: -21px;
 }

@@ -5,7 +5,7 @@ ul,
 li {
   list-style: none;
 }
-.label {
+.course-label {
   font-family: "SimSun";
   display: inline-block;
   padding: 2px 8px;
@@ -17,26 +17,26 @@ li {
   -ms-border-radius: 2px;
   border-radius: 2px;
 }
-.blue-label {
+.course-blue-label {
   background: #5abdeb;
 }
-.yellow-label {
+.course-yellow-label {
   background: #ffbc3c;
 }
-.button.gray {
+.button.course-gray {
   background-color: #fcfcfc;
   border: 1px solid #eaeaea;
   color: #333333;
 }
-.button.gray:hover {
+.button.course-gray:hover {
   background-color: #e2e2e2;
   border: 1px solid #d2d2d2;
 }
-.button.gray:focus {
+.button.course-gray:focus {
   background-color: #e2e2e2;
   border: 1px solid #d2d2d2;
 }
-.button.btn {
+.button.course-btn {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   -ms-border-radius: 2px;

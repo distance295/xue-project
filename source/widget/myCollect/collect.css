@@ -1,15 +1,15 @@
-em,
-i,
-strong {
-  font-style: normal;
-}
-ul,
-li {
-  margin: 0;
-}
 .content-collect {
   overflow: hidden;
   width: 100%;
+}
+.content-collect em,
+.content-collect i,
+.content-collect strong {
+  font-style: normal;
+}
+.content-collect ul,
+.content-collect li {
+  margin: 0;
 }
 .content-collect .collect-feed {
   border-bottom: 1px solid #eaeaea;
