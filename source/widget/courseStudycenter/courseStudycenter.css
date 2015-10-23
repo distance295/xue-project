@@ -1,17 +1,3 @@
-table,
-tr,
-th,
-thead {
-  margin: 0;
-  padding: 0;
-}
-ul,
-li,
-p {
-  margin: 0;
-  list-style: none;
-  padding: 0;
-}
 .course-label {
   font-family: "SimSun";
   display: inline-block;
