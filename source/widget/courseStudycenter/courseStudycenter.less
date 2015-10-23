@@ -1,0 +1,451 @@
+body{
+	background: #f1f2f6;
+}
+table,tr,th,thead{margin: 0;padding: 0;}
+ul,li,p{margin: 0;list-style: none;padding: 0}
+@red: #e74c3c;
+@borderColor: #eaeaea;
+@fontSize: 12px;
+@dark333: #333;
+a{
+	color: @dark333;
+}
+.border-radius(@amount: 5px){
+	-moz-border-radius: @amount;
+	-webkit-border-radius: @amount;
+	-ms-border-radius: @amount;
+	border-radius: @amount;
+}
+.label{
+	font-family: "SimSun";
+	display: inline-block;
+	padding: 2px 8px;
+	font-size: @fontSize;
+	line-height: 18px;
+	color: #fff;
+	.border-radius(2px);
+}
+.blue-label{
+	background: #5abdeb;
+}
+.green-label{
+	background: #37bc9b;
+}
+.btn-gray,.btn-gray[disabled]{
+	background: #ccd1d9;
+	border: 1px solid #ccd1d9;
+	&:hover{
+		background: #ccd1d9;
+		border: 1px solid #ccd1d9;
+	}
+	&:focus{
+		background: #ccd1d9;
+		border: 1px solid #ccd1d9;
+	}
+}
+.button.btn {
+	border-radius: 2px;
+	font-family: "SimSun";
+	margin-bottom: 0;
+	width: 98px;
+	height: 32px;
+	text-align: center;
+	font-size: 14px;
+	padding: 0;
+	line-height: 32px;
+}
+.button-icon {
+	display: inline-block;
+	height: 19px;
+	margin-right: 6px;
+	width: 13px;
+}
+.button.gray{
+	background-color: #fcfcfc;
+	border: 1px solid #eaeaea;
+	color: #333333;
+	line-height: 30px;
+	&:hover{
+		background-color: #e2e2e2;
+		border: 1px solid #d2d2d2;
+	}
+	&:focus{
+		background-color: #e2e2e2;
+		border: 1px solid #d2d2d2;
+	}
+}
+.icon-will-red{
+	background: url("img/icon-will-red.png") no-repeat scroll left center;
+	height: 10px;
+}
+.icon-just-white{
+	background: url("img/white-arrow.png") no-repeat scroll left center;
+	height: 10px;
+}
+.label-study{
+	width: 25px;
+	height: 47px;
+	text-align: center;
+	display: inline-block;
+	position: absolute;
+	right: -25px;
+	color: #fff;
+}
+.label-delay{
+	background: #3bafda;
+	top: 57px;
+}
+.label-continun{
+	background: #37bc9b;
+	top: 105px;
+}
+.courseList {
+	background: #fff;
+	height: 200px;
+	border-radius: 4px;
+	font-family: "SimSun";
+	padding: 15px 5px 15px 15px;
+	margin-bottom: 20px;
+	position: relative;
+	.study-report {
+		float: left;
+		.report-inner{
+			width: 160px;
+			height: 170px;
+			border-right: 1px solid @borderColor;
+			padding-right: 17px;
+			.progress-show{
+				text-align: center;
+				margin-bottom: 5px;
+			}
+			p{
+				text-align: left;
+				font-size: 12px;
+				color: #999999;
+				span{
+					color: @red;
+				}
+			}
+		}
+	}
+	.courseList-body{
+		float: left;
+		padding: 0 20px;
+		.course-title{
+			font-size: 16px;
+			line-height: 18px;
+			margin-bottom: 8px;
+		}
+		.title-more{
+			margin-top: 38px;
+		}
+		.end-time{
+			color: #666;
+			font-size: 12px;
+			margin: 6px 0;
+			span{
+				strong{
+					color: #e74c3c;
+				}
+			}
+		}
+		.amount-show{
+			.btn{
+				margin-right: 10px;
+				position: relative;
+				.newLabel{
+					position: absolute;
+					height: 20px;
+					border-radius: 10px;
+					background: @red;
+					color: #fff;
+					padding: 5px 7px;
+					text-align: center;
+					line-height: 10px;
+					right: -10px;
+					top: -10px;
+				}
+				.homeworkLabel{
+					right: -15px;
+				}
+				.live-label{
+					border-radius: 3px;
+					right: -21px;
+				}
+			}
+			.last{
+				
+			}
+			.direct-btn{
+				color: @red;
+				a{
+					color: #3bafda;
+				}
+			}
+		}
+	}
+	.courseList-teacher{
+		height: 170px;
+		border-left: 1px solid @borderColor;
+		width: 181px;
+		float: right;
+		padding: 5px;
+		position: relative;
+		.teacher-main{
+			padding: 12px;
+			overflow: hidden;
+			.avatar-photo{
+				float: left;
+				margin-right: 10px;
+			}
+			.coach-con{
+				float: left;
+				margin-top: 3px;
+				p{
+					line-height: 28px;
+					a{
+						display: inline-block;
+						width: 11px;
+						height: 16px;
+						background: url('img/iphone.png') no-repeat 0 center ;
+						margin-right: 10px;
+						margin-top: 4px;
+						float: right;
+					}
+				}
+				p.teacher-coach{
+					color: #3bafda;
+					font-size: 16px;
+				}
+				p.teacher-majar{
+					color: #999;
+					font-size: 16px;
+				}
+				p.relook-course{
+					color: @red;
+				}
+			}
+		}
+		.teacher-main-border{
+			border-bottom: 1px dotted @borderColor;
+		}
+		.majar-items{
+			ul{
+				li{
+					overflow: hidden;
+				}
+			}
+		}
+		.more-service{
+			position: absolute;
+			left: -80px;
+			top: -6px;
+			h4{
+				color: #333333;
+				font-size: 12px;
+				font-weight: normal;
+				width: 62px;
+				cursor: pointer;
+				font-family: "SimSun";
+			}
+			.gray-arrow{
+				background: url("img/gray-arrow.png") no-repeat right center;
+			}
+			.blue-arrow{
+				background: url("img/blue-arrow.png") no-repeat right center;
+			}
+			.more-list{
+				padding-top: 5px;
+				border: 1px solid #f5f5f5;
+				background: #fcfcfc;
+				width: 62px;
+				height: 92px;
+				color: #333;
+				font-size: 12px;
+				line-height: 28px;
+				text-align: center;
+				display: none;
+			}
+		}
+		.show{
+			.more-list{
+				display: block;
+			}
+		}
+
+	}
+}
+// 弹框
+.table{
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	thead{
+		background: #fcfcfc;
+		tr{
+			th{
+				font-weight: normal;
+				text-align: center;
+				height: 30px;
+				line-height: 30px;
+			}
+		}
+	}
+	tbody{
+		tr{
+			border: 1px solid @borderColor;
+			line-height: 60px;
+			height: 60px;
+			td{
+				color: #666;
+			}
+			.opened{
+				color: @red;
+			}
+			.static{
+				color: #3bafda;
+			}
+		}
+	}
+}
+table tr.even, table tr.alt, table tr:nth-of-type(2n){
+	background: #fff;
+}
+.material{
+	tr{
+		td{
+			border: 1px solid @borderColor;
+			padding:  9px 17px;
+			p{
+				color: #666;
+				font-size: 12px;
+				line-height: 34px;
+			}
+			span{
+				color: #999999;
+				font-size: 12px;
+				margin-left: 10px;
+			}
+		}
+	}
+}
+.load-btn{
+	padding: 9px 22px;
+	font-size: 14px;
+	background: #37bc9b;
+	color: #fff;
+	border-radius: 2px;
+	margin-bottom: 0;
+}
+// 延期弹框
+.bom-delay{
+	padding: 30px 40px;
+	background: #fff;
+	overflow: hidden;
+	height: 265px;
+	.delay-fsd{
+		float: left;
+		margin-right: 22px;
+	}
+	.delay-detail{
+		float: left;
+		padding-top: 25px;
+		font-size: 16px;
+		color: #666666;
+		p{
+			line-height: 30px;
+		}
+		.button{
+			border-radius: 2px;
+			padding: 8px 36px;
+			font-size: 16px;
+			line-height: 30px;
+			margin-top: 40px;
+		}
+	}
+}
+// 录播直播作业列表
+.layout-list{
+	.courseList-title{
+		border-bottom: 1px solid @borderColor;
+		margin-bottom: 20px;
+		p{
+			font-size: 18px;
+			font-family: 'Microsoft YaHei';
+			line-height: 34px;
+		}
+	}
+	.course-table{
+		thead{
+			background: #fff;
+			line-height: 50px;
+			height: 50px;
+			border-radius: 4px;
+			border: 1px solid @borderColor;
+			tr{
+				th{
+					font-size: 16px;
+				}
+			}
+		}
+		tr{
+			font-size: 14px;
+			font-family: "SimSun";
+			.text-style{
+				text-align: center;
+				font-size: 12px;
+				span{
+					color: #999;
+				}
+			}
+			.studied-end{
+				color: @red;
+			}
+			.yellow-mark{
+				color: #ffbc3c;
+			}
+			.studied{
+				color: #37bc9b;
+			}
+			.static-gray{
+				color: #999999;
+			}
+			.static-red{
+				color: @red;
+			}
+			.wait-look{
+				color: #3bafda;
+			}
+			td.yellow-mark{
+				em{
+					display: inline-block;
+					width: 18px;
+					height: 18px;
+					margin-left: 5px;
+				}
+				.mark{
+					background: url("img/spam.png") no-repeat right center;
+					vertical-align: middle;
+
+				}
+			}
+		}
+	}
+// 直播课程列表	
+.teacher-tab{
+	border-bottom: 1px solid #3bafda;
+	overflow: hidden;
+	margin-bottom: 10px;
+	li{
+		float: left;
+		font-size: 14px;
+		line-height: 30px;
+		padding: 0 15px;
+	}
+	li.current{
+		background: #3bafda;
+		color: #fff;
+		border-radius: 4px 4px 0 0;
+	}
+}
+}

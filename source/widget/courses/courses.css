@@ -1,0 +1,245 @@
+a {
+  color: #333333;
+}
+ul,
+li {
+  list-style: none;
+}
+.label {
+  font-family: "SimSun";
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #fff;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+}
+.blue-label {
+  background: #5abdeb;
+}
+.yellow-label {
+  background: #ffbc3c;
+}
+.button.gray {
+  background-color: #fcfcfc;
+  border: 1px solid #eaeaea;
+  color: #333333;
+}
+.button.gray:hover {
+  background-color: #e2e2e2;
+  border: 1px solid #d2d2d2;
+}
+.button.gray:focus {
+  background-color: #e2e2e2;
+  border: 1px solid #d2d2d2;
+}
+.button.btn {
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+  margin-bottom: 0;
+  font-family: 'SimSun';
+  width: 98px;
+  height: 32px;
+  text-align: center;
+  font-size: 14px;
+  padding: 0;
+  line-height: 32px;
+}
+.button-icon {
+  display: inline-block;
+  width: 13px;
+  height: 19px;
+  margin-right: 6px;
+}
+.icon-will {
+  height: 10px;
+  background: url("img/arrow.png") no-repeat left center;
+}
+.icon-test {
+  height: 10px;
+  background: url("img/bo-box.png") no-repeat left center;
+}
+.course-list {
+  font-family: "SimSun";
+  height: 130px;
+  border-top: 1px solid #eaeaea;
+  width: 100%;
+  padding: 18px 10px;
+  overflow: hidden;
+}
+.course-list .ui-avatar {
+  width: 80px;
+  text-align: center;
+  float: left;
+}
+.course-list .ui-avatar .avatar-photo {
+  margin-bottom: 4px;
+  display: inline-block;
+}
+.course-list .ui-avatar .avatar-name .ui-username {
+  color: #666;
+  font-size: 12px;
+}
+.course-list .ui-avatar .avatar-follow {
+  display: inline-block;
+  font-size: 12px;
+  height: 20px;
+  line-height: 20px;
+  padding: 0 2px;
+  width: 50px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+}
+.course-list .ui-avatar .avatar-follow em {
+  font-style: normal;
+}
+.course-list .ui-avatar .avatar-follow.add {
+  background: #ffbc3c;
+  color: #ffffff;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+.course-list .course-detail {
+  float: left;
+  overflow: hidden;
+}
+.course-list .course-detail p {
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+.course-list .course-detail p.tip-for {
+  font-size: 12px;
+  color: #666;
+  margin: 12px 0;
+}
+.course-list .course-detail p.tip-for span {
+  margin-right: 15px;
+}
+.course-list .course-detail p.tip-for span strong {
+  color: #e74c3c;
+}
+.course-list .course-detail .ui-username {
+  color: #333;
+  font-size: 26px;
+  line-height: 34px;
+}
+.course-list .course-detail .icon-yverify {
+  background: url('img/v.png') no-repeat left center;
+  width: 21px;
+  height: 17px;
+  display: inline-block;
+}
+.course-list .course-detail span.teacher-label {
+  font-size: 12px;
+  color: #999999;
+}
+.course-list .course-detail .course-title {
+  line-height: 18px;
+  font-size: 16px;
+}
+.course-list .course-detail .course-title span.course-tip {
+  display: inline-block;
+  color: #999999;
+  font-size: 12px;
+}
+.course-list .course-detail .course-title .title-detail {
+  font-family: 'Microsoft YaHei';
+}
+.course-list .course-detail .amount-show strong {
+  font-size: 12px;
+  color: #e74c3c;
+  font-weight: normal;
+}
+.course-list .course-detail .amount-show .course-static {
+  line-height: 21px;
+  float: left;
+  margin-right: 18px;
+}
+.course-list .course-detail .amount-show .course-static .icon-staic {
+  background: url('img/static.png') no-repeat left center;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  vertical-align: top;
+  margin-right: 5px;
+  display: inline-block;
+  font-style: normal;
+}
+.course-list .course-detail .amount-show .course-people {
+  line-height: 21px;
+  float: left;
+}
+.course-list .course-detail .amount-show .course-people .icon-people {
+  background: url('img/ic_username.png') no-repeat left center;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  vertical-align: top;
+  margin-right: 5px;
+  display: inline-block;
+  font-style: normal;
+}
+.course-list .course-detail .amount-show .button {
+  font-size: 14px;
+}
+.course-list .course-detail .amount-test .button {
+  float: left;
+}
+.course-list .course-detail .amount-test strong {
+  line-height: 34px;
+  margin-left: 5px;
+}
+.course-list .course-detail .amount-test .test-price {
+  font-size: 26px;
+  color: #e74c3c;
+}
+.course-list .course-detail .amount-test .test-price span {
+  font-size: 18px;
+}
+.course-list .course-num {
+  width: 86px;
+  float: right;
+  font-family: 'Microsoft YaHei';
+  text-align: center;
+}
+.course-list .course-num p {
+  font-size: 14px;
+  margin-bottom: 3px;
+  color: #a0a0a0;
+}
+.course-list .course-num strong {
+  color: #e74c3c;
+  font-size: 20px;
+  font-weight: normal;
+}
+.course-list .course-right-info {
+  margin-top: 24px;
+}
+.course-list .course-right-info li {
+  padding-left: 24px;
+  font-size: 12px;
+  font-family: 'SimSun';
+  color: #333;
+  text-align: left;
+  margin-top: 6px;
+}
+.course-list .course-right-info li.video {
+  background: url("img/video.png") no-repeat 0 center;
+}
+.course-list .course-right-info li.homework {
+  background: url("img/homework.png") no-repeat 0 center;
+}
+.course-list .course-right-info li.answer {
+  background: url("img/answer.png") no-repeat 0 center;
+}
+.course-test {
+  height: 160px;
+}

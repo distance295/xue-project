@@ -1,0 +1,426 @@
+body {
+  background: #f1f2f6;
+}
+table,
+tr,
+th,
+thead {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li,
+p {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+a {
+  color: #333333;
+}
+.label {
+  font-family: "SimSun";
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #fff;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+}
+.blue-label {
+  background: #5abdeb;
+}
+.green-label {
+  background: #37bc9b;
+}
+.btn-gray,
+.btn-gray[disabled] {
+  background: #ccd1d9;
+  border: 1px solid #ccd1d9;
+}
+.btn-gray:hover,
+.btn-gray[disabled]:hover {
+  background: #ccd1d9;
+  border: 1px solid #ccd1d9;
+}
+.btn-gray:focus,
+.btn-gray[disabled]:focus {
+  background: #ccd1d9;
+  border: 1px solid #ccd1d9;
+}
+.button.btn {
+  border-radius: 2px;
+  font-family: "SimSun";
+  margin-bottom: 0;
+  width: 98px;
+  height: 32px;
+  text-align: center;
+  font-size: 14px;
+  padding: 0;
+  line-height: 32px;
+}
+.button-icon {
+  display: inline-block;
+  height: 19px;
+  margin-right: 6px;
+  width: 13px;
+}
+.button.gray {
+  background-color: #fcfcfc;
+  border: 1px solid #eaeaea;
+  color: #333333;
+  line-height: 30px;
+}
+.button.gray:hover {
+  background-color: #e2e2e2;
+  border: 1px solid #d2d2d2;
+}
+.button.gray:focus {
+  background-color: #e2e2e2;
+  border: 1px solid #d2d2d2;
+}
+.icon-will-red {
+  background: url("img/icon-will-red.png") no-repeat scroll left center;
+  height: 10px;
+}
+.icon-just-white {
+  background: url("img/white-arrow.png") no-repeat scroll left center;
+  height: 10px;
+}
+.label-study {
+  width: 25px;
+  height: 47px;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  right: -25px;
+  color: #fff;
+}
+.label-delay {
+  background: #3bafda;
+  top: 57px;
+}
+.label-continun {
+  background: #37bc9b;
+  top: 105px;
+}
+.courseList {
+  background: #fff;
+  height: 200px;
+  border-radius: 4px;
+  font-family: "SimSun";
+  padding: 15px 5px 15px 15px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.courseList .study-report {
+  float: left;
+}
+.courseList .study-report .report-inner {
+  width: 160px;
+  height: 170px;
+  border-right: 1px solid #eaeaea;
+  padding-right: 17px;
+}
+.courseList .study-report .report-inner .progress-show {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.courseList .study-report .report-inner p {
+  text-align: left;
+  font-size: 12px;
+  color: #999999;
+}
+.courseList .study-report .report-inner p span {
+  color: #e74c3c;
+}
+.courseList .courseList-body {
+  float: left;
+  padding: 0 20px;
+}
+.courseList .courseList-body .course-title {
+  font-size: 16px;
+  line-height: 18px;
+  margin-bottom: 8px;
+}
+.courseList .courseList-body .title-more {
+  margin-top: 38px;
+}
+.courseList .courseList-body .end-time {
+  color: #666;
+  font-size: 12px;
+  margin: 6px 0;
+}
+.courseList .courseList-body .end-time span strong {
+  color: #e74c3c;
+}
+.courseList .courseList-body .amount-show .btn {
+  margin-right: 10px;
+  position: relative;
+}
+.courseList .courseList-body .amount-show .btn .newLabel {
+  position: absolute;
+  height: 20px;
+  border-radius: 10px;
+  background: #e74c3c;
+  color: #fff;
+  padding: 5px 7px;
+  text-align: center;
+  line-height: 10px;
+  right: -10px;
+  top: -10px;
+}
+.courseList .courseList-body .amount-show .btn .homeworkLabel {
+  right: -15px;
+}
+.courseList .courseList-body .amount-show .btn .live-label {
+  border-radius: 3px;
+  right: -21px;
+}
+.courseList .courseList-body .amount-show .direct-btn {
+  color: #e74c3c;
+}
+.courseList .courseList-body .amount-show .direct-btn a {
+  color: #3bafda;
+}
+.courseList .courseList-teacher {
+  height: 170px;
+  border-left: 1px solid #eaeaea;
+  width: 181px;
+  float: right;
+  padding: 5px;
+  position: relative;
+}
+.courseList .courseList-teacher .teacher-main {
+  padding: 12px;
+  overflow: hidden;
+}
+.courseList .courseList-teacher .teacher-main .avatar-photo {
+  float: left;
+  margin-right: 10px;
+}
+.courseList .courseList-teacher .teacher-main .coach-con {
+  float: left;
+  margin-top: 3px;
+}
+.courseList .courseList-teacher .teacher-main .coach-con p {
+  line-height: 28px;
+}
+.courseList .courseList-teacher .teacher-main .coach-con p a {
+  display: inline-block;
+  width: 11px;
+  height: 16px;
+  background: url('img/iphone.png') no-repeat 0 center;
+  margin-right: 10px;
+  margin-top: 4px;
+  float: right;
+}
+.courseList .courseList-teacher .teacher-main .coach-con p.teacher-coach {
+  color: #3bafda;
+  font-size: 16px;
+}
+.courseList .courseList-teacher .teacher-main .coach-con p.teacher-majar {
+  color: #999;
+  font-size: 16px;
+}
+.courseList .courseList-teacher .teacher-main .coach-con p.relook-course {
+  color: #e74c3c;
+}
+.courseList .courseList-teacher .teacher-main-border {
+  border-bottom: 1px dotted #eaeaea;
+}
+.courseList .courseList-teacher .majar-items ul li {
+  overflow: hidden;
+}
+.courseList .courseList-teacher .more-service {
+  position: absolute;
+  left: -80px;
+  top: -6px;
+}
+.courseList .courseList-teacher .more-service h4 {
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  width: 62px;
+  cursor: pointer;
+  font-family: "SimSun";
+}
+.courseList .courseList-teacher .more-service .gray-arrow {
+  background: url("img/gray-arrow.png") no-repeat right center;
+}
+.courseList .courseList-teacher .more-service .blue-arrow {
+  background: url("img/blue-arrow.png") no-repeat right center;
+}
+.courseList .courseList-teacher .more-service .more-list {
+  padding-top: 5px;
+  border: 1px solid #f5f5f5;
+  background: #fcfcfc;
+  width: 62px;
+  height: 92px;
+  color: #333;
+  font-size: 12px;
+  line-height: 28px;
+  text-align: center;
+  display: none;
+}
+.courseList .courseList-teacher .show .more-list {
+  display: block;
+}
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+.table thead {
+  background: #fcfcfc;
+}
+.table thead tr th {
+  font-weight: normal;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+}
+.table tbody tr {
+  border: 1px solid #eaeaea;
+  line-height: 60px;
+  height: 60px;
+}
+.table tbody tr td {
+  color: #666;
+}
+.table tbody tr .opened {
+  color: #e74c3c;
+}
+.table tbody tr .static {
+  color: #3bafda;
+}
+table tr.even,
+table tr.alt,
+table tr:nth-of-type(2n) {
+  background: #fff;
+}
+.material tr td {
+  border: 1px solid #eaeaea;
+  padding: 9px 17px;
+}
+.material tr td p {
+  color: #666;
+  font-size: 12px;
+  line-height: 34px;
+}
+.material tr td span {
+  color: #999999;
+  font-size: 12px;
+  margin-left: 10px;
+}
+.load-btn {
+  padding: 9px 22px;
+  font-size: 14px;
+  background: #37bc9b;
+  color: #fff;
+  border-radius: 2px;
+  margin-bottom: 0;
+}
+.bom-delay {
+  padding: 30px 40px;
+  background: #fff;
+  overflow: hidden;
+  height: 265px;
+}
+.bom-delay .delay-fsd {
+  float: left;
+  margin-right: 22px;
+}
+.bom-delay .delay-detail {
+  float: left;
+  padding-top: 25px;
+  font-size: 16px;
+  color: #666666;
+}
+.bom-delay .delay-detail p {
+  line-height: 30px;
+}
+.bom-delay .delay-detail .button {
+  border-radius: 2px;
+  padding: 8px 36px;
+  font-size: 16px;
+  line-height: 30px;
+  margin-top: 40px;
+}
+.layout-list .courseList-title {
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 20px;
+}
+.layout-list .courseList-title p {
+  font-size: 18px;
+  font-family: 'Microsoft YaHei';
+  line-height: 34px;
+}
+.layout-list .course-table thead {
+  background: #fff;
+  line-height: 50px;
+  height: 50px;
+  border-radius: 4px;
+  border: 1px solid #eaeaea;
+}
+.layout-list .course-table thead tr th {
+  font-size: 16px;
+}
+.layout-list .course-table tr {
+  font-size: 14px;
+  font-family: "SimSun";
+}
+.layout-list .course-table tr .text-style {
+  text-align: center;
+  font-size: 12px;
+}
+.layout-list .course-table tr .text-style span {
+  color: #999;
+}
+.layout-list .course-table tr .studied-end {
+  color: #e74c3c;
+}
+.layout-list .course-table tr .yellow-mark {
+  color: #ffbc3c;
+}
+.layout-list .course-table tr .studied {
+  color: #37bc9b;
+}
+.layout-list .course-table tr .static-gray {
+  color: #999999;
+}
+.layout-list .course-table tr .static-red {
+  color: #e74c3c;
+}
+.layout-list .course-table tr .wait-look {
+  color: #3bafda;
+}
+.layout-list .course-table tr td.yellow-mark em {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-left: 5px;
+}
+.layout-list .course-table tr td.yellow-mark .mark {
+  background: url("img/spam.png") no-repeat right center;
+  vertical-align: middle;
+}
+.layout-list .teacher-tab {
+  border-bottom: 1px solid #3bafda;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.layout-list .teacher-tab li {
+  float: left;
+  font-size: 14px;
+  line-height: 30px;
+  padding: 0 15px;
+}
+.layout-list .teacher-tab li.current {
+  background: #3bafda;
+  color: #fff;
+  border-radius: 4px 4px 0 0;
+}
