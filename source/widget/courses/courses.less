@@ -1,0 +1,252 @@
+@borderColor: #eaeaea;
+@fontSize: 12px;
+@gray: #ccc;
+@gray999: #999;
+@dark333: #333;
+ul,li{list-style: none;}
+.border-radius(@amount: 5px){
+	-moz-border-radius: @amount;
+	-webkit-border-radius: @amount;
+	-ms-border-radius: @amount;
+	border-radius: @amount;
+}
+.course-label{
+	font-family: "SimSun";
+	display: inline-block;
+	padding: 2px 8px;
+	font-size: @fontSize;
+	line-height: 18px;
+	color: #fff;
+	.border-radius(2px);
+}
+.course-blue-label{
+	background: #5abdeb;
+}
+.course-yellow-label{
+	background: #ffbc3c;
+}
+.button.course-gray{
+	background-color: #fcfcfc;
+	border: 1px solid #eaeaea;
+	color: #333333;
+	&:hover{
+		background-color: #e2e2e2;
+		border: 1px solid #d2d2d2;
+	}
+	&:focus{
+		background-color: #e2e2e2;
+		border: 1px solid #d2d2d2;
+	}
+}
+.button.course-btn{
+	.border-radius(2px);
+	margin-bottom: 0;
+	font-family: 'SimSun';
+	width: 98px;
+	height: 32px;
+	text-align: center;
+	font-size: 14px;
+	padding: 0;
+	line-height: 32px;
+}
+.button-icon{
+	display: inline-block;
+	width: 13px;
+	height: 19px;
+	margin-right: 6px;
+}
+.icon-will{
+	height: 10px;
+	background: url("img/arrow.png") no-repeat left center;
+}
+.icon-test{
+	height: 10px;
+	background: url("img/bo-box.png") no-repeat left center;
+}
+.course-list {
+	font-family: "SimSun";
+	height: 130px;
+	border-top: 1px solid @borderColor;
+	width: 100%;
+	padding: 18px 10px;
+	overflow: hidden;
+	a{
+		color: @dark333;
+	}
+	.ui-avatar{
+		width: 80px;
+		text-align: center;
+		float: left;
+		.avatar-photo{
+			margin-bottom: 4px;
+			display: inline-block
+		}
+		.avatar-name{
+			.ui-username{
+				color: #666;
+				font-size: 12px;
+			}
+		}
+		.avatar-follow{
+			display: inline-block;
+			font-size: @fontSize;
+			height: 20px;
+			line-height: 20px;
+			padding: 0 2px;
+			width: 50px;
+			.border-radius(2px);
+			em{
+				font-style: normal;
+			}
+		}
+		.avatar-follow.add{
+			background: #ffbc3c;
+			color: #ffffff;
+			cursor: pointer;
+			text-align: center;
+			text-decoration: none;
+		}
+	}
+	.course-detail{
+		float: left;
+		overflow: hidden;
+		p{
+			margin-bottom: 8px;
+			overflow: hidden;
+		}
+		p.tip-for{
+			font-size: 12px;
+			color: #666;
+			margin: 12px 0;
+			span{
+				margin-right: 15px;
+				strong{
+					color: #e74c3c;
+				}
+			}
+		}
+		.ui-username{
+			color: #333;
+			font-size: 26px;
+			line-height: 34px;
+		}
+		.icon-yverify{
+			background: url('img/v.png') no-repeat left center;
+			width: 21px;
+			height: 17px;
+			display: inline-block;
+
+		}
+		span.teacher-label{
+			font-size: @fontSize;
+			color: @gray999;
+		}
+		.course-title{
+			line-height: 18px;
+			font-size: 16px;
+			span.course-tip{
+				display: inline-block;
+				color: @gray999;
+				font-size: @fontSize;
+			}
+			.title-detail{
+				font-family: 'Microsoft YaHei'
+			}
+		}
+		.amount-show{
+			strong{
+				font-size: @fontSize;
+				color: #e74c3c;
+				font-weight: normal;
+			}
+			.course-static{
+				line-height: 21px;
+				float: left;
+				margin-right: 18px;
+				.icon-staic{
+					background: url('img/static.png') no-repeat left center;
+					width: 20px;
+					height: 20px;
+					line-height: 20px;
+					vertical-align: top;
+					margin-right: 5px;
+					display: inline-block;
+					font-style: normal;
+				}
+			}
+			.course-people{
+				line-height: 21px;
+				float: left;
+				.icon-people{
+					background: url('img/ic_username.png') no-repeat left center;
+					width: 20px;
+					height: 20px;
+					line-height: 20px;
+					vertical-align: top;
+					margin-right: 5px;
+					display: inline-block;
+					font-style: normal;
+				}
+			}
+			.button{
+				font-size: 14px;
+			}
+		}
+		.amount-test{
+			.button{
+				float: left;
+			}
+			strong{
+				line-height: 34px;
+				margin-left: 5px;
+			}
+			.test-price{
+				font-size: 26px;
+				color: #e74c3c;
+				span{
+					font-size: 18px;
+				}
+			}
+		}
+	}
+	.course-num{
+		width: 86px;
+		float: right;
+		font-family: 'Microsoft YaHei';
+		text-align: center;
+		p{
+			font-size: 14px;
+			margin-bottom: 3px;
+			color: #a0a0a0;
+		}
+		strong{
+			color: #e74c3c;
+			font-size: 20px;
+			font-weight: normal;
+		}
+	}
+	.course-right-info{
+		margin-top: 24px;
+		li{
+			padding-left: 24px;
+			font-size: 12px;
+			font-family: 'SimSun';
+			color: #333;
+			text-align: left;
+			margin-top: 6px;
+		}
+		li.video{
+			background: url("img/video.png") no-repeat 0 center;
+		}
+		li.homework{
+			background: url("img/homework.png") no-repeat 0 center;
+		}
+		li.answer{
+			background: url("img/answer.png") no-repeat 0 center;
+		}
+	}
+}
+.course-test{
+	height: 160px;
+}
+

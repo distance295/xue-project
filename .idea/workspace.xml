@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="d4791af1-7fab-4759-a020-c7598e87be84" name="Default" comment="" />
+=======
+    <list default="true" id="d4791af1-7fab-4759-a020-c7598e87be84" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/widget/errorQuestion/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/widget/errorQuestion/showError.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/widget/errorQuestion/showLinks.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/widget/errorQuestion/css/error_question.css" afterPath="$PROJECT_DIR$/source/widget/errorQuestion/css/error_question.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/widget/errorQuestion/error_question.html" afterPath="$PROJECT_DIR$/source/widget/errorQuestion/error_question.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/widget/errorQuestion/css/error_question.less" afterPath="$PROJECT_DIR$/source/widget/errorQuestion/css/error_question.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+>>>>>>> XUEJS/master
     <ignored path="xue-project.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,11 +33,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+<<<<<<< HEAD
       <file leaf-file-name="error_question.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/error_question.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.36407766">
               <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+=======
+      <file leaf-file-name="error_question.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/error_question.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.172414">
+              <caret line="29" column="37" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="37" />
+>>>>>>> XUEJS/master
               <folding />
             </state>
           </provider>
@@ -34,8 +54,23 @@
       <file leaf-file-name="error_question.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/css/error_question.less">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state vertical-scroll-proportion="-5.0574713">
               <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+=======
+            <state vertical-scroll-proportion="-8.344828">
+              <caret line="125" column="21" selection-start-line="125" selection-start-column="21" selection-end-line="125" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/readme.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.19393939">
+              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+>>>>>>> XUEJS/master
               <folding />
             </state>
           </provider>
@@ -46,8 +81,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Html5" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="readme" />
+        <option value="Html5" />
       </list>
     </option>
   </component>
@@ -59,8 +96,12 @@
       <list>
         <option value="$PROJECT_DIR$/source/widget/errorQuestion/error_question.js" />
         <option value="$PROJECT_DIR$/source/widget/errorQuestion/error_question.less" />
-        <option value="$PROJECT_DIR$/source/widget/errorQuestion/css/error_question.less" />
+        <option value="$PROJECT_DIR$/source/widget/errorQuestion/css/ie_project.css" />
+        <option value="$PROJECT_DIR$/source/widget/errorQuestion/readme.md" />
+        <option value="$PROJECT_DIR$/source/widget/errorQuestion/showError.html" />
+        <option value="$PROJECT_DIR$/source/widget/errorQuestion/showLinks.html" />
         <option value="$PROJECT_DIR$/source/widget/errorQuestion/error_question.html" />
+        <option value="$PROJECT_DIR$/source/widget/errorQuestion/css/error_question.less" />
       </list>
     </option>
   </component>
@@ -179,7 +220,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -213,6 +254,10 @@
           </PATH>
         </subPane>
       </pane>
+<<<<<<< HEAD
+=======
+      <pane id="Scope" />
+>>>>>>> XUEJS/master
       <pane id="Scratches" />
     </panes>
   </component>
@@ -224,8 +269,12 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FullScreen" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\work\webReconstrcution\code\xue-project\source\widget\errorQuestion\img" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\work\webReconstrcution\code\xue-project\source\widget\errorQuestion\css" />
     </key>
@@ -342,12 +391,51 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+<<<<<<< HEAD
+=======
+          <folding />
+>>>>>>> XUEJS/master
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/error_question.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
+=======
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/css/error_question.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/css/error_question.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/error_question.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/widget/header/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+>>>>>>> XUEJS/master
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -428,6 +516,21 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/css/error_question.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="1245" selection-start-line="0" selection-start-column="1245" selection-end-line="0" selection-end-column="1245" />
+          <folding />
+=======
+    <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/css/ie_project.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/css/error_question.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -436,18 +539,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/css/error_question.less">
+    <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/showError.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.413794">
+          <caret line="18" column="46" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="46" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+>>>>>>> XUEJS/master
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/showLinks.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="-5.0574713">
           <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+=======
+        <state vertical-scroll-proportion="-12.413794">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+>>>>>>> XUEJS/master
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/error_question.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.36407766">
           <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+=======
+        <state vertical-scroll-proportion="-11.172414">
+          <caret line="29" column="37" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/css/error_question.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.344828">
+          <caret line="125" column="21" selection-start-line="125" selection-start-column="21" selection-end-line="125" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/readme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19393939">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+>>>>>>> XUEJS/master
           <folding />
         </state>
       </provider>

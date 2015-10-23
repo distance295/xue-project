@@ -1,25 +1,237 @@
 @charset "UTF-8";
 
-@Nfont-size:0.9rem;
-@Sfont-size:0.6rem;
+
+
+html{
+  font-size: 10px;
+}
+
+@Nfont-size:1.4rem;
+@Sfont-size:1.2rem;
+@LRpadding:1.8rem;
 
 body{
   background-color: rgb(241,242,246);
+  line-height: 1;
+  font-size: 10px;
+  color:rgb(51,51,51);
 }
-
+p{
+  font-size: @Nfont-size;
+}
+.queSet{
+  border-bottom: 1px solid rgb(241,242,246);
+  padding-left: @LRpadding;
+  padding-right: @LRpadding;
+}
 .que{
+  float:left;
   background-color: rgb(255,255,255);
+  padding: 0;
+  .que-tips{
+    color:rgb(153,153,153);
+  }
 }
 .que-head{
-  border-bottom: 1px solid rgb(241,242,246);
-  line-height: 1;
-}
-.que-head-source{
-  font-size:@Nfont-size;
-  margin: 0.8rem 0;
+  .queSet;
+  .que-head-source{
+    color:rgb(59,175,218);
+  }
+
+  .que-head-time{
+    font-size: @Sfont-size;
+    margin: 2.2rem 0 1.6rem 0;
+    color:rgb(153,153,153);
+  }
 }
 
-.que-head-time{
-  font-size: @Sfont-size;
-  margin: 1rem 0;
+.norMargin{
+  margin: 2rem 0 1.4rem;
+}
+.que-point{
+  .queSet;
+  .que-point-know{
+    margin:2.0rem 0 1.8rem;
+  }
+  .knowledge{
+    padding-right: 1.375rem;
+  }
+}
+
+.que-body{
+  .queSet;
+  .que-tips-head{
+    font-weight: bold;
+  }
+  .que-body-choice{
+    margin: 1.4rem 0;
+  }
+  .que-body-content{
+    font-weight: normal;
+    color:#333;
+    width: 100%;
+  }
+  .que-body-hide{
+    padding-right: 1rem;
+    background: url("../img/arrow_up.png") no-repeat right;
+  }
+  .que-body-show{
+    padding-right: 1rem;
+    background: url("../img/arrow_down.png") no-repeat right;
+  }
+}
+
+.que-answer{
+  .queSet;
+  .que-answer-head{
+    font-weight: bold;
+  }
+  @RPadding:2rem;
+  .cusAns{
+    padding-right:@RPadding;
+    color:rgb(204,0,0);
+  }
+  .corAns{
+    padding-right: @RPadding;
+    color:rgb(51,153,204);
+  }
+  .explanace{
+    font-weight: normal;
+    color:#333;
+  }
+  .img-answer{
+    margin: 0;
+    vertical-align: top;
+    display:inline-block;
+  }
+  .que-answer-exp{
+    font-weight: bold;
+  }
+}
+
+.que-img{
+  padding: 0.9rem @LRpadding;
+  .que-voice{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 7.7rem;
+    height: 2.7rem;
+    vertical-align: middle;
+    background-color:rgb(55,188,155);
+    border:rgb(56,188,156);
+    .que-voice-play{
+      position: absolute;
+      top: 30%;
+      left:15%;
+    }
+    .que-voice-img{
+      position: absolute;
+      top: 30%;
+      left:35%;
+    }
+  }
+}
+
+.links{
+  .alert-box{
+    margin-bottom: 0;
+    padding: 0;
+    text-align: center;
+    width: 6rem;
+    height: 7.2rem;
+    font-size:@Nfont-size;
+    border:none;
+    background-color: rgb(59,175,218);
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    .pict-tip {
+      margin: 1.4rem 1.8rem 0.7rem;
+    }
+    &:first-child{
+      border-radius: 0.25rem 0.25rem 0 0;
+    }
+    &:last-child{
+      border-radius: 0 0 0.25rem 0.25rem ;
+    }
+    &:hover{
+      background-color: rgb(37,153,196);
+      color: #fff;
+      transform:scale(1.1) translate(0.3rem,0) ;
+      -webkit-transform: scale(1.1) translate(0.3rem,0);
+      -moz-transform: scale(1.1) translate(0.3rem,0) ;
+      border-radius: 0.25rem;
+      z-index:10;
+      font-size: @Nfont-size*1.1;
+    }
+  }
+}
+
+.choiceSet{
+  border-bottom: 1px dashed rgb(241,242,246);
+  padding: 0 @LRpadding;
+}
+@grey:rgb(102,102,102);
+.choiceSetting{
+  display: inline-block;
+  height:1.6rem;
+  line-height: 1.6rem;
+  width:3.6rem;
+  border-radius: 2px;
+  margin:0.62rem 1.25rem 0.62rem 0;
+  text-align: center;
+}
+.choiceSelect{
+  background-color: rgb(59,175,218);
+  color: #ffffff;
+}
+.choiceTip{
+  color:@grey;
+  height:3rem;
+  width:4rem;
+  font-size: 1.2rem;
+  line-height: 3rem;
+  margin-right: 2rem;
+};
+.choice{
+  background-color: rgb(255,255,255);
+  .choice-grade{
+    .choiceSet;
+    .choice-grade-tip{
+      .choiceTip
+    }
+    .choice-grade-cur{
+      width: 68rem;
+      span{
+        .choiceSetting;
+      }
+    }
+    .select-grade{
+      .choiceSelect;
+    }
+  }
+
+  .choice-subject{
+    .choiceSet;
+    .choice-subject-tip{
+      .choiceTip
+    }
+    .choice-subject-cur{
+      width: 68rem;
+      span{
+        .choiceSetting;
+      }
+      .select-subject{
+        .choiceSelect;
+      }
+    }
+  }
+  .choice-point{
+    .choiceSet;
+    .choice-point-tip{
+      .choiceTip;
+      letter-spacing: 0.3rem;
+    }
+  }
 }
