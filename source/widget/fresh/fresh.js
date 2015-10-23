@@ -237,13 +237,13 @@ fresh.comment = fresh.comment || {};
 (function(fc){
 
   fc.commentBox ={
-      commentForm: '<form class="fresh-comment-form" action="javascript:void(0);">\
+      formBox: '<form class="fresh-comment-form" action="javascript:void(0);">\
                       <div class="fresh-comment-title">\
                           <span class="fresh-comment-title-text left">原文评论</span> \
                           <span class="fresh-comment-close-btn right"></span>\
                       </div>\
                       <div class="fresh-comment-textarea">\
-                        <!--评论状态开始-->
+                        <!--评论状态开始-->\
                         <!-- <div class="fresh-comment-status">\
                           <span class="fresh-comment-loading">loading</span>\
                         </div> -->\
@@ -260,7 +260,16 @@ fresh.comment = fresh.comment || {};
                           </div>\
                       </div>\
                   </form>'
-  }
+    }
+
+    /**
+     * 点击评论切换评论框区域和评论消息方法
+     * @param  {Object} dom 页面元素
+     */
+    fc.toggle = function(dom){
+
+    }  
+
 
 })(fresh.comment)
 
