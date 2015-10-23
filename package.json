@@ -1,0 +1,27 @@
+{
+  "name": "xue-project",
+  "version": "0.0.1",
+  "description": "xuejs项目文件",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^3.3.5",
+    "fis3-postpackager-loader": "^1.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XUEJS/xue-project.git"
+  },
+  "keywords": [
+    "xue-project"
+  ],
+  "author": "XUEJS-Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/XUEJS/xue-project/issues"
+  },
+  "homepage": "https://github.com/XUEJS/xue-project#readme"
+}
