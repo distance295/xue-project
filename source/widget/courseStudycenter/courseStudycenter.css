@@ -110,6 +110,20 @@ p {
   margin-bottom: 20px;
   position: relative;
 }
+.courseList table,
+.courseList tr,
+.courseList th,
+.courseList thead {
+  margin: 0;
+  padding: 0;
+}
+.courseList ul,
+.courseList li,
+.courseList p {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
 .courseList a {
   color: #333333;
 }
@@ -346,6 +360,20 @@ table tr:nth-of-type(2n) {
   font-size: 16px;
   line-height: 30px;
   margin-top: 40px;
+}
+.layout-list table,
+.layout-list tr,
+.layout-list th,
+.layout-list thead {
+  margin: 0;
+  padding: 0;
+}
+.layout-list ul,
+.layout-list li,
+.layout-list p {
+  margin: 0;
+  list-style: none;
+  padding: 0;
 }
 .layout-list .courseList-title {
   border-bottom: 1px solid #eaeaea;
