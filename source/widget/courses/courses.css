@@ -1,6 +1,3 @@
-a {
-  color: #333333;
-}
 ul,
 li {
   list-style: none;
@@ -71,6 +68,9 @@ li {
   width: 100%;
   padding: 18px 10px;
   overflow: hidden;
+}
+.course-list a {
+  color: #333333;
 }
 .course-list .ui-avatar {
   width: 80px;

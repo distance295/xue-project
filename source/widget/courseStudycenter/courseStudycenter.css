@@ -1,6 +1,3 @@
-body {
-  background: #f1f2f6;
-}
 table,
 tr,
 th,
@@ -14,9 +11,6 @@ p {
   margin: 0;
   list-style: none;
   padding: 0;
-}
-a {
-  color: #333333;
 }
 .course-label {
   font-family: "SimSun";
@@ -115,6 +109,9 @@ a {
   padding: 15px 5px 15px 15px;
   margin-bottom: 20px;
   position: relative;
+}
+.courseList a {
+  color: #333333;
 }
 .courseList .study-report {
   float: left;

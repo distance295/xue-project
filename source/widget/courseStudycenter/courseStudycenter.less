@@ -1,15 +1,9 @@
-body{
-	background: #f1f2f6;
-}
 table,tr,th,thead{margin: 0;padding: 0;}
 ul,li,p{margin: 0;list-style: none;padding: 0}
 @red: #e74c3c;
 @borderColor: #eaeaea;
 @fontSize: 12px;
 @dark333: #333;
-a{
-	color: @dark333;
-}
 .border-radius(@amount: 5px){
 	-moz-border-radius: @amount;
 	-webkit-border-radius: @amount;
@@ -107,6 +101,9 @@ a{
 	padding: 15px 5px 15px 15px;
 	margin-bottom: 20px;
 	position: relative;
+	a{
+		color: @dark333;
+	}
 	.study-report {
 		float: left;
 		.report-inner{

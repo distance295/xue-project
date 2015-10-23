@@ -3,9 +3,6 @@
 @gray: #ccc;
 @gray999: #999;
 @dark333: #333;
-a{
-	color: @dark333;
-}
 ul,li{list-style: none;}
 .border-radius(@amount: 5px){
 	-moz-border-radius: @amount;
@@ -73,6 +70,9 @@ ul,li{list-style: none;}
 	width: 100%;
 	padding: 18px 10px;
 	overflow: hidden;
+	a{
+		color: @dark333;
+	}
 	.ui-avatar{
 		width: 80px;
 		text-align: center;
