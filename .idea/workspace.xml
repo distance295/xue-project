@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4791af1-7fab-4759-a020-c7598e87be84" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/widget/errorQuestion/css/error_question.css" afterPath="$PROJECT_DIR$/source/widget/errorQuestion/css/error_question.css" />
-    </list>
+    <list default="true" id="d4791af1-7fab-4759-a020-c7598e87be84" name="Default" comment="" />
     <ignored path="xue-project.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +24,8 @@
       <file leaf-file-name="error_question.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/error_question.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41262135">
-              <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.36407766">
+              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -36,7 +34,7 @@
       <file leaf-file-name="error_question.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/css/error_question.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.8390806">
+            <state vertical-scroll-proportion="-5.0574713">
               <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
               <folding />
             </state>
@@ -440,7 +438,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/css/error_question.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.8390806">
+        <state vertical-scroll-proportion="-5.0574713">
           <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
           <folding />
         </state>
@@ -448,8 +446,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/source/widget/errorQuestion/error_question.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41262135">
-          <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.36407766">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
           <folding />
         </state>
       </provider>
