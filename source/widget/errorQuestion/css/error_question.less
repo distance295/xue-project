@@ -6,9 +6,9 @@ html{
   font-size: 10px;
 }
 
-@Nfont-size:1.4rem;
-@Sfont-size:1.2rem;
-@LRpadding:1.8rem;
+@Nfont-size:1.3rem;
+@Sfont-size:1rem;
+@LRpadding:0.8rem;
 
 body{
   background-color: rgb(241,242,246);
@@ -19,6 +19,15 @@ body{
 p{
   font-size: @Nfont-size;
 }
+div{
+  padding:0;
+  margin:0;
+}
+.columns{
+  padding:0;
+}
+
+/*错误题目css(start)*/
 .queSet{
   border-bottom: 1px solid rgb(241,242,246);
   padding-left: @LRpadding;
@@ -45,9 +54,6 @@ p{
   }
 }
 
-.norMargin{
-  margin: 2rem 0 1.4rem;
-}
 .que-point{
   .queSet;
   .que-point-know{
@@ -132,7 +138,9 @@ p{
     }
   }
 }
+/* 错误题目css(end) */
 
+/* 链接浮窗css(start) */
 .links{
   .alert-box{
     margin-bottom: 0;
@@ -167,20 +175,22 @@ p{
     }
   }
 }
+/* 链接浮窗css(end) */
 
+/* 年级以及知识点选择css(start) */
 .choiceSet{
   border-bottom: 1px dashed rgb(241,242,246);
   padding: 0 @LRpadding;
 }
 @grey:rgb(102,102,102);
 .choiceSetting{
+  font-size: 1.2rem;
   display: inline-block;
-  height:1.6rem;
-  line-height: 1.6rem;
-  width:3.6rem;
   border-radius: 2px;
-  margin:0.62rem 1.25rem 0.62rem 0;
+  margin:1.1rem 1rem 1.1rem 0;
+  padding:0.2rem 0.5rem;
   text-align: center;
+  cursor: pointer;
 }
 .choiceSelect{
   background-color: rgb(59,175,218);
@@ -188,11 +198,12 @@ p{
 }
 .choiceTip{
   color:@grey;
-  height:3rem;
-  width:4rem;
   font-size: 1.2rem;
-  line-height: 3rem;
-  margin-right: 2rem;
+  margin:1.1rem 0 1.1rem 0;
+  padding:0.2rem 0;
+  text-align: center;
+  width:5rem;
+  margin-right:1rem;
 };
 .choice{
   background-color: rgb(255,255,255);
@@ -202,7 +213,6 @@ p{
       .choiceTip
     }
     .choice-grade-cur{
-      width: 68rem;
       span{
         .choiceSetting;
       }
@@ -218,7 +228,7 @@ p{
       .choiceTip
     }
     .choice-subject-cur{
-      width: 68rem;
+
       span{
         .choiceSetting;
       }
@@ -233,5 +243,91 @@ p{
       .choiceTip;
       letter-spacing: 0.3rem;
     }
+    .choice-point-cur{
+      overflow: hidden;
+      height:3rem;
+      span{
+        .choiceSetting;
+      }
+      .select-point{
+        .choiceSelect;
+      }
+
+    }
+    .choice-cur-show{
+      overflow:auto;
+      height:12rem;
+    }
+    .chocie-point-show{
+      padding: 0;
+      width:5rem;
+      span{
+        font-size: 1.2rem;
+        display: inline-block;
+        margin:1.1rem 0 1.1rem 0;
+        padding:0.2rem 0.5rem;
+      }
+    }
+
+    .choice-point-link{
+      padding:0;
+      width:14rem;
+      .chocie-point-show{
+        cursor: pointer;
+      }
+      .chocie-point-download{
+        cursor: pointer;
+        border-radius: 2px;
+        text-align: center;
+        font-size: 1.2rem;
+        color:#fff;
+        width:8.5rem;
+        margin:0.8rem 0 0.8rem 0.5rem;
+        padding:0.5rem 0.5rem;
+        background-color: rgb(59,175,218);
+      }
+    }
+
+  }
+}
+/* 年级以及知识点选择css(end) */
+
+/* 错题本头部css(start) */
+.errorQuestion-head{
+  background-color:rgb(59,175,218);
+  height: 8rem;
+  width: 100%;
+  line-height: 8rem;
+  .erq-head{
+    width: 6.4rem;
+    height: 6.4rem;
+  }
+  .erq-useName{
+    display: inline-block;
+    font-size: 1.8rem;
+    color: #fff;
+  }
+  .erq-info{
+    margin-top: 1.8rem;
+    .erq-icon{
+      padding:0 0.3rem 0.1rem;
+      display: inline-block;
+      width: 2.2rem;
+      height: 1.6rem;
+      background: url("../img/v1.png") no-repeat 0 0.1rem;
+    }
+    .erq-dis{
+      color:rgb(37,153,196);
+      font-size:1.3rem;
+    }
+    .erq-usePage{
+      color:#fff;
+    }
+  }
+
+  .erq-prize{
+    margin: 2.5rem 0 0 1rem;
+    width: 3rem;
+    height: 3rem;
   }
 }
