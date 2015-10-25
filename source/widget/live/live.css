@@ -1,8 +1,10 @@
 .live-title{width: 100%;color: #999;font-size: 18px;position: relative;}
 .live-title p{display: inline-block;margin: 0;height: 1px;width: 100%;background-color: #eaeaea;position: absolute;top: 21px;left: 89px;}
-.live-scroll-btn{float: left;margin-left: 5px;width: 10px;height: 10px;border: 1px solid #e5e7ec;border-radius: 10px;}
-.live-scroll-btn-container{position: absolute;right: 0;top: 8px;}
+.live-scroll-btn-container{position: absolute;right: 0;top: 8px;list-style: none;}
+.live-scroll-btn-container li{float: left;margin-left: 5px;width: 10px;height: 10px;border: 1px solid #e5e7ec;border-radius: 10px;}
+.live-scroll-btn-on{background-color: #3bafda}
 .live-scroll-box{overflow: hidden;width: 100%;}
+.live-scroll-box-container{position: absolute;width: 100%;}
 .live-scroll-container{position: relative;margin-bottom: 30px;height: 291px;overflow: hidden}
 .live-card{float: left;width: 25%;}
 .live-course-box{position: relative;display: inline-block;}

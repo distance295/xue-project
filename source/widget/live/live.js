@@ -2,15 +2,11 @@
  * Created by yangmengyuan on 15/10/22.
  */
 $(function(){
-    $(".live-scroll-btn").on({
-        mouseenter:function(){
-            $(this).css({'background-color':'#3bafda'});
-        },
-        mouseleave:function(){
-            $(this).css({'background-color':'#fff'});
-        },
-        click:function(){
-            $(this).find(".live-scroll-box-container")
-        }
-    });
+    var $liveScrollBtn = $('.live-scroll-btn-container li');
+    $liveScrollBtn.on('click',function(e){
+        var $target = $(e.target);
+        var index = $target.index();
+        $liveScrollBtn.removeClass('live-scroll-btn-on').eq(index).addClass('live-scroll-btn-on');
+        $('.live-scroll-box-container').animate({top:(-1*282*index) + 'px'},300)
+    })
 });
