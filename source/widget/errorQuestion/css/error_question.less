@@ -4,6 +4,7 @@
 
 html{
   font-size: 10px;
+  min-width: 570px;
 }
 
 @Nfont-size:1.3rem;
@@ -245,7 +246,8 @@ div{
     }
     .choice-point-cur{
       overflow: hidden;
-      height:3rem;
+      height:12rem;
+      padding-right:0;
       span{
         .choiceSetting;
       }
@@ -271,7 +273,6 @@ div{
 
     .choice-point-link{
       padding:0;
-      width:14rem;
       .chocie-point-show{
         cursor: pointer;
       }
@@ -298,17 +299,17 @@ div{
   height: 8rem;
   width: 100%;
   line-height: 8rem;
-  .erq-head{
-    width: 6.4rem;
-    height: 6.4rem;
+  .erq-head-min{
+    width: 22rem;
+    .erq-head{
+      width: 6.4rem;
+      height: 6.4rem;
+    }
   }
-  .erq-useName{
-    display: inline-block;
-    font-size: 1.8rem;
-    color: #fff;
-  }
-  .erq-info{
+  .erq-info-up{
     margin-top: 1.8rem;
+    margin-bottom: 0.1rem;
+    width: 18rem;
     .erq-icon{
       padding:0 0.3rem 0.1rem;
       display: inline-block;
@@ -323,11 +324,61 @@ div{
     .erq-usePage{
       color:#fff;
     }
+    .erq-useName{
+      display: inline-block;
+      font-size: 1.8rem;
+      color: #fff;
+    }
+  }
+  .erq-info-below{
+    .erq-sex{
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background: url("../img/sex-woman.png") no-repeat rgb(37,153,196) 45% 45%;
+    }
+    .erq-level{
+      .erq-level-left{
+        margin-top: 0.2rem;
+        margin-left: 0.8rem;
+        display: inline-block;
+        width:1.5rem;
+        height:1.8rem;
+        border-radius: 100% 0 0 100%;
+        background-color: rgb(255,188,60);
+      }
+      .erq-level-right{
+        margin-top: 0.2rem;
+        display: inline-block;
+        width:1.5rem;
+        height:1.8rem;
+        border-radius: 0 100% 100% 0;
+        background-color: rgb(255,188,60);
+      }
+      .erq-level-word{
+        margin-top: 0.2rem;
+        font-size: 1rem;
+        font-style: italic;
+        display: inline-block;
+        width:2.5rem;
+        height: 1.8rem;
+        line-height: 1.8rem;
+        color:#fff;
+        background-color: rgb(255,188,60);
+        text-align: center;
+      }
+
+    }
   }
 
-  .erq-prize{
-    margin: 2.5rem 0 0 1rem;
-    width: 3rem;
-    height: 3rem;
+  .erq-head-prize{
+    min-width:16rem;
+    .erq-prize{
+      margin: 2.5rem 0 0 1rem;
+      width: 3rem;
+      height: 3rem;
+    }
   }
+
 }
