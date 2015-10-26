@@ -28,6 +28,12 @@
   /** 
    * 热门新鲜事Style
    */
+  /**
+   * 我自己的新鲜事Style
+   */
+  /**
+   * @我的新鲜事Style
+   */
 }
 .fresh-list em,
 .fresh-list i {
@@ -140,21 +146,6 @@
 }
 .fresh-list .fresh-detail .fresh-text .fresh-info {
   display: inline;
-}
-.fresh-list .fresh-detail .fresh-text .fresh-info .fresh-Myinfo {
-  padding: 5px 0;
-  line-height: 26px;
-  overflow: hidden;
-  margin: 0;
-  font-size: 12px;
-}
-.fresh-list .fresh-detail .fresh-text .fresh-info.fresh-contact-my {
-  display: block;
-  overflow: hidden;
-}
-.fresh-list .fresh-detail .fresh-text .fresh-info.fresh-text-Wrap {
-  display: block;
-  overflow: hidden;
 }
 .fresh-list .fresh-detail .fresh-media {
   margin-top: 15px;
@@ -635,6 +626,34 @@
   overflow: hidden;
   font-size: 12px;
 }
+.fresh-list.fresh-myself-list .fresh-detail .fresh-text .fresh-info {
+  display: block;
+  overflow: hidden;
+  font-size: 12px;
+}
+.fresh-list.fresh-myself-list .fresh-detail .fresh-text .fresh-my-do {
+  display: inline;
+}
+.fresh-list.fresh-myself-list .fresh-comment-detail-info .fresh-detail .fresh-text .fresh-info {
+  display: inline;
+  overflow: auto;
+}
+.fresh-list.fresh-contact-my-list .fresh-detail .fresh-text .fresh-info {
+  display: block;
+  overflow: hidden;
+}
+.fresh-list.fresh-contact-my-list .fresh-detail .fresh-text .fresh-my-do {
+  display: inline;
+}
+.fresh-list.fresh-contact-my-list .fresh-detail .fresh-contact-mention {
+  display: block;
+  overflow: hidden;
+  padding: 20px;
+}
+.fresh-list.fresh-contact-my-list .fresh-comment-detail-info .fresh-detail .fresh-text .fresh-info {
+  display: inline;
+  overflow: auto;
+}
 /** 
  * 发送新鲜事Style
  */
@@ -736,19 +755,19 @@
   font-style: normal;
   padding: 0 5px;
 }
-.fresh-send-box .fresh-send-submit-btn {
+.fresh-send-box .fresh-send-submit-box {
   float: left;
   cursor: pointer;
   margin-left: 15px;
 }
-.fresh-send-box .fresh-send-submit-btn a {
+.fresh-send-box .fresh-send-submit-box .fresh-send-submit-btn {
   padding: 8px 26px;
   font-size: 14px;
   font-family: "SimSun";
   color: #fff;
   margin: 0;
 }
-.fresh-send-box .fresh-send-submit-btn a:hover {
+.fresh-send-box .fresh-send-submit-box .fresh-send-submit-btn:hover {
   text-decoration: none;
 }
 /**
@@ -899,4 +918,48 @@
 }
 .fresh-dialog-collect .fresh-dialog-collect-content .fresh-dialog-success .fresh-dialog-collect-icon {
   background: url('img/fresh-check.png') no-repeat;
+}
+/**
+ * 删除新鲜事和评论确认弹出层Style
+ */
+.fresh-dialog-delete {
+  overflow: hidden;
+}
+.fresh-dialog-delete .fresh-dialog-delete-content {
+  min-width: 100px;
+  padding: 25px 20px;
+  line-height: 32px;
+  overflow: auto;
+  text-align: center;
+  font-family: "SimSun";
+}
+.fresh-dialog-delete .fresh-dialog-delete-content .fresh-dialog-delete-tips {
+  overflow: hidden;
+  text-align: center;
+  line-height: 30px;
+  margin: 0;
+  padding-bottom: 10px;
+  font-size: 14px;
+}
+.fresh-dialog-delete .fresh-dialog-delete-content .fresh-dialog-delete-btn {
+  padding: 10px 20px;
+  text-align: center;
+}
+.fresh-dialog-delete .fresh-dialog-delete-content .fresh-dialog-delete-btn .fresh-btn {
+  margin: 0 5px;
+  padding: 8px 26px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  font-size: 12px;
+}
+.fresh-dialog-delete .fresh-dialog-delete-content .fresh-dialog-delete-btn .fresh-btn.fresh-sure-btn {
+  background: #cb0000;
+  color: #fff;
+}
+.fresh-dialog-delete .fresh-dialog-delete-content .fresh-dialog-delete-btn .fresh-btn.fresh-cancel-btn {
+  background: #f3f3f3;
+  color: #333333;
 }

@@ -751,6 +751,7 @@ fresh.comment = fresh.comment || {};
         var _type = $(dom).data().sign;
         //需要传递的参数
         var _data = $(dom).data('params');
+        $('.fresh-dialog-delete').removeClass('hide');
 
         //提示信息
         var tipInfo = null;
@@ -759,9 +760,11 @@ fresh.comment = fresh.comment || {};
         } else if( _type == 2 ){
             tipInfo = '你确定删除该评论吗?';
         }
-        $("#cot").html(tipInfo);
-
-        $('body').off('click', '#btn1').on('click', '#btn1', function(){
+        $('.fresh-dialog-delete .fresh-dialog-delete-tips').html(tipInfo);
+        
+        //点击确认按钮删除
+        $('body').off('click', '.fresh-dialog-delete .fresh-sure-btn').on('click', '.fresh-dialog-delete .fresh-sure-btn', function(){
+             console.log(123456)
               $.ajax({
                   url: "ajaxDelDynamic.json",
                   type: 'POST',
@@ -800,9 +803,15 @@ fresh.comment = fresh.comment || {};
                       } else {
                            return false;
                       }  
-                     
+                       $('.fresh-dialog-delete').addClass('hide');
                   }
               });
+        })
+        
+        //点击取消按钮
+        $('body').off('click', '.fresh-dialog-delete .fresh-cancel-btn').on('click', '.fresh-dialog-delete .fresh-cancel-btn', function(){
+            console.log(123)
+            $('.fresh-dialog-delete').addClass('hide');
         })
         
 
@@ -1004,7 +1013,104 @@ fresh.send = fresh.send || {};
         $('.fresh-send-box').removeClass('hide');
     };
 
+    /**
+     * 提交新鲜事方法
+     * @param  {string} dom 任意子节点
+     */
+    fs.submit = function(dom) {
+        var _form = $(dom);
+        if( _form.length == 0 ){
+            return false;
+        }
+        var textarea = _form.find('textarea.fresh-send-textareaBox'),
+            content = $.trim(textarea.val()),
+            len = content.length;
+
+        if(len < 10 || len > 140 || len == 0){
+            alert('请填写内容，长度在10~140之间');
+            return false;
+        }else{
+            _form.submit();
+        }
+    };
+
+    /**
+     * 发送新鲜事检测数据时间方法
+     * @param  {string} dom 任意子节点
+     */
+    fs.checkData = function(){
+        Today = new Date(); 
+        var NowHour = Today.getHours(); 
+        var NowMinute = Today.getMinutes(); 
+        var NowSecond = Today.getSeconds(); 
+        var mysec = (NowHour*3600)+(NowMinute*60)+NowSecond; 
+        var a = document.formsubmitf.mypretime.value;
+        
+        if((mysec-document.formsubmitf.mypretime.value)>60){//600只是一个时间值，就是5秒钟内禁止重复提交，值随你高兴设  
+            document.formsubmitf.mypretime.value=mysec; 
+        } else {
+            //alert(' 按一次就够了，请勿重复提交！请耐心等待！谢谢合作！'); 
+            return false; 
+        }
+        document.forms.formsubmitf.submit(); 
+    }
+  
 })(fresh.send)
+
+
+/**
+ * 
+ * 关注新鲜事相关业务
+ * @param {Object} fc fresh.attention
+ * 
+ */
+fresh.attention = fresh.attention || {};
+
+(function(fa){
+    
+    /**
+     * 关注和取消新鲜事方法
+     * @param  {string} dom 任意子节点
+     */
+    fa.addCancel = function(dom){
+        var _url = "ajaxFollow.json"//$(dom).data().url;
+        var _type = $(dom).data().type;
+        var _params = $(dom).data().params + '&type=' + _type;
+        $.ajax({
+            type: "post",
+            url: _url,
+            timeout: 7000,
+            dataType: 'json',
+            data: _params,
+            success: function(msg) {
+                if (msg.sign == 2) {
+                    window.location.href='http://login.xueersi.com/user/login/aHR0cDovL3d3dy54dWVlcnNpLmNvbS9MZWFybmluZ0NlbnRlci9mb2xsb3c=';
+                }else if(msg.sign == 1) {
+                    switch(_type){
+                        case 1:
+                            $(e).html('<em>已关注</em>');
+                            break;
+                        case 2:
+                            $(dom).html('<a href="javascript:void(0)" class="fresh-attention-btn fresh-add-attention-btn"><span class="fresh-add left">+</span><span class="left">关注</span></a>');
+                            $(dom).data({type:3});
+                            break;
+                        case 3:
+                            $(dom).html('<em>已关注</em><i class="fresh-course-line">|</i><a href="javascript:void(0)" class="fresh-add-cancel-btn">取消</a>');
+                            $(dom).data({type:2});
+                            break;
+                    }
+                }else{
+                    alert(msg.msg);
+                    return false;
+                }
+            },
+            error: function() {
+                alert('数据读取错误..');
+            }
+        });
+    }
+
+})(fresh.attention)
 
 
 
