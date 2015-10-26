@@ -12,6 +12,14 @@
   text-align: center;
   overflow: hidden;
 }
+.fresh-commentInfo-loading {
+  background: url("img/fresh-load.gif") no-repeat center center;
+  display: block;
+  height: 50px;
+  overflow: hidden;
+  text-indent: -3000px;
+  width: 100%;
+}
 .fresh-list {
   background: #fff;
   border-bottom: 1px solid #eaeaea;
@@ -19,6 +27,12 @@
   overflow: hidden;
   /** 
    * 热门新鲜事Style
+   */
+  /**
+   * 我自己的新鲜事Style
+   */
+  /**
+   * @我的新鲜事Style
    */
 }
 .fresh-list em,
@@ -132,17 +146,6 @@
 }
 .fresh-list .fresh-detail .fresh-text .fresh-info {
   display: inline;
-}
-.fresh-list .fresh-detail .fresh-text .fresh-info .fresh-Myinfo {
-  padding: 5px 0;
-  line-height: 26px;
-  overflow: hidden;
-  margin: 0;
-  font-size: 12px;
-}
-.fresh-list .fresh-detail .fresh-text .fresh-info.fresh-contact-my {
-  display: block;
-  overflow: hidden;
 }
 .fresh-list .fresh-detail .fresh-media {
   margin-top: 15px;
@@ -376,6 +379,7 @@
   height: 18px;
   margin-top: 6px;
   background: url(img/comment-close.png) no-repeat;
+  cursor: pointer;
 }
 .fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-textarea {
   overflow: hidden;
@@ -414,15 +418,6 @@
   margin: 50px auto;
   width: auto;
 }
-.fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-textarea .fresh-comment-status .fresh-comment-loading {
-  background: url("img/fresh-load.gif") no-repeat left 10px;
-  display: inline-block;
-  height: 32px;
-  line-height: 32px;
-  padding-left: 20px;
-  margin: 50px auto;
-  width: auto;
-}
 .fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-textarea .fresh-comment-status .fresh-comment-warning {
   background: url("img/fresh-warn.png") no-repeat left 0;
   display: inline-block;
@@ -430,6 +425,15 @@
   line-height: 32px;
   margin: 50px auto;
   padding-left: 40px;
+  width: auto;
+}
+.fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-textarea .fresh-comment-status .fresh-comment-loading {
+  background: url("img/fresh-load.gif") no-repeat left 10px;
+  display: inline-block;
+  height: 32px;
+  line-height: 32px;
+  padding-left: 20px;
+  margin: 50px auto;
   width: auto;
 }
 .fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-func {
@@ -468,12 +472,23 @@
 .fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-func .fresh-comment-btn .fresh-comment-submit-btn {
   float: left;
   cursor: pointer;
+  position: relative;
 }
 .fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-func .fresh-comment-btn .fresh-comment-submit-btn a {
   padding: 8px 26px;
   font-size: 14px;
   font-family: "SimSun";
   margin: 0;
+}
+.fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-func .fresh-comment-btn .fresh-comment-submit-disabled {
+  background: #fcfcfc;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0.7;
+  position: absolute;
+  z-index: 10;
 }
 .fresh-list .fresh-detail .fresh-comment-detail-info {
   overflow: hidden;
@@ -541,20 +556,59 @@
 .fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-line .fresh-line-tip strong {
   color: #cc0000;
 }
-.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-speak {
+.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-repley {
   background: #f1f1f1;
   border: 1px solid #eaeaea;
   padding: 15px 10px 10px 10px;
   margin-top: 10px;
 }
-.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-speak .fresh-comment-textarea {
+.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-repley .fresh-comment-textarea {
   padding: 0;
 }
-.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-speak .fresh-comment-textarea textarea {
+.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-repley .fresh-comment-textarea textarea {
   padding: 10px 5px;
   min-height: 20px;
   line-height: 20px;
   height: 42px;
+}
+.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-repley .fresh-comment-textarea .fresh-comment-status {
+  background: none;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0px;
+  bottom: 0px;
+  text-align: center;
+  z-index: 10;
+}
+.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-repley .fresh-comment-textarea .fresh-comment-status .fresh-comment-success {
+  background: url("img/fresh-check.png") no-repeat left 0;
+  display: inline-block;
+  height: 32px;
+  line-height: 32px;
+  padding-left: 40px;
+  margin: 0px auto;
+  width: auto;
+}
+.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-repley .fresh-comment-textarea .fresh-comment-status .fresh-comment-warning {
+  background: url("img/fresh-warn.png") no-repeat left 0;
+  display: inline-block;
+  height: 32px;
+  line-height: 32px;
+  margin: 0px auto;
+  padding-left: 40px;
+  width: auto;
+}
+.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-repley .fresh-comment-textarea .fresh-comment-status .fresh-comment-loading {
+  background: url("img/fresh-load.gif") no-repeat left 10px;
+  display: inline-block;
+  height: 32px;
+  line-height: 32px;
+  padding-left: 20px;
+  margin: 0 auto;
+  width: auto;
 }
 .fresh-list.fresh-popular-list {
   border: none;
@@ -571,6 +625,34 @@
   display: block;
   overflow: hidden;
   font-size: 12px;
+}
+.fresh-list.fresh-myself-list .fresh-detail .fresh-text .fresh-info {
+  display: block;
+  overflow: hidden;
+  font-size: 12px;
+}
+.fresh-list.fresh-myself-list .fresh-detail .fresh-text .fresh-my-do {
+  display: inline;
+}
+.fresh-list.fresh-myself-list .fresh-comment-detail-info .fresh-detail .fresh-text .fresh-info {
+  display: inline;
+  overflow: auto;
+}
+.fresh-list.fresh-contact-my-list .fresh-detail .fresh-text .fresh-info {
+  display: block;
+  overflow: hidden;
+}
+.fresh-list.fresh-contact-my-list .fresh-detail .fresh-text .fresh-my-do {
+  display: inline;
+}
+.fresh-list.fresh-contact-my-list .fresh-detail .fresh-contact-mention {
+  display: block;
+  overflow: hidden;
+  padding: 20px;
+}
+.fresh-list.fresh-contact-my-list .fresh-comment-detail-info .fresh-detail .fresh-text .fresh-info {
+  display: inline;
+  overflow: auto;
 }
 /** 
  * 发送新鲜事Style
@@ -599,7 +681,6 @@
 }
 .fresh-send-box .fresh-send-preview {
   overflow: hidden;
-  height: 120px;
   border: 1px solid #eaeaea;
   border-top: none;
   padding: 10px;
@@ -607,7 +688,7 @@
 .fresh-send-box .fresh-send-preview .fresh-send-preview-imgvideo {
   float: left;
   position: relative;
-  height: 100px;
+  max-width: 120px;
 }
 .fresh-send-box .fresh-send-preview .fresh-send-preview-imgvideo .fresh-preview-close {
   background: url('img/comment-close.png') no-repeat;
@@ -617,6 +698,7 @@
   position: absolute;
   right: -18px;
   top: 0;
+  cursor: pointer;
 }
 .fresh-send-box .fresh-send-form {
   overflow: hidden;
@@ -634,6 +716,7 @@
   width: 22px;
   height: 22px;
   margin-top: 6px;
+  cursor: pointer;
 }
 .fresh-send-box a {
   float: left;
@@ -672,18 +755,211 @@
   font-style: normal;
   padding: 0 5px;
 }
-.fresh-send-box .fresh-send-submit-btn {
+.fresh-send-box .fresh-send-submit-box {
   float: left;
   cursor: pointer;
   margin-left: 15px;
 }
-.fresh-send-box .fresh-send-submit-btn a {
+.fresh-send-box .fresh-send-submit-box .fresh-send-submit-btn {
   padding: 8px 26px;
   font-size: 14px;
   font-family: "SimSun";
   color: #fff;
   margin: 0;
 }
-.fresh-send-box .fresh-send-submit-btn a:hover {
+.fresh-send-box .fresh-send-submit-box .fresh-send-submit-btn:hover {
   text-decoration: none;
+}
+/**
+ *评论验证码弹出层Style
+ */
+.fresh-dialog-verificationCode {
+  background: #fff;
+  overflow: hidden;
+}
+.fresh-dialog-verificationCode .fresh-dialog-content {
+  min-width: 100px;
+  overflow: auto;
+  padding: 25px 20px;
+  text-align: center;
+}
+.fresh-dialog-verificationCode .fresh-dialog-content .fresh-dialog-medal {
+  width: 355px;
+  margin: auto;
+}
+.fresh-dialog-verificationCode .fresh-dialog-content .fresh-dialog-medal .fresh-dialog-medal-tips {
+  font-size: 14px;
+  color: #666666;
+  overflow: hidden;
+}
+.fresh-dialog-verificationCode .fresh-dialog-content .fresh-dialog-medal .fresh-dialog-medal-tips span {
+  float: left;
+  display: inline;
+  height: 32px;
+  line-height: 32px;
+  padding-left: 35px;
+  background: url('img/fresh-warn.png') no-repeat;
+}
+.fresh-dialog-verificationCode .fresh-dialog-content .fresh-dialog-medal .fresh-dialog-medal-img {
+  overflow: hidden;
+  width: 270px;
+  margin-left: 38px;
+  margin-top: 20px;
+}
+.fresh-dialog-verificationCode .fresh-dialog-content .fresh-dialog-medal .fresh-dialog-medal-img span,
+.fresh-dialog-verificationCode .fresh-dialog-content .fresh-dialog-medal .fresh-dialog-medal-img input {
+  float: left;
+  display: inline;
+  margin-right: 5px;
+}
+.fresh-dialog-verificationCode .fresh-dialog-content .fresh-dialog-medal .fresh-dialog-medal-img span {
+  font-size: 14px;
+}
+.fresh-dialog-verificationCode .fresh-dialog-content .fresh-dialog-medal .fresh-dialog-medal-img span #verificationImg {
+  height: 26px;
+  cursor: pointer;
+}
+.fresh-dialog-verificationCode .fresh-dialog-content .fresh-dialog-medal .fresh-dialog-medal-img input {
+  width: 115px;
+  height: 26px;
+  border: 1px solid #ccc;
+  margin: 0 5px 0 0;
+  padding: 0;
+}
+.fresh-dialog-verificationCode .fresh-dialog-content .fresh-dialog-medal #fresh-dialog-tips-Code {
+  color: #cc0000;
+  padding-left: 85px;
+  overflow: hidden;
+  height: 20px;
+  font-size: 12px;
+}
+.fresh-dialog-verificationCode .fresh-dialog-content .fresh-dialog-medal .fresh-dialog-sure-btn {
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.fresh-dialog-verificationCode .fresh-dialog-content .fresh-dialog-medal .fresh-dialog-sure-btn a {
+  padding: 8px 26px;
+  font-size: 14px;
+  font-family: "SimSun";
+  margin: 0;
+}
+.fresh-dialog-verificationCode .fresh-dialog-content .fresh-dialog-medal .fresh-dialog-sure-btn a.fresh-dialog-btn-disabled {
+  background: #3bafda;
+  opacity: .6;
+  filter: alpha(opacity=60);
+}
+/**
+ *表情弹出层Style
+ */
+.fresh-dialog-emote {
+  background: #fff;
+  overflow: hidden;
+}
+.fresh-dialog-emote .fresh-dialog-smilies-medal {
+  width: 476px;
+  overflow: hidden;
+}
+.fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-dialog-smilies-con {
+  overflow: hidden;
+  border: 1px solid red;
+}
+.fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-dialog-smilies-con ul.fresh-dialog-smilies-list {
+  width: 450px;
+  margin: 10px;
+  overflow: hidden;
+}
+.fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-dialog-smilies-con ul li {
+  float: left;
+  display: inline;
+  cursor: pointer;
+  border: 1px solid #f5f5f5;
+  width: 29px;
+  height: 29px;
+  padding: 3px;
+}
+.fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-dialog-smilies-con ul li img {
+  float: left;
+  width: 22px;
+  height: 22px;
+  max-width: 22px;
+}
+.fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-dialog-smilies-con ul li:hover {
+  background: #f1fcfa;
+  border: 1px solid #c1e2f1;
+  position: relative;
+  z-index: 2;
+}
+/**
+ * 收藏弹出层Style
+ */
+.fresh-dialog-collect {
+  overflow: hidden;
+}
+.fresh-dialog-collect .fresh-dialog-collect-content {
+  min-width: 100px;
+  padding: 25px 20px;
+  line-height: 32px;
+  overflow: auto;
+  font-size: 12px;
+  font-family: "SimSun";
+}
+.fresh-dialog-collect .fresh-dialog-collect-content .fresh-dialog-collect-icon {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  margin-right: 10px;
+  float: left;
+  background-position: left top;
+  background-repeat: no-repeat;
+}
+.fresh-dialog-collect .fresh-dialog-collect-content .fresh-dialog-success {
+  overflow: hidden;
+}
+.fresh-dialog-collect .fresh-dialog-collect-content .fresh-dialog-success .fresh-dialog-collect-icon {
+  background: url('img/fresh-check.png') no-repeat;
+}
+/**
+ * 删除新鲜事和评论确认弹出层Style
+ */
+.fresh-dialog-delete {
+  overflow: hidden;
+}
+.fresh-dialog-delete .fresh-dialog-delete-content {
+  min-width: 100px;
+  padding: 25px 20px;
+  line-height: 32px;
+  overflow: auto;
+  text-align: center;
+  font-family: "SimSun";
+}
+.fresh-dialog-delete .fresh-dialog-delete-content .fresh-dialog-delete-tips {
+  overflow: hidden;
+  text-align: center;
+  line-height: 30px;
+  margin: 0;
+  padding-bottom: 10px;
+  font-size: 14px;
+}
+.fresh-dialog-delete .fresh-dialog-delete-content .fresh-dialog-delete-btn {
+  padding: 10px 20px;
+  text-align: center;
+}
+.fresh-dialog-delete .fresh-dialog-delete-content .fresh-dialog-delete-btn .fresh-btn {
+  margin: 0 5px;
+  padding: 8px 26px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  font-size: 12px;
+}
+.fresh-dialog-delete .fresh-dialog-delete-content .fresh-dialog-delete-btn .fresh-btn.fresh-sure-btn {
+  background: #cb0000;
+  color: #fff;
+}
+.fresh-dialog-delete .fresh-dialog-delete-content .fresh-dialog-delete-btn .fresh-btn.fresh-cancel-btn {
+  background: #f3f3f3;
+  color: #333333;
 }
