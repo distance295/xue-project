@@ -65,7 +65,6 @@ ul,li{list-style: none;}
 }
 .course-list {
 	font-family: "SimSun";
-	height: 130px;
 	border-top: 1px solid @borderColor;
 	width: 100%;
 	padding: 18px 10px;
@@ -79,12 +78,48 @@ ul,li{list-style: none;}
 		float: left;
 		.avatar-photo{
 			margin-bottom: 4px;
-			display: inline-block
-		}
-		.avatar-name{
-			.ui-username{
-				color: #666;
-				font-size: 12px;
+			display: inline-block;
+			width: 60px;
+			overflow: hidden;
+			ul{
+				overflow: hidden;
+				width: 800px;
+				height: 60px;
+				margin-left: 0;
+				margin-bottom: 10px;
+				li{
+					overflow: hidden;
+					float: left;
+					width: 60px;
+				}
+			}
+			.avatar-roll{
+				a{
+					outline: none;
+					em{
+						display: inline-block;
+						height: 17px;
+						line-height: 17px;
+						text-align: center;
+						text-indent: -9999em;
+						vertical-align: top;
+						width: 17px;
+					}
+					.icon-chevron-left{
+						background: url('img/icon_chevron_left.png') no-repeat 0 0;
+					}
+					.icon-chevron-right{
+						background: url('img/icon_chevron_right.png') no-repeat 0 0;
+					}
+				}
+				a.none{
+					.icon-chevron-left{
+						background: url('img/icon_chevron_left_none.png') no-repeat 0 0;
+					}
+					.icon-chevron-right{
+						background: url('img/icon_chevron_right_none.png') no-repeat 0 0;
+					}
+				}
 			}
 		}
 		.avatar-follow{
@@ -111,18 +146,27 @@ ul,li{list-style: none;}
 		float: left;
 		overflow: hidden;
 		p{
-			margin-bottom: 8px;
+			margin: 8px 0;
 			overflow: hidden;
+			font-size: 12px;
 		}
 		p.tip-for{
 			font-size: 12px;
 			color: #666;
-			margin: 12px 0;
+			margin: 8px 0;
 			span{
 				margin-right: 15px;
 				strong{
 					color: #e74c3c;
 				}
+			}
+		}
+
+		.avatar-name{
+			.ui-username{
+				color: #666;
+				font-size: 12px;
+				line-height: 18px;
 			}
 		}
 		.ui-username{

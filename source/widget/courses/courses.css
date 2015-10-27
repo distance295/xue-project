@@ -63,7 +63,6 @@ li {
 }
 .course-list {
   font-family: "SimSun";
-  height: 130px;
   border-top: 1px solid #eaeaea;
   width: 100%;
   padding: 18px 10px;
@@ -80,10 +79,44 @@ li {
 .course-list .ui-avatar .avatar-photo {
   margin-bottom: 4px;
   display: inline-block;
+  width: 60px;
+  overflow: hidden;
 }
-.course-list .ui-avatar .avatar-name .ui-username {
-  color: #666;
-  font-size: 12px;
+.course-list .ui-avatar .avatar-photo ul {
+  overflow: hidden;
+  width: 800px;
+  height: 60px;
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+.course-list .ui-avatar .avatar-photo ul li {
+  overflow: hidden;
+  float: left;
+  width: 60px;
+}
+.course-list .ui-avatar .avatar-photo .avatar-roll a {
+  outline: none;
+}
+.course-list .ui-avatar .avatar-photo .avatar-roll a em {
+  display: inline-block;
+  height: 17px;
+  line-height: 17px;
+  text-align: center;
+  text-indent: -9999em;
+  vertical-align: top;
+  width: 17px;
+}
+.course-list .ui-avatar .avatar-photo .avatar-roll a .icon-chevron-left {
+  background: url('img/icon_chevron_left.png') no-repeat 0 0;
+}
+.course-list .ui-avatar .avatar-photo .avatar-roll a .icon-chevron-right {
+  background: url('img/icon_chevron_right.png') no-repeat 0 0;
+}
+.course-list .ui-avatar .avatar-photo .avatar-roll a.none .icon-chevron-left {
+  background: url('img/icon_chevron_left_none.png') no-repeat 0 0;
+}
+.course-list .ui-avatar .avatar-photo .avatar-roll a.none .icon-chevron-right {
+  background: url('img/icon_chevron_right_none.png') no-repeat 0 0;
 }
 .course-list .ui-avatar .avatar-follow {
   display: inline-block;
@@ -112,19 +145,25 @@ li {
   overflow: hidden;
 }
 .course-list .course-detail p {
-  margin-bottom: 8px;
+  margin: 8px 0;
   overflow: hidden;
+  font-size: 12px;
 }
 .course-list .course-detail p.tip-for {
   font-size: 12px;
   color: #666;
-  margin: 12px 0;
+  margin: 8px 0;
 }
 .course-list .course-detail p.tip-for span {
   margin-right: 15px;
 }
 .course-list .course-detail p.tip-for span strong {
   color: #e74c3c;
+}
+.course-list .course-detail .avatar-name .ui-username {
+  color: #666;
+  font-size: 12px;
+  line-height: 18px;
 }
 .course-list .course-detail .ui-username {
   color: #333;
