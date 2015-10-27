@@ -1,0 +1,244 @@
+/* ��������ͷ�� */
+.centerHeader {
+  width: 100%;
+  padding-top: 16px;
+  height: 100%;
+  background: url('../img/background.png') no-repeat;
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+}
+.centerHeader .centerHeader-background {
+  width: 1190px;
+  height: 300px;
+  margin: 0 auto ;
+  background: url('../img/header.jpg');
+}
+.centerHeader .centerHeader-background .centerHeader-img {
+  padding-top: 60px;
+}
+.centerHeader .centerHeader-background .centerHeader-img .centerHeader-img-head {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  position: relative;
+  background: url('../img/header-img.png');
+}
+.centerHeader .centerHeader-background .centerHeader-img .centerHeader-img-head .centerHeader-img-level {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 80%;
+  left: 80%;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  background: #3bafda;
+}
+.centerHeader .centerHeader-background .centerHeader-img .centerHeader-img-head .centerHeader-img-level .level-img {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  margin-left: 2px;
+}
+.centerHeader .centerHeader-background .intro {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 8px;
+  color: #fff;
+}
+.centerHeader .centerHeader-background .centerHeader-intro-office {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 8px;
+  color: #fff;
+}
+.centerHeader .centerHeader-background .centerHeader-intro-teacher {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 8px;
+  color: #fff;
+  position: relative;
+}
+.centerHeader .centerHeader-background .centerHeader-intro-teacher .centerHeader-intro-teacher-more {
+  font-size: 12px;
+  margin-left: 12px;
+}
+.centerHeader .centerHeader-background .centerHeader-intro-teacher .teacher-prize-size {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+}
+.centerHeader .centerHeader-background .centerHeader-intro-teacher .teacher-prize1 {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  left: 55%;
+}
+.centerHeader .centerHeader-background .centerHeader-intro-teacher .teacher-prize2 {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  left: 58%;
+}
+.centerHeader .centerHeader-background .centerHeader-intro-teacher .teacher-prize3 {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  left: 61%;
+}
+.centerHeader .centerHeader-background .centerHeader-intro-stu {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 8px;
+  color: #fff;
+}
+.centerHeader .centerHeader-background .centerHeader-selfintro {
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  margin-top: 12px;
+}
+.centerHeader .centerHeader-background .focus {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 15px;
+  color: #fff;
+}
+.centerHeader .centerHeader-background .btn {
+  display: inline-block;
+  width: 80px;
+  height: 33px;
+  line-height: 33px;
+  border-radius: 1px;
+  background: #ffbc3c;
+}
+.centerHeader .centerHeader-background .centerHeader-notFoucs {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 15px;
+  color: #fff;
+}
+.centerHeader .centerHeader-background .centerHeader-notFoucs .centerHeader-notFoucs-btn {
+  letter-spacing: 4px;
+  display: inline-block;
+  width: 80px;
+  height: 33px;
+  line-height: 33px;
+  border-radius: 1px;
+  background: #ffbc3c;
+}
+.centerHeader .centerHeader-background .centerHeader-alFocus {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 15px;
+  color: #fff;
+}
+.centerHeader .centerHeader-background .centerHeader-alFocus .centerHeader-alFocus-btn {
+  display: inline-block;
+  width: 80px;
+  height: 33px;
+  line-height: 33px;
+  border-radius: 1px;
+  background: #ffbc3c;
+  margin-right: 9px;
+}
+.centerHeader .centerHeader-background .centerHeader-alFocus .centerHeader-willFocus-btn {
+  display: inline-block;
+  width: 80px;
+  height: 33px;
+  line-height: 33px;
+  font-size: 14px;
+}
+/* ��������ͷ��end */
+/* ��������center-info start */
+.center-left {
+  width: 260px;
+  background: #fff;
+  border-radius: 4px;
+}
+.center-info {
+  width: 260px;
+  background: #fff;
+  border-radius: 4px;
+  height: 50px;
+  font-size: 13px;
+}
+.center-info .center-info-all {
+  display: inline-block;
+  text-align: center;
+  width: 80px;
+  height: 36px;
+  margin-top: 8px;
+}
+.center-info .center-info-fans {
+  display: inline-block;
+  text-align: center;
+  width: 80px;
+  height: 36px;
+  margin-top: 8px;
+  border-right: 1px solid #d9d9d9;
+}
+.center-info .center-info-fans .center-info-fans-name {
+  color: #bfbfbf;
+}
+.center-info .center-info-newThing {
+  display: inline-block;
+  text-align: center;
+  width: 80px;
+  height: 36px;
+  margin-top: 8px;
+}
+.center-info .center-info-newThing .center-info-newThing-name {
+  color: #bfbfbf;
+}
+.center-info .center-info-stud {
+  display: inline-block;
+  text-align: center;
+  width: 80px;
+  height: 36px;
+  margin-top: 8px;
+  border-left: 1px solid #d9d9d9;
+}
+.center-info .center-info-stud .center-info-stud-name {
+  color: #bfbfbf;
+}
+.center-info .center-info-fans-office {
+  display: inline-block;
+  margin: 8px 0 0 8px;
+  width: 120px;
+  border-right: 1px solid #d9d9d9;
+  text-align: center;
+}
+.center-info .center-info-newThing-office {
+  display: inline-block;
+  margin: 8px 8px 0 0;
+  width: 120px;
+  text-align: center;
+}
+/* ��������center-info end */
+/* ����������֤ start */
+.center-verify {
+  width: 260px;
+  background: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+  height: 68px;
+}
+.center-verify .center-office-verify {
+  float: left;
+  width: 106px;
+  height: 27px;
+  margin-left: 14px;
+  margin-top: 20px;
+  background: url("../img/office-verify.png") no-repeat;
+  border-right: 1px solid #d9d9d9;
+}
+.center-verify .center-office-desc {
+  width: 135px;
+  float: left;
+  height: 27px;
+  text-align: center;
+  margin-top: 25px;
+}
