@@ -904,41 +904,107 @@
 .fresh-dialog-emote{
    background: #fff;
    overflow: hidden;
+   padding: 10px;
    .fresh-dialog-smilies-medal{
        width: 476px;
        overflow: hidden;
-       .fresh-dialog-smilies-con {
-           overflow: hidden;
-           border: 1px solid red;
-           ul{
-               &.fresh-dialog-smilies-list{
-                  width: 450px;
-                  margin: 10px;
-                  overflow: hidden;
-               }
-               li{
+       .fresh-smilies-title{
+            overflow: hidden;
+            background: #f9f9f9;
+            ul{
+                float: left;
+                display: inline;
+                width: 300px;
+                height: 27px;
+                line-height: 27px;
+                margin: 0;
+                padding: 0;
+                li {
                     float: left;
+                    .font-size;
+                    .font-family;
                     display: inline;
+                    width: 75px;
+                    text-align: center;
                     cursor: pointer;
-                    border: 1px solid #f5f5f5;
-                    width: 29px;
-                    height: 29px;
-                    padding: 3px;
-                    img{
-                      float: left;
-                      width: 22px;
-                      height: 22px;
-                      max-width: 22px;
+                    &.current {
+                      background: #fff;
                     }
-                    &:hover{
-                        background: #f1fcfa;
-                        border: 1px solid #c1e2f1;
-                        position: relative;
-                        z-index: 2;
-                    }
-               }
-           }
-      }
+                }
+            }
+            .fresh-smilies-close {
+                float: right;
+                display: inline;
+                width: 15px;
+                height: 15px;
+                background: url('img/fresh-smilies-close.png') no-repeat;
+                text-indent: -99999em;
+                cursor: pointer;
+                margin: 5px 5px 0;
+            }
+        }
+        .fresh-dialog-smilies-box{
+            overflow: hidden;
+            .fresh-dialog-smilies-con {
+                 overflow: hidden;
+                 ul{
+                     &.fresh-dialog-smilies-list{
+                        width: 450px;
+                        margin: 10px 0;
+                        overflow: hidden;
+                     }
+                     li{
+                          float: left;
+                          display: inline;
+                          cursor: pointer;
+                          border: 1px solid #f5f5f5;
+                          width: 30px;
+                          height: 30px;
+                          padding: 3px;
+                          img{
+                            float: left;
+                            width: 22px;
+                            height: 22px;
+                            max-width: 22px;
+                          }
+                          &:hover{
+                              background: #f1fcfa;
+                              border: 1px solid #c1e2f1;
+                              position: relative;
+                              z-index: 2;
+                          }
+                     }
+                 }
+            }
+            .fresh-smilies-page{
+                overflow: hidden;
+                ul{
+                    width: 450px;
+                    overflow: hidden;
+                    border-top: 1px solid #f5f5f5;
+                    padding: 10px 0 0 0;
+                    margin: 0 auto 5px 0;
+                    text-align: right;
+                   li{
+                        display: inline-block;
+                        width: 15px;
+                        height: 15px;
+                        line-height: 15px;
+                        text-align: center;
+                        margin-left: 5px;
+                        .font-size;
+                        &.current {
+                            background: #0077b4;
+                            a {
+                              color: #fff;
+                              text-decoration: none;
+                            }
+                        }
+                   }
+                }
+            }
+        }
+       
     }
 }
 

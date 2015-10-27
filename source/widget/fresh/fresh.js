@@ -736,7 +736,31 @@ fresh.comment = fresh.comment || {};
               _currentTextarea.insertContent(_val);
               $('.fresh-dialog-emote').addClass('hide');
         })
+
+        //关闭表情层(关闭表情弹出层)
+        $('.fresh-dialog-emote').off('click', '.fresh-smilies-close').on('click', '.fresh-smilies-close', function(){
+            $(this).closest('.fresh-dialog-emote').addClass('hide');
+        });
+
+         //tabs和分页切换
+         this.emoteTabs(".fresh-smilies-tabs","current",".fresh-dialog-smilies-box");
+         this.emoteTabs(".fresh-smilies-page-box","current",".fresh-dialog-smilies-con");
     }
+
+    /**
+     * 删除新鲜事和评论方法
+     * @param  {Object} tabTit 任意子节点
+     * @param  {Object} on 任意类名
+     * @param  {Object} tabCon 任意子节点
+     */
+    fc.emoteTabs = function(tabTit, on, tabCon){
+        $(tabTit).children().click(function(){
+            $(this).addClass(on).siblings().removeClass(on);
+            var index = $(tabTit).children().index(this);
+            $(tabCon).children().eq(index).show().siblings('ul').hide();
+        });
+    }
+
     /**
      * 删除新鲜事和评论方法
      * @param  {string} dom 任意子节点

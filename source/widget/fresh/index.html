@@ -16,7 +16,7 @@
 <button id="freshPost">发布新鲜事</button>
 <div class="row">
         <!--新鲜事单条列表信息开始————图片-->
-        <div class="fresh-list small-12">
+        <div class="fresh-list small-12" >
             <div class="fresh-avatar left">
                 <a href ="###">
                     <img src="img/fresh_avatar.png" />
@@ -474,9 +474,16 @@
   <!--表情弹出层开始-->
   <div class="fresh-dialog-emote hide">
     <div class="fresh-dialog-smilies-medal">
-      <div class="fresh-dialog-smilies-con">
+      <div class="fresh-smilies-title">
+         <ul class="fresh-smilies-tabs">
+             <li data-type="1" class="current">默认表情</li>
+         </ul>
+         <div class="fresh-smilies-close" title="关闭"></div>
+      </div>
+      <div class="fresh-dialog-smilies-box">
+         <div class="fresh-dialog-smilies-con">
             <ul class="fresh-dialog-smilies-list fresh-jsSmilies">
-              <li title="可爱" data-action="[可爱]" class="fresh-smilies-current"><img src="http://img04.xesimg.com/icon/emoji/em_1.png"></li>
+              <li title="可爱" data-action="[可爱]"><img src="http://img04.xesimg.com/icon/emoji/em_1.png"></li>
               <li title="开心" data-action="[开心]" class=""><img src="http://img04.xesimg.com/icon/emoji/em_2.png"></li>
               <li title="笑脸" data-action="[笑脸]" class=""><img src="http://img04.xesimg.com/icon/emoji/em_3.png"></li>
               <li title="挤眼" data-action="[挤眼]" class=""><img src="http://img04.xesimg.com/icon/emoji/em_4.png"></li>
@@ -612,7 +619,34 @@
               <li title="啤酒" data-action="[啤酒]"><img src="http://img04.xesimg.com/icon/emoji/em_134.png"></li>
               <li title="对饮" data-action="[对饮]"><img src="http://img04.xesimg.com/icon/emoji/em_135.png"></li>
           </ul>
-      </div>
+          <ul style="display: none;" class="fresh-dialog-smilies-list fresh-jsSmilies">
+              <li title="鸡尾酒" data-action="[鸡尾酒]"><img src="http://img04.xesimg.com/icon/emoji/em_136.png"></li>
+              <li title="汉堡" data-action="[汉堡]"><img src="http://img04.xesimg.com/icon/emoji/em_137.png"></li>
+              <li title="意面" data-action="[意面]"><img src="http://img04.xesimg.com/icon/emoji/em_138.png"></li>
+              <li title="寿司" data-action="[寿司]"><img src="http://img04.xesimg.com/icon/emoji/em_139.png"></li>
+              <li title="面条" data-action="[面条]"><img src="http://img04.xesimg.com/icon/emoji/em_140.png"></li>
+              <li title="冰淇淋" data-action="[冰淇淋]"><img src="http://img04.xesimg.com/icon/emoji/em_141.png"></li>
+              <li title="生日蛋糕" data-action="[生日蛋糕]"><img src="http://img04.xesimg.com/icon/emoji/em_142.png"></li>
+              <li title="薯条" data-action="[薯条]"><img src="http://img04.xesimg.com/icon/emoji/em_143.png"></li>
+              <li title="苹果" data-action="[苹果]"><img src="http://img04.xesimg.com/icon/emoji/em_144.png"></li>
+              <li title="火箭" data-action="[火箭]"><img src="http://img04.xesimg.com/icon/emoji/em_145.png"></li>
+              <li title="单车" data-action="[单车]"><img src="http://img04.xesimg.com/icon/emoji/em_146.png"></li>
+              <li title="动车" data-action="[动车]"><img src="http://img04.xesimg.com/icon/emoji/em_147.png"></li>
+              <li title="黑白旗" data-action="[黑白旗]"><img src="http://img04.xesimg.com/icon/emoji/em_148.png"></li>
+              <li title="照相机" data-action="[照相机]"><img src="http://img04.xesimg.com/icon/emoji/em_149.png"></li>
+              <li title="男厕" data-action="[男厕]"><img src="http://img04.xesimg.com/icon/emoji/em_150.png"></li>
+              <li title="女厕" data-action="[女厕]"><img src="http://img04.xesimg.com/icon/emoji/em_151.png"></li>
+              <li title="圈圈" data-action="[圈圈]"><img src="http://img04.xesimg.com/icon/emoji/em_152.png"></li>
+              <li title="叉叉" data-action="[叉叉]"><img src="http://img04.xesimg.com/icon/emoji/em_153.png"></li>
+          </ul>
+        </div>
+        <div class="fresh-smilies-page">
+          <ul class="fresh-smilies-page-box">
+              <li class="current"><a href="javascript:void(0);">1</a></li>
+              <li><a href="javascript:void(0);">2</a></li>
+          </ul>
+        </div>
+      </div>  
     </div>   
   </div>
   <!-- 表情弹出层结束 -->
