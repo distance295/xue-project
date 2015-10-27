@@ -7,13 +7,15 @@
   overflow: hidden;
   width: 290px;
 }
+.glory-content li {
+  margin-bottom: 15px;
+}
 .glory-content .glory-water {
   padding: 0 9px;
 }
 .glory-content .water-pic {
   border: 1px solid #eaeaea;
   width: 290px;
-  height: 352px;
   padding: 9px;
 }
 .glory-content .water-pic img {
@@ -26,6 +28,7 @@
   line-height: 19px;
   margin-top: 15px;
   overflow: hidden;
+  margin-bottom: 5px;
 }
 .glory-content .water-option {
   background: #f8f8f8;
