@@ -122,25 +122,6 @@ ul,li{list-style: none;}
 				}
 			}
 		}
-		.avatar-follow{
-			display: inline-block;
-			font-size: @fontSize;
-			height: 20px;
-			line-height: 20px;
-			padding: 0 2px;
-			width: 50px;
-			.border-radius(2px);
-			em{
-				font-style: normal;
-			}
-		}
-		.avatar-follow.add{
-			background: #ffbc3c;
-			color: #ffffff;
-			cursor: pointer;
-			text-align: center;
-			text-decoration: none;
-		}
 	}
 	.course-detail{
 		float: left;
@@ -173,17 +154,28 @@ ul,li{list-style: none;}
 			color: #333;
 			font-size: 26px;
 			line-height: 34px;
+			float: left;
+		}
+		.course-icon{
+			width: 21px;
+			height: 34px;
+			display: inline-block;
+			float: left;
+			margin: 0 8px;
 		}
 		.icon-yverify{
 			background: url('img/v.png') no-repeat left center;
-			width: 21px;
-			height: 17px;
-			display: inline-block;
+
+		}
+		.icon-redverify{
 
 		}
 		span.teacher-label{
 			font-size: @fontSize;
 			color: @gray999;
+			height: 34px;
+			float: left;
+			line-height: 34px;
 		}
 		.course-title{
 			line-height: 18px;
@@ -293,4 +285,91 @@ ul,li{list-style: none;}
 .course-test{
 	height: 160px;
 }
-
+.course-list .fresh-course-attention{
+	font-size: 12px;
+	em,i{
+		font-style: normal;
+	}
+}
+.course-list .fresh-attention-btn {
+	background: #ffbc3c;
+	border-radius: 2px;
+	color: #fff;
+	line-height: 20px;
+	padding: 0 8px;
+	display: inline-block;
+	font-size: 12px;
+}
+.course-list .fresh-add {
+	font-size: 14px;
+	margin-top: 1px;
+	padding-right: 2px;
+}
+.course-list .fresh-course-attention a.fresh-add-cancel-btn {
+	color: #3bafda;
+}
+.hot-course-list{
+	padding: 10px 0;
+	background: #fcfcfc;
+	.ui-avatar{
+		margin-right: 10px;
+		width: 40px;
+		.avatar-photo{
+			width: 40px;
+			img{
+				width: 40px;
+				height: 40px;
+			}
+		}
+	}
+	.course-detail{
+		p{
+			margin: 3px 0;
+			height: 22px;
+		}
+		.course-teacher{
+			margin-top: 0;
+			.ui-username{
+				font-size: 14px;
+				line-height: 22px;
+			}
+			.course-icon{
+				line-height: 22px;
+				height: 22px;
+			}
+			.icon-s-yverify{
+				background: url('img/icon-s-yverify.png') no-repeat 0 center;
+			}
+			.icon-s-redverify{
+				background: url('img/icon-s-redverify.png') no-repeat 0 center;
+			}
+		}
+		.amount-show{
+			margin-bottom: 0;
+		}
+		.avatar-name{
+			.title-detail{
+				margin-right: 18px;
+				font-size: 12px;
+				line-height: 20px;
+				color: #333;
+				float: left;
+			}
+			.course-static{
+				.icon-people{
+					background: url("img/ic_username.png") no-repeat scroll left center;
+					display: inline-block;
+					font-style: normal;
+					height: 20px;
+					line-height: 20px;
+					margin-right: 5px;
+					vertical-align: top;
+					width: 20px;
+				}
+				strong{
+					color: #e74c3c;
+				}
+			}
+		}
+	}
+}
