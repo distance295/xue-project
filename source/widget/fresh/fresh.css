@@ -855,40 +855,105 @@
 .fresh-dialog-emote {
   background: #fff;
   overflow: hidden;
+  padding: 10px;
 }
 .fresh-dialog-emote .fresh-dialog-smilies-medal {
   width: 476px;
   overflow: hidden;
 }
-.fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-dialog-smilies-con {
+.fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-smilies-title {
   overflow: hidden;
-  border: 1px solid red;
+  background: #f9f9f9;
 }
-.fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-dialog-smilies-con ul.fresh-dialog-smilies-list {
+.fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-smilies-title ul {
+  float: left;
+  display: inline;
+  width: 300px;
+  height: 27px;
+  line-height: 27px;
+  margin: 0;
+  padding: 0;
+}
+.fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-smilies-title ul li {
+  float: left;
+  font-size: 12px;
+  font-family: "SimSun";
+  display: inline;
+  width: 75px;
+  text-align: center;
+  cursor: pointer;
+}
+.fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-smilies-title ul li.current {
+  background: #fff;
+}
+.fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-smilies-title .fresh-smilies-close {
+  float: right;
+  display: inline;
+  width: 15px;
+  height: 15px;
+  background: url('img/fresh-smilies-close.png') no-repeat;
+  text-indent: -99999em;
+  cursor: pointer;
+  margin: 5px 5px 0;
+}
+.fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-dialog-smilies-box {
+  overflow: hidden;
+}
+.fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-dialog-smilies-box .fresh-dialog-smilies-con {
+  overflow: hidden;
+}
+.fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-dialog-smilies-box .fresh-dialog-smilies-con ul.fresh-dialog-smilies-list {
   width: 450px;
-  margin: 10px;
+  margin: 10px 0;
   overflow: hidden;
 }
-.fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-dialog-smilies-con ul li {
+.fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-dialog-smilies-box .fresh-dialog-smilies-con ul li {
   float: left;
   display: inline;
   cursor: pointer;
   border: 1px solid #f5f5f5;
-  width: 29px;
-  height: 29px;
+  width: 30px;
+  height: 30px;
   padding: 3px;
 }
-.fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-dialog-smilies-con ul li img {
+.fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-dialog-smilies-box .fresh-dialog-smilies-con ul li img {
   float: left;
   width: 22px;
   height: 22px;
   max-width: 22px;
 }
-.fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-dialog-smilies-con ul li:hover {
+.fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-dialog-smilies-box .fresh-dialog-smilies-con ul li:hover {
   background: #f1fcfa;
   border: 1px solid #c1e2f1;
   position: relative;
   z-index: 2;
+}
+.fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-dialog-smilies-box .fresh-smilies-page {
+  overflow: hidden;
+}
+.fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-dialog-smilies-box .fresh-smilies-page ul {
+  width: 450px;
+  overflow: hidden;
+  border-top: 1px solid #f5f5f5;
+  padding: 10px 0 0 0;
+  margin: 0 auto 5px 0;
+  text-align: right;
+}
+.fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-dialog-smilies-box .fresh-smilies-page ul li {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  text-align: center;
+  margin-left: 5px;
+  font-size: 12px;
+}
+.fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-dialog-smilies-box .fresh-smilies-page ul li.current {
+  background: #0077b4;
+}
+.fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-dialog-smilies-box .fresh-smilies-page ul li.current a {
+  color: #fff;
+  text-decoration: none;
 }
 /**
  * 收藏弹出层Style
