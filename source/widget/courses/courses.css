@@ -65,7 +65,7 @@ li {
   font-family: "SimSun";
   border-top: 1px solid #eaeaea;
   width: 100%;
-  padding: 18px 10px;
+  padding: 13px 10px;
   overflow: hidden;
 }
 .course-list a {
@@ -134,6 +134,7 @@ li {
 }
 .course-list .course-detail p.tip-for span {
   margin-right: 15px;
+  float: left;
 }
 .course-list .course-detail p.tip-for span strong {
   color: #e74c3c;
@@ -309,7 +310,13 @@ li {
 }
 .hot-course-list .course-detail p {
   margin: 3px 0;
+}
+.hot-course-list .course-detail p.course-teacher {
   height: 22px;
+}
+.hot-course-list .course-detail p.course-title .title-detail {
+  font-size: 12px;
+  font-family: "SimSun";
 }
 .hot-course-list .course-detail .course-teacher {
   margin-top: 0;
