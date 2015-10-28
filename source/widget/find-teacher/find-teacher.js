@@ -4,7 +4,8 @@
 $(function(){
     var
         $hcontainer = $(".find-teacher-hover-container"),
-        $ftlist = $(".find-teacher-list");
+        $ftlist = $(".find-teacher-list"),
+        $ftfollow = $(".find-teacher-follow");
     $ftlist.each(function(){
         $hcontainer.on({
                 mouseenter:function(){
@@ -17,9 +18,8 @@ $(function(){
                 }}
         );
     });
-});
-function follow(){
-    $(".find-teacher-follow").on("click",function(){
+    $ftfollow.on("click",function(){
         $(this).addClass("find-teacher-have-followed").html("已关注");
     });
-}
+});
+
