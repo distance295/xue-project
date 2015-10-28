@@ -1,4 +1,4 @@
-/* ¸öÈËÖĞĞÄÍ·²¿ */
+/* ä¸ªäººä¸­å¿ƒå¤´éƒ¨centerHeader- start */
 @Hopacity:0.3;
 .centerHeader{
   width: 100%;
@@ -122,9 +122,9 @@
     }
   }
 }
-/* ¸öÈËÖĞĞÄÍ·²¿end */
+/* ä¸ªäººä¸­å¿ƒå¤´éƒ¨ centerHeader end */
 
-/* ¸öÈËÖĞĞÄcenter-info start */
+/* ä¸ªäººä¸­å¿ƒ center-info start */
 .center-left{
   width: 260px;
   background: #fff;
@@ -176,9 +176,9 @@
     text-align: center;
   }
 }
-/* ¸öÈËÖĞĞÄcenter-info end */
+/* ä¸ªäººä¸­å¿ƒcenter-info end */
 
-/* ¸öÈËÖĞĞÄÈÏÖ¤ start */
+/* ä¸ªäººä¸­å¿ƒè®¤è¯ center-verifyÖ¤ start */
 .verify-up-left{
   width: 106px;
   height: 30px;
@@ -265,9 +265,9 @@
     }
   }
 }
-/* ¸öÈËÖĞĞÄÈÏÖ¤ end */
+/* ä¸ªäººä¸­å¿ƒ center-cerifyÖ¤ end */
 
-/* ¸öÈËÖĞĞÄ·Ã¿Ístart */
+/* ä¸ªäººä¸­å¿ƒ æœ€è¿‘è®¿é—® center-visit start */
 .center-visit{
   .center-left;
   height: 513px;
@@ -298,9 +298,9 @@
     }
   }
 }
-/* ¸öÈËÖĞĞÄ·Ã¿Íend */
+/* ä¸ªäººä¸­å¿ƒ æœ€è¿‘è®¿é—® center-visit end */
 
-/* ¸öÈËÖĞĞÄÖ±²¥ÏÊ»¨start */
+/* ä¸ªäººä¸­å¿ƒç›´æ’­çŒ®èŠ± center-broadcast start */
 .center-rank-left{
   width: 920px;
   border-radius: 4px;
@@ -334,64 +334,104 @@
     background: url("../img/flower3.png") no-repeat 0 15px;
   }
   .rank-info{
+    float:left;
     color:#ff3333;
     font-size: 12px;
   }
 }
-.center-rank-stud{
-  .center-rank-left;
-  height: 65px;
-  line-height: 65px;
-  background: #ccc;
-  .rank-number{
-    span{
-      display: inline-block;
-      width: 32px;
-      height: 32px;
-      line-height: 32px;
-      text-align: center;
-      font-size: 18px;
-      border-radius: 50%;
-      background: rgb(231,71,60);
-    }
+.center-rank-alive{
+  width: 920px;
+  height: 700px;
+  border-radius: 4px;
+  .center-rank-stud{
+    height: 65px;
+    width: 920px;
+    background: #fff;
+    font-size: 12px;
+    line-height: 65px;
+    overflow:hidden;
+    .rank-number{
+      float:left;
+      .number1{
+        background: rgb(231,71,60);
+      }
+      .number2{
+        background: rgb(255,188,60);
+      }
+      .number3{
+        background: rgb(59,175,218);
+      }
+      span{
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        text-align: center;
+        font-size: 18px;
+        border-radius: 50%;
+        background: #ccc;
+      }
 
-  }
-  div{
-    margin-left: 20px;
-  }
-  .rank-photo{
-    display: inline-block;
-    width: 40px;
-    height: 35px;
-  }
-  .rank-name{
-    span{
-      width: 170px;
+    }
+    div{
+      margin-left: 20px;
+    }
+    .rank-photo{
+      float:left;
+      display: inline-block;
+      width: 40px;
+      height: 35px;
+    }
+    .rank-name{
+      float:left;
+      span{
+        width: 170px;
+        height: 65px;
+        display: inline-block;
+        color: rgb(102,102,102);
+        font-size: 14px;
+        overflow: hidden;
+      }
+
+    }
+    .send-flower{
+      float:left;
+      display: inline-block;
+      font-size: 12px;
+      color:rgb(166,163,163);
+      .send-flower1{
+        margin-left: 18px;
+        font-size: 14px;
+        width: 100px;
+        color: rgb(51,51,51);
+        display: inline-block;
+        padding-left: 25px;
+        background: url("../img/flower1.png") no-repeat 0 18px;
+      }
+      .send-flower2{
+        font-size: 14px;
+        width: 100px;
+        display: inline-block;
+        color: rgb(51,51,51);
+        padding-left: 20px;
+        background: url("../img/flower2.png") no-repeat 0 18px;
+      }
+      .send-flower3{
+        font-size: 14px;
+        width: 100px;
+        display: inline-block;
+        color: rgb(51,51,51);
+        padding-left: 20px;
+        background: url("../img/flower3.png") no-repeat 0 22px;
+      }
+    }
+    .rank-from{
+      font-size: 12px;
+      color: #666;
+      float: right;
+      width: 130px;
       height: 65px;
-      display: inline-block;
-      color: rgb(102,102,102);
-      font-size: 14px;
-      overflow: hidden;
-    }
-
-  }
-  .send-flower{
-    display: inline-block;
-    font-size: 14px;
-    .send-flower1{
-      display: inline-block;
-      padding-left: 25px;
-      background: url("../img/flower1.png") no-repeat 0 10px;
-    }
-    .send-flower2{
-      display: inline-block;
-      padding-left: 20px;
-      background: url("../img/flower2.png") no-repeat 0 10px;
-    }
-    .send-flower3{
-      display: inline-block;
-      padding-left: 20px;
-      background: url("../img/flower3.png") no-repeat 0 15px;
     }
   }
 }
+/* ä¸ªäººä¸­å¿ƒç›´æ’­çŒ®èŠ± center-broadcast */
