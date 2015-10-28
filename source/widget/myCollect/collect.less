@@ -74,22 +74,42 @@
 					max-width: 755px;
 					overflow: hidden;
 				}
-				.feed-media-list{
-					margin-top: 10px;
-					.media-item-small{
-						background: #ccc;
-						cursor: url("http://img04.xesimg.com/big.cur"), auto !important;
+				.colect-media{
+					margin-top: 15px;
+					overflow: hidden;
+					.colect-media-small-img {
+						cursor: url("img/big.cur"), auto !important;
 						display: inline-block;
-						overflow: hidden;
-						text-align: center;
-						img{
-							max-width: 120px;
-							max-height: 120px;
-							cursor: url("http://img04.xesimg.com/big.cur"), auto !important;
+						float: left;
+						margin-right: 10px;
+						min-width: 36px;
+						position: relative;
+						text-align: center; 
+						img {
+							width: auto;
+							height: auto;
+							max-width: 200px;
 							vertical-align: top;
 						}
 					}
 				}
+				.colect-media-expand {
+					border: 1px solid #eaeaea;
+					cursor: url("img/small.cur"), auto !important;
+					overflow: hidden;
+					padding: 10px;
+					position: relative;
+					text-align: center;
+					.colect-media-big-img {
+						overflow: hidden;
+						img {
+							width: auto;
+							height: auto;
+							max-width: 100%;
+						}
+					}
+				}
+				
 			}
 		}
 		.feed_ieVoice{

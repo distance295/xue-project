@@ -1,0 +1,203 @@
+/* 个人中心头部 */
+@Hopacity:0.3;
+.centerHeader{
+  width: 100%;
+  padding-top:16px;
+  height: 100%;
+  background: url('../img/background.png') no-repeat;
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  .centerHeader-background{
+    width: 1190px;
+    height: 300px;
+    margin: 0 auto ;
+    background: url('../img/header.jpg');
+    .centerHeader-img{
+      padding-top: 60px;
+      .centerHeader-img-head{
+        display:block;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        border: 5px solid rgba(255,255,255,0.5);
+        border-radius: 50%;
+        position: relative;
+        background: url('../img/header-img.png');
+        .centerHeader-img-level{
+          position: absolute;
+          width: 22px;
+          height: 22px;
+          top:80%;
+          left:80%;
+          border-radius: 50%;
+          border: 2px solid rgba(255,255,255,0.8);
+          background:rgb(59,175,218);
+          .level-img{
+            position: absolute;
+            top:20%;
+            left:0;
+            margin-left: 2px;
+          }
+        }
+      }
+
+    }
+    .intro{
+      font-size:18px;
+      text-align: center;
+      margin-top: 8px;
+      color:#fff;
+    }
+    .centerHeader-intro-office{
+      .intro;
+    }
+    .centerHeader-intro-teacher{
+      .intro;
+      position: relative;
+      .centerHeader-intro-teacher-more{
+        font-size: 12px;
+        margin-left: 12px;
+      }
+      .teacher-prize-size{
+        position: absolute;
+        width: 23px;
+        height: 23px;
+      }
+      .teacher-prize1{
+        .teacher-prize-size;
+        left:55%;
+      }
+      .teacher-prize2{
+        .teacher-prize-size;
+        left:58%;
+      }
+      .teacher-prize3{
+        .teacher-prize-size;
+        left:61%;
+      }
+    }
+    .centerHeader-intro-stu{
+      .intro;
+    }
+    .centerHeader-selfintro{
+      text-align: center;
+      font-size:12px;
+      color: #fff;
+      margin-top: 12px;
+    }
+    .focus{
+      text-align: center;
+      font-size: 16px;
+      margin-top: 15px;
+      color:#fff;
+    }
+    .btn{
+      display: inline-block;
+      width: 80px;
+      height: 33px;
+      line-height: 33px;
+      border-radius: 1px;
+      background: rgb(255,188,60);
+    }
+    .centerHeader-notFoucs{
+      .focus;
+      .centerHeader-notFoucs-btn{
+        letter-spacing: 4px;
+        .btn;
+      }
+    }
+    .centerHeader-alFocus{
+      .focus;
+      .centerHeader-alFocus-btn{
+        .btn;
+        margin-right: 9px;
+      }
+      .centerHeader-willFocus-btn{
+        display: inline-block;
+        width: 80px;
+        height: 33px;
+        line-height: 33px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+/* 个人中心头部end */
+
+/* 个人中心center-info start */
+.center-left{
+  width: 260px;
+  background: #fff;
+  border-radius: 4px;
+}
+@wordColor:rgb(191,191,191);
+.center-info{
+  .center-left;
+  height: 50px;
+  font-size: 13px;
+  .center-info-all{
+    display:inline-block;
+    text-align: center;
+    width: 80px;
+    height: 36px;
+    margin-top: 8px;
+  }
+  .center-info-fans{
+    .center-info-all;
+    border-right: 1px solid rgb(217,217,217);
+    .center-info-fans-name{
+      color:@wordColor;
+    }
+  }
+  .center-info-newThing{
+    .center-info-all;
+    .center-info-newThing-name{
+      color:@wordColor;
+    }
+  }
+  .center-info-stud{
+    .center-info-all;
+    border-left: 1px solid rgb(217,217,217);
+    .center-info-stud-name{
+      color:@wordColor;
+    }
+  }
+  .center-info-fans-office{
+    display: inline-block;
+    margin: 8px 0 0 8px;
+    width:120px;
+    border-right:1px solid rgb(217,217,217);
+    text-align: center;
+  }
+  .center-info-newThing-office{
+    display:inline-block;
+    margin: 8px 8px 0 0;
+    width:120px;
+    text-align: center;
+  }
+}
+/* 个人中心center-info end */
+
+/* 个人中心认证 start */
+.center-verify{
+  .center-left;
+  font-size: 12px;
+  height: 68px;
+  .center-office-verify{
+    float: left;
+    width: 106px;
+    height: 27px;
+    margin-left: 14px;
+    margin-top: 20px;
+    background: url("../img/office-verify.png") no-repeat;
+    border-right:1px solid rgb(217,217,217);
+  }
+  .center-office-desc{
+    width: 135px;
+    float: left;
+    height: 27px;
+    text-align: center;
+    margin-top: 25px;
+  }
+}
+
