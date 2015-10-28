@@ -5,7 +5,8 @@ $(function(){
     var
         $gdtbtn = $('.gold-detail-title li'),
         $gstbtn = $('.gold-store-title-container li'),
-        $gsc = $('.gold-store-card');
+        $gsc = $('.gold-store-card'),
+        $pab = $('.present-address-box form label');
     $gdtbtn.on("click",function(e){
         var $target = $(e.target);
         var index = $target.index();
@@ -25,5 +26,10 @@ $(function(){
     $gsc.on("hover",function(e){
         var $target = $(e.target);
         $target.css({'box-shadow':'0 0 3px #000;'});
+    });
+    $pab.on("click",function(e){
+        var $target = $(e.target);
+        var index = $target.index();
+        $pab.removeClass('present-address-focus').eq(index).addClass('present-address-focus');
     })
 });
