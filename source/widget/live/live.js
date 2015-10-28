@@ -7,6 +7,6 @@ $(function(){
         var $target = $(e.target);
         var index = $target.index();
         $liveScrollBtn.removeClass('live-scroll-btn-on').eq(index).addClass('live-scroll-btn-on');
-        $('.live-scroll-box-container').animate({top:(-1*282*index) + 'px'},300)
+        $('.live-scroll-box-container').animate({top:(-1*291*index) + 'px'},300)
     })
 });
