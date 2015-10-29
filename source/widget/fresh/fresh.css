@@ -34,6 +34,9 @@
   padding: 12px;
   overflow: hidden;
   /** 
+   * 推荐新鲜事鼠标滑过整条信息的背景色改变
+   */
+  /** 
    * 热门新鲜事Style
    */
   /**
@@ -617,6 +620,10 @@
   padding-left: 20px;
   margin: 0 auto;
   width: auto;
+}
+.fresh-list.fresh-hover-style {
+  background: #f1f2f6;
+  cursor: pointer;
 }
 .fresh-list.fresh-popular-list {
   border: none;
