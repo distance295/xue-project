@@ -7,10 +7,12 @@
 .live-scroll-box-container{position: absolute;width: 100%;}
 .live-scroll-container{position: relative;width: 1198px;margin-bottom: 30px;height: 291px;overflow: hidden}
 .live-card{float: left;width: 271px;margin-right: 38px;}
+.live-course-hover{position: absolute;bottom: 0;height: 80px;}
+.live-course-content{width: 237px;position: absolute;top:12px;left: 10px;color: #fff;font-size: 14px;text-overflow: ellipsis}
 .live-course-box{position: relative;display: inline-block;}
 .live-teacher-photo{margin-top: 11px;}
 .live-course-title{height: 30px;width: 245px;position: absolute;bottom: 0;background-color: #000;opacity: 0.5;}
-.live-course-box span{height: 30px;width: 245px;position: absolute;bottom: 0;color: #fff;font-size: 14px;text-align: center;line-height: 30px;}
+.live-course-show-title{height: 30px;width: 245px;position: absolute;bottom: 0;color: #fff;font-size: 14px;text-align: center;line-height: 30px;}
 .live-time-tip{width: 245px;background-color: #f9f9f9;color: #ed5565;}
 .live-time-tip-container{text-align: center;line-height: 30px;}
 .live-time-tip-container span{font-size: 16px;margin-right: 26px;}
