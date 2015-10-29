@@ -12,6 +12,14 @@
   text-align: center;
   overflow: hidden;
 }
+.fresh-comment-tips {
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  color: #cc0000;
+  line-height: 30px;
+  font-size: 12px;
+}
 .fresh-commentInfo-loading {
   background: url("img/fresh-load.gif") no-repeat center center;
   display: block;

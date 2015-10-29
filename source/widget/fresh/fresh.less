@@ -34,6 +34,15 @@
     overflow: hidden;
 }
 
+.fresh-comment-tips{
+     display: block;
+     overflow: hidden;
+     text-align: center;
+     color: #cc0000;
+     line-height: 30px;
+     .font-size(12px);
+ }
+
 //加载中显示
 .fresh-commentInfo-loading {
     background:url("img/fresh-load.gif") no-repeat center center;
@@ -885,7 +894,7 @@
                    .font-family;
                    margin: 0;
                    &.fresh-dialog-btn-disabled{
-                      background: #3bafda;
+                      background: @blue-color;
                       opacity: .6;
                       filter:alpha(opacity=60);
                     
@@ -1083,4 +1092,6 @@
 
     }
 }
+
+
 

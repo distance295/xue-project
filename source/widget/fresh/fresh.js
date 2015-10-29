@@ -254,6 +254,7 @@ fresh.comment = fresh.comment || {};
                                 <a href="javascript:void(0);" class="small radius button">评论</a>\
                              </div>\
                           </div>\
+                          <span class="fresh-comment-tips hide"></span>\
                       </div>\
                   </form>',
       replyForm: '<form class="fresh-comment-form fresh-comment-repley" action="javascript:void(0);">\
@@ -268,6 +269,7 @@ fresh.comment = fresh.comment || {};
                                 <a href="javascript:void(0);" class="small radius button">评论</a>\
                              </div>\
                           </div>\
+                          <span class="fresh-comment-tips hide"></span>\
                       </div>\
                   </form>'            
     };
@@ -301,6 +303,7 @@ fresh.comment = fresh.comment || {};
         //获取信息id
         this.id = wraper.data('id');
         var _infoBox = null;
+
         if( wraper.find('.fresh-comment-detail-info').length == 0 ){
             _infoBox = wraper.closest('.fresh-comment-detail-info');
         } else {
@@ -321,7 +324,8 @@ fresh.comment = fresh.comment || {};
             form: wraper.find('.fresh-comment-textarea:eq(0) textarea'),
             submit: wraper.find('.fresh-comment-submit-btn:eq(0) a'),
             textSzie: wraper.find('.fresh-comment-form:eq(0)').find('.fresh-comment-text-num'),
-            status: wraper.find('.fresh-comment-form:eq(0)').find('.fresh-comment-status')
+            status: wraper.find('.fresh-comment-form:eq(0)').find('.fresh-comment-status'),
+            tips: wraper.find('.fresh-comment-tips')
         };
     }
 
@@ -348,14 +352,13 @@ fresh.comment = fresh.comment || {};
      * @param  {Object} dom 任意子节点
      */
     fc.show = function(dom){
-        this.param.bar.addClass('fresh-comment-show');
-        var _formBox = this.tpl.formBox;
-        this.param.commentBox.removeClass('hide')
-        if( this.param.commentBox.find('.fresh-parentComment-formBox').length == 0 ){
-            this.param.commentBox.prepend(_formBox);
+        if(dom){
+           this.setParam(dom);
+        }else{
+           return false;
         }
+        this.param.bar.addClass('fresh-comment-show');
         this.getList(dom);
-
     }
 
     /**
@@ -381,7 +384,7 @@ fresh.comment = fresh.comment || {};
         }else{
            return false;
         }
-        //判断评论类型
+        //判断评论类型，默认评论框是否显示data-type=2显示默认
         if (this.param.bar.data('type') && this.param.bar.data('type') == 2) {
             return false;
         }
@@ -396,8 +399,9 @@ fresh.comment = fresh.comment || {};
 
         if(dom){
           this.setParam(dom);
+        }else{
+           return false;
         }
-
         //ajax获取评论信息
         $.ajax({
             url: 'coment.html',
@@ -424,19 +428,31 @@ fresh.comment = fresh.comment || {};
     /**
      * 设置评论内容信息方法
      * @param  {string} msg 评论信息html内容
+     * @param  {Object} dom 任意子节点
      */
     fc.setMsg = function(msg) {
         if (!msg) {
             return false;
         }
+
         //如果没有评论消息返回的是暂无评论的html
+        this.param.commentBox.removeClass('hide');
         this.param.infoBox.html(msg);
+        
+        //评论发布框
+        var _formBox = this.tpl.formBox;
+        if( this.param.commentBox.find('.fresh-parentComment-formBox').length == 0 ){
+            this.param.commentBox.prepend(_formBox);
+        }
+
+        var _closeBtn = this.param.commentBox.find('.fresh-comment-close-btn');
         this.param.commentBox.find('.fresh-comment-form:eq(0) textarea').focus();
+
         //判断关闭按钮显示与否
-        if ( this.param.bar.data('codetype') && this.param.bar.data('codetype') == 1) {
-            this.param.close.hide();
+        if ( this.param.bar.data('type') && this.param.bar.data('type') == 2) {
+            _closeBtn.hide();
         } else {
-            this.param.close.show();
+            _closeBtn.show();
         }
     }
 
@@ -585,9 +601,10 @@ fresh.comment = fresh.comment || {};
         var val = $.trim(this.param.form.val());
         var len = val.length;
         if( len == 0 ){
-           alert('请您填写内容');
+           this.param.tips.removeClass('hide').html('请您填写内容');
            return false; 
         }
+        this.param.tips.addClass('hide').html('');
         var _dataInfo = $(dom).closest('.fresh-comment-box').prev('.fresh-barinfo').find('.fresh-comment-expand-btn');
         var _par = _dataInfo.data('params');
         var _ty = _dataInfo.data('codetype');
@@ -1051,9 +1068,10 @@ fresh.send = fresh.send || {};
             len = content.length;
 
         if(len < 10 || len > 140 || len == 0){
-            alert('请填写内容，长度在10~140之间');
+            _form.find('.fresh-comment-tips').removeClass('hide').html('请填写内容，长度在10~140之间');
             return false;
         }else{
+            _form.find('.fresh-comment-tips').addClass('hide').html('');
             _form.submit();
         }
     };
