@@ -6,7 +6,12 @@ $(function(){
         $gdtbtn = $('.gold-detail-title li'),
         $gstbtn = $('.gold-store-title-container li'),
         $gsc = $('.gold-store-card'),
-        $pab = $('.present-address-box form label');
+        $pabLabel = $('.present-address-box form label'),
+        $presentAdd = $('.present-add'),
+        $presentDec = $('.present-dec'),
+        $presentNum = $('.present-num'),
+        $pig = $('.present-intro-gold em'),
+        $prensentPiece = $('.present-piece em');
     $gdtbtn.on("click",function(e){
         var $target = $(e.target);
         var index = $target.index();
@@ -27,9 +32,38 @@ $(function(){
         var $target = $(e.target);
         $target.css({'box-shadow':'0 0 3px #000;'});
     });
-    $pab.on("click",function(e){
+    $pabLabel.on("click",function(e){
         var $target = $(e.target);
-        var index = $target.index();
-        $pab.removeClass('present-address-focus').eq(index).addClass('present-address-focus');
-    })
+        if($target[0].nodeName != 'LABEL'){
+            $target = $target.parents('label');
+            var index = $target.index();
+        }
+        $pabLabel.removeClass('present-address-focus').eq(index).addClass('present-address-focus');
+    });
+    var
+        gold = parseInt($pig.html()),
+        piece = parseInt($prensentPiece.html());
+    $presentAdd.on("click",function(){
+        var num = parseInt($presentNum.html());
+        if(num > piece - 1){
+            $presentNum.html(piece);
+            $pig.html(gold * piece);
+        }
+        else{
+            $presentNum.html(num + 1);
+            $pig.html(gold * (num + 1));
+        }
+    });
+    $presentDec.on("click",function(){
+        var num = parseInt($presentNum.html());
+        if(num == 1)
+        {
+            $presentNum.html(num);
+            $pig.html(gold);
+        }
+        else{
+            $presentNum.html(num - 1);
+            $pig.html(gold * (num - 1));
+        }
+    });
 });
