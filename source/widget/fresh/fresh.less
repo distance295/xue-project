@@ -34,6 +34,15 @@
     overflow: hidden;
 }
 
+.fresh-comment-tips{
+     display: block;
+     overflow: hidden;
+     text-align: center;
+     color: #cc0000;
+     line-height: 30px;
+     .font-size(12px);
+ }
+
 //加载中显示
 .fresh-commentInfo-loading {
     background:url("img/fresh-load.gif") no-repeat center center;
@@ -158,7 +167,6 @@
             display: inline-block;
             float: left;
             margin-right: 10px;
-            min-width: 36px;
             text-align: center;
             position: relative;
             cursor: url("img/big.cur"), auto !important;
@@ -179,14 +187,15 @@
                 }
             }
             img{
-               max-width: 200px;
+               max-width: 120px;
+               min-width: 60px;
                vertical-align: top;
             }
             &.fresh-media-small-video{
                  img{
                      cursor:pointer;
-                     height: 150px;
-                     width: 200px;
+                     width: 210px;
+                     max-width: 210px;
                  }
                  .fresh-video-play {
                       background:url("img/fresh_videoplay.png") no-repeat ;
@@ -441,12 +450,19 @@
              overflow: hidden;
              line-height: 45px;
              height: 45px;
+             .fresh-comment-emote-smiles-btn{
+                float: left;
+                cursor: pointer;
+                height: 21px;
+                line-height: 21px;
+                margin-top: 12px;
+             }
              .fresh-comment-emote-btn{
                   float: left;
                   cursor:pointer;
                   width: 21px;
                   height: 21px;
-                  margin: 12px 5px 0 0;
+                  margin: 0 5px 0 0;
                   background:url('img/fresh-emote.png') no-repeat;
              }
              .fresh-comment-emotetext{
@@ -618,6 +634,14 @@
     }
 
   }
+
+  /** 
+   * 推荐新鲜事鼠标滑过整条信息的背景色改变
+   */
+  &.fresh-hover-style{
+     background: #f1f2f6;
+     cursor: pointer;
+  }
   /** 
    * 热门新鲜事Style
    */
@@ -731,6 +755,7 @@
            float: left;
            position: relative;
            max-width: 120px;
+           min-width: 60px;
            .fresh-preview-close{
                background: url('img/comment-close.png') no-repeat;
                width: 18px;
@@ -752,13 +777,19 @@
        color:@font-color*3; 
        .font-size(12px);
    }
+   .fresh-send-emote-click-btn{
+       float: left;
+       height: 22px;
+       line-height: 22px;
+       margin-top: 6px;
+       cursor: pointer;
+   }
    .fresh-send-emote{
        float: left;
        background: url('img/fresh-smile.png') no-repeat;
        display: inline-block;
        width: 22px;
        height: 22px; 
-       margin-top: 6px;
        cursor: pointer;
    }
    a{
@@ -782,7 +813,7 @@
            position: absolute;
            z-index: 100;
            bottom: 0;
-           width: 22px;
+           width: 51px;
            height: 19px;
            left: 0;
            top: 0;
@@ -885,7 +916,7 @@
                    .font-family;
                    margin: 0;
                    &.fresh-dialog-btn-disabled{
-                      background: #3bafda;
+                      background: @blue-color;
                       opacity: .6;
                       filter:alpha(opacity=60);
                     
@@ -1083,4 +1114,6 @@
 
     }
 }
+
+
 
