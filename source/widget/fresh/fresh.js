@@ -246,8 +246,10 @@ fresh.comment = fresh.comment || {};
                         <textarea></textarea>\
                       </div>\
                       <div class="fresh-comment-func">\
-                          <i class="fresh-comment-emote-btn"></i>\
-                          <a href="javascript:void(0);" class="fresh-comment-emotetext">表情</a>\
+                          <div class="fresh-comment-emote-smiles-btn fresh-emote-current" flag="0">\
+                              <i class="fresh-comment-emote-btn"></i>\
+                              <a href="javascript:void(0);" class="fresh-comment-emotetext">表情</a>\
+                          </div>\
                           <div class="fresh-comment-btn">\
                              <span class="fresh-comment-size">您还可以输入<em class="fresh-comment-text-num"> 140 </em>字</span>\
                              <div class="fresh-comment-submit-btn">\
@@ -262,8 +264,10 @@ fresh.comment = fresh.comment || {};
                         <textarea>$textarea$</textarea>\
                       </div>\
                       <div class="fresh-comment-func">\
-                          <i class="fresh-comment-emote-btn"></i>\
-                          <a href="javascript:void(0);" class="fresh-comment-emotetext">表情</a>\
+                          <div class="fresh-comment-emote-smiles-btn fresh-emote-current" flag="0">\
+                              <i class="fresh-comment-emote-btn"></i>\
+                              <a href="javascript:void(0);" class="fresh-comment-emotetext">表情</a>\
+                          </div>\
                           <div class="fresh-comment-btn">\
                              <div class="fresh-comment-submit-btn">\
                                 <a href="javascript:void(0);" class="small radius button">评论</a>\
@@ -325,7 +329,7 @@ fresh.comment = fresh.comment || {};
             submit: wraper.find('.fresh-comment-submit-btn:eq(0) a'),
             textSzie: wraper.find('.fresh-comment-form:eq(0)').find('.fresh-comment-text-num'),
             status: wraper.find('.fresh-comment-form:eq(0)').find('.fresh-comment-status'),
-            tips: wraper.find('.fresh-comment-tips')
+            tips: wraper.find('.fresh-comment-tips:eq(0)')
         };
     }
 
@@ -741,10 +745,18 @@ fresh.comment = fresh.comment || {};
             e.stopPropagation();
         }else{
             e.cancelBubble = true;
-        } 
-        
-        //显示表情弹出层
+        }
+        //显示弹出层
         $('.fresh-dialog-emote').removeClass('hide');
+        //点击表情按钮切换表情弹出层（问题在另一个表情框出来之前前面一个是否消失）
+       /* var _flag = $(dom).attr('flag');
+        if( _flag == 0 ){
+           $('.fresh-dialog-emote').removeClass('hide');
+           $(dom).attr('flag','1');
+        }else if( _flag == 1 ){
+           $('.fresh-dialog-emote').addClass('hide');
+           $(dom).attr('flag','0');
+        }*/
         
         //点击表情插入文本框
         $('.fresh-dialog-emote').off('click', '.fresh-jsSmilies li').on('click', '.fresh-jsSmilies li', function(){
@@ -752,6 +764,7 @@ fresh.comment = fresh.comment || {};
               _currentTextarea.focus();
               _currentTextarea.insertContent(_val);
               $('.fresh-dialog-emote').addClass('hide');
+              //$(dom).attr('flag','0');
         })
 
         //关闭表情层(关闭表情弹出层)

@@ -166,7 +166,6 @@
   display: inline-block;
   float: left;
   margin-right: 10px;
-  min-width: 36px;
   text-align: center;
   position: relative;
   cursor: url("img/big.cur"), auto !important;
@@ -188,13 +187,14 @@
   background: url("img/fresh-exam-right.gif") no-repeat;
 }
 .fresh-list .fresh-detail .fresh-media .fresh-media-small-img img {
-  max-width: 200px;
+  max-width: 120px;
+  min-width: 60px;
   vertical-align: top;
 }
 .fresh-list .fresh-detail .fresh-media .fresh-media-small-img.fresh-media-small-video img {
   cursor: pointer;
-  height: 150px;
-  width: 200px;
+  width: 210px;
+  max-width: 210px;
 }
 .fresh-list .fresh-detail .fresh-media .fresh-media-small-img.fresh-media-small-video .fresh-video-play {
   background: url("img/fresh_videoplay.png") no-repeat;
@@ -452,12 +452,19 @@
   line-height: 45px;
   height: 45px;
 }
+.fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-func .fresh-comment-emote-smiles-btn {
+  float: left;
+  cursor: pointer;
+  height: 21px;
+  line-height: 21px;
+  margin-top: 12px;
+}
 .fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-func .fresh-comment-emote-btn {
   float: left;
   cursor: pointer;
   width: 21px;
   height: 21px;
-  margin: 12px 5px 0 0;
+  margin: 0 5px 0 0;
   background: url('img/fresh-emote.png') no-repeat;
 }
 .fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-func .fresh-comment-emotetext {
@@ -704,6 +711,7 @@
   float: left;
   position: relative;
   max-width: 120px;
+  min-width: 60px;
 }
 .fresh-send-box .fresh-send-preview .fresh-send-preview-imgvideo .fresh-preview-close {
   background: url('img/comment-close.png') no-repeat;
@@ -724,13 +732,19 @@
   color: #999999;
   font-size: 12px;
 }
+.fresh-send-box .fresh-send-emote-click-btn {
+  float: left;
+  height: 22px;
+  line-height: 22px;
+  margin-top: 6px;
+  cursor: pointer;
+}
 .fresh-send-box .fresh-send-emote {
   float: left;
   background: url('img/fresh-smile.png') no-repeat;
   display: inline-block;
   width: 22px;
   height: 22px;
-  margin-top: 6px;
   cursor: pointer;
 }
 .fresh-send-box a {
@@ -755,7 +769,7 @@
   position: absolute;
   z-index: 100;
   bottom: 0;
-  width: 22px;
+  width: 51px;
   height: 19px;
   left: 0;
   top: 0;
