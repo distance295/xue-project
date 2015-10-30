@@ -20,6 +20,9 @@ li {
 .course-yellow-label {
   background: #ffbc3c;
 }
+.course-green-label {
+  background: #37bc9b;
+}
 .button.course-gray {
   background-color: #fcfcfc;
   border: 1px solid #eaeaea;
@@ -61,6 +64,10 @@ li {
   height: 10px;
   background: url("img/bo-box.png") no-repeat left center;
 }
+.icon-record {
+  height: 10px;
+  background: url("img/icon-record.png") no-repeat left center;
+}
 .course-list {
   font-family: "SimSun";
   border-top: 1px solid #eaeaea;
@@ -71,10 +78,19 @@ li {
 .course-list a {
   color: #333333;
 }
+.course-list a:hover {
+  color: #269cc8;
+}
+.course-list a:focus {
+  color: #269cc8;
+}
 .course-list .ui-avatar {
   width: 80px;
   text-align: center;
   float: left;
+}
+.course-list .ui-avatar span.ui-user-name {
+  font-size: 14px;
 }
 .course-list .ui-avatar .avatar-photo {
   margin-bottom: 4px;
@@ -234,6 +250,13 @@ li {
 .course-list .course-detail .amount-test .test-price span {
   font-size: 18px;
 }
+.course-list .cancel-courseList {
+  float: right;
+  font-size: 12px;
+  color: #3bafda;
+  height: 137px;
+  line-height: 220px;
+}
 .course-list .course-num {
   width: 86px;
   float: right;
@@ -269,6 +292,23 @@ li {
 }
 .course-list .course-right-info li.answer {
   background: url("img/answer.png") no-repeat 0 center;
+}
+.course-list .course-right-record {
+  margin-top: 40px;
+}
+.course-list .course-right-record li {
+  padding-left: 24px;
+  font-size: 12px;
+  font-family: 'SimSun';
+  color: #333;
+  text-align: left;
+  margin-top: 6px;
+}
+.course-list .course-right-record li.interact-flash {
+  background: url("img/interact-flash.png") no-repeat 0 center;
+}
+.course-list .course-right-record li.direct-help {
+  background: url("img/direct-help.png") no-repeat 0 center;
 }
 .course-list .fresh-course-attention {
   font-size: 12px;
