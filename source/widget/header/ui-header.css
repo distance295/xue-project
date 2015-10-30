@@ -526,6 +526,9 @@
   margin: 0 auto;
   overflow: hidden;
 }
+.columns-wrap .w-130 {
+  width: 130px;
+}
 .columns-wrap .w-240 {
   width: 240px;
 }
