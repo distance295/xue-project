@@ -24,7 +24,7 @@ $(function(){
     });
     var $liveCourseContent = $('.live-course-content');
     $liveCourseContent.each(function(){
-        var maxwidth=23;
+        var maxwidth=47;
         if($(this).text().length>maxwidth){
             $(this).text($(this).text().substring(0,maxwidth));
             $(this).html($(this).html()+'...');
