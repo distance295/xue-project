@@ -6,4 +6,6 @@
  */
 
 var header = header || {};
-header.hide = function(){};
+header.hover = function(){
+
+};
