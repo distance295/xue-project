@@ -136,11 +136,14 @@ em {
   color: #3bafda;
 }
 .gold-detail-block-change,
-.gold-store-block-change {
+.gold-store-block-change,
+.gold-exchange-block-change {
   display: none;
 }
 /* 金币商城 */
-.gold-store-title-container {
+/* 我兑换的 */
+.gold-store-title-container,
+.gold-exchange-title-container {
   float: left;
   border-radius: 5px;
   margin-right: 22px;
@@ -150,34 +153,48 @@ em {
   font-size: 14px;
   overflow: hidden;
 }
-.gold-store-title-container li {
+.gold-store-title-container li,
+.gold-exchange-title-container li {
   height: 32px;
   line-height: 32px;
   margin: 22px 0;
   padding-left: 20px;
   cursor: pointer;
 }
-.gold-store-title-on {
+.gold-store-title-on,
+.gold-exchange-title-on {
   background-color: #3bafda;
   color: #fff;
 }
-.gold-store-container {
+.gold-store-container,
+.gold-exchange-container {
   overflow: hidden;
   margin-top: 22px;
 }
-.gold-store-card-box {
+.gold-store-card-box,
+.gold-exchange-card-box,
+.gold-exchange-present-box {
   overflow: hidden;
   width: 924px;
 }
+.gold-exchange-card-box p {
+  height: 18px;
+  width: 1px;
+  background-color: #eaeaea;
+  display: inline-block;
+  margin-left: 21px;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
 .gold-store-card-box-over,
-.gold-store-clothing-card-box,
-.gold-store-present-card-box {
+.gold-store-present-card-box,
+.gold-exchange-present-card-box {
   width: 936px;
   overflow: hidden;
 }
 .gold-store-card,
-.gold-store-clothing-card,
-.gold-store-present-card {
+.gold-store-present-card,
+.gold-exchange-present-card {
   width: 222px;
   background-color: #fff;
   border-radius: 5px;
@@ -186,8 +203,8 @@ em {
   margin: 0 12px 12px 0;
 }
 .gold-store-card-img-box,
-.gold-store-clothing-img-box,
-.gold-store-present-img-box {
+.gold-store-present-img-box,
+.gold-exchange-present-img-box {
   height: 164px;
   line-height: 164px;
   text-align: center;
@@ -224,7 +241,6 @@ em {
   margin: 12px auto;
 }
 .gold-store-card-exchange,
-.gold-store-clothing-exchange,
 .gold-store-present-exchange {
   width: 100px;
   height: 34px;
@@ -237,8 +253,8 @@ em {
   border-radius: 3px;
   cursor: pointer;
 }
-.gold-store-clothing-rank,
-.gold-store-present-rank {
+.gold-store-present-rank,
+.gold-exchange-rank {
   width: 924px;
   height: 52px;
   font-size: 14px;
@@ -246,48 +262,128 @@ em {
   border-radius: 5px;
   overflow: hidden;
 }
-.gold-store-clothing-rank-by,
-.gold-store-present-rank-by {
+.gold-store-present-rank-by,
+.gold-exchange-rank-by {
   line-height: 52px;
   margin-left: 22px;
   color: #999;
+  cursor: pointer;
 }
-.gold-store-clothing-rank-by em,
 .gold-store-present-rank-by em {
   color: #3bafda;
 }
-.gold-store-clothing-rank-new,
 .gold-store-present-rank-new {
   margin-left: 20px;
 }
-.gold-store-clothing-card-container,
 .gold-store-present-card-container {
   overflow: hidden;
   width: 924px;
   margin-top: 20px;
 }
-.gold-store-clothing-card-center,
+.gold-exchange-present-card-container {
+  overflow: hidden;
+  width: 924px;
+}
 .gold-store-present-card-center {
   text-align: center;
   font-size: 14px;
 }
-.gold-store-clothing-card-name,
 .gold-store-present-card-name {
   color: #333;
   display: block;
   margin: 20px 0 5px;
 }
-.gold-store-clothing-card-stock,
+.gold-exchange-present-card-name {
+  color: #999;
+  display: block;
+  margin-top: 17px;
+  line-height: 1;
+}
+.gold-exchange-present-card-name span {
+  color: #333;
+  margin-left: 10px;
+}
 .gold-store-present-card-stock {
   color: #999999;
   display: block;
 }
-.gold-store-clothing-card-gold,
 .gold-store-present-card-gold {
   font-size: 16px;
   color: #e74c3c;
   display: block;
   margin: 25px 0;
+}
+.gold-exchange-show-container {
+  margin-top: 1px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.gold-exchange-show-title {
+  width: 100%;
+  height: 52px;
+  margin-top: 13px;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #999;
+  font-size: 16px;
+}
+.gold-exchange-show-title span {
+  display: inline-block;
+  text-align: center;
+  width: 19.5%;
+  height: 52px;
+  line-height: 52px;
+}
+.gold-exchange-show {
+  width: 100%;
+  height: 89px;
+  background-color: #fff;
+  font-size: 14px;
+  border-top: 1px solid #f5f5f5;
+}
+.gold-exchange-img,
+.gold-exchange-name,
+.gold-exchange-time {
+  display: inline-block;
+  width: 19.5%;
+  height: 89px;
+  text-align: center;
+  line-height: 89px;
+}
+.gold-exchange-show-overdue {
+  display: inline-block;
+  width: 19.5%;
+  height: 89px;
+  text-align: center;
+  line-height: 89px;
+  color: #e74b3c;
+}
+.gold-exchange-img img {
+  width: 82px;
+  height: 62px;
+}
+.gold-exchange-use {
+  display: inline-block;
+  width: 19.5%;
+  text-align: center;
+}
+.gold-exchange-use span {
+  display: inline-block;
+  width: 60px;
+  height: 32px;
+  background-color: #3baeda;
+  line-height: 32px;
+  vertical-align: middle;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.gold-exchange-use-focus {
+  color: #3baeda;
+}
+.gold-exchange-present-intro-box {
+  margin: 0 22px 48px;
+  font-size: 12px;
 }
 /* 兑换遮罩 */
 .red-card-box,
