@@ -86,7 +86,7 @@ ul,li{list-style: none;}
 				width: 800px;
 				height: 60px;
 				margin-left: 0;
-				margin-bottom: 10px;
+				margin-bottom: 9px;
 				li{
 					overflow: hidden;
 					float: left;
@@ -143,7 +143,10 @@ ul,li{list-style: none;}
 				}
 			}
 		}
-
+		p.tip-video{
+			background: url("img/video-couseicon.png") no-repeat left center;
+			padding-left: 25px;
+		}
 		.avatar-name{
 			.ui-username{
 				color: #666;
@@ -283,9 +286,6 @@ ul,li{list-style: none;}
 		}
 	}
 }
-.course-test{
-	height: 160px;
-}
 .course-list .fresh-course-attention{
 	font-size: 12px;
 	em,i{
@@ -303,7 +303,6 @@ ul,li{list-style: none;}
 }
 .course-list .fresh-add {
 	font-size: 14px;
-	margin-top: 1px;
 	padding-right: 2px;
 }
 .course-list .fresh-course-attention a.fresh-add-cancel-btn {
@@ -378,6 +377,222 @@ ul,li{list-style: none;}
 				strong{
 					color: #e74c3c;
 				}
+			}
+		}
+	}
+}
+.course-small-list{
+	width: 315px;
+	height: 115px;
+	padding: 13px 3px 13px 0px;
+	border: 1px solid #eaeaea;
+	position: relative;
+	overflow: visible;
+	.label-course{
+		width: 25px;
+		height: 47px;
+		text-align: center;
+		display: inline-block;
+		position: absolute;
+		right: -25px;
+		color: #fff;
+	}
+	.label-subject{
+		background: #ffbc3c;
+		top: -1px;
+	}
+	.label-direct{
+		background: #3bafda;
+		top: 48px;
+	}
+	.label-record{
+		background: #37bc9b;
+		top: 48px;
+	}
+	.course-detail{
+		width: 230px;
+		p.tip-video{
+			margin: 3px 0;
+		}
+		p.tip-for{
+			margin: 3px 0;
+			span{
+				margin-right: 10px;
+			}
+			span.course-static{
+				margin-right: 10px;
+			}
+			span.course-people{
+				margin-right: 0
+			}
+		}
+		p.course-title{
+			margin: 3px 0;
+		}
+	}
+}
+// 老师头像页卡
+.teacher-bomb {
+	height: 266px;
+	width: 375px;
+	border-top: none;
+	.dialog-second {
+		height: 155px;
+		background: url("img/teacher-cardbg.jpg") repeat scroll 0 0;
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		dl.dialog-top {
+			margin-top: 10px;
+			margin-bottom: 0;
+		}
+		.dialog-top {
+			height: 90px;
+			width: 100%;
+			dt {
+				text-align: center;
+				img{
+					border-radius: 50%;
+					width: 60px;
+					height: 60px;
+				}
+			}
+			dd {
+				height: 20px;
+				line-height: 20px;
+				margin: 3px 0;
+				text-align: center;
+				a {
+					color: #fff;
+					font-family: "SimSun";
+					font-size: 14px;
+				}
+				em.icon-s-yverify{
+					font-style: normal;
+					background: url('img/icon-s-yverify.png') no-repeat  left center;
+				}
+				em.icon-s-bverify{
+					font-style: normal;
+					background: url('img/icon-s-bverify.png') no-repeat  left center;
+				}
+				em.icon-s-redverify{
+					font-style: normal;
+					background: url('img/icon-s-redverify.png') no-repeat  left center;
+				}
+				.course-icon{
+					height: 20px;
+					line-height: 20px;
+					display: inline-block;
+					margin: 0 3px;
+					width: 21px;
+					text-indent: -99999px;
+					vertical-align: top;
+				}
+				.gender-b{
+					background: url('img/gender-b.png') no-repeat left center;
+				}
+				.gender-g{
+					background: url('img/gender-g.png') no-repeat left center;
+				}
+			}
+		}
+		.dialog-center {
+			height: 55px;
+			line-height: 55px;
+			overflow: hidden;
+			background: #012c49;
+			color: #fff;
+			p{
+				margin-bottom: 0;
+				line-height: 55px;
+				font-size: 14px;
+				text-align: center;
+				padding: 0 5px;
+				span{
+					margin-left: 25px;
+				}
+			}
+			.level {
+				text-align: center;
+				.level-l {
+					float: left;
+					overflow: hidden;
+					text-align: right;
+					width: 160px;
+					margin: 0;
+					li {
+						display: inline-block;
+						img {
+							margin-right: 3px;
+						}
+					}
+				}
+				.level-r {
+					float: left;
+					width: 190px;
+					img {
+						margin-top: 3px;
+					}
+				}
+			}
+		}
+		.dialog-second{
+			line-height: 25px;
+			p{
+				line-height: 25px;
+			}
+		}
+	}
+	.dialog-down-wrap {
+		overflow: hidden;
+		.dialog-down {
+			position: relative;
+			border-bottom: 1px solid #e5e5e5;
+			height: 40px;
+			margin: 0 10px;
+			padding: 10px 0 6px;
+			text-align: center;
+			ul {
+				display: inline-block;
+				overflow: hidden;
+				li {
+					color: #666666;
+					display: inline;
+					float: left;
+					font-family: "SimSun";
+					font-size: 12px;
+					span {
+						color: #333333;
+						margin: 0 5px;
+					}
+					i {
+						color: #e6e6e6;
+						padding: 6px 9px 6px 3px;
+						font-style: normal;
+					}
+				}
+			}
+		}
+	}
+	.btns-L {
+		text-align: center;
+		.for-center {
+			display: inline-block;
+			padding-top: 10px;
+			.fresh-course-attention{
+				float: left;
+				line-height: 20px;
+			}
+			.look-btn {
+				background: #3399cc none repeat scroll 0 0;
+				border-radius: 2px;
+				color: #fff;
+				display: inline-block;
+				font-size: 12px;
+				line-height: 20px;
+				padding: 0 8px;
+				float: left;
+				margin-left: 55px;
 			}
 		}
 	}

@@ -1,3 +1,6 @@
+body {
+  background: #f1f2f6;
+}
 .course-label {
   font-family: "SimSun";
   display: inline-block;
@@ -76,7 +79,7 @@
   text-align: center;
   display: inline-block;
   position: absolute;
-  right: -25px;
+  right: 0px;
   color: #fff;
 }
 .label-delay {
@@ -87,14 +90,19 @@
   background: #37bc9b;
   top: 105px;
 }
-.courseList {
-  background: #fff;
-  height: 200px;
-  border-radius: 4px;
-  font-family: "SimSun";
-  padding: 15px 5px 15px 15px;
-  margin-bottom: 20px;
+.courseList-wrap {
+  padding-right: 25px;
   position: relative;
+}
+.courseList {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 4px;
+  display: block;
+  font-family: "SimSun";
+  height: auto;
+  margin-bottom: 20px;
+  overflow: hidden;
+  padding: 15px 5px 15px 15px;
 }
 .courseList table,
 .courseList tr,
@@ -112,28 +120,30 @@
 }
 .courseList .study-report {
   float: left;
-}
-.courseList .study-report .report-inner {
   width: 160px;
   height: 170px;
   border-right: 1px solid #eaeaea;
   padding-right: 17px;
 }
-.courseList .study-report .report-inner .progress-show {
+.courseList .study-report .progress-show {
   text-align: center;
   margin-bottom: 5px;
 }
-.courseList .study-report .report-inner p {
+.courseList .study-report p {
   text-align: left;
   font-size: 12px;
   color: #999999;
 }
-.courseList .study-report .report-inner p span {
+.courseList .study-report p span {
   color: #e74c3c;
 }
 .courseList .courseList-body {
-  float: left;
-  padding: 0 20px;
+  display: block;
+  overflow: hidden;
+  padding: 0 10px;
+}
+.courseList .courseList-body .course-center {
+  min-width: 517px;
 }
 .courseList .courseList-body .course-title {
   font-size: 16px;
@@ -189,17 +199,52 @@
 .courseList .courseList-body .amount-show .direct-btn a {
   color: #3bafda;
 }
+.courseList .courseList-body .more-service {
+  margin-right: 10px;
+}
+.courseList .courseList-body .more-service h4 {
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  width: 62px;
+  cursor: pointer;
+  font-family: "SimSun";
+  margin-top: 0;
+}
+.courseList .courseList-body .more-service .gray-arrow {
+  background: url("img/gray-arrow.png") no-repeat right center;
+}
+.courseList .courseList-body .more-service .blue-arrow {
+  background: url("img/blue-arrow.png") no-repeat right center;
+}
+.courseList .courseList-body .more-service .more-list {
+  padding-top: 5px;
+  border: 1px solid #f5f5f5;
+  background: #fcfcfc;
+  width: 62px;
+  height: 92px;
+  color: #333;
+  font-size: 12px;
+  line-height: 28px;
+  text-align: center;
+  display: none;
+}
+.courseList .courseList-body .show .more-list {
+  display: block;
+}
 .courseList .courseList-teacher {
   height: 170px;
   border-left: 1px solid #eaeaea;
   width: 181px;
-  float: right;
+  float: left;
   padding: 5px 5px;
   position: relative;
 }
 .courseList .courseList-teacher .teacher-main {
   padding: 12px;
   overflow: hidden;
+  float: left;
+  width: 160px;
 }
 .courseList .courseList-teacher .teacher-main .avatar-photo {
   float: left;
@@ -247,7 +292,7 @@
 }
 .courseList .courseList-teacher .majar-items .avatar-roll {
   position: absolute;
-  right: 44px;
+  right: 36px;
   bottom: -2px;
 }
 .courseList .courseList-teacher .majar-items .avatar-roll a {
@@ -273,40 +318,6 @@
 }
 .courseList .courseList-teacher .majar-items .avatar-roll a.none .icon-chevron-right {
   background: url('img/icon_chevron_right_none.png') no-repeat 0 0;
-}
-.courseList .courseList-teacher .more-service {
-  position: absolute;
-  left: -80px;
-  top: -3px;
-}
-.courseList .courseList-teacher .more-service h4 {
-  color: #333333;
-  font-size: 12px;
-  font-weight: normal;
-  width: 62px;
-  cursor: pointer;
-  font-family: "SimSun";
-}
-.courseList .courseList-teacher .more-service .gray-arrow {
-  background: url("img/gray-arrow.png") no-repeat right center;
-}
-.courseList .courseList-teacher .more-service .blue-arrow {
-  background: url("img/blue-arrow.png") no-repeat right center;
-}
-.courseList .courseList-teacher .more-service .more-list {
-  padding-top: 5px;
-  border: 1px solid #f5f5f5;
-  background: #fcfcfc;
-  width: 62px;
-  height: 92px;
-  color: #333;
-  font-size: 12px;
-  line-height: 28px;
-  text-align: center;
-  display: none;
-}
-.courseList .courseList-teacher .show .more-list {
-  display: block;
 }
 .table {
   border-collapse: collapse;
