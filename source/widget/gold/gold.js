@@ -11,10 +11,7 @@ $(function(){
         $presentDec = $('.present-dec'),
         $presentNum = $('.present-num'),
         $pig = $('.present-intro-gold em'),
-        $presentPiece = $('.present-piece em'),
-        $getbtn = $('.gold-exchange-title-container li'),
-        $gerspan = $('.gold-exchange-rank span');
-
+        $prensentPiece = $('.present-piece em');
     $gdtbtn.on("click",function(e){
         var $target = $(e.target);
         var index = $target.index();
@@ -31,22 +28,6 @@ $(function(){
         $('.gold-store-block-change').fadeOut(0);
         $targetBox.fadeIn(300);
     });
-    $getbtn.on("click",function(e){
-        var $target = $(e.target);
-        var index = $target.index();
-        $getbtn.removeClass('gold-exchange-title-on').eq(index).addClass('gold-exchange-title-on');
-        var $targetBox = $($target.attr('exchange-target'));
-        $('.gold-exchange-block-change').fadeOut(0);
-        $targetBox.fadeIn(300);
-    });
-    $gerspan.on('click',function(e){
-        var $target = $(e.target);
-        var index = $(this).closest('.gold-exchange-rank').find('span').index(this);
-        $gerspan.removeClass('gold-exchange-use-focus').eq(index).addClass('gold-exchange-use-focus');
-        var $targetBox = $($target.attr('use-target'));
-        $('.gold-exchange-use-block-change').fadeOut(0);
-        $targetBox.fadeIn(300);
-    });
     $gsc.on("hover",function(e){
         var $target = $(e.target);
         $target.css({'box-shadow':'0 0 3px #000;'});
@@ -61,7 +42,7 @@ $(function(){
     });
     var
         gold = parseInt($pig.html()),
-        piece = parseInt($presentPiece.html());
+        piece = parseInt($prensentPiece.html());
     $presentAdd.on("click",function(){
         var num = parseInt($presentNum.html());
         if(num > piece - 1){
