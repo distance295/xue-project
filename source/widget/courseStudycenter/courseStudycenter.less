@@ -101,9 +101,6 @@
 	padding: 15px 5px 15px 15px;
 	margin-bottom: 20px;
 	position: relative;
-	a{
-		color: @dark333;
-	}
 	.study-report {
 		float: left;
 		.report-inner{
@@ -132,6 +129,15 @@
 			font-size: 16px;
 			line-height: 18px;
 			margin-bottom: 8px;
+			.title-detail{
+				color: @dark333;
+			}
+			.course_estimate{
+				color: @dark333;
+				font-size: 12px;
+				margin-left: 10px;
+				vertical-align: top;
+			}
 		}
 		.title-more{
 			margin-top: 38px;
@@ -186,7 +192,7 @@
 		border-left: 1px solid @borderColor;
 		width: 181px;
 		float: right;
-		padding: 5px;
+		padding: 5px 5px;
 		position: relative;
 		.teacher-main{
 			padding: 12px;
@@ -199,24 +205,21 @@
 				float: left;
 				margin-top: 3px;
 				p{
-					line-height: 28px;
+					line-height: 22px;
 					a{
-						display: inline-block;
-						width: 11px;
-						height: 16px;
-						background: url('img/iphone.png') no-repeat 0 center ;
-						margin-right: 10px;
-						margin-top: 4px;
-						float: right;
+						color: #333;
+						font-size: 12px;
 					}
 				}
 				p.teacher-coach{
 					color: #3bafda;
-					font-size: 16px;
+					font-size: 14px;
+					font-family: "Microsoft YaHei";
 				}
 				p.teacher-majar{
 					color: #999;
-					font-size: 16px;
+					font-size: 12px;
+					font-family: "SimSun";
 				}
 				p.relook-course{
 					color: @red;
@@ -227,16 +230,53 @@
 			border-bottom: 1px dotted @borderColor;
 		}
 		.majar-items{
+			position: relative;
 			ul{
+				overflow: hidden;
+				width: 800px;
+				height: 60px;
 				li{
 					overflow: hidden;
+					float: left;
+					width: 158px;
+				}
+			}
+			.avatar-roll{
+				position: absolute;
+				right: 44px;
+				bottom: -2px;
+				a{
+					outline: none;
+					em{
+						display: inline-block;
+						height: 17px;
+						line-height: 17px;
+						text-align: center;
+						text-indent: -9999em;
+						vertical-align: top;
+						width: 17px;
+					}
+					.icon-chevron-left{
+						background: url('img/icon_chevron_left.png') no-repeat 0 0;
+					}
+					.icon-chevron-right{
+						background: url('img/icon_chevron_right.png') no-repeat 0 0;
+					}
+				}
+				a.none{
+					.icon-chevron-left{
+						background: url('img/icon_chevron_left_none.png') no-repeat 0 0;
+					}
+					.icon-chevron-right{
+						background: url('img/icon_chevron_right_none.png') no-repeat 0 0;
+					}
 				}
 			}
 		}
 		.more-service{
 			position: absolute;
 			left: -80px;
-			top: -6px;
+			top: -3px;
 			h4{
 				color: #333333;
 				font-size: 12px;
@@ -308,26 +348,54 @@
 table tr.even, table tr.alt, table tr:nth-of-type(2n){
 	background: #fff;
 }
-.material{
-	tr{
-		td{
-			border: 1px solid @borderColor;
-			padding:  9px 17px;
-			p{
-				color: #666;
-				font-size: 12px;
-				line-height: 34px;
-			}
-			span{
-				color: #999999;
-				font-size: 12px;
-				margin-left: 10px;
+.material-wrap{
+	.material-tab{
+		border-bottom: 1px solid @borderColor;
+		overflow: hidden;
+		margin-bottom: 22px;
+		margin-left: 0;
+	}
+	.cant-load{
+		float: right;
+		font-size: 12px;
+		line-height: 30px;
+	}
+	li{
+		float: left;
+		list-style: none;
+		font-size: 14px;
+		line-height: 30px;
+		padding: 0 15px;
+		cursor: pointer;
+	}
+	li.current{
+		background: #3bafda;
+		color: #fff;
+		border-radius: 4px 4px 0 0;
+	}
+	.material{
+		tr{
+			td{
+				border: 1px solid @borderColor;
+				padding:  9px 17px;
+				p{
+					color: #666;
+					font-size: 12px;
+					line-height: 34px;
+					margin-bottom: 10px;
+				}
+				span{
+					color: #999999;
+					font-size: 12px;
+					margin-left: 10px;
+				}
 			}
 		}
 	}
 }
 .load-btn{
-	padding: 9px 22px;
+	padding: 0px 22px;
+	line-height: 33px;
 	font-size: 14px;
 	background: #37bc9b;
 	color: #fff;
@@ -362,7 +430,7 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 	}
 }
 // 录播直播作业列表
-.layout-list{
+.courselayout-list{
 	table,tr,th,thead{margin: 0;padding: 0;}
 	ul,li,p{margin: 0;list-style: none;padding: 0}
 	.courseList-title{
@@ -434,12 +502,13 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 .teacher-tab{
 	border-bottom: 1px solid #3bafda;
 	overflow: hidden;
-	margin-bottom: 10px;
+	margin-bottom: 22px;
 	li{
 		float: left;
 		font-size: 14px;
 		line-height: 30px;
 		padding: 0 15px;
+		cursor: pointer;
 	}
 	li.current{
 		background: #3bafda;
