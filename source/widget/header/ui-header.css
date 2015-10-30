@@ -526,11 +526,11 @@
   margin: 0 auto;
   overflow: hidden;
 }
-.columns-wrap .w-930 {
-  width: 930px;
-}
 .columns-wrap .w-240 {
   width: 240px;
+}
+.columns-wrap .w-260 {
+  width: 260px;
 }
 .columns-wrap .w-690 {
   width: 690px;
@@ -538,8 +538,11 @@
 .columns-wrap .w-920 {
   width: 920px;
 }
-.columns-wrap .w-260 {
-  width: 260px;
+.columns-wrap .w-930 {
+  width: 930px;
+}
+.columns-wrap .w-1050 {
+  width: 1050px;
 }
 .columns-wrap .s-border {
   border: 1px solid #ccc;
@@ -555,85 +558,4 @@
 }
 .columns-wrap .c-columns {
   margin: 0 10px;
-}
-/*===============/页脚部分/====================*/
-#footer {
-  width: 100%;
-  border-top: 1px solid #e5e5e5;
-  padding: 0;
-  overflow: hidden;
-}
-/*===============/下：关于我们部分/====================*/
-#footer .foot_area {
-  padding: 20px 0;
-}
-#footer .foot_area p {
-  text-align: center;
-  line-height: 180%;
-  font-size: 12px;
-  font-family: "SimSun";
-  padding: 0;
-  margin: 0;
-}
-#footer .foot_area p a {
-  padding: 0 5px;
-  color: #333;
-}
-#footer .foot_area p strong {
-  color: #e74c3c;
-}
-#footer .foot_area p .red {
-  color: #e74c3c;
-}
-#footer .foot_area p.link {
-  padding-top: 15px;
-}
-/*===============/上：学习经验分享/====================*/
-#footer .foot_service {
-  width: 980px;
-  margin: 0 auto;
-  overflow: hidden;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #F1F1F1;
-}
-#footer .foot_service a {
-  float: left;
-  display: inline;
-  width: 215px;
-  overflow: hidden;
-  cursor: pointer;
-  height: 56px;
-  margin: 10px 10px 0 20px;
-  padding-left: 60px;
-  text-decoration: none;
-  font-size: 14px;
-}
-#footer .foot_service a p {
-  line-height: 150%;
-  color: #666;
-  text-align: left;
-  font-size: 12px;
-  font-family: "SimSun";
-}
-#footer .foot_service a:hover p,
-#footer .foot_service a:hover span {
-  color: #3bafda;
-}
-#footer .foot_service a.service_share {
-  background: url(img/A1_01.gif) no-repeat;
-}
-#footer .foot_service a.service_live {
-  background: url(img/A1_02.gif) no-repeat;
-}
-#footer .foot_service a.service_system {
-  background: url(img/A1_03.gif) no-repeat;
-}
-#footer .foot_service a.service_interaction {
-  background: url(img/A1_04.gif) no-repeat;
-}
-#footer .foot_service a span {
-  display: block;
-  line-height: 22px;
-  font-weight: bold;
-  color: #666;
 }
