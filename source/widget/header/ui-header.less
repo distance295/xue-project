@@ -43,7 +43,23 @@
 				li {
 					float: left;display: inline;line-height: 30px; font-size: 12px;font-family: @fs;background: url(img/line.png) no-repeat right 0;
 					span {
-						display: block;padding:0 10px;cursor: pointer;color: #666;
+						display: block;padding:0 10px;cursor: pointer;color: #666; position: relative;border-left:1px solid #f1f1f1;
+						.nav-r {
+						    	color: #6a6a6a;
+							    display: block;
+							    font: 500 16px/16px simsun;
+							    height: 7px;
+							    overflow: hidden;
+							    position: absolute;
+							    right: 0px;
+							    top: 15px;
+							    transition: transform 0.1s ease-in 0s;
+							    .nav-s{
+							    	position: relative;
+								    text-decoration: none;
+								    top: -9px;
+							    }
+						    }
 					}
 					a {
 						display: block;padding:0 10px;color: #666;
@@ -51,11 +67,23 @@
 								color: #3bafda;	
 						}
 					}
+					&.tips {
+						width: 52px;
+					}
+					&.m-xes {
+						width: 75px;
+					}
 					.menu-layer {display: none;}
 					&.hover {
 						position: relative;z-index: 10;background: url(img/line.png) no-repeat right 0 #fff;
 						span {
-							display: block;background: #fff; position: relative;z-index: 100;margin-right: 1px;border-left:1px solid #dcdcdc;border-right:1px solid #dcdcdc;	
+							display: block;background: #fff;z-index: 100;margin-right: 1px;border-left:1px solid #dcdcdc;border-right:1px solid #dcdcdc;
+							.nav-r {
+									 font: 400 16px/15px simsun;
+									top:12px;
+				    				transform: rotate(180deg);
+								}
+
 						}
 						.menu-layer {
 							display: block; width: 140px;background: #fff;border:1px solid #dcdcdc;position: absolute;left: 0;top:29px;z-index: 1;
@@ -81,7 +109,25 @@
 				float:right;margin:0;padding:0;line-height: 30px;
 				li {
 					float: left;display: inline;font-size: 12px;font-family: @fs; list-style: none;background: url(img/line.png) no-repeat right 0;
-					span {display: block;color: #666;cursor: pointer;padding:0 10px;}
+					&.set-show {width: 65px;}
+					span {display: block;color: #666;cursor: pointer;padding:0 10px;position: relative;margin-right: 1px;border-left:1px solid #f1f1f1;
+						.nav-r {
+						    	color: #6a6a6a;
+							    display: block;
+							    font: 500 16px/16px simsun;
+							    height: 7px;
+							    overflow: hidden;
+							    position: absolute;
+							    right: 0px;
+							    top: 15px;
+							    transition: transform 0.1s ease-in 0s;
+							    .nav-s{
+							    	position: relative;
+								    text-decoration: none;
+								    top: -9px;
+							    }
+						    }
+					}
 					a {
 						display: block;color: #666;padding:0 10px;
 						&:hover {
@@ -93,7 +139,12 @@
 					&.hover {
 						position: relative;z-index: 10;background: url(img/line.png) no-repeat right 0 #fff;
 						span {
-							display: block;background: #fff; position: relative;z-index: 100;margin-right: 1px;border-left:1px solid #dcdcdc;border-right:1px solid #dcdcdc;
+							display: block;background: #fff; z-index: 100;border-left:1px solid #dcdcdc;border-right:1px solid #dcdcdc;
+								.nav-r {
+									 font: 400 16px/15px simsun;
+									top:12px;
+				    				transform: rotate(180deg);
+								}
 						}
 						.menu-layer {
 							display: block; width: 140px;background: #fff;border:1px solid #dcdcdc;position: absolute;left: 0;top:29px;z-index: 1;
@@ -146,8 +197,38 @@
 .ui-header-nav {
 	width: 1190px;height: 45px;margin:0 auto;overflow:hidden;
 	.nav-classify {
-		float: left;display: inline;width: 200px;line-height: 45px; background: #1e89e0;color: #fff;font-size: 16px;padding-left: 20px;cursor: pointer;
+		float: left;display: inline;width: 200px;line-height: 45px; background: #1e89e0;color: #fff;font-size: 16px;cursor: pointer;position: relative;
+		a {
+		    color: #fff;
+		    display: block;
+		    font: 400 15px/44px "microsoft yahei";
+		    height: 44px;
+		    padding: 0 20px;
+		    .nav-r {
+		    	color: #fff;
+			    display: block;
+			    font: 700 20px/16px simsun;
+			    height: 7px;
+			    overflow: hidden;
+			    position: absolute;
+			    right: 7px;
+			    top: 20px;
+			    transition: transform 0.1s ease-in 0s;
+			    .nav-s{
+			    	position: relative;
+				    text-decoration: none;
+				    top: -9px;
+			    }
+		    }
+		    &:hover {
+		    	.nav-r {
+    				transform: rotate(180deg);
+				}	
+		    }
+		}
 	}
+
+	 
 	ul.nav {
 		float:left; overflow: hidden;margin-left:10px;padding:0;
 		li {
@@ -171,7 +252,7 @@
 .ui-head-shopcart {
 	float:right;display:inline;width: 140px;position: relative;z-index: 1;margin-top:-35px;
 	.sp-up-wrap {
-	    width: 140px;height: 34px;line-height: 30px;background: #f9f9f9;border: 1px solid #dfdfdf;text-align: center;border-radius: 2px;
+	    width: 140px;height: 34px;line-height: 30px;background: #f9f9f9;border: 1px solid #dfdfdf;text-align: center;border-radius: 2px;position: relative;
 	    a {
 	    	font-size: 12px;font-family:@fs;color: #333;
 	    	&:hover {
@@ -196,7 +277,10 @@
 	}
 	&.hover {
 		.sp-up-wrap {
-			box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);background: #fff;position: relative;z-index: 1;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);background: #fff;z-index: 1;
+			a {
+				color: #3bafda;
+			}
 		}
 		.sp-down-wrap {
 			display: block;right: 0;top:33px;box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);border-top:0;
@@ -279,7 +363,7 @@
 	overflow: hidden;
 }
 .container {
-	width:100%;background: url(http://img04.xesimg.com/payment/header_bg.png) 0 -50px repeat-x;min-height: 500px;
+	width:100%;background: url(img/header_bg.png) 0 -50px repeat-x;min-height: 500px;
 }
 .columns-wrap {
 	width: 1190px;margin:0 auto;overflow: hidden;
@@ -304,3 +388,4 @@
 	}
 }
 
+@import "ui-footer.less";

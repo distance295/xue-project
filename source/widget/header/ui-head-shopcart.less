@@ -16,9 +16,9 @@
 @red:                    #e74c3c;
 //头部购物车ui部分样式
 .ui-head-shopcart {
-	width: 140px;position: relative;z-index: 10; 
+	float:right;display:inline;width: 140px;position: relative;z-index: 1;margin-top:-35px;
 	.sp-up-wrap {
-	    width: 140px;height: 34px;line-height: 30px;background: #f9f9f9;border: 1px solid #dfdfdf;text-align: center;border-radius: 2px;
+	    width: 140px;height: 34px;line-height: 30px;background: #f9f9f9;border: 1px solid #dfdfdf;text-align: center;border-radius: 2px;position: relative;
 	    a {
 	    	font-size: 12px;font-family:@fs;color: #333;
 	    	&:hover {
@@ -39,14 +39,17 @@
 	    }
 	}
 	.sp-down-wrap {
-	    	position: absolute;width: 300px;overflow: hidden;background: #fff;border: 1px solid #dfdfdf;
+	    	display: none;position: absolute;width: 300px;overflow: hidden;background: #fff;border: 1px solid #dfdfdf;
 	}
 	&.hover {
 		.sp-up-wrap {
-			box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);background: #fff;position: relative;z-index: 1;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);background: #fff;z-index: 1;
+			a {
+				color: #3bafda;
+			}
 		}
 		.sp-down-wrap {
-			right: 0;top:33px;box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);border-top:0;
+			display: block;right: 0;top:33px;box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);border-top:0;
 			.spacer {
 			    width: 139px;
 			    height: 12px;
