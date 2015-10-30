@@ -65,6 +65,24 @@
   padding: 0 10px;
   cursor: pointer;
   color: #666;
+  position: relative;
+  border-left: 1px solid #f1f1f1;
+}
+#ui-header-menu-wrap .ui-header-menu .login-bar ul.s-mobile li span .nav-r {
+  color: #6a6a6a;
+  display: block;
+  font: 500 16px/16px simsun;
+  height: 7px;
+  overflow: hidden;
+  position: absolute;
+  right: 0px;
+  top: 15px;
+  transition: transform 0.1s ease-in 0s;
+}
+#ui-header-menu-wrap .ui-header-menu .login-bar ul.s-mobile li span .nav-r .nav-s {
+  position: relative;
+  text-decoration: none;
+  top: -9px;
 }
 #ui-header-menu-wrap .ui-header-menu .login-bar ul.s-mobile li a {
   display: block;
@@ -73,6 +91,12 @@
 }
 #ui-header-menu-wrap .ui-header-menu .login-bar ul.s-mobile li a:hover {
   color: #3bafda;
+}
+#ui-header-menu-wrap .ui-header-menu .login-bar ul.s-mobile li.tips {
+  width: 52px;
+}
+#ui-header-menu-wrap .ui-header-menu .login-bar ul.s-mobile li.m-xes {
+  width: 75px;
 }
 #ui-header-menu-wrap .ui-header-menu .login-bar ul.s-mobile li .menu-layer {
   display: none;
@@ -85,11 +109,15 @@
 #ui-header-menu-wrap .ui-header-menu .login-bar ul.s-mobile li.hover span {
   display: block;
   background: #fff;
-  position: relative;
   z-index: 100;
   margin-right: 1px;
   border-left: 1px solid #dcdcdc;
   border-right: 1px solid #dcdcdc;
+}
+#ui-header-menu-wrap .ui-header-menu .login-bar ul.s-mobile li.hover span .nav-r {
+  font: 400 16px/15px simsun;
+  top: 12px;
+  transform: rotate(180deg);
 }
 #ui-header-menu-wrap .ui-header-menu .login-bar ul.s-mobile li.hover .menu-layer {
   display: block;
@@ -136,11 +164,33 @@
   list-style: none;
   background: url(img/line.png) no-repeat right 0;
 }
+#ui-header-menu-wrap .ui-header-menu .menu-list ul li.set-show {
+  width: 65px;
+}
 #ui-header-menu-wrap .ui-header-menu .menu-list ul li span {
   display: block;
   color: #666;
   cursor: pointer;
   padding: 0 10px;
+  position: relative;
+  margin-right: 1px;
+  border-left: 1px solid #f1f1f1;
+}
+#ui-header-menu-wrap .ui-header-menu .menu-list ul li span .nav-r {
+  color: #6a6a6a;
+  display: block;
+  font: 500 16px/16px simsun;
+  height: 7px;
+  overflow: hidden;
+  position: absolute;
+  right: 0px;
+  top: 15px;
+  transition: transform 0.1s ease-in 0s;
+}
+#ui-header-menu-wrap .ui-header-menu .menu-list ul li span .nav-r .nav-s {
+  position: relative;
+  text-decoration: none;
+  top: -9px;
 }
 #ui-header-menu-wrap .ui-header-menu .menu-list ul li a {
   display: block;
@@ -165,11 +215,14 @@
 #ui-header-menu-wrap .ui-header-menu .menu-list ul li.hover span {
   display: block;
   background: #fff;
-  position: relative;
   z-index: 100;
-  margin-right: 1px;
   border-left: 1px solid #dcdcdc;
   border-right: 1px solid #dcdcdc;
+}
+#ui-header-menu-wrap .ui-header-menu .menu-list ul li.hover span .nav-r {
+  font: 400 16px/15px simsun;
+  top: 12px;
+  transform: rotate(180deg);
 }
 #ui-header-menu-wrap .ui-header-menu .menu-list ul li.hover .menu-layer {
   display: block;
@@ -279,8 +332,34 @@
   background: #1e89e0;
   color: #fff;
   font-size: 16px;
-  padding-left: 20px;
   cursor: pointer;
+  position: relative;
+}
+.ui-header-nav .nav-classify a {
+  color: #fff;
+  display: block;
+  font: 400 15px/44px "microsoft yahei";
+  height: 44px;
+  padding: 0 20px;
+}
+.ui-header-nav .nav-classify a .nav-r {
+  color: #fff;
+  display: block;
+  font: 700 20px/16px simsun;
+  height: 7px;
+  overflow: hidden;
+  position: absolute;
+  right: 7px;
+  top: 20px;
+  transition: transform 0.1s ease-in 0s;
+}
+.ui-header-nav .nav-classify a .nav-r .nav-s {
+  position: relative;
+  text-decoration: none;
+  top: -9px;
+}
+.ui-header-nav .nav-classify a:hover .nav-r {
+  transform: rotate(180deg);
 }
 .ui-header-nav ul.nav {
   float: left;
@@ -320,6 +399,7 @@
   border: 1px solid #dfdfdf;
   text-align: center;
   border-radius: 2px;
+  position: relative;
 }
 .ui-head-shopcart .sp-up-wrap a {
   font-size: 12px;
@@ -374,8 +454,10 @@
 .ui-head-shopcart.hover .sp-up-wrap {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   background: #fff;
-  position: relative;
   z-index: 1;
+}
+.ui-head-shopcart.hover .sp-up-wrap a {
+  color: #3bafda;
 }
 .ui-head-shopcart.hover .sp-down-wrap {
   display: block;
@@ -518,7 +600,7 @@
 }
 .container {
   width: 100%;
-  background: url(http://img04.xesimg.com/payment/header_bg.png) 0 -50px repeat-x;
+  background: url(img/header_bg.png) 0 -50px repeat-x;
   min-height: 500px;
 }
 .columns-wrap {
@@ -561,4 +643,91 @@
 }
 .columns-wrap .c-columns {
   margin: 0 10px;
+}
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-10-29 10:40:12
+ * @version $Id$
+ */
+/*===============/页脚部分/====================*/
+#footer {
+  width: 100%;
+  border-top: 1px solid #e5e5e5;
+  padding: 0;
+  overflow: hidden;
+}
+/*===============/下：关于我们部分/====================*/
+#footer .foot_area {
+  padding: 20px 0;
+}
+#footer .foot_area p {
+  text-align: center;
+  line-height: 180%;
+  font-size: 12px;
+  font-family: "SimSun";
+  padding: 0;
+  margin: 0;
+}
+#footer .foot_area p a {
+  padding: 0 5px;
+  color: #333;
+}
+#footer .foot_area p strong {
+  color: #e74c3c;
+}
+#footer .foot_area p .red {
+  color: #e74c3c;
+}
+#footer .foot_area p.link {
+  padding-top: 15px;
+}
+/*===============/上：学习经验分享/====================*/
+#footer .foot_service {
+  width: 980px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #F1F1F1;
+}
+#footer .foot_service a {
+  float: left;
+  display: inline;
+  width: 215px;
+  overflow: hidden;
+  cursor: pointer;
+  height: 56px;
+  margin: 10px 10px 0 20px;
+  padding-left: 60px;
+  text-decoration: none;
+  font-size: 14px;
+}
+#footer .foot_service a p {
+  line-height: 150%;
+  color: #666;
+  text-align: left;
+  font-size: 12px;
+  font-family: "SimSun";
+}
+#footer .foot_service a:hover p,
+#footer .foot_service a:hover span {
+  color: #3bafda;
+}
+#footer .foot_service a.service_share {
+  background: url(img/A1_01.gif) no-repeat;
+}
+#footer .foot_service a.service_live {
+  background: url(img/A1_02.gif) no-repeat;
+}
+#footer .foot_service a.service_system {
+  background: url(img/A1_03.gif) no-repeat;
+}
+#footer .foot_service a.service_interaction {
+  background: url(img/A1_04.gif) no-repeat;
+}
+#footer .foot_service a span {
+  display: block;
+  line-height: 22px;
+  font-weight: bold;
+  color: #666;
 }
