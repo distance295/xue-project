@@ -398,8 +398,9 @@ em {
 }
 .red-card-intro,
 .present-intro {
-  float: left;
-  margin-left: 42px;
+  display: block;
+  margin-left: 372px;
+  min-width: 230px;
 }
 .red-card-name,
 .present-name {
@@ -414,7 +415,6 @@ em {
 }
 .red-card-intro-name span,
 .present-intro-name span {
-  display: inline-block;
   vertical-align: bottom;
 }
 .red-card-intro-name span em,
@@ -424,6 +424,11 @@ em {
 .red-card-intro-title,
 .present-intro-title {
   color: #999;
+  float: left;
+}
+.present-intro-content {
+  display: block;
+  margin-left: 51px;
 }
 .red-card-intro-title span,
 .present-intro-title span {
