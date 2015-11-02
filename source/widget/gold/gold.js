@@ -13,7 +13,9 @@ $(function(){
         $pig = $('.present-intro-gold em'),
         $presentPiece = $('.present-piece em'),
         $getbtn = $('.gold-exchange-title-container li'),
-        $gerspan = $('.gold-exchange-rank span');
+        $gerspan = $('.gold-exchange-rank span'),
+        $gsp = $('.gold-store-present-card'),
+        $gep = $('.gold-exchange-present-card');
     $gdtbtn.on("click",function(e){
         var $target = $(e.target);
         var index = $target.index();
@@ -46,9 +48,41 @@ $(function(){
         $('.gold-exchange-use-block-change').fadeOut(0);
         $targetBox.fadeIn(300);
     });
-    $gsc.on("hover",function(e){
-        var $target = $(e.target);
-        $target.css({'box-shadow':'0 0 3px #000;'});
+    $gsp.on({
+        mouseenter:function(){
+            $(this)
+                .css({'box-shadow':'0 1px 5px 0px #666'},300)
+                .animate({'margin-top':5},300);
+        },
+        mouseleave:function(){
+            $(this)
+                .css({'box-shadow':'none'},300)
+                .animate({'margin-top':10},300)
+        }
+    });
+    $gsc.on({
+        mouseenter:function(){
+            $(this)
+                .css({'box-shadow':'0 1px 5px 0px #666'},300)
+                .animate({'margin-top':5},300);
+        },
+        mouseleave:function(){
+            $(this)
+                .css({'box-shadow':'none'},300)
+                .animate({'margin-top':10},300)
+        }
+    });
+    $gep.on({
+        mouseenter:function(){
+            $(this)
+                .css({'box-shadow':'0 1px 5px 0px #666'},300)
+                .animate({'margin-top':5},300);
+        },
+        mouseleave:function(){
+            $(this)
+                .css({'box-shadow':'none'},300)
+                .animate({'margin-top':10},300)
+        }
     });
     $pabLabel.on("click",function(e){
         var $target = $(e.target);
