@@ -210,7 +210,7 @@ table tr td {
   border-radius: 5px;
   overflow: hidden;
   float: left;
-  margin: 10px 7px 12px 5px;
+  margin: 10px 7px 0 5px;
 }
 .gold-store-card-img-box,
 .gold-store-present-img-box,
