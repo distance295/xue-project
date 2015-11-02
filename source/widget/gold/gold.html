@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../lib/foundation/css/foundation.css">
     <!-- 这是当前模块样式文件 -->
     <link href="gold.css" rel="stylesheet">
+    <link href="ui.calendar.css" rel="stylesheet">
 </head>
 <body>
 <!-- 金币商城头部 -->
@@ -29,9 +30,9 @@
     <!-- 日期查询 -->
     <div class="gold-detail-check-date">
         <span class="gold-detail-check-title">按时间查询</span>
-        <div class="gold-detail-check-time"></div>
+        <input class="gold-detail-check-time" id="dateStart" />
         <span class="gold-detail-check-title">至</span>
-        <div class="gold-detail-check-time"></div>
+        <input class="gold-detail-check-time" id="dateEnd" />
         <div class="gold-detail-check">查询</div>
     </div>
     <!-- 查询明细头部 -->
@@ -432,6 +433,7 @@
     </div>
 </div>
 <script src="../../lib/jQuery/1.11.1/jquery.js"></script>
+<script src="xue.ui.calendar.js"></script>
 <script src="gold.js"></script>
 </body>
 </html>

@@ -15,7 +15,10 @@ $(function(){
         $getbtn = $('.gold-exchange-title-container li'),
         $gerspan = $('.gold-exchange-rank span'),
         $gsp = $('.gold-store-present-card'),
-        $gep = $('.gold-exchange-present-card');
+        $gep = $('.gold-exchange-present-card'),
+        $dateStart = $('#dateStart'),
+        $dateEnd = $('#dateEnd');
+
     $gdtbtn.on("click",function(e){
         var $target = $(e.target);
         var index = $target.index();
@@ -117,5 +120,23 @@ $(function(){
             $presentNum.html(num - 1);
             $pig.html(gold * (num - 1));
         }
+    });
+    $dateStart.calendar({
+        controlId: "dateStartCalendar",
+        controlClass:"calendar",
+        speed: 200,
+        complement: true,
+        readonly: true,
+        upperLimit: new Date(),
+        lowerLimit: new Date("2010/01/01")
+    });
+    $dateEnd.calendar({
+        controlId: "dateEndCalendar",
+        controlClass:"calendar",
+        speed: 200,
+        complement: true,
+        readonly: true,
+        upperLimit: new Date(),
+        lowerLimit: new Date("2010/01/01")
     });
 });

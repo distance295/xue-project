@@ -11,6 +11,12 @@ li {
 em {
   font-style: normal;
 }
+table tr th,
+table tr td {
+  font-size: 12px;
+  padding: 0;
+  text-align: center;
+}
 /* 金币明细 */
 .gold-detail-title {
   margin: 0;
@@ -68,7 +74,7 @@ em {
   float: left;
   line-height: 30px;
 }
-.gold-detail-check-time {
+.gold-detail-check-date input {
   float: left;
   display: inline-block;
   width: 160px;
