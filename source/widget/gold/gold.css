@@ -147,6 +147,7 @@ em {
   float: left;
   border-radius: 5px;
   margin-right: 22px;
+  margin-top: 22px;
   width: 122px;
   height: 660px;
   background-color: #fff;
@@ -168,14 +169,17 @@ em {
 }
 .gold-store-container,
 .gold-exchange-container {
-  overflow: hidden;
-  margin-top: 22px;
+  position: relative;
 }
 .gold-store-card-box,
+.gold-store-present-box,
 .gold-exchange-card-box,
 .gold-exchange-present-box {
   overflow: hidden;
-  width: 924px;
+  width: 934px;
+  position: absolute;
+  left: 140px;
+  margin-top: 12px;
 }
 .gold-exchange-card-box p {
   height: 18px;
@@ -200,7 +204,7 @@ em {
   border-radius: 5px;
   overflow: hidden;
   float: left;
-  margin: 0 12px 12px 0;
+  margin: 10px 7px 12px 5px;
 }
 .gold-store-card-img-box,
 .gold-store-present-img-box,
@@ -257,6 +261,8 @@ em {
 .gold-exchange-rank {
   width: 924px;
   height: 52px;
+  margin-top: 10px;
+  margin-left: 5px;
   font-size: 14px;
   background-color: #fff;
   border-radius: 5px;
@@ -277,8 +283,8 @@ em {
 }
 .gold-store-present-card-container {
   overflow: hidden;
-  width: 924px;
-  margin-top: 20px;
+  width: 934px;
+  margin-top: 10px;
 }
 .gold-exchange-present-card-container {
   overflow: hidden;
