@@ -258,42 +258,57 @@
 	    max-width: 100%;
 	}
 	.table {
-	    border: 1px solid #e2e2e2;
+	    border: 1px solid #eeeeee;
 	    color: #333333;
 	    font-size: 12px;
 	    margin-bottom: 20px;
 	    width: 100%;
 	}
-	//直播大纲
-	.live_course_nav{
-		width:100%;height:40px;background:#eeeeee;color:#c9c9c9;font-weight: 700;text-align: center;margin:0;padding:0;
-		li{
-			float:left;width:150px;line-height:40px;font-family: @fw;list-style: none;font-size: 12px;
-			&.first{width:480px;text-align:left;padding-left:40px;}
+	
+	//点播大纲
+	.table_outline {
+		border:1px solid #eeeeee;
+		th {
+			height: 40px;
+			background: #eeeeee;
+			text-align: center;
+			color: #999;
+			font-size: 12px;
+			&.t-left {
+				text-align: left;
+				padding-left: 40px;
+			}
 		}
-	}
-	.live_panel{
-		width:100%;height:auto;overflow:hidden;outline:none;border:1px solid #eaeaea;border-bottom: 0;
-		.live_course_detail{
-			overflow:hidden;margin:0;padding:0;
-			li{
-				width:100%;height:34px;line-height:34px;color:#333333;border-bottom:1px solid #ededed;font-size: 12px;font-family: @fs;
-				div{float:left;text-align:center;}
-				.live_name{
-					width:484px;border-right:1px solid #ededed;text-align:left;padding-left:10px;
-					.live_teach{
-						color:#a0a0a0;
-					}
-					.course_live{
-						color:#ff6500;
-					}
-				}
-				.date,.time,.study_status{
-					width:148px;border-right:1px solid #ededed;
-				}
-				.study_status{
-					color:#a0a0a0;border-right: 0;
-				}
+		 td {
+		 	border:1px solid #eeeeee;
+		    border-top: 0 none;
+		    height: 38px;
+		    line-height: 20px;
+		    padding: 0;
+		    text-align: center;
+		    vertical-align: middle;
+		    font-size: 12px;
+		    background: #fcfcfc;
+		    color: #666;
+			span.live_teach {
+			     display: inline-block;color:#a0a0a0;
+			}
+			.goline {
+				border-radius: 9px;
+			    color: #fff;
+			    display: inline-block;
+			    height: 18px;
+			    line-height: 18px;
+			    text-align: center;
+			    width: 50px;
+			    background: #ff9900;
+			}
+			.notStart {
+				color: #999;
+			}
+			&.t-left {
+				text-align: left;
+				padding-left: 10px;
 			}
 		}
 	}
@@ -316,40 +331,6 @@
 		    padding-left: 10px;
 		}
 	}
-	//点播大纲
-	.table_outline {
-		border:0;
-		tr:nth-child(2n) {
-   			 background: #f5f5f5;
-			}
-		 td {
-		    border-bottom: 1px solid #fff;
-		    border-top: 0 none;
-		    height: 38px;
-		    line-height: 20px;
-		    padding: 0;
-		    text-align: left;
-		    vertical-align: middle;
-		    font-size: 12px;
-			.text_c {
-			    text-align: left;
-			    width: 200px !important;
-			}
-			span {
-			    border-radius: 9px;
-			    color: #fff;
-			    display: inline-block;
-			    float: left;
-			    height: 18px;
-			    line-height: 18px;
-			    margin: 0 15px;
-			    text-align: center;
-			    width: 50px;
-			}
-			.goline {
-			    background: #ff9900;
-			}
-		}
-	}
+	//课程评价（往下写）
 	
 }

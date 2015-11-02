@@ -1,447 +1,535 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>直播课程详情页</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <!-- 这是CSS库文件 -->
-    <link rel="stylesheet" type="text/css" href="../../lib/foundation/css/foundation.css">
-    <!-- 这是当前模块样式文件 -->
-     <link href="../header/ui-header.css" rel="stylesheet"></head>
-      <link href="../footer/ui-footer.css" rel="stylesheet"></head>
-    <link href="ui-course-infor.css" rel="stylesheet"></head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>直播课程详情页</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<!-- 这是CSS库文件 -->
+	<link rel="stylesheet" type="text/css" href="../../lib/foundation/css/foundation.css">
+	<!-- 这是当前模块样式文件 -->
+	<link href="../header/ui-header.css" rel="stylesheet"></head>
+	<link href="../footer/ui-footer.css" rel="stylesheet"></head>
+	<link href="ui-course-infor.css" rel="stylesheet"></head>
 <body>
- <!-- 登录前 -->
-    <div id="ui-header-menu-wrap">
-        <div class="ui-header-menu">
-            <div class="login-bar">
-                <div class="s-bar">
-                    <span class="xes">学而思网校欢迎你</span>
-                    <a href="#"  class="login">请登录</a>
+	<!-- 登录前 -->
+	<div id="ui-header-menu-wrap">
+		<div class="ui-header-menu">
+			<div class="login-bar">
+				<div class="s-bar">
+					<span class="xes">学而思网校欢迎你</span>
+					<a href="#"  class="login">请登录</a>
 
-                </div>
-                <ul class="s-mobile header-hover">
-                    <li>
-                        <a href="#" class="register">免费注册</a>
-                    </li>
-                    <li class="m-xes set-show">
-                        <span>移动网校<i class="nav-r"><s class="nav-s">◇</s></i></span>
-                         <div class="menu-layer">
-                            <ul>
-                                <li>
-                                    <a href="#">手机版</a>
-                                </li>
-                                <li>
-                                    <a href="#">IPAD版</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="menu-list">
-                <ul>
-                    <li>
-                        <a href="#">网校首页</a>
-                    </li>
-                    <li>
-                        <a href="#">个人中心</a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            购物车
-                            <em>2</em>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            订单
-                            <em>2</em>
-                        </a>
+				</div>
+				<ul class="s-mobile header-hover">
+					<li>
+						<a href="#" class="register">免费注册</a>
+					</li>
+					<li class="m-xes set-show">
+						<span>
+							移动网校 <i class="nav-r"><s class="nav-s">◇</s></i> 
+						</span>
+						<div class="menu-layer">
+							<ul>
+								<li>
+									<a href="#">手机版</a>
+								</li>
+								<li>
+									<a href="#">IPAD版</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="menu-list">
+				<ul>
+					<li>
+						<a href="#">网校首页</a>
+					</li>
+					<li>
+						<a href="#">个人中心</a>
+					</li>
+					<li>
+						<a href="#">
+							购物车 <em>2</em>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							订单 <em>2</em>
+						</a>
 
-                    </li>
-                    <li class="set-show">
-                        <span>卡激活<i class="nav-r"><s class="nav-s">◇</s></i></span>
-                        <div class="menu-layer">
-                            <ul>
-                                <li>
-                                    <a href="#">代金卡</a>
-                                </li>
-                                <li>
-                                    <a href="#">听课证</a>
-                                </li>
-                                <li>
-                                    <a href="#">课程绑定卡</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="http://www.speiyou.com/" target="_blank">更多课程</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="phone-400">400-800-2211</div>
-        </div>
-    </div>
-    <!-- 顶部菜单***这部分分为未登录和已登录**个人中心会用到 -->
-    <div class="ui-head-logo">
-        <div class="h-logo">
-            <a herf="#">学而思网校</a>
-        </div>
-        <div class="h-search">
-            <input type="text" class="h-text" placeholder="搜索:秋季满分冲刺班" autocomplete="on">
-            <button type="button" class="btn-search">搜索</button>
-        </div>
-        <div class="h-words">
-            <a target="_blank" href="#">免费课</a>
-            <a target="_blank" href="#">9.9抢购</a>
-            <a target="_blank" href="#">11月11天</a>
-            <a target="_blank" href="#">9.9抢购</a>
-            <a target="_blank" href="#">11月11天</a>
-            <a target="_blank" href="#">9.9抢购</a>
-        </div>
-        <!-- 头部购物车ui部分调用 -->
-        <div class="ui-head-shopcart ">
-            <div class="sp-up-wrap"> <i class="sp-icon-left"></i> <i class="sp-icon-right">&gt;</i>
-                <i class="sp-amount">12</i>
-                <a href="#" target="_blank">我的购物车</a>
-            </div>
-            <!-- 上半部分 -->
-            <div class="sp-down-wrap">
-                <div class="spacer"></div>
-                <!-- 购物车没有商品 -->
-                <div class="sp-no-shop-wrap">
-                    <span>购物车空空如也~，快去选择课程吧~</span>
-                </div>
-                <!-- 购物车有商品  -->
-                <h4 class="new-add-cart">最新加入的商品</h4>
-                <div class="sp-scroll-wrap">
-                    <ul>
-                        <li>
-                            <div class="left-infor-course">
-                                <h6 class="course-title">
-                                    <em>数学</em>
-                                    2015学年五升六年级奥数年卡（竞赛班）
-                                </h6>
-                                <span class="course-teacher">授课老师：张新刚</span>
-                            </div>
-                            <div class="right-function">
-                                <span class="money">￥1000</span>
-                                <span class="fav">续报9折</span>
-                                <a  class="delete" href="#">删除</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="left-infor-course">
-                                <h6 class="course-title">
-                                    <em>数学</em>
-                                    2015学年五升
-                                </h6>
-                                <span class="course-teacher">授课老师：张新刚</span>
-                            </div>
-                            <div class="right-function">
-                                <span class="money">￥1000</span>
-                                <a  class="delete" href="#">删除</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="left-infor-course">
-                                <h6 class="course-title">
-                                    <em>数学</em>
-                                    2015学年五升六年级奥数年卡（竞赛班）
-                                </h6>
-                                <span class="course-teacher">授课老师：张新刚</span>
-                            </div>
-                            <div class="right-function">
-                                <span class="money">￥1000</span>
-                                <span class="fav">续报9折</span>
-                                <a  class="delete" href="#">删除</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="left-infor-course">
-                                <h6 class="course-title">
-                                    <em>数学</em>
-                                    2015学年五升六年级奥数年卡（竞赛班）
-                                </h6>
-                                <span class="course-teacher">授课老师：张新刚</span>
-                            </div>
-                            <div class="right-function">
-                                <span class="money">￥1000</span>
-                                <span class="fav">续报9折</span>
-                                <a  class="delete" href="#">删除</a>
-                            </div>
-                        </li>
+					</li>
+					<li class="set-show">
+						<span>
+							卡激活 <i class="nav-r"><s class="nav-s">◇</s></i> 
+						</span>
+						<div class="menu-layer">
+							<ul>
+								<li>
+									<a href="#">代金卡</a>
+								</li>
+								<li>
+									<a href="#">听课证</a>
+								</li>
+								<li>
+									<a href="#">课程绑定卡</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="http://www.speiyou.com/" target="_blank">更多课程</a>
+					</li>
+				</ul>
+			</div>
+			<div class="phone-400">400-800-2211</div>
+		</div>
+	</div>
+	<!-- 顶部菜单***这部分分为未登录和已登录**个人中心会用到 -->
+	<div class="ui-head-logo">
+		<div class="h-logo">
+			<a herf="#">学而思网校</a>
+		</div>
+		<div class="h-search">
+			<input type="text" class="h-text" placeholder="搜索:秋季满分冲刺班" autocomplete="on">
+			<button type="button" class="btn-search">搜索</button>
+		</div>
+		<div class="h-words">
+			<a target="_blank" href="#">免费课</a>
+			<a target="_blank" href="#">9.9抢购</a>
+			<a target="_blank" href="#">11月11天</a>
+			<a target="_blank" href="#">9.9抢购</a>
+			<a target="_blank" href="#">11月11天</a>
+			<a target="_blank" href="#">9.9抢购</a>
+		</div>
+		<!-- 头部购物车ui部分调用 -->
+		<div class="ui-head-shopcart ">
+			<div class="sp-up-wrap">
+				<i class="sp-icon-left"></i>
+				<i class="sp-icon-right">&gt;</i>
+				<i class="sp-amount">12</i>
+				<a href="#" target="_blank">我的购物车</a>
+			</div>
+			<!-- 上半部分 -->
+			<div class="sp-down-wrap">
+				<div class="spacer"></div>
+				<!-- 购物车没有商品 -->
+				<div class="sp-no-shop-wrap">
+					<span>购物车空空如也~，快去选择课程吧~</span>
+				</div>
+				<!-- 购物车有商品  -->
+				<h4 class="new-add-cart">最新加入的商品</h4>
+				<div class="sp-scroll-wrap">
+					<ul>
+						<li>
+							<div class="left-infor-course">
+								<h6 class="course-title">
+									<em>数学</em>
+									2015学年五升六年级奥数年卡（竞赛班）
+								</h6>
+								<span class="course-teacher">授课老师：张新刚</span>
+							</div>
+							<div class="right-function">
+								<span class="money">￥1000</span>
+								<span class="fav">续报9折</span>
+								<a  class="delete" href="#">删除</a>
+							</div>
+						</li>
+						<li>
+							<div class="left-infor-course">
+								<h6 class="course-title">
+									<em>数学</em>
+									2015学年五升
+								</h6>
+								<span class="course-teacher">授课老师：张新刚</span>
+							</div>
+							<div class="right-function">
+								<span class="money">￥1000</span>
+								<a  class="delete" href="#">删除</a>
+							</div>
+						</li>
+						<li>
+							<div class="left-infor-course">
+								<h6 class="course-title">
+									<em>数学</em>
+									2015学年五升六年级奥数年卡（竞赛班）
+								</h6>
+								<span class="course-teacher">授课老师：张新刚</span>
+							</div>
+							<div class="right-function">
+								<span class="money">￥1000</span>
+								<span class="fav">续报9折</span>
+								<a  class="delete" href="#">删除</a>
+							</div>
+						</li>
+						<li>
+							<div class="left-infor-course">
+								<h6 class="course-title">
+									<em>数学</em>
+									2015学年五升六年级奥数年卡（竞赛班）
+								</h6>
+								<span class="course-teacher">授课老师：张新刚</span>
+							</div>
+							<div class="right-function">
+								<span class="money">￥1000</span>
+								<span class="fav">续报9折</span>
+								<a  class="delete" href="#">删除</a>
+							</div>
+						</li>
 
-                    </ul>
-                </div>
-                <div class="sp-total-content">
-                    <span class="sp-total">
-                        共 <b>2</b>
-                        件商品
-                    </span>
-                    <a id="btn-go-shop-cart" title="去购物车" href="#">去购物车</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- 头部logo**and**搜索**购物车 -->
-    <div class="ui-header-nav">
-        <div class="nav-classify hover">
-            <a href="#">
-                全部课程分类 <i class="nav-r"><s class="nav-s">◇</s></i> 
-            </a>
-        </div>
-        <ul class="nav">
-            <li class="current">
-                <a href="">找老师</a>
-            </li>
-            <li>
-                <a href="">免费课</a>
-            </li>
-            <li>
-                <a href="">看学霸</a>
-            </li>
-            <li>
-                <a href="">新鲜事</a>
-            </li>
-            <li>
-                <a href="">逛书城</a>
-            </li>
-            <li>
-                <a href="">泡论坛</a>
-            </li>
-        </ul>
-    </div>
-    <!-- 头部导航 -->
+					</ul>
+				</div>
+				<div class="sp-total-content">
+					<span class="sp-total">
+						共 <b>2</b>
+						件商品
+					</span>
+					<a id="btn-go-shop-cart" title="去购物车" href="#">去购物车</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 头部logo**and**搜索**购物车 -->
+	<div class="ui-header-nav">
+		<div class="nav-classify hover">
+			<a href="#">
+				全部课程分类
+				<i class="nav-r">
+					<s class="nav-s">◇</s>
+				</i>
+			</a>
+		</div>
+		<ul class="nav">
+			<li class="current">
+				<a href="">找老师</a>
+			</li>
+			<li>
+				<a href="">免费课</a>
+			</li>
+			<li>
+				<a href="">看学霸</a>
+			</li>
+			<li>
+				<a href="">新鲜事</a>
+			</li>
+			<li>
+				<a href="">逛书城</a>
+			</li>
+			<li>
+				<a href="">泡论坛</a>
+			</li>
+		</ul>
+	</div>
+	<!-- 头部导航 -->
 	<div id="container" class="container">
-	<div class="ui-course-infor-wrap">
-		<div class="course-left-player f-left">
-			<div class="video-images-player">
-				<a href="#" target="_blank"><img src="img/pic/xiangqing_03.jpg" height="340" width="340" alt=""></a>
-			</div>
-		</div>
-		<div class="course-center-list f-left">
-			<h2 class="coures-name-title">人教版四升五年级上下全册数学满分班</h2>
-			<div class="attend-class-time">
-				<span class="f-left">上课时间：</span>
-				<ul class="time-list f-left">
-					<li class="current">07月01日-08月20日 每天19:00-20:00</li>
-					<li>07月01日-08月20日 每天19:00-20:00</li>
-				</ul>
-				<div class="time-list-tips f-left">以上时间为参考时间，实际上课时间可能会有些许出入。<a href="#lookTime" id="lookTimeList">点击查看详细时间表</a></div>
-			</div>
-			<div class="course-content-text">
-				<span class="f-left">课程内容：</span>
-				<ul class="f-left">
-					<li>20场直播课程+作业反馈<a href="#" target="_blank">立即试听</a></li>
-					<li>20讲视频课程<a href="#" target="_blank">立即试听</a></li>
-					<li>3次阶段考试</li>
-				</ul>
-			</div>
-			<div class="course-favorable-list">
-				课程优惠：
-				<span>续报9折</span>
-				<span>送u盘</span>
-				<span>送练习册</span>
-				<span>实物礼品</span>
-			</div>
-			<div class="course-favorable-money">
-				<div class="favrble-money f-left">
-					<span>
-						课程优惠价: <em class="red">￥660</em>
-					</span> <del>原价:<em>￥825</em></del>
+		<div class="ui-course-infor-wrap">
+			<div class="course-left-player f-left">
+				<div class="video-images-player">
+					<a href="#" target="_blank">
+						<img src="img/pic/xiangqing_03.jpg" height="340" width="340" alt=""></a>
 				</div>
-				<ul class="f-right">
-					<li class="line">已购买<br/><em class="red">23000</em></li>
-					<li>课程满意度<br/><em class="red">92.99</em></li>
-				</ul>
 			</div>
-			<div class="course-button-list">
-			<span class="f-left">
-				<button class="medium alert button_apply">立即报名</button>
-			</span>
-				<span class="collect f-left">
-					<a id="collectId" onclick="collect(11323)" href="javascript:void(0);">收藏课程</a>
-				</span>
-			</div>
-		</div>
-		<div class="course-right-teacher f-right">
-			<h5 class="main-teacher-title red">主讲老师</h5>
-			<div class="main-teacher-list">
-				<div class="main-teacher">
-					<div class="ui-avatar f-left"><img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt=""></div>
-					<div class="teacher-avatar-infor f-left">
-						<p>朱韬老师</p>
-						<p>教学满意度<span>92.71</span></p>
+			<div class="course-center-list f-left">
+				<h2 class="coures-name-title">人教版四升五年级上下全册数学满分班</h2>
+				<div class="attend-class-time">
+					<span class="f-left">上课时间：</span>
+					<ul class="time-list f-left">
+						<li class="current">07月01日-08月20日 每天19:00-20:00</li>
+						<li>07月01日-08月20日 每天19:00-20:00</li>
+					</ul>
+					<div class="time-list-tips f-left">
+						以上时间为参考时间，实际上课时间可能会有些许出入。
+						<a href="#lookTime" id="lookTimeList">点击查看详细时间表</a>
 					</div>
 				</div>
-				<div class="teacher-infor">
-					主讲老师将为您提供课程讲授／知识点强化服务
+				<div class="course-content-text">
+					<span class="f-left">课程内容：</span>
+					<ul class="f-left">
+						<li>
+							20场直播课程+作业反馈
+							<a href="#" target="_blank">立即试听</a>
+						</li>
+						<li>
+							20讲视频课程
+							<a href="#" target="_blank">立即试听</a>
+						</li>
+						<li>3次阶段考试</li>
+					</ul>
+				</div>
+				<div class="course-favorable-list">
+					课程优惠：
+					<span>续报9折</span>
+					<span>送u盘</span>
+					<span>送练习册</span>
+					<span>实物礼品</span>
+				</div>
+				<div class="course-favorable-money">
+					<div class="favrble-money f-left">
+						<span>
+							课程优惠价:
+							<em class="red">￥660</em>
+						</span> <del>原价:
+							<em>￥825</em></del> 
+					</div>
+					<ul class="f-right">
+						<li class="line">
+							已购买
+							<br/>
+							<em class="red">23000</em>
+						</li>
+						<li>
+							课程满意度
+							<br/>
+							<em class="red">92.99</em>
+						</li>
+					</ul>
+				</div>
+				<div class="course-button-list">
+					<span class="f-left">
+						<button class="medium alert button_apply">立即报名</button>
+					</span>
+					<span class="collect f-left">
+						<a id="collectId" onclick="collect(11323)" href="javascript:void(0);">收藏课程</a>
+					</span>
 				</div>
 			</div>
-			<h5 class="main-teacher-title">辅导老师</h5>
-			<div class="main-teacher-list noBorder">
-				<div class="main-teacher">
-					<div class="ui-avatar f-left"><img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt=""></div>
-					<div class="teacher-avatar-infor f-left">
-						<p>朱韬老师</p>
-						<p>教学满意度<span>92.71</span></p>
+			<div class="course-right-teacher f-right">
+				<h5 class="main-teacher-title red">主讲老师</h5>
+				<div class="main-teacher-list">
+					<div class="main-teacher">
+						<div class="ui-avatar f-left">
+							<img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt=""></div>
+						<div class="teacher-avatar-infor f-left">
+							<p>朱韬老师</p>
+							<p>
+								教学满意度
+								<span>92.71</span>
+							</p>
+						</div>
 					</div>
+					<div class="teacher-infor">主讲老师将为您提供课程讲授／知识点强化服务</div>
 				</div>
-				<div class="teacher-infor">
-					主讲老师将为您提供课程讲授／知识点强化服务
+				<h5 class="main-teacher-title">辅导老师</h5>
+				<div class="main-teacher-list noBorder">
+					<div class="main-teacher">
+						<div class="ui-avatar f-left">
+							<img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt=""></div>
+						<div class="teacher-avatar-infor f-left">
+							<p>朱韬老师</p>
+							<p>
+								教学满意度
+								<span>92.71</span>
+							</p>
+						</div>
+					</div>
+					<div class="teacher-infor">主讲老师将为您提供课程讲授／知识点强化服务</div>
 				</div>
 			</div>
 		</div>
+		<!-- 课程上半部分 -->
+		<div class="columns-wrap">
+			<div class="columns-left f-left">
+				<ul class="ui-nav-link">
+					<li class="current">直播大纲(10)</li>
+					<li>点播大纲(10)</li>
+					<li>课程介绍</li>
+					<li class="last">课程评价</li>
+				</ul>
+				<div class="course-info-box">
+					<div class="course-detail" style="display:block;" id="lookTime">
+						<table class="table table_outline">
+							<tbody>
+								<tr>
+									<th class="t-left">讲名称</th>
+									<th>上课日期</th>
+									<th>上课时间</th>
+									<th>学习状态</th>
+								</tr>
+								<tr>
+									<td class="t-left">
+										<span class="live_teach">[直播辅导]</span>
+										计算机爱空间上的课教案和时间肯
+									</td>
+									<td>7月1好</td>
+									<td>17:00-19:00</td>
+									<td>
+										<a href="#">立即试听</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="t-left">
+										<span class="live_teach">[直播辅导]</span>
+										计算机爱空间上的课教案和时间肯
+									</td>
+									<td>7月1好</td>
+									<td>17:00-19:00</td>
+									<td>
+										<a href="#">观看回放</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="t-left">
+										<span class="live_teach">[直播辅导]</span>
+										计算机爱空间上的课教案和时间肯
+									</td>
+									<td>7月1好</td>
+									<td>17:00-19:00</td>
+									<td>
+										<span>未开始</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="t-left">
+										<span class="live_teach">[直播辅导]</span>
+										计算机爱空间上的课教案和时间肯
+									</td>
+									<td>7月1好</td>
+									<td>17:00-19:00</td>
+									<td>
+										<a href="#">立即试听</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- 直播大纲 -->
+					<div class="course-detail">
+						<table class="table table_outline">
+							<tbody>
+								<tr>
+									<th class="t-left">讲名称</th>
+									<th>上课日期</th>
+									<th>学习状态</th>
+								</tr>
+								<tr>
+									<td class="t-left">
+										<span class="live_teach">[直播辅导]</span>
+										计算机爱空间上的课教案和时间肯
+									</td>
+									<td>2015-10-11至2015-11-11</td>
+									<td>
+										<a href="#" style="color:red;">进行中</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="t-left">
+										<span class="live_teach">[直播辅导]</span>
+										计算机爱空间上的课教案和时间肯
+									</td>
+									<td>2015-10-11至2015-11-11</td>
+									<td>
+										<span>未开始</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="t-left">
+										<span class="live_teach">[直播辅导]</span>
+										计算机爱空间上的课教案和时间肯
+									</td>
+									<td>2015-10-11至2015-11-11</td>
+									<td>
+										<span class="notStart">已结束</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="t-left">
+										<span class="live_teach">[直播辅导]</span>
+										计算机爱空间上的课教案和时间肯
+									</td>
+									
+									<td>2015-10-11至2015-11-11</td>
+									<td>
+										<span>未开始</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- 点播大纲 -->
+					<div class="course-detail">
+						<dl>
+							<dt>课程有效期</dt>
+							<dd>
+								本课程有效期自购买之日开始计算，请于 <font color="red">2015-08-31</font>
+								学完，合理安排学习时间。
+							</dd>
+						</dl>
+						<dl>
+							<dt>课程更新时间</dt>
+							<dd>
+								本课程更新于 <font color="red">2013-04-23</font>
+								。
+							</dd>
+						</dl>
+					</div>
+					<!-- 课程介绍 -->
+					<div class="course-detail">课程评价</div>
+					<!-- 课程评价 -->
+				</div>
+			</div>
+			<div class="columns-right f-right">9 columns</div>
+		</div>
+		<!-- 课程下半部分 -->
 	</div>
-	<!-- 课程上半部分 -->
-	<div class="columns-wrap">
-	  <div class="columns-left f-left">
-	  	 <ul class="ui-nav-link">
-	  	 	<li class="current">直播大纲(10)</li>
-	  	 	<li>点播大纲(10)</li>
-	  	 	<li>课程介绍</li>
-	  	 	<li class="last">课程评价</li>
-	  	 </ul>
-	  	 <div class="course-info-box">
-	  	 	 <div class="course-detail" style="display:block;" id="lookTime">
-	  	 	 	<ul class="nav live_course_nav">
-	  	 	 		<li class="first">讲名称</li>
-	  	 	 		<li>上课日期</li>
-	  	 	 		<li>上课时间</li>
-	  	 	 		<li>学习状态</li>
-	  	 	 	</ul>
-	  	 	 	<div class="live_panel">
-	  	 	 		<ul class="live_course_detail">
-	  	 	 			<li>
-	  	 	 				<div class="live_name">
-	  	 	 					<span class="live_teach">[直播辅导]</span>
-	  	 	 					计算机爱空间上的课教案和时间肯
-	  	 	 				</div>
-	  	 	 				<div class="date">7月1好</div>
-	  	 	 				<div class="time">17:00-19:00</div>
-	  	 	 				<div class="study_status">已结束</div>
-	  	 	 			</li>
-	  	 	 			<li>
-	  	 	 				<div class="live_name">
-	  	 	 					<span class="live_teach">[直播辅导]</span>
-	  	 	 					计算机爱空间上的课教案和时间肯
-	  	 	 				</div>
-	  	 	 				<div class="date">7月1好</div>
-	  	 	 				<div class="time">17:00-19:00</div>
-	  	 	 				<div class="study_status"><a href="#">立即试听</a></div>
-	  	 	 			</li>
-	  	 	 			<li>
-	  	 	 				<div class="live_name">
-	  	 	 					<span class="live_teach">[直播辅导]</span>
-	  	 	 					计算机爱空间上的课教案和时间肯
-	  	 	 				</div>
-	  	 	 				<div class="date">7月1好</div>
-	  	 	 				<div class="time">17:00-19:00</div>
-	  	 	 				<div class="study_status"><a href="#">观看回放</a></div>
-	  	 	 			</li>
-	  	 	 			<li>
-	  	 	 				<div class="live_name">
-	  	 	 					<span class="live_teach">[直播辅导]</span>
-	  	 	 					计算机爱空间上的课教案和时间肯
-	  	 	 				</div>
-	  	 	 				<div class="date">7月1好</div>
-	  	 	 				<div class="time">17:00-19:00</div>
-	  	 	 				<div class="study_status">已结束</div>
-	  	 	 			</li>
-	  	 	 		</ul>
-	  	 	 	</div>
-	  	 	 </div>
-	  	 	 <!-- 直播大纲 -->
-	  	 	 	 <div class="course-detail">
-	  	 	 		点播大纲
-	  	 	     </div>
-	  	 	 <!-- 点播大纲 -->
-	  	 	 <div class="course-detail">
-	  	 	 	<dl>
-	  	 	 		<dt>课程有效期</dt>
-	  	 	 		<dd>
-	  	 	 			本课程有效期自购买之日开始计算，请于 <font color="red">2015-08-31</font>
-	  	 	 			学完，合理安排学习时间。
-	  	 	 		</dd>
-	  	 	 	</dl>
-	  	 	 	<dl>
-	  	 	 		<dt>课程更新时间</dt>
-	  	 	 		<dd>
-	  	 	 			本课程更新于 <font color="red">2013-04-23</font>
-	  	 	 			。
-	  	 	 		</dd>
-	  	 	 	</dl>
-	  	 	 </div>
-	  	 	  <!-- 课程介绍 -->
-	  	 	   <div class="course-detail">课程评价</div>
-	  	 	   <!-- 课程评价 -->
-	  	 </div>
-	  </div>
-	  <div class="columns-right f-right">9 columns</div>
-	</div>
-	<!-- 课程下半部分 -->
-	</div>
-    <!-- 这是jquery库文件 -->
-    <script type="text/javascript" src="../../lib/jQuery/2.1.1/jquery.min.js"></script>
-    <!-- 这是当前模块js文件 -->
-    <script type="text/javascript" src="../header/header.js"></script>
+	<!-- 这是jquery库文件 -->
+	<script type="text/javascript" src="../../lib/jQuery/2.1.1/jquery.min.js"></script>
+	<!-- 这是当前模块js文件 -->
+	<script type="text/javascript" src="../header/header.js"></script>
 	<script type="text/javascript" src="ui-course-infor.js"></script>
-	 <!-- 这是页脚部分代码  -->
-    <div id="footer">
-        <div class="foot-service">
-            <a target="_blank" class="service-share" href="http://www.xueersi.com/article/detail/1825">
-                <span>名师</span>
-                <p>38%清华毕业平均教龄5.1年100%面授S级老师</p>
-            </a>
-            <a target="_blank" class="service-system" href="http://www.xueersi.com/article/detail/1824">
-                <span>陪伴</span>
-                <p>直播授课,QQ群,APP随时答疑名师就在你身边</p>
-            </a>
-            <a target="_blank" class="service-live" href="http://www.xueersi.com/article/detail/1814">
-                <span>方便</span>
-                <p>足不出户，免去路途奔波随时随地反复看</p>
-            </a>
-            <a target="_blank" class="service-interaction" href="http://www.xueersi.com/app">
-                <span>有效</span>
-                <p>在线练习及时反馈已累计培养39名中高考状元</p>
-            </a>
-        </div>
+	<!-- 这是页脚部分代码  -->
+	<div id="footer">
+		<div class="foot-service">
+			<a target="_blank" class="service-share" href="http://www.xueersi.com/article/detail/1825">
+				<span>名师</span>
+				<p>38%清华毕业平均教龄5.1年100%面授S级老师</p>
+			</a>
+			<a target="_blank" class="service-system" href="http://www.xueersi.com/article/detail/1824">
+				<span>陪伴</span>
+				<p>直播授课,QQ群,APP随时答疑名师就在你身边</p>
+			</a>
+			<a target="_blank" class="service-live" href="http://www.xueersi.com/article/detail/1814">
+				<span>方便</span>
+				<p>足不出户，免去路途奔波随时随地反复看</p>
+			</a>
+			<a target="_blank" class="service-interaction" href="http://www.xueersi.com/app">
+				<span>有效</span>
+				<p>在线练习及时反馈已累计培养39名中高考状元</p>
+			</a>
+		</div>
 
-        <div class="foot-area">
-            <p>
-                <a href="http://www.xueersi.com">网校首页</a>
-                |
-                <a href="http://www.xueersi.com/article/detail/1219">关于我们</a>
-                |
-                <a href="http://www.xueersi.com/article/detail/1220">合作专区</a>
-                |
-                <a href="http://www.xueersi.com/article/detail/1538">联系我们</a>
-                |
-                <a class="red" href="http://www.xueersi.com/article/detail/1495">版权声明</a>
-                |
-                <a href="http://www.xueersi.com/article/">帮助中心</a>
-            </p>
-            <p>
-                客服电话： <strong>400-800-2211</strong>
-                （免长途话费） Copyright &copy; 2009-2015 www.xueersi.com All Rights Reserved
-            </p>
-            <p>
-                北京学而思教育科技有限公司
-                <a target="_blank" href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action">京ICP备09032638号</a>
-                京公网安备:1101082103
-            </p>
-            <p class="link">
-                <a target="_blank" href="https://search.szfw.org/cert/l/CX20120925001738002003" id="___szfw_logo___">
-                    <img src="http://x04.xesimg.com/web/201209/13487953879693.png"></a>
-            </p>
-        </div>
-    </div>
-     <!-- 这是页脚结束部分代码  -->
+		<div class="foot-area">
+			<p>
+				<a href="http://www.xueersi.com">网校首页</a>
+				|
+				<a href="http://www.xueersi.com/article/detail/1219">关于我们</a>
+				|
+				<a href="http://www.xueersi.com/article/detail/1220">合作专区</a>
+				|
+				<a href="http://www.xueersi.com/article/detail/1538">联系我们</a>
+				|
+				<a class="red" href="http://www.xueersi.com/article/detail/1495">版权声明</a>
+				|
+				<a href="http://www.xueersi.com/article/">帮助中心</a>
+			</p>
+			<p>
+				客服电话： <strong>400-800-2211</strong>
+				（免长途话费） Copyright &copy; 2009-2015 www.xueersi.com All Rights Reserved
+			</p>
+			<p>
+				北京学而思教育科技有限公司
+				<a target="_blank" href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action">京ICP备09032638号</a>
+				京公网安备:1101082103
+			</p>
+			<p class="link">
+				<a target="_blank" href="https://search.szfw.org/cert/l/CX20120925001738002003" id="___szfw_logo___">
+					<img src="http://x04.xesimg.com/web/201209/13487953879693.png"></a>
+			</p>
+		</div>
+	</div>
+	<!-- 这是页脚结束部分代码  -->
 </body>
 </html>
