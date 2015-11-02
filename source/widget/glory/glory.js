@@ -41,7 +41,6 @@
         	h=-5;
         	t.children().each(function(){
         		var ch=$(this).innerHeight();
-        		console.log(ch);
         		h+=ch;
         	}).last().removeClass('hasborder_1');;
 
