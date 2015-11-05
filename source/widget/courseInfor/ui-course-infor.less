@@ -332,5 +332,57 @@
 		}
 	}
 	//课程评价（往下写）
-	
+	.comment-detail-wrap {
+		overflow: hidden;
+		.comment-detail-list {
+			overflow: hidden;margin-bottom: 10px;_width:100%;
+			.user-pic {
+				float: left;display: inline;width: 40px;margin:0 10px;text-align: center;
+				.pic {
+					width: 40px;height: 40px;border-radius: 50%;background: #fcfcfc;overflow: hidden;border:1px solid #ededed;margin-bottom: 10px;
+					img {width: 40px;height: 40px;}
+				}
+				
+				p {
+					font-size: 12px;font-family: @fs;margin:0;height: 20px;line-height: 20px;overflow: hidden;
+					&.name {color: #333;}
+					&.site {color: #999;}
+				}
+				
+			}
+			.user-text-box {
+				float: right;display: inline;width: 840px;border: 1px solid #ededed;background: #fcfcfc;padding:15px;position: relative;
+				p {
+					font-size: 12px;font-family: @fs;margin:0;
+				}
+				.text {font-size: 14px;color: #666;padding-bottom: 20px;}
+				.time {color:#999;}
+				&:before {
+				    display: inline-block;
+					width:0; 
+				    height:0; 
+				    content: "";
+				    border-top:10px solid transparent;
+				    border-bottom:10px solid transparent; 
+				    border-right:10px solid #ededed; 
+				    position: absolute;
+				    left: -10px;
+				    top:8px;
+				}
+				&:after {
+				    display: inline-block;
+					width:0; 
+				    height:0; 
+				    content: "";
+				    border-top:10px solid transparent;
+				    border-bottom:10px solid transparent; 
+				    border-right:10px solid #fcfcfc; 
+				    position: absolute;
+				    left: -9px;
+				    top:8px;
+				}
+			}
+		}
+	}
+
 }
