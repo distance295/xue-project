@@ -522,3 +522,91 @@
   line-height: 22px;
   padding-left: 10px;
 }
+.course-detail .comment-detail-wrap {
+  overflow: hidden;
+}
+.course-detail .comment-detail-wrap .comment-detail-list {
+  overflow: hidden;
+  margin-bottom: 10px;
+  _width: 100%;
+}
+.course-detail .comment-detail-wrap .comment-detail-list .user-pic {
+  float: left;
+  display: inline;
+  width: 40px;
+  margin: 0 10px;
+  text-align: center;
+}
+.course-detail .comment-detail-wrap .comment-detail-list .user-pic .pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fcfcfc;
+  overflow: hidden;
+  border: 1px solid #ededed;
+  margin-bottom: 10px;
+}
+.course-detail .comment-detail-wrap .comment-detail-list .user-pic .pic img {
+  width: 40px;
+  height: 40px;
+}
+.course-detail .comment-detail-wrap .comment-detail-list .user-pic p {
+  font-size: 12px;
+  font-family: "SimSun";
+  margin: 0;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+}
+.course-detail .comment-detail-wrap .comment-detail-list .user-pic p.name {
+  color: #333;
+}
+.course-detail .comment-detail-wrap .comment-detail-list .user-pic p.site {
+  color: #999;
+}
+.course-detail .comment-detail-wrap .comment-detail-list .user-text-box {
+  float: right;
+  display: inline;
+  width: 840px;
+  border: 1px solid #ededed;
+  background: #fcfcfc;
+  padding: 15px;
+  position: relative;
+}
+.course-detail .comment-detail-wrap .comment-detail-list .user-text-box p {
+  font-size: 12px;
+  font-family: "SimSun";
+  margin: 0;
+}
+.course-detail .comment-detail-wrap .comment-detail-list .user-text-box .text {
+  font-size: 14px;
+  color: #666;
+  padding-bottom: 20px;
+}
+.course-detail .comment-detail-wrap .comment-detail-list .user-text-box .time {
+  color: #999;
+}
+.course-detail .comment-detail-wrap .comment-detail-list .user-text-box:before {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  content: "";
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #ededed;
+  position: absolute;
+  left: -10px;
+  top: 8px;
+}
+.course-detail .comment-detail-wrap .comment-detail-list .user-text-box:after {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  content: "";
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #fcfcfc;
+  position: absolute;
+  left: -9px;
+  top: 8px;
+}
