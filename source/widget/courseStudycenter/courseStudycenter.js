@@ -134,6 +134,7 @@ $(function(){
 
     })
 }); 
+
 // 学习中心的直播录播切换
 $(function(){
     $('.courseList-wrap').on('click','.teacher-tab li',function(){
