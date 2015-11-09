@@ -33,22 +33,25 @@
 			<div class="f1">
 				<label  for="inputname">昵称：</label>
 				<p>
-					<input type="text" value="" placeholder="6个汉字或18个字母" class="input-text" id="nickname" name="data[nickname]" autocomplete="off">
+					<input type="text" maxlength="18" value="" class="input-text" id="nickname" data-nickname=""/>
 					<span class="errTips" id="11"></span>
+					<label for="nickname" class="label-value">请输入不超过18个字的昵称</label>
 				</p>
 			</div>
 			<div class="f1">
 				<label for="inputname">姓名：</label>
 				<p>
-					<input type="text" value=""  placeholder="10个汉字" class="input-text" id="realname" name="data[realname]" autocomplete="off">
-					<span class="errTips" id="11"></span>
+					<input type="text" maxlength="10" value="" class="input-text" id="realname" data-realname=""/>
+					<span class="errTips" id="12"></span>
+					<label for="realname" class="label-value">请输入不超过5个汉字的姓名</label>
 				</p>
 			</div>
 			<div class="f1">
 				<label  for="inputname">性别：</label>
 				<p class="sex-tip">
 					<input type="radio"  value="1" name="data[sex]" autocomplete="off"><label>男</label><span class="gender-1"></span>
-					<input type="radio" checked="checked" value="0" name="data[sex]" autocomplete="off"><label>女</label><span class="gender-0"></span>
+					<input type="radio"  value="0" name="data[sex]" autocomplete="off"><label>女</label><span class="gender-0"></span>
+					<span class="errTips" id="13"></span>
 				</p>
 			</div>
 			<div class="f1">
@@ -61,6 +64,7 @@
 				<select id="add-province" name="province" class="select"  style="display: inline-block;"></select>
 				<select id="add-city" name="city" class="select"></select>
 				<select id="add-country" name="country" class="select"></select>
+				<p class="area-tips"><span class="errTips" id="14"></span></p>
 				<script type="text/javascript">			
 				function renderAreaSelect () {
 					var defaults = {
@@ -79,7 +83,7 @@
 			</div>
 		</div>
 		<div class="infor-btn-wrap">
-			<button type="submit" name="submit" class="alert information-btn" id="">下一步</button>
+			<button type="submit" name="submit" class="alert information-btn" id="inforSubmit">下一步</button>
 		</div>
 	</div>
 
@@ -120,7 +124,7 @@
 						<p title="" class="fun-usres">官方账号</p>
 
 						<div class="fresh-course-attention" data-url="/teachers/follow/" data-value="840" data-params="urlStr=840&urlKey=af0030c654f79b371438ebdf40d4bead" data-type="3">
-							<a class="fresh-attention-btn  teacher-added" href="javascript:void(0)"><span class="left">已关注</span></a>
+							<em>已关注</em>
 						</div>
 					</div>
 					<div title="测试" class="follow-con-info">学而思初中数学教研主任 中考专...</div>
@@ -136,7 +140,7 @@
 						</p>
 						<p title="" class="fun-usres">官方账号</p>
 
-						<div data-type="3" data-params="urlStr=840&amp;urlKey=af0030c654f79b371438ebdf40d4bead" data-value="840" data-url="/teachers/follow/" class="fresh-course-attention"><em>已关注</em><i class="fresh-course-line">|</i><a class="fresh-add-cancel-btn" href="javascript:void(0)">取消</a></div>
+						<div data-type="2" data-params="urlStr=840&amp;urlKey=af0030c654f79b371438ebdf40d4bead" data-value="840" data-url="/teachers/follow/" class="fresh-course-attention"><em>已关注</em><a class="fresh-add-cancel-btn" href="javascript:void(0)">取消</a></div>
 					</div>
 					<div title="测试" class="follow-con-info">学而思初中数学教研主任 中考专...</div>
 				</div>
@@ -151,7 +155,7 @@
 						</p>
 						<p title="" class="fun-usres">官方账号</p>
 
-						<div data-type="3" data-params="urlStr=840&amp;urlKey=af0030c654f79b371438ebdf40d4bead" data-value="840" data-url="/teachers/follow/" class="fresh-course-attention"><em>已关注</em><i class="fresh-course-line">|</i><a class="fresh-add-cancel-btn" href="javascript:void(0)">取消</a></div>
+						<div data-type="2" data-params="urlStr=840&amp;urlKey=af0030c654f79b371438ebdf40d4bead" data-value="840" data-url="/teachers/follow/" class="fresh-course-attention"><em>已关注</em><a class="fresh-add-cancel-btn" href="javascript:void(0)">取消</a></div>
 					</div>
 					<div title="测试" class="follow-con-info">学而思初中数学教研主任 中考专...</div>
 				</div>
@@ -166,7 +170,7 @@
 						</p>
 						<p title="" class="fun-usres">官方账号</p>
 
-						<div data-type="3" data-params="urlStr=840&amp;urlKey=af0030c654f79b371438ebdf40d4bead" data-value="840" data-url="/teachers/follow/" class="fresh-course-attention"><em>已关注</em><i class="fresh-course-line">|</i><a class="fresh-add-cancel-btn" href="javascript:void(0)">取消</a></div>
+						<div data-type="2" data-params="urlStr=840&amp;urlKey=af0030c654f79b371438ebdf40d4bead" data-value="840" data-url="/teachers/follow/" class="fresh-course-attention"><em>已关注</em><a class="fresh-add-cancel-btn" href="javascript:void(0)">取消</a></div>
 					</div>
 					<div title="测试" class="follow-con-info">学而思初中数学教研主任 中考专...</div>
 				</div>
@@ -181,7 +185,7 @@
 						</p>
 						<p title="" class="fun-usres">官方账号</p>
 
-						<div data-type="3" data-params="urlStr=840&amp;urlKey=af0030c654f79b371438ebdf40d4bead" data-value="840" data-url="/teachers/follow/" class="fresh-course-attention"><em>已关注</em><i class="fresh-course-line">|</i><a class="fresh-add-cancel-btn" href="javascript:void(0)">取消</a></div>
+						<div data-type="2" data-params="urlStr=840&amp;urlKey=af0030c654f79b371438ebdf40d4bead" data-value="840" data-url="/teachers/follow/" class="fresh-course-attention"><em>已关注</em><a class="fresh-add-cancel-btn" href="javascript:void(0)">取消</a></div>
 					</div>
 					<div title="测试" class="follow-con-info">学而思初中数学教研主任 中考专...</div>
 				</div>
