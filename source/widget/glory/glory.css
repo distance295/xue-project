@@ -1,0 +1,160 @@
+.screen-rank {
+  overflow: hidden;
+  height: 38px;
+  border: 1px solid #eaeaea;
+  line-height: 38px;
+  margin: 0;
+}
+.screen-rank li {
+  list-style: none;
+  float: left;
+  font-size: 12px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.screen-rank li.popular-rank {
+  padding: 0 20px;
+  border-right: 1px solid #eaeaea;
+  color: #1e89e0;
+}
+.glory-content {
+  margin: 0;
+  font-family: 'SimSun';
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  overflow: hidden;
+  width: 290px;
+}
+.glory-content li {
+  margin-bottom: 15px;
+  position: relative;
+}
+.glory-content .glory-water {
+  padding: 0 9px;
+}
+.glory-content .water-pic {
+  border: 1px solid #eaeaea;
+  width: 290px;
+  padding: 9px;
+}
+.glory-content .water-pic img {
+  width: 270px;
+  height: 270px;
+}
+.glory-content .water-pic p {
+  font-size: 12px;
+  color: #666666;
+  line-height: 19px;
+  margin-top: 15px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+.glory-content .water-option {
+  background: #f8f8f8;
+  border: 1px solid #eaeaea;
+  border-top: none;
+  border-bottom: none;
+  overflow: hidden;
+}
+.glory-content .water-option .option-pic {
+  float: left;
+  height: 40px;
+  margin: 14px 10px 10px 0;
+  overflow: hidden;
+  text-align: center;
+  width: 50px;
+}
+.glory-content .water-option .option-pic img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.glory-content .water-option .option-con {
+  color: #999;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  width: 210px;
+  font-size: 12px;
+  height: 68px;
+}
+.glory-content .water-option .option-con p {
+  margin-bottom: 0;
+  line-height: 18px;
+  font-size: 12px;
+}
+.glory-content .water-option .option-con .users {
+  margin-top: 8px;
+  height: 18px;
+  overflow: hidden;
+  width: 100px;
+}
+.glory-content .water-option .option-con .teachers {
+  height: 18px;
+  overflow: hidden;
+}
+.glory-content .water-option .option-con .grades {
+  width: 210px;
+  height: 18px;
+  overflow: hidden;
+}
+.glory-content .water-option .option-con .times {
+  height: 18px;
+  position: absolute;
+  right: 9px;
+  text-align: right;
+  top: 5px;
+}
+.glory-content .show-course {
+  height: 30px;
+  background: #fff6de;
+  color: #dd6300;
+  border: 1px solid #f6e4d5;
+  width: 290px;
+  display: block;
+  line-height: 30px;
+  text-align: center;
+  font-size: 12px;
+}
+.glory-window,
+.glory_window_come {
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #eaeaea;
+  display: none;
+  height: 0;
+  position: absolute;
+  width: 290px;
+  z-index: 900;
+}
+.glory_window_come .window_arrow {
+  background: rgba(0, 0, 0, 0) url("http://img04.xesimg.com/glory/glory_window_arrow.png") no-repeat scroll center center;
+  bottom: -8px;
+  height: 10px;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+.window_detail {
+  height: 70px;
+  margin: 0 5px;
+  padding: 15px 5px 10px;
+  font-size: 12px;
+  font-family: "SimSun";
+}
+.window_detail span {
+  color: #666;
+}
+.window_detail span.teacher_name a {
+  color: #666;
+}
+.window_detail a.learning_course_name {
+  color: black;
+  display: block;
+  height: 16px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+.window_detail a.learning_course_name:hover {
+  text-decoration: underline;
+}

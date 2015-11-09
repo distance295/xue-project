@@ -1,0 +1,45 @@
+/**
+ *Table 公用样式
+ *table元素已经设定了BG和border-collapse属性
+ */
+table {
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #eaeaea;
+}
+.table th,
+.table td {
+  font-family: "Microsoft YaHei";
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  line-height: 28px;
+  text-align: center;
+  vertical-align: middle;
+  border-top: 1px dotted #eaeaea;
+}
+.table th {
+  font-weight: normal;
+  font-family: "SimSun";
+  font-size: 12px;
+  color: #666;
+  background-color: #fcfcfc;
+  border-bottom: 1px solid #eaeaea;
+}
+.table td a {
+  color: #006699;
+}
+/**
+ * table with the solid border
+ *具体在学习中心-个人设置-我的订单使用
+ *------------------------------------
+ */
+.table-solid th,
+.table-solid td {
+  border: 1px solid #eaeaea;
+}
