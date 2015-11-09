@@ -28,7 +28,7 @@ body{
 		font-size: 16px;
 		height: 48px;
 		width: 320px;
-		line-height: 15px;
+		line-height: 16px;
 	}
 }
 .setting-infor{
@@ -52,8 +52,7 @@ body{
 	}
 	.setting-infor-inner{
 		overflow: hidden;
-		padding-left: 55px;
-		margin-bottom: 20px;
+		padding-left: 40px;
 		p.setting-tip{
 			font-size: 16px;
 			margin-top: 20px;
@@ -65,7 +64,8 @@ body{
 	}
 	.f1{
 		overflow: hidden;
-		margin-bottom: 15px;
+		margin-bottom: 0px;
+		height: 82px;
 		label {
 			display: inline;
 			float: left;
@@ -79,15 +79,29 @@ body{
 		p {
 			display: inline;
 			float: left;
+			margin-bottom: 10px;
+			position: relative;
+			.label-value{
+				position: absolute;
+				top: 0;
+				width: auto;
+				left: 9px;
+				color: #ccc;
+			}
 			.input-text {
 				border: 1px solid #ccc;
 				height: 46px;
 				width: 320px;
 				margin-bottom: 0;
 				box-shadow: none;
+				color: #333;
 			}
 			.errTips {
 				color: #cc0000;
+				height: 20px;
+				display: inline-block;
+				font-size: 12px;
+				line-height: 20px;
 			}
 			.gender-1 {
 				background: url("img/man.png") no-repeat scroll center top;
@@ -104,12 +118,17 @@ body{
 				width: 13px;
 			}
 		}
+		p.area-tips{
+			display: block;
+			float: none;
+		}
 		p.sex-tip{
 			padding-top: 15px;
-			margin-bottom: 0;
+			margin-bottom: 20px;
 			input{
 				float: left;
 				margin-top: 3px;
+				margin-bottom: 0;
 			}
 			.gender-1{
 				float: left;
@@ -124,11 +143,33 @@ body{
 				height: auto;
 				line-height: 21px;
 			}
+			.errTips{
+				display: block;
+				clear: both;
+			}
 		}
 		.select{
 			display: inline-block;
 			width: auto;
 			padding: 0 18px;
+			margin-bottom: 0;
+		}
+		.select.has-success{
+			border: 1px solid #68c04a;
+		}
+	}
+	.has-success{
+		p{
+			.input-text{
+				border: 1px solid #68c04a;
+			}
+		}
+	}
+	.has-error{
+		p{
+			.input-text{
+				border: 1px solid #ccc;
+			}
 		}
 	}
 }
@@ -155,7 +196,7 @@ body{
 		overflow-y: auto;
 		padding: 0 16px;
 		height: 355px;
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 		p.setting-tip{
 			font-size: 16px;
 			margin-top: 20px;
@@ -228,7 +269,17 @@ body{
 					.fresh-course-attention{
 						font-size: 12px;
 						height: 20px;
-						em,i{
+						// em,i{
+						// 	font-style: normal;
+						// }
+						em{
+							display: inline-block;
+							font-size: 12px;
+							line-height: 20px;
+							padding: 0 8px;
+							background: #dfdfdf;
+							color: #999999;
+							margin-right: 5px;
 							font-style: normal;
 						}
 					}
@@ -240,10 +291,6 @@ body{
 						padding: 0 8px;
 						display: inline-block;
 						font-size: 12px;
-					}
-					.teacher-added{
-						background: #dfdfdf;
-						color: #999999;
 					}
 					.fresh-add {
 						font-size: 14px;
