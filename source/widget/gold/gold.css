@@ -15,6 +15,12 @@ li {
 em {
   font-style: normal;
 }
+table tr th,
+table tr td {
+  font-size: 12px;
+  padding: 0;
+  text-align: center;
+}
 /* 金币明细 */
 .gold-detail-title {
   margin: 0;
@@ -72,7 +78,7 @@ em {
   float: left;
   line-height: 30px;
 }
-.gold-detail-check-time {
+.gold-detail-check-date input {
   float: left;
   display: inline-block;
   width: 160px;
@@ -159,6 +165,7 @@ em {
   float: left;
   border-radius: 5px;
   margin-right: 22px;
+  margin-top: 22px;
   width: 122px;
   height: 660px;
   background-color: #fff;
@@ -201,14 +208,17 @@ em {
 }
 .gold-store-container,
 .gold-exchange-container {
-  overflow: hidden;
-  margin-top: 22px;
+  position: relative;
 }
 .gold-store-card-box,
+.gold-store-present-box,
 .gold-exchange-card-box,
 .gold-exchange-present-box {
   overflow: hidden;
-  width: 924px;
+  width: 934px;
+  position: absolute;
+  left: 140px;
+  margin-top: 12px;
 }
 .gold-exchange-card-box p {
   height: 18px;
@@ -239,7 +249,7 @@ em {
   border-radius: 5px;
   overflow: hidden;
   float: left;
-  margin: 0 12px 12px 0;
+  margin: 10px 7px 0 5px;
 }
 .gold-store-card-img-box,
 <<<<<<< HEAD
@@ -310,6 +320,8 @@ em {
 >>>>>>> 9ffe25e4d6a7ebb343c0be9c25008e8e0b1e9b93
   width: 924px;
   height: 52px;
+  margin-top: 10px;
+  margin-left: 5px;
   font-size: 14px;
   background-color: #fff;
   border-radius: 5px;
@@ -348,15 +360,15 @@ em {
 >>>>>>> 9ffe25e4d6a7ebb343c0be9c25008e8e0b1e9b93
 .gold-store-present-card-container {
   overflow: hidden;
-  width: 924px;
-  margin-top: 20px;
+  width: 934px;
+  margin-top: 10px;
 }
 <<<<<<< HEAD
 .gold-store-clothing-card-center,
 =======
 .gold-exchange-present-card-container {
   overflow: hidden;
-  width: 924px;
+  width: 934px;
 }
 >>>>>>> 9ffe25e4d6a7ebb343c0be9c25008e8e0b1e9b93
 .gold-store-present-card-center {
@@ -502,8 +514,9 @@ em {
 =======
 >>>>>>> 9ffe25e4d6a7ebb343c0be9c25008e8e0b1e9b93
 .present-intro {
-  float: left;
-  margin-left: 42px;
+  display: block;
+  margin-left: 372px;
+  min-width: 230px;
 }
 .red-card-name,
 <<<<<<< HEAD
@@ -530,7 +543,6 @@ em {
 =======
 >>>>>>> 9ffe25e4d6a7ebb343c0be9c25008e8e0b1e9b93
 .present-intro-name span {
-  display: inline-block;
   vertical-align: bottom;
 }
 .red-card-intro-name span em,
@@ -548,6 +560,11 @@ em {
 >>>>>>> 9ffe25e4d6a7ebb343c0be9c25008e8e0b1e9b93
 .present-intro-title {
   color: #999;
+  float: left;
+}
+.present-intro-content {
+  display: block;
+  margin-left: 51px;
 }
 .red-card-intro-title span,
 <<<<<<< HEAD

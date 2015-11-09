@@ -28,6 +28,9 @@ build/Release
 node_modules
 
 /.idea
+/website
+/source/components
+/source/config
 .DS_Store
 *.db
 *.bak

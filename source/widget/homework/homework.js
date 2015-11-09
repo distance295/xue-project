@@ -128,6 +128,8 @@ $.fn.imagePage = function(params){
 	var picsmall_w = $(this).find(params.smallPic).find('ul li').outerWidth(true);
 	var picsmall_h = $(this).find(params.smallPic).find('ul li').outerHeight(true);
 	$(this).find(params.smallPic).find('ul').height(picsmall_num*picsmall_h);
+	//判断作业反馈是否存在
+	var Feedback_flag = $(this).find(params.smallPic).find('li').eq(picsmall_num-1).find('.homework-MaskLayer').length;
 	var pictime;
 	var tpqhnum=0;//当前选中图片的个数
 	var xtqhnum=0;
@@ -153,7 +155,7 @@ $.fn.imagePage = function(params){
 
     //大图切换过程
 	function show(tpqhnum){
-		if( tpqhnum == picsmall_num -1 ){
+		if( tpqhnum == picsmall_num -1 && Feedback_flag == 0 ){
 		  $(_this).find('.homework-Feedback').show();
 		  $(_this).find('.ImageTransformJs').hide();
 		}else{
