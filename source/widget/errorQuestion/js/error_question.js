@@ -16,11 +16,25 @@ $('.choice-point-cur span').on('click',function(){
 
 $('.choice-grade-cur span').on('click',function(){
     var that = this;
-    select.chooseSpan('..choice-grade-cur span',that,'select-grade');
+    select.chooseSpan('.choice-grade-cur span',that,'select-grade');
 })
 
 $('.chocie-point-show').on('click',function(){
     var that = this;
-    $(that).child('span').html('收起');
-    $(that).child('img').attr('src','img/arrow_up.png');
+    if($(that).hasClass('show-choice')){
+        $(that).children('span').html('更多');
+        $(that).children('img').attr('src','img/arrow_down.png');
+        $('.choice-point-cur').css('height','3rem');
+        $(that).removeClass('show-choice');
+    }else{
+        $(that).children('span').html('收起');
+        $(that).children('img').attr('src','img/arrow_up.png');
+        $('.choice-point-cur').css('height','12rem');
+        $(that).addClass('show-choice');
+    }
+})
+
+$('.choice-subject-cur span').on('click',function(){
+    var that = this;
+    select.chooseSpan('.choice-subject-cur span',that,'select-subject');
 })

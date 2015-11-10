@@ -122,12 +122,16 @@
 }
 .centerHeader .centerHeader-background .centerHeader-notFoucs .centerHeader-notFoucs-btn {
   letter-spacing: 4px;
+  cursor: pointer;
   display: inline-block;
   width: 80px;
   height: 33px;
   line-height: 33px;
   border-radius: 1px;
   background: #ffbc3c;
+}
+.centerHeader .centerHeader-background .centerHeader-notFoucs .centerHeader-notFoucs-btn:hover {
+  background: #e87204;
 }
 .centerHeader .centerHeader-background .centerHeader-alFocus {
   text-align: center;
@@ -142,14 +146,19 @@
   line-height: 33px;
   border-radius: 1px;
   background: #ffbc3c;
+  cursor: pointer;
   margin-right: 9px;
 }
 .centerHeader .centerHeader-background .centerHeader-alFocus .centerHeader-willFocus-btn {
+  cursor: pointer;
   display: inline-block;
   width: 80px;
   height: 33px;
   line-height: 33px;
   font-size: 14px;
+}
+.centerHeader .centerHeader-background .centerHeader-alFocus .centerHeader-willFocus-btn:hover {
+  background: #ccc;
 }
 /* 个人中心头部 centerHeader end */
 /* 个人中心 center-info start */
