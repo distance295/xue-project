@@ -13,7 +13,7 @@
  	tl=g_class_unexist=t.children('.window_detail').length==!!0,
  	h=-10,
  	that =$(dom);
- 	t.html('<div class="window_arrow"></div><div class="window_detail"><span class="learning">ÕıÔÚÑ§Ï°£º</span><span class="teacher_name"><a target="_blank" href="/t/zhutao">Öìèº</a> </span><span class="learning">ÀÏÊ¦µÄ</span> <a title="2015Ñ§Äê³õÒ»ÊıÑ§Äê¿¨Ä¿±êÂú·Ö°à£¨»¦½Ì°æ£©" class="learning_course_name" target="_blank" href="/kc/19236.html" xes_id="gloryCourse">2015Ñ§Äê³õÒ»ÊıÑ§Äê¿¨Ä¿±êÂú·Ö°à£¨»¦½Ì°æ£©</a></div>');
+ 	t.html('<div class="window_arrow"></div><div class="window_detail"><span class="learning">1111</span><span class="teacher_name"><a target="_blank" href="/t/zhutao">222</a> </span><span class="learning">å•Šå“ˆé»‘</span> <a title="33333" class="learning_course_name" target="_blank" href="/kc/19236.html" xes_id="gloryCourse">201511ankaié¢ä¸–ç•Œä¸Šå‡ ä¸ªIE</a></div>');
             // if(tl){
             //     $.ajax({
             //         url : '/glorys/ajaxStuCourse',
@@ -27,7 +27,7 @@
             //             }       
             //         },
             //         error: function() {
-            //             alert('Êı¾İ¶ÁÈ¡´íÎó,ÇëÖØÊÔ..');
+            //             alert('');
             //             return false;
             //         }
             //     });

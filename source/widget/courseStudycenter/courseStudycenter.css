@@ -507,6 +507,8 @@ table tr:nth-of-type(2n) {
   border-bottom: 1px solid #3bafda;
   overflow: hidden;
   margin-bottom: 22px;
+  margin-left: 0;
+  list-style: none;
 }
 .teacher-tab li {
   float: left;

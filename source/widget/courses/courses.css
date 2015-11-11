@@ -253,9 +253,18 @@ li {
 .course-list .cancel-courseList {
   float: right;
   font-size: 12px;
-  color: #3bafda;
   height: 137px;
   line-height: 220px;
+}
+.course-list .cancel-courseList a {
+  color: #3bafda;
+}
+.course-list .cancel-courseList em {
+  font-style: normal;
+  color: #666666;
+}
+.course-list .cancel-courseList em i {
+  font-style: normal;
 }
 .course-list .course-num {
   width: 86px;
@@ -339,7 +348,6 @@ li {
 }
 .hot-course-list {
   padding: 10px 0;
-  background: #fcfcfc;
 }
 .hot-course-list .ui-avatar {
   margin-right: 10px;
@@ -401,6 +409,9 @@ li {
 }
 .hot-course-list .course-detail .avatar-name .course-static strong {
   color: #e74c3c;
+}
+.hover-feed {
+  background: #fcfcfc;
 }
 .course-small-list {
   width: 315px;
