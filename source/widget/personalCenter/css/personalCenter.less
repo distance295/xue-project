@@ -4,14 +4,19 @@
   width: 100%;
   padding-top:16px;
   height: 100%;
-  background: url('../img/background.png') no-repeat;
-  background-size: 100% 100%;
+  background: url('../img/background.png');
   -moz-background-size: 100% 100%;
   .centerHeader-background{
     width: 1190px;
     height: 300px;
-    margin: 0 auto ;
+    margin: 0 auto;
     background: url('../img/header.jpg');
+    .centerHeader-ib{
+      width: 1190px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: rgba(0,0,0,0.05);
+    }
     .centerHeader-img{
       padding-top: 60px;
       .centerHeader-img-head{
@@ -84,6 +89,10 @@
       font-size:12px;
       color: #fff;
       margin-top: 12px;
+      span{
+        font-size: 12px;
+        margin:0 5px;
+      }
     }
     .focus{
       text-align: center;
@@ -279,7 +288,7 @@
 /* 个人中心 最近访问 center-visit start */
 .center-visit{
   .center-left;
-  height: 513px;
+  height: 413px;
   font-size: 12px;
   padding-top: 18px;
   .center-visit-intro{
@@ -289,9 +298,11 @@
   }
   .center-visit-person{
     display: inline-block;
-    margin: 25px 14px 0;
-    height: 85px;
-    width: 50px;
+    padding: 15px 14px 10px;
+    height: 110px;
+    width: 78px;
+    cursor:pointer;
+
     .center-visit-header{
       width: 40px;
       height: 40px;
@@ -305,6 +316,15 @@
       margin-top: 6px;
       color: rgb(153,153,153);
     }
+  }
+  .blueRed-v:hover{
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    border-radius: 2px;
+    transform:scale(1.05) translate(2px,0) ;
+    -webkit-transform: scale(1.05) translate(2px,0);
+    -moz-transform: scale(1.05) translate(2px,0) ;
+    z-index:10;
   }
 }
 /* 个人中心 最近访问 center-visit end */

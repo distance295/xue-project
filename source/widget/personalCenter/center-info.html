@@ -29,30 +29,37 @@
     <!--老师个人中心end-->
 
     <!--学生个人中心start-->
-    <!--<div class="center-info-fans">-->
-        <!--<div class="center-info-fans-num">121308</div>-->
-        <!--<div class="center-info-fans-name">粉丝</div>-->
-    <!--</div>-->
-    <!--<div class="center-info-newThing">-->
-        <!--<div class="center-info-newThing-num">1308</div>-->
-        <!--<div class="center-info-newThing-name">新鲜事</div>-->
-    <!--</div>-->
-    <!--<div class="center-info-stud">-->
-        <!--<div class="center-info-stud-num">63308</div>-->
-        <!--<div class="center-info-stud-name">消费的金币</div>-->
-    <!--</div>-->
+    <div class="center-info-fans">
+        <div class="center-info-fans-num">121308</div>
+        <div class="center-info-fans-name">粉丝</div>
+    </div>
+    <div class="center-info-newThing">
+        <div class="center-info-newThing-num">1308</div>
+        <div class="center-info-newThing-name">新鲜事</div>
+    </div>
+    <div class="center-info-stud">
+        <div class="center-info-stud-num">63308</div>
+        <div class="center-info-stud-name">消费的金币</div>
+    </div>
     <!--学生个人中心end-->
 
     <!--官方个人中心start-->
-    <div class="center-info-fans-office">
+    <!--<div class="center-info-fans-office">
         <div class="center-info-fans-office-num">121308</div>
         <div class="center-info-stud-name">粉丝</div>
     </div>
     <div class="center-info-newThing-office">
         <div class="center-info-newThing-office-num">1308</div>
-        <div class="center-info-stud-name">新鲜事</div>
-    </div>
+        <div class="center-info-stud-name">新鲜事</div>-->
+    <!--</div>-->
     <!--官方个人中心end-->
 </div>
 </body>
+<script type="text/javascript" src="../../lib/jQuery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $('.center-info-stud').on('mouseover',function(){
+        var num = $('.center-info-stud-num').text();
+        $(this).attr('title','最近3个月消耗了'+num+'金币');
+    });
+</script>
 </html>

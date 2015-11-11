@@ -26,7 +26,7 @@
         <div class="center-teacher-link left">老师风采</div>
     </div>
     <div class="center-teacher-desc">学而思网校授课老师账号</div>
-    <div class="center-teacher-intro">毕业于北京大学，教龄6年</div>
+    <div class="center-teacher-intro ">毕业于北京大学，教龄6年</div>
 </div>
 <!--老师认证账号end-->
 
@@ -44,8 +44,15 @@
         </div>
 </div>
 <!--学生认证账号end-->
-
-
-
 </body>
+<script type="text/javascript" src="../../lib/jQuery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+    !function(){
+        var dom = $('.center-teacher-intro');
+        if(dom.hasClass('noShow')){
+            dom.addClass('hide');
+            $('.center-teacher-desc').css('border-bottom','none');
+        }
+    }();
+</script>
 </html>

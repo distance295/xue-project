@@ -20,7 +20,7 @@
             <div class="center-visit-name">顾裴</div>
             <div class="center-visit-time">一分钟前</div>
         </div>
-        <div class="center-visit-person">
+        <div class="center-visit-person blueRed-v">
             <img src="img/visit-head.png" alt="" class="center-visit-header"/>
             <div class="center-visit-name">顾裴</div>
             <div class="center-visit-time">一分钟前</div>
@@ -40,22 +40,7 @@
             <div class="center-visit-name">顾裴</div>
             <div class="center-visit-time">一分钟前</div>
         </div>
-        <div class="center-visit-person">
-            <img src="img/visit-head.png" alt="" class="center-visit-header"/>
-            <div class="center-visit-name">顾裴</div>
-            <div class="center-visit-time">一分钟前</div>
-        </div>
-        <div class="center-visit-person">
-            <img src="img/visit-head.png" alt="" class="center-visit-header"/>
-            <div class="center-visit-name">顾裴</div>
-            <div class="center-visit-time">一分钟前</div>
-        </div>
-        <div class="center-visit-person">
-            <img src="img/visit-head.png" alt="" class="center-visit-header"/>
-            <div class="center-visit-name">顾裴</div>
-            <div class="center-visit-time">一分钟前</div>
-        </div>
-        <div class="center-visit-person">
+        <div class="center-visit-person blueRed-v">
             <img src="img/visit-head.png" alt="" class="center-visit-header"/>
             <div class="center-visit-name">顾裴</div>
             <div class="center-visit-time">一分钟前</div>
@@ -78,4 +63,25 @@
     </div>
 <!--最近来访end-->
 </body>
+<script type="text/javascript" src="../../lib/jQuery/1.11.1/jquery.min.js"></script>
+<script>
+    $('.center-visit-person').on('mouseover', function(){
+        //鼠标划过显示用户页卡，蓝V和红V用户可点击，点击后跳转到客人页
+        var that = this;
+        if($(that).hasClass('blueRed-v')) {
+            var nickname = $(that).find('.center-visit-name');
+            nickname.css({
+                'color': '#1e89e0'
+            });
+            $(that).on('click', function () {
+                window.location.href = '###';
+            });
+        }
+    });
+    $('.center-visit-person').on('mouseout', function(){
+        var that = this;
+        var nickname = $(that).find('.center-visit-name');
+        nickname.css({'color': '#222'});
+    });
+</script>
 </html>
