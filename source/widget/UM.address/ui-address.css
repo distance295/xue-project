@@ -20,6 +20,7 @@
 }
 .setAddress-title span strong {
   color: #cc0000;
+  font-size: 12px;
 }
 .ui_ship_addr {
   overflow: hidden;
