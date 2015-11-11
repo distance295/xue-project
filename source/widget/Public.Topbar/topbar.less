@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import '../../static/less/default.less';
+
 /**
  * 
  * @authors Your Name (you@example.org)
@@ -8,6 +8,15 @@
  */
 
 //  <!-- 顶部菜单***这部分分为未登录和已登录**个人中心会用到 -->
+em {
+    font-style: normal;
+    padding: 0 .2rem;
+}
+ul,
+ol {
+    margin: 0;
+    padding-left: 0;
+}
 #module-topbar {
     height: 30px;
     line-height: 30px;
@@ -58,7 +67,7 @@
             width: 210px;
             height: 30px;
             color: transparent;
-            background: url(img/line.png?__inline) no-repeat;
+            background: url(img/phone-400.jpg?__inline) no-repeat;
         }
     }
     .ui-dropdown {
