@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>个人设置---收货人地址</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<!-- 这是CSS库文件 -->
+    <link href="../../lib/bootstrap/3.3.5-custom/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- 这是当前模块样式文件 -->
+	<link href="ui-address.css" rel="stylesheet"></head>
+<body>
+	<!-- 收货地址 -->
+	<div id="ui-setAddress">
+		<div class="setAddress-title">
+			<span class="btn btn-info">新增收货地址</span>
+			<span>
+				你可以创建 <strong>5</strong>
+				个收货地址,最多可以创建 <strong>10</strong>
+				个
+			</span>
+		</div>
+		<div class="ui_ship_addr">
+			<ul class="shipadd_list">
+				<li id="28126" class="current">
+					<input type="hidden" autocomplete="off" id="addid_28126" name="data[addid]" value="28126" data-realname="刘艳宾" data-province="2" data-city="4" data-country="0" data-address="132" data-zipcode="100010" data-phone="13200000000" checked="">
+					<div class="consignee_item current">
+						<span title="崔俊叶">默认地址</span>
+					</div>
+					<div class="addr_detail">
+						<span title="崔俊叶" class="addr_name">崔俊叶</span>
+						<span title="北京 朝阳区 三环到四环之间 霞光里15号霄云中心B座10层1008" class="addr_info">北京 朝阳区 三环到四环之间 霞光里15号霄云中心B座10层10...</span>
+						<span class="addr_tel">135****3813</span>
+					</div>
+					<div class="ship_btns">
+						<a href="" class="setdefault_consignee">设为默认地址</a>
+						<a href="javascript:updateAddress(28126);" class="edit_consignee">编辑</a>
+						<a onclick="delAddress(28126)" href="#none" class="del_consignee">删除</a>
+					</div>
+				</li>
+				<li class="" id="28126">
+					<input type="hidden" autocomplete="off" id="addid_28126" name="data[addid]" value="28126" data-realname="刘艳宾" data-province="2" data-city="4" data-country="0" data-address="132" data-zipcode="100010" data-phone="13200000000" checked="">
+					<div class="consignee_item">
+						<span title="崔俊叶">111</span>
+					</div>
+					<div class="addr_detail">
+						<span title="崔俊叶" class="addr_name">崔俊叶</span>
+						<span title="北京 朝阳区 三环到四环之间 霞光里15号霄云中心B座10层1008" class="addr_info">北京 朝阳区 三环到四环之间 霞光里15号霄云中心B座10层10...</span>
+						<span class="addr_tel">135****3813</span>
+					</div>
+					<div class="ship_btns">
+						<a href="" class="setdefault_consignee">设为默认地址</a>
+						<a href="javascript:updateAddress(28126);" class="edit_consignee">编辑</a>
+						<a onclick="delAddress(28126)" href="#none" class="del_consignee">删除</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 这是jquery库文件 -->
+	<script type="text/javascript" src="../../lib/jQuery/2.1.1/jquery.min.js"></script>
+</body>
+</html>
