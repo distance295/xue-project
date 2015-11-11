@@ -94,8 +94,13 @@ body {
   padding-right: 25px;
   position: relative;
 }
+.courseList-wrap ul,
+.courseList-wrap li {
+  list-style: none;
+  margin-left: 0;
+}
 .courseList {
-  background: #fff none repeat scroll 0 0;
+  background: #fff;
   border-radius: 4px;
   display: block;
   font-family: "SimSun";
@@ -498,19 +503,19 @@ table tr:nth-of-type(2n) {
   background: url("img/spam.png") no-repeat right center;
   vertical-align: middle;
 }
-.courselayout-list .teacher-tab {
+.teacher-tab {
   border-bottom: 1px solid #3bafda;
   overflow: hidden;
   margin-bottom: 22px;
 }
-.courselayout-list .teacher-tab li {
+.teacher-tab li {
   float: left;
   font-size: 14px;
   line-height: 30px;
   padding: 0 15px;
   cursor: pointer;
 }
-.courselayout-list .teacher-tab li.current {
+.teacher-tab li.current {
   background: #3bafda;
   color: #fff;
   border-radius: 4px 4px 0 0;
