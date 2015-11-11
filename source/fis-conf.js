@@ -12,7 +12,8 @@ fis.set('project.ignore', [
     '/config/**',
     '/components/**',
     '/lib/foundation/**',
-    'fis-conf.js'
+    'fis-conf.js',
+    '/**/*.bat'
 ]);
 fis.match('/widget/**', {
     useSameNameRequire: true,
@@ -24,6 +25,27 @@ fis.match('::packager', {
         allInOne: true
     })
 });
+fis.config.merge({
+    settings : {
+        optimizer : {
+            'png-compressor' : {
+                type : 'pngquant' //default is pngcrush
+            }
+        }
+    }
+});
+fis.match('*.less', {
+    parser: fis.plugin('less'), //启用fis-parser-less插件
+    rExt: '.css'
+})
+//fis.match('*.png', {
+//    optimizer: fis.plugin('png-compressor', {
+//
+//      // pngcrush or pngquant
+//      // default is pngcrush
+//      type : 'pngcrush'
+//    })
+//  });
 fis.media('pages')
     .match('/pages/(*).html', {
         release: '/pages/$1.html'
@@ -31,28 +53,26 @@ fis.media('pages')
     .match('/lib/*', {
         release: '/lib/$0'
     })
-    .match('*.less', {
-        parser: fis.plugin('less'), //启用fis-parser-less插件
-        rExt: '.css'
+    .match('/data/*', {
+        release: '/data/$0'
     })
+
     .match('/widget/(**)/*.js', {
         packTo: '/static/js/$1.js',
         url: '/static/js/$1.js'
     })
-    .match('/widget/(**)/*.css', {
-//        optimizer: fis.plugin('clean-css'),
-        packTo: '/static/css/$1.css',
-        url: '/static/css/$1.css'
-    })
     .match('/widget/(**)/*.less', {
+        parser: fis.plugin('less'), //启用fis-parser-less插件
+        rExt: '.css',
 //        optimizer: fis.plugin('clean-css'),
         packTo: '/static/css/$1.css',
         url: '/static/css/$1.css'
     })
-    .match('/widget/**/(*.{jpg,png,gif})', {
-        packTo: '/static/img/$1$2$3',
-        url: '/static/img/$1$2$3'
+    .match('/widget/**/::image', {
+        packTo: '/static/img/$0',
+        url: '/static/img/$0'
     })
+
     .match('/**/*.tpl', {
         isHtmlLike: true,
         release: false

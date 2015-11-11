@@ -1,6 +1,6 @@
 <!--
-    @require topbar.js
-    @require topbar.less"
+    @require topbar.less
+    @require ../Module.Dropdown/dropdown.js
 -->
 
 <!-- 登录后 -->
@@ -63,6 +63,7 @@
 <!-- 登录前 -->
 
 
+<!--
 <div id="module-topbar">
     <div class="ui-header-menu">
         <ul class="topleft-bar pull-left list-unstyled breadcrumb">
@@ -97,3 +98,4 @@
         </ul>
     </div>
 </div>
+-->

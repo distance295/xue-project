@@ -1,8 +1,5 @@
 <!--
-    @require header.js
-    @require header.less"
-    @require ../Public.MiniCart/minicart.less
-
+    @require header.less
 -->
 
     <div id="module-header">
