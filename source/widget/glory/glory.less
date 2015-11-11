@@ -1,4 +1,23 @@
 @borderColor: #eaeaea;
+.screen-rank{
+	overflow: hidden;
+	height: 38px;
+	border: 1px solid @borderColor;
+	line-height: 38px;
+	margin: 0;
+	li{
+		list-style: none;
+		float: left;
+		font-size: 12px;
+		padding: 0 10px;
+		cursor: pointer;
+	}
+	li.popular-rank{
+		padding: 0 20px;
+		border-right: 1px solid @borderColor;
+		color: #1e89e0;
+	}
+}
 .glory-content {
 	margin: 0;
 	font-family: 'SimSun';
@@ -7,13 +26,16 @@
 	margin-right: 10px;
 	overflow: hidden;
 	width: 290px;
+	li{
+		margin-bottom: 15px;
+		position: relative;
+	}
 	.glory-water{
 		padding: 0 9px;
 	}
 	.water-pic {
 		border: 1px solid @borderColor;
 		width: 290px;
-		height: 352px;
 		padding: 9px;
 		img{
 			width: 270px;
@@ -25,6 +47,7 @@
 			line-height: 19px;
 			margin-top: 15px;
 			overflow: hidden;
+			margin-bottom: 5px;
 		}
 	}
 	.water-option {
@@ -94,5 +117,50 @@
 		line-height: 30px;
 		text-align: center;
 		font-size: 12px;
+	}
+}
+.glory-window, .glory_window_come {
+	background: #fff none repeat scroll 0 0;
+	border: 1px solid #eaeaea;
+	display: none;
+	height: 0;
+	position: absolute;
+	width: 290px;
+	z-index: 900;
+}
+.glory_window_come{
+	.window_arrow {
+		background: rgba(0, 0, 0, 0) url("http://img04.xesimg.com/glory/glory_window_arrow.png") no-repeat scroll center center;
+		bottom: -8px;
+		height: 10px;
+		position: absolute;
+		width: 100%;
+		z-index: 10;
+	}
+
+}
+.window_detail {
+	height: 70px;
+	margin: 0 5px;
+	padding: 15px 5px 10px;
+	font-size: 12px;
+	font-family: "SimSun";
+	span{
+		color: #666;
+	}
+	span.teacher_name{
+		a{
+			color: #666;
+		}
+	}
+	a.learning_course_name {
+		color: black;
+		display: block;
+		height: 16px;
+		margin-top: 5px;
+		overflow: hidden;
+		&:hover{
+			text-decoration: underline;
+		}
 	}
 }

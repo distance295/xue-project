@@ -1,0 +1,222 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-10-21 14:22:33
+ * @version $Id$
+ */
+@fa:					"Arial";
+@fg:					"Georgia";
+@ft:					"Tahoma";
+@fl:					"Lucida Console";
+@fs:					"宋体";
+@fw:					"Microsoft YaHei";
+@fd:					"verdana";
+@fs:					"SimSun";
+
+//学习课程页样式
+#stude-course-container {
+	background: #f9f9f9;
+	.ui-margin {width: 980px;margin: 0 auto;overflow: hidden;}
+		h2.content-study-title {
+			height:47px;line-height:47px;font-size:16px;font-family:@fw;font-weight:normal;color:#333333;padding-left:10px;
+			strong {font-size:14px;color: #e74c3c;font-weight: normal;}
+		}
+		//课程视频和列表
+		.content-study-player {
+			height: 478px; background: #fff;border-radius: 2px;margin-bottom: 10px;
+			//课程视频
+			.player-live {
+				float:left;width:745px;height:465px;
+				#VideoPlay {width:730px;height:453px;margin:12px 0 0 10px;overflow:hidden;}
+			}
+			//课程讲节汇总列表
+			   .player-list {
+			   	 float:right;width:230px;height:465px;border-bottom:1px solid #efefef;background: url(img/tingkeyebg.jpg) repeat-y;
+			   	 //讲--节--列表tab切换
+					ul.list-title-tabs {
+					width: 230px;height: 36px;line-height: 36px;overflow: hidden;margin:1px auto 0;background: url(img/tab_title_bg_03.jpg) no-repeat;
+							li {
+							  float: right;display: inline;width: 115px;overflow: hidden;text-align: center;
+								 a {
+			                         display:block;width: 115px; text-decoration: none; font-size: 14px;color: #333; 
+			               		}
+							   &.current {
+				                  a {color: #fff;}
+				                  .directory {background: url(img/tab_01.jpg) 0 0 no-repeat;}
+				                  .audition {background: url(img/tab_02.jpg) -115px 0 no-repeat;}
+				                }
+							}
+					}
+					 //讲--节--列表
+					.ui-scrolls-boxs {
+						overflow: hidden;
+						.scrolls-item {
+							display: none;overflow: hidden;height: 427px;
+							.jspPane {overflow: hidden;}
+							//讲列表
+							ul.select-list{
+								width:230px;overflow: hidden;margin:0;padding:0;background: url(img/scroll_ul.jpg) 22px 0 repeat-y;
+								li.scrolls_title {
+									height: 41px;line-height: 41px;border-bottom: 1px solid #e9e9e9;background: url(img/tingkeyebg.jpg) repeat-y;padding-left: 20px;font-size: 14px;font-family: @fs;
+								}
+				                  li {
+				                  	 padding-left: 42px;background: url(img/scroll_li.jpg) 28px 20px no-repeat;
+				                    p.icon-live {
+				                       height: 43px;line-height: 43px;background: url(img/icon2_03.png) 1px 14px no-repeat;padding-left: 20px;margin:0;
+				                  	 	a {
+				                  	 		display: block;width: 140px;font-size: 14px;color: #666;font-family: @fs;
+				                  	 		&.icon-sign {
+				                  	 			background: url(img/icon_07_white.gif) right 14px no-repeat;
+				                  	 		}
+				                  	 		&:hover {color: #3bafda;}
+				                  	 	}
+				                  	 	&.icon-tests {
+				                  	 		background: url(img/copy.png) 1px 14px no-repeat;
+				                  	 	}
+				                    }
+				                   &.current {
+				                      background: url(img/scroll_current.jpg) no-repeat; 
+				                       p.icon-live {
+				                       	background: url(img/icon2_04.gif) 1px 14px no-repeat;
+				                       	a {
+				                       		color: #fff;
+				                       	}
+				                       }
+				                    }
+				                    &.last {background: url(img/last.jpg) 22px 1px no-repeat;}
+				              }
+				            }
+				            //节列表
+							ul.select-say-list {
+								overflow: hidden;margin:0;padding:0;
+								li {
+									overflow: hidden;border-bottom: 1px solid #e9e9e9;
+									 p.icon-corner {
+									 	 height:43px;line-height: 43px;margin:0;background: url(img/icon_03_white.gif) 10px 16px no-repeat;padding-left: 25px;
+									 	 span {
+									 	 	display: block;width: 190px;
+									 	 	&.icon-sign {
+				                  	 			background: url(img/icon_07_white.gif) right 14px no-repeat;
+				                  	 		}
+					                  	 	a {
+										 	 	display: block;width: 145px;font-size: 12px;color: #666;font-family: @fs;
+										 	 	&:hover {color: #3bafda;}
+										 	 }
+									 	 }
+									 }
+									&.current {
+				                             background: url(img/scroll_current.jpg) no-repeat;
+				                             p.icon-corner {
+   													 background: url(img/icon_03_blue.gif) 10px 16px no-repeat;
+   													 span {
+   													 	background: url(img/icon2_04.gif) right 14px no-repeat;
+   													 	 a {color: #fff;}
+   													 }
+											}
+				                            
+				                             
+				                     }
+								}
+							}
+						}
+					}
+			   }
+		}
+		//看点
+		.look-focus-item {
+			height: 60px;border-radius: 2px;background: #fff;
+		    //左侧显示看点和发布看点输入框
+		    .look-focus-left {
+		    	float: left;display: inline;width: 750px;height: 30px;margin-top: 15px;padding-left: 10px;position: relative;
+		    	.look-focus-show {
+		    		overflow: hidden;line-height: 30px;display: block;
+		    		.focus-content {
+		    			float: left;display: inline;font-size: 12px;font-family: @fs;
+		    			span.name {float: left;height:30px;overflow: hidden;color: #666666;}
+		    			span.text {
+		    				float: left;color: #666666;padding-right:10px;
+		    				b {color: #006699;}
+		    			}
+		    			a {float: left;padding-right:10px;}
+		    			.js-reply {display: none;}
+		    			.js-informant {display: none;}
+		    		}
+		    		.focusAffirm {float: left;display: inline;}
+		    		
+		    	}
+		    	.look-Focus-Push {
+		    		display: none;overflow: hidden;line-height: 30px;
+		    		.time-end {float: left;display: inline;width: 85px;background: url('img/icon_time.png') 0 5px no-repeat;padding-left: 25px;font-size: 12px;font-family: @fs;}
+		    		.input-text {
+		    			float: left;display: inline;width: 475px; height: 30px;border: 1px solid #ededed;background: #fcfcfc;padding:0 5px;font-size: 12px;font-family: @fs;
+		    		}
+		    		.btn-submit {
+		    			float: left;display: inline;width: 95px;height: 30px;border: 1px solid #ededed;background: #3399cc;margin:0 5px;color: #fff;font-size: 12px;font-family: @fs;padding:0;
+		    		}
+		    		.btn-cancel {
+		    			float: left;display: inline;width: 58px;height: 28px;line-height: 28px; border: 1px solid #ededed;background: #fcfcfc;text-align: center;font-size: 12px;font-family: @fs;
+		    		}
+		    		span.errorTips {
+		    			width: 180px;height: 40px;line-height:40px;background: #000;border-radius: 3px; position: absolute;left:280px;top:-5px;z-index: 10;color: #fff;text-align: center;opacity:0.7;font-size: 12px;font-family:@fs;
+		    		}
+		    		span.textTips {
+		    			width: 150px;height: 40px;line-height:40px;border-radius: 3px; position: absolute;left:105px;top:-5px;z-index: 10;color: #999;
+		    		}
+		    	}
+		    	.push-succeed {
+		    		display: none;width: 750px;height: 30px;background: #fff; position: absolute;left: 10px;top:0;z-index: 10;color: #666;font-size: 12px;font-family: @fs;
+		    		em {padding-right: 10px;font-style: normal;}
+		    		span.btn-succeed {display:inline-block;width:155px;height:28px;line-height:28px;text-align: center; border: 1px solid #ededed;background: #fcfcfc;margin-left: 10px;color: #999;}
+		    	}
+		    }
+		    //右侧发布看点和总看点数
+		    .look-focus-right {
+		    	float: right;display: inline;width: 200px;height: 30px;overflow: hidden;margin-top: 15px;
+		    	.button-left {
+		    		float: left;display: inline;overflow: hidden;width: 80px;height: 30px;margin-right: 20px;
+		    		button {
+		    			display:block;width: 80px;height: 30px;background: url(img/btn_look.png) no-repeat;text-indent: -99999em;
+		    		}
+		    		button.btn-disabled {background: url(img/btn_look_no.png) no-repeat;}
+		    	}
+		    	.look-right {
+		    		float: left;display: inline;width: 65px;height:30px;line-height: 30px; overflow: hidden;background: url(img/lookIcon_03.png) no-repeat;padding-left: 35px;font-family: arial;font-size: 14px;
+		    	}
+		    	span.look-right {color: #999;}
+		    }
+		}
+		// 看点end
+}
+
+
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *模拟听课页---讲节列表过多时的滚动条
+ * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+ * may not operate correctly without them.
+ */
+.jspContainer{overflow: hidden;position: relative;}
+.jspPane{position: absolute;}
+.jspHorizontalBar{position: absolute;bottom: 0;left: 0;width: 100%;height: 16px;background: red;display: none;}
+.jspCap{display: none;}
+.jspHorizontalBar .jspCap{float: left;}
+.jspHorizontalBar .jspTrack{float: left;height: 100%;display: none;}
+.jspHorizontalBar .jspDrag{float: left;height: 100%;}
+
+.jspArrow{background: #50506d;text-indent: -20000px;display: block;cursor: pointer;padding: 0;margin: 0;}
+.jspArrow.jspDisabled{cursor: default;background: #80808d;}
+.jspCorner{background: #eeeef4;float: left;height: 100%;}
+
+.jspVerticalBar .jspArrow{height: 16px;}
+.jspHorizontalBar .jspArrow{width: 16px;float: left;height: 100%;}
+.jspVerticalBar .jspArrow:focus{outline: none;}
+.jspVerticalBar{position: absolute;top: 0;right: 0;width: 16px;height: 100%;background: none;}
+/*滚动整条背景色*/
+
+.jspTrack{position: relative;background: none;}
+
+/*滚轮条背景色*/
+.jspDrag{width:8px;border-radius:4px;position: relative;top: 0;left: 0;cursor: pointer;background:#cccccc repeat-y;margin:0 auto;}
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner{margin: 0 -3px 0 0;}

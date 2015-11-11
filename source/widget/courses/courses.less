@@ -25,6 +25,9 @@ ul,li{list-style: none;}
 .course-yellow-label{
 	background: #ffbc3c;
 }
+.course-green-label{
+	background: #37bc9b;
+}
 .button.course-gray{
 	background-color: #fcfcfc;
 	border: 1px solid #eaeaea;
@@ -63,83 +66,137 @@ ul,li{list-style: none;}
 	height: 10px;
 	background: url("img/bo-box.png") no-repeat left center;
 }
+
+.icon-record{
+	height: 10px;
+	background: url("img/icon-record.png") no-repeat left center;
+}
 .course-list {
 	font-family: "SimSun";
-	height: 130px;
 	border-top: 1px solid @borderColor;
 	width: 100%;
-	padding: 18px 10px;
+	padding: 13px 10px;
 	overflow: hidden;
 	a{
 		color: @dark333;
+		&:hover{
+			color: #269cc8;
+		}
+		&:focus{
+			color: #269cc8;
+		}
 	}
 	.ui-avatar{
 		width: 80px;
 		text-align: center;
 		float: left;
+		span.ui-user-name{
+			font-size: 14px;
+		}
 		.avatar-photo{
 			margin-bottom: 4px;
-			display: inline-block
-		}
-		.avatar-name{
-			.ui-username{
-				color: #666;
-				font-size: 12px;
-			}
-		}
-		.avatar-follow{
 			display: inline-block;
-			font-size: @fontSize;
-			height: 20px;
-			line-height: 20px;
-			padding: 0 2px;
-			width: 50px;
-			.border-radius(2px);
-			em{
-				font-style: normal;
+			width: 60px;
+			overflow: hidden;
+			ul{
+				overflow: hidden;
+				width: 800px;
+				height: 60px;
+				margin-left: 0;
+				margin-bottom: 9px;
+				li{
+					overflow: hidden;
+					float: left;
+					width: 60px;
+				}
 			}
-		}
-		.avatar-follow.add{
-			background: #ffbc3c;
-			color: #ffffff;
-			cursor: pointer;
-			text-align: center;
-			text-decoration: none;
+			.avatar-roll{
+				a{
+					outline: none;
+					em{
+						display: inline-block;
+						height: 17px;
+						line-height: 17px;
+						text-align: center;
+						text-indent: -9999em;
+						vertical-align: top;
+						width: 17px;
+					}
+					.icon-chevron-left{
+						background: url('img/icon_chevron_left.png') no-repeat 0 0;
+					}
+					.icon-chevron-right{
+						background: url('img/icon_chevron_right.png') no-repeat 0 0;
+					}
+				}
+				a.none{
+					.icon-chevron-left{
+						background: url('img/icon_chevron_left_none.png') no-repeat 0 0;
+					}
+					.icon-chevron-right{
+						background: url('img/icon_chevron_right_none.png') no-repeat 0 0;
+					}
+				}
+			}
 		}
 	}
 	.course-detail{
 		float: left;
 		overflow: hidden;
 		p{
-			margin-bottom: 8px;
+			margin: 8px 0;
 			overflow: hidden;
+			font-size: 12px;
 		}
 		p.tip-for{
 			font-size: 12px;
 			color: #666;
-			margin: 12px 0;
+			margin: 8px 0;
 			span{
 				margin-right: 15px;
+				float: left;
 				strong{
 					color: #e74c3c;
 				}
+			}
+		}
+		p.tip-video{
+			background: url("img/video-couseicon.png") no-repeat left center;
+			padding-left: 25px;
+		}
+		.avatar-name{
+			.ui-username{
+				color: #666;
+				font-size: 12px;
+				line-height: 18px;
 			}
 		}
 		.ui-username{
 			color: #333;
 			font-size: 26px;
 			line-height: 34px;
+			float: left;
+		}
+		.course-icon{
+			width: 21px;
+			height: 34px;
+			display: inline-block;
+			float: left;
+			margin: 0 8px;
 		}
 		.icon-yverify{
 			background: url('img/v.png') no-repeat left center;
-			width: 21px;
-			height: 17px;
-			display: inline-block;
+
+		}
+		.icon-redverify{
 
 		}
 		span.teacher-label{
 			font-size: @fontSize;
 			color: @gray999;
+			height: 34px;
+			float: left;
+			line-height: 34px;
 		}
 		.course-title{
 			line-height: 18px;
@@ -209,6 +266,14 @@ ul,li{list-style: none;}
 			}
 		}
 	}
+
+	.cancel-courseList{
+		float: right;
+		font-size: 12px;
+		color: #3bafda;
+		height: 137px;
+		line-height: 220px;
+	}
 	.course-num{
 		width: 86px;
 		float: right;
@@ -245,8 +310,336 @@ ul,li{list-style: none;}
 			background: url("img/answer.png") no-repeat 0 center;
 		}
 	}
+	.course-right-record{
+		margin-top: 40px;
+		li{
+			padding-left: 24px;
+			font-size: 12px;
+			font-family: 'SimSun';
+			color: #333;
+			text-align: left;
+			margin-top: 6px;
+		}
+		li.interact-flash{
+			background: url("img/interact-flash.png") no-repeat 0 center;
+		}
+		li.direct-help{
+			background: url("img/direct-help.png") no-repeat 0 center;
+		}
+	}
 }
-.course-test{
-	height: 160px;
+.course-list .fresh-course-attention{
+	font-size: 12px;
+	height: 20px;
+	em,i{
+		font-style: normal;
+	}
 }
-
+.course-list .fresh-attention-btn {
+	background: #ffbc3c;
+	border-radius: 2px;
+	color: #fff;
+	line-height: 20px;
+	padding: 0 8px;
+	display: inline-block;
+	font-size: 12px;
+	&:hover{
+		color: #fff;
+	}
+}
+.course-list .fresh-add {
+	font-size: 14px;
+	padding-right: 2px;
+}
+.course-list .fresh-course-attention a.fresh-add-cancel-btn {
+	color: #3bafda;
+}
+.hot-course-list{
+	padding: 10px 0;
+	background: #fcfcfc;
+	.ui-avatar{
+		margin-right: 10px;
+		width: 40px;
+		.avatar-photo{
+			width: 40px;
+			img{
+				width: 40px;
+				height: 40px;
+			}
+		}
+	}
+	.course-detail{
+		p{
+			margin: 3px 0;
+		}
+		p.course-teacher{
+			height: 22px;
+		}
+		p.course-title{
+			.title-detail{
+				font-size: 12px;
+				font-family: "SimSun";
+			}
+		}
+		.course-teacher{
+			margin-top: 0;
+			.ui-username{
+				font-size: 14px;
+				line-height: 22px;
+			}
+			.course-icon{
+				line-height: 22px;
+				height: 22px;
+			}
+			.icon-s-yverify{
+				background: url('img/icon-s-yverify.png') no-repeat 0 center;
+			}
+			.icon-s-redverify{
+				background: url('img/icon-s-redverify.png') no-repeat 0 center;
+			}
+		}
+		.amount-show{
+			margin-bottom: 0;
+		}
+		.avatar-name{
+			.title-detail{
+				margin-right: 18px;
+				font-size: 12px;
+				line-height: 20px;
+				color: #333;
+				float: left;
+			}
+			.course-static{
+				.icon-people{
+					background: url("img/ic_username.png") no-repeat scroll left center;
+					display: inline-block;
+					font-style: normal;
+					height: 20px;
+					line-height: 20px;
+					margin-right: 5px;
+					vertical-align: top;
+					width: 20px;
+				}
+				strong{
+					color: #e74c3c;
+				}
+			}
+		}
+	}
+}
+.course-small-list{
+	width: 315px;
+	height: 115px;
+	padding: 13px 3px 13px 0px;
+	border: 1px solid #eaeaea;
+	position: relative;
+	overflow: visible;
+	.label-course{
+		width: 25px;
+		height: 47px;
+		text-align: center;
+		display: inline-block;
+		position: absolute;
+		right: -25px;
+		color: #fff;
+	}
+	.label-subject{
+		background: #ffbc3c;
+		top: -1px;
+	}
+	.label-direct{
+		background: #3bafda;
+		top: 48px;
+	}
+	.label-record{
+		background: #37bc9b;
+		top: 48px;
+	}
+	.course-detail{
+		width: 230px;
+		p.tip-video{
+			margin: 3px 0;
+		}
+		p.tip-for{
+			margin: 3px 0;
+			span{
+				margin-right: 10px;
+			}
+			span.course-static{
+				margin-right: 10px;
+			}
+			span.course-people{
+				margin-right: 0
+			}
+		}
+		p.course-title{
+			margin: 3px 0;
+		}
+	}
+}
+// 老师头像页卡
+.teacher-bomb {
+	height: 266px;
+	width: 375px;
+	border-top: none;
+	.dialog-second {
+		height: 155px;
+		background: url("img/teacher-cardbg.jpg") repeat scroll 0 0;
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		dl.dialog-top {
+			margin-top: 10px;
+			margin-bottom: 0;
+		}
+		.dialog-top {
+			height: 90px;
+			width: 100%;
+			dt {
+				text-align: center;
+				img{
+					border-radius: 50%;
+					width: 60px;
+					height: 60px;
+				}
+			}
+			dd {
+				height: 20px;
+				line-height: 20px;
+				margin: 3px 0;
+				text-align: center;
+				a {
+					color: #fff;
+					font-family: "SimSun";
+					font-size: 14px;
+				}
+				em.icon-s-yverify{
+					font-style: normal;
+					background: url('img/icon-s-yverify.png') no-repeat  left center;
+				}
+				em.icon-s-bverify{
+					font-style: normal;
+					background: url('img/icon-s-bverify.png') no-repeat  left center;
+				}
+				em.icon-s-redverify{
+					font-style: normal;
+					background: url('img/icon-s-redverify.png') no-repeat  left center;
+				}
+				.course-icon{
+					height: 20px;
+					line-height: 20px;
+					display: inline-block;
+					margin: 0 3px;
+					width: 21px;
+					text-indent: -99999px;
+					vertical-align: top;
+				}
+				.gender-b{
+					background: url('img/gender-b.png') no-repeat left center;
+				}
+				.gender-g{
+					background: url('img/gender-g.png') no-repeat left center;
+				}
+			}
+		}
+		.dialog-center {
+			height: 55px;
+			line-height: 55px;
+			overflow: hidden;
+			background: #012c49;
+			color: #fff;
+			p{
+				margin-bottom: 0;
+				line-height: 55px;
+				font-size: 14px;
+				text-align: center;
+				padding: 0 5px;
+				span{
+					margin-left: 25px;
+				}
+			}
+			.level {
+				text-align: center;
+				.level-l {
+					float: left;
+					overflow: hidden;
+					text-align: right;
+					width: 160px;
+					margin: 0;
+					li {
+						display: inline-block;
+						img {
+							margin-right: 3px;
+						}
+					}
+				}
+				.level-r {
+					float: left;
+					width: 190px;
+					img {
+						margin-top: 3px;
+					}
+				}
+			}
+		}
+		.dialog-second{
+			line-height: 25px;
+			p{
+				line-height: 25px;
+			}
+		}
+	}
+	.dialog-down-wrap {
+		overflow: hidden;
+		.dialog-down {
+			position: relative;
+			border-bottom: 1px solid #e5e5e5;
+			height: 40px;
+			margin: 0 10px;
+			padding: 10px 0 6px;
+			text-align: center;
+			ul {
+				display: inline-block;
+				overflow: hidden;
+				li {
+					color: #666666;
+					display: inline;
+					float: left;
+					font-family: "SimSun";
+					font-size: 12px;
+					span {
+						color: #333333;
+						margin: 0 5px;
+					}
+					i {
+						color: #e6e6e6;
+						padding: 6px 9px 6px 3px;
+						font-style: normal;
+					}
+				}
+			}
+		}
+	}
+	.btns-L {
+		text-align: center;
+		.for-center {
+			display: inline-block;
+			padding-top: 10px;
+			.fresh-course-attention{
+				float: left;
+				line-height: 20px;
+			}
+			.look-btn {
+				background: #3399cc none repeat scroll 0 0;
+				border-radius: 2px;
+				color: #fff;
+				display: inline-block;
+				font-size: 12px;
+				line-height: 20px;
+				padding: 0 8px;
+				float: left;
+				margin-left: 55px;
+			}
+		}
+	}
+}

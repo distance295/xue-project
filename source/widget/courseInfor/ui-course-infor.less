@@ -13,31 +13,18 @@
 @fw:					"Microsoft YaHei";
 @fd:					"verdana";
 @fs:					"SimSun";
-.red{
-	color: #e74c3c;
-}
-.f-left {
-	float: left;display: inline;
-}
-.f-right {
-	float: right;display: inline;
-}
-table {
-    background-color: #fbfbfb;
-    border-collapse: collapse;
-    border-spacing: 0;
-    max-width: 100%;
-}
-.table {
-    border: 1px solid #e2e2e2;
-    color: #333333;
-    font-size: 12px;
-    margin-bottom: 20px;
-    width: 100%;
-}
 //课程详情页---包含直播--录播--免费课
 .ui-course-infor-wrap {
-	width: 1190px;margin:20px auto;overflow: hidden;
+	width: 1190px;margin:10px auto 20px;overflow: hidden;
+	.red{
+		color: #e74c3c;
+	}
+	.f-left {
+		float: left;display: inline;
+	}
+	.f-right {
+		float: right;display: inline;
+	}
 	// 课程视频----左侧
 	.course-left-player {
 		overflow: hidden;
@@ -131,6 +118,9 @@ table {
               }
                &.collect_current {background: url(img/icon_star.png) no-repeat;cursor: default;}
             }
+            .open-listen-num {
+            	width: 70px;font-size: 20px;color: #e74c3c;background: url(img/icon_eye.png) 0 10px no-repeat;padding-left: 20px;margin-top:10px;
+            }
 	   }
 	   //直播回放样式
 	   &.course-video-back {
@@ -142,6 +132,52 @@ table {
 				}
 				.main-teacher {
 					overflow: hidden;
+					.ui-avatar {
+						width: 60px;height: 60px;overflow: hidden;border-radius: 50%;
+						img {width: 60px;height: 60px;}
+					}
+					.teacher-avatar-infor {
+						width: 240px;
+						p{
+							height: 20px;line-height: 20px;font-size: 14px;font-weight: normal;margin:5px 0 5px 10px;
+							span {display: inline-block;padding-left:10px;}
+						}
+					}
+				}
+			}
+			//免费课样式
+			.open-course-list {
+				height: 240px;background: #fcfcfc;margin-bottom: 20px;overflow: hidden;padding-left: 10px;
+				.open-course-title {
+					height: 40px;line-height: 40px;font-size: 12px;padding-top: 10px;
+				}
+				#open-outline {
+					height: 200px;overflow: auto;
+					.coures-label-info {
+						height: 50px;line-height: 50px;font-size: 14px;
+						span {
+							display: inline-block;padding-right: 20px;
+						}
+					}
+					.scrolls-content {
+						overflow: hidden;margin-bottom: 5px;
+						ul.select-list {
+							overflow: hidden;margin:0;padding:0;
+							li {
+								float: left;width: 80px;height: 30px;line-height: 30px;text-align: center;font-size: 12px;background: url(img/course-btn.png) no-repeat;list-style: none;overflow: hidden;margin-right: 10px;margin-bottom: 10px;
+								a {display:block;color: #333;padding-left: 10px;}
+								&.current {
+									background: url(img/course-btn-current.png) no-repeat;
+									a {color: #fff;}
+								}
+							}
+						}
+					}
+				}
+			}
+			.open-course-button {
+				.main-teacher {
+					width:330px;overflow: hidden;
 					.ui-avatar {
 						width: 60px;height: 60px;overflow: hidden;border-radius: 50%;
 						img {width: 60px;height: 60px;}
@@ -193,10 +229,10 @@ table {
 .columns-wrap {
 	width: 1190px;margin:0 auto;overflow: hidden;
 	.columns-left {
-		width:930px;
+		float: left;display: inline;width:930px;
 	}
 	.columns-right {
-		width: 240px;border: 1px solid #ccc;height: 500px;
+		float: right;display: inline;width: 240px;border: 1px solid #ccc;height: 500px;
 	}
 }
 
@@ -214,37 +250,65 @@ table {
 }
 
 .course-detail {
-	overflow: hidden;margin-bottom: 10px;
-	//直播大纲
-	.live_course_nav{
-		width:100%;height:40px;background:#eeeeee;color:#c9c9c9;font-weight: 700;text-align: center;margin:0;padding:0;
-		li{
-			float:left;width:150px;line-height:40px;font-family: @fw;list-style: none;font-size: 12px;
-			&.first{width:480px;text-align:left;padding-left:40px;}
-		}
+	display: none;overflow: hidden;margin-bottom: 10px;
+	table {
+	    background-color: #fbfbfb;
+	    border-collapse: collapse;
+	    border-spacing: 0;
+	    max-width: 100%;
 	}
-	.live_panel{
-		width:100%;height:auto;overflow:hidden;outline:none;border:1px solid #eaeaea;border-bottom: 0;
-		.live_course_detail{
-			overflow:hidden;margin:0;padding:0;
-			li{
-				width:100%;height:34px;line-height:34px;color:#333333;border-bottom:1px solid #ededed;font-size: 12px;font-family: @fs;
-				div{float:left;text-align:center;}
-				.live_name{
-					width:484px;border-right:1px solid #ededed;text-align:left;padding-left:10px;
-					.live_teach{
-						color:#a0a0a0;
-					}
-					.course_live{
-						color:#ff6500;
-					}
-				}
-				.date,.time,.study_status{
-					width:148px;border-right:1px solid #ededed;
-				}
-				.study_status{
-					color:#a0a0a0;border-right: 0;
-				}
+	.table {
+	    border: 1px solid #eeeeee;
+	    color: #333333;
+	    font-size: 12px;
+	    margin-bottom: 20px;
+	    width: 100%;
+	}
+	
+	//点播大纲
+	.table_outline {
+		border:1px solid #eeeeee;
+		th {
+			height: 40px;
+			background: #eeeeee;
+			text-align: center;
+			color: #999;
+			font-size: 12px;
+			&.t-left {
+				text-align: left;
+				padding-left: 40px;
+			}
+		}
+		 td {
+		 	border:1px solid #eeeeee;
+		    border-top: 0 none;
+		    height: 38px;
+		    line-height: 20px;
+		    padding: 0;
+		    text-align: center;
+		    vertical-align: middle;
+		    font-size: 12px;
+		    background: #fcfcfc;
+		    color: #666;
+			span.live_teach {
+			     display: inline-block;color:#a0a0a0;
+			}
+			.goline {
+				border-radius: 9px;
+			    color: #fff;
+			    display: inline-block;
+			    height: 18px;
+			    line-height: 18px;
+			    text-align: center;
+			    width: 50px;
+			    background: #ff9900;
+			}
+			.notStart {
+				color: #999;
+			}
+			&.t-left {
+				text-align: left;
+				padding-left: 10px;
 			}
 		}
 	}
@@ -267,39 +331,58 @@ table {
 		    padding-left: 10px;
 		}
 	}
-	//点播大纲
-	.table_outline {
-		border:0;
-		tr:nth-child(2n) {
-   			 background: #f5f5f5;
+	//课程评价（往下写）
+	.comment-detail-wrap {
+		overflow: hidden;
+		.comment-detail-list {
+			overflow: hidden;margin-bottom: 10px;_width:100%;
+			.user-pic {
+				float: left;display: inline;width: 40px;margin:0 10px;text-align: center;
+				.pic {
+					width: 40px;height: 40px;border-radius: 50%;background: #fcfcfc;overflow: hidden;border:1px solid #ededed;margin-bottom: 10px;
+					img {width: 40px;height: 40px;}
+				}
+				
+				p {
+					font-size: 12px;font-family: @fs;margin:0;height: 20px;line-height: 20px;overflow: hidden;
+					&.name {color: #333;}
+					&.site {color: #999;}
+				}
+				
 			}
-		 td {
-		    border-bottom: 1px solid #fff;
-		    border-top: 0 none;
-		    height: 38px;
-		    line-height: 20px;
-		    padding: 0;
-		    text-align: left;
-		    vertical-align: middle;
-		    font-size: 12px;
-			.text_c {
-			    text-align: left;
-			    width: 200px !important;
-			}
-			span {
-			    border-radius: 9px;
-			    color: #fff;
-			    display: inline-block;
-			    float: left;
-			    height: 18px;
-			    line-height: 18px;
-			    margin: 0 15px;
-			    text-align: center;
-			    width: 50px;
-			}
-			.goline {
-			    background: #ff9900;
+			.user-text-box {
+				float: right;display: inline;width: 840px;border: 1px solid #ededed;background: #fcfcfc;padding:15px;position: relative;
+				p {
+					font-size: 12px;font-family: @fs;margin:0;
+				}
+				.text {font-size: 14px;color: #666;padding-bottom: 20px;}
+				.time {color:#999;}
+				&:before {
+				    display: inline-block;
+					width:0; 
+				    height:0; 
+				    content: "";
+				    border-top:10px solid transparent;
+				    border-bottom:10px solid transparent; 
+				    border-right:10px solid #ededed; 
+				    position: absolute;
+				    left: -10px;
+				    top:8px;
+				}
+				&:after {
+				    display: inline-block;
+					width:0; 
+				    height:0; 
+				    content: "";
+				    border-top:10px solid transparent;
+				    border-bottom:10px solid transparent; 
+				    border-right:10px solid #fcfcfc; 
+				    position: absolute;
+				    left: -9px;
+				    top:8px;
+				}
 			}
 		}
 	}
+
 }
