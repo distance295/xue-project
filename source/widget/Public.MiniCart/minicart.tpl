@@ -1,9 +1,9 @@
 <!--
     @require ../Module.Dropdown/dropdown.js
-    @require ../Public.MiniCart/minicart.less"
+    @require minicart.less
 -->
 
-   <div id="module-minicart" class="pull-right ui-dropdown hover">
+   <div id="module-minicart" class="pull-right ui-dropdown">
     <div class="dropdown-handle btn btn-default">
         <i class="fa fa-shopping-cart pull-left"></i>
         <a href="#" target="_blank">我的购物车</a>
