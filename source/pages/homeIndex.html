@@ -20,15 +20,10 @@
 <body>
     <!-- module.topbar -->
     <link rel="import" href="../widget/Public.Topbar/topbar.tpl?__inline">
-    <div class="header-layer">
-        <div class="container">
-            <!-- module.header -->
-            <link rel="import" href="../widget/Public.Header/header.tpl?__inline">
-            <!-- module.nav -->
-            <link rel="import" href="../widget/Public.Nav/nav.tpl?__inline">
-        </div>
-    </div>
-    <div class="main">
+    <!-- module.homeHeader -->
+    <link rel="import" href="../widget/Public.HomeHeader/homeHeader.tpl?__inline">
+    
+    <div class="container">
         <h2>XUEJS自动构建工具</h2>
         <p>
 
@@ -44,10 +39,6 @@
     <!--RESOURCEMAP_PLACEHOLDER-->
     <script>
     $(function(){
-        nav.init({
-            dataUrl : '../data/Public.Nav/nav.json'
-//            ,fixed : true
-        });
         dropdown.init();
     });
 </script>

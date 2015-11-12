@@ -18,39 +18,37 @@
 </head>
 
 <body>
-    <!-- module.topbar -->
-    <link rel="import" href="../widget/Public.Topbar/topbar.tpl?__inline">
-    <div class="header-layer">
-        <div class="container">
-            <!-- module.header -->
-            <link rel="import" href="../widget/Public.Header/header.tpl?__inline">
-            <!-- module.nav -->
-            <link rel="import" href="../widget/Public.Nav/nav.tpl?__inline">
-        </div>
-    </div>
-    <div class="main">
-        <h2>XUEJS自动构建工具</h2>
-        <p>
+    <div class="container">
+        <h2>个人主页</h2>
+        <p></p>
 
-        </p>
-    </div>
-    
+        
+<!-- 个人主页 -->
+        <div class="row">
+            <div class="col-md-10 col-sm-9">
+                <div class="panel panel-default ">
+                    <div class="panel-body">left 个人主页两列</div>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">right</div>
+                </div>
+            </div>
+        </div>
+   
+
     <!-- module.footer -->
-    <link rel="import" href="../widget/Public.Footer/footer.tpl?__inline">
-    
-    <script src="../lib/jQuery/1.11.1/jquery.min.js"></script><!--ignore-->
+
+    <script src="../lib/jQuery/1.11.1/jquery.min.js"></script>
+    <!--ignore-->
 
     <!--SCRIPT_PLACEHOLDER-->
     <!--RESOURCEMAP_PLACEHOLDER-->
     <script>
-    $(function(){
-        nav.init({
-            dataUrl : '../data/Public.Nav/nav.json'
-//            ,fixed : true
-        });
-        dropdown.init();
-    });
-</script>
+
+
+    </script>
 </body>
 
 </html>
