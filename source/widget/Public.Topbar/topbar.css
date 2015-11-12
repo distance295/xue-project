@@ -19,53 +19,8 @@ ol {
   height: 30px;
   line-height: 30px;
   background: #f1f1f1;
-}
-#module-topbar .breadcrumb {
-  margin-bottom: 0;
-  padding: 0;
-  background-color: transparent;
-}
-#module-topbar .breadcrumb li {
-  height: 30px;
-}
-#module-topbar .breadcrumb .dropdown-handle {
-  padding: 0 5px;
-}
-#module-topbar .breadcrumb .dropdown-body {
-  margin-left: 5px;
-}
-#module-topbar .breadcrumb .hover:before {
-  padding-right: 9px;
-  content: " ";
-}
-#module-topbar .breadcrumb .hover .dropdown-handle {
-  padding: 0 9px;
-  margin-left: -4px;
-  margin-right: -4px;
-}
-#module-topbar .breadcrumb li > a {
-  padding: 0 6px;
-}
-#module-topbar .breadcrumb > li + li:before {
-  content: "|\00a0";
-  padding: 0;
-}
-#module-topbar .ui-header-menu {
-  width: 1190px;
-  margin: 0 auto;
-}
-#module-topbar .ui-header-menu .topleft-bar {
-  width: 350px;
-}
-#module-topbar .ui-header-menu .topright-bar {
-  width: 730px;
-  height: 30px;
-}
-#module-topbar .ui-header-menu .phone-400 {
-  width: 210px;
-  height: 30px;
-  color: transparent;
-  background: url(img/phone-400.jpg?__inline) no-repeat;
+  z-index: 10;
+  position: relative;
 }
 #module-topbar .ui-dropdown {
   width: auto !important;
@@ -113,4 +68,51 @@ ol {
 }
 #module-topbar .ui-dropdown.hover .dropdown-body {
   display: block;
+}
+#module-topbar .breadcrumb {
+  margin-bottom: 0;
+  padding: 0;
+  background-color: transparent;
+}
+#module-topbar .breadcrumb li {
+  height: 30px;
+}
+#module-topbar .breadcrumb .dropdown-handle {
+  padding: 0 5px;
+}
+#module-topbar .breadcrumb .dropdown-body {
+  margin-left: 6px;
+}
+#module-topbar .breadcrumb .hover:before {
+  padding-right: 9px;
+  content: " ";
+}
+#module-topbar .breadcrumb .hover .dropdown-handle {
+  padding: 0 9px;
+  margin-left: -3px;
+  margin-right: -4px;
+}
+#module-topbar .breadcrumb li > a {
+  padding: 0 6px;
+}
+#module-topbar .breadcrumb > li + li:before {
+  content: "|\00a0";
+  padding: 0;
+}
+#module-topbar .ui-header-menu {
+  width: 1190px;
+  margin: 0 auto;
+}
+#module-topbar .ui-header-menu .topleft-bar {
+  width: 350px;
+}
+#module-topbar .ui-header-menu .topright-bar {
+  width: 730px;
+  height: 30px;
+}
+#module-topbar .ui-header-menu .phone-400 {
+  width: 210px;
+  height: 30px;
+  color: transparent;
+  background: url(img/phone-400.jpg?__inline) no-repeat;
 }
