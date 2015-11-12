@@ -420,6 +420,12 @@ span.error {
   margin-left: 215px;
   margin-top: 20px;
 }
+.payment_bank .recharge_sum {
+  overflow: hidden;
+}
+.payment_bank .recharge_sum strong {
+  color: #cc0000;
+}
 .payment_bank .payment_text {
   padding-left: 40px;
 }
@@ -469,4 +475,12 @@ span.error {
 .payment_bank .paylists.hasCkecked .bank_list {
   float: left;
   display: inline;
+}
+.payment_bank .formPastPayment {
+  overflow: hidden;
+}
+.payment_bank .formPastPayment .btn_blue {
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 10px 28px;
 }
