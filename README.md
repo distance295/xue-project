@@ -3,7 +3,7 @@ xuejs项目文件
 
 ## 文件目录
 [详情参阅](./docs/structure.md)
-
+```
 ├─ config 配置文件目录
 │   └─ fis-conf.js
 ├─ docs 文档目录
@@ -30,3 +30,4 @@ xuejs项目文件
 ├─ package.json nodejs包依赖
 ├─ README.md
 └─ fis-conf.js fis构建配置
+```
