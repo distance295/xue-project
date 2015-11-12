@@ -2,7 +2,7 @@
     @require nav.js
     @require nav.less
 -->
-<div id="moudle-nav" class="ui-head-nav">
+<div id="module-nav" class="ui-head-nav">
     <div id="ui-categorys" class="ui-categorys pull-left hover">
         <div class="category-dt"><a href="">全部课程分类<i class="ci-right"><s>◇</s></i></a></div>
         <div class="category-dd">
