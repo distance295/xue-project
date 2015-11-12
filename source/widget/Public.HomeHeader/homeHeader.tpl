@@ -18,9 +18,8 @@
                        </span>
                 <a href="" class="user-level label label-warning">Lv.20</a>
             </div>
-
         </div>
-        <div class="col-md-6 text-right">
+        <div class="col-md-5 text-right">
             <ul class="user-medal list-inline">
                 <li class="medal-1">
                     <a href="" title="网校学生证">
