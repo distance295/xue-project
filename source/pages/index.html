@@ -11,6 +11,7 @@
     <!-- 这是CSS库文件 -->
     <link href="../lib/bootstrap/3.3.5-custom/css/bootstrap.min.css" rel="stylesheet"><!--ignore-->
     <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css"><!--ignore-->
+    <link rel="stylesheet" href="../static/css/default.css"><!--ignore-->
     <!-- 这是当前模块样式文件 -->
     <!--STYLE_PLACEHOLDER-->
 
@@ -19,11 +20,13 @@
 <body>
     <!-- module.topbar -->
     <link rel="import" href="../widget/Public.Topbar/topbar.tpl?__inline">
-    <!--  module.header  -->
-    <link rel="import" href="../widget/Public.Header/header.tpl?__inline">
-    <!--  moudle.nav  -->
-    <div class="container">
-        <link rel="import" href="../widget/Public.Nav/nav.tpl?__inline">
+    <div class="header-layer">
+        <div class="container">
+            <!-- module.header -->
+            <link rel="import" href="../widget/Public.Header/header.tpl?__inline">
+            <!-- module.nav -->
+            <link rel="import" href="../widget/Public.Nav/nav.tpl?__inline">
+        </div>
     </div>
     <div class="main">
         <h2>XUEJS自动构建工具</h2>
@@ -31,6 +34,10 @@
 
         </p>
     </div>
+    
+    <!-- module.footer -->
+    <link rel="import" href="../widget/Public.Footer/footer.tpl?__inline">
+    
     <script src="../lib/jQuery/1.11.1/jquery.min.js"></script><!--ignore-->
 
     <!--SCRIPT_PLACEHOLDER-->
@@ -38,9 +45,10 @@
     <script>
     $(function(){
         nav.init({
-            dataUrl : '../data/Public.Nav/nav.json',
-            fixed : true
+            dataUrl : '../data/Public.Nav/nav.json'
+//            ,fixed : true
         });
+        dropdown.init();
     });
 </script>
 </body>
