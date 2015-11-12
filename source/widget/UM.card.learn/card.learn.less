@@ -1,3 +1,4 @@
+
 input:not([type]),
 input[type="text"],
 input[type="password"],
@@ -229,3 +230,255 @@ span.error{
         }
     }
 }
+ //银行图标
+.paylists{
+    .right-content button{
+        margin-left: 15px;
+    }
+    h5{
+        padding-left: 46px;
+        line-height: 30px;
+    }
+    .paynow{
+        h5{
+            padding-left: 0;
+        }
+    }
+    line-height:22px;
+    .bank_list{
+        margin:20px 0 0 50px;
+        clear:both;
+        overflow:hidden;
+    }
+    .bank_more {
+        width: 180px; height: 30px; line-height: 34px;
+        margin: 0 7px 10px 50px;
+        padding: 5px 10px;
+        border:1px solid #DEDED5;
+        // background-color: #fff;
+        
+        text-align: center; color: #0076B3; cursor: pointer;
+        span {
+            background: url("img/arrow_down.gif") no-repeat right center;
+            padding-right: 20px;
+        }
+        &.collapse span{
+            background-image: url("img/arrow_down.gif");
+        }
+        &.open span{
+            background-image: url("img/arrow_up.gif");
+        }
+    }
+    .paynow{
+        margin:20px 0 0 50px;
+        label, input, button{
+            float:left;
+        }
+        input{
+            margin:0 5px;
+            width:150px;
+        }
+        button{
+            padding:2px 5px;
+        }
+        .bank_list{
+            input{ width:15px; margin-top:10px;}
+        }
+    }
+    .setting_menu{
+        margin-bottom:10px;
+    }
+    .pay_info{
+        font-size:14px;
+        color:#5b5b5b;
+        padding:10px 50px;
+        strong{
+            display:inline-block;
+            width:90px;
+            text-align:right;
+            color:#333;
+            font-weight:bold;
+        }
+    }
+    .pay_tips{
+        color:#adadad;
+        overflow:hidden;
+        background:#FAFAFA;
+        padding:10px 20px;
+
+    }
+    ul li{
+        width:202px;
+        float:left;
+        margin:0 15px 40px 0;
+        // input[type="radio"]{
+        input{
+            margin-right:5px;
+            float: left; margin-top: 10px;
+        }
+        .bank-item{
+            background-image:url("img/banklist.png");
+            background-repeat: no-repeat;
+            cursor: pointer;
+            width:154px;
+            height:33px;
+            vertical-align: middle;
+            display:inline-block;
+            float: left;
+            margin:0;
+            padding:0;
+            margin-top: 5px;
+        }
+        .ICBC{
+            background-position:0 0;
+        }
+        .CMB{
+            background-position:0 -99px;
+        }
+        .ABC{
+            background-position:0 -198px;
+        }
+        .CCB{
+            background-position:-154px 0;
+        }
+        .BCM{
+            background-position:-154px -99px;
+        }
+        .SDB{
+            background-position:-154px -198px;
+        }
+        .BOB{
+            background-position:-308px 0;
+        }
+        .CIB{
+            background-position:-308px -99px;
+        }
+        .BOC{
+            background-position:0 -231px;
+        }
+        .CEB{
+            background-position:0 -33px;
+        }
+        .SPD{
+            background-position:0 -132px;
+        }
+        .CMBC{
+            background-position:-308px -198px;
+        }
+        .POST{
+            background-position:-154px -33px;
+        }
+        .BEA{
+            background-position:-154px -132px;
+        }
+        .RCB{
+            background-position:-154px -231px;
+        }
+        .CBHB{
+            background-position:-308px -33px;
+        }
+        .CGD{
+            background-position:-308px -133px;
+        }
+        .GZCB{
+            background-position:-308px -230px;
+        }
+        .GZNC{
+            background-position:0 -66px;
+        }
+        .HXB{
+            background-position:0 -165px;
+        }
+        .ZXSY{
+            background-position:0 -264px;
+        }
+        .NBCB{
+            background-position:-154px -66px;
+        }
+        .SHNC{
+            background-position:-154px -165px;
+        }
+        .BBON{
+            background-position:-154px -264px;
+        }
+        .HCCB{
+            background-position:-308px -66px;
+        }
+        .PAYH{
+            background-position:-308px -165px;
+        }
+        .gateway{
+            background-position:-308px -264px;
+        }
+        .ZFB {
+            background-position:-308px -297px;
+        }
+        .SHYH {
+            background-position:-154px -330px;
+        }
+        .ECITIC {
+            background-position:-0px -297px;
+        }
+        .FDYH {
+            background-position:-0px -330px;
+        }
+    }
+
+}
+ //网银支付
+     .payment_bank {
+                width: 960px;overflow: hidden;margin-left:215px;margin-top: 20px;
+                .recharge_sum {
+                    overflow: hidden;
+                    strong {
+                        color: #cc0000;
+                    }
+                }
+                .payment_text {padding-left:40px;}
+                .paylists {
+                    overflow: hidden;line-height: auto;margin-bottom: 15px;display: none;*padding-bottom: 15px;
+                        #chose_other{
+                            float:left;
+                            display:inline;
+                            width: 180px;
+                            height: 42px;
+                            line-height: 34px;
+                            border: 1px dashed #deded5;
+                            color: #0076b3;
+                            cursor: pointer;
+                            margin: 20px 7px 10px 10px;
+                            padding: 5px 10px;
+                            text-align: center;
+                        }
+                    ul {
+                        margin:20px 0 0;
+                        li {
+                            margin: 0 7px 10px 0;
+                            padding: 5px 10px;
+                            border:1px solid #DEDED5;
+                            background-color: #fff;
+                            &.current {
+                                border: 1px solid #3E9AE0;
+                            }
+                        }
+                    }
+                    .bank_more {margin:0 7px 10px 0;height: 42px;}
+                    h6.shopcar_title {font-weight: normal;}
+                    &.hasCkecked {
+                            _width:100%;overflow:hidden;
+                            .bank_list {
+                                float:left;display:inline;
+                            }
+                            
+                    }
+                }
+                .formPastPayment {
+                    overflow: hidden;
+                    .btn_blue {
+                        border-radius: 3px;
+                        font-size: 14px;
+                        padding: 10px 28px;
+                    }
+                }
+            }
+           
