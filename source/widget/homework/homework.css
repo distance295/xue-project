@@ -379,9 +379,12 @@ body {
   height: 34px;
   display: inline-block;
   background-position: 0 -45px;
+  overflow: hidden;
 }
 .homework-wrapper .homework-Feedback-header .homework-scoreArea .homework-score {
   width: 153px;
+  display: block;
+  overflow: hidden;
 }
 .homework-wrapper .homework-Feedback-header .homework-scoreArea .homework-score img {
   padding: 0 3px;

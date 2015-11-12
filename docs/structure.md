@@ -1,6 +1,6 @@
 # 文件目录
 
-
+```
 ├─ config 配置文件目录
 │   └─ fis-conf.js
 ├─ docs 文档目录
@@ -54,3 +54,4 @@
 ├─ package.json nodejs包依赖
 ├─ README.md
 └─ fis-conf.js fis构建配置
+```

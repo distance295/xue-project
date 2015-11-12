@@ -20,10 +20,15 @@ dropdown.show = function (e) {
         that.find('.dropdown-body').hide();
     });
 };
-$(function () {
-    //头部菜单
+dropdown.init = function(handle){
     $('.ui-dropdown').on('mouseenter', function (event) {
         dropdown.show(this);
     });
-
-});
+};
+//$(function () {
+//    //头部菜单
+//    $('.ui-dropdown').on('mouseenter', function (event) {
+//        dropdown.show(this);
+//    });
+//
+//});
