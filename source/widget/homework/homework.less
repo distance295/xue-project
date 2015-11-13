@@ -326,30 +326,36 @@ html,body {
     }
     .homework-Feedback-cont{
          margin:0 auto;
-         width: 470px;
+         width: 490px;
          font-family: "Microsoft YaHei","微软雅黑" 
     }
     .homework-Feedback-header{
          float: left;
-         width: 100%;
-         height: 140px;
-         margin-top:40px;
+         width: 480px;
+         height: 153px;
+         margin:31px 0 0 10px;
          position:relative;
          .homework-likeEmote{
             position: absolute;
-            top:30px;
+            top:43px;
             left: 0;
          }
          .homework-dialog{
               position: absolute;
               top:0;
-              left: 108px;
-              width: 144px;
-              height: 88px;
-              line-height: 71px;
-              text-align: center;
+              left: 107px;
+              width: 228px;
+              height: 73px;
               background:url("img/Dialog.png") no-repeat; 
-              .font-size(14px);
+              .homework-tipsInfo{
+                  display: block;
+                  overflow: hidden;
+                  margin: 9px 0 0 10px;
+                  line-height: 22px;
+                  text-align: left;
+                  .font-size(14px);
+                  color: #333;
+              }
               em{
                  color: #e74c3c;
                  font-style: normal;
@@ -383,12 +389,12 @@ html,body {
     p{
         &.homework-Feedback-describe{
             float: left;
-            width: 100%;
+            width: 480px;
             color: #e74c3c;
             .font-size(14px);
             line-height: 24px;
             height: 200px;
-            margin-top: 20px;
+            margin: 20px 0 0 10px;
             overflow-y: auto;
             overflow-x: hidden;
             word-break:break-all; 
@@ -398,10 +404,10 @@ html,body {
     }
     .homework-Feedback-video{
         float: left;
-        width: 100%;
+        width: 480px;
         color: #666;
         .font-size;
-        margin-top:10px;
+        margin: 10px 0 0 10px;
         h3{
             width: 100%;
             line-height: 24px;
