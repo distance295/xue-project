@@ -26,49 +26,7 @@ body{
 .course-green-label{
 	background: #37bc9b;
 }
-.course-btn-gray,.course-btn-gray[disabled]{
-	background: #ccd1d9;
-	border: 1px solid #ccd1d9;
-	&:hover{
-		background: #ccd1d9;
-		border: 1px solid #ccd1d9;
-	}
-	&:focus{
-		background: #ccd1d9;
-		border: 1px solid #ccd1d9;
-	}
-}
-.button.course-btn {
-	border-radius: 2px;
-	font-family: "SimSun";
-	margin-bottom: 0;
-	width: 98px;
-	height: 32px;
-	text-align: center;
-	font-size: 14px;
-	padding: 0;
-	line-height: 32px;
-}
-.button-icon{
-	display: inline-block;
-	height: 19px;
-	margin-right: 6px;
-	width: 13px;
-}
-.button.course-gray{
-	background-color: #fcfcfc;
-	border: 1px solid #eaeaea;
-	color: #333333;
-	line-height: 30px;
-	&:hover{
-		background-color: #e2e2e2;
-		border: 1px solid #d2d2d2;
-	}
-	&:focus{
-		background-color: #e2e2e2;
-		border: 1px solid #d2d2d2;
-	}
-}
+
 .icon-will-red{
 	background: url("img/icon-will-red.png") no-repeat scroll left center;
 	height: 10px;
@@ -85,6 +43,8 @@ body{
 	position: absolute;
 	right: 0px;
 	color: #fff;
+	font-size: 14px;
+	font-style: normal;
 }
 .label-delay{
 	background: #3bafda;
@@ -94,17 +54,85 @@ body{
 	background: #37bc9b;
 	top: 105px;
 }
-.courseList-wrap{
+.courseList-label{
 	padding-right: 25px;
+}
+.courseList-wrap{
 	position: relative;
 	ul,li{
 		list-style: none;
 		margin-left: 0;
 	}
+
+	button.alert, .button.alert {
+		background-color: #e74c3c;
+		border-color: #cf2b1a;
+		color: #ffffff;
+	}
+	button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
+		background-color: #cf2b1a;
+	}
+	button, .button {
+		display: inline-block;
+		text-decoration: none;
+		transition: background-color 300ms ease-out 0s;
+		border-style: solid;
+		border-width: 0;
+		color: #ffffff;
+		cursor: pointer;
+		-moz-appearance: none;
+		background-color: #3bafda;
+		border-color: #2392ba;
+	}
+	button:hover, button:focus, .button:hover, .button:focus {
+		background-color: #2392ba;
+		color: #fff;
+	}
+	.course-btn-gray,.course-btn-gray[disabled]{
+		background: #ccd1d9;
+		border: 1px solid #ccd1d9;
+		color: #fff;
+		&:hover{
+			background: #ccd1d9;
+			border: 1px solid #ccd1d9;
+		}
+		&:focus{
+			background: #ccd1d9;
+			border: 1px solid #ccd1d9;
+		}
+	}
+	.button.course-btn {
+		border-radius: 2px;
+		font-family: "SimSun";
+		margin-bottom: 0;
+		width: 98px;
+		height: 32px;
+		text-align: center;
+		font-size: 14px;
+		padding: 0;
+		line-height: 32px;
+	}
+	.button-icon{
+		display: inline-block;
+		margin-right: 6px;
+		width: 13px;
+	}
+	.button.course-gray{
+		background-color: #fcfcfc;
+		border: 1px solid #eaeaea;
+		color: #333333;
+		line-height: 30px;
+		&:hover{
+			background-color: #e2e2e2;
+			border: 1px solid #d2d2d2;
+		}
+		&:focus{
+			background-color: #e2e2e2;
+			border: 1px solid #d2d2d2;
+		}
+	}
 }
 .courseList {
-	table,tr,th,thead{margin: 0;padding: 0;}
-	ul,li,p{margin: 0;list-style: none;padding: 0}
 	background: #fff;
 	border-radius: 4px;
 	display: block;
@@ -113,6 +141,9 @@ body{
 	margin-bottom: 20px;
 	overflow: hidden;
 	padding: 15px 5px 15px 15px;
+	table,tr,th,thead{margin: 0;padding: 0;}
+	ul,li,p{margin: 0;list-style: none;padding: 0}
+	.left{float: left;}
 	.study-report {
 		float: left;
 		width: 160px;
@@ -295,7 +326,7 @@ body{
 			.avatar-roll{
 				position: absolute;
 				right: 36px;
-				bottom: -2px;
+				bottom: 4px;
 				a{
 					outline: none;
 					em{
@@ -447,7 +478,7 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 // 录播直播作业列表
 .courselayout-list{
 	table,tr,th,thead{margin: 0;padding: 0;}
-	ul,li,p{margin: 0;list-style: none;padding: 0}
+	ul,li,p{margin-left: 0;list-style: none;padding: 0}
 	.courseList-title{
 		border-bottom: 1px solid @borderColor;
 		margin-bottom: 20px;
@@ -458,6 +489,11 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 		}
 	}
 	.course-table{
+		background: #fff;
+		td{
+			display: table-cell;
+			line-height: 42px;
+		}
 		thead{
 			background: #fff;
 			line-height: 50px;
@@ -467,6 +503,7 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 			tr{
 				th{
 					font-size: 16px;
+					border-bottom: 1px solid #eaeaea;
 				}
 			}
 		}
@@ -521,6 +558,7 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 	margin-bottom: 22px;
 	margin-left: 0;
 	list-style: none;
+	padding-left: 0;
 	li{
 		float: left;
 		font-size: 14px;
