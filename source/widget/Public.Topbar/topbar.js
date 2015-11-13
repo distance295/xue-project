@@ -7,16 +7,16 @@
 
 var topbar = topbar || {};
 //var $ = require('jquery');
-
-//头部购物车显示隐藏
-topbar.shopCart = function (e) {
-    var that = $(e);
-    that.parents('.ui-head-shopcart ').addClass('hover');
-    //鼠标移出
-    $('.ui-head-shopcart').on('mouseleave', function (event) {
-        $(this).removeClass('hover');
-    });
-};
+//
+////头部购物车显示隐藏
+//topbar.shopCart = function (e) {
+//    var that = $(e);
+//    that.parents('.ui-head-shopcart ').addClass('hover');
+//    //鼠标移出
+//    $('.ui-head-shopcart').on('mouseleave', function (event) {
+//        $(this).removeClass('hover');
+//    });
+//};
 //头部菜单显示隐藏
 topbar.menuShow = function (e) {
     var that = $(e);

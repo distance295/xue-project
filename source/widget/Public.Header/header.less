@@ -17,8 +17,8 @@
 @fs: "SimSun";
 @red: #e74c3c;
 @btn-primary: #1e89e0;
-@gray-base:#666;
-@text-muted:darken(@gray-base, 30%);
+@gray-base: #666;
+@text-muted: darken(@gray-base, 30%);
 // <!-- 头部logo**and**搜索**购物车 -->
 #module-header {
     width: 1190px;
@@ -34,7 +34,7 @@
             display: block;
             width: 280px;
             height: 55px;
-            background: url(img/logo.png) no-repeat;
+            background: url(img/logo.png?__inline) no-repeat;
             color: transparent;
         }
     }
@@ -72,5 +72,8 @@
             display: inline-block;
             margin-right: 5px;
         }
+    }
+    #module-minicart {
+        top: -35px !important;
     }
 }
