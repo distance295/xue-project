@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import '../../static/less/default.less';
+
 /**
  * 
  * @authors Your Name (you@example.org)
@@ -8,10 +8,68 @@
  */
 
 //  <!-- 顶部菜单***这部分分为未登录和已登录**个人中心会用到 -->
+em {
+    font-style: normal;
+    padding: 0 .2rem;
+}
+ul,
+ol {
+    margin: 0;
+    padding-left: 0;
+}
 #module-topbar {
     height: 30px;
     line-height: 30px;
     background: #f1f1f1;
+    z-index: 10;
+    position: relative;
+    .ui-dropdown {
+        width: auto !important;
+        .dropdown-handle {
+            display: inline-block;
+            cursor: pointer;
+            padding: 0 10px;
+            border-left: 1px solid transparent;
+            border-right: 1px solid transparent;
+        }
+        .dropdown-body {
+            display: none;
+            min-width: 120px;
+            background: #fff;
+            border: 1px solid #dcdcdc;
+            position: absolute;
+            left: 0;
+            top: 29px;
+            z-index: 1;
+            overflow: hidden;
+            padding: 7px 0;
+            margin: 0;
+            li {
+                display: block;
+                width: 100%;
+                line-height: 30px;
+                padding-left: 12px;
+            }
+        }
+        &.hover {
+            position: relative;
+            z-index: 10;
+            .dropdown-handle {
+                display: inline-block;
+                background: #fff;
+                z-index: 100;
+                position: relative;
+                border-color: #dcdcdc;
+                .dropdown-icon {
+                    transform: rotate(180deg);
+                    transition: transform 0.1s ease-in 0s;
+                }
+            }
+            .dropdown-body {
+                display: block;
+            }
+        }
+    }
     .breadcrumb {
         margin-bottom: 0;
         padding: 0;
@@ -23,7 +81,7 @@
             padding: 0 5px;
         }
         .dropdown-body {
-            margin-left: 5px;
+            margin-left: 6px;
         }
         .hover {
             &:before {
@@ -32,7 +90,7 @@
             }
             .dropdown-handle {
                 padding: 0 9px;
-                margin-left: -4px;
+                margin-left: -3px;
                 margin-right: -4px;
             }
         }
@@ -58,57 +116,8 @@
             width: 210px;
             height: 30px;
             color: transparent;
-            background: url(img/line.png?__inline) no-repeat;
+            background: url(img/phone-400.jpg?__inline) no-repeat;
         }
     }
-    .ui-dropdown {
-        width: auto !important;
-        .dropdown-handle {
-            display: inline-block;
-            cursor: pointer;
-            padding: 0 10px;
-            border-left: 1px solid transparent;
-            border-right: 1px solid transparent;
-        }
-        .dropdown-body {
-            display: none;
-            min-width: 120px;
-            background: #fff;
-            border: 1px solid #dcdcdc;
-            position: absolute;
-            left: 0;
-            top: 29px;
-            z-index: 1;
-            //        &ul {
-            overflow: hidden;
-            padding: 7px 0;
-            margin: 0;
-            li {
-                display: block;
-                width: 100%;
-                line-height: 30px;
-                padding-left: 12px;
-                a {}
-            }
-            //        }
-        }
-        &.hover {
-            position: relative;
-            z-index: 10;
-            .dropdown-handle {
-                display: inline-block;
-                background: #fff;
-                z-index: 100;
-                position: relative;
-                border-color: #dcdcdc;
-                .dropdown-icon {
-                    transform: rotate(180deg);
-                    transition: transform 0.1s ease-in 0s;
-                }
-            }
-            .dropdown-body {
-                display: block;
-            }
-        }
-    }
+    
 }

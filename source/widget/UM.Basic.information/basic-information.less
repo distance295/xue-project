@@ -1,0 +1,130 @@
+input:not([type]),
+input[type="text"],
+input[type="password"],
+input[type="date"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="month"], 
+input[type="week"], 
+input[type="email"], 
+input[type="number"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="time"], 
+input[type="url"], 
+input[type="color"], 
+textarea {
+   border-style: solid;
+   border-width: 1px;
+   border-color: #cccccc;
+   box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.1);
+}
+input:not([type]):focus,
+input[type="text"]:focus, 
+input[type="password"]:focus,
+input[type="date"]:focus, 
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus, 
+input[type="month"]:focus, 
+input[type="week"]:focus, 
+input[type="email"]:focus, 
+input[type="number"]:focus, 
+input[type="search"]:focus, 
+input[type="tel"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+    background: #fff;
+    border:1px solid #3bafda;
+    outline: none; 
+}
+span.error{
+    font-style: normal;
+    background: #fff;
+}
+.bi-content{
+//    width: 1010px;
+    margin: 2em auto;
+    .bi-left{
+        float: left;
+        p{
+            position: relative;
+            font-size: 12px;
+            color: #666;
+            clear: both;
+            .birthday{
+                position: relative;
+                top: -8px;
+            }
+            label{
+                float: left;
+                width: 60px;
+                margin: 0 5px 50px 0;
+                text-align: right;
+                font-size: 12px;
+                color: #666;
+                cursor: text;
+            }
+            select{
+                width: 80px;
+                background-color: #fff;
+            }
+            select:focus{
+                background-color: #fff;
+            }
+            span{
+                margin: 0;
+                color: #333;
+            }
+            em{
+                margin-left: 20px;
+                font-style: normal;
+                color: #e74c3c;
+            }
+            i{
+                margin:0 20px 0 5px;
+                font-style: normal;
+                color: #333;
+            }
+            .user-name,.user-school{
+                position: relative;
+                top: -8px;
+                width: 260px;
+                margin: 0 0 1px 0;
+                padding: 8px 5px;
+            }
+        }
+        #form_submit{
+            width: 100px;
+            height: 35px;
+            padding: 0;
+            margin-left: 65px;
+            border-radius: 2px;
+            font-size: 14px;
+        }  
+    }
+    .bi-right{
+        float: right;
+        width: 295px;
+        height: 140px;
+        background: url('img/basic-bg.png') no-repeat;
+        span{
+            display: inline-block;
+            padding: 80px 13px 0 13px;
+            font-family: 'Microsoft Yahei';
+            font-size: 14px;
+            color: #666;
+            em{
+                font-style: normal;
+                color: #e74c3c;
+            }
+        }
+    }
+}
+
+
+
+
+/* 已有网校账号登录
+*/

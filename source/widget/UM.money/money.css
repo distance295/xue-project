@@ -61,6 +61,7 @@ table {
 .gift-card-record .table.gcr-table .gcr-red {
   color: #e74c3c;
 }
+.gift-card-record .table.gcr-table th,
 .gift-card-record .table.gcr-table td {
   padding: 10px;
 }
