@@ -97,11 +97,15 @@ body{
 .courseList-wrap{
 	padding-right: 25px;
 	position: relative;
+	ul,li{
+		list-style: none;
+		margin-left: 0;
+	}
 }
 .courseList {
 	table,tr,th,thead{margin: 0;padding: 0;}
 	ul,li,p{margin: 0;list-style: none;padding: 0}
-	background: #fff none repeat scroll 0 0;
+	background: #fff;
 	border-radius: 4px;
 	display: block;
 	font-family: "SimSun";
@@ -509,6 +513,7 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 			}
 		}
 	}
+}
 // 直播课程列表	
 .teacher-tab{
 	border-bottom: 1px solid #3bafda;
@@ -526,5 +531,4 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 		color: #fff;
 		border-radius: 4px 4px 0 0;
 	}
-}
 }

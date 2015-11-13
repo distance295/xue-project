@@ -22,7 +22,7 @@
   display: block;
   width: 280px;
   height: 55px;
-  background: url(img/logo.png) no-repeat;
+  background: url(img/logo.png?__inline) no-repeat;
   color: transparent;
 }
 #module-header .h-search {
@@ -59,4 +59,7 @@
 #module-header .h-words a {
   display: inline-block;
   margin-right: 5px;
+}
+#module-header #module-minicart {
+  top: -35px !important;
 }

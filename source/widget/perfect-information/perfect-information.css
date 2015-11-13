@@ -29,7 +29,7 @@ body {
   font-size: 16px;
   height: 48px;
   width: 320px;
-  line-height: 15px;
+  line-height: 16px;
 }
 .setting-infor {
   width: 530px;
@@ -53,8 +53,7 @@ body {
 }
 .setting-infor .setting-infor-inner {
   overflow: hidden;
-  padding-left: 55px;
-  margin-bottom: 20px;
+  padding-left: 40px;
 }
 .setting-infor .setting-infor-inner p.setting-tip {
   font-size: 16px;
@@ -66,7 +65,8 @@ body {
 }
 .setting-infor .f1 {
   overflow: hidden;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
+  height: 82px;
 }
 .setting-infor .f1 label {
   display: inline;
@@ -81,6 +81,15 @@ body {
 .setting-infor .f1 p {
   display: inline;
   float: left;
+  margin-bottom: 10px;
+  position: relative;
+}
+.setting-infor .f1 p .label-value {
+  position: absolute;
+  top: 0;
+  width: auto;
+  left: 9px;
+  color: #ccc;
 }
 .setting-infor .f1 p .input-text {
   border: 1px solid #ccc;
@@ -88,9 +97,14 @@ body {
   width: 320px;
   margin-bottom: 0;
   box-shadow: none;
+  color: #333;
 }
 .setting-infor .f1 p .errTips {
   color: #cc0000;
+  height: 20px;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 20px;
 }
 .setting-infor .f1 p .gender-1 {
   background: url("img/man.png") no-repeat scroll center top;
@@ -106,13 +120,18 @@ body {
   padding-right: 23px;
   width: 13px;
 }
+.setting-infor .f1 p.area-tips {
+  display: block;
+  float: none;
+}
 .setting-infor .f1 p.sex-tip {
   padding-top: 15px;
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 .setting-infor .f1 p.sex-tip input {
   float: left;
   margin-top: 3px;
+  margin-bottom: 0;
 }
 .setting-infor .f1 p.sex-tip .gender-1 {
   float: left;
@@ -127,10 +146,24 @@ body {
   height: auto;
   line-height: 21px;
 }
+.setting-infor .f1 p.sex-tip .errTips {
+  display: block;
+  clear: both;
+}
 .setting-infor .f1 .select {
   display: inline-block;
   width: auto;
   padding: 0 18px;
+  margin-bottom: 0;
+}
+.setting-infor .f1 .select.has-success {
+  border: 1px solid #68c04a;
+}
+.setting-infor .has-success p .input-text {
+  border: 1px solid #68c04a;
+}
+.setting-infor .has-error p .input-text {
+  border: 1px solid #ccc;
 }
 .focus-teacher {
   width: 530px;
@@ -156,7 +189,7 @@ body {
   overflow-y: auto;
   padding: 0 16px;
   height: 355px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .focus-teacher .setting-infor-inner p.setting-tip {
   font-size: 16px;
@@ -232,8 +265,14 @@ body {
   font-size: 12px;
   height: 20px;
 }
-.focus-teacher .setting-infor-inner .fun-follow-item .follow-list .follow-con-fun .fresh-course-attention em,
-.focus-teacher .setting-infor-inner .fun-follow-item .follow-list .follow-con-fun .fresh-course-attention i {
+.focus-teacher .setting-infor-inner .fun-follow-item .follow-list .follow-con-fun .fresh-course-attention em {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 20px;
+  padding: 0 8px;
+  background: #dfdfdf;
+  color: #999999;
+  margin-right: 5px;
   font-style: normal;
 }
 .focus-teacher .setting-infor-inner .fun-follow-item .follow-list .follow-con-fun .fresh-attention-btn {
@@ -244,10 +283,6 @@ body {
   padding: 0 8px;
   display: inline-block;
   font-size: 12px;
-}
-.focus-teacher .setting-infor-inner .fun-follow-item .follow-list .follow-con-fun .teacher-added {
-  background: #dfdfdf;
-  color: #999999;
 }
 .focus-teacher .setting-infor-inner .fun-follow-item .follow-list .follow-con-fun .fresh-add {
   font-size: 14px;
