@@ -9,7 +9,6 @@ var dropdown = dropdown || {};
 //var $ = require('jquery');
 
 
-
 //头部菜单显示隐藏
 dropdown.show = function (e) {
     var that = $(e);

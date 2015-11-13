@@ -7,9 +7,6 @@ body {
   padding: 10px 0;
   background-color: #3bafda;
 }
-#module-myheader .container {
-  width: 1050px;
-}
 #module-myheader .user-avatar {
   margin-right: 10px;
 }
