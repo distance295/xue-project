@@ -1,1 +1,1 @@
-fis3 release pages -d ../website
+fis3 release tmpl -wl 
