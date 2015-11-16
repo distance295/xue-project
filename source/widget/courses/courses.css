@@ -82,15 +82,6 @@ li {
   margin-bottom: 0;
   font-weight: normal;
 }
-.course-list a {
-  color: #333333;
-}
-.course-list a:hover {
-  color: #269cc8;
-}
-.course-list a:focus {
-  color: #269cc8;
-}
 .course-list .ui-avatar {
   width: 80px;
   text-align: center;
