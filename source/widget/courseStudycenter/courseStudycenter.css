@@ -82,6 +82,19 @@ body {
   background-color: #3bafda;
   border-color: #2392ba;
 }
+.courseList-wrap button.success,
+.courseList-wrap .button.success {
+  background-color: #37BC9B;
+  border-color: #2c967c;
+  color: #FFFFFF;
+}
+.courseList-wrap button.success:hover,
+.courseList-wrap button.success:focus,
+.courseList-wrap .button.success:hover,
+.courseList-wrap .button.success:focus {
+  background-color: #2c967c;
+  color: #FFFFFF;
+}
 .courseList-wrap button:hover,
 .courseList-wrap button:focus,
 .courseList-wrap .button:hover,
