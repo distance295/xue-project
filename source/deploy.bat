@@ -1,1 +1,3 @@
-fis3 release pages -d ../website
+@echo off
+:: loading...
+fis3 release tmpl -d ../website

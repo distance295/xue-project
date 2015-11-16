@@ -55,13 +55,13 @@
             <div class="cl-bank hidden">
                 <div class="cl-input">
                     <span>充值金额：</span>
-                    <input type="text">
+                    <input type="text" id="cardPwdText" />
                     <span>元</span>
                     <p>只能填写大于等于10，小于等于50000 的整数金额</p>
                     <button class="cl-btn">下一步</button>
                 </div>
-                <div class="payment_bank">
-                    <div class="recharge_sum">充值金额：<strong>100</strong>元</div>
+                <div class="payment_bank" style="display:none;">
+                    <div class="recharge_sum">充值金额：<strong id="numMoney">100</strong>元</div>
                     <input type="hidden" autocomplete="off" name="default_bank" id="default_bank" value="1" paytype="1">
                     <input type="hidden" autocomplete="off" name="paytype_id" id="paytype_id" value="">
                     <div class="paylists hasCkecked" style="display: block;">
@@ -145,31 +145,28 @@
                                 <input type="radio" autocomplete="off" payid="401113" paytype="1" name="bank_id" value="HZCBB2C">
                                 <label for="" class="bank-item HCCB" title="杭州银行"></label>
                             </li>
-                            <li class="list_more" style="display: none;">
+                            <li>
                                 <input type="radio" autocomplete="off" payid="401114" paytype="1" name="bank_id" value="BJRCB">
                                 <label for="" class="bank-item RCB" title="中国农村商业银行"></label>
                             </li>
-                            <li class="list_more" style="display: none;">
+                            <li>
                                 <input type="radio" autocomplete="off" payid="401117" paytype="1" name="bank_id" value="SHBANK">
                                 <label for="" class="bank-item SHYH" title="上海银行"></label>
                             </li>
-                            <li class="list_more" style="display: none;">
+                            <li>
                                 <input type="radio" autocomplete="off" payid="401118" paytype="1" name="bank_id" value="FDB">
                                 <label for="" class="bank-item FDYH" title="富滇银行"></label>
                             </li>
-                            <li class="list_more" style="display: none;">
+                            <li>
                                 <input type="radio" autocomplete="off" payid="401120" paytype="1" name="bank_id" value="NBBANK">
                                 <label for="" class="bank-item NBCB" title="宁波银行"></label>
                             </li>
 
                         </ul>
-                        <p class="bank_more">
-                            <span>更多银行</span>
-                        </p>
                     </div>
                      <div class="formPastPayment">
-                    <button class="btn btn_blue" type="button">去充值</button>
-                </div>
+                         <button class="btn btn_blue" type="button">去充值</button>
+                     </div>
                 </div>
                
                 <div class="prompt-box">

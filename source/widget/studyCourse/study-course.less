@@ -19,7 +19,7 @@
 	background: #f9f9f9;
 	.ui-margin {width: 980px;margin: 0 auto;overflow: hidden;}
 		h2.content-study-title {
-			height:47px;line-height:47px;font-size:16px;font-family:@fw;font-weight:normal;color:#333333;padding-left:10px;
+			height:47px;line-height:47px;font-size:16px;font-weight:normal;color:#333333;padding-left:10px;
 			strong {font-size:14px;color: #e74c3c;font-weight: normal;}
 		}
 		//课程视频和列表
@@ -28,18 +28,21 @@
 			//课程视频
 			.player-live {
 				float:left;width:745px;height:465px;
-				#VideoPlay {width:730px;height:453px;margin:12px 0 0 10px;overflow:hidden;}
+				#VideoPlay {
+					width:730px;height:453px;margin:12px 0 0 10px;overflow:hidden;
+				}
 			}
 			//课程讲节汇总列表
 			   .player-list {
 			   	 float:right;width:230px;height:465px;border-bottom:1px solid #efefef;background: url(img/tingkeyebg.jpg) repeat-y;
 			   	 //讲--节--列表tab切换
 					ul.list-title-tabs {
-					width: 230px;height: 36px;line-height: 36px;overflow: hidden;margin:1px auto 0;background: url(img/tab_title_bg_03.jpg) no-repeat;
+					width: 230px;height: 36px;line-height: 36px;overflow: hidden;margin:1px auto 0;background: url(img/tab_title_bg_03.jpg) no-repeat;padding:0;
 							li {
 							  float: right;display: inline;width: 115px;overflow: hidden;text-align: center;
 								 a {
-			                         display:block;width: 115px; text-decoration: none; font-size: 14px;color: #333; 
+			                         display:block;width: 115px; text-decoration: none; font-size: 14px;color: #333;
+			                         outline: none; 
 			               		}
 							   &.current {
 				                  a {color: #fff;}
@@ -58,14 +61,14 @@
 							ul.select-list{
 								width:230px;overflow: hidden;margin:0;padding:0;background: url(img/scroll_ul.jpg) 22px 0 repeat-y;
 								li.scrolls_title {
-									height: 41px;line-height: 41px;border-bottom: 1px solid #e9e9e9;background: url(img/tingkeyebg.jpg) repeat-y;padding-left: 20px;font-size: 14px;font-family: @fs;
+									height: 41px;line-height: 41px;border-bottom: 1px solid #e9e9e9;background: url(img/tingkeyebg.jpg) repeat-y;padding-left: 20px;font-size: 14px;
 								}
 				                  li {
 				                  	 padding-left: 42px;background: url(img/scroll_li.jpg) 28px 20px no-repeat;
 				                    p.icon-live {
 				                       height: 43px;line-height: 43px;background: url(img/icon2_03.png) 1px 14px no-repeat;padding-left: 20px;margin:0;
 				                  	 	a {
-				                  	 		display: block;width: 140px;font-size: 14px;color: #666;font-family: @fs;
+				                  	 		display: block;width: 140px;font-size: 14px;color: #666;
 				                  	 		&.icon-sign {
 				                  	 			background: url(img/icon_07_white.gif) right 14px no-repeat;
 				                  	 		}
@@ -100,7 +103,7 @@
 				                  	 			background: url(img/icon_07_white.gif) right 14px no-repeat;
 				                  	 		}
 					                  	 	a {
-										 	 	display: block;width: 145px;font-size: 12px;color: #666;font-family: @fs;
+										 	 	display: block;width: 145px;font-size: 12px;color: #666;
 										 	 	&:hover {color: #3bafda;}
 										 	 }
 									 	 }
@@ -132,7 +135,7 @@
 		    	.look-focus-show {
 		    		overflow: hidden;line-height: 30px;display: block;
 		    		.focus-content {
-		    			float: left;display: inline;font-size: 12px;font-family: @fs;
+		    			float: left;display: inline;
 		    			span.name {float: left;height:30px;overflow: hidden;color: #666666;}
 		    			span.text {
 		    				float: left;color: #666666;padding-right:10px;
@@ -147,25 +150,25 @@
 		    	}
 		    	.look-Focus-Push {
 		    		display: none;overflow: hidden;line-height: 30px;
-		    		.time-end {float: left;display: inline;width: 85px;background: url('img/icon_time.png') 0 5px no-repeat;padding-left: 25px;font-size: 12px;font-family: @fs;}
+		    		.time-end {float: left;display: inline;width: 85px;background: url('img/icon_time.png') 0 5px no-repeat;padding-left: 25px;}
 		    		.input-text {
-		    			float: left;display: inline;width: 475px; height: 30px;border: 1px solid #ededed;background: #fcfcfc;padding:0 5px;font-size: 12px;font-family: @fs;
+		    			float: left;display: inline;width: 475px; height: 30px;border: 1px solid #ededed;background: #fcfcfc;padding:0 5px;
 		    		}
 		    		.btn-submit {
-		    			float: left;display: inline;width: 95px;height: 30px;border: 1px solid #ededed;background: #3399cc;margin:0 5px;color: #fff;font-size: 12px;font-family: @fs;padding:0;
+		    			float: left;display: inline;width: 95px;height: 30px;border: 1px solid #ededed;background: #3399cc;margin:0 5px;color: #fff;
 		    		}
 		    		.btn-cancel {
-		    			float: left;display: inline;width: 58px;height: 28px;line-height: 28px; border: 1px solid #ededed;background: #fcfcfc;text-align: center;font-size: 12px;font-family: @fs;
+		    			float: left;display: inline;width: 58px;height: 28px;line-height: 28px; border: 1px solid #ededed;background: #fcfcfc;text-align: center;
 		    		}
 		    		span.errorTips {
-		    			width: 180px;height: 40px;line-height:40px;background: #000;border-radius: 3px; position: absolute;left:280px;top:-5px;z-index: 10;color: #fff;text-align: center;opacity:0.7;font-size: 12px;font-family:@fs;
+		    			width: 180px;height: 40px;line-height:40px;background: #000;border-radius: 3px; position: absolute;left:280px;top:-5px;z-index: 10;color: #fff;text-align: center;opacity:0.7;
 		    		}
 		    		span.textTips {
 		    			width: 150px;height: 40px;line-height:40px;border-radius: 3px; position: absolute;left:105px;top:-5px;z-index: 10;color: #999;
 		    		}
 		    	}
 		    	.push-succeed {
-		    		display: none;width: 750px;height: 30px;background: #fff; position: absolute;left: 10px;top:0;z-index: 10;color: #666;font-size: 12px;font-family: @fs;
+		    		display: none;width: 750px;height: 30px;background: #fff; position: absolute;left: 10px;top:0;z-index: 10;color: #666;
 		    		em {padding-right: 10px;font-style: normal;}
 		    		span.btn-succeed {display:inline-block;width:155px;height:28px;line-height:28px;text-align: center; border: 1px solid #ededed;background: #fcfcfc;margin-left: 10px;color: #999;}
 		    	}
@@ -176,7 +179,7 @@
 		    	.button-left {
 		    		float: left;display: inline;overflow: hidden;width: 80px;height: 30px;margin-right: 20px;
 		    		button {
-		    			display:block;width: 80px;height: 30px;background: url(img/btn_look.png) no-repeat;text-indent: -99999em;
+		    			display:block;width: 80px;height: 30px;background: url(img/btn_look.png) no-repeat;text-indent: -99999em;border:0;
 		    		}
 		    		button.btn-disabled {background: url(img/btn_look_no.png) no-repeat;}
 		    	}

@@ -31,9 +31,14 @@ node_modules
 /website
 /source/components
 /source/config
+/source/pages
+/source/lib/Font-Awesome/master
 .DS_Store
 *.db
 *.bak
 *.tmp
 *.cmd
 .svn
+source/widget/perfect-information/perfect-information.css
+source/widget/glory/glory.css
+source/widget/courses/courses.css
