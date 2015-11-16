@@ -17,7 +17,6 @@
   height: 47px;
   line-height: 47px;
   font-size: 16px;
-  font-family: "Microsoft YaHei";
   font-weight: normal;
   color: #333333;
   padding-left: 10px;
@@ -58,6 +57,7 @@
   overflow: hidden;
   margin: 1px auto 0;
   background: url(img/tab_title_bg_03.jpg) no-repeat;
+  padding: 0;
 }
 #stude-course-container .content-study-player .player-list ul.list-title-tabs li {
   float: right;
@@ -72,6 +72,7 @@
   text-decoration: none;
   font-size: 14px;
   color: #333;
+  outline: none;
 }
 #stude-course-container .content-study-player .player-list ul.list-title-tabs li.current a {
   color: #fff;
@@ -107,7 +108,6 @@
   background: url(img/tingkeyebg.jpg) repeat-y;
   padding-left: 20px;
   font-size: 14px;
-  font-family: "SimSun";
 }
 #stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-list li {
   padding-left: 42px;
@@ -125,7 +125,6 @@
   width: 140px;
   font-size: 14px;
   color: #666;
-  font-family: "SimSun";
 }
 #stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-list li p.icon-live a.icon-sign {
   background: url(img/icon_07_white.gif) right 14px no-repeat;
@@ -176,7 +175,6 @@
   width: 145px;
   font-size: 12px;
   color: #666;
-  font-family: "SimSun";
 }
 #stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-say-list li p.icon-corner span a:hover {
   color: #3bafda;
@@ -215,8 +213,6 @@
 #stude-course-container .look-focus-item .look-focus-left .look-focus-show .focus-content {
   float: left;
   display: inline;
-  font-size: 12px;
-  font-family: "SimSun";
 }
 #stude-course-container .look-focus-item .look-focus-left .look-focus-show .focus-content span.name {
   float: left;
@@ -257,8 +253,6 @@
   width: 85px;
   background: url('img/icon_time.png') 0 5px no-repeat;
   padding-left: 25px;
-  font-size: 12px;
-  font-family: "SimSun";
 }
 #stude-course-container .look-focus-item .look-focus-left .look-Focus-Push .input-text {
   float: left;
@@ -268,8 +262,6 @@
   border: 1px solid #ededed;
   background: #fcfcfc;
   padding: 0 5px;
-  font-size: 12px;
-  font-family: "SimSun";
 }
 #stude-course-container .look-focus-item .look-focus-left .look-Focus-Push .btn-submit {
   float: left;
@@ -280,9 +272,6 @@
   background: #3399cc;
   margin: 0 5px;
   color: #fff;
-  font-size: 12px;
-  font-family: "SimSun";
-  padding: 0;
 }
 #stude-course-container .look-focus-item .look-focus-left .look-Focus-Push .btn-cancel {
   float: left;
@@ -293,8 +282,6 @@
   border: 1px solid #ededed;
   background: #fcfcfc;
   text-align: center;
-  font-size: 12px;
-  font-family: "SimSun";
 }
 #stude-course-container .look-focus-item .look-focus-left .look-Focus-Push span.errorTips {
   width: 180px;
@@ -309,8 +296,6 @@
   color: #fff;
   text-align: center;
   opacity: 0.7;
-  font-size: 12px;
-  font-family: "SimSun";
 }
 #stude-course-container .look-focus-item .look-focus-left .look-Focus-Push span.textTips {
   width: 150px;
@@ -333,8 +318,6 @@
   top: 0;
   z-index: 10;
   color: #666;
-  font-size: 12px;
-  font-family: "SimSun";
 }
 #stude-course-container .look-focus-item .look-focus-left .push-succeed em {
   padding-right: 10px;
@@ -373,6 +356,7 @@
   height: 30px;
   background: url(img/btn_look.png) no-repeat;
   text-indent: -99999em;
+  border: 0;
 }
 #stude-course-container .look-focus-item .look-focus-right .button-left button.btn-disabled {
   background: url(img/btn_look_no.png) no-repeat;
