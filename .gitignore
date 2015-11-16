@@ -31,6 +31,7 @@ node_modules
 /website
 /source/components
 /source/config
+/source/pages
 /source/lib/Font-Awesome/master
 .DS_Store
 *.db
