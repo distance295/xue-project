@@ -1,5 +1,6 @@
 <!-- 公共头部 -->
 <link rel="import" href="../Layer/layer.UserHome.head.tpl?__inline">
+
 <!-- 学习中心区域 -->
 <div class="container top m20">
     <div class="row">

@@ -6,24 +6,24 @@
     <!--个人设置-左侧导航-->
     <ul id="side-nav" class="nav-setting">
         <li class="nav-header"><span>资料管理</span></li>
-        <li data-id="Info"><a href="#">基本资料</a></li>
-        <li data-id="Avatar"><a class="current" href="#">头像设置</a></li>
-        <li data-id="Password"><a href="#">密码设置</a></li>
-        <li data-id="Phone"><a href="#">手机号设置</a></li>
-        <li data-id="Address"><a href="#">收货信息</a></li>
-        <li data-id="OpenID"><a href="#">第三方账户绑定</a></li>
+        <li data-id="Info"><a href="UserManage.Info.html">基本资料</a></li>
+        <li data-id="Avatar"><a class="current" href="UserManage.Avatar.html">头像设置</a></li>
+        <li data-id="Password"><a href="UserManage.Password.html">密码设置</a></li>
+        <li data-id="Phone"><a href="UserManage.Phone.html">手机号设置</a></li>
+        <li data-id="Address"><a href="UserManage.Address.html">收货信息</a></li>
+        <li data-id="OpenID"><a href="UserManage.OpenID.html">第三方账户绑定</a></li>
         <li class="nav-header"><span>订单管理</span></li>
-        <li data-id="Order"><a href="#">我的订单</a></li>
-        <li data-id="Bill"><a href="#">我的发票</a></li>
+        <li data-id="Order"><a href="UserManage.Order.html">我的订单</a></li>
+        <li data-id="Bill"><a href="UserManage.Bill.html">我的发票</a></li>
         <li class="nav-header"><span>账户管理</span></li>
-        <li data-id="Prepaid"><a href="#">账户充值</a></li>
-        <li data-id="Balance"><a href="#">我的余额</a></li>
-        <li data-id="GiftCard"><a href="#">代金卡使用</a></li>
-        <li data-id="Activation"><a href="#">代金卡激活记录</a></li>
+        <li data-id="Prepaid"><a href="UserManage.Prepaid.html">账户充值</a></li>
+        <li data-id="Balance"><a href="UserManage.Balance.html">我的余额</a></li>
+        <li data-id="CardActivation"><a href="UserManage.CardActivation.html">代金卡使用</a></li>
+        <li data-id="CardRecord"><a href="UserManage.CardRecord.html">代金卡激活记录</a></li>
         <li data-id="Coupon"><a href="#">优惠券管理</a></li>
         <li class="nav-header"><span>订单/课程激活</span></li>
-        <li data-id="Certificate"><a href="#">听课证激活</a></li>
-        <li data-id="BindingCard"><a href="#">课程绑定卡激活</a></li>
+        <li data-id="Certificate"><a href="UserManage.Certificate.html">听课证激活</a></li>
+        <li data-id="BindingCard"><a href="UserManage.BindingCard.html">课程绑定卡激活</a></li>
         <li class="nav-header"><span>积分等级</span></li>
         <li data-id="Points"><a href="#">我的积分/等级</a></li>
     </ul>

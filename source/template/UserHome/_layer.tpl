@@ -8,7 +8,19 @@
             <!-- *********************** 内容区域开始 *********************** -->
             <link rel="import" href="../../widget/UserHome.alert/index.tpl?__inline">
 
-
+            <ul class="nav nav-tabs">
+                <li role="presentation" class="active"><a href="#">全部</a></li>
+                <li><a href="#">直播</a></li>
+                <li><a href="#">录播</a></li>
+                <li><a href="#">已过期课程</a></li>
+<!--
+                <li class="pull-right">
+                    <a href="#" class="btn btn-danger">
+                        <i class="fa fa-plus"></i> 发新鲜事
+                    </a>
+                </li>
+-->
+            </ul>
             <div class="panel panel-default ">
                 <div class="panel-body">left 个人中心左边主要内容区哉</div>
             </div>

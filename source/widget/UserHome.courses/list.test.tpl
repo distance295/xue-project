@@ -4,7 +4,7 @@
     @require coursestudycenter.js
 -->
 
-<div class="courselayout-list">
+<div class="courselayout-list courseList-wrap">
     <div class="courseList-title">
         <p>初一数学人教版目标满分班 随堂测</p>
     </div>

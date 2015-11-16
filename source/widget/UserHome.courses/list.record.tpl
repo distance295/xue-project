@@ -4,7 +4,7 @@
     @require coursestudycenter.less
 -->
 
-<div class="courselayout-list">
+<div class="courselayout-list courseList-wrap">
     <div class="courseList-title">
         <p>初一数学目标满分班人教版 录播课程</p>
     </div>

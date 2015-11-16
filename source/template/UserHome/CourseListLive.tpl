@@ -1,5 +1,6 @@
 <!-- 公共头部 -->
 <link rel="import" href="../Layer/layer.UserHome.head.tpl?__inline">
+
 <!-- 学习中心区域 -->
 <div class="container top m20">
     <div class="row">
@@ -15,14 +16,14 @@
         </div>
     </div>
 </div>
+
 <!-- 页面配置 -->
 <script>
     var PAGE_CONFIG = {
         ID: 'Courses',
         MODULE: 'UserHome',
-        TITLE: '录播列表-学习中心',
+        TITLE: '直播列表-学习中心',
     };
-
 </script>
 
 <!-- 公共底部 -->
