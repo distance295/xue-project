@@ -30,6 +30,20 @@ body {
   margin: 0;
   padding: 0;
 }
+.blue-radius-btn {
+  background: #3bafda;
+  color: #fff;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+}
+.blue-radius-btn:hover,
+.blue-radius-btn:focus {
+  background: #359dc4;
+  color: #fff;
+}
 .homework-wrapper {
   width: 1190px;
   margin: 20px auto;
@@ -156,6 +170,7 @@ body {
   margin-left: 10px;
   font-family: "SimSun";
   font-size: 14px;
+  line-height: normal;
   cursor: pointer;
 }
 .homework-wrapper .homework-left-all .homework-header h2 .homework-remind-btn:hover {
@@ -285,6 +300,10 @@ body {
   width: 54px;
   text-align: center;
   height: 100%;
+}
+.homework-wrapper .homework-bigImg-box .homework-rightMeun ul {
+  margin: 0;
+  padding: 0;
 }
 .homework-wrapper .homework-bigImg-box .homework-rightMeun ul li {
   float: left;
@@ -428,6 +447,10 @@ body {
   font-size: 12px;
   font-family: "SimSun";
 }
+.homework-wrapper .homework-Feedback-video .homework-videoInfo ul {
+  margin: 0;
+  padding: 0;
+}
 .homework-wrapper .homework-Feedback-video .homework-videoInfo ul li {
   float: left;
   margin-right: 50px;
@@ -467,6 +490,10 @@ body {
   margin-left: 5px;
   margin-top: 2px;
 }
+.homework-wrapper .homework-comment-box .homework-star .homework-star-area ul {
+  padding: 0;
+  margin: 0;
+}
 .homework-wrapper .homework-comment-box .homework-star .homework-star-area ul li {
   float: left;
   width: 16px;
@@ -493,7 +520,8 @@ body {
   padding: 5px 1.5%;
   margin-top: 15px;
   box-shadow: none;
-  overflow: hidden;
+  overflow-y: auto;
+  width: 100%;
 }
 .homework-wrapper .homework-comment-box .homework-comment {
   float: left;
@@ -511,6 +539,7 @@ body {
   font-size: 12px;
 }
 .homework-wrapper .homework-submit-box {
+  float: left;
   width: 100%;
   margin-top: 10px;
 }
@@ -528,6 +557,7 @@ body {
   padding: 8px 26px;
   margin-left: 10px;
   cursor: pointer;
+  line-height: normal;
   font-family: "SimSun";
   font-size: 14px;
 }
