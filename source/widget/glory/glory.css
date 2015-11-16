@@ -4,6 +4,7 @@
   border: 1px solid #eaeaea;
   line-height: 38px;
   margin: 0;
+  padding-left: 0;
 }
 .screen-rank li {
   list-style: none;
@@ -17,6 +18,48 @@
   border-right: 1px solid #eaeaea;
   color: #1e89e0;
 }
+.gloryConPicId {
+  overflow: hidden;
+  width: 100%;
+  background: rgba(0, 0, 0, 0) url("img/glory-banner.jpg") no-repeat scroll center top;
+}
+.gloryConPicId .gloryConPicId-inner {
+  width: 1190px;
+  height: 380px;
+  margin: 0 auto;
+  position: relative;
+}
+.gloryConPicId .gloryConPicId-inner a {
+  display: block;
+  height: 380px;
+  text-indent: -999999em;
+}
+.gloryConPicId .glory-grades-list {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  width: 280px;
+  height: 300px;
+  background: rgba(0, 0, 0, 0.6);
+  list-style: none;
+  color: #fff;
+  padding-left: 0;
+}
+.gloryConPicId .glory-grades-list h3 {
+  border-bottom: 1px solid #000;
+  font-size: 16px;
+  line-height: 50px;
+  font-weight: normal;
+  margin-bottom: 15px;
+  padding-left: 23px;
+  margin-top: 0;
+}
+.gloryConPicId .glory-grades-list li {
+  line-height: 30px;
+  font-size: 12px;
+  padding-left: 23px;
+  font-family: "SimSun";
+}
 .glory-content {
   margin: 0;
   font-family: 'SimSun';
@@ -25,6 +68,8 @@
   margin-right: 10px;
   overflow: hidden;
   width: 290px;
+  padding-left: 0;
+  list-style: none;
 }
 .glory-content li {
   margin-bottom: 15px;
@@ -157,4 +202,287 @@
 }
 .window_detail a.learning_course_name:hover {
   text-decoration: underline;
+}
+.wrapper_body {
+  margin: 0 auto;
+  padding: 0;
+  width: 980px;
+}
+.wrapper_body .log {
+  background: #ececec none repeat scroll 0 0;
+  border-radius: 3px;
+  clear: both;
+  margin: 30px auto;
+  overflow: hidden;
+  padding: 5px;
+  width: 968px;
+}
+.wrapper_body .log .log_left {
+  float: left;
+}
+.wrapper_body .log .log_left .btn {
+  border: 0 none;
+  border-radius: 3px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+.wrapper_body .log .register {
+  background-color: #fff;
+  height: 450px;
+  margin: 0;
+  padding-top: 40px;
+  width: 568px;
+}
+.wrapper_body .log .log_right {
+  background: #ffffff ;
+  color: #676767;
+  float: right;
+  font-size: 14px;
+  height: 450px;
+  padding: 20px 10px;
+  text-align: center;
+  width: 360px;
+}
+.glory_body .glory_log_submit {
+  _height: 780px;
+}
+.glory_body .glory_log_submit .log_left {
+  height: 780px;
+  _height: 740px;
+  overflow: hidden;
+}
+.glory_body .glory_log_submit .log_left .form_glory {
+  width: 510px;
+  margin-left: 40px;
+}
+.glory_body .glory_log_submit .log_left .form_glory label {
+  float: left;
+  display: inline;
+  font-size: 14px;
+  margin-right: 5px;
+}
+.glory_body .glory_log_submit .log_left .form_glory label i {
+  color: #CC0000;
+  padding-right: 3px;
+}
+.glory_body .glory_log_submit .log_left .form_glory span {
+  float: left;
+  display: inline;
+}
+.glory_body .glory_log_submit .log_left .form_glory .grey {
+  color: #999;
+}
+.glory_body .glory_log_submit .log_left .formLabel_text span.grey {
+  margin-top: 2px;
+}
+.glory_body .glory_log_submit .log_left .formLabel_text p.text {
+  height: 110px;
+}
+.glory_body .glory_log_submit .log_left .formLabel_text p.text textarea {
+  width: 397px;
+  height: 82px;
+  color: #999;
+  border: 1px solid #999;
+  padding: 5px;
+  margin: 10px;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.glory_body .glory_log_submit .log_left .formLabel_text p.info {
+  color: #cc0000;
+  padding-left: 10px;
+}
+.glory_body .glory_log_submit .log_left .formLabel_teacher {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.glory_body .glory_log_submit .log_left .formLabel_teacher .teachers {
+  width: 100%;
+  overflow: hidden;
+  clear: both;
+  margin: 25px 0 20px 10px;
+  *margin: 10px 0 10px 10px;
+}
+.glory_body .glory_log_submit .log_left .formLabel_teacher .teachers span {
+  float: left;
+  display: inline;
+  margin-right: 10px;
+  *width: 80px;
+  *margin-right: 0;
+}
+.glory_body .glory_log_submit .log_left .formLabel_teacher .teachers span input {
+  float: left;
+  margin-top: 3px;
+  margin-right: 5px;
+}
+.glory_body .glory_log_submit .log_left .up_avatar_con {
+  overflow: hidden;
+  margin-bottom: 30px;
+  _width: 100%;
+}
+.glory_body .glory_log_submit .log_left .up_avatar_con .up_avatar_pic {
+  float: left;
+  display: inline;
+  width: 140px;
+  height: 140px;
+  background: url('http://img04.xesimg.com/glory/up_pic.png') no-repeat;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.glory_body .glory_log_submit .log_left .up_avatar_con .up_avatar_info {
+  float: left;
+  display: inline;
+  color: #666;
+  line-height: 180%;
+}
+.glory_body .glory_log_submit .log_left .formFileUpPic {
+  overflow: hidden;
+  margin-bottom: 20px;
+  _width: 100%;
+}
+.glory_body .glory_log_submit .log_left .formFileUpPic span {
+  float: left;
+}
+.glory_body .glory_log_submit .log_left .formFileUpPic .file_up_pic {
+  position: relative;
+  overflow: hidden;
+}
+.glory_body .glory_log_submit .log_left .formFileUpPic .file_up_pic .input_file {
+  width: 110px;
+  cursor: pointer;
+  height: 28px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.glory_body .glory_log_submit .log_left .formFileUpPic .file_up_pic .btn_up {
+  width: 110px;
+  height: 28px;
+  background: url("http://img04.xesimg.com/button_avatar.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  text-indent: -9999em;
+  margin-right: 15px;
+}
+.glory_body .glory_log_submit .log_left .formFileUpPic .grey {
+  margin-top: 5px;
+}
+.glory_body .glory_log_submit .log_left .formLabel_btn {
+  padding-left: 12px;
+}
+.glory_body .glory_log_submit .log_left .formLabel_btn .btn {
+  width: 99px;
+  height: 29px;
+  line-height: 17px;
+  font-size: 16px;
+  font-family: "Microsoft YaHei";
+  background: #F38920;
+}
+.glory_body .glory_log_submit .log_left .formLabel {
+  height: 50px;
+  margin-bottom: 5px;
+  *margin-bottom: 0;
+  clear: left;
+  color: #333333;
+  overflow: hidden;
+}
+.glory_body .glory_log_submit .log_left .formLabel select {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: #B1B1B1 #D5D5D5 #D5D5D5 #B1B1B1;
+  border-image: none;
+  border-right: 1px solid #D5D5D5;
+  border-style: solid;
+  border-width: 1px;
+  color: #999999;
+  margin-bottom: 3px;
+  padding: 4px 1px;
+  margin-right: 5px;
+  width: 130px;
+  overflow: hidden;
+}
+.glory_body .glory_log_submit .log_left .tx_tips {
+  float: left;
+  width: 100%;
+  padding-left: 85px;
+  height: 20px;
+  color: #ff6633;
+}
+.glory_body .glory_log_submit .log_left .tx_tips strong {
+  color: #ff6633;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.glory_body .glory_log_submit .log_right {
+  height: 780px;
+  _height: 740px;
+  background: url("http://img04.xesimg.com/glory/hline.png") no-repeat left center #ffffff;
+}
+.glory_body .glory_log_submit .log_right .glory_from_pic {
+  width: 340px;
+}
+.layer_con_submit {
+  width: 270px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+}
+.layer_con_submit .leyer_text {
+  line-height: 180%;
+  color: #666;
+  margin-bottom: 20px;
+}
+.layer_con_submit .submits_con {
+  overflow: hidden;
+  width: 170px;
+  margin: 10px auto 0;
+}
+.layer_con_submit .submits_con .btn_wrap_orange {
+  float: left;
+}
+.layer_con_submit .submits_con .btn_wrap_orange button {
+  width: 68px;
+  height: 27px;
+  line-height: 25px;
+  background: #F38920;
+  font-family: "Microsoft YaHei";
+  font-size: 14px;
+  color: #fff;
+}
+.layer_con_submit .submits_con .btn_wrap_gray {
+  float: right;
+  display: inline;
+}
+.layer_con_submit .submits_con .btn_wrap_gray .againReview {
+  display: block;
+  width: 82px;
+  height: 27px;
+  line-height: 27px;
+  font-family: "Microsoft YaHei";
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.thank_teacher {
+  width: 468px;
+  height: 40px;
+  background: #fff6de;
+  border: 1px solid #f5d0b2;
+  color: #dd6300;
+  line-height: 40px;
+  margin: 10px 0 0 0;
+  padding-left: 22px;
+}
+#noSubject {
+  float: left;
+  wdith: 100%;
+  margin-left: 15px;
+  overflow: hidden;
 }

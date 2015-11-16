@@ -75,6 +75,13 @@ li {
   padding: 13px 10px;
   overflow: hidden;
 }
+.course-list .button {
+  display: inline-block;
+}
+.course-list label {
+  margin-bottom: 0;
+  font-weight: normal;
+}
 .course-list a {
   color: #333333;
 }
@@ -104,6 +111,7 @@ li {
   height: 60px;
   margin-left: 0;
   margin-bottom: 9px;
+  padding-left: 0;
 }
 .course-list .ui-avatar .avatar-photo ul li {
   overflow: hidden;
@@ -253,15 +261,25 @@ li {
 .course-list .cancel-courseList {
   float: right;
   font-size: 12px;
-  color: #3bafda;
   height: 137px;
   line-height: 220px;
+}
+.course-list .cancel-courseList a {
+  color: #3bafda;
+}
+.course-list .cancel-courseList em {
+  font-style: normal;
+  color: #666666;
+}
+.course-list .cancel-courseList em i {
+  font-style: normal;
 }
 .course-list .course-num {
   width: 86px;
   float: right;
   font-family: 'Microsoft YaHei';
   text-align: center;
+  padding-left: 0;
 }
 .course-list .course-num p {
   font-size: 14px;
@@ -275,6 +293,7 @@ li {
 }
 .course-list .course-right-info {
   margin-top: 24px;
+  padding-left: 0;
 }
 .course-list .course-right-info li {
   padding-left: 24px;
@@ -339,7 +358,6 @@ li {
 }
 .hot-course-list {
   padding: 10px 0;
-  background: #fcfcfc;
 }
 .hot-course-list .ui-avatar {
   margin-right: 10px;
@@ -402,6 +420,9 @@ li {
 .hot-course-list .course-detail .avatar-name .course-static strong {
   color: #e74c3c;
 }
+.hover-feed {
+  background: #fcfcfc;
+}
 .course-small-list {
   width: 315px;
   height: 115px;
@@ -418,6 +439,7 @@ li {
   position: absolute;
   right: -25px;
   color: #fff;
+  font-size: 14px;
 }
 .course-small-list .label-subject {
   background: #ffbc3c;
@@ -436,6 +458,16 @@ li {
 }
 .course-small-list .course-detail p.tip-video {
   margin: 3px 0;
+}
+.course-small-list .course-detail p.tip-video .tip-video-con {
+  width: 126px;
+  overflow: hidden;
+  height: 14px;
+}
+.course-small-list .course-detail p.tip-video .tip-video-time {
+  width: 72px;
+  height: 14px;
+  overflow: hidden;
 }
 .course-small-list .course-detail p.tip-for {
   margin: 3px 0;
@@ -456,6 +488,9 @@ li {
   height: 266px;
   width: 375px;
   border-top: none;
+}
+.teacher-bomb ul {
+  padding-left: 0;
 }
 .teacher-bomb .dialog-second {
   height: 155px;
@@ -578,6 +613,7 @@ li {
 .teacher-bomb .dialog-down-wrap .dialog-down ul {
   display: inline-block;
   overflow: hidden;
+  padding-left: 0;
 }
 .teacher-bomb .dialog-down-wrap .dialog-down ul li {
   color: #666666;
