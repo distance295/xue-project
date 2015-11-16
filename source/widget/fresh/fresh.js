@@ -40,8 +40,8 @@ fresh.media = fresh.media || {};
                     _img.siblings('.fresh-type-img').html(_tpl);   
             	}
 	        }
-	        _img.hide();
-	        _img.siblings('.fresh-type-img').show();    
+	        _img.addClass('hide');
+	        _img.siblings('.fresh-type-img').removeClass('hide');    
         }
     }
 
@@ -55,9 +55,14 @@ fresh.media = fresh.media || {};
         var that = $(dom), 
             _wrap = that.closest('.fresh-detail'), 
             _item = _wrap.find('.fresh-type-answer');
-        _item.toggle();
-        if(_item.hasClass('fresh-big-img-answer')){
+
+        if(_item.eq(0).hasClass('hide')){
             _item.find('.fresh-sign-remove').remove();
+            _item.eq(0).removeClass('hide');
+            _item.eq(1).addClass('hide');
+        }else{
+            _item.eq(1).removeClass('hide');
+            _item.eq(0).addClass('hide');
         }
     }
 
@@ -71,7 +76,7 @@ fresh.media = fresh.media || {};
         if($(e.target).data('type') == 'radio'){
             return false;
         }else{
-            that.hide().siblings('.fresh-type-answer').show();
+            that.addClass('hide').siblings('.fresh-type-answer').removeClass('hide');
             if(that.hasClass('fresh-big-img-answer')){
                 that.find('.fresh-sign-remove').remove();
             }
@@ -168,9 +173,9 @@ fresh.media = fresh.media || {};
     fm.video.videoPlay = function(dom){
         var videoBox = $(dom).closest('.fresh-type-video');
         //视频div层显示
-        videoBox.next().show();
+        videoBox.next().removeClass('hide');
         //视频缩略图隐藏
-        videoBox.hide();//图隐藏
+        videoBox.addClass('hide');//图隐藏
         var url = videoBox.next().data('url');
         var video_html ='<div class="fresh-media-big-video">'
                             + '<p class="fresh-media-packUp"><a href="javascript:void(0);" class="fresh-packUp-video">收起</a></p>'
@@ -216,8 +221,8 @@ fresh.media = fresh.media || {};
      */
     fm.video.videoHide = function(dom){
         var videoBox = $(dom).closest(".fresh-media-expand-video");
-        videoBox.hide();
-        videoBox.prev().show();
+        videoBox.addClass('hide');
+        videoBox.prev().removeClass('hide');
         videoBox.find(".fresh-media-big-video").remove();
   } 
 
@@ -253,7 +258,7 @@ fresh.comment = fresh.comment || {};
                           <div class="fresh-comment-btn">\
                              <span class="fresh-comment-size">您还可以输入<em class="fresh-comment-text-num"> 140 </em>字</span>\
                              <div class="fresh-comment-submit-btn">\
-                                <a href="javascript:void(0);" class="small radius button">评论</a>\
+                                <a href="javascript:void(0);" class="blue-radius-btn">评论</a>\
                              </div>\
                           </div>\
                           <span class="fresh-comment-tips hide"></span>\
@@ -270,7 +275,7 @@ fresh.comment = fresh.comment || {};
                           </div>\
                           <div class="fresh-comment-btn">\
                              <div class="fresh-comment-submit-btn">\
-                                <a href="javascript:void(0);" class="small radius button">评论</a>\
+                                <a href="javascript:void(0);" class="blue-radius-btn">评论</a>\
                              </div>\
                           </div>\
                           <span class="fresh-comment-tips hide"></span>\

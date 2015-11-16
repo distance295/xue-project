@@ -17,7 +17,7 @@ $(function(){
             $(this).find('.live-course-content').fadeIn(300);
         },
         mouseleave:function(){
-            $(this).find('.live-course-title').animate({"height":30},300);
+            $(this).find('.live-course-title').animate({"height":30},0);
             $(this).find('.live-course-show-title').fadeIn(300);
             $(this).find('.live-course-content').fadeOut(300);
         }
