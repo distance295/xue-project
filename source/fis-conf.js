@@ -9,20 +9,25 @@ fis.set('project.ignore', [
     '/static/**',
     '/source/**',
     '/widget/**',
+    '/widget/**',
     '/config/**',
     '/components/**',
     '/lib/foundation/**',
+    '/lib/Font-Awesome/master/**',
     'fis-conf.js',
+    'fis-conf-pages.js',
+    '/pages/**',
+    '/template/Layer/*',
     '/**/*.bat'
 ]);
-fis.match('/widget/**', {
-    useSameNameRequire: true,
-    isMod: true
-});
+//fis.match('/widget/**', {
+//    useSameNameRequire: true,
+//    isMod: true
+//});
 fis.match('::packager', {
     //    spriter: fis.plugin('csssprites'),
     postpackager: fis.plugin('loader', {
-        allInOne: true
+//        allInOne: true
     })
 });
 fis.config.merge({
@@ -38,17 +43,15 @@ fis.match('*.less', {
     parser: fis.plugin('less'), //启用fis-parser-less插件
     rExt: '.css'
 })
-//fis.match('*.png', {
-//    optimizer: fis.plugin('png-compressor', {
-//
-//      // pngcrush or pngquant
-//      // default is pngcrush
-//      type : 'pngcrush'
-//    })
-//  });
-fis.media('pages')
-    .match('/pages/(*).html', {
-        release: '/pages/$1.html'
+fis.match('/**/*.tpl', {
+    isHtmlLike: true,
+    release: false
+})
+fis.media('tmpl')
+    .match('/template/(**)/(*).tpl', {
+        isHtmlLike: true,
+        rExt: '.html',
+        release: '/pages/$1.$2.html'
     })
     .match('/lib/*', {
         release: '/lib/$0'
@@ -64,7 +67,6 @@ fis.media('pages')
     .match('/widget/(**)/*.less', {
         parser: fis.plugin('less'), //启用fis-parser-less插件
         rExt: '.css',
-//        optimizer: fis.plugin('clean-css'),
         packTo: '/static/css/$1.css',
         url: '/static/css/$1.css'
     })
@@ -73,15 +75,6 @@ fis.media('pages')
         url: '/static/img/$0'
     })
 
-    .match('/**/*.tpl', {
-        isHtmlLike: true,
-        release: false
-    })
-    //    // 压缩 index.tpl 内联的 js
-    //    .match('index.tpl:js', {
-    //        optimizer: fis.plugin('uglify-js')
-    //    })
-
-
+    
 
 ;
