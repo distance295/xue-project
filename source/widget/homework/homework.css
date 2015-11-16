@@ -30,6 +30,20 @@ body {
   margin: 0;
   padding: 0;
 }
+.blue-radius-btn {
+  background: #3bafda;
+  color: #fff;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+}
+.blue-radius-btn:hover,
+.blue-radius-btn:focus {
+  background: #359dc4;
+  color: #fff;
+}
 .homework-wrapper {
   width: 1190px;
   margin: 20px auto;
@@ -156,6 +170,7 @@ body {
   margin-left: 10px;
   font-family: "SimSun";
   font-size: 14px;
+  line-height: normal;
   cursor: pointer;
 }
 .homework-wrapper .homework-left-all .homework-header h2 .homework-remind-btn:hover {
@@ -286,6 +301,10 @@ body {
   text-align: center;
   height: 100%;
 }
+.homework-wrapper .homework-bigImg-box .homework-rightMeun ul {
+  margin: 0;
+  padding: 0;
+}
 .homework-wrapper .homework-bigImg-box .homework-rightMeun ul li {
   float: left;
   width: 100%;
@@ -336,31 +355,37 @@ body {
 }
 .homework-wrapper .homework-Feedback-cont {
   margin: 0 auto;
-  width: 470px;
+  width: 490px;
   font-family: "Microsoft YaHei", "微软雅黑";
 }
 .homework-wrapper .homework-Feedback-header {
   float: left;
-  width: 100%;
-  height: 140px;
-  margin-top: 40px;
+  width: 480px;
+  height: 153px;
+  margin: 31px 0 0 10px;
   position: relative;
 }
 .homework-wrapper .homework-Feedback-header .homework-likeEmote {
   position: absolute;
-  top: 30px;
+  top: 43px;
   left: 0;
 }
 .homework-wrapper .homework-Feedback-header .homework-dialog {
   position: absolute;
   top: 0;
-  left: 108px;
-  width: 144px;
-  height: 88px;
-  line-height: 71px;
-  text-align: center;
+  left: 107px;
+  width: 228px;
+  height: 73px;
   background: url("img/Dialog.png") no-repeat;
+}
+.homework-wrapper .homework-Feedback-header .homework-dialog .homework-tipsInfo {
+  display: block;
+  overflow: hidden;
+  margin: 9px 0 0 10px;
+  line-height: 22px;
+  text-align: left;
   font-size: 14px;
+  color: #333;
 }
 .homework-wrapper .homework-Feedback-header .homework-dialog em {
   color: #e74c3c;
@@ -392,12 +417,12 @@ body {
 }
 .homework-wrapper p.homework-Feedback-describe {
   float: left;
-  width: 100%;
+  width: 480px;
   color: #e74c3c;
   font-size: 14px;
   line-height: 24px;
   height: 200px;
-  margin-top: 20px;
+  margin: 20px 0 0 10px;
   overflow-y: auto;
   overflow-x: hidden;
   word-break: break-all;
@@ -405,10 +430,10 @@ body {
 }
 .homework-wrapper .homework-Feedback-video {
   float: left;
-  width: 100%;
+  width: 480px;
   color: #666;
   font-size: 12px;
-  margin-top: 10px;
+  margin: 10px 0 0 10px;
 }
 .homework-wrapper .homework-Feedback-video h3 {
   width: 100%;
@@ -421,6 +446,10 @@ body {
   margin-top: 5px;
   font-size: 12px;
   font-family: "SimSun";
+}
+.homework-wrapper .homework-Feedback-video .homework-videoInfo ul {
+  margin: 0;
+  padding: 0;
 }
 .homework-wrapper .homework-Feedback-video .homework-videoInfo ul li {
   float: left;
@@ -461,6 +490,10 @@ body {
   margin-left: 5px;
   margin-top: 2px;
 }
+.homework-wrapper .homework-comment-box .homework-star .homework-star-area ul {
+  padding: 0;
+  margin: 0;
+}
 .homework-wrapper .homework-comment-box .homework-star .homework-star-area ul li {
   float: left;
   width: 16px;
@@ -487,7 +520,8 @@ body {
   padding: 5px 1.5%;
   margin-top: 15px;
   box-shadow: none;
-  overflow: hidden;
+  overflow-y: auto;
+  width: 100%;
 }
 .homework-wrapper .homework-comment-box .homework-comment {
   float: left;
@@ -505,6 +539,7 @@ body {
   font-size: 12px;
 }
 .homework-wrapper .homework-submit-box {
+  float: left;
   width: 100%;
   margin-top: 10px;
 }
@@ -522,6 +557,7 @@ body {
   padding: 8px 26px;
   margin-left: 10px;
   cursor: pointer;
+  line-height: normal;
   font-family: "SimSun";
   font-size: 14px;
 }

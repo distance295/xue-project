@@ -23,6 +23,16 @@
     font-family:@fontfamily; 
 }
 
+.blue-radius-btn{
+   background: #3bafda;
+   color: #fff;
+   .border-radius(2px);
+   &:hover,&:focus{
+      background: #359dc4;
+      color: #fff;
+   }
+}
+
 //没有课程的提示框信息
 .fresh-notCourse {
     background: #fcfcfc;
@@ -67,8 +77,15 @@
      margin:8px 14px 0 0;
      display:inline;
      overflow:hidden;
+     a{
+       float: left;
+       width: 60px;
+       height: 60px;
+     }
      img{
         .border-radius(50%);
+        width: 100%;
+        height: 100%;
      }
   }
   .fresh-detail{
@@ -220,7 +237,9 @@
        position: relative;
        text-align:center; 
        padding:10px;
-       cursor: url("img/small.cur"), auto !important;
+       &.fresh-big-img-answer{
+            cursor: url("img/big.cur"), auto !important;
+       }
        .fresh-big-sign-exam{
             overflow: hidden;
             text-align: center;
@@ -292,6 +311,7 @@
        }
        .fresh-media-big-img{
            overflow: hidden;
+           cursor: url("img/small.cur"), auto !important;
            img{
               max-width: 100%;
            }
@@ -405,6 +425,7 @@
                   box-shadow:none;
                   .font-size;
                   margin: 0;
+                  width: 100%;
               }
               .fresh-comment-status{
                   background: #fcfcfc;
@@ -414,7 +435,7 @@
                   left: 1px;
                   right: 1px;
                   top: 11px;
-                  bottom: 11px;
+                  bottom: 19px;
                   text-align: center;
                   z-index: 10;
                   .fresh-comment-success {
@@ -524,6 +545,11 @@
                width: 40px;
                height: 40px;
                margin: 0 14px 0 0;
+               a{
+                 float: left;
+                 width: 40px;
+                 height: 40px;
+               }
             }
             .fresh-uesr{
                display: inline;
@@ -651,6 +677,11 @@
           margin:2px 10px 0 0;
           width: 40px;
           height: 40px;
+          a{
+            float: left;
+            width: 40px;
+            height: 40px;
+          }
        }
        .fresh-detail{
           line-height: 18px;
@@ -744,6 +775,7 @@
        height: 136px;
        resize:none;
        overflow-y: auto;
+       width: 100%;
 
    }
    .fresh-send-preview{
@@ -755,7 +787,7 @@
            float: left;
            position: relative;
            max-width: 120px;
-           min-width: 60px;
+           min-width: 36px;
            .fresh-preview-close{
                background: url('img/comment-close.png') no-repeat;
                width: 18px;
@@ -765,6 +797,9 @@
                right: -18px;
                top: 0;
                cursor: pointer;
+           }
+           img{
+              width: 100%;
            }
        }
    }
@@ -839,6 +874,8 @@
            .font-family;
            color: #fff;
            margin: 0;
+           border: none;
+           line-height: normal;
            &:hover{
               text-decoration: none;
            }
@@ -914,6 +951,7 @@
                    padding:8px 26px;
                    .font-size(14px);
                    .font-family;
+                   display: inline-block;
                    margin: 0;
                    &.fresh-dialog-btn-disabled{
                       background: @blue-color;
@@ -982,6 +1020,7 @@
                      &.fresh-dialog-smilies-list{
                         width: 450px;
                         margin: 10px 0;
+                        padding: 0;
                         overflow: hidden;
                      }
                      li{
