@@ -43,13 +43,13 @@
   font-size: 16px;
   overflow: hidden;
   padding-left: 10px;
+  margin: 10px 0;
 }
 .ui-course-infor-wrap .course-center-list .attend-class-time {
   overflow: hidden;
 }
 .ui-course-infor-wrap .course-center-list .attend-class-time span {
   width: 75px;
-  font-size: 12px;
   line-height: 25px;
   padding-left: 10px;
 }
@@ -57,21 +57,20 @@
   width: 510px;
   overflow: hidden;
   margin: 0;
+  padding: 0;
 }
 .ui-course-infor-wrap .course-center-list .attend-class-time ul li {
   float: left;
   width: 235px;
   height: 30px;
   line-height: 30px;
-  font-size: 12px;
   border: 1px solid #dcdcdc;
   text-align: center;
   list-style: none;
-  margin-right: 10px;
-  margin-bottom: 10px;
   padding: 1;
   cursor: pointer;
   overflow: hidden;
+  margin: 0 10px 10px 0;
 }
 .ui-course-infor-wrap .course-center-list .attend-class-time ul li.current {
   border: 2px solid #1e89e0;
@@ -82,10 +81,12 @@
   width: 100%;
   height: 30px;
   line-height: 20px;
-  font-size: 12px;
   background: url(img/icon_tips.png) 1px 1px no-repeat;
   padding-left: 22px;
   margin-left: 75px;
+}
+.ui-course-infor-wrap .course-center-list .attend-class-time .time-list-tips a {
+  color: #1e89e0;
 }
 .ui-course-infor-wrap .course-center-list .course-content-text {
   height: 86px;
@@ -95,7 +96,6 @@
 }
 .ui-course-infor-wrap .course-center-list .course-content-text span {
   width: 75px;
-  font-size: 12px;
   line-height: 25px;
   padding-left: 10px;
 }
@@ -103,21 +103,20 @@
   width: 510px;
   overflow: hidden;
   margin: 0;
+  padding: 0;
 }
 .ui-course-infor-wrap .course-center-list .course-content-text ul.f-left li {
   line-height: 26px;
-  list-style: none;
-  font-size: 12px;
 }
 .ui-course-infor-wrap .course-center-list .course-content-text ul.f-left li a {
   display: inline-block;
-  margin-left: 20px;
   background: url(img/icon_conre.png) 0 7px no-repeat;
+  margin-left: 20px;
   padding-left: 10px;
+  color: #1e89e0;
 }
 .ui-course-infor-wrap .course-center-list .course-favorable-list {
   height: 36px;
-  font-size: 12px;
   padding-left: 10px;
 }
 .ui-course-infor-wrap .course-center-list .course-favorable-list span {
@@ -139,7 +138,6 @@
 }
 .ui-course-infor-wrap .course-center-list .course-favorable-money .favrble-money span {
   display: inline-block;
-  font-size: 12px;
   padding-right: 20px;
 }
 .ui-course-infor-wrap .course-center-list .course-favorable-money .favrble-money span em {
@@ -148,7 +146,6 @@
 }
 .ui-course-infor-wrap .course-center-list .course-favorable-money .favrble-money del {
   display: inline-block;
-  font-size: 12px;
 }
 .ui-course-infor-wrap .course-center-list .course-favorable-money .favrble-money del em {
   font-size: 16px;
@@ -162,7 +159,6 @@
   width: 100px;
   text-align: center;
   list-style: none;
-  font-size: 12px;
 }
 .ui-course-infor-wrap .course-center-list .course-favorable-money ul.f-right li em {
   font-style: normal;
@@ -294,12 +290,10 @@
   height: 30px;
   line-height: 30px;
   text-align: center;
-  font-size: 12px;
   background: url(img/course-btn.png) no-repeat;
   list-style: none;
   overflow: hidden;
-  margin-right: 10px;
-  margin-bottom: 10px;
+  margin: 0 10px 10px 0;
 }
 .ui-course-infor-wrap .course-center-list.course-video-back .open-course-list #open-outline .scrolls-content ul.select-list li a {
   display: block;
@@ -503,6 +497,9 @@
 .course-detail .table_outline td.t-left {
   text-align: left;
   padding-left: 10px;
+}
+.course-detail .table_outline td a {
+  color: #1e89e0;
 }
 .course-detail dl {
   overflow: hidden;

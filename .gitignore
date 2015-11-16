@@ -39,3 +39,6 @@ node_modules
 *.tmp
 *.cmd
 .svn
+source/widget/perfect-information/perfect-information.css
+source/widget/glory/glory.css
+source/widget/courses/courses.css
