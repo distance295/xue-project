@@ -78,10 +78,14 @@ div {
   background: url("../img/arrow_up.png") no-repeat right;
 }
 .que-body .que-body-show {
+  cursor: pointer;
+  width: 70px;
   padding-right: 1rem;
+  margin-right: 2rem;
   background: url("../img/arrow_down.png") no-repeat right;
 }
 .que-answer {
+  clear: both;
   border-bottom: 1px solid #f1f2f6;
   padding-left: 0.8rem;
   padding-right: 0.8rem;
@@ -111,6 +115,11 @@ div {
 }
 .que-img {
   padding: 0.9rem 0.8rem;
+}
+.que-img .stuAns {
+  width: 100px;
+  height: 70px;
+  cursor: pointer;
 }
 .que-img .que-voice {
   position: relative;

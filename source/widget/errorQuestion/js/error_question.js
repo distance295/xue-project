@@ -1,6 +1,7 @@
 /**
  * Created by user on 2015/10/21.
  */
+    //上半部年级以及知识点选择的处理
 var select = {
 	chooseSpan : function(all,that,className){
         $(all).removeClass(className);
@@ -18,7 +19,7 @@ $('.choice-grade-cur span').on('click',function(){
     var that = this;
     select.chooseSpan('.choice-grade-cur span',that,'select-grade');
 })
-
+//
 $('.chocie-point-show').on('click',function(){
     var that = this;
     if($(that).hasClass('show-choice')){
@@ -38,3 +39,4 @@ $('.choice-subject-cur span').on('click',function(){
     var that = this;
     select.chooseSpan('.choice-subject-cur span',that,'select-subject');
 })
+
