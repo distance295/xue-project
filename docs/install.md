@@ -10,12 +10,12 @@ $ npm install -g fis3
 ### 2. 依赖工具
 
 ```
-$ npm install fis3-postpackager-loader
+$ fis3 install fis3-postpackager-loader
 ```
 ### 3. 依赖插件
 
 ```
-$ npm install fis-parser-less
+$ fis3 install fis-parser-less
 ```
   
 ## 发布及部署命令
@@ -24,8 +24,10 @@ $ npm install fis-parser-less
 ```
 $xue-project>source>deploy.bat
 ```
+> Mac下是 deploy.sh
 
 2. 开启本地服务
 ```
 $xue-project>source>server.bat
 ```
+> Mac下是 server.sh

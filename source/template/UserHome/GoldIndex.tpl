@@ -5,13 +5,6 @@
     <div class="row">
         <div class="col-md-10 wrap-body">
             <!-- *********************** 内容区域开始 *********************** -->
-            <!--
-
-<ul class="nav nav-tabs">
-    <li role="presentation" class="active"><a href="#">我的通知</a></li>
-</ul>
--->
-
 
             <link rel="import" href="../../widget/UserHome.gold/index.tpl?__inline">
 
@@ -22,6 +15,8 @@
         </div>
     </div>
 </div>
+
+
 <!-- 页面配置 -->
 <script>
     var PAGE_CONFIG = {
@@ -29,7 +24,6 @@
         MODULE: 'UserHome',
         TITLE: '金币明细-金币商城'
     };
-
 </script>
 
 <!-- 公共底部 -->

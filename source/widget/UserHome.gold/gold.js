@@ -22,7 +22,8 @@ $(function(){
     $gdtbtn.on("click",function(e){
         var $target = $(e.target);
         var index = $target.index();
-        $gdtbtn.removeClass('gold-detail-title-on').eq(index).addClass('gold-detail-title-on');
+        $(this).addClass('active').siblings().removeClass('active gold-detail-title-on');
+//        $gdtbtn.removeClass('gold-detail-title-on').eq(index).addClass('gold-detail-title-on');
         var $targetBox = $($target.attr('data-target'));
         $('.gold-detail-block-change').fadeOut(0);
         $targetBox.fadeIn(300);
