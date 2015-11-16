@@ -145,8 +145,12 @@ table tr td {
 }
 .gold-detail-block-change,
 .gold-store-block-change,
-.gold-exchange-block-change,
+.gold-exchange-block-change {
+  display: none;
+}
 .gold-exchange-use-block-change {
+  width: 924px;
+  margin-left: 5px;
   display: none;
 }
 /* 金币商城 */
