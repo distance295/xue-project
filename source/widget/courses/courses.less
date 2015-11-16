@@ -77,6 +77,13 @@ ul,li{list-style: none;}
 	width: 100%;
 	padding: 13px 10px;
 	overflow: hidden;
+	.button{
+		display: inline-block;
+	}
+	label{
+		margin-bottom: 0;
+		font-weight: normal;
+	}
 	a{
 		color: @dark333;
 		&:hover{
@@ -104,6 +111,7 @@ ul,li{list-style: none;}
 				height: 60px;
 				margin-left: 0;
 				margin-bottom: 9px;
+				padding-left: 0;
 				li{
 					overflow: hidden;
 					float: left;
@@ -270,15 +278,25 @@ ul,li{list-style: none;}
 	.cancel-courseList{
 		float: right;
 		font-size: 12px;
-		color: #3bafda;
 		height: 137px;
 		line-height: 220px;
+		a{
+			color: #3bafda;
+		}
+		em{
+			font-style: normal;
+			color: #666666;
+			i{
+				font-style: normal;
+			}
+		}
 	}
 	.course-num{
 		width: 86px;
 		float: right;
 		font-family: 'Microsoft YaHei';
 		text-align: center;
+		padding-left: 0;
 		p{
 			font-size: 14px;
 			margin-bottom: 3px;
@@ -292,6 +310,7 @@ ul,li{list-style: none;}
 	}
 	.course-right-info{
 		margin-top: 24px;
+		padding-left: 0;
 		li{
 			padding-left: 24px;
 			font-size: 12px;
@@ -356,7 +375,7 @@ ul,li{list-style: none;}
 }
 .hot-course-list{
 	padding: 10px 0;
-	background: #fcfcfc;
+	// background: #fcfcfc;
 	.ui-avatar{
 		margin-right: 10px;
 		width: 40px;
@@ -427,6 +446,9 @@ ul,li{list-style: none;}
 		}
 	}
 }
+.hover-feed{
+	background: #fcfcfc;
+}
 .course-small-list{
 	width: 315px;
 	height: 115px;
@@ -442,6 +464,7 @@ ul,li{list-style: none;}
 		position: absolute;
 		right: -25px;
 		color: #fff;
+		font-size: 14px;
 	}
 	.label-subject{
 		background: #ffbc3c;
@@ -459,6 +482,16 @@ ul,li{list-style: none;}
 		width: 230px;
 		p.tip-video{
 			margin: 3px 0;
+			.tip-video-con{
+				width: 126px;
+				overflow: hidden;
+				height: 14px;
+			}
+			.tip-video-time{
+				width: 72px;
+				height: 14px;
+				overflow: hidden;
+			}
 		}
 		p.tip-for{
 			margin: 3px 0;
@@ -482,6 +515,9 @@ ul,li{list-style: none;}
 	height: 266px;
 	width: 375px;
 	border-top: none;
+	ul{
+		padding-left: 0;
+	}
 	.dialog-second {
 		height: 155px;
 		background: url("img/teacher-cardbg.jpg") repeat scroll 0 0;
@@ -601,6 +637,7 @@ ul,li{list-style: none;}
 			ul {
 				display: inline-block;
 				overflow: hidden;
+				padding-left: 0;
 				li {
 					color: #666666;
 					display: inline;
