@@ -21,7 +21,6 @@
             <link rel="import" href="../../widget/UserHome.courses/list.course.tpl?__inline">
 
             <!-- *********************** 内容区域结束 *********************** -->
-            
         </div>
         <div class="col-md-2 col-sm-2 wrap-side">
             <link rel="import" href="../../widget/UserHome.sidebar/index.tpl?__inline">
