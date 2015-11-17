@@ -8,19 +8,20 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <!-- 这是CSS库文件 -->
-    <link rel="stylesheet" type="text/css" href="../../lib/foundation/css/foundation.css">
+    <link href="../../lib/bootstrap/3.3.5-custom/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- 这是当前模块样式文件 -->
     <link href="balance.css" rel="stylesheet"></head>
 <body>
-    <div class="gift-card-record">
+    <div class="balance-record">
          <span>我的账户余额<em>1000.0</em>元</span>
-         <button class="top-up-btn">去充值</button>
+         <button class="balance-btn btn btn-info">去充值</button>
          <ul id="pay_tab">
            <li class="current"><a href="#">学习卡充值记录</a></li>
            <li><a href="#">银行卡充值记录</a></li>
          </ul>
          <div class="contentbind">
-           <table class="table gcr-table">
+           <table class="table br-table">
               <thead>
                   <tr>
                       <th>充值单号</th>
@@ -61,7 +62,7 @@
                   </tr>
               </tbody>
            </table>
-           <table class="table gcr-table hidden">
+           <table class="table br-table br-hidden">
               <thead>
                   <tr>
                       <th>充值单号</th>
@@ -105,7 +106,7 @@
          </div>
     </div>
     <!-- 这是jquery库文件 -->
-    <script type="text/javascript" src="../../lib/jQuery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../lib/jQuery/1.11.1/jquery.min.js"></script>
     <!-- 这是当前模块js文件 -->
     <script type="text/javascript" src="balance.js"></script>
 </body>

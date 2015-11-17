@@ -3,36 +3,37 @@
  *table元素已经设定了BG和border-collapse属性
  */
 table {
-  max-width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
 }
 .table {
   width: 100%;
-  margin-bottom: 20px;
   border: 1px solid #eaeaea;
 }
-.table th,
-.table td {
-  font-family: "Microsoft YaHei";
-  font-size: 16px;
-  color: #333;
-  background-color: #fff;
-  line-height: 28px;
+.table thead tr {
+  height: 50px;
+  background-color: #fcfcfc;
+}
+.table thead tr th {
   text-align: center;
   vertical-align: middle;
-  border-top: 1px dotted #eaeaea;
-}
-.table th {
   font-weight: normal;
   font-family: "SimSun";
   font-size: 12px;
   color: #666;
-  background-color: #fcfcfc;
   border-bottom: 1px solid #eaeaea;
 }
-.table td a {
-  color: #006699;
+.table tbody tr {
+  height: 50px;
+  background-color: #fff;
+}
+.table tbody tr td {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 16px;
+  font-family: "Microsoft YaHei";
+  color: #333;
+  border-bottom: 1px solid #eaeaea;
 }
 /**
  * table with the solid border
