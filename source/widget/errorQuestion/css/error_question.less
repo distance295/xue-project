@@ -83,12 +83,16 @@ div{
     background: url("../img/arrow_up.png") no-repeat right;
   }
   .que-body-show{
+    cursor: pointer;
+    width: 70px;
     padding-right: 1rem;
+    margin-right: 2rem;
     background: url("../img/arrow_down.png") no-repeat right;
   }
 }
 
 .que-answer{
+  clear:both;
   .queSet;
   .que-answer-head{
     font-weight: bold;
@@ -118,6 +122,11 @@ div{
 
 .que-img{
   padding: 0.9rem @LRpadding;
+  .stuAns{
+    width: 100px;
+    height: 70px;
+    cursor: pointer;
+  }
   .que-voice{
     position: relative;
     margin: 0;
@@ -246,7 +255,7 @@ div{
     }
     .choice-point-cur{
       overflow: hidden;
-      height:12rem;
+      height:3rem;
       padding-right:0;
       span{
         .choiceSetting;
@@ -299,6 +308,9 @@ div{
   height: 8rem;
   width: 100%;
   line-height: 8rem;
+  .left-fade{
+    color:rgb(59,175,218);
+  }
   .erq-head-min{
     width: 22rem;
     .erq-head{
