@@ -32,7 +32,7 @@
                 <p class="amount-show">
                     <a class="btn-danger btn " href="##"><em class="button-icon icon-will-red"></em>立即听课</a>
                     <a class="btn btn-default " href="##">课程大纲<label class="newLabel">5</label></a>
-                    <a class="btn btn-default  last" href="##" data-content="" data-placement="top" title="" data-toggle="popover" type="button" data-original-title="Popover title" aria-describedby="popover446937" >随堂测<label class="newLabel homeworkLabel">10</label></a>
+                    <a class="btn btn-default last listTest-btn" href="##">随堂测<label class="newLabel homeworkLabel">10</label></a>
                     <div role="tooltip" class="popover hide  top " id="popover446937" style="top: 22.05px; left: 216px; display: block;">
                         <div class="arrow" style="top: 54.2021%;"></div>
                         <h3 class="popover-title">Popover title</h3>
@@ -297,3 +297,20 @@
         <label class="label-study label-continun">续报</label>
     </div>
 </div>
+<script type="text/javascript">
+    var listTest_html='<ul class="listTest-pop">\
+                            <li><span>5</span>份作业已批改完成</li>\
+                            <li><span>2</span>份作业已驳回</li>\
+                            <li><span>3</span>份作业待提交</li>\
+                        </ul>'
+
+    $('.listTest-btn').popover({
+            placement: 'top',
+            html: true,
+            trigger: 'click',
+            title: '',
+            content: function() {
+                return listTest_html;
+            }
+        });
+</script>
