@@ -23,33 +23,6 @@ li {
 .course-green-label {
   background: #37bc9b;
 }
-.button.course-gray {
-  background-color: #fcfcfc;
-  border: 1px solid #eaeaea;
-  color: #333333;
-}
-.button.course-gray:hover {
-  background-color: #e2e2e2;
-  border: 1px solid #d2d2d2;
-}
-.button.course-gray:focus {
-  background-color: #e2e2e2;
-  border: 1px solid #d2d2d2;
-}
-.button.course-btn {
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -ms-border-radius: 2px;
-  border-radius: 2px;
-  margin-bottom: 0;
-  font-family: 'SimSun';
-  width: 98px;
-  height: 32px;
-  text-align: center;
-  font-size: 14px;
-  padding: 0;
-  line-height: 32px;
-}
 .button-icon {
   display: inline-block;
   width: 13px;
@@ -75,8 +48,19 @@ li {
   padding: 13px 10px;
   overflow: hidden;
 }
-.course-list .button {
-  display: inline-block;
+.course-list .btn {
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+  margin-bottom: 0;
+  font-family: 'SimSun';
+  width: 98px;
+  height: 32px;
+  text-align: center;
+  font-size: 14px;
+  padding: 0;
+  line-height: 30px;
 }
 .course-list label {
   margin-bottom: 0;
@@ -235,7 +219,7 @@ li {
 .course-list .course-detail .amount-show .button {
   font-size: 14px;
 }
-.course-list .course-detail .amount-test .button {
+.course-list .course-detail .amount-test .btn {
   float: left;
 }
 .course-list .course-detail .amount-test strong {
@@ -431,6 +415,7 @@ li {
   right: -25px;
   color: #fff;
   font-size: 14px;
+  line-height: 24px;
 }
 .course-small-list .label-subject {
   background: #ffbc3c;
