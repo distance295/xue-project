@@ -59,6 +59,20 @@ body{
 .courseList-label{
 	padding-right: 25px;
 }
+.popover{
+    background-color: #f9f9f9;
+    padding: 4px 3px;
+    font-size: 14px;
+    color: #666;
+    border-color: #e5e5e5;
+    box-shadow: none;
+}
+.popover.top > .arrow::after{
+	border-top-color: #f9f9f9;
+}
+.popover.top > .arrow{
+	border-top-color: #e5e5e5;
+}
 .courseList-wrap{
 	position: relative;
 	.course-btn-gray,.course-btn-gray[disabled]{
@@ -142,6 +156,8 @@ body{
 				font-size: 12px;
 				margin-left: 10px;
 				vertical-align: top;
+				float: right;
+				margin-right: 10px;
 			}
 		}
 		.title-more{
@@ -193,6 +209,7 @@ body{
 		}
 		.more-service{
 			margin-right: 10px;
+			margin-top: 2px;
 			h4{
 				color: #333333;
 				font-size: 12px;
@@ -475,6 +492,10 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 				font-size: 12px;
 				span{
 					color: #999;
+				}
+				a.homework-wait-submit{
+					color: #ffbc3c;
+					cursor: pointer;
 				}
 			}
 			.studied-end{
