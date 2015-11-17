@@ -27,7 +27,7 @@
                 <td>第1讲 初一数学目标满分班人教版 第一场直播<span class="studied-end">（补课）</span></td>
                 <td class="text-style yellow-mark">未参加<em class="mark"></em></td>
                 <td class="text-style">
-                    <a class="button course-btn" href="##"><em class="button-icon icon-will-red"></em>立即回看</a>
+                    <a class="btn btn-primary" href="##"><em class="button-icon icon-will-red"></em>立即回看</a>
                 </td>
             </tr>
             <tr>
@@ -35,7 +35,7 @@
                 <td>第1讲 初一数学目标满分班人教版 第一场直播</td>
                 <td class="text-style studied-end">已开始</td>
                 <td class="text-style">
-                    <a class="alert button course-btn" href="##"><em class="button-icon icon-will-red"></em>立即上课</a>
+                    <a class="btn-danger btn" href="##"><em class="button-icon icon-will-red"></em>立即上课</a>
                 </td>
             </tr>
             <tr>
@@ -43,7 +43,7 @@
                 <td>第1讲 初一数学目标满分班人教版 第一场直播</td>
                 <td class="text-style studied">已参加</td>
                 <td class="text-style">
-                    <a class="button course-btn" href="##"><em class="button-icon icon-will-red"></em>立即回看</a>
+                    <a class="btn btn-primary" href="##"><em class="button-icon icon-will-red"></em>立即回看</a>
                 </td>
             </tr>
             <tr>
@@ -51,7 +51,7 @@
                 <td>第1讲 初一数学目标满分班人教版 第一场直播</td>
                 <td class="text-style studied">已回看</td>
                 <td class="text-style">
-                    <a class="button course-btn" href="##"><em class="button-icon icon-will-red"></em>立即回看</a>
+                    <a class="btn btn-primary" href="##"><em class="button-icon icon-will-red"></em>立即回看</a>
                 </td>
             </tr>
             <tr>
@@ -67,7 +67,7 @@
                 <td class="static-gray">第1讲 初一数学目标满分班人教版 第一场直播</td>
                 <td class="text-style studied">已参加</td>
                 <td class="text-style">
-                    <button class="button course-btn course-btn-gray" disabled>等待回看</button>
+                    <button class="btn course-btn-gray" disabled>等待回看</button>
                 </td>
             </tr>
             <tr>
@@ -75,7 +75,7 @@
                 <td class="static-gray">第1讲 初一数学目标满分班人教版 第一场直播</td>
                 <td class="text-style yellow-mark">未参加<em class="mark"></em></td>
                 <td class="text-style">
-                    <button class="button course-btn course-btn-gray" disabled>等待回看</button>
+                    <button class="btn course-btn-gray" disabled>等待回看</button>
                 </td>
             </tr>
         </tbody>
