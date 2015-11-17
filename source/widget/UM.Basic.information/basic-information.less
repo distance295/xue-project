@@ -1,51 +1,8 @@
-input:not([type]),
-input[type="text"],
-input[type="password"],
-input[type="date"], 
-input[type="datetime"], 
-input[type="datetime-local"], 
-input[type="month"], 
-input[type="week"], 
-input[type="email"], 
-input[type="number"], 
-input[type="search"], 
-input[type="tel"], 
-input[type="time"], 
-input[type="url"], 
-input[type="color"], 
-textarea {
-   border-style: solid;
-   border-width: 1px;
-   border-color: #cccccc;
-   box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.1);
-}
-input:not([type]):focus,
-input[type="text"]:focus, 
-input[type="password"]:focus,
-input[type="date"]:focus, 
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus, 
-input[type="month"]:focus, 
-input[type="week"]:focus, 
-input[type="email"]:focus, 
-input[type="number"]:focus, 
-input[type="search"]:focus, 
-input[type="tel"]:focus,
-input[type="time"]:focus,
-input[type="url"]:focus,
-input[type="color"]:focus,
-textarea:focus {
-    background: #fff;
-    border:1px solid #3bafda;
-    outline: none; 
-}
-span.error{
-    font-style: normal;
-    background: #fff;
-}
 .bi-content{
-//    width: 1010px;
-    margin: 2em auto;
+    width: 880px;
+    height: 100%;
+    overflow: hidden;
+    margin: 20px 0 30px 100px;
     .bi-left{
         float: left;
         p{
@@ -53,9 +10,9 @@ span.error{
             font-size: 12px;
             color: #666;
             clear: both;
-            .birthday{
-                position: relative;
-                top: -8px;
+            .date{
+                display: inline-block;
+                width: 460px;
             }
             label{
                 float: left;
@@ -64,14 +21,20 @@ span.error{
                 text-align: right;
                 font-size: 12px;
                 color: #666;
+                font-weight: normal;
                 cursor: text;
             }
             select{
+                position: relative;
+                top: -8px;
                 width: 80px;
-                background-color: #fff;
-            }
-            select:focus{
-                background-color: #fff;
+                height: 34px;
+                padding-left: 7px;
+                color: #a0a0a0;
+                border: 1px solid #dcdcdc;
+                &:focus {
+                    border:1px solid #3bafda;
+                }
             }
             span{
                 margin: 0;
@@ -83,25 +46,29 @@ span.error{
                 color: #e74c3c;
             }
             i{
+                position: relative;
+                top: -8px;
                 margin:0 20px 0 5px;
                 font-style: normal;
                 color: #333;
             }
-            .user-name,.user-school{
+            .nickname,.school{
                 position: relative;
                 top: -8px;
                 width: 260px;
                 margin: 0 0 1px 0;
                 padding: 8px 5px;
+                border: 1px solid #dcdcdc;
+                &:focus {
+                    border:1px solid #3bafda;
+                }
             }
         }
-        #form_submit{
+        .btn-submit{
             width: 100px;
             height: 35px;
-            padding: 0;
-            margin-left: 65px;
-            border-radius: 2px;
-            font-size: 14px;
+            margin-top: 12px;
+            font-size: 14px; 
         }  
     }
     .bi-right{

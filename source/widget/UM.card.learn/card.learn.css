@@ -1,44 +1,3 @@
-input:not([type]),
-input[type="text"],
-input[type="password"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="week"],
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="time"],
-input[type="url"],
-input[type="color"],
-textarea {
-  border-style: solid;
-  border-width: 1px;
-  border-color: #cccccc;
-  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.1);
-}
-input:not([type]):focus,
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="date"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="month"]:focus,
-input[type="week"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="time"]:focus,
-input[type="url"]:focus,
-input[type="color"]:focus,
-textarea:focus {
-  background: #fff;
-  border: 1px solid #3bafda;
-  outline: none;
-}
 span.error {
   display: block;
   width: 210px;
@@ -51,169 +10,209 @@ span.error {
   background: #fff;
   color: #e74c3c;
 }
+<<<<<<< HEAD
+.top-up {
+  width: 1050px;
+=======
 .gift-card-record {
+>>>>>>> upstream/master
   margin: 20px auto;
   padding: 10px 20px;
   position: relative;
 }
-.gift-card-record ul {
+.top-up ul {
   margin: 5px 0 60px 0;
   list-style: none;
 }
-.gift-card-record ul li {
+.top-up ul li {
   float: left;
   width: 92px;
 }
-.gift-card-record ul li a {
+.top-up ul li a {
   font-size: 13px;
   color: #333;
 }
-.gift-card-record ul .current a {
+.top-up ul .current a {
   display: inline-block;
   height: 24px;
   color: #3bafda;
   font-weight: bold;
   border-bottom: 2px solid #3bafda;
 }
-.gift-card-record .contentbind {
+.top-up .contentbind {
   clear: both;
 }
-.gift-card-record .contentbind .cl-learn .cl-content {
+.top-up .contentbind .cl-learn .cl-content {
   width: 625px;
   height: 290px;
   margin: 0 auto;
 }
-.gift-card-record .contentbind .cl-learn .cl-content .cl-content-left {
+.top-up .contentbind .cl-learn .cl-content .cl-content-left {
   float: left;
   width: 300px;
   height: 185px;
 }
-.gift-card-record .contentbind .cl-learn .cl-content .cl-content-left p {
+.top-up .contentbind .cl-learn .cl-content .cl-content-left p {
   margin-bottom: 8px;
   font-family: "Microsoft YaHei";
   font-size: 14px;
   color: #e74c3c;
 }
-.gift-card-record .contentbind .cl-learn .cl-content .cl-content-right {
+.top-up .contentbind .cl-learn .cl-content .cl-content-right {
   float: right;
   width: 310px;
   height: 175px;
   margin-top: 30px;
 }
-.gift-card-record .contentbind .cl-learn .cl-content .cl-content-right div label {
+.top-up .contentbind .cl-learn .cl-content .cl-content-right div label {
   float: left;
   width: 40px;
   margin-top: 8px;
-  font-size: 12px;
   color: #666;
+  font-weight: normal;
 }
-.gift-card-record .contentbind .cl-learn .cl-content .cl-content-right div input {
+.top-up .contentbind .cl-learn .cl-content .cl-content-right div input {
   width: 250px;
   margin: 0;
   padding: 8px 5px;
+  border: 1px solid #d2d2d2;
 }
-.gift-card-record .contentbind .cl-learn .cl-content .cl-content-right .btn_blue {
+.top-up .contentbind .cl-learn .cl-content .cl-content-right div input:focus {
+  border: 1px solid #3bafda;
+}
+.top-up .contentbind .cl-learn .cl-content .cl-content-right .btn-pay {
   margin: 0px 30px 0 40px;
-  padding: 9px 35px;
-  font-size: 14px;
+  width: 100px;
+  height: 35px;
   border-radius: 3px;
-}
-.gift-card-record .contentbind .cl-learn .cl-content .cl-content-right a {
   font-size: 14px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-style: solid;
+  border-width: 0;
+  background-color: #3BAFDA;
+  border-color: #2392ba;
+  color: #FFFFFF;
+  transition: background-color 300ms ease-out;
 }
-.gift-card-record .contentbind .cl-learn .prompt-box img.prompt {
+.top-up .contentbind .cl-learn .cl-content .cl-content-right .btn-pay:hover {
+  background-color: #2392ba;
+}
+.top-up .contentbind .cl-learn .cl-content .cl-content-right a {
+  color: #3bafda;
+}
+.top-up .contentbind .cl-learn .prompt-box img.prompt {
   position: relative;
   width: 75px;
   height: 55px;
   top: 6px;
   left: 7px;
 }
-.gift-card-record .contentbind .cl-learn .prompt-box .cl-prompt-box {
+.top-up .contentbind .cl-learn .prompt-box .cl-prompt-box {
   background: #fff8eb;
   border-radius: 5px;
   padding: 10px 0 20px 20px;
 }
-.gift-card-record .contentbind .cl-learn .prompt-box .cl-prompt-box h3 {
+.top-up .contentbind .cl-learn .prompt-box .cl-prompt-box h3 {
   font-size: 14px;
   font-family: "Microsoft YaHei";
   color: #666;
   margin: 6px 0 6px 5px;
 }
-.gift-card-record .contentbind .cl-learn .prompt-box .cl-prompt-box p {
+.top-up .contentbind .cl-learn .prompt-box .cl-prompt-box p {
   font-size: 12px;
   margin: 0 0 0 5px;
   line-height: 24px;
 }
-.gift-card-record .contentbind .cl-learn .prompt-box .cl-prompt-box p strong {
+.top-up .contentbind .cl-learn .prompt-box .cl-prompt-box p strong {
   font-family: "Microsoft YaHei";
   font-size: 16px;
   font-weight: normal;
   color: #e74c3c;
 }
-.gift-card-record .contentbind .cl-bank .cl-input {
+.top-up .contentbind .cl-bank .cl-input {
   margin: 70px 0 150px 240px;
 }
-.gift-card-record .contentbind .cl-bank .cl-input span {
+.top-up .contentbind .cl-bank .cl-input span {
   float: left;
   font-size: 14px;
   color: #666;
 }
-.gift-card-record .contentbind .cl-bank .cl-input input {
+.top-up .contentbind .cl-bank .cl-input input {
   float: left;
   width: 130px;
+  line-height: 23px;
   padding: 8px 5px;
-  margin: -7px 8px 12px 5px;
+  margin: -10px 8px 12px 5px;
   font-size: 20px;
   font-weight: bold;
   color: #de544c;
 }
-.gift-card-record .contentbind .cl-bank .cl-input p {
+.top-up .contentbind .cl-bank .cl-input p {
   clear: both;
   height: 24px;
   margin: 0 0 0 74px;
   font-size: 12px;
   color: #999;
 }
-.gift-card-record .contentbind .cl-bank .cl-input .cl-btn {
+.top-up .contentbind .cl-bank .cl-input .cl-btn {
   margin: 25px 0 0 70px;
-  padding: 10px 28px;
-  font-size: 14px;
+  width: 100px;
+  height: 35px;
   border-radius: 3px;
+  font-size: 14px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-style: solid;
+  border-width: 0;
+  background-color: #3BAFDA;
+  border-color: #2392ba;
+  color: #FFFFFF;
+  transition: background-color 300ms ease-out;
 }
+.top-up .contentbind .cl-bank .cl-input .cl-btn:hover {
+  background-color: #2392ba;
+}
+<<<<<<< HEAD
+.top-up .contentbind .cl-bank .prompt-box {
+  width: 1010px;
+  height: 135px;
+=======
 .gift-card-record .contentbind .cl-bank .prompt-box {
+>>>>>>> upstream/master
   margin: 0 auto;
   clear: both;
 }
-.gift-card-record .contentbind .cl-bank .prompt-box img.prompt {
+.top-up .contentbind .cl-bank .prompt-box img.prompt {
   position: relative;
   width: 75px;
   height: 55px;
   top: 6px;
   left: 7px;
 }
-.gift-card-record .contentbind .cl-bank .prompt-box .cl-prompt-box {
+.top-up .contentbind .cl-bank .prompt-box .cl-prompt-box {
   background: #fff8eb;
   border-radius: 5px;
   padding: 10px 0 20px 20px;
 }
-.gift-card-record .contentbind .cl-bank .prompt-box .cl-prompt-box h3 {
+.top-up .contentbind .cl-bank .prompt-box .cl-prompt-box h3 {
   font-size: 14px;
   font-family: "Microsoft YaHei";
   color: #666;
   margin: 6px 0 6px 5px;
 }
-.gift-card-record .contentbind .cl-bank .prompt-box .cl-prompt-box p {
+.top-up .contentbind .cl-bank .prompt-box .cl-prompt-box p {
   font-size: 12px;
   margin: 0 0 0 5px;
   line-height: 24px;
 }
-.gift-card-record .contentbind .cl-bank .prompt-box .cl-prompt-box p strong {
+.top-up .contentbind .cl-bank .prompt-box .cl-prompt-box p strong {
   font-family: "Microsoft YaHei";
   font-size: 16px;
   font-weight: normal;
   color: #e74c3c;
 }
-.gift-card-record .contentbind .hidden {
+.top-up .contentbind .tu-hidden {
   display: none;
 }
 .paylists {

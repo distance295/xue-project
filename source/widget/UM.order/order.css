@@ -3,36 +3,37 @@
  *table元素已经设定了BG和border-collapse属性
  */
 table {
-  max-width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
 }
 .table {
   width: 100%;
-  margin-bottom: 20px;
   border: 1px solid #eaeaea;
 }
-.table th,
-.table td {
-  font-family: "Microsoft YaHei";
-  font-size: 16px;
-  color: #333;
-  background-color: #fff;
-  line-height: 28px;
+.table thead tr {
+  height: 50px;
+  background-color: #fcfcfc;
+}
+.table thead tr th {
   text-align: center;
   vertical-align: middle;
-  border-top: 1px dotted #eaeaea;
-}
-.table th {
   font-weight: normal;
   font-family: "SimSun";
   font-size: 12px;
   color: #666;
-  background-color: #fcfcfc;
   border-bottom: 1px solid #eaeaea;
 }
-.table td a {
-  color: #006699;
+.table tbody tr {
+  height: 50px;
+  background-color: #fff;
+}
+.table tbody tr td {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 16px;
+  font-family: "Microsoft YaHei";
+  color: #333;
+  border-bottom: 1px solid #eaeaea;
 }
 /**
  * table with the solid border
@@ -43,87 +44,96 @@ table {
 .table-solid td {
   border: 1px solid #eaeaea;
 }
-.information h4 {
+.order-content {
+  padding: 0 15px;
+}
+.order-content .information h4 {
   clear: both;
   line-height: 24px;
   font-size: 12px;
   font-weight: bold;
   color: #666;
 }
-.information ul {
+.order-content .information ul {
   list-style: none;
   margin: 0;
 }
-.information ul li {
+.order-content .information ul li {
   float: left;
 }
-.information ul .gt-first {
+.order-content .information ul .gt-second,
+.order-content .information ul .gt-third,
+.order-content .information ul .gt-fourth {
+  font-family: "Microsoft YaHei";
+  font-size: 16px;
+}
+.order-content .information ul .gt-first {
   width: 60%;
   text-align: center;
 }
-.information ul .gt-second {
+.order-content .information ul .gt-second {
   width: 14%;
 }
-.information ul .gt-third {
+.order-content .information ul .gt-third {
   width: 13%;
 }
-.information .order-table tbody tr td {
+.order-content .information .order-table tbody tr td {
   text-align: left;
   line-height: 20px;
-  padding: 10px 0 10px 30px;
+  padding-left: 30px;
   border: 1px solid #eaeaea;
   font-size: 12px;
 }
-.information .order-table tbody tr td em {
+.order-content .information .order-table tbody tr td em {
   color: #e74c3c;
   font-style: normal;
   font-weight: bold;
 }
-.information .order-table tbody tr td:nth-child(1) {
+.order-content .information .order-table tbody tr td:nth-child(1) {
   width: 120px;
-  padding: 0 37px 0 0;
+  padding: 0 35px 0 0;
   color: #666;
   text-align: right;
 }
-.information .order-table tbody tr #order-pay {
+.order-content .information .order-table tbody tr #order-pay {
   color: #e74c3c;
 }
-.information .order-table tbody tr #ot-bold {
+.order-content .information .order-table tbody tr #ot-bold {
   font-family: "Microsoft YaHei";
   font-size: 14px;
 }
-.information .order-table tbody tr #ot-bold em {
+.order-content .information .order-table tbody tr #ot-bold em {
   color: #e74c3c;
   font-style: normal;
   font-size: 16px;
 }
-.goods #goods-ul {
+.order-content .goods #goods-ul {
   display: inline-block;
   width: 100%;
   min-width: 800px;
   height: 145px;
   border: 1px solid #eaeaea;
 }
-.goods #goods-ul .goods-title {
+.order-content .goods #goods-ul .goods-title {
   padding: 15px 0 32px 0;
   border-bottom: 1px solid #eaeaea;
 }
-.goods #goods-ul .goods-title li {
+.order-content .goods #goods-ul .goods-title li {
   font-size: 12px;
   color: #333;
 }
-.goods #goods-ul .goods-content {
+.order-content .goods #goods-ul .goods-content {
   height: 95px;
-  padding-top: 23px;
+  padding: 23px 0 0 0;
   background-color: #fcfcfc;
 }
-.goods #goods-ul .goods-content li .order-teacher {
+.order-content .goods #goods-ul .goods-content li .order-teacher {
   float: left;
   width: 465px;
   height: 80px;
   margin: -25px 0 0 5px;
 }
-.goods #goods-ul .goods-content li .order-teacher img {
+.order-content .goods #goods-ul .goods-content li .order-teacher img {
   float: left;
   width: 60px;
   height: 60px;
@@ -131,7 +141,7 @@ table {
   _margin: 25px 15px 0 12px;
   border-radius: 50%;
 }
-.goods #goods-ul .goods-content li .order-teacher em {
+.order-content .goods #goods-ul .goods-content li .order-teacher em {
   float: left;
   margin: 25px 5px 0 0;
   padding: 1px 8px;
@@ -141,7 +151,7 @@ table {
   color: #fff;
   background-color: #ffbc3c;
 }
-.goods #goods-ul .goods-content li .order-teacher span {
+.order-content .goods #goods-ul .goods-content li .order-teacher span {
   float: left;
   width: 330px;
   height: 18px;
@@ -149,18 +159,15 @@ table {
   font-size: 14px;
   overflow: hidden;
 }
-.goods #goods-ul .goods-content li .order-teacher p {
+.order-content .goods #goods-ul .goods-content li .order-teacher p {
   float: left;
   width: 80px;
   height: 18px;
   font-size: 12px;
   margin: 10px 0 0 -60px;
 }
-.settle .alert {
+.order-content .settle .btn-danger {
   float: right;
   width: 100px;
-  height: 30px;
-  padding: 0;
-  border-radius: 3px;
   font-size: 14px;
 }

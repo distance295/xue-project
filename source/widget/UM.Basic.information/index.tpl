@@ -10,7 +10,7 @@
         </p>
         <p>
             <label for="">昵称：</label>
-            <input class="user-name" type="text">
+            <input class="nickname" type="text">
             <span class="user-name-warning error"></span>
         </p>
         <p>
@@ -27,21 +27,21 @@
             <em>网校会在每年7月1日自动为你更新年级</em>
         </p>
         <p>
-            <span class="birthday">
-                    <label for="">生日：</label>
-                    <select>
-                      <option>请选择</option>
-                    </select>
-                    <i>年</i>
-                    <select>
-                      <option>请选择</option>
-                    </select>
-                    <i>月</i>
-                    <select>
-                      <option>请选择</option>
-                    </select>
-                    <i>日</i>
-                </span>
+            <span class="date">
+                <label for="">生日：</label>
+                <select class="year">
+                  <option>请选择</option>
+                </select>
+                <i>年</i>
+                <select class="month">
+                  <option>请选择</option>
+                </select>
+                <i>月</i>
+                <select class="day">
+                  <option>请选择</option>
+                </select>
+                <i>日</i>
+            </span>
         </p>
         <p>
             <label for="">所在地：</label>
@@ -49,10 +49,10 @@
         </p>
         <p>
             <label for="">学校：</label>
-            <input class="user-school" type="text">
-            <span class="user-school-warning error"></span>
+            <input class="school" type="text">
+            <span class="school-warning error"></span>
         </p>
-        <button id="form_submit" class="login_btn btn_submit" name="submit" type="submit">保存</button>
+        <button class="btn-submit btn btn-info" name="submit" type="submit">保存</button>
     </div>
     <div class="bi-right">
         <span>真实姓名、性别、所在地、年级等基本资料如需修改请拨打客服电话：<em>400-800-2211</em></span>

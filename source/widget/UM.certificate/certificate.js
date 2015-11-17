@@ -23,7 +23,7 @@ fCheck.bordercss = function(argument) {
 }
 
 $(function() {
-    $(".btn_blue").click(function() {
+    $(".btn-certificate").click(function() {
         if ($(".serialNo").val() == '') {
               fCheck.setTips(".serialNo-warning",'请输入课程绑定卡卡号');
             $(".serialNo").focus(function() {

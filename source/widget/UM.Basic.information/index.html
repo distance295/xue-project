@@ -8,6 +8,8 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <!-- 这是CSS库文件 -->
+    <link href="../../lib/bootstrap/3.3.5-custom/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="/lib/bootstrap/3.3.5-custom/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/static/css/default.css">    
@@ -23,7 +25,7 @@
             </p>
             <p>
                 <label for="">昵称：</label>
-                <input class="user-name" type="text">
+                <input class="nickname" type="text">
                 <span class="user-name-warning error"></span>
             </p>
             <p>
@@ -40,17 +42,17 @@
                 <em>网校会在每年7月1日自动为你更新年级</em>
             </p>
             <p>
-                <span class="birthday">
+                <span class="date">
                     <label for="">生日：</label>
-                    <select>
+                    <select class="year">
                       <option>请选择</option>
                     </select>
                     <i>年</i>
-                    <select>
+                    <select class="month">
                       <option>请选择</option>
                     </select>
                     <i>月</i>
-                    <select>
+                    <select class="day">
                       <option>请选择</option>
                     </select>
                     <i>日</i>
@@ -62,10 +64,10 @@
             </p>
             <p>
                 <label for="">学校：</label>
-                <input class="user-school" type="text">
-                <span class="user-school-warning error"></span>
+                <input class="school" type="text">
+                <span class="school-warning error"></span>
             </p>
-            <button id="form_submit" class="login_btn btn_submit" name="submit" type="submit">保存</button>
+            <button class="btn-submit btn btn-info" name="submit" type="submit">保存</button>
         </div>
         <div class="bi-right">
             <span>真实姓名、性别、所在地、年级等基本资料如需修改请拨打客服电话：<em>400-800-2211</em></span>
