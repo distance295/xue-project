@@ -72,7 +72,7 @@
             </div>
         </div>
     </div>
-    <div>
+    <div class="label-study-wrap">
         <label class="label-study label-delay">延期</label>
         <label class="label-study label-continun">续报</label>
     </div>
@@ -140,7 +140,7 @@
             </div>
         </div>
     </div>
-    <div>
+    <div class="label-study-wrap">
         <label class="label-study label-delay">延期</label>
         <label class="label-study label-continun">续报</label>
     </div>
@@ -207,7 +207,7 @@
             </div>
         </div>
     </div> 
-    <div>
+    <div class="label-study-wrap">
         <label class="label-study label-delay">延期</label>
         <label class="label-study label-continun">续报</label>
     </div>
@@ -289,7 +289,7 @@
             </div>
         </div>
     </div>
-    <div>
+    <div class="label-study-wrap">
         <label class="label-study label-delay">延期</label>
         <label class="label-study label-continun">续报</label>
     </div>
