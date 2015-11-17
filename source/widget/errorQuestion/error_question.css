@@ -75,14 +75,14 @@ div {
 }
 .que-body .que-body-hide {
   padding-right: 1rem;
-  background: url("../img/arrow_up.png") no-repeat right;
+  background: url("img/arrow_up.png") no-repeat right;
 }
 .que-body .que-body-show {
   cursor: pointer;
   width: 70px;
   padding-right: 1rem;
   margin-right: 2rem;
-  background: url("../img/arrow_down.png") no-repeat right;
+  background: url("img/arrow_down.png") no-repeat right;
 }
 .que-answer {
   clear: both;
@@ -349,7 +349,7 @@ div {
   display: inline-block;
   width: 2.2rem;
   height: 1.6rem;
-  background: url("../img/v1.png") no-repeat 0 0.1rem;
+  background: url("img/v1.png") no-repeat 0 0.1rem;
 }
 .errorQuestion-head .erq-info-up .erq-dis {
   color: #2599c4;
@@ -368,7 +368,7 @@ div {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background: url("../img/sex-woman.png") no-repeat #2599c4 45% 45%;
+  background: url("img/sex-woman.png") no-repeat #2599c4 45% 45%;
 }
 .errorQuestion-head .erq-info-below .erq-level .erq-level-left {
   margin-top: 0.2rem;
