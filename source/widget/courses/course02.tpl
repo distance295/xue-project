@@ -1,6 +1,5 @@
 <!--
    课程列表：
-    @require courses.js
     @require courses.less       
 -->
         
