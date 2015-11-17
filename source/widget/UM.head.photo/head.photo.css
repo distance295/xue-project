@@ -5,6 +5,7 @@
 .hp-content ul {
   height: 30px;
   margin: 5px 0 60px 0;
+  padding-left: 0;
   list-style: none;
 }
 .hp-content ul li {
@@ -23,8 +24,10 @@
   border-bottom: 2px solid #3bafda;
 }
 .hp-content .hp-box-left {
+  float: left;
   display: inline-block;
   clear: both;
+  margin-left: 100px;
 }
 .hp-content .hp-box-left .hp-recommend .hpr-box {
   width: 570px;
@@ -53,13 +56,17 @@
   margin-bottom: 20px;
   background-color: #eee;
 }
-.hp-content .hp-box-left .hp-local .hl-box .btn_loadFile {
-  position: relative;
+.hp-content .hp-box-left .hp-local .hl-box #preview {
+  max-width: 400px;
+  max-height: 340px;
+}
+.hp-content .hp-box-left .hp-local .hl-box .btn_up .btn_loadFile {
+  position: absolute;
+  width: 150px;
+  height: 42px;
   top: 150px;
   left: 125px;
-  padding: 11px 36px;
   font-size: 16px;
-  border-radius: 2px;
 }
 .hp-content .hp-box-left .hp-local .hl-box #loadFile {
   position: absolute;
@@ -69,31 +76,38 @@
   height: 42px;
   cursor: pointer;
   opacity: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
 }
 .hp-content .hp-box-left .hp-local .hl-box em {
+  position: absolute;
   display: block;
-  margin: 150px 0 0 35px;
+  top: 212px;
+  left: 35px;
   font-style: normal;
   font-family: "Microsoft YaHei";
   font-size: 16px;
   color: #e74c3c;
 }
 .hp-content .hp-box-left .hp-local .hl-box span {
-  margin: 0 0 0 35px;
+  position: absolute;
+  top: 240px;
+  left: 35px;
   font-family: "SimSun";
   font-size: 12px;
   color: #666;
 }
-.hp-content .hp-box-left .btn_blue {
-  padding: 9px 35px;
+.hp-content .hp-box-left .btn-info {
+  margin-bottom: 20px;
+  width: 100px;
+  height: 35px;
   font-size: 14px;
-  border-radius: 2px;
 }
 .hp-content .hp-box-right {
   float: right;
   width: 210px;
   height: 460px;
   padding-left: 38px;
+  margin-right: 20px;
   border-left: 1px solid #eaeaea;
   font-size: 12px;
   color: #666;
@@ -107,26 +121,26 @@
   font-size: 12px;
   color: #666;
 }
-.hp-content .hp-box-right .hp-small,
-.hp-content .hp-box-right .hp-middle,
-.hp-content .hp-box-right .hp-big {
+.hp-content .hp-box-right #hp-small,
+.hp-content .hp-box-right #hp-middle,
+.hp-content .hp-box-right #hp-big {
   text-align: center;
 }
-.hp-content .hp-box-right .hp-small img,
-.hp-content .hp-box-right .hp-middle img,
-.hp-content .hp-box-right .hp-big img {
+.hp-content .hp-box-right #hp-small img,
+.hp-content .hp-box-right #hp-middle img,
+.hp-content .hp-box-right #hp-big img {
   margin: 30px auto 10px;
   display: block;
 }
-.hp-content .hp-box-right .hp-small img {
+.hp-content .hp-box-right #hp-small img {
   width: 40px;
   height: 40px;
 }
-.hp-content .hp-box-right .hp-middle img {
+.hp-content .hp-box-right #hp-middle img {
   width: 60px;
   height: 60px;
 }
-.hp-content .hp-box-right .hp-big img {
+.hp-content .hp-box-right #hp-big img {
   width: 100px;
   height: 100px;
 }

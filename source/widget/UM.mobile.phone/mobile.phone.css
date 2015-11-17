@@ -1,51 +1,6 @@
-input:not([type]),
-input[type="text"],
-input[type="password"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="week"],
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="time"],
-input[type="url"],
-input[type="color"],
-textarea {
-  border-style: solid;
-  border-width: 1px;
-  border-color: #cccccc;
-  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.1);
-}
-input:not([type]):focus,
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="date"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="month"]:focus,
-input[type="week"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="time"]:focus,
-input[type="url"]:focus,
-input[type="color"]:focus,
-textarea:focus {
-  background: #fff;
-  border: 1px solid #3bafda;
-  outline: none;
-}
-span.error {
-  font-style: normal;
-  background: #fff;
-}
 .form-check {
   width: 420px;
-  margin: 0 auto;
+  margin: 60px auto 0;
 }
 .form-check p {
   float: left;
@@ -65,15 +20,15 @@ span.error {
   float: left;
   display: inline-block;
   width: 280px;
-  margin: 0;
   padding: 8px 8px 8px 10px;
-  font-size: 12px;
   vertical-align: middle;
-  border: 1px #D5D5D5 solid;
+  border: 1px solid #d2d2d2;
+}
+.form-check input:focus {
+  border: 1px solid #3bafda;
 }
 .form-check span {
   display: block;
-  font-size: 12px;
   color: #e74c3c;
   width: 288px;
   height: 30px;
@@ -87,6 +42,7 @@ span.error {
 .form-check .phone-user strong {
   height: 35px;
   line-height: 35px;
+  font-size: 16px;
 }
 .form-check .phone-k {
   position: relative;
@@ -94,7 +50,7 @@ span.error {
 }
 .form-check .phone-k .phone-tip {
   position: absolute;
-  font-size: 12px;
+  font-weight: normal;
   color: #a0a0a0;
   top: 9px;
   left: 87px;
@@ -108,7 +64,7 @@ span.error {
 }
 .form-check .pass-eye .pass-tip {
   position: absolute;
-  font-size: 12px;
+  font-weight: normal;
   color: #a0a0a0;
   top: 9px;
   left: 87px;
@@ -127,7 +83,7 @@ span.error {
 }
 .form-check .verification-k .verification-tip {
   position: absolute;
-  font-size: 12px;
+  font-weight: normal;
   color: #a0a0a0;
   top: 9px;
   left: 87px;
@@ -149,7 +105,7 @@ span.error {
   position: absolute;
   top: 9px;
   left: 87px;
-  font-size: 12px;
+  font-weight: normal;
   color: #a0a0a0;
 }
 .form-check .phonecode-k #phonecode {
@@ -158,17 +114,12 @@ span.error {
 .form-check .phonecode-k .vcode {
   width: 120px;
   height: 35px;
-  margin: 0 0 0 12px;
-  padding: 0;
-  border-radius: 2px;
+  margin-left: 12px;
   font-size: 14px;
-  text-align: center;
 }
 .form-check #form_submit {
   width: 100px;
   height: 35px;
-  padding: 0;
-  margin-left: 75px;
-  border-radius: 2px;
+  margin: 0px 30px 0 75px;
   font-size: 14px;
 }

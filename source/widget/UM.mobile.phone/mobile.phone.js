@@ -15,13 +15,13 @@
   fCheck.param = {
     form         : '#form-register',
     phone        : '#phone',
-    password     : '#password',
+    curPwd       : '#curPwd',
     verifiCode   : '#verificationCode',
     phoneCode    : '#phonecode',
     phoneTip     : '.phone-tip',
     phoneWarn    : '.phone-warning',
-    passwordTip  : '.pass-tip',
-    passwordWarn : '.pass-warning',
+    curPwdTip    : '.pass-tip',
+    curPwdWarn   : '.pass-warning',
     passSecurity : '.security',
     verification : '#verificationImg',
     veriTip      : '.verification-tip',
@@ -256,11 +256,11 @@
     fCheck.isError = function(e){
     fCheck.checkPhone(fCheck.param.phoneTip,fCheck.param.phoneWarn,$("#phone").val());
     fCheck.imgcode();
-    var value = $(fCheck.param.password).val();
+    var value = $(fCheck.param.curPwd).val();
     if(value.length > 0 && value.length < 6 ){
-      fCheck.setTips(fCheck.param.passwordWarn,'密码不能少于6位字符');
+      fCheck.setTips(fCheck.param.curPwdWarn,'密码不能少于6位字符');
     }else if(value.length == 0){
-      fCheck.setTips(fCheck.param.passwordWarn,'请输入密码');
+      fCheck.setTips(fCheck.param.curPwdWarn,'请输入密码');
     }
     var param = fCheck.param;
       if( param.cPhone && param.cPass && param.cGrade && param.cImg ){
@@ -285,23 +285,23 @@
   });
 
   /* 密码框的操作 */
-  $(fCheck.param.password).on('focus',function(){
-    $(fCheck.param.passwordTip).hide();
-    fCheck.clearTips(fCheck.param.passwordWarn);
+  $(fCheck.param.curPwd).on('focus',function(){
+    $(fCheck.param.curPwdTip).hide();
+    fCheck.clearTips(fCheck.param.curPwdWarn);
   });
 
-  $(fCheck.param.password).blur(function(e){
-    var value = $(fCheck.param.password).val();
+  $(fCheck.param.curPwd).blur(function(e){
+    var value = $(fCheck.param.curPwd).val();
     if(value.length > 0 && value.length < 6 ){
-      fCheck.setTips(fCheck.param.passwordWarn,'密码不能少于6位字符');
+      fCheck.setTips(fCheck.param.curPwdWarn,'密码不能少于6位字符');
     }else if(value.length == 0){
-      fCheck.setTips(fCheck.param.passwordWarn,'请输入密码');
-      $(fCheck.param.passwordTip).show();
+      fCheck.setTips(fCheck.param.curPwdWarn,'请输入密码');
+      $(fCheck.param.curPwdTip).show();
     }
     if(fCheck.param.cPass == 1){
-      $('#password').css('border','1px solid #68c04a');
+      $('#curPwd').css('border','1px solid #68c04a');
     }else{
-      $('#password').css('border','1px solid #eaeaea');
+      $('#curPwd').css('border','1px solid #eaeaea');
     }  
   });
 
@@ -371,7 +371,7 @@
           type:"GET",
           url:"/Reg/registerOprea",
           dataType: "json",
-          data: 'phone=' + $('#phone').val() + '&password=' + $('#password').val() + '&imgcode=' + $('#verificationCode').val()+'&phonecode='+$('#phonecode').val(),
+          data: 'phone=' + $('#phone').val() + '&curPwd=' + $('#curPwd').val() + '&imgcode=' + $('#verificationCode').val()+'&phonecode='+$('#phonecode').val(),
           timeout: 7000,
           success: function(result) {
             /* 填写的信息验证不通过 */
