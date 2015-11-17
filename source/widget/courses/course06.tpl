@@ -3,7 +3,6 @@
     @require courses.js
     @require courses.less       
 -->
-        
         <div class="course-list course-test">
             <div class="ui-avatar">
                 <div class="avatar-photo">
