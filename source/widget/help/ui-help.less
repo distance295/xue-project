@@ -1,0 +1,82 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-11-17 15:21:25
+ * @version $Id$
+ */
+//右侧内容
+ .ui-article {
+ 	overflow: hidden;
+ 	margin: 20px 0;
+ 	padding: 10px 30px;
+ 	.article-title {
+ 		line-height:40px; 
+ 		font-size:18px; 
+ 		text-align: center;
+ 		padding:0 0 10px 0; 
+ 		border-bottom:1px solid #E9E9E9; 
+ 		font-weight: bold;
+ 	}
+ 	.article-label {
+ 		overflow: hidden;
+ 		margin:30px 0;
+ 		text-align: center;
+ 		font-size: 14px;
+ 		span {
+ 			display: inline-block;
+ 			padding-right: 20px;
+ 		}
+ 	}
+ 	.article-content {
+ 		overflow: hidden;
+ 		margin:30px 0;
+ 		text-indent: 2em;
+ 		p {
+ 			line-height: 180%;
+ 			margin-bottom: 10px;
+ 			text-indent: 2em;
+ 		}
+ 		.pic {
+ 			text-align: center;
+ 		}
+ 	}
+ }
+//左侧导航
+ .ui-helpNav{
+	padding:20px 0;
+	overflow: hidden;
+	border:1px solid #e4e4e4;
+	background:#fbfbfb;
+	.nav-header{
+		color:#999;
+		margin-bottom:20px;
+		text-align: center;
+		border-bottom: 1px solid #cae0ed;
+		padding-right: 10px;
+		list-style: none;
+		background: none;
+		overflow:visible;
+		span{
+			position:relative;
+			top:12px;
+			display: inline-block;
+			padding: 0 10px;
+			z-index: 10;
+			background:#fbfbfb;
+			font-size: 14px;
+
+		}
+	}
+	li{
+		height: 30px;
+		line-height: 30px;
+		padding-left: 20px;
+		overflow: hidden;
+		background:url(img/nav_help_icon.jpg) no-repeat 10px 13px;
+		a{
+			font-size:14px;
+			color: #0076b8;
+		 	}
+		}
+	}
