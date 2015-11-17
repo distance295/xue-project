@@ -12,7 +12,7 @@
 .notice-warp #notice-l .notice-nav {
   height: 700px;
   margin: 0;
-  padding-top: 15px;
+  padding: 15px 0 0 0;
   list-style: none;
 }
 .notice-warp #notice-l .notice-nav li {
@@ -41,7 +41,7 @@
   float: right;
   width: 920px;
   height: auto;
-  min-height: 680px;
+  min-height: 700px;
   overflow: hidden;
   background: #fff;
   border-radius: 5px;
