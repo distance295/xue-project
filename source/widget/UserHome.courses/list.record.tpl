@@ -29,28 +29,28 @@
                 <td>第1讲 初一数学目标满分班人教版 第一场直播</td>
                 <td class="text-style studied">已学习</td>
                 <td class="text-style">
-                    <a class="button course-btn" href="##"><em class="button-icon icon-just-white"></em>立即学习</a>
+                    <a class="btn btn-primary" href="##"><em class="button-icon icon-just-white"></em>立即学习</a>
                 </td>
             </tr>
             <tr>
                 <td>第1讲 初一数学目标满分班人教版 第一场直播</td>
                 <td class="text-style studied-end">上次学到</td>
                 <td class="text-style">
-                    <a class="alert button course-btn" href="##"><em class="button-icon icon-just-white"></em>立即学习</a>
+                    <a class="btn-danger btn" href="##"><em class="button-icon icon-just-white"></em>立即学习</a>
                 </td>
             </tr>
             <tr>
                 <td>第1讲 初一数学目标满分班人教版 第一场直播</td>
                 <td class="text-style">未学习</td>
                 <td class="text-style">
-                    <a class="button course-btn" href="##"><em class="button-icon icon-just-white"></em>立即学习</a>
+                    <a class="btn btn-primary" href="##"><em class="button-icon icon-just-white"></em>立即学习</a>
                 </td>
             </tr>
             <tr>
                 <td>第1讲 初一数学目标满分班人教版 第一场直播</td>
                 <td class="text-style yellow-mark">未学完<em class="mark"></em></td>
                 <td class="text-style">
-                    <a class="button course-btn" href="##"><em class="button-icon icon-just-white"></em>继续学习</a>
+                    <a class="btn btn-primary" href="##"><em class="button-icon icon-just-white"></em>继续学习</a>
                 </td>
             </tr>
         </tbody>

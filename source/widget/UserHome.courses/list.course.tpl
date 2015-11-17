@@ -30,9 +30,17 @@
                     <span><strong>2015-8-10（周六）9:00—11:30 </strong></span>
                 </p>
                 <p class="amount-show">
-                    <a class="small alert button course-btn" href="##"><em class="button-icon icon-will-red"></em>立即听课</a>
-                    <a class="small course-gray button course-btn" href="##">课程大纲<label class="newLabel">5</label></a>
-                    <a class="small course-gray button course-btn last" href="##">随堂测<label class="newLabel homeworkLabel">10</label></a>
+                    <a class="btn-danger btn " href="##"><em class="button-icon icon-will-red"></em>立即听课</a>
+                    <a class="btn btn-default " href="##">课程大纲<label class="newLabel">5</label></a>
+                    <a class="btn btn-default  last" href="##" data-content="" data-placement="top" title="" data-toggle="popover" type="button" data-original-title="Popover title" aria-describedby="popover446937" >随堂测<label class="newLabel homeworkLabel">10</label></a>
+                    <div role="tooltip" class="popover hide  top " id="popover446937" style="top: 22.05px; left: 216px; display: block;">
+                        <div class="arrow" style="top: 54.2021%;"></div>
+                        <h3 class="popover-title">Popover title</h3>
+                        <div class="popover-content">
+                            <h1>1111</h1>
+                            <h1>22222</h1>
+                        </div>
+                    </div>
                 </p>
             </div>
             <div class="more-service left">
@@ -99,9 +107,9 @@
                     <span><strong>2015-8-10（周六）9:00—11:30  一天后提供回看</strong></span>
                 </p>
                 <p class="amount-show">
-                    <button disabled="" class="button course-btn course-btn-gray">等待回看</button>
-                    <a class="small course-gray button course-btn" href="##">课程大纲</a>
-                    <a class="small course-gray button course-btn last" href="##">随堂测</a>
+                    <button disabled="" class="btn  course-btn-gray">等待回看</button>
+                    <a class="btn btn-default " href="##">课程大纲</a>
+                    <a class="btn btn-default  last" href="##">随堂测</a>
                 </p>
             </div>
             <div class="more-service left">
@@ -167,9 +175,9 @@
                     <span><strong>2015-8-10（周六）9:00—11:30  一天后提供回看</strong></span>
                 </p>
                 <p class="amount-show">
-                    <a class="small button course-btn" href="##"><em class="button-icon icon-will-red"></em>立即回看</a>
-                    <a class="small course-gray button course-btn" href="##">课程大纲</a>
-                    <a class="small course-gray button course-btn last" href="##">随堂测</a>
+                    <a class="btn btn-primary " href="##"><em class="button-icon icon-will-red"></em>立即回看</a>
+                    <a class="btn btn-default  " href="##">课程大纲</a>
+                    <a class="btn btn-default   last" href="##">随堂测</a>
                 </p>
             </div>
             <div class="more-service left">
@@ -234,9 +242,9 @@
                     <span><strong>2015-8-10（周六）9:00—11:30 </strong></span>
                 </p>
                 <p class="amount-show">
-                    <a class="small alert button course-btn" href="##"><em class="button-icon icon-just-white"></em>立即学习</a>
-                    <a class="small course-gray button course-btn" href="##">课程大纲</a>
-                    <a class="small course-gray button course-btn last" href="##"><label class="newLabel live-label">live</label>直播辅导</a>
+                    <a class="btn-danger btn " href="##"><em class="button-icon icon-just-white"></em>立即学习</a>
+                    <a class="btn btn-default " href="##">课程大纲</a>
+                    <a class="btn btn-default last" href="##"><label class="newLabel live-label">live</label>直播辅导</a>
                     <span class="direct-btn">直播中，<a href="###">立即进入 >></a></span>
                 </p>
             </div>
