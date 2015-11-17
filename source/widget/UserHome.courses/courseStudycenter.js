@@ -155,3 +155,16 @@ $(function(){
        });
     });
 });
+// 随堂测试弹框
+$(function(){
+    $('.listTest-btn').popover({
+        placement: 'top',
+        html: true,
+        trigger: 'click',
+        title: '',
+        content: function() {
+            var listTest_html = $(this).parents('.amount-show').siblings('.listTest-pop').html();
+            return listTest_html;
+        }
+    });
+})

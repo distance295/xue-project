@@ -60,12 +60,12 @@ body{
 	padding-right: 25px;
 }
 .popover{
-    background-color: #f9f9f9;
-    padding: 4px 3px;
-    font-size: 14px;
-    color: #666;
-    border-color: #e5e5e5;
-    box-shadow: none;
+	background-color: #f9f9f9;
+	padding: 4px 3px;
+	font-size: 14px;
+	color: #666;
+	border-color: #e5e5e5;
+	box-shadow: none;
 }
 .popover.top > .arrow::after{
 	border-top-color: #f9f9f9;
@@ -99,6 +99,7 @@ body{
 		font-size: 14px;
 		padding: 0;
 		line-height: 30px;
+		outline: none;
 	}
 	.button-icon{
 		display: inline-block;
@@ -114,7 +115,7 @@ body{
 	height: auto;
 	margin-bottom: 20px;
 	overflow: hidden;
-	padding: 15px 5px 15px 15px;
+	padding: 15px 0px 15px 15px;
 	table,tr,th,thead{margin: 0;padding: 0;}
 	ul,li,p{margin: 0;list-style: none;padding: 0}
 	.left{float: left;}
@@ -132,6 +133,7 @@ body{
 			text-align: left;
 			font-size: 12px;
 			color: #999999;
+			line-height: 20px;
 			span{
 				color: @red;
 			}
@@ -140,17 +142,15 @@ body{
 	.courseList-body{
 		display: block;
 		overflow: hidden;
-		padding: 0 10px;
+		padding: 0 0px 0 10px;
 		.course-center{
-			min-width: 517px;
+			min-width: 587px;
 		}
 		.course-title{
 			font-size: 16px;
 			line-height: 18px;
 			margin-bottom: 8px;
-			.title-detail{
-				color: @dark333;
-			}
+			font-family: 'Microsoft YaHei';
 			.course_estimate{
 				color: @dark333;
 				font-size: 12px;
@@ -255,7 +255,7 @@ body{
 			padding: 12px;
 			overflow: hidden;
 			float: left;
-			width: 160px;
+			width: 170px;
 			.avatar-photo{
 				float: left;
 				margin-right: 10px;
@@ -551,5 +551,21 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 		background: #3bafda;
 		color: #fff;
 		border-radius: 4px 4px 0 0;
+	}
+}
+.amount-show{
+	.popover{
+		background-color: #fcfcfc;
+		font-family: "SimSun";
+		min-width: 180px;
+		li{
+			font-size: 14px;
+			color: #666;
+			line-height: 22px;
+			span{
+				color: #e74c3c;
+				margin-right: 5px
+			}
+		}
 	}
 }
