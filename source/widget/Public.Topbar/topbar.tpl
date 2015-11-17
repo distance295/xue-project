@@ -60,42 +60,4 @@
 
     </div>
 </div>
-<!-- 登录前 -->
-
-
-<!--
-<div id="module-topbar">
-    <div class="ui-header-menu">
-        <ul class="topleft-bar pull-left list-unstyled breadcrumb">
-            <li>
-                <span class="xes">学而思网校欢迎你</span>
-                <a href="#" class="login text-danger">请登录</a>
-                <a href="#" class="register">免费注册</a>
-            </li>
-            <li class="ui-dropdown">
-                <span class="dropdown-handle">移动网校<i class="fa fa-angle-down dropdown-icon"></i></span>
-                <ul class="dropdown-body">
-                    <li><a href="#">手机版</a></li>
-                    <li><a href="#">IPAD版</a></li>
-                </ul>
-            </li>
-        </ul>
-        <ul class="topright-bar pull-right pull-right breadcrumb">
-            <li><a href="#">网校首页</a></li>
-            <li><a href="#">个人中心</a></li>
-            <li><a href="#">购物车<em class="text-danger">2</em></a></li>
-            <li><a href="#">订单<em class="text-danger">2</em></a></li>
-            <li class="ui-dropdown">
-                <span class="dropdown-handle">卡激活<i class="fa fa-angle-down dropdown-icon"></i></span>
-                <ul class="dropdown-body">
-                    <li><a href="#">代金卡</a></li>
-                    <li><a href="#">听课证</a></li>
-                    <li><a href="#">课程绑定卡</a></li>
-                </ul>
-            </li>
-            <li><a href="http://www.speiyou.com/" target="_blank">更多课程</a></li>
-            <li class="phone-400">400-800-2211</li>
-        </ul>
-    </div>
-</div>
--->
+<!-- 登录前 index.tpl -->

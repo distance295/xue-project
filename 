@@ -1,0 +1,30 @@
+Merge remote-tracking branch 'upstream/master'
+
+* upstream/master: (29 commits)
+  修改项目文件目录说明文档
+  修改readme
+  增加布局页面
+  增加学习中心首页布局
+  修改首页布局
+  dropdown增加init方法
+  修改server端口
+  static
+  新增公共底部模块
+  增加学习中心公共头部
+  修改右侧悬浮购物车模块
+  修改nav模块
+  调整topbar模块
+  修改bootstrap默认样式
+  开发票 没有消息的情况
+  删除示例图片
+  修改gold.css
+  修改发布配置文件
+  增加批处理文件
+  修改page里面的index面
+  ...
+
+# Please enter a commit message to explain why this merge is necessary,
+# especially if it merges an updated upstream into a topic branch.
+#
+# Lines starting with '#' will be ignored, and an empty message aborts
+# the commit.

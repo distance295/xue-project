@@ -9,7 +9,6 @@ var dropdown = dropdown || {};
 //var $ = require('jquery');
 
 
-
 //头部菜单显示隐藏
 dropdown.show = function (e) {
     var that = $(e);
@@ -20,10 +19,15 @@ dropdown.show = function (e) {
         that.find('.dropdown-body').hide();
     });
 };
-$(function () {
-    //头部菜单
+dropdown.init = function(handle){
     $('.ui-dropdown').on('mouseenter', function (event) {
         dropdown.show(this);
     });
-
-});
+};
+//$(function () {
+//    //头部菜单
+//    $('.ui-dropdown').on('mouseenter', function (event) {
+//        dropdown.show(this);
+//    });
+//
+//});

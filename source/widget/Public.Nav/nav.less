@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import '../../static/less/default.less';
+//@import '../../static/less/default.less';
 
 /**
  * 
@@ -17,8 +17,9 @@
     ul.head-nav {
         overflow: hidden;
         margin: 0;
-        padding-left: 210px;
         padding: 0;
+        padding-left: 210px;
+        font-size: 16px;
         li {
             float: left;
             width: 70px;
@@ -26,7 +27,6 @@
             text-align: center;
             list-style: none;
             a {
-                color: #666;
                 &:hover {
                     color: #3bafda;
                 }
@@ -48,7 +48,7 @@
     position: absolute;
     left: 0;
     font-size: 14px;
-    z-index: 10;
+    z-index: 1;
     overflow: visible;
     &.hover {
         height: auto;
