@@ -28,30 +28,6 @@ ul,li{list-style: none;}
 .course-green-label{
 	background: #37bc9b;
 }
-.button.course-gray{
-	background-color: #fcfcfc;
-	border: 1px solid #eaeaea;
-	color: #333333;
-	&:hover{
-		background-color: #e2e2e2;
-		border: 1px solid #d2d2d2;
-	}
-	&:focus{
-		background-color: #e2e2e2;
-		border: 1px solid #d2d2d2;
-	}
-}
-.button.course-btn{
-	.border-radius(2px);
-	margin-bottom: 0;
-	font-family: 'SimSun';
-	width: 98px;
-	height: 32px;
-	text-align: center;
-	font-size: 14px;
-	padding: 0;
-	line-height: 32px;
-}
 .button-icon{
 	display: inline-block;
 	width: 13px;
@@ -77,8 +53,16 @@ ul,li{list-style: none;}
 	width: 100%;
 	padding: 13px 10px;
 	overflow: hidden;
-	.button{
-		display: inline-block;
+	.btn{
+		.border-radius(2px);
+		margin-bottom: 0;
+		font-family: 'SimSun';
+		width: 98px;
+		height: 32px;
+		text-align: center;
+		font-size: 14px;
+		padding: 0;
+		line-height: 30px;
 	}
 	label{
 		margin-bottom: 0;
@@ -249,7 +233,7 @@ ul,li{list-style: none;}
 			}
 		}
 		.amount-test{
-			.button{
+			.btn{
 				float: left;
 			}
 			strong{
@@ -456,6 +440,7 @@ ul,li{list-style: none;}
 		right: -25px;
 		color: #fff;
 		font-size: 14px;
+		line-height: 24px;
 	}
 	.label-subject{
 		background: #ffbc3c;
