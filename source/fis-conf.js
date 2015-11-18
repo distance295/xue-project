@@ -75,15 +75,16 @@ fis.media('tmpl')
     })
 
 // JS规则
-    .match('/widget/(**)/*.js', {
-        release: '/static/js/$1.js',
+    .match('/widget/(**)/(*.js)', {
+//        packTo: '/static/js/$1.js',
+        release: '/static/js/$1.$2.js'
     })
 
 // Less规则
-    .match('/widget/(**)/*.less', {
+    .match('/widget/(**)/(*.less)', {
         parser: fis.plugin('less'), //启用fis-parser-less插件
         rExt: '.css',
-        release: '/static/css/$1.css'
+        release: '/static/css/$1.$2'
     })
 
 // pic资源图片规则
@@ -100,6 +101,7 @@ fis.media('tmpl')
     .match('/widget/(**)/img/(**)/(*.png)', {
         release:'/static/img/$1/$2/$3'
     })
+
 
 
 
