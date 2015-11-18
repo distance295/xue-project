@@ -10,7 +10,7 @@ sidebar.opt = {
 
 sidebar.setActive = function(id){
     var _dom = $(this.opt.dom).find('.btn');
-    console.log(_dom);
+    //console.log(_dom);
     _dom.each(function(){
         if($(this).data('id') == id){
             $(this).addClass(sidebar.opt.actCls);
