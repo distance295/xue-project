@@ -10,7 +10,7 @@
 var fresh = fresh || {};
 fresh.path = fresh.path || {};
 fresh.path.url = '/data/Dynamic/';
-fresh.path.img = '/static/pic/Dynamic/';
+fresh.path.img = '/static/img/Dynamic/';
 fresh.emoteHmtl = null;
 
 /**
