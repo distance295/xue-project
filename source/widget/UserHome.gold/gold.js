@@ -140,4 +140,17 @@ $(function(){
         upperLimit: new Date(),
         lowerLimit: new Date("2010/01/01")
     });
+    createModal.init(
+        {
+            title : "魔法卡兑换",
+            cls : "cardModal",
+            content : "<div class='red-card-box'><img src='/widget/UserHome.gold/img/Modal-red-card.png' /><div class='red-card-intro'><span class='red-card-name'>红名卡</span><div class='red-card-intro-name'><span class='red-card-intro-title'>数<span>量 ：</span></span><div class='red-card-num'>1</div><span>仅剩 <em>19</em> 张</span></div><div class='red-card-intro-name'><span class='red-card-intro-title'>兑换额 ：</span><span><em>260</em>金币</span></div><div class='red-card-intro-name'><span class='red-card-intro-title'>等<span>级 ：</span></span><span>12</span></div><div class='red-card-intro-name'><span class='red-card-intro-title'>有效期 ：</span><span>7*12小时</span></div><div class='red-card-exchange'>确认兑换</div></div></div>"
+        },
+        {
+            title : "实物礼品兑换",
+            cls : "presentModal",
+            content : "<div class='present-box'><img src='/widget/UserHome.gold/img/Modal-present.png' /><div class='present-intro'><span class='present-name'>清华大学扑克牌</span> <div class='present-intro-name'><span class='present-intro-title'>描<span>述 ：</span></span><span class='present-intro-content'>清华园，孺子牛.......想要更深入了解清华大学么，那就一起玩会扑克牌吧。让玩耍与认知达到统一，美观而便捷</span></div><div class='present-intro-name'><span class='present-intro-title'>数<span>量 ：</span></span><div class='present-dec'><p class='p1'></p></div><div class='present-num'>1</div><div class='present-add'><p class='p1'</p><p class='p2'></p></div><span class='present-piece'>仅剩 <em>19</em> 张</span></div><div class='present-intro-name'><span class='present-intro-title'>兑换额 ：</span><span class='present-intro-gold'><em>6800</em>金币</span></div></div></div><div class='present-address-box'><span>请选择收货地址</span><form action='' method='get'><label class='present-address-focus'><input type='radio' name='address' checked/>测试河北省 石家庄市 网校测试不用审核通过 15101089366</label><label><input type='radio' name='address'/>使用新的地址</label></form></div><div class='present-exchange'>确认兑换</div>"
+        }
+
+    );
 });

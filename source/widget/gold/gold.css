@@ -256,6 +256,7 @@ table tr td {
   font-size: 12px;
   color: #333;
   margin: 12px auto;
+  line-height: 18px;
 }
 .gold-store-card-exchange,
 .gold-store-present-exchange {
