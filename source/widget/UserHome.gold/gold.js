@@ -17,7 +17,7 @@ $(function(){
         pabLabel = '.present-address-box form label',
         presentAdd = '.present-add',
         presentDec = '.present-dec',
-        presentNum = '.present-num',
+        //presentNum = '.present-num',
         $dateStart = $('#dateStart'),
         $dateEnd = $('#dateEnd'),
         $cardCreateModal = $('.card-createModal'),
@@ -105,39 +105,39 @@ $(function(){
         }
         $pabLabel.removeClass('present-address-focus').eq(index).addClass('present-address-focus');
     });
-        var
-            //pig = '.present-intro-gold em',
-            $pig = $('.present-intro-gold em'),
-            $presentPiece = $('.present-piece em'),
-            gold = parseInt($pig.html()),
-            piece = parseInt($presentPiece.html());
-    //console.log($pig);
-        $body.on("click",presentAdd,function(){
-            console.log($pig.length);
-            var $presentNum = $(presentNum);
-            var num = parseInt($presentNum.html());
-            if(num > piece - 1){
-                $presentNum.html(piece);
-                $pig.html(gold * piece);
-            }
-            else{
-                $presentNum.html(num + 1);
-                $pig.html(gold * (num + 1));
-            }
-        });
-    $body.on("click",presentDec,function(){
-        var $presentNum = $(presentNum);
-        var num = parseInt($presentNum.html());
-        if(num == 1)
-        {
-            $presentNum.html(num);
-            $pig.html(gold);
-        }
-        else{
-            $presentNum.html(num - 1);
-            $pig.html(gold * (num - 1));
-        }
-    });
+    //    var
+    //        //pig = '.present-intro-gold em',
+    //        $pig = $('.present-intro-gold em'),
+    //        $presentPiece = $('.present-piece em'),
+    //        gold = parseInt($pig.html()),
+    //        piece = parseInt($presentPiece.html());
+    ////console.log($pig);
+    //    $body.on("click",presentAdd,function(){
+    //        console.log($pig.length);
+    //        var $presentNum = $(presentNum);
+    //        var num = parseInt($presentNum.html());
+    //        if(num > piece - 1){
+    //            $presentNum.html(piece);
+    //            $pig.html(gold * piece);
+    //        }
+    //        else{
+    //            $presentNum.html(num + 1);
+    //            $pig.html(gold * (num + 1));
+    //        }
+    //    });
+    //$body.on("click",presentDec,function(){
+    //    var $presentNum = $(presentNum);
+    //    var num = parseInt($presentNum.html());
+    //    if(num == 1)
+    //    {
+    //        $presentNum.html(num);
+    //        $pig.html(gold);
+    //    }
+    //    else{
+    //        $presentNum.html(num - 1);
+    //        $pig.html(gold * (num - 1));
+    //    }
+    //});
     $dateStart.calendar({
         controlId: "dateStartCalendar",
         controlClass:"calendar",
@@ -166,6 +166,37 @@ $(function(){
             title : "实物礼品兑换",
             cls : "presentModal aaa ccc",
             content : con
+        });
+        var
+        //pig = '.present-intro-gold em',
+            $pig = $('.present-intro-gold em'),
+            $presentPiece = $('.present-piece em'),
+            gold = parseInt($pig.html()),
+            piece = parseInt($presentPiece.html()),
+            $presentNum = $('.present-num');
+        $body.on("click",presentAdd,function(){
+            //console.log($pig.length);
+            var num = parseInt($presentNum.html());
+            if(num > piece - 1){
+                $presentNum.html(piece);
+                $pig.html(gold * piece);
+            }
+            else{
+                $presentNum.html(num + 1);
+                $pig.html(gold * (num + 1));
+            }
+        });
+        $body.on("click",presentDec,function(){
+            var num = parseInt($presentNum.html());
+            if(num == 1)
+            {
+                $presentNum.html(num);
+                $pig.html(gold);
+            }
+            else{
+                $presentNum.html(num - 1);
+                $pig.html(gold * (num - 1));
+            }
         });
     });
 
