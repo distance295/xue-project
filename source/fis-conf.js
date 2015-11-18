@@ -18,7 +18,10 @@ fis.set('project.ignore', [
     'fis-conf-pages.js',
     '/pages/**',
     '/template/Layer/*',
-    '/**/*.bat'
+    '/**/*.bat',
+    '*.bat',
+    '*.sh',
+    '*.log'
 ]);
 //fis.match('/widget/**', {
 //    useSameNameRequire: true,

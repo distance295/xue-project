@@ -23,7 +23,7 @@ fCheck.bordercss = function(argument) {
 }
 
 $(function() {
-    $(".btn_blue").click(function() {
+    $(".btn-bindcard").click(function() {
         if ($(".bindcardNo").val() == '') {
               fCheck.setTips(".bindcardNo-warning",'请输入课程绑定卡卡号');
             $(".bindcardNo").focus(function() {

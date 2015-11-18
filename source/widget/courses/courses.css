@@ -405,6 +405,7 @@ li {
   border: 1px solid #eaeaea;
   position: relative;
   overflow: visible;
+  background: #fcfcfc;
 }
 .course-small-list .label-course {
   width: 25px;

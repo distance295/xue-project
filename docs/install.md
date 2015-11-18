@@ -10,12 +10,12 @@ $ npm install -g fis3
 ### 2. 依赖工具
 
 ```
-$ fis3 install fis3-postpackager-loader
+$xue-project> fis3 install fis3-postpackager-loader
 ```
 ### 3. 依赖插件
 
 ```
-$ fis3 install fis-parser-less
+$xue-project> fis3 install fis-parser-less
 ```
   
 ## 二、发布及部署命令

@@ -23,7 +23,7 @@
     }
 
     $(function() {
-        $(".btn_blue").click(function() {
+        $(".btn-active").click(function() {
             if ($(".cardNo").val() == '') {
                   fCheck.setTips(".cardNo-warning",'请输入课程绑定卡卡号');
                 $(".cardNo").focus(function() {

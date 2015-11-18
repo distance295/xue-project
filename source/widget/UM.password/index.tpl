@@ -3,31 +3,36 @@
     @require password.js
 -->
 
-    <div class="form-password" action="" method="POST">
+<div class="form-password" action="" method="POST">
+    <div class="curPwd-box">
         <p>当前密码：</p>
-        <input id="old-password" name="old-password" type="password" maxlength="18" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;"/>
-        <label for="password" class="oldpass-tip">请输入当前网站密码</label>
-        <span class="oldpass-warning error"></span>
+        <input id="curPwd" name="curPwd" type="password" maxlength="18" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;"/>
+        <label for="curPwd" class="curPwd-tip">请输入当前网站密码</label>
+        <span class="curPwd-warning error"></span>
+    </div>
 
+    <div class="newPwd-box">
         <p>新密码：</p>
-        <input id="new-password" name="new-password" type="password" maxlength="18" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;"/>
-        <label for="password" class="newpass-tip">请设置密码</label>
+        <input id="newPwd" name="newPwd" type="password" maxlength="18" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;"/>
+        <label for="newPwd" class="newPwd-tip">请设置密码</label>
         <div class="pass-strength">
-            <span class="newpass-warning error"></span>
+            <span class="newPwd-warning error"></span>
             <span class="pass-strong">
                 <i class="security">安全强度</i>
                 <strong class="strong1"></strong>   
             </span>
         </div>
-
-        <p>确认密码：</p>
-        <input id="repassword" name="repassword" type="password" maxlength="18" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;"/>
-        <label for="password" class="repass-tip">请再次输入密码</label>
-        <span class="repass-warning error"></span>
-
-        <button id="form_submit" name="submit" id='register' type="submit">保存</button>     
     </div>
 
+    <div class="confirmPwd-box">
+        <p>确认密码：</p>
+        <input id="confirmPwd" name="confirmPwd" type="password" maxlength="18" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;"/>
+        <label for="confirmPwd" class="confirmPwd-tip">请再次输入密码</label>
+        <span class="confirmPwd-warning error"></span>
+    </div>
+
+    <button id="form_submit" class="btn btn-info" name="submit" type="submit">保存</button>     
+</div>
     <script>
         /* 火狐浏览器刷新之后的界面不同的处理 */
         !function(){
