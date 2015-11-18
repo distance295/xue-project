@@ -10,7 +10,8 @@
 var fresh = fresh || {};
 fresh.path = fresh.path || {};
 fresh.path.url = '/data/Dynamic/';
-fresh.path.img = '/static/pic/Dynamic/';
+fresh.path.img = '/static/img/Dynamic/';
+fresh.emoteHmtl = null;
 
 /**
  * 
@@ -749,39 +750,25 @@ fresh.comment = fresh.comment || {};
         }else{
             e.cancelBubble = true;
         }
-        //显示弹出层
-        $('.fresh-dialog-emote').removeClass('hiding');
-        //点击表情按钮切换表情弹出层（问题在另一个表情框出来之前前面一个是否消失）
-       /* var _flag = $(dom).attr('flag');
-        if( _flag == 0 ){
-           $('.fresh-dialog-emote').removeClass('hiding');
-           $(dom).attr('flag','1');
-        }else if( _flag == 1 ){
-           $('.fresh-dialog-emote').addClass('hiding');
-           $(dom).attr('flag','0');
-        }*/
         
-        //点击表情插入文本框
-        $('.fresh-dialog-emote').off('click', '.fresh-jsSmilies li').on('click', '.fresh-jsSmilies li', function(){
-              var _val = $(this).data('action');
-              _currentTextarea.focus();
-              _currentTextarea.insertContent(_val);
-              $('.fresh-dialog-emote').addClass('hiding');
-              //$(dom).attr('flag','0');
-        })
+        if( !fresh.emoteHmtl ){
+            $.ajax({
+                  url: fresh.path.url + 'emote.html',
+                  type: 'get',
+                  dataType: 'html',
+                  success: function(data) {
+                          fresh.emoteHmtl = data;
+                          fresh.emote.show(dom , _currentTextarea);
+                  }
+            })
+        }else{
+            fresh.emote.show(dom , _currentTextarea);
+        }
 
-        //关闭表情层(关闭表情弹出层)
-        $('.fresh-dialog-emote').off('click', '.fresh-smilies-close').on('click', '.fresh-smilies-close', function(){
-            $(this).closest('.fresh-dialog-emote').addClass('hiding');
-        });
-
-         //tabs和分页切换
-         this.emoteTabs(".fresh-smilies-tabs","current",".fresh-dialog-smilies-box");
-         this.emoteTabs(".fresh-smilies-page-box","current",".fresh-dialog-smilies-con");
     }
 
     /**
-     * 删除新鲜事和评论方法
+     * tab标枪切换方法
      * @param  {Object} tabTit 任意子节点
      * @param  {Object} on 任意类名
      * @param  {Object} tabCon 任意子节点
@@ -795,10 +782,29 @@ fresh.comment = fresh.comment || {};
     }
 
     /**
+     * 删除新鲜事或者评论弹出层方法
+     * @param {string} cont 提示文本
+     * @return {html} html元素
+     */
+    fc.delDialog = function(cont){
+       var delComment_html = '<div class="fresh-dialog-delete">\
+                                 <div class="fresh-dialog-delete-content">\
+                                      <p class="fresh-dialog-delete-tips">'+cont+'</p>\
+                                      <div class="fresh-dialog-delete-btn">\
+                                         <a href="javascript:void(0);" class="fresh-btn fresh-sure-btn">确定</a>\
+                                         <a href="javascript:void(0);" class="fresh-btn fresh-cancel-btn">取消</a>\
+                                      </div>\
+                                 </div>\
+                             </div>'
+        return delComment_html;                   
+    }
+
+    /**
      * 删除新鲜事和评论方法
      * @param  {string} dom 任意子节点
      */
     fc.delComment = function(dom){
+        var that = $(dom);
         if(dom){
           this.setParam(dom);
         }else{
@@ -808,8 +814,7 @@ fresh.comment = fresh.comment || {};
         var _type = $(dom).data().sign;
         //需要传递的参数
         var _data = $(dom).data('params');
-        $('.fresh-dialog-delete').removeClass('hide');
-
+        
         //提示信息
         var tipInfo = null;
         if( _type == 1){
@@ -817,11 +822,16 @@ fresh.comment = fresh.comment || {};
         } else if( _type == 2 ){
             tipInfo = '你确定删除该评论吗?';
         }
-        $('.fresh-dialog-delete .fresh-dialog-delete-tips').html(tipInfo);
+        //提示弹出层显示
+        popoverTips.show({
+            dom: that,
+            placement: 'top',
+            trigger: 'click', 
+            con: fc.delDialog(tipInfo)
+        });
         
         //点击确认按钮删除
         $('body').off('click', '.fresh-dialog-delete .fresh-sure-btn').on('click', '.fresh-dialog-delete .fresh-sure-btn', function(){
-             console.log(123456)
               $.ajax({
                   url: fresh.path.url + "ajaxDelDynamic.json",
                   type: 'get',
@@ -860,17 +870,15 @@ fresh.comment = fresh.comment || {};
                       } else {
                            return false;
                       }  
-                       $('.fresh-dialog-delete').addClass('hide');
+                      popoverTips.destroy(dom);
                   }
               });
         })
         
         //点击取消按钮
         $('body').off('click', '.fresh-dialog-delete .fresh-cancel-btn').on('click', '.fresh-dialog-delete .fresh-cancel-btn', function(){
-            console.log(123)
-            $('.fresh-dialog-delete').addClass('hide');
+            popoverTips.destroy(dom);
         })
-        
 
     }
     
@@ -887,7 +895,7 @@ fresh.collect = fresh.collect || {};
 
 (function(fl){
 
-     /**
+    /**
      * 收藏相关的弹出层方法
      * @param  {html | string} cont html字符串
      */
@@ -937,15 +945,15 @@ fresh.collect = fresh.collect || {};
                             collectBox.text(_num);
                         }
                         that.addClass('fresh-collect-cancel-btn');
-                        that.popover('destroy');
+                        popoverTips.destroy(dom);
                     }, 1000);
                 }else{
-                    that.popover('destroy');
+                    popoverTips.destroy(dom);
                     that.addClass('fresh-collect-cancel-btn');
                 }      
             },
             error : function(){
-                that.popover('destroy');
+                popoverTips.destroy(dom);
             }
         });
     }
@@ -989,15 +997,15 @@ fresh.collect = fresh.collect || {};
                             collectBox.text(_num);
                         }
                         that.addClass('fresh-collect-add-btn');
-                        that.popover('destroy');
+                        popoverTips.destroy(dom);
                     }, 1000);
                 }else{
-                    that.popover('destroy');
+                    popoverTips.destroy(dom);
                     that.addClass('fresh-collect-add-btn');
                 }      
             },
             error : function(){
-                that.popover('destroy');
+                popoverTips.destroy(dom);
             }
         });
     }
@@ -1201,6 +1209,54 @@ fresh.attention = fresh.attention || {};
 
 })(fresh.attention)
 
+
+/**
+ * 
+ * 表情相关业务
+ * @param {Object} fe fresh.emote
+ * 
+ */
+fresh.emote = fresh.emote || {};
+
+(function(fe){
+    
+    /**
+     * 表情弹出层显示方法
+     * @param  {string} dom 任意子节点
+     * @param  {string} textarea 任意子节点
+     */
+    fe.show = function(dom, textarea){
+        popoverTips.show({
+              dom: dom,
+              placement: 'bottom',
+              trigger: 'click',
+              con: fresh.emoteHmtl
+        })
+
+        //箭头靠左显示
+        var _popoverW = $('.fresh-dialog-emote').closest('.popover[role="tooltip"]').outerWidth()/2 -25;
+        $('.fresh-dialog-emote').closest('.popover[role="tooltip"]').css('marginLeft',_popoverW);
+        $('.fresh-dialog-emote').closest('.popover[role="tooltip"]').find('.arrow').css('left','25px');
+        
+        //点击表情插入文本框
+        $('.fresh-dialog-emote').off('click', '.fresh-jsSmilies li').on('click', '.fresh-jsSmilies li', function(){
+              var _val = $(this).data('action');
+              textarea.focus();
+              textarea.insertContent(_val);
+              popoverTips.destroy(dom);
+        })
+
+        //关闭表情层(关闭表情弹出层)
+        $('.fresh-dialog-emote').off('click', '.fresh-smilies-close').on('click', '.fresh-smilies-close', function(){
+            popoverTips.destroy(dom);
+        });
+
+         //tabs和分页切换
+         fresh.comment.emoteTabs(".fresh-smilies-tabs","current",".fresh-dialog-smilies-box");
+         fresh.comment.emoteTabs(".fresh-smilies-page-box","current",".fresh-dialog-smilies-con");
+    }
+
+})(fresh.emote)
 
 
 
