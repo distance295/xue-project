@@ -12,6 +12,13 @@
     <!-- 这是当前模块样式文件 -->
     <link href="gold.css" rel="stylesheet">
     <link href="../../static/css/ui.calendar.css" rel="stylesheet">
+    <!--<style>-->
+        <!--.modal-title{color:#666;}-->
+        <!--.modal-body{overflow: hidden;}-->
+        <!--.modal-dialog{width: 740px;}-->
+        <!--.present-address-box form label{display: block;}-->
+        <!--.present-address-box span{font-size: 16px;}-->
+    <!--</style>-->
 </head>
 <body>
 <!-- 金币商城头部 -->
@@ -89,7 +96,7 @@
                     <span class="gold-store-card-level">需要等级:<em>16</em></span>
                 </div>
                 <p>红名卡(月卡)，尊贵的红色昵称，让你与众不同。初期每周限售100张，每人限购2张</p>
-                <div class="gold-store-card-exchange">兑换</div>
+                <div class="gold-store-card-exchange ui-createModal" data-toggle="modal" data-target=".cardModal">兑换</div>
             </div>
             <div class="gold-store-card">
                 <div class="gold-store-card-img-box">
@@ -111,7 +118,7 @@
                     <span class="gold-store-card-level">需要等级:<em>16</em></span>
                 </div>
                 <p>红名卡(月卡)，尊贵的红色昵称，让你与众不同。初期每周限售100张，每人限购2张</p>
-                <div class="gold-store-card-exchange">兑换</div>
+                <div class="gold-store-card-exchange ui-createModal" data-toggle="modal" data-target=".cardModal">兑换</div>
             </div>
             <div class="gold-store-card">
                 <div class="gold-store-card-img-box">
@@ -188,7 +195,7 @@
                     <span class="gold-store-present-card-name">清华大学扑克牌</span>
                     <span class="gold-store-present-card-stock">库存还剩347套</span>
                     <span class="gold-store-present-card-gold">260金币</span>
-                    <div class="gold-store-present-exchange">兑换</div>
+                    <div class="gold-store-present-exchange ui-createModal" data-toggle="modal" data-target=".presentModal">兑换</div>
                 </div>
                 <div class="gold-store-present-card gold-store-present-card-center">
                     <div class="gold-store-present-img-box">
@@ -259,6 +266,7 @@
         </div>
     </div>
 </div>
+<!-- 我兑换的 -->
 <div class="gold-exchange-container gold-detail-block-change">
     <ul class="gold-exchange-title-container">
         <li class="gold-exchange-title-on" exchange-target=".gold-exchange-card-box">魔法卡</li>
@@ -433,7 +441,9 @@
     </div>
 </div>
 <script src="../../lib/jQuery/1.11.1/jquery.js"></script>
+<script src="../../lib/bootstrap/3.3.5-custom/js/bootstrap.js"></script>
 <script src="../../static/js/xue.ui.calendar.js"></script>
 <script src="gold.js"></script>
+<script src="../Module.Modal/Modal.js"></script>
 </body>
 </html>

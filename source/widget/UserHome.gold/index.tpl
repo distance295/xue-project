@@ -1,9 +1,12 @@
 <!--
    金币商城首页
+    @require ../../lib/jQuery/1.11.1/jquery.js
+    @require ../../lib/bootstrap/3.3.5-custom/js/bootstrap.js
     @require gold.less
     @require ../../static/css/ui.calendar.css
     @require ../../static/js/xue.ui.calendar.js
     @require gold.js
+    @require ../Module.Modal/Modal.js
 -->
 
 <!-- 金币商城头部 -->
@@ -81,7 +84,7 @@
                     <span class="gold-store-card-level">需要等级:<em>16</em></span>
                 </div>
                 <p>红名卡(月卡)，尊贵的红色昵称，让你与众不同。初期每周限售100张，每人限购2张</p>
-                <div class="gold-store-card-exchange">兑换</div>
+                <div class="gold-store-card-exchange ui-createModal" data-toggle="modal" data-target=".cardModal">兑换</div>
             </div>
             <div class="gold-store-card">
                 <div class="gold-store-card-img-box">
@@ -180,7 +183,7 @@
                     <span class="gold-store-present-card-name">清华大学扑克牌</span>
                     <span class="gold-store-present-card-stock">库存还剩347套</span>
                     <span class="gold-store-present-card-gold">260金币</span>
-                    <div class="gold-store-present-exchange">兑换</div>
+                    <div class="gold-store-present-exchange ui-createModal" data-toggle="modal" data-target=".presentModal">兑换</div>
                 </div>
                 <div class="gold-store-present-card gold-store-present-card-center">
                     <div class="gold-store-present-img-box">
@@ -424,4 +427,5 @@
         </div>
     </div>
 </div>
+
 
