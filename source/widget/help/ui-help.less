@@ -80,3 +80,129 @@
 		 }
 	}
 }
+
+//帮助例表
+
+.ui_mod_help_content {
+		width:980px;
+		margin:0 auto;
+		overflow:hidden;
+		.ui_tabs_help {
+			height:76px;
+			overflow:hidden;
+			margin-top:15px; 
+			background:url(img/tabs_bg.png) repeat-x;
+			li {
+				float:left; 
+				display:inline;
+				width:218px;
+				margin:10px 10px 0 0;
+				a {
+					display:block;
+					width:218px;
+					height:66px;
+				}
+				&.one {
+					margin-left:0px;
+					a {
+						background:url(img/tabs_1.png) 0 9px no-repeat;
+						&.current { 
+							background:url(img/tabs_current1.png) no-repeat;
+						}
+					}
+				}
+				&.two a{
+					background:url(img/tabs_2.png) 0 9px  repeat-x;
+					&.current{background:url(img/tabs_current2.png) repeat-x;} 
+				} 
+				&.three a{
+					background:url(img/tabs_3.png) 0 9px  repeat-x;
+					&.current{background:url(img/tabs_current3.png) repeat-x;}
+				}
+				&.four a{
+					background:url(img/tabs_4.png) 0 9px  repeat-x;
+					&.current{background:url(img/tabs_current4.png) repeat-x;}
+				} 
+			}
+		}
+		//热点问题
+		ul.ui_help_main {
+			overflow: hidden;
+			li {
+				display:none;overflow:hidden;
+				&.conFocus {
+					display: block;
+				}
+				.help_hotspot {
+					overflow:hidden;width:845px;margin:20px 0 20px 40px;
+					.left_help {
+						float:left;width:430px;overflow:hidden;border-right: 1px solid #ededed;
+						.list_infor {
+							width:350px;
+							.title_spot {
+							line-height:30px;padding-left:12px;font-size:14px;
+							 	a {color:#333;}
+							}
+							&.current a {font-weight:bold;color:#666;}
+							.infor_spot {display:none;line-height:180%;margin-left:12px;color:#999;}
+						}
+					}
+					.right_lelp {
+						float:right;width:350px;padding-left:40px;border:0;
+					}
+				}
+			}
+		}
+		//快速指引
+		.help_guide {
+			overflow:hidden;width:845px;margin:10px auto;
+			dl {
+				float:left; display:inline;margin-right:2px; cursor:pointer;
+				dt {
+					width:167px;height:42px;line-height:42px;overflow: hidden; text-align:center;background:url(img/help_con_1.png) no-repeat;
+				}
+				dd {
+					width:164px;height:165px;line-height: 2.2em;padding:10px 28px 0 30px;border:1px solid #F9F9F9; 
+					a {color: #333;}
+				}
+			}
+			.current {
+				dt {
+					background:url(img/help_con_cur.png) no-repeat;color:#fff;font-weight:bold;
+					}
+				dd { 
+					background:#fef2f2;border:1px solid #f3d7d6;overflow:hidden;
+				} 
+			}
+		}
+		//课程体系 
+		.help_service {
+			overflow:hidden;width:845px;margin:10px auto;
+			dl {
+				float:left; display:inline; width:276px;overflow: hidden; padding: 14px 0 14px 5px;
+				dt { 
+					font-weight: 700;  background:url(img/icon_help.png) no-repeat;padding:5px 0 5px 22px;color:#666;font-family: "Microsoft YaHei";font-size: 14px;
+				}
+				dd {
+					height:165px;line-height: 2.2em;padding-right: 28px; white-space: nowrap;padding-left:22px; background:url(img/line_h.png) 6px top repeat-y;
+					a {color: #333;}
+				}
+			}
+		}
+		//帮助分类
+		.help_classify {
+			overflow:hidden;width:845px;margin:10px auto;
+			dl {
+				float:left; display:inline; width:417px;height:76px;overflow: hidden;
+				dt { 
+					color: #666;font-weight: 700; padding-bottom: 5px;font-size: 14px;font-family: "Microsoft YaHei";
+				}
+				dd { 
+					float: left;line-height: 2.2em;padding-right: 28px; white-space: nowrap;
+					a {color: #333;}
+				}
+			}
+		} 
+}
+
+h1.title_help_new {width:845px;margin:20px auto;font-size:14px;color:#666;}
