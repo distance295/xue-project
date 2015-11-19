@@ -1,7 +1,5 @@
 <!--
    金币商城首页
-    @require ../../lib/jQuery/1.11.1/jquery.js
-    @require ../../lib/bootstrap/3.3.5-custom/js/bootstrap.js
     @require gold.less
     @require ../../static/css/ui.calendar.css
     @require ../../static/js/xue.ui.calendar.js
