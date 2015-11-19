@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>学习中心</title>
+    <title>商城</title>
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,8 +20,10 @@
 <body>
     <!-- module.topbar -->
     <link rel="import" href="../../widget/Public.Topbar/index.tpl?__inline">
-    <!-- module.homeHeader -->
-    <link rel="import" href="../../widget/UserHome.header/index.tpl?__inline">
+    <!-- module.Header -->
+    <link rel="import" href="../../widget/Public.Header/index.tpl?__inline">
+    <!-- module.Nav -->
+    <link rel="import" href="../../widget/Public.Nav/index.tpl?__inline">
 
 
 
