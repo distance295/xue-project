@@ -159,7 +159,7 @@ $(function(){
 
     $presentCreateModal.on('click',function(){
         var that = $(this), data = that.data();
-        var con = "<div class='present-box'><img src='/widget/UserHome.gold/img/Modal-present.png' /><div class='present-intro'><span class='present-name'>清华大学扑克牌</span> <div class='present-intro-name'><span class='present-intro-title'>描<span>述 ：</span></span><span class='present-intro-content'>清华园，孺子牛.......想要更深入了解清华大学么，那就一起玩会扑克牌吧。让玩耍与认知达到统一，美观而便捷</span></div><div class='present-intro-name'><span class='present-intro-title'>数<span>量 ：</span></span><div class='present-dec'><p class='p1'></p></div><div class='present-num'>1</div><div class='present-add'><p class='p1'</p><p class='p2'></p></div><span class='present-piece'>仅剩 <em>"+ data.num +"</em> 张</span></div><div class='present-intro-name'><span class='present-intro-title'>兑换额 ：</span><span class='present-intro-gold'><em>"+ data.price +"</em>金币</span></div></div></div><div class='present-address-box'><span>请选择收货地址</span><form action='' method='get'><label class='present-address-focus'><input type='radio' name='address' checked/>测试河北省 石家庄市 网校测试不用审核通过 15101089366</label><label><input type='radio' name='address'/>使用新的地址</label></form></div><div class='present-exchange'>确认兑换</div>";
+        var con = "<div class='present-card-tip'></div><div class='present-box'><img src='/widget/UserHome.gold/img/Modal-present.png' /><div class='present-intro'><span class='present-name'>清华大学扑克牌</span> <div class='present-intro-name'><span class='present-intro-title'>描<span>述 ：</span></span><span class='present-intro-content'>清华园，孺子牛.......想要更深入了解清华大学么，那就一起玩会扑克牌吧。让玩耍与认知达到统一，美观而便捷</span></div><div class='present-intro-name'><span class='present-intro-title'>数<span>量 ：</span></span><div class='present-dec'><p class='p1'></p></div><div class='present-num'>1</div><div class='present-add'><p class='p1'</p><p class='p2'></p></div><span class='present-piece'>仅剩 <em>"+ data.num +"</em> 张</span></div><div class='present-intro-name'><span class='present-intro-title'>兑换额 ：</span><span class='present-intro-gold'><em>"+ data.price +"</em>金币</span></div></div></div><div class='present-address-box'><span>请选择收货地址</span><form action='' method='get'><label class='present-address-focus'><input type='radio' name='address' checked/>测试河北省 石家庄市 网校测试不用审核通过 15101089366</label><label><input type='radio' name='address'/>使用新的地址</label></form></div><div class='present-exchange'>确认兑换</div>";
 
         createModal.show({
             id : 'presentModal',
@@ -199,6 +199,17 @@ $(function(){
                 $pig.html(gold * (num - 1));
             }
         });
+        var
+            $pct = $('.present-card-tip'),
+            $pe = $('.present-exchange');
+        $pe.on('click',function(event){
+            var div = $pct.html();
+            if(div !== ''){
+                event.preventDefault();
+            }else{
+                $pct.append('<div class="alert alert-danger fade in"><span>兑换失败,你的金币余额不足哦~</span></div>')
+            }
+        });
     });
 
     $cardCreateModal.on('click',function(){
@@ -215,16 +226,15 @@ $(function(){
 
         var
             $rce = $('.red-card-exchange'),
-            $rct = $('.red-card-tip'),
-            div = $rct.val();
-        console.log(div);
-        if(div == ''){
-            $rce.on('click',function(){
+            $rct = $('.red-card-tip');
+        $rce.on('click',function(event){
+            var div = $rct.html();
+            if(div !== ''){
+                event.preventDefault();
+            }else{
                 $rct.append('<div class="alert alert-danger fade in"><span>兑换失败,你的金币余额不足哦~</span></div>')
-            });
-        }else{
-            $rce.remove();
-        }
+            }
+        });
     });
 
     //createModal.init(
