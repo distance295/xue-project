@@ -86,7 +86,7 @@
   height: 76px;
   overflow: hidden;
   margin-top: 15px;
-  background: url(http://img04.xesimg.com/help/tabs_bg.png) repeat-x;
+  background: url(img/tabs_bg.png) repeat-x;
 }
 .ui_mod_help_content .ui_tabs_help li {
   float: left;
@@ -103,28 +103,28 @@
   margin-left: 0px;
 }
 .ui_mod_help_content .ui_tabs_help li.one a {
-  background: url(http://img04.xesimg.com/help/tabs_1.png) 0 9px no-repeat;
+  background: url(img/tabs_1.png) 0 9px no-repeat;
 }
 .ui_mod_help_content .ui_tabs_help li.one a.current {
-  background: url(http://img04.xesimg.com/help/tabs_current1.png) no-repeat;
+  background: url(img/tabs_current1.png) no-repeat;
 }
 .ui_mod_help_content .ui_tabs_help li.two a {
-  background: url(http://img04.xesimg.com/help/tabs_2.png) 0 9px repeat-x;
+  background: url(img/tabs_2.png) 0 9px repeat-x;
 }
 .ui_mod_help_content .ui_tabs_help li.two a.current {
-  background: url(http://img04.xesimg.com/help/tabs_current2.png) repeat-x;
+  background: url(img/tabs_current2.png) repeat-x;
 }
 .ui_mod_help_content .ui_tabs_help li.three a {
-  background: url(http://img04.xesimg.com/help/tabs_3.png) 0 9px repeat-x;
+  background: url(img/tabs_3.png) 0 9px repeat-x;
 }
 .ui_mod_help_content .ui_tabs_help li.three a.current {
-  background: url(http://img04.xesimg.com/help/tabs_current3.png) repeat-x;
+  background: url(img/tabs_current3.png) repeat-x;
 }
 .ui_mod_help_content .ui_tabs_help li.four a {
-  background: url(http://img04.xesimg.com/help/tabs_4.png) 0 9px repeat-x;
+  background: url(img/tabs_4.png) 0 9px repeat-x;
 }
 .ui_mod_help_content .ui_tabs_help li.four a.current {
-  background: url(http://img04.xesimg.com/help/tabs_current4.png) repeat-x;
+  background: url(img/tabs_current4.png) repeat-x;
 }
 .ui_mod_help_content ul.ui_help_main {
   overflow: hidden;
@@ -151,7 +151,6 @@
   width: 350px;
 }
 .ui_mod_help_content ul.ui_help_main li .help_hotspot .left_help .list_infor .title_spot {
-  background: url(http://www.xueersi.com/static/img/icon/ui_list_icon_triangle.png) 0px 8px no-repeat;
   line-height: 30px;
   padding-left: 12px;
   font-size: 14px;
@@ -192,7 +191,7 @@
   line-height: 42px;
   overflow: hidden;
   text-align: center;
-  background: url(http://img04.xesimg.com/help/help_con_1.png) no-repeat;
+  background: url(img/help_con_1.png) no-repeat;
 }
 .ui_mod_help_content .help_guide dl dd {
   width: 164px;
@@ -205,7 +204,7 @@
   color: #333;
 }
 .ui_mod_help_content .help_guide .current dt {
-  background: url(http://img04.xesimg.com/help/help_con_cur.png) no-repeat;
+  background: url(img/help_con_cur.png) no-repeat;
   color: #fff;
   font-weight: bold;
 }
@@ -228,7 +227,7 @@
 }
 .ui_mod_help_content .help_service dl dt {
   font-weight: 700;
-  background: url(http://img04.xesimg.com/help/icon_help.png) no-repeat;
+  background: url(img/icon_help.png) no-repeat;
   padding: 5px 0 5px 22px;
   color: #666;
   font-family: "Microsoft YaHei";
@@ -240,7 +239,7 @@
   padding-right: 28px;
   white-space: nowrap;
   padding-left: 22px;
-  background: url(http://img04.xesimg.com/help/line_h.png) 6px top repeat-y;
+  background: url(img/line_h.png) 6px top repeat-y;
 }
 .ui_mod_help_content .help_service dl dd a {
   color: #333;
@@ -278,5 +277,4 @@ h1.title_help_new {
   margin: 20px auto;
   font-size: 14px;
   color: #666;
-  font-family: "Microsoft YaHei";
 }
