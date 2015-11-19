@@ -45,6 +45,7 @@ body {
   color: #fff;
 }
 .homework-wrapper {
+  margin: 20px auto;
   overflow: hidden;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -384,7 +385,6 @@ body {
   text-align: left;
   font-size: 14px;
   color: #333;
-  letter-spacing: -0.5px;
 }
 .homework-wrapper .homework-Feedback-header .homework-dialog em {
   color: #e74c3c;
@@ -562,12 +562,4 @@ body {
 }
 .homework-wrapper .homework-submit-btn:hover {
   background: #2392ba;
-}
-.homework-panel-style.panel {
-  margin-bottom: 0;
-  background: none;
-  border: none;
-  border-radius: 0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
 }

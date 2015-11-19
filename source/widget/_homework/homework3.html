@@ -1,22 +1,34 @@
-<!--
-    @require homework.less
-    @require homework.ImageSet.min.js
-    @require homework.ImageTrans.min.js
-    @require homework.js
--->
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>学习中心--交作业--已回驳</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- 这是CSS库文件 -->
+    <!-- <link rel="stylesheet" type="text/css" href="../../lib/foundation/css/foundation.css"> -->
+    <!-- 这是CSS库文件 -->
+    <link href="../../lib/bootstrap/3.3.5-custom/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- 这是当前模块样式文件 -->
+    <link href="homework.css" rel="stylesheet">
+  </head>
+<body>
 	<div class="homework-wrapper">
 		<div class="homework-container">
+			<!--交作业右侧开始-->
+			<div class="homework-right-all pull-right"></div>
+			<!--交作业右侧结束-->
 			<!--交作业左侧开始-->
 			<div class="homework-left-all">
 				<div class="homework-header">
+					<p><i></i><span>作业已被驳回！ 原因：图片不清晰，请尽快重新提交！</span></p>
 					<h2>
 						<span class="homework-name pull-left">第三次作业 三角函数</span>
-						
 						<span class="homework-status homework-status-yellow pull-left">已驳回</span>
 						<i class="pull-left"></i>
-						
-						<button class="homework-remind-btn pull-right">提醒</button>
-						<span class="pull-right">提醒老师尽快为我批改</span>
 					</h2>
 				</div>	
 				<div class="homework-image-box" id="home_Image1">
@@ -48,12 +60,12 @@
 									</li>
 									<li>
 										<span class="homework-MaskLayer"></span>
-										<span class="homework-MaskLayer-num">5</span>
+										<span class="homework-MaskLayer-num">4</span>
 										<img src="img/small3.png" /><i></i>
 									</li>
 									<li>
 										<span class="homework-MaskLayer"></span>
-										<span class="homework-MaskLayer-num">6</span>
+										<span class="homework-MaskLayer-num">4</span>
 										<img src="img/small2.png" /><i></i>
 									</li>
 									<li><img src="img/small1.png"/><i></i></li>
@@ -62,19 +74,10 @@
 							<div class="homework-page-btn"><i class="homework-next-btn homework-next-active"></i></div>
 						</div>
 						<div class="homework-bigImg-box">
-							<div class="homework-rightMeun pull-right">
-								<ul>
-									<li><i class="homework-audio"></i></li>
-									<li><i class="homework-leftRotate-btn"></i></li>
-									<li><i class="homework-rightRotate-btn"></i></li>
-									<li><i class="homework-zoom-btn"></i></li>
-									<li><i class="homework-zoomout-btn"></i></li>
-								</ul>
-							</div>
 							<div id="home_ImageTransform1" class="homework-ImageTransform">
 								<ul style="display:none">
 									<li><img src="img/small3.png" /></li>
-									<li><img src="http://7sbrvo.com2.z0.glb.qiniucdn.com/homework/img/2015/11/05/14467099031310.png" /></li>
+									<li><img src="img/small2.png" /></li>
 									<li><img src="img/small3.png" /></li>
 									<li><img src="img/small2.png" /></li>
 									<li><img src="img/small3.png" /></li>
@@ -90,7 +93,7 @@
 												<p class="homework-tipsInfo">完成作业奖励<em>15</em>金币和<em>1500</em>学力。辅导老师额外奖励你<em>150</em>个金币！</p>
 											</div>
 											<div class="homework-scoreArea">
-												<span class="homework-score" score = "2"></span>
+												<span class="homework-score" score = "159"></span>
 												<span class="homework-scoreLine"></span>
 											</div>
 										</div>
@@ -112,54 +115,21 @@
 							</div>
 						</div>
 					</div>
-					<!--查看评论区域开始-->
-					<div class="homework-comment-box">
-						<div class="homework-star pull-left">
-							<span class="pull-left">评价作业批改</span>
-							<div class="homework-star-area pull-left" id="starArea1">
-								<ul class="pull-left">
-									<li class="on"></li>
-									<li class="on"></li>
-									<li class="on"></li>
-									<li class="on"></li>
-									<li class="on"></li>
-								</ul>
-								<span class="homework-star-score-num">3</span>
-							</div>
-						</div>
-						<p class="homework-comment">感谢老师的细心批改！感谢老师的细心批改！</p>
-						<p class="homework-date">2015-08-09</p>
-					</div>
-					<!--查看评论区域结束-->
-					<!--可以评论区域开始-->
-					<div class="homework-comment-box hiding">
-						<div class="homework-star pull-left">
-							<span class="pull-left">评价作业批改</span>
-							<div class="homework-star-area pull-left" id="homeworkstarArea" role="homeworkstarArea">
-								<ul class="left">
-									<li class="on"></li>
-									<li class="on"></li>
-									<li class=""></li>
-									<li class=""></li>
-									<li class=""></li>
-								</ul>
-								<span class="homework-star-score-num">3</span>
-							</div>
-						</div>
-						<textarea class="homework-comment" placeholder="请对老师的作业批改做出评价，谢谢！"></textarea>
-						<div class="homework-submit-box">
-							<button class="homework-submit-btn pull-right">提交</button>
-						</div>
-					</div>
-					<!--可以评论区域结束-->
 				</div>
 
 			</div>
 			<!--交作业左侧结束-->
 		</div>
 	</div>	
-<!-- 图片旋转js -->
+</body>
+</html>
 
+<!-- 这是jquery库文件 -->
+<script type="text/javascript" src="../../lib/jQuery/2.1.1/jquery.min.js"></script>
+<!-- 图片旋转js -->
+<script type="text/javascript" src="homework.ImageSet.min.js"></script>
+<script type="text/javascript" src="homework.ImageTrans.min.js"></script>
+<script type="text/javascript" src="homework.js"></script>
 <script type="text/javascript">
 	$(function(){
             homeWork.imageCtl('.homework-image-box');
@@ -177,17 +147,11 @@
 				leftRotate:".homework-leftRotate-btn",//向左旋转按钮
 				rightRotate:".homework-rightRotate-btn",//向右旋转按钮
 				min_picnum:4,//小图显示个数
-				isZoom:true//是否存在旋转缩放
+				isZoom:false//是否存在旋转缩放
 			});
 
 			//分数处理函数
 	        homeWork.score('.homework-score');
-
-	        //星星评分
-	        $('#homeworkstarArea[role="homeworkstarArea"]').starScore({
-		 	     className:"on",//星星选中状态类
-		 	     scoreNum:".scoreNum"//显示评分分数的类
-	       })
 	})
 	
 </script>
