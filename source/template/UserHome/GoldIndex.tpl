@@ -15,7 +15,7 @@
         </div>
     </div>
 </div>
- 
+
 <!-- 页面配置 -->
 <script>
     var PAGE_CONFIG = {

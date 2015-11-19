@@ -121,9 +121,11 @@ $(function(){
         event.stopPropagation();
         var a = $(this).hasClass('blue-arrow')
         if(a){
-           $(this).removeClass('blue-arrow').parents('.more-service').removeClass('show');
+            // $(this).removeClass('show').children('h4').removeClass('blue-arrow');
+            $(this).removeClass('blue-arrow').parents('.more-service').removeClass('show');
        }else{
-           $(this).addClass('blue-arrow').parents('.more-service').addClass('show');
+            // $(this).addClass('show').children('h4').addClass('blue-arrow');
+            $(this).addClass('blue-arrow').parents('.more-service').addClass('show');
        }
    });
     $(document.body).on('click',function(event){

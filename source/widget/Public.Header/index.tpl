@@ -17,5 +17,5 @@
             <a target="_blank" href="#" class="text-muted">9.9抢购</a>
         </div>
         <!-- 头部购物车ui部分调用 -->
-        <link rel="import" href="../Public.MiniCart/minicart.tpl?__inline">
+        <link rel="import" href="../Public.MiniCart/index.tpl?__inline">
     </div>

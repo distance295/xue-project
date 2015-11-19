@@ -89,7 +89,7 @@ nav.init = function(o){
     $.extend(this.opt, o);
     
     if(this.opt.fixed){
-        $(this.opt.id).addClass('fixed');
+        $(this.opt.id).addClass('fixed hover');
     }else{
         $(this.opt.id).removeClass('fixed hover');
     }
