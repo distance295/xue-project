@@ -18,6 +18,12 @@ $(function(){
     document.title = PAGE_CONFIG.TITLE;
     dropdown.init();
     try{
+        nav.init({
+            dataUrl : '/data/Public.Nav/nav.json'
+            ,fixed : PAGE_CONFIG.NAV_FIXED || false
+        });
+    }catch(e){}
+    try{
         sidebar.setActive(PAGE_CONFIG.ID);
     }catch(e){}
     try{
