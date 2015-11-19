@@ -1,6 +1,7 @@
 <!--
     @require fresh.less
     @require ../Module.popover/xue.popover.js
+    @require ../Module.Modal/Modal.js
     @require fresh.js
     @require fresh.load.min.js
 -->
@@ -463,59 +464,11 @@
       
 
 <!--发送新鲜事弹出层效果开始-->
-<form class="fresh-send-box hiding" method="POST"  action="/Dynamics/addDynamic" enctype="multipart/form-data" name="formsubmitf">
-    <textarea class="fresh-send-textareaBox" name="content"></textarea>
-    <div class="fresh-send-preview hiding" id="fresh-send-preview">
-         <div class="fresh-send-preview-imgvideo" id="fresh-send-preview-imgvideo">
-             <img id="fresh-send-preview-img" src="img/fresh-send-img.png">
-             <i class="fresh-preview-close"></i>
-         </div>
-    </div>
-    <div class="fresh-send-form">
-         <div class="fresh-send-emote-click-btn fresh-emote-current" flag="0">
-            <i class="fresh-send-emote"></i>
-            <a href="javascript:void(0);">表情</a>
-         </div>
-         <div class="fresh-send-upload">
-            <input class="fresh-fileToUpload" id="fresh-fileToUpload" type="file" size="45"  name="dynImg" accept="image/*" />
-         </div>
-         <a href="javascript:void(0);">图片</a>
-         <em class="pull-left">（支持类型 JPG、PNG，大小不超过5M）</em>
-         <div class="fresh-send-submit-box pull-right">
-          <button class="blue-radius-btn fresh-send-submit-btn">发布</button>
-         </div>
-         <span class="pull-right">
-            <em class="pull-left">您还可以输入</em>
-            <em class="fresh-send-text-num pull-left">140</em>
-            <em class="pull-left">字</em>
-         </span>
-         <span class="fresh-comment-tips hiding"></span>
-    </div>
-    <input type="hidden" value="0" name="mypretime">
-</form>
+
 <!--发送新鲜事弹出层效果结束-->
 
 <!--验证码弹出层开始-->
-<div class="fresh-dialog-verificationCode" style="width: 375px; display:none">
-    <div class="fresh-dialog-content">
-       <div class="fresh-dialog-medal">
-           <div class="fresh-dialog-medal-tips">
-               <span>您连续评论次数太多了，请输入验证码完成发布。</span>
-           </div>
-           <div class="fresh-dialog-medal-img">      
-                <span>验证码</span>     
-                <input type="text" autocomplete="off" maxlength="4" id="verificationCode" name="verificationCode">       
-                <span>
-                  <img width="60" height="20" id="verificationImg" alt="验证码" src="http://www.xueersi.com/verifications/show?AY2N5mp5im13" title="(看不清，换一张)">    
-                </span>
-            </div>
-            <span id="fresh-dialog-tips-Code"></span>
-            <div class="fresh-dialog-sure-btn">
-                <a href="###" class="small radius button">确定</a>
-            </div>
-       </div>
-    </div>
-</div>
+
 <!--验证码弹出层结束-->
 
 
