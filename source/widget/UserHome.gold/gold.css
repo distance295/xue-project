@@ -557,9 +557,17 @@ table tr td {
 .modal-body {
   overflow: hidden;
 }
-.modal-dialog {
-  width: 740px;
-}
 .present-address-box span {
   font-size: 16px;
+}
+.red-card-tip div {
+  padding: 0;
+  height: 30px;
+  text-align: center;
+}
+.red-card-tip div span {
+  height: 30px;
+  line-height: 30px;
+  color: #333;
+  font-weight: bold;
 }

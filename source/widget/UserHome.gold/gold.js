@@ -163,6 +163,7 @@ $(function(){
 
         createModal.show({
             id : 'presentModal',
+            width : '740',
             title : "实物礼品兑换",
             cls : "presentModal aaa ccc",
             content : con
@@ -202,14 +203,28 @@ $(function(){
 
     $cardCreateModal.on('click',function(){
         var that = $(this), data = that.data();
-        var con = "<div class='red-card-box'><img src='/widget/UserHome.gold/img/Modal-red-card.png' /><div class='red-card-intro'><span class='red-card-name'>红名卡</span><div class='red-card-intro-name'><span class='red-card-intro-title'>数<span>量 ：</span></span><div class='red-card-num'>1</div><span>仅剩 <em>19</em> 张</span></div><div class='red-card-intro-name'><span class='red-card-intro-title'>兑换额 ：</span><span><em>260</em>金币</span></div><div class='red-card-intro-name'><span class='red-card-intro-title'>等<span>级 ：</span></span><span>12</span></div><div class='red-card-intro-name'><span class='red-card-intro-title'>有效期 ：</span><span>7*12小时</span></div><div class='red-card-exchange'>确认兑换</div></div></div>"
+        var con = "<div class='red-card-tip'></div><div class='red-card-box'><img src='/widget/UserHome.gold/img/Modal-red-card.png' /><div class='red-card-intro'><span class='red-card-name'>红名卡</span><div class='red-card-intro-name'><span class='red-card-intro-title'>数<span>量 ：</span></span><div class='red-card-num'>1</div><span>仅剩 <em>19</em> 张</span></div><div class='red-card-intro-name'><span class='red-card-intro-title'>兑换额 ：</span><span><em>260</em>金币</span></div><div class='red-card-intro-name'><span class='red-card-intro-title'>等<span>级 ：</span></span><span>12</span></div><div class='red-card-intro-name'><span class='red-card-intro-title'>有效期 ：</span><span>7*12小时</span></div><div class='red-card-exchange'>确认兑换</div></div></div>"
 
         createModal.show({
             id : 'cardModal',
+            width : '740',
             title : '魔法卡兑换',
             cls : 'cardModal bbb',
             content : con
         });
+
+        var
+            $rce = $('.red-card-exchange'),
+            $rct = $('.red-card-tip'),
+            div = $rct.val();
+        console.log(div);
+        if(div == ''){
+            $rce.on('click',function(){
+                $rct.append('<div class="alert alert-danger fade in"><span>兑换失败,你的金币余额不足哦~</span></div>')
+            });
+        }else{
+            $rce.remove();
+        }
     });
 
     //createModal.init(
