@@ -1,13 +1,36 @@
 body {
   background: rgba(0, 0, 0, 0.6);
 }
-.information-guid {
+.infor-cardModal .modal-dialog {
   width: 530px;
   height: 520px;
+}
+.infor-cardModal .modal-content {
+  width: 530px;
+  height: 520px;
+}
+.infor-cardModal .modal-header {
+  border-bottom: none;
+}
+.FormList-cardModal .modal-content {
+  width: 530px;
+  height: 520px;
+  overflow: hidden;
+  background-color: '';
+}
+.FormList-cardModal .modal-header {
+  border-bottom: none;
+  min-height: 0;
+  padding: 0;
+}
+.FormList-cardModal .modal-body {
+  padding: 0;
+}
+.information-guid {
   background: #fff;
   border-radius: 4px;
   text-align: center;
-  padding: 55px 0 40px 0px;
+  padding: 10px 0 40px 0px;
 }
 .information-guid label {
   font-weight: normal;
@@ -38,10 +61,8 @@ body {
   line-height: 16px;
 }
 .setting-infor {
-  width: 530px;
-  height: 520px;
   background: #fff;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 .setting-infor label {
   font-weight: normal;
@@ -77,6 +98,8 @@ body {
   margin: 0;
   height: 50px;
   background: url("img/setting-infor.jpg") no-repeat center center;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 .setting-infor .infor-title li {
   width: 50%;

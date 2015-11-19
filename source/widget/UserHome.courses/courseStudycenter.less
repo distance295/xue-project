@@ -338,6 +338,17 @@ body{
 	}
 }
 // 弹框
+.material-exam{
+	.modal-dialog{
+		width: 750px;
+		height: 380px;
+	}
+	.modal-body{
+		height: 295px;
+		overflow-y: auto;
+		padding-bottom: 25px;
+	}
+}
 .table{
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -418,6 +429,31 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 		}
 	}
 }
+.examTable{
+	font-size: 12px;
+	font-family: 'SimSun';
+	thead{
+		border: 1px solid #eaeaea;
+		color: #333;
+		tr{
+			th{
+				border-bottom: none;
+			}
+		}
+	}
+	tbody{
+		tr{
+			td{
+				line-height: 43px;
+			}
+			td.static{
+				a{
+					color: #1e89e0;
+				}
+			}
+		}
+	}
+}
 .load-btn{
 	padding: 0px 22px;
 	line-height: 33px;
@@ -444,14 +480,21 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 		color: #666666;
 		p{
 			line-height: 30px;
+			font-size: 16px;
 		}
-		.button{
+		.delay-btn{
 			border-radius: 2px;
 			padding: 8px 36px;
 			font-size: 16px;
 			line-height: 30px;
 			margin-top: 40px;
 		}
+	}
+}
+.delayDate{
+	.modal-dialog{
+		width: 530px;
+		height: 317px;
 	}
 }
 // 录播直播作业列表
