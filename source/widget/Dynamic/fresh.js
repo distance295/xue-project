@@ -257,7 +257,7 @@ fresh.comment = fresh.comment || {};
                           <div class="fresh-comment-btn">\
                              <span class="fresh-comment-size">您还可以输入<em class="fresh-comment-text-num"> 140 </em>字</span>\
                              <div class="fresh-comment-submit-btn">\
-                                <a href="javascript:void(0);" class="blue-radius-btn">评论</a>\
+                                <a href="#" class="blue-radius-btn" data-toggle="modal" data-target="#fresh-dialog-verificationCode">评论</a>\
                              </div>\
                           </div>\
                           <span class="fresh-comment-tips hiding"></span>\
@@ -274,7 +274,7 @@ fresh.comment = fresh.comment || {};
                           </div>\
                           <div class="fresh-comment-btn">\
                              <div class="fresh-comment-submit-btn">\
-                                <a href="javascript:void(0);" class="blue-radius-btn">评论</a>\
+                                <a href="#" class="blue-radius-btn" data-toggle="modal" data-target="#fresh-dialog-verificationCode">评论</a>\
                              </div>\
                           </div>\
                           <span class="fresh-comment-tips hiding"></span>\
@@ -591,10 +591,39 @@ fresh.comment = fresh.comment || {};
     }
 
     /**
+     * 验证码弹出层方法
+     * @param  {string} code 任意文本字符串
+     */
+    fc.VerificationBox = function(code){
+        var codeHtml = '<div class="fresh-dialog-verificationCode">\
+                            <div class="fresh-dialog-content">\
+                               <div class="fresh-dialog-medal">\
+                                   <div class="fresh-dialog-medal-tips">\
+                                       <span>您连续评论次数太多了，请输入验证码完成发布。</span>\
+                                   </div>\
+                                   <div class="fresh-dialog-medal-img">\
+                                        <span>验证码</span>\
+                                        <input type="text" autocomplete="off" maxlength="4" id="verificationCode" name="verificationCode">\
+                                        <span>\
+                                          <img width="60" height="20" id="verificationImg" alt="验证码" src="http://www.xueersi.com/verifications/show?AY2N5mp5im13" title="(看不清，换一张)">\
+                                        </span>\
+                                    </div>\
+                                    <span id="fresh-dialog-tips-Code"></span>\
+                                    <div class="fresh-dialog-sure-btn">\
+                                        <a href="###" class="blue-radius-btn">确定</a>\
+                                    </div>\
+                               </div>\
+                            </div>\
+                        </div>'
+        return codeHtml;              
+    }  
+
+    /**
      * 发布评论检测是否需要验证码
      * @param  {string} dom 任意子节点
      */
     fc.sendComment = function(dom){
+
         //判断元素节点是否存在
         if (dom) {
             this.setParam(dom);
@@ -634,11 +663,20 @@ fresh.comment = fresh.comment || {};
                 } else if( tp === 2 ) {//跳转页面
                     window.location.href = msg;
                 } else if( tp === 3 ) {//需要验证码 弹出证码提示框
-                    //缺少弹出层现实效果
-                    //获取验证码
+                    //弹出层现实效果
+                    createModal.show({
+                           id:'fresh-dialog-verificationCode',
+                           cls:'fresh-dialog--modal-verification',
+                           title:'提示',
+                           content:fc.VerificationBox()
+                    });
+                    $('#fresh-dialog-verificationCode').modal('show');
                     fc.changeVerificationImg('verificationImg');
                     //点击验证码弹出层中的确定按钮
                     $('body').on('click' , '.fresh-dialog-sure-btn a' , function(){
+                        if( $(this).hasClass('fresh-dialog-btn-disabled') ){
+                            return false;
+                        }
                         var _val = $('#verificationCode').val();  
                         var _tipCode = $('#fresh-dialog-tips-Code');
                         if( _val == '' ){
@@ -647,11 +685,13 @@ fresh.comment = fresh.comment || {};
                             return false;
                         } else if( !/^[a-zA-Z0-9]{4,4}$/.test(_val) ) {
                              _tipCode.text('验证码错误，请重新输入'); 
+                             $('#verificationCode').focus();
+                              return false;
+                        }else{
+                            fc.post(dom);
+                             $('#fresh-dialog-verificationCode').modal('hide');
                         }
-                        if( $(this).hasClass('fresh-dialog-btn-disabled') ){
-                            return false;
-                        }
-                         fc.post(dom);
+
                     })
                 } else{
                     return false;
@@ -1107,7 +1147,42 @@ fresh.send = fresh.send || {};
      */
     fs.box = function(dom) {
         //虚拟弹出层显示新鲜事弹出层
-        $('.fresh-send-box').removeClass('hiding');
+        var _sendBox = '<form class="fresh-send-box" method="POST" action="/Dynamics/addDynamic" enctype="multipart/form-data" name="formsubmitf">\
+                            <textarea class="fresh-send-textareaBox" name="content"></textarea>\
+                            <div class="fresh-send-preview hiding" id="fresh-send-preview">\
+                                 <div class="fresh-send-preview-imgvideo" id="fresh-send-preview-imgvideo">\
+                                     <img id="fresh-send-preview-img" src="'+fresh.path.img+'fresh-send-img.png">\
+                                     <i class="fresh-preview-close"></i>\
+                                 </div>\
+                            </div>\
+                            <div class="fresh-send-form">\
+                                 <div class="fresh-send-emote-click-btn fresh-emote-current" flag="0">\
+                                    <i class="fresh-send-emote"></i>\
+                                    <a href="javascript:void(0);">表情</a>\
+                                 </div>\
+                                 <div class="fresh-send-upload">\
+                                    <input class="fresh-fileToUpload" id="fresh-fileToUpload" type="file" size="45"  name="dynImg" accept="image/*" />\
+                                 </div>\
+                                 <a href="javascript:void(0);">图片</a>\
+                                 <em class="pull-left">（支持类型 JPG、PNG，大小不超过5M）</em>\
+                                 <div class="fresh-send-submit-box pull-right">\
+                                  <button class="blue-radius-btn fresh-send-submit-btn" type="button">发布</button>\
+                                 </div>\
+                                 <span class="pull-right">\
+                                    <em class="pull-left">您还可以输入</em>\
+                                    <em class="fresh-send-text-num pull-left">140</em>\
+                                    <em class="pull-left">字</em>\
+                                 </span>\
+                                 <span class="fresh-comment-tips hiding"></span>\
+                            </div>\
+                            <input type="hidden" value="0" name="mypretime">\
+                        </form>'
+        createModal.show({
+               id:'fresh-sendInfo-box',
+               cls:'fresh-send-box-modal-dialog',
+               title:'发新鲜事',
+               content:_sendBox
+        });                
     };
 
     /**
@@ -1129,6 +1204,7 @@ fresh.send = fresh.send || {};
         }else{
             _form.find('.fresh-comment-tips').addClass('hide').html('');
             _form.submit();
+            $('#fresh-sendInfo-box').modal('hide');
         }
     };
 
@@ -1259,6 +1335,43 @@ fresh.emote = fresh.emote || {};
 })(fresh.emote)
 
 
+/**
+ * 
+ * 新鲜事图片视频等tab切换相关方法
+ * @param {Object} ft fresh.tab
+ * 
+ */
+fresh.tab = fresh.tab || {};
+
+(function(ft){
+    
+    /**
+     * 切换标签时获取列表的方法
+     * @param  {number} type 类型
+     * @param  {Object} dom 任何子节点
+     */
+    ft.getDynamicList = function(type, dom){
+          url = fresh.path.url + 'ajaxDynamicList.html',
+          param = 'category=1&type_id='+type;
+          //切换改变样式
+          $(dom).addClass('current').siblings('li').removeClass('current');
+          //ajax请求列表信息
+          $.ajax({
+              url : url,
+              data : param,
+              type: "get",
+              dataType: 'html',
+              success: function(data){
+                  if(data){
+                      $('.fresh-main-wrapper').html(data);
+                  }else{
+                      $('.fresh-main-wrapper').html('');
+                  }
+              }
+          })
+    }
+
+})(fresh.tab)
 
 
 /*******************************************

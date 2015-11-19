@@ -185,7 +185,12 @@ function materialForm(){
                     content : result
                 });
                 $('#materialForm').modal('show');
-                
+                $('.material-wrap .material-tab li').on('click',function(){
+                    var index = $(this).index();
+                    alert(index)
+                    $(this).addClass('current').siblings().removeClass('current');
+                    $('.material-content').eq(index).show().siblings().hide();
+                })
             }
             
         },
