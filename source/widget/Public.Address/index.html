@@ -13,6 +13,7 @@
      <!-- 这是当前模块样式文件 -->
      <link href="ui-address.css" rel="stylesheet"></head>
 <body>
+<ul class="shipadd_list">此处插入收货地址</ul>
      <div class="info_from" id="details_form" style="display: block;">
           <p>
                <label for="">收货人</label>
@@ -73,21 +74,6 @@
                     <select id="add_country" name="country" class="select">
                          <option value="">区县</option>
                     </select>
-                    <script type="text/javascript">    
-                                                              function renderAreaSelect () {
-                                                                      var defaults = {
-                                                                           s1:'add_province',
-                                                                           s2:'add_city',
-                                                                           s3:'add_country',
-                                                                           v1:$("#province").val(),
-                                                                           v2:$("#city").val(),
-                                                                           v3:$("#country").val()
-                                                                      };
-                                                                 $('#add_province').empty('');
-                                                                 threeSelect(defaults);
-                                                                 };
-                                                                 renderAreaSelect();
-                                                       </script>
                </span>
                <span></span>
           </p>
@@ -117,5 +103,24 @@
           </p>
           <p class="error_tips_address"></p>
      </div>
+     <!-- 这是jquery库文件 -->
+     <script type="text/javascript" src="../../lib/jQuery/2.1.1/jquery.min.js"></script>
+     <!-- 这是当前模块js文件 -->
+     <script type="text/javascript" src="ui-address.js"></script>
+     <script type="text/javascript">  
+                function renderAreaSelect() {
+                    var defaults = {
+                        s1: 'add_province',
+                        s2: 'add_city',
+                        s3: 'add_country',
+                        v1: $("#province").val(),
+                        v2: $("#city").val(),
+                        v3: $("#country").val()
+                    };
+                    $('#add_province').empty('');
+                    threeSelect(defaults);
+                };
+                renderAreaSelect();  
+     </script>
 </body>
 </html>
