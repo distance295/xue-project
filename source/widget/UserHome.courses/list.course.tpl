@@ -1,6 +1,7 @@
 <!--
    课程列表：
     @require coursestudycenter.js
+    @require ../Module.Modal/Modal.js
     @require coursestudycenter.less       
 -->
 <div class="courseList-wrap courseList-label">
@@ -31,7 +32,7 @@
                 </p>
                 <p class="amount-show">
                     <a class="btn-danger btn " href="##"><em class="button-icon icon-will-red"></em>立即听课</a>
-                    <a class="btn btn-default " href="##">课程大纲<label class="newLabel">5</label></a>
+                    <a class="btn btn-default " href="##" >课程大纲<label class="newLabel">5</label></a>
                     <a class="btn btn-default last listTest-btn" href="##">随堂测<label class="newLabel homeworkLabel">10</label></a>
                 </p>
                 <ul class="listTest-pop hide">
@@ -44,7 +45,7 @@
                 <h4 class="gray-arrow">更多服务</h4>
                 <ul class="more-list">
                     <li><a href="###">录播课程</a></li>
-                    <li><a href="###">资料</a></li>
+                    <li><a href="###" data-toggle="modal" data-target="#show">资料</a></li>
                     <li><a href="###">考试</a></li>
                 </ul>
             </div>

@@ -123,11 +123,11 @@ $(function(){
         if(a){
             // $(this).removeClass('show').children('h4').removeClass('blue-arrow');
             $(this).removeClass('blue-arrow').parents('.more-service').removeClass('show');
-       }else{
+        }else{
             // $(this).addClass('show').children('h4').addClass('blue-arrow');
             $(this).addClass('blue-arrow').parents('.more-service').addClass('show');
-       }
-   });
+        }
+    });
     $(document.body).on('click',function(event){
         var a = $('.more-service h4').hasClass('blue-arrow');
         if (a){
@@ -169,4 +169,89 @@ $(function(){
             return listTest_html;
         }
     });
-})
+});
+// 讲义资料弹框
+function materialForm(){
+    $.ajax({
+        type: "get",
+        url: "/data/courses/material.html",
+        dataType: "html",
+        success: function(result) {
+            if(result){
+               createModal.show({
+                    id : 'materialForm',
+                    title : '讲义资料',
+                    cls : 'material-exam',
+                    content : result
+                });
+                $('#materialForm').modal('show');
+                
+            }
+            
+        },
+        // error: function(){
+        //     alert(2)
+        // }
+    });
+}
+// 考试
+function examTable(){
+     $.ajax({
+        type: "get",
+        url: "/data/courses/exam.html",
+        dataType: "html",
+        success: function(result) {
+            if(result){
+               createModal.show({
+                    id : 'examTable',
+                    title : '本课考试',
+                    cls : 'material-exam',
+                    content : result
+                });
+                $('#examTable').modal('show')
+            }
+            
+        },
+        // error: function(){
+        //     alert(2)
+        // }
+    });
+}
+// 延期
+function delayDate(){
+     $.ajax({
+        type: "get",
+        url: "/data/courses/delayDate.html",
+        dataType: "html",
+        success: function(result) {
+            if(result){
+               createModal.show({
+                    id : 'delayDate',
+                    title : '延期课程',
+                    cls : 'delayDate',
+                    content : result
+                });
+                $('#delayDate').modal('show')
+            }
+            
+        },
+        // error: function(){
+        //     alert(2)
+        // }
+    });
+}
+$(function(){
+    $('.more-list li ').eq(1).on('click',function(){
+        materialForm();
+    })
+});
+$(function(){
+    $('.more-list li ').eq(2).on('click',function(){
+        examTable();
+    })
+});
+$(function(){
+    $('.label-delay').on('click',function(){
+        delayDate();
+    })
+});
