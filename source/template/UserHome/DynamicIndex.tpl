@@ -16,7 +16,12 @@
                     </a>
                 </li>                                
             </ul>
-  
+
+
+
+
+
+
 
             <div class="row">              
                 <div class="col-md-2 wrap w120">                 
@@ -45,6 +50,7 @@
         </div>
     </div>
 </div>
+
 <!-- 页面配置 -->
 <script>
     var PAGE_CONFIG = {
@@ -58,3 +64,5 @@
 
 <!-- 公共底部 -->
 <link rel="import" href="../Layer/layer.UserHome.foot.tpl?__inline">
+
+
