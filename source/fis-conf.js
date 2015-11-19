@@ -36,7 +36,7 @@ fis.media('tmpl')
     .match('/template/(**)/(*).tpl', {
         isHtmlLike: true,
         rExt: '.html',
-        release: '/pages/$1.$2.html'
+        release: '/pages/$1/$2.html'
     })
 
 // 禁止发布的文件
