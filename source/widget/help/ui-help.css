@@ -62,7 +62,6 @@
   top: 12px;
   display: inline-block;
   padding: 0 10px;
-  z-index: 10;
   background: #fbfbfb;
   font-size: 14px;
 }
@@ -79,7 +78,7 @@
 }
 .ui_mod_help_content {
   width: 980px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   overflow: hidden;
 }
 .ui_mod_help_content .ui_tabs_help {
@@ -87,6 +86,7 @@
   overflow: hidden;
   margin-top: 15px;
   background: url(img/tabs_bg.png) repeat-x;
+  padding-left: 40px;
 }
 .ui_mod_help_content .ui_tabs_help li {
   float: left;
