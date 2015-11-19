@@ -196,9 +196,6 @@ function materialForm(){
             }
             
         },
-        // error: function(){
-        //     alert(2)
-        // }
     });
 }
 // 考试
