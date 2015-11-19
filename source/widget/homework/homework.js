@@ -12,7 +12,7 @@
 var homeWork = homeWork || {};
 
 //分数图片路径
-homeWork.path = 'img/shuzi';
+homeWork.path = '/static/img/Homework/shuzi';
 
 (function(hm){
   
@@ -33,7 +33,9 @@ homeWork.path = 'img/shuzi';
        	    home_Feedback:$(dom).find('.homework-Feedback'),//作业反馈总框架
        	    home_Feedback_header:$(dom).find('.homework-Feedback-header'),//作业反馈头部框架
        	    home_Feedback_video:$(dom).find('.homework-Feedback-video'),//作业反馈中的推荐视频框架
-       	    home_Feedback_describe:$(dom).find('.homework-Feedback-describe')//作业反馈中文字描述的框架
+       	    home_Feedback_describe:$(dom).find('.homework-Feedback-describe'),//作业反馈中文字描述的框架
+       	    header_topbar:$('#module-topbar'),//头部工具条的框架
+       	    header_myheader:$('#module-myheader'),//我的头部框架
         }
         
         //浏览器可视区域的宽和高
@@ -53,8 +55,8 @@ homeWork.path = 'img/shuzi';
 		}
         
         //具体交作业图片区域的跨度和高度的控制
-		var _home_Thumbnails_H = parseInt(_bodyH - this.box.home_header.height() - 30*2 - 20*2 -20) -20;
-		var _home_bigImg_H = parseInt(_bodyH - this.box.home_header.height() - 30*2 - 20*2 -20);
+		var _home_Thumbnails_H = parseInt(_bodyH - this.box.home_header.height() - this.box.header_topbar.height() - this.box.header_myheader.height() - 30*2 - 20*2 -10*2);
+		var _home_bigImg_H = parseInt(_bodyH - this.box.home_header.height() - this.box.header_topbar.height() - this.box.header_myheader.height() - 30*2 - 20*2);
 
 		this.box.home_samllBox.height(_home_Thumbnails_H);
 		this.box.home_bigBox.height(_home_bigImg_H);

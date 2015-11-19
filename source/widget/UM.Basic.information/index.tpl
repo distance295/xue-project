@@ -10,8 +10,9 @@
         </p>
         <p>
             <label for="">昵称：</label>
-            <input class="nickname" type="text">
-            <span class="user-name-warning error"></span>
+            <input class="nickname" type="text" maxlength="18">
+            <span class="nickname-warning error"></span>
+            <span class="prompt-empty"></span>
         </p>
         <p>
             <label for="">真实姓名：</label>
@@ -49,7 +50,7 @@
         </p>
         <p>
             <label for="">学校：</label>
-            <input class="school" type="text">
+            <input class="school" type="text" maxlength="50">
             <span class="school-warning error"></span>
         </p>
         <button class="btn-submit btn btn-info" name="submit" type="submit">保存</button>

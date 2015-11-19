@@ -7,7 +7,7 @@ fis.set('project.ignore', [
     'widget/**/*.css',
     'widget/**/*.md',
     '/config/**',
-    '/static/**',
+    // '/static/**',
     '/components/**',
     '/lib/foundation/**',
     '/lib/Font-Awesome/master/**',

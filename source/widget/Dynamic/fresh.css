@@ -775,9 +775,12 @@
 /** 
  * 发送新鲜事Style
  */
+.fresh-send-box-modal-dialog .modal-dialog {
+  width: 800px;
+}
 .fresh-send-box {
   background: #fff;
-  padding: 10px;
+  width: 100%;
   font-family: "SimSun";
   overflow: hidden;
 }
@@ -904,19 +907,21 @@
 /**
  *评论验证码弹出层Style
  */
+.fresh-dialog--modal-verification .modal-dialog {
+  width: 395px;
+}
 .fresh-dialog-verificationCode {
   background: #fff;
   overflow: hidden;
 }
 .fresh-dialog-verificationCode .fresh-dialog-content {
-  min-width: 100px;
-  overflow: auto;
-  padding: 25px 20px;
+  padding: 10px;
+  overflow: hidden;
+  display: block;
   text-align: center;
 }
 .fresh-dialog-verificationCode .fresh-dialog-content .fresh-dialog-medal {
-  width: 355px;
-  margin: auto;
+  overflow: hidden;
 }
 .fresh-dialog-verificationCode .fresh-dialog-content .fresh-dialog-medal .fresh-dialog-medal-tips {
   font-size: 14px;
@@ -933,9 +938,9 @@
 }
 .fresh-dialog-verificationCode .fresh-dialog-content .fresh-dialog-medal .fresh-dialog-medal-img {
   overflow: hidden;
-  width: 270px;
-  margin-left: 38px;
+  margin-left: 57px;
   margin-top: 20px;
+  line-height: 26px;
 }
 .fresh-dialog-verificationCode .fresh-dialog-content .fresh-dialog-medal .fresh-dialog-medal-img span,
 .fresh-dialog-verificationCode .fresh-dialog-content .fresh-dialog-medal .fresh-dialog-medal-img input {
@@ -959,13 +964,15 @@
 }
 .fresh-dialog-verificationCode .fresh-dialog-content .fresh-dialog-medal #fresh-dialog-tips-Code {
   color: #cc0000;
-  padding-left: 85px;
   overflow: hidden;
+  line-height: 20px;
   height: 20px;
+  display: block;
+  text-align: center;
   font-size: 12px;
 }
 .fresh-dialog-verificationCode .fresh-dialog-content .fresh-dialog-medal .fresh-dialog-sure-btn {
-  margin-top: 20px;
+  margin-top: 15px;
   position: relative;
   overflow: hidden;
 }
@@ -1126,4 +1133,60 @@
 }
 .popover {
   max-width: 1000px;
+}
+/** 
+ * 新鲜事筛选Style
+ */
+.filter-public-tab {
+  display: block;
+  overflow: hidden;
+  background: #fff;
+  line-height: 30px;
+  padding: 10px 15px;
+  font-size: 12px;
+  font-family: "SimSun";
+  color: #333333;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  border-bottom: 1px solid #eaeaea;
+}
+.filter-public-tab a {
+  outline: none;
+}
+.filter-public-tab a:focus {
+  outline: none;
+}
+.filter-public-tab .filter-text-style {
+  float: left;
+  color: #999999;
+  margin-right: 3px;
+}
+.filter-public-tab .filter-nav-list {
+  display: block;
+  overflow: hidden;
+}
+.filter-public-tab .filter-nav-list ul {
+  margin: 0;
+  padding: 0;
+  line-height: 30px;
+  font-size: 12px;
+}
+.filter-public-tab .filter-nav-list ul li {
+  float: left;
+  margin-right: 20px;
+  list-style: none;
+}
+.filter-public-tab .filter-nav-list ul li a {
+  font-size: 12px;
+  font-family: "SimSun";
+  color: #333333;
+}
+.filter-public-tab .filter-nav-list ul li a:hover {
+  color: #2599c4;
+}
+.filter-public-tab .filter-nav-list ul li.current a {
+  color: #2599c4;
 }
