@@ -185,11 +185,13 @@ function materialForm(){
                     content : result
                 });
                 $('#materialForm').modal('show');
-                $('.material-wrap .material-tab li').on('click',function(){
+                console.log(1233333)
+                console.log($('body').find('.material-wrap .material-tab li').length)
+                $('body').on('click','.material-wrap .material-tab li',function(){
                     var index = $(this).index();
-                    alert(index)
-                    $(this).addClass('current').siblings().removeClass('current');
-                    $('.material-content').eq(index).show().siblings().hide();
+                    alert(index);
+                    // $(this).addClass('current').siblings().removeClass('current');
+                    // $('.material-content').eq(index).show().siblings().hide();
                 })
             }
             
