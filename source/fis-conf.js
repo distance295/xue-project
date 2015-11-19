@@ -1,17 +1,13 @@
-//fis.hook('module', {
-//    mode: 'amd' // 模块化支持 amd 规范，适应 require.js
-//});
-
 fis.set('project.ignore', [
     'output/**',
     'node_modules/**',
     '.git/**',
     '.svn/**',
-    '/static/**',
     'widget/**/*.html',
     'widget/**/*.css',
     'widget/**/*.md',
     '/config/**',
+    // '/static/**',
     '/components/**',
     '/lib/foundation/**',
     '/lib/Font-Awesome/master/**',
@@ -25,25 +21,12 @@ fis.set('project.ignore', [
     '*.log',
     '**/*.map'
 ]);
-//fis.match('/widget/**', {
-//    useSameNameRequire: true,
-//    isMod: true
-//});
 fis.match('::packager', {
-    //    spriter: fis.plugin('csssprites'),
+    packager: fis.plugin('map'),
     postpackager: fis.plugin('loader', {
 //        allInOne: true
     })
 });
-//fis.config.merge({
-//    settings : {
-//        optimizer : {
-//            'png-compressor' : {
-//                type : 'pngquant' //default is pngcrush
-//            }
-//        }
-//    }
-//});
 
 
 
@@ -53,7 +36,7 @@ fis.media('tmpl')
     .match('/template/(**)/(*).tpl', {
         isHtmlLike: true,
         rExt: '.html',
-        release: '/pages/$1.$2.html'
+        release: '/pages/$1/$2.html'
     })
 
 // 禁止发布的文件
@@ -76,15 +59,14 @@ fis.media('tmpl')
 
 // JS规则
     .match('/widget/(**)/(*.js)', {
-//        packTo: '/static/js/$1.js',
-        release: '/static/js/$1.$2.js'
+        release: '/static/js/$1.$2'
     })
 
 // Less规则
     .match('/widget/(**)/(*.less)', {
         parser: fis.plugin('less'), //启用fis-parser-less插件
         rExt: '.css',
-        release: '/static/css/$1.$2'
+        release: '/static/css/$1/$2'
     })
 
 // pic资源图片规则

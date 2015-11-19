@@ -5,52 +5,45 @@
  * @date    2015-10-21 14:22:33
  * @version $Id$
  */
-#stude-course-container {
-  background: #f9f9f9;
-}
-#stude-course-container .ui-margin {
+.ui-margin {
   width: 980px;
   margin: 0 auto;
   overflow: hidden;
 }
-#stude-course-container h2.content-study-title {
-  height: 47px;
-  line-height: 47px;
+h2.content-study-title {
+  line-height: 180%;
   font-size: 16px;
-  font-weight: normal;
-  color: #333333;
-  padding-left: 10px;
+  margin-bottom: 10px;
 }
-#stude-course-container h2.content-study-title strong {
+h2.content-study-title strong {
   font-size: 14px;
   color: #e74c3c;
-  font-weight: normal;
 }
-#stude-course-container .content-study-player {
+.content-study-player {
   height: 478px;
   background: #fff;
   border-radius: 2px;
   margin-bottom: 10px;
 }
-#stude-course-container .content-study-player .player-live {
+.content-study-player .player-live {
   float: left;
   width: 745px;
   height: 465px;
 }
-#stude-course-container .content-study-player .player-live #VideoPlay {
+.content-study-player .player-live #VideoPlay {
   width: 730px;
   height: 453px;
   margin: 12px 0 0 10px;
   overflow: hidden;
 }
-#stude-course-container .content-study-player .player-list {
+.content-study-player .player-list {
   float: right;
   width: 230px;
   height: 465px;
   border-bottom: 1px solid #efefef;
   background: url(img/tingkeyebg.jpg) repeat-y;
 }
-#stude-course-container .content-study-player .player-list ul.list-title-tabs {
+.content-study-player .player-list ul.list-title-tabs {
   width: 230px;
   height: 36px;
   line-height: 36px;
@@ -59,14 +52,14 @@
   background: url(img/tab_title_bg_03.jpg) no-repeat;
   padding: 0;
 }
-#stude-course-container .content-study-player .player-list ul.list-title-tabs li {
+.content-study-player .player-list ul.list-title-tabs li {
   float: right;
   display: inline;
   width: 115px;
   overflow: hidden;
   text-align: center;
 }
-#stude-course-container .content-study-player .player-list ul.list-title-tabs li a {
+.content-study-player .player-list ul.list-title-tabs li a {
   display: block;
   width: 115px;
   text-decoration: none;
@@ -74,34 +67,34 @@
   color: #333;
   outline: none;
 }
-#stude-course-container .content-study-player .player-list ul.list-title-tabs li.current a {
+.content-study-player .player-list ul.list-title-tabs li.current a {
   color: #fff;
 }
-#stude-course-container .content-study-player .player-list ul.list-title-tabs li.current .directory {
+.content-study-player .player-list ul.list-title-tabs li.current .directory {
   background: url(img/tab_01.jpg) 0 0 no-repeat;
 }
-#stude-course-container .content-study-player .player-list ul.list-title-tabs li.current .audition {
+.content-study-player .player-list ul.list-title-tabs li.current .audition {
   background: url(img/tab_02.jpg) -115px 0 no-repeat;
 }
-#stude-course-container .content-study-player .player-list .ui-scrolls-boxs {
+.content-study-player .player-list .ui-scrolls-boxs {
   overflow: hidden;
 }
-#stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item {
+.content-study-player .player-list .ui-scrolls-boxs .scrolls-item {
   display: none;
   overflow: hidden;
   height: 427px;
 }
-#stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item .jspPane {
+.content-study-player .player-list .ui-scrolls-boxs .scrolls-item .jspPane {
   overflow: hidden;
 }
-#stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-list {
+.content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-list {
   width: 230px;
   overflow: hidden;
   margin: 0;
   padding: 0;
   background: url(img/scroll_ul.jpg) 22px 0 repeat-y;
 }
-#stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-list li.scrolls_title {
+.content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-list li.scrolls_title {
   height: 41px;
   line-height: 41px;
   border-bottom: 1px solid #e9e9e9;
@@ -109,94 +102,94 @@
   padding-left: 20px;
   font-size: 14px;
 }
-#stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-list li {
+.content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-list li {
   padding-left: 42px;
   background: url(img/scroll_li.jpg) 28px 20px no-repeat;
 }
-#stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-list li p.icon-live {
+.content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-list li p.icon-live {
   height: 43px;
   line-height: 43px;
   background: url(img/icon2_03.png) 1px 14px no-repeat;
   padding-left: 20px;
   margin: 0;
 }
-#stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-list li p.icon-live a {
+.content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-list li p.icon-live a {
   display: block;
   width: 140px;
   font-size: 14px;
   color: #666;
 }
-#stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-list li p.icon-live a.icon-sign {
+.content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-list li p.icon-live a.icon-sign {
   background: url(img/icon_07_white.gif) right 14px no-repeat;
 }
-#stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-list li p.icon-live a:hover {
+.content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-list li p.icon-live a:hover {
   color: #3bafda;
 }
-#stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-list li p.icon-live.icon-tests {
+.content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-list li p.icon-live.icon-tests {
   background: url(img/copy.png) 1px 14px no-repeat;
 }
-#stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-list li.current {
+.content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-list li.current {
   background: url(img/scroll_current.jpg) no-repeat;
 }
-#stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-list li.current p.icon-live {
+.content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-list li.current p.icon-live {
   background: url(img/icon2_04.gif) 1px 14px no-repeat;
 }
-#stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-list li.current p.icon-live a {
+.content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-list li.current p.icon-live a {
   color: #fff;
 }
-#stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-list li.last {
+.content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-list li.last {
   background: url(img/last.jpg) 22px 1px no-repeat;
 }
-#stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-say-list {
+.content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-say-list {
   overflow: hidden;
   margin: 0;
   padding: 0;
 }
-#stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-say-list li {
+.content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-say-list li {
   overflow: hidden;
   border-bottom: 1px solid #e9e9e9;
 }
-#stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-say-list li p.icon-corner {
+.content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-say-list li p.icon-corner {
   height: 43px;
   line-height: 43px;
   margin: 0;
   background: url(img/icon_03_white.gif) 10px 16px no-repeat;
   padding-left: 25px;
 }
-#stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-say-list li p.icon-corner span {
+.content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-say-list li p.icon-corner span {
   display: block;
   width: 190px;
 }
-#stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-say-list li p.icon-corner span.icon-sign {
+.content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-say-list li p.icon-corner span.icon-sign {
   background: url(img/icon_07_white.gif) right 14px no-repeat;
 }
-#stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-say-list li p.icon-corner span a {
+.content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-say-list li p.icon-corner span a {
   display: block;
   width: 145px;
   font-size: 12px;
   color: #666;
 }
-#stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-say-list li p.icon-corner span a:hover {
+.content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-say-list li p.icon-corner span a:hover {
   color: #3bafda;
 }
-#stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-say-list li.current {
+.content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-say-list li.current {
   background: url(img/scroll_current.jpg) no-repeat;
 }
-#stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-say-list li.current p.icon-corner {
+.content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-say-list li.current p.icon-corner {
   background: url(img/icon_03_blue.gif) 10px 16px no-repeat;
 }
-#stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-say-list li.current p.icon-corner span {
+.content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-say-list li.current p.icon-corner span {
   background: url(img/icon2_04.gif) right 14px no-repeat;
 }
-#stude-course-container .content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-say-list li.current p.icon-corner span a {
+.content-study-player .player-list .ui-scrolls-boxs .scrolls-item ul.select-say-list li.current p.icon-corner span a {
   color: #fff;
 }
-#stude-course-container .look-focus-item {
+.look-focus-item {
   height: 60px;
   border-radius: 2px;
   background: #fff;
 }
-#stude-course-container .look-focus-item .look-focus-left {
+.look-focus-item .look-focus-left {
   float: left;
   display: inline;
   width: 750px;
@@ -205,56 +198,56 @@
   padding-left: 10px;
   position: relative;
 }
-#stude-course-container .look-focus-item .look-focus-left .look-focus-show {
+.look-focus-item .look-focus-left .look-focus-show {
   overflow: hidden;
   line-height: 30px;
   display: block;
 }
-#stude-course-container .look-focus-item .look-focus-left .look-focus-show .focus-content {
+.look-focus-item .look-focus-left .look-focus-show .focus-content {
   float: left;
   display: inline;
 }
-#stude-course-container .look-focus-item .look-focus-left .look-focus-show .focus-content span.name {
+.look-focus-item .look-focus-left .look-focus-show .focus-content span.name {
   float: left;
   height: 30px;
   overflow: hidden;
   color: #666666;
 }
-#stude-course-container .look-focus-item .look-focus-left .look-focus-show .focus-content span.text {
+.look-focus-item .look-focus-left .look-focus-show .focus-content span.text {
   float: left;
   color: #666666;
   padding-right: 10px;
 }
-#stude-course-container .look-focus-item .look-focus-left .look-focus-show .focus-content span.text b {
+.look-focus-item .look-focus-left .look-focus-show .focus-content span.text b {
   color: #006699;
 }
-#stude-course-container .look-focus-item .look-focus-left .look-focus-show .focus-content a {
+.look-focus-item .look-focus-left .look-focus-show .focus-content a {
   float: left;
   padding-right: 10px;
 }
-#stude-course-container .look-focus-item .look-focus-left .look-focus-show .focus-content .js-reply {
+.look-focus-item .look-focus-left .look-focus-show .focus-content .js-reply {
   display: none;
 }
-#stude-course-container .look-focus-item .look-focus-left .look-focus-show .focus-content .js-informant {
+.look-focus-item .look-focus-left .look-focus-show .focus-content .js-informant {
   display: none;
 }
-#stude-course-container .look-focus-item .look-focus-left .look-focus-show .focusAffirm {
+.look-focus-item .look-focus-left .look-focus-show .focusAffirm {
   float: left;
   display: inline;
 }
-#stude-course-container .look-focus-item .look-focus-left .look-Focus-Push {
+.look-focus-item .look-focus-left .look-Focus-Push {
   display: none;
   overflow: hidden;
   line-height: 30px;
 }
-#stude-course-container .look-focus-item .look-focus-left .look-Focus-Push .time-end {
+.look-focus-item .look-focus-left .look-Focus-Push .time-end {
   float: left;
   display: inline;
   width: 85px;
   background: url('img/icon_time.png') 0 5px no-repeat;
   padding-left: 25px;
 }
-#stude-course-container .look-focus-item .look-focus-left .look-Focus-Push .input-text {
+.look-focus-item .look-focus-left .look-Focus-Push .input-text {
   float: left;
   display: inline;
   width: 475px;
@@ -263,7 +256,7 @@
   background: #fcfcfc;
   padding: 0 5px;
 }
-#stude-course-container .look-focus-item .look-focus-left .look-Focus-Push .btn-submit {
+.look-focus-item .look-focus-left .look-Focus-Push .btn-submit {
   float: left;
   display: inline;
   width: 95px;
@@ -273,7 +266,7 @@
   margin: 0 5px;
   color: #fff;
 }
-#stude-course-container .look-focus-item .look-focus-left .look-Focus-Push .btn-cancel {
+.look-focus-item .look-focus-left .look-Focus-Push .btn-cancel {
   float: left;
   display: inline;
   width: 58px;
@@ -283,7 +276,7 @@
   background: #fcfcfc;
   text-align: center;
 }
-#stude-course-container .look-focus-item .look-focus-left .look-Focus-Push span.errorTips {
+.look-focus-item .look-focus-left .look-Focus-Push span.errorTips {
   width: 180px;
   height: 40px;
   line-height: 40px;
@@ -297,7 +290,7 @@
   text-align: center;
   opacity: 0.7;
 }
-#stude-course-container .look-focus-item .look-focus-left .look-Focus-Push span.textTips {
+.look-focus-item .look-focus-left .look-Focus-Push span.textTips {
   width: 150px;
   height: 40px;
   line-height: 40px;
@@ -308,7 +301,7 @@
   z-index: 10;
   color: #999;
 }
-#stude-course-container .look-focus-item .look-focus-left .push-succeed {
+.look-focus-item .look-focus-left .push-succeed {
   display: none;
   width: 750px;
   height: 30px;
@@ -319,11 +312,11 @@
   z-index: 10;
   color: #666;
 }
-#stude-course-container .look-focus-item .look-focus-left .push-succeed em {
+.look-focus-item .look-focus-left .push-succeed em {
   padding-right: 10px;
   font-style: normal;
 }
-#stude-course-container .look-focus-item .look-focus-left .push-succeed span.btn-succeed {
+.look-focus-item .look-focus-left .push-succeed span.btn-succeed {
   display: inline-block;
   width: 155px;
   height: 28px;
@@ -334,7 +327,7 @@
   margin-left: 10px;
   color: #999;
 }
-#stude-course-container .look-focus-item .look-focus-right {
+.look-focus-item .look-focus-right {
   float: right;
   display: inline;
   width: 200px;
@@ -342,7 +335,7 @@
   overflow: hidden;
   margin-top: 15px;
 }
-#stude-course-container .look-focus-item .look-focus-right .button-left {
+.look-focus-item .look-focus-right .button-left {
   float: left;
   display: inline;
   overflow: hidden;
@@ -350,7 +343,7 @@
   height: 30px;
   margin-right: 20px;
 }
-#stude-course-container .look-focus-item .look-focus-right .button-left button {
+.look-focus-item .look-focus-right .button-left button {
   display: block;
   width: 80px;
   height: 30px;
@@ -358,10 +351,10 @@
   text-indent: -99999em;
   border: 0;
 }
-#stude-course-container .look-focus-item .look-focus-right .button-left button.btn-disabled {
+.look-focus-item .look-focus-right .button-left button.btn-disabled {
   background: url(img/btn_look_no.png) no-repeat;
 }
-#stude-course-container .look-focus-item .look-focus-right .look-right {
+.look-focus-item .look-focus-right .look-right {
   float: left;
   display: inline;
   width: 65px;
@@ -373,7 +366,7 @@
   font-family: arial;
   font-size: 14px;
 }
-#stude-course-container .look-focus-item .look-focus-right span.look-right {
+.look-focus-item .look-focus-right span.look-right {
   color: #999;
 }
 /*

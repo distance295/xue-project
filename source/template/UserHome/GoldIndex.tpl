@@ -15,7 +15,7 @@
         </div>
     </div>
 </div>
- 
+
 <!-- 页面配置 -->
 <script>
     var PAGE_CONFIG = {
@@ -24,6 +24,9 @@
         TITLE: '金币明细-金币商城'
     };
 </script>
+
+
+
 
 <!-- 公共底部 -->
 <link rel="import" href="../Layer/layer.UserHome.foot.tpl?__inline">
