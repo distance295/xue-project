@@ -8,8 +8,10 @@
 *********************************************/
 
 var fresh = fresh || {};
-fresh.opt = fresh.opt || {};
-fresh.opt.commentUrl = 'coment.html';
+fresh.path = fresh.path || {};
+fresh.path.url = '/data/Dynamic/';
+fresh.path.img = '/static/img/Dynamic/';
+fresh.emoteHmtl = null;
 
 /**
  * 
@@ -92,7 +94,7 @@ fresh.media = fresh.media || {};
         var analysis_html = '<div class="fresh-big-analysis">$analysis$</div>';
 
         //增加答题正确与否与抢金币成功与否的图片提示html
-        var bigSign_html = '<div class="fresh-big-sign-exam fresh-sign-remove"><img src="img/$bigSignImg$.png" /></div>';
+        var bigSign_html = '<div class="fresh-big-sign-exam fresh-sign-remove"><img src="'+fresh.path.img+'$bigSignImg$.png"/></div>';
 
          //增加大图右上角正确或错误图标html
         var examRight_html = '<i class="fresh-bigimg-examIcon $examRightIcon$"></i>';
@@ -104,8 +106,9 @@ fresh.media = fresh.media || {};
         var examRezult_html = '';
 
         var _url = window.location.pathname;
-        $.ajax('answer.json', {
-              type : 'post',
+        $.ajax({
+              url: fresh.path.url + 'answer.json',
+              type : 'get',
               dataType : 'json',
               data : {
                   url : _url,
@@ -240,8 +243,8 @@ fresh.comment = fresh.comment || {};
   fc.tpl ={
       formBox: '<form class="fresh-comment-form fresh-parentComment-formBox" action="javascript:void(0);">\
                       <div class="fresh-comment-title">\
-                          <span class="fresh-comment-title-text left">原文评论</span> \
-                          <span class="fresh-comment-close-btn right"></span>\
+                          <span class="fresh-comment-title-text pull-left">原文评论</span> \
+                          <span class="fresh-comment-close-btn pull-right"></span>\
                       </div>\
                       <div class="fresh-comment-textarea">\
                         <textarea></textarea>\
@@ -254,10 +257,10 @@ fresh.comment = fresh.comment || {};
                           <div class="fresh-comment-btn">\
                              <span class="fresh-comment-size">您还可以输入<em class="fresh-comment-text-num"> 140 </em>字</span>\
                              <div class="fresh-comment-submit-btn">\
-                                <a href="javascript:void(0);" class="small radius button">评论</a>\
+                                <a href="javascript:void(0);" class="blue-radius-btn">评论</a>\
                              </div>\
                           </div>\
-                          <span class="fresh-comment-tips hide"></span>\
+                          <span class="fresh-comment-tips hiding"></span>\
                       </div>\
                   </form>',
       replyForm: '<form class="fresh-comment-form fresh-comment-repley" action="javascript:void(0);">\
@@ -271,10 +274,10 @@ fresh.comment = fresh.comment || {};
                           </div>\
                           <div class="fresh-comment-btn">\
                              <div class="fresh-comment-submit-btn">\
-                                <a href="javascript:void(0);" class="small radius button">评论</a>\
+                                <a href="javascript:void(0);" class="blue-radius-btn">评论</a>\
                              </div>\
                           </div>\
-                          <span class="fresh-comment-tips hide"></span>\
+                          <span class="fresh-comment-tips hiding"></span>\
                       </div>\
                   </form>'            
     };
@@ -372,7 +375,7 @@ fresh.comment = fresh.comment || {};
      */
     fc.hide = function(){
         this.param.bar.removeClass('fresh-comment-show');
-        this.param.commentBox.addClass('hide');
+        this.param.commentBox.addClass('hiding');
         // 隐藏后初始化参数
         $.each(this.param, function(k, v) {
             fc.param[k] = null;
@@ -409,8 +412,8 @@ fresh.comment = fresh.comment || {};
         }
         //ajax获取评论信息
         $.ajax({
-            url: fresh.opt.commentUrl,
-            type: 'POST',
+            url: fresh.path.url + "coment.html",
+            type: 'get',
             dataType: 'html',
             data: {
                 'dynId': fc.id
@@ -441,7 +444,7 @@ fresh.comment = fresh.comment || {};
         }
 
         //如果没有评论消息返回的是暂无评论的html
-        this.param.commentBox.removeClass('hide');
+        this.param.commentBox.removeClass('hiding');
         this.param.infoBox.html(msg);
         
         //评论发布框
@@ -532,9 +535,9 @@ fresh.comment = fresh.comment || {};
             'verificationCode': vd
         };
         $.ajax({
-            url: 'ajaxAddDynComment.json',//添加成功与否验证ajax
+            url: fresh.path.url + 'ajaxAddDynComment.json',//添加成功与否验证ajax
             data: param + '&content=' + encodeURIComponent(val) + '&verificationCode=' + vd,
-            type: 'POST',
+            type: 'get',
             dataType: 'json',
             beforeSend: function() {
                 fc.param.form.before('<div class="fresh-comment-status"><span class="fresh-comment-loading">Loading...</span></div>');
@@ -614,8 +617,8 @@ fresh.comment = fresh.comment || {};
         var _par = _dataInfo.data('params');
         var _ty = _dataInfo.data('codetype');
         $.ajax({
-            url: 'ajaxCheckVerCode.json',
-            type: 'POST',
+            url: fresh.path.url + 'ajaxCheckVerCode.json',
+            type: 'get',
             dataType: 'JSON',
             data: _par + '&codetype='+_ty,
             success: function(data) {
@@ -663,8 +666,8 @@ fresh.comment = fresh.comment || {};
      */
     fc.changeVerificationImg = function(imgId){
         $.ajax({
-            url: 'ajaxGetVerCode.json',
-            type: 'post',
+            url: fresh.path.url + 'ajaxGetVerCode.json',
+            type: 'get',
             dataType: 'json',
             success  : function(data){
                 if(data.sign == 1){
@@ -747,39 +750,25 @@ fresh.comment = fresh.comment || {};
         }else{
             e.cancelBubble = true;
         }
-        //显示弹出层
-        $('.fresh-dialog-emote').removeClass('hide');
-        //点击表情按钮切换表情弹出层（问题在另一个表情框出来之前前面一个是否消失）
-       /* var _flag = $(dom).attr('flag');
-        if( _flag == 0 ){
-           $('.fresh-dialog-emote').removeClass('hide');
-           $(dom).attr('flag','1');
-        }else if( _flag == 1 ){
-           $('.fresh-dialog-emote').addClass('hide');
-           $(dom).attr('flag','0');
-        }*/
         
-        //点击表情插入文本框
-        $('.fresh-dialog-emote').off('click', '.fresh-jsSmilies li').on('click', '.fresh-jsSmilies li', function(){
-              var _val = $(this).data('action');
-              _currentTextarea.focus();
-              _currentTextarea.insertContent(_val);
-              $('.fresh-dialog-emote').addClass('hide');
-              //$(dom).attr('flag','0');
-        })
+        if( !fresh.emoteHmtl ){
+            $.ajax({
+                  url: fresh.path.url + 'emote.html',
+                  type: 'get',
+                  dataType: 'html',
+                  success: function(data) {
+                          fresh.emoteHmtl = data;
+                          fresh.emote.show(dom , _currentTextarea);
+                  }
+            })
+        }else{
+            fresh.emote.show(dom , _currentTextarea);
+        }
 
-        //关闭表情层(关闭表情弹出层)
-        $('.fresh-dialog-emote').off('click', '.fresh-smilies-close').on('click', '.fresh-smilies-close', function(){
-            $(this).closest('.fresh-dialog-emote').addClass('hide');
-        });
-
-         //tabs和分页切换
-         this.emoteTabs(".fresh-smilies-tabs","current",".fresh-dialog-smilies-box");
-         this.emoteTabs(".fresh-smilies-page-box","current",".fresh-dialog-smilies-con");
     }
 
     /**
-     * 删除新鲜事和评论方法
+     * tab标枪切换方法
      * @param  {Object} tabTit 任意子节点
      * @param  {Object} on 任意类名
      * @param  {Object} tabCon 任意子节点
@@ -793,10 +782,29 @@ fresh.comment = fresh.comment || {};
     }
 
     /**
+     * 删除新鲜事或者评论弹出层方法
+     * @param {string} cont 提示文本
+     * @return {html} html元素
+     */
+    fc.delDialog = function(cont){
+       var delComment_html = '<div class="fresh-dialog-delete">\
+                                 <div class="fresh-dialog-delete-content">\
+                                      <p class="fresh-dialog-delete-tips">'+cont+'</p>\
+                                      <div class="fresh-dialog-delete-btn">\
+                                         <a href="javascript:void(0);" class="fresh-btn fresh-sure-btn">确定</a>\
+                                         <a href="javascript:void(0);" class="fresh-btn fresh-cancel-btn">取消</a>\
+                                      </div>\
+                                 </div>\
+                             </div>'
+        return delComment_html;                   
+    }
+
+    /**
      * 删除新鲜事和评论方法
      * @param  {string} dom 任意子节点
      */
     fc.delComment = function(dom){
+        var that = $(dom);
         if(dom){
           this.setParam(dom);
         }else{
@@ -806,8 +814,7 @@ fresh.comment = fresh.comment || {};
         var _type = $(dom).data().sign;
         //需要传递的参数
         var _data = $(dom).data('params');
-        $('.fresh-dialog-delete').removeClass('hide');
-
+        
         //提示信息
         var tipInfo = null;
         if( _type == 1){
@@ -815,14 +822,19 @@ fresh.comment = fresh.comment || {};
         } else if( _type == 2 ){
             tipInfo = '你确定删除该评论吗?';
         }
-        $('.fresh-dialog-delete .fresh-dialog-delete-tips').html(tipInfo);
+        //提示弹出层显示
+        popoverTips.show({
+            dom: that,
+            placement: 'top',
+            trigger: 'click', 
+            con: fc.delDialog(tipInfo)
+        });
         
         //点击确认按钮删除
         $('body').off('click', '.fresh-dialog-delete .fresh-sure-btn').on('click', '.fresh-dialog-delete .fresh-sure-btn', function(){
-             console.log(123456)
               $.ajax({
-                  url: "ajaxDelDynamic.json",
-                  type: 'POST',
+                  url: fresh.path.url + "ajaxDelDynamic.json",
+                  type: 'get',
                   dataType: 'json',
                   data: _data,
                   success: function(data) {
@@ -858,17 +870,15 @@ fresh.comment = fresh.comment || {};
                       } else {
                            return false;
                       }  
-                       $('.fresh-dialog-delete').addClass('hide');
+                      popoverTips.destroy(dom);
                   }
               });
         })
         
         //点击取消按钮
         $('body').off('click', '.fresh-dialog-delete .fresh-cancel-btn').on('click', '.fresh-dialog-delete .fresh-cancel-btn', function(){
-            console.log(123)
-            $('.fresh-dialog-delete').addClass('hide');
+            popoverTips.destroy(dom);
         })
-        
 
     }
     
@@ -884,7 +894,23 @@ fresh.comment = fresh.comment || {};
 fresh.collect = fresh.collect || {};
 
 (function(fl){
-   
+
+    /**
+     * 收藏相关的弹出层方法
+     * @param  {html | string} cont html字符串
+     */
+    fl.dialogBox = function(cont){
+       var collect_html = '<div class="fresh-dialog-collect">\
+                               <div class="fresh-dialog-collect-content">\
+                                   <div class="fresh-dialog-success">\
+                                      <i class="fresh-dialog-collect-icon"></i>\
+                                      '+cont+'\
+                                   </div>\
+                               </div>\
+                           </div>';
+        return collect_html;                   
+    }
+    
     /**
      * 添加收藏方法
      * @param  {string} dom 任意子节点
@@ -897,16 +923,19 @@ fresh.collect = fresh.collect || {};
         }
         that.removeClass('fresh-collect-add-btn');
         $.ajax({
-            url: 'ajaxAddCollect.json',
+            url: fresh.path.url + 'ajaxAddCollect.json',
             data:params,
-            type : 'POST',
+            type : 'get',
             dataType:'json',
             success:function(data){
                 if(data){
-                    //收藏成功弹出层显示
-                    $('.fresh-dialog-collect').removeClass('hide');//模拟假的弹出层
-
-                    var collectBox = that.next('em').find('i');
+                    popoverTips.show({
+                        dom: that,
+                        placement: 'top',
+                        trigger: 'click', 
+                        con: fl.dialogBox(data.msg)
+                    });
+                    var collectBox = that.nextAll('em').find('i');
                     setTimeout(function(){
                         that.html('取消收藏');
                         //改变收藏的数量
@@ -916,11 +945,15 @@ fresh.collect = fresh.collect || {};
                             collectBox.text(_num);
                         }
                         that.addClass('fresh-collect-cancel-btn');
-                        $('.fresh-dialog-collect').addClass('hide');//模拟假的弹出层
+                        popoverTips.destroy(dom);
                     }, 1000);
                 }else{
+                    popoverTips.destroy(dom);
                     that.addClass('fresh-collect-cancel-btn');
                 }      
+            },
+            error : function(){
+                popoverTips.destroy(dom);
             }
         });
     }
@@ -937,15 +970,20 @@ fresh.collect = fresh.collect || {};
         }
         that.removeClass('fresh-collect-cancel-btn');
         $.ajax({
-            url: 'ajaxCancelCollect.json',
+            url: fresh.path.url + 'ajaxCancelCollect.json',
             data:params,
-            type : 'POST',
+            type : 'get',
             dataType:'json',
             success:function(data){
                 if(data){
-                    //收藏成功弹出层显示
-                    $('.fresh-dialog-collect').removeClass('hide');//模拟假的弹出层
-                    var collectBox = that.next('em').find('i');
+                    //取消收藏成功弹出层显示
+                     popoverTips.show({
+                        dom: that,
+                        placement: 'top',
+                        trigger: 'click', 
+                        con: fl.dialogBox(data.msg)
+                    });
+                    var collectBox = that.nextAll('em').find('i');
                     setTimeout(function(){
                         that.html('收藏');
                         //改变收藏的数量
@@ -959,11 +997,15 @@ fresh.collect = fresh.collect || {};
                             collectBox.text(_num);
                         }
                         that.addClass('fresh-collect-add-btn');
-                        $('.fresh-dialog-collect').addClass('hide');//模拟假的弹出层
+                        popoverTips.destroy(dom);
                     }, 1000);
                 }else{
+                    popoverTips.destroy(dom);
                     that.addClass('fresh-collect-add-btn');
                 }      
+            },
+            error : function(){
+                popoverTips.destroy(dom);
             }
         });
     }
@@ -1017,7 +1059,7 @@ fresh.send = fresh.send || {};
             return false;
         }
         //显示图片预览区域
-        $('#fresh-send-preview').removeClass('hide');
+        $('#fresh-send-preview').removeClass('hiding');
         $('.fresh-send-preview-imgvideo').find('img').attr('src', 'http://img04.xesimg.com/loading.gif');
         this.setImagePreview('fresh-fileToUpload', 'fresh-send-preview-img', 'fresh-send-preview-imgvideo');
     };
@@ -1065,7 +1107,7 @@ fresh.send = fresh.send || {};
      */
     fs.box = function(dom) {
         //虚拟弹出层显示新鲜事弹出层
-        $('.fresh-send-box').removeClass('hide');
+        $('.fresh-send-box').removeClass('hiding');
     };
 
     /**
@@ -1129,12 +1171,11 @@ fresh.attention = fresh.attention || {};
      * @param  {string} dom 任意子节点
      */
     fa.addCancel = function(dom){
-        var _url = "ajaxFollow.json"//$(dom).data().url;
         var _type = $(dom).data().type;
         var _params = $(dom).data().params + '&type=' + _type;
         $.ajax({
-            type: "post",
-            url: _url,
+            url: fresh.path.url + 'ajaxFollow.json',
+            type: "get",
             timeout: 7000,
             dataType: 'json',
             data: _params,
@@ -1168,6 +1209,54 @@ fresh.attention = fresh.attention || {};
 
 })(fresh.attention)
 
+
+/**
+ * 
+ * 表情相关业务
+ * @param {Object} fe fresh.emote
+ * 
+ */
+fresh.emote = fresh.emote || {};
+
+(function(fe){
+    
+    /**
+     * 表情弹出层显示方法
+     * @param  {string} dom 任意子节点
+     * @param  {string} textarea 任意子节点
+     */
+    fe.show = function(dom, textarea){
+        popoverTips.show({
+              dom: dom,
+              placement: 'bottom',
+              trigger: 'click',
+              con: fresh.emoteHmtl
+        })
+
+        //箭头靠左显示
+        var _popoverW = $('.fresh-dialog-emote').closest('.popover[role="tooltip"]').outerWidth()/2 -25;
+        $('.fresh-dialog-emote').closest('.popover[role="tooltip"]').css('marginLeft',_popoverW);
+        $('.fresh-dialog-emote').closest('.popover[role="tooltip"]').find('.arrow').css('left','25px');
+        
+        //点击表情插入文本框
+        $('.fresh-dialog-emote').off('click', '.fresh-jsSmilies li').on('click', '.fresh-jsSmilies li', function(){
+              var _val = $(this).data('action');
+              textarea.focus();
+              textarea.insertContent(_val);
+              popoverTips.destroy(dom);
+        })
+
+        //关闭表情层(关闭表情弹出层)
+        $('.fresh-dialog-emote').off('click', '.fresh-smilies-close').on('click', '.fresh-smilies-close', function(){
+            popoverTips.destroy(dom);
+        });
+
+         //tabs和分页切换
+         fresh.comment.emoteTabs(".fresh-smilies-tabs","current",".fresh-dialog-smilies-box");
+         fresh.comment.emoteTabs(".fresh-smilies-page-box","current",".fresh-dialog-smilies-con");
+    }
+
+})(fresh.emote)
 
 
 

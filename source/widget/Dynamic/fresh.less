@@ -4,7 +4,6 @@
  * @author duxinli
  * @version 4.0
  */
-
 @blue-color: #3bafda;
 @font-color:#333;
 
@@ -21,6 +20,16 @@
 
 .font-family(@fontfamily:"SimSun") {
     font-family:@fontfamily; 
+}
+
+.blue-radius-btn{
+   background: #3bafda;
+   color: #fff;
+   .border-radius(2px);
+   &:hover,&:focus{
+      background: #359dc4;
+      color: #fff;
+   }
 }
 
 //没有课程的提示框信息
@@ -61,14 +70,27 @@
   em,i{
     font-style: normal;
   }
+  a{ 
+      outline:none;
+      &:focus{
+          outline:none;
+      }
+  }
   .fresh-avatar{
      width:60px;
      height:60px;
      margin:8px 14px 0 0;
      display:inline;
      overflow:hidden;
+     a{
+       float: left;
+       width: 60px;
+       height: 60px;
+     }
      img{
         .border-radius(50%);
+        width: 100%;
+        height: 100%;
      }
   }
   .fresh-detail{
@@ -220,7 +242,9 @@
        position: relative;
        text-align:center; 
        padding:10px;
-       cursor: url("img/small.cur"), auto !important;
+       &.fresh-big-img-answer{
+            cursor: url("img/big.cur"), auto !important;
+       }
        .fresh-big-sign-exam{
             overflow: hidden;
             text-align: center;
@@ -292,6 +316,7 @@
        }
        .fresh-media-big-img{
            overflow: hidden;
+           cursor: url("img/small.cur"), auto !important;
            img{
               max-width: 100%;
            }
@@ -323,6 +348,57 @@
         padding-top:8px;
         .font-size;
         color: #a0a0a0;
+        /**
+         * 删除新鲜事和评论确认弹出层Style
+         */
+        .fresh-dialog-delete{
+            width: 210px;
+            overflow: hidden;
+            .fresh-dialog-delete-content{
+                padding:0;
+                line-height: 32px;
+                overflow: auto;
+                text-align: center;
+                display: block;
+                overflow: hidden;
+                .font-family;
+                .fresh-dialog-delete-tips {
+                     overflow: hidden;
+                     display: block;
+                     text-align: center;
+                     line-height: 30px;
+                     margin: 0;
+                     padding: 10px 0 5px 0;
+                    .font-size(14px);
+                    color: #333;
+                }
+                .fresh-dialog-delete-btn {
+                    padding: 10px 0;
+                    text-align: center;
+                    overflow: hidden;
+                    .fresh-btn{
+                       margin:0 5px;
+                       padding: 8px 26px;
+                       .border-radius(2px);
+                       .font-size(12px);
+                       float: none;
+                       &.fresh-sure-btn{
+                          background: #cb0000;
+                          color: #fff;
+                       }
+                       &.fresh-cancel-btn{
+                          background: #f3f3f3;
+                          color:@font-color 
+                       }
+                    }
+                }
+
+            }
+        }
+         /**
+         * 删除新鲜事和评论确认弹出层Style结束
+         */
+
         .fresh-addGold{
            float: left;
            background: #f9e68e;
@@ -358,6 +434,7 @@
                 float: left;
                 color:@blue-color;
                 text-decoration:none;
+                position: relative;
                 &:hover{
                   text-decoration:underline;
                 }
@@ -372,8 +449,8 @@
     } 
     .fresh-comment-box{
       overflow: hidden;
-      position: relative;
       padding:10px;
+      background: #fcfcfc;
       .font-size;
       .fresh-comment-form{
           overflow: hidden;
@@ -405,6 +482,7 @@
                   box-shadow:none;
                   .font-size;
                   margin: 0;
+                  width: 100%;
               }
               .fresh-comment-status{
                   background: #fcfcfc;
@@ -414,7 +492,7 @@
                   left: 1px;
                   right: 1px;
                   top: 11px;
-                  bottom: 11px;
+                  bottom: 19px;
                   text-align: center;
                   z-index: 10;
                   .fresh-comment-success {
@@ -453,9 +531,9 @@
              .fresh-comment-emote-smiles-btn{
                 float: left;
                 cursor: pointer;
-                height: 21px;
+                height: 33px;
                 line-height: 21px;
-                margin-top: 12px;
+                padding-top: 12px;
              }
              .fresh-comment-emote-btn{
                   float: left;
@@ -524,6 +602,11 @@
                width: 40px;
                height: 40px;
                margin: 0 14px 0 0;
+               a{
+                 float: left;
+                 width: 40px;
+                 height: 40px;
+               }
             }
             .fresh-uesr{
                display: inline;
@@ -639,7 +722,7 @@
    * 推荐新鲜事鼠标滑过整条信息的背景色改变
    */
   &.fresh-hover-style{
-     background: #f1f2f6;
+     background: #fcfcfc;
      cursor: pointer;
   }
   /** 
@@ -651,6 +734,11 @@
           margin:2px 10px 0 0;
           width: 40px;
           height: 40px;
+          a{
+            float: left;
+            width: 40px;
+            height: 40px;
+          }
        }
        .fresh-detail{
           line-height: 18px;
@@ -706,6 +794,7 @@
                 display: block;
                 overflow: hidden;
                 padding:20px;
+                background: #fcfcfc;
           }
        }
        .fresh-comment-detail-info{
@@ -744,6 +833,7 @@
        height: 136px;
        resize:none;
        overflow-y: auto;
+       width: 100%;
 
    }
    .fresh-send-preview{
@@ -755,7 +845,7 @@
            float: left;
            position: relative;
            max-width: 120px;
-           min-width: 60px;
+           min-width: 36px;
            .fresh-preview-close{
                background: url('img/comment-close.png') no-repeat;
                width: 18px;
@@ -765,6 +855,9 @@
                right: -18px;
                top: 0;
                cursor: pointer;
+           }
+           img{
+              width: 100%;
            }
        }
    }
@@ -839,6 +932,8 @@
            .font-family;
            color: #fff;
            margin: 0;
+           border: none;
+           line-height: normal;
            &:hover{
               text-decoration: none;
            }
@@ -914,6 +1009,7 @@
                    padding:8px 26px;
                    .font-size(14px);
                    .font-family;
+                   display: inline-block;
                    margin: 0;
                    &.fresh-dialog-btn-disabled{
                       background: @blue-color;
@@ -935,9 +1031,8 @@
 .fresh-dialog-emote{
    background: #fff;
    overflow: hidden;
-   padding: 10px;
    .fresh-dialog-smilies-medal{
-       width: 476px;
+       width: 456px;
        overflow: hidden;
        .fresh-smilies-title{
             overflow: hidden;
@@ -982,6 +1077,7 @@
                      &.fresh-dialog-smilies-list{
                         width: 450px;
                         margin: 10px 0;
+                        padding: 0;
                         overflow: hidden;
                      }
                      li{
@@ -1047,7 +1143,7 @@
     overflow: hidden;
     .fresh-dialog-collect-content{
         min-width: 100px;
-        padding: 25px 20px;
+        padding: 5px 0;
         line-height: 32px;
         overflow: auto;
         .font-size;
@@ -1071,49 +1167,17 @@
     }
 }
 
-
-/**
- * 删除新鲜事和评论确认弹出层Style
- */
-
-.fresh-dialog-delete{
-    overflow: hidden;
-    .fresh-dialog-delete-content{
-        min-width: 100px;
-        padding: 25px 20px;
-        line-height: 32px;
-        overflow: auto;
-        text-align: center;
-        .font-family;
-        .fresh-dialog-delete-tips {
-             overflow: hidden;
-             text-align: center;
-             line-height: 30px;
-             margin: 0;
-             padding-bottom: 10px;
-            .font-size(14px);
-        }
-        .fresh-dialog-delete-btn {
-            padding: 10px 20px;
-            text-align: center;
-            .fresh-btn{
-               margin:0 5px;
-               padding: 8px 26px;
-               .border-radius(2px);
-               .font-size(12px);
-               &.fresh-sure-btn{
-                  background: #cb0000;
-                  color: #fff;
-               }
-               &.fresh-cancel-btn{
-                  background: #f3f3f3;
-                  color:@font-color 
-               }
-            }
-        }
-
-    }
+.popover-mask-box{
+   position: relative;
+   z-index: 9999999999999999;
+   float: left;
+   background: #fff;
+   opacity: 0;
+   filter:alpha(opacity=0);
 }
 
+.popover{
+  max-width: 1000px;
+}
 
 

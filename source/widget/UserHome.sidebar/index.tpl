@@ -27,10 +27,8 @@
         <i class="fa fa-rmb"></i>
         <span>金币</span>
     </a>
-<!--
-    <a href="" class="btn btn-primary" data-id="Favorite">
+    <!-- <a href="" class="btn btn-primary" data-id="Favorite">
         <i class="fa fa-star-o"></i>
         <span>收藏</span>
-    </a>
--->
+    </a> -->
 </div>

@@ -7,15 +7,52 @@
     <title>个人中心-欢迎来到学而思网校</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <link href="css/normalize.css" type="text/css" rel="stylesheet" />
-    <link href="css/foundation.min.css" type="text/css" rel="stylesheet" />
-    <link href="css/personalCenter.css" type="text/css" rel="stylesheet"/>
+    <link href="normalize.css" type="text/css" rel="stylesheet" />
+    <link href="foundation.min.css" type="text/css" rel="stylesheet" />
+    <link href="personalCenter.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-<div class="center-verify">
+<div class="center-verify-office clearfix">
     <!--官方账号认证框start-->
     <div class="center-office-verify"></div>
     <div class="center-office-desc">学而思网校官方账号</div>
+    <!--官方账号认证end-->
 </div>
+
+<!--老师认证账号start-->
+<div class="center-verify-teacher">
+    <div class="center-teacher-outer clearfix">
+        <div class="center-teacher-verify left"></div>
+        <div class="center-teacher-link left">老师风采</div>
+    </div>
+    <div class="center-teacher-desc">学而思网校授课老师账号</div>
+    <div class="center-teacher-intro ">毕业于北京大学，教龄6年</div>
+</div>
+<!--老师认证账号end-->
+
+<!--学生认证账号start-->
+<div class="center-verify-stud">
+        <div class="center-stud-outer clearfix">
+            <div class="center-stud-verify left"></div>
+            <div class="center-stud-desc left">学而思网校认证学员</div>
+        </div>
+        <div class="center-stud-prize">
+            <img src="img/prize1.png" alt="user-praize" class="erq-prize"/>
+            <img src="img/prize2.png" alt="user-praize" class="erq-prize"/>
+            <img src="img/prize3.png" alt="user-praize" class="erq-prize"/>
+            <img src="img/prize4.png" alt="user-praize" class="erq-prize"/>
+        </div>
+</div>
+<!--学生认证账号end-->
 </body>
+<script type="text/javascript" src="../../lib/jQuery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+    !function(){
+        var dom = $('.center-teacher-intro');
+        if(dom.hasClass('noShow')){
+            dom.addClass('hide');
+            $('.center-teacher-desc').css('border-bottom','none');
+        }
+    }();
+</script>
 </html>

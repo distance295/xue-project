@@ -38,25 +38,25 @@ fCheck.bordercss = function(argument) {
 }
 
 $(function() {
-    $(".btn_blue").click(function() {
-        if ($(".cl-pass").val() == '') {
-              fCheck.setTips(".cl-pass-warning",'请输入学习卡密码');
-            $(".cl-pass").focus(function() {
-              fCheck.clearTips(".cl-pass-warning");});
+    $(".btn-pay").click(function() {
+        if ($(".studyCardPwd").val() == '') {
+              fCheck.setTips(".studyCardPwd-warning",'请输入学习卡密码');
+            $(".studyCardPwd").focus(function() {
+              fCheck.clearTips(".studyCardPwd-warning");});
             return false;
         }
-        fCheck.bordercss('.cl-pass');
+        fCheck.bordercss('.studyCardPwd');
 
         $.ajax({
             type: "POST",
             url: "/RequestPassword/UpdatePassword",
-            data: "cl-pass=" + $(".cl-pass").val(),
+            data: "studyCardPwd=" + $(".studyCardPwd").val(),
             success: function(msg) {
                 if (msg == "True") {
                     location.href = "/RequestPassword/UpdatePasswordSecuess";
                 } else {
-                    fCheck.setTips('.cl-pass-warning','学习卡密码错误');
-                    $('.cl-pass').css('border','1px solid #eaeaea');
+                    fCheck.setTips('.studyCardPwd-warning','学习卡密码错误');
+                    $('.studyCardPwd').css('border','1px solid #eaeaea');
                 }
             }
         });

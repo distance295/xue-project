@@ -15,10 +15,14 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 
 
 
 
+=======
+ 
+>>>>>>> XUEJS/master
 <!-- 页面配置 -->
 <script>
     var PAGE_CONFIG = {
