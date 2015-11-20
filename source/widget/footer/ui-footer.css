@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-10-29 10:40:12
+ * @version $Id$
+ */
+/*===============/页脚部分/====================*/
+#footer {
+  width: 100%;
+  border-top: 1px solid #e5e5e5;
+  padding: 0;
+  overflow: hidden;
+}
+/*===============/下：关于我们部分/====================*/
+#footer .foot-area {
+  padding: 20px 0;
+}
+#footer .foot-area p {
+  text-align: center;
+  line-height: 180%;
+  font-size: 12px;
+  font-family: "SimSun";
+  padding: 0;
+  margin: 0;
+}
+#footer .foot-area p a {
+  padding: 0 5px;
+  color: #333;
+}
+#footer .foot-area p strong {
+  color: #e74c3c;
+}
+#footer .foot-area p .red {
+  color: #e74c3c;
+}
+#footer .foot-area p.link {
+  padding-top: 15px;
+}
+/*===============/上：学习经验分享/====================*/
+#footer .foot-service {
+  width: 980px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #F1F1F1;
+}
+#footer .foot-service a {
+  float: left;
+  display: inline;
+  width: 215px;
+  overflow: hidden;
+  cursor: pointer;
+  height: 56px;
+  margin: 10px 10px 0 20px;
+  padding-left: 60px;
+  text-decoration: none;
+  font-size: 14px;
+}
+#footer .foot-service a p {
+  line-height: 150%;
+  color: #666;
+  text-align: left;
+  font-size: 12px;
+  font-family: "SimSun";
+}
+#footer .foot-service a:hover p,
+#footer .foot-service a:hover span {
+  color: #3bafda;
+}
+#footer .foot-service a.service-share {
+  background: url(img/A1_01.gif) no-repeat;
+}
+#footer .foot-service a.service-live {
+  background: url(img/A1_02.gif) no-repeat;
+}
+#footer .foot-service a.service-system {
+  background: url(img/A1_03.gif) no-repeat;
+}
+#footer .foot-service a.service-interaction {
+  background: url(img/A1_04.gif) no-repeat;
+}
+#footer .foot-service a span {
+  display: block;
+  line-height: 22px;
+  font-weight: bold;
+  color: #666;
+}

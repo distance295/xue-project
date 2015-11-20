@@ -1,0 +1,280 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-11-17 15:21:25
+ * @version $Id$
+ */
+.ui-article {
+  overflow: hidden;
+  margin: 20px 0;
+  padding: 10px 30px;
+}
+.ui-article .article-title {
+  line-height: 40px;
+  font-size: 18px;
+  text-align: center;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #E9E9E9;
+  font-weight: bold;
+}
+.ui-article .article-label {
+  overflow: hidden;
+  margin: 30px 0;
+  text-align: center;
+  font-size: 14px;
+}
+.ui-article .article-label span {
+  display: inline-block;
+  padding-right: 20px;
+}
+.ui-article .article-content {
+  overflow: hidden;
+  margin: 30px 0;
+  text-indent: 2em;
+}
+.ui-article .article-content p {
+  line-height: 180%;
+  margin-bottom: 10px;
+  text-indent: 2em;
+}
+.ui-article .article-content .pic {
+  text-align: center;
+}
+.ui-helpNav {
+  padding: 20px 0;
+  overflow: hidden;
+  border: 1px solid #e4e4e4;
+  background: #fbfbfb;
+}
+.ui-helpNav .nav-header {
+  color: #999;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 1px solid #cae0ed;
+  padding-right: 10px;
+  list-style: none;
+  background: none;
+  overflow: visible;
+}
+.ui-helpNav .nav-header span {
+  position: relative;
+  top: 12px;
+  display: inline-block;
+  padding: 0 10px;
+  background: #fbfbfb;
+  font-size: 14px;
+}
+.ui-helpNav li {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 20px;
+  overflow: hidden;
+  background: url(img/nav_help_icon.jpg) no-repeat 10px 13px;
+}
+.ui-helpNav li a {
+  font-size: 14px;
+  color: #0076b8;
+}
+.ui_mod_help_content {
+  width: 980px;
+  margin: 0 auto 20px;
+  overflow: hidden;
+}
+.ui_mod_help_content .ui_tabs_help {
+  height: 76px;
+  overflow: hidden;
+  margin-top: 15px;
+  background: url(img/tabs_bg.png) repeat-x;
+  padding-left: 40px;
+}
+.ui_mod_help_content .ui_tabs_help li {
+  float: left;
+  display: inline;
+  width: 218px;
+  margin: 10px 10px 0 0;
+}
+.ui_mod_help_content .ui_tabs_help li a {
+  display: block;
+  width: 218px;
+  height: 66px;
+}
+.ui_mod_help_content .ui_tabs_help li.one {
+  margin-left: 0px;
+}
+.ui_mod_help_content .ui_tabs_help li.one a {
+  background: url(img/tabs_1.png) 0 9px no-repeat;
+}
+.ui_mod_help_content .ui_tabs_help li.one a.current {
+  background: url(img/tabs_current1.png) no-repeat;
+}
+.ui_mod_help_content .ui_tabs_help li.two a {
+  background: url(img/tabs_2.png) 0 9px repeat-x;
+}
+.ui_mod_help_content .ui_tabs_help li.two a.current {
+  background: url(img/tabs_current2.png) repeat-x;
+}
+.ui_mod_help_content .ui_tabs_help li.three a {
+  background: url(img/tabs_3.png) 0 9px repeat-x;
+}
+.ui_mod_help_content .ui_tabs_help li.three a.current {
+  background: url(img/tabs_current3.png) repeat-x;
+}
+.ui_mod_help_content .ui_tabs_help li.four a {
+  background: url(img/tabs_4.png) 0 9px repeat-x;
+}
+.ui_mod_help_content .ui_tabs_help li.four a.current {
+  background: url(img/tabs_current4.png) repeat-x;
+}
+.ui_mod_help_content ul.ui_help_main {
+  overflow: hidden;
+}
+.ui_mod_help_content ul.ui_help_main li {
+  display: none;
+  overflow: hidden;
+}
+.ui_mod_help_content ul.ui_help_main li.conFocus {
+  display: block;
+}
+.ui_mod_help_content ul.ui_help_main li .help_hotspot {
+  overflow: hidden;
+  width: 845px;
+  margin: 20px 0 20px 40px;
+}
+.ui_mod_help_content ul.ui_help_main li .help_hotspot .left_help {
+  float: left;
+  width: 430px;
+  overflow: hidden;
+  border-right: 1px solid #ededed;
+}
+.ui_mod_help_content ul.ui_help_main li .help_hotspot .left_help .list_infor {
+  width: 350px;
+}
+.ui_mod_help_content ul.ui_help_main li .help_hotspot .left_help .list_infor .title_spot {
+  line-height: 30px;
+  padding-left: 12px;
+  font-size: 14px;
+}
+.ui_mod_help_content ul.ui_help_main li .help_hotspot .left_help .list_infor .title_spot a {
+  color: #333;
+}
+.ui_mod_help_content ul.ui_help_main li .help_hotspot .left_help .list_infor.current a {
+  font-weight: bold;
+  color: #666;
+}
+.ui_mod_help_content ul.ui_help_main li .help_hotspot .left_help .list_infor .infor_spot {
+  display: none;
+  line-height: 180%;
+  margin-left: 12px;
+  color: #999;
+}
+.ui_mod_help_content ul.ui_help_main li .help_hotspot .right_lelp {
+  float: right;
+  width: 350px;
+  padding-left: 40px;
+  border: 0;
+}
+.ui_mod_help_content .help_guide {
+  overflow: hidden;
+  width: 845px;
+  margin: 10px auto;
+}
+.ui_mod_help_content .help_guide dl {
+  float: left;
+  display: inline;
+  margin-right: 2px;
+  cursor: pointer;
+}
+.ui_mod_help_content .help_guide dl dt {
+  width: 167px;
+  height: 42px;
+  line-height: 42px;
+  overflow: hidden;
+  text-align: center;
+  background: url(img/help_con_1.png) no-repeat;
+}
+.ui_mod_help_content .help_guide dl dd {
+  width: 164px;
+  height: 165px;
+  line-height: 2.2em;
+  padding: 10px 28px 0 30px;
+  border: 1px solid #F9F9F9;
+}
+.ui_mod_help_content .help_guide dl dd a {
+  color: #333;
+}
+.ui_mod_help_content .help_guide .current dt {
+  background: url(img/help_con_cur.png) no-repeat;
+  color: #fff;
+  font-weight: bold;
+}
+.ui_mod_help_content .help_guide .current dd {
+  background: #fef2f2;
+  border: 1px solid #f3d7d6;
+  overflow: hidden;
+}
+.ui_mod_help_content .help_service {
+  overflow: hidden;
+  width: 845px;
+  margin: 10px auto;
+}
+.ui_mod_help_content .help_service dl {
+  float: left;
+  display: inline;
+  width: 276px;
+  overflow: hidden;
+  padding: 14px 0 14px 5px;
+}
+.ui_mod_help_content .help_service dl dt {
+  font-weight: 700;
+  background: url(img/icon_help.png) no-repeat;
+  padding: 5px 0 5px 22px;
+  color: #666;
+  font-family: "Microsoft YaHei";
+  font-size: 14px;
+}
+.ui_mod_help_content .help_service dl dd {
+  height: 165px;
+  line-height: 2.2em;
+  padding-right: 28px;
+  white-space: nowrap;
+  padding-left: 22px;
+  background: url(img/line_h.png) 6px top repeat-y;
+}
+.ui_mod_help_content .help_service dl dd a {
+  color: #333;
+}
+.ui_mod_help_content .help_classify {
+  overflow: hidden;
+  width: 845px;
+  margin: 10px auto;
+}
+.ui_mod_help_content .help_classify dl {
+  float: left;
+  display: inline;
+  width: 417px;
+  height: 76px;
+  overflow: hidden;
+}
+.ui_mod_help_content .help_classify dl dt {
+  color: #666;
+  font-weight: 700;
+  padding-bottom: 5px;
+  font-size: 14px;
+  font-family: "Microsoft YaHei";
+}
+.ui_mod_help_content .help_classify dl dd {
+  float: left;
+  line-height: 2.2em;
+  padding-right: 28px;
+  white-space: nowrap;
+}
+.ui_mod_help_content .help_classify dl dd a {
+  color: #333;
+}
+h1.title_help_new {
+  width: 845px;
+  margin: 20px auto;
+  font-size: 14px;
+  color: #666;
+}

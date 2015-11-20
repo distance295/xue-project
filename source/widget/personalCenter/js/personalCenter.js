@@ -11,4 +11,10 @@ $('.centerHeader-willFocus-btn').on('click',function(){
 	var that = this;
 	$(that).parent().addClass('hide');
 	$('.centerHeader-notFoucs-btn').removeClass('hide');
-})
+});
+
+/*直播鲜花学员头像滑过显示学员卡*/
+$('.rank-photo').on('mouseover',function(){
+
+});
+

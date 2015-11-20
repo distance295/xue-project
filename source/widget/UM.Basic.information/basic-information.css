@@ -1,0 +1,106 @@
+.bi-content {
+  width: 880px;
+  height: 100%;
+  overflow: hidden;
+  margin: 20px 0 30px 100px;
+}
+.bi-content .bi-left {
+  float: left;
+}
+.bi-content .bi-left p {
+  position: relative;
+  font-size: 12px;
+  color: #666;
+  clear: both;
+}
+.bi-content .bi-left p .date {
+  display: inline-block;
+  width: 460px;
+}
+.bi-content .bi-left p label {
+  float: left;
+  width: 60px;
+  margin: 0 5px 50px 0;
+  text-align: right;
+  color: #666;
+  font-weight: normal;
+  cursor: text;
+}
+.bi-content .bi-left p select {
+  position: relative;
+  top: -8px;
+  width: 80px;
+  height: 34px;
+  padding-left: 7px;
+  color: #a0a0a0;
+  border: 1px solid #dcdcdc;
+}
+.bi-content .bi-left p select:focus {
+  border: 1px solid #3bafda;
+}
+.bi-content .bi-left p span {
+  color: #333;
+}
+.bi-content .bi-left p .error {
+  display: block;
+  width: 385px;
+  color: #e74c3c;
+  height: 30px;
+  margin-left: 50px;
+  padding-top: 5px;
+  line-height: 19px;
+}
+.bi-content .bi-left p .prompt-empty {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 65px;
+}
+.bi-content .bi-left p em {
+  margin-left: 20px;
+  font-style: normal;
+  color: #e74c3c;
+}
+.bi-content .bi-left p i {
+  position: relative;
+  top: -8px;
+  margin: 0 20px 0 5px;
+  font-style: normal;
+  color: #333;
+}
+.bi-content .bi-left p .nickname,
+.bi-content .bi-left p .school {
+  position: relative;
+  top: -8px;
+  width: 260px;
+  margin: 0 0 1px 0;
+  padding: 8px 5px;
+  border: 1px solid #dcdcdc;
+}
+.bi-content .bi-left p .nickname:focus,
+.bi-content .bi-left p .school:focus {
+  border: 1px solid #3bafda;
+}
+.bi-content .bi-left .btn-submit {
+  width: 100px;
+  height: 35px;
+  margin-top: 12px;
+  font-size: 14px;
+}
+.bi-content .bi-right {
+  float: right;
+  width: 295px;
+  height: 140px;
+  background: url('img/basic-bg.png') no-repeat;
+}
+.bi-content .bi-right span {
+  display: inline-block;
+  padding: 80px 13px 0 13px;
+  font-family: 'Microsoft Yahei';
+  font-size: 14px;
+  color: #666;
+}
+.bi-content .bi-right span em {
+  font-style: normal;
+  color: #e74c3c;
+}

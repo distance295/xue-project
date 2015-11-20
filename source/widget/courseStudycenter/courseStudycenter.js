@@ -70,7 +70,7 @@ courses.avatar = courses.avatar || {};
 
     a.next = function(){
         var box = a.box.pic,
-            left = Number(box.css('margin-left').replace('px',''));
+        left = Number(box.css('margin-left').replace('px',''));
 
         if(a.left > -(a.max * a.step)){
             a.box.pic.animate({
@@ -113,16 +113,45 @@ $('body').off('click', '.avatar-roll a, .majar-items .prev, .majar-items .next')
         return false;
     } else {
        courses.avatar.toggle(that)     
-    }
+   }
 });
 // 更多服务
 $(function(){
-	$('.more-service h4').on('click',function(){
-		var a = $(this).hasClass('blue-arrow')
-		if(a){
-			$(this).removeClass('blue-arrow').parents('.more-service').removeClass('show');
-		}else{
-			$(this).addClass('blue-arrow').parents('.more-service').addClass('show');
-		}
-	});
-})
+	$('.more-service h4').on('click',function(event){
+        event.stopPropagation();
+        var a = $(this).hasClass('blue-arrow')
+        if(a){
+           $(this).removeClass('blue-arrow').parents('.more-service').removeClass('show');
+       }else{
+           $(this).addClass('blue-arrow').parents('.more-service').addClass('show');
+       }
+   });
+    $(document.body).on('click',function(event){
+        var a = $('.more-service h4').hasClass('blue-arrow');
+        if (a){
+            $('.more-service h4').removeClass('blue-arrow').parents('.more-service').removeClass('show');
+        }
+
+    })
+}); 
+// 学习中心的直播录播切换
+$(function(){
+    $('.courseList-wrap').on('click','.teacher-tab li',function(){
+        var that = $(this);
+        // var dataUrl = 'direct-courseList.html'
+        $.ajax({
+            type: "POST",
+            url: "direct-courseList.html",
+            // data: 'email=' + $('#username').val(),
+            dataType: "html",
+            timeout: 300,
+            success: function(result) {
+                $('.courseList-wrap').html(result);
+            },
+            error: function() {
+               alert('数据读取错误,请重试..');
+               return false;
+           }
+       });
+    });
+});

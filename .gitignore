@@ -28,9 +28,21 @@ build/Release
 node_modules
 
 /.idea
+/website
+/source/components
+/source/config
+/source/pages
+/source/lib/Font-Awesome/master
 .DS_Store
 *.db
 *.bak
 *.tmp
 *.cmd
+*.html
 .svn
+source/widget/perfect-information/perfect-information.css
+source/widget/glory/glory.css
+source/widget/courses/courses.css
+source/fis-conf-pages.js
+/config
+**.css

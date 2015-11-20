@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>账户管理-手机号设置-基本资料</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- 这是CSS库文件 -->
+    <link href="../../lib/bootstrap/3.3.5-custom/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- 这是当前模块样式文件 -->
+    <link href="basic-information.css" rel="stylesheet">
+</head>
+<body>
+    <div class="bi-content">
+        <div class="bi-left">
+            <p>
+                <label for="">用户名：</label>
+                <span>gonghaibin3018@100tal.com</span>
+            </p>
+            <p>
+                <label for="">昵称：</label>
+                <span><a href="#">请进入学习中心完善该条信息</a></span>
+            </p>
+            <p>
+                <label for="">真实姓名：</label>
+                <span><a href="#">请进入学习中心完善该条信息</a></span>
+            </p>
+            <p>
+                <label for="">性别：</label>
+                <span><a href="#">请进入学习中心完善该条信息</a></span>
+            </p>
+            <p>
+                <label for="">年级：</label>
+                <span>初三</span>
+                <em>网校会在每年7月1日自动为你更新年级</em>
+            </p>
+            <p>
+                <span class="date">
+                    <label for="">生日：</label>
+                    <select class="year">
+                      <option>请选择</option>
+                    </select>
+                    <i>年</i>
+                    <select class="month">
+                      <option>请选择</option>
+                    </select>
+                    <i>月</i>
+                    <select class="day">
+                      <option>请选择</option>
+                    </select>
+                    <i>日</i>
+                </span>
+            </p>
+            <p>
+                <label for="">所在地：</label>
+                <span><a href="#">请进入学习中心完善该条信息</a></span>
+            </p>
+            <p>
+                <label for="">学校：</label>
+                <input class="school" type="text">
+                <span class="school-warning error"></span>
+            </p>
+            <button class="btn-submit btn btn-info" name="submit" type="submit">保存</button>
+        </div>
+        <div class="bi-right">
+            <span>真实姓名、性别、所在地、年级等基本资料如需修改请拨打客服电话：<em>400-800-2211</em></span>
+        </div>
+    </div>
+    <!-- 这是jquery库文件 -->
+    <script type="text/javascript" src="../../lib/jQuery/1.11.1/jquery.min.js"></script>
+    <!-- 这是当前模块js文件 -->
+    <script type="text/javascript" src="basic-information.js"></script>
+    <script>
+        /* 火狐浏览器刷新之后的界面不同的处理 */
+        !function(){
+            $('#phone').val('');
+            $('#password').val('');
+            $('#grade').val('')
+            $('#verificationCode').val('');
+            $('#phonecode').val('');
+        }();
+    </script>
+</body>
+</html>
+

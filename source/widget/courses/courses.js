@@ -70,7 +70,7 @@ courses.avatar = courses.avatar || {};
 
     a.next = function(){
         var box = a.box.pic,
-            left = Number(box.css('margin-left').replace('px',''));
+        left = Number(box.css('margin-left').replace('px',''));
 
         if(a.left > -(a.max * a.step)){
             a.box.pic.animate({
@@ -112,8 +112,8 @@ $('body').off('click', '.avatar-roll a, .majar-items .prev, .majar-items .next')
     if (that.hasClass('none')) {
         return false;
     } else {
-       courses.avatar.toggle(that)     
-    }
+     courses.avatar.toggle(that)     
+ }
 });
 /**
  * 
@@ -121,15 +121,15 @@ $('body').off('click', '.avatar-roll a, .majar-items .prev, .majar-items .next')
  * @param {Object} fc courses.attention
  * 
  */
-courses.attention = courses.attention || {};
+ courses.attention = courses.attention || {};
 
-(function(fa){
-    
+ (function(fa){
+
     /**
      * 关注和取消新鲜事方法
      * @param  {string} dom 任意子节点
      */
-    fa.addCancel = function(dom){
+     fa.addCancel = function(dom){
         var _url = "ajaxFollow.json"//$(dom).data().url;
         var _type = $(dom).data().type;
         var _params = $(dom).data().params + '&type=' + _type;
@@ -145,16 +145,16 @@ courses.attention = courses.attention || {};
                 }else if(msg.sign == 1) {
                     switch(_type){
                         case 1:
-                            $(e).html('<em>已关注</em>');
-                            break;
+                        $(e).html('<em>已关注</em>');
+                        break;
                         case 2:
-                            $(dom).html('<a href="javascript:void(0)" class="fresh-attention-btn fresh-add-attention-btn"><span class="fresh-add left">+</span><span class="left">关注</span></a>');
-                            $(dom).data({type:3});
-                            break;
+                        $(dom).html('<a href="javascript:void(0)" class="fresh-attention-btn fresh-add-attention-btn"><span class="fresh-add left">+</span><span class="left">关注</span></a>');
+                        $(dom).data({type:3});
+                        break;
                         case 3:
-                            $(dom).html('<em>已关注</em><i class="fresh-course-line">|</i><a href="javascript:void(0)" class="fresh-add-cancel-btn">取消</a>');
-                            $(dom).data({type:2});
-                            break;
+                        $(dom).html('<em>已关注</em><i class="fresh-course-line">|</i><a href="javascript:void(0)" class="fresh-add-cancel-btn">取消</a>');
+                        $(dom).data({type:2});
+                        break;
                     }
                 }else{
                     alert(msg.msg);
@@ -165,7 +165,7 @@ courses.attention = courses.attention || {};
                 alert('数据读取错误..');
             }
         });
-    }
+}
 
 })(courses.attention)
 
@@ -181,4 +181,22 @@ courses.attention = courses.attention || {};
     $('.course-list').off('click', '.fresh-course-attention .fresh-add-cancel-btn').on('click', '.fresh-course-attention .fresh-add-cancel-btn', function(){
         var that = $(this).closest('.fresh-course-attention');
         courses.attention.addCancel(that);
-    })
+    });
+
+//热门专题课区域增加链接
+var a = $('.course-list.hot-course-list');
+a.on('mouseover', function(){
+    $(this).addClass('hover-feed');
+});
+a.on('mouseout', function(){
+    $(this).removeClass('hover-feed');
+});
+a.find('.course-detail').off('click').on('click', function(event){
+    var t = $(event.target);
+    if(t.attr('href')){
+        return;
+    }else{
+        var b = $(this).find('.course-title a');
+        window.open(b.attr('href'));
+    }
+})

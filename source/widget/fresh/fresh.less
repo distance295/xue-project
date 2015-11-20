@@ -23,6 +23,16 @@
     font-family:@fontfamily; 
 }
 
+.blue-radius-btn{
+   background: #3bafda;
+   color: #fff;
+   .border-radius(2px);
+   &:hover,&:focus{
+      background: #359dc4;
+      color: #fff;
+   }
+}
+
 //没有课程的提示框信息
 .fresh-notCourse {
     background: #fcfcfc;
@@ -33,6 +43,15 @@
     text-align: center;
     overflow: hidden;
 }
+
+.fresh-comment-tips{
+     display: block;
+     overflow: hidden;
+     text-align: center;
+     color: #cc0000;
+     line-height: 30px;
+     .font-size(12px);
+ }
 
 //加载中显示
 .fresh-commentInfo-loading {
@@ -58,8 +77,15 @@
      margin:8px 14px 0 0;
      display:inline;
      overflow:hidden;
+     a{
+       float: left;
+       width: 60px;
+       height: 60px;
+     }
      img{
         .border-radius(50%);
+        width: 100%;
+        height: 100%;
      }
   }
   .fresh-detail{
@@ -158,7 +184,6 @@
             display: inline-block;
             float: left;
             margin-right: 10px;
-            min-width: 36px;
             text-align: center;
             position: relative;
             cursor: url("img/big.cur"), auto !important;
@@ -179,14 +204,15 @@
                 }
             }
             img{
-               max-width: 200px;
+               max-width: 120px;
+               min-width: 60px;
                vertical-align: top;
             }
             &.fresh-media-small-video{
                  img{
                      cursor:pointer;
-                     height: 150px;
-                     width: 200px;
+                     width: 210px;
+                     max-width: 210px;
                  }
                  .fresh-video-play {
                       background:url("img/fresh_videoplay.png") no-repeat ;
@@ -211,7 +237,9 @@
        position: relative;
        text-align:center; 
        padding:10px;
-       cursor: url("img/small.cur"), auto !important;
+       &.fresh-big-img-answer{
+            cursor: url("img/big.cur"), auto !important;
+       }
        .fresh-big-sign-exam{
             overflow: hidden;
             text-align: center;
@@ -283,6 +311,7 @@
        }
        .fresh-media-big-img{
            overflow: hidden;
+           cursor: url("img/small.cur"), auto !important;
            img{
               max-width: 100%;
            }
@@ -396,6 +425,7 @@
                   box-shadow:none;
                   .font-size;
                   margin: 0;
+                  width: 100%;
               }
               .fresh-comment-status{
                   background: #fcfcfc;
@@ -405,7 +435,7 @@
                   left: 1px;
                   right: 1px;
                   top: 11px;
-                  bottom: 11px;
+                  bottom: 19px;
                   text-align: center;
                   z-index: 10;
                   .fresh-comment-success {
@@ -441,12 +471,19 @@
              overflow: hidden;
              line-height: 45px;
              height: 45px;
+             .fresh-comment-emote-smiles-btn{
+                float: left;
+                cursor: pointer;
+                height: 21px;
+                line-height: 21px;
+                margin-top: 12px;
+             }
              .fresh-comment-emote-btn{
                   float: left;
                   cursor:pointer;
                   width: 21px;
                   height: 21px;
-                  margin: 12px 5px 0 0;
+                  margin: 0 5px 0 0;
                   background:url('img/fresh-emote.png') no-repeat;
              }
              .fresh-comment-emotetext{
@@ -508,6 +545,11 @@
                width: 40px;
                height: 40px;
                margin: 0 14px 0 0;
+               a{
+                 float: left;
+                 width: 40px;
+                 height: 40px;
+               }
             }
             .fresh-uesr{
                display: inline;
@@ -618,6 +660,14 @@
     }
 
   }
+
+  /** 
+   * 推荐新鲜事鼠标滑过整条信息的背景色改变
+   */
+  &.fresh-hover-style{
+     background: #f1f2f6;
+     cursor: pointer;
+  }
   /** 
    * 热门新鲜事Style
    */
@@ -627,6 +677,11 @@
           margin:2px 10px 0 0;
           width: 40px;
           height: 40px;
+          a{
+            float: left;
+            width: 40px;
+            height: 40px;
+          }
        }
        .fresh-detail{
           line-height: 18px;
@@ -720,6 +775,7 @@
        height: 136px;
        resize:none;
        overflow-y: auto;
+       width: 100%;
 
    }
    .fresh-send-preview{
@@ -731,6 +787,7 @@
            float: left;
            position: relative;
            max-width: 120px;
+           min-width: 36px;
            .fresh-preview-close{
                background: url('img/comment-close.png') no-repeat;
                width: 18px;
@@ -740,6 +797,9 @@
                right: -18px;
                top: 0;
                cursor: pointer;
+           }
+           img{
+              width: 100%;
            }
        }
    }
@@ -752,13 +812,19 @@
        color:@font-color*3; 
        .font-size(12px);
    }
+   .fresh-send-emote-click-btn{
+       float: left;
+       height: 22px;
+       line-height: 22px;
+       margin-top: 6px;
+       cursor: pointer;
+   }
    .fresh-send-emote{
        float: left;
        background: url('img/fresh-smile.png') no-repeat;
        display: inline-block;
        width: 22px;
        height: 22px; 
-       margin-top: 6px;
        cursor: pointer;
    }
    a{
@@ -782,7 +848,7 @@
            position: absolute;
            z-index: 100;
            bottom: 0;
-           width: 22px;
+           width: 51px;
            height: 19px;
            left: 0;
            top: 0;
@@ -808,6 +874,8 @@
            .font-family;
            color: #fff;
            margin: 0;
+           border: none;
+           line-height: normal;
            &:hover{
               text-decoration: none;
            }
@@ -883,9 +951,10 @@
                    padding:8px 26px;
                    .font-size(14px);
                    .font-family;
+                   display: inline-block;
                    margin: 0;
                    &.fresh-dialog-btn-disabled{
-                      background: #3bafda;
+                      background: @blue-color;
                       opacity: .6;
                       filter:alpha(opacity=60);
                     
@@ -951,6 +1020,7 @@
                      &.fresh-dialog-smilies-list{
                         width: 450px;
                         margin: 10px 0;
+                        padding: 0;
                         overflow: hidden;
                      }
                      li{
@@ -1083,4 +1153,6 @@
 
     }
 }
+
+
 

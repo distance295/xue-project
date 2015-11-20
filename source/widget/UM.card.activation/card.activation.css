@@ -1,0 +1,111 @@
+span.error {
+  display: block;
+  width: 288px;
+  height: 30px;
+  margin: 1px 0 0 30px;
+  padding-top: 5px;
+  line-height: 19px;
+  font-size: 12px;
+  font-style: normal;
+  background: #fff;
+  color: #e74c3c;
+}
+.ca-content {
+  width: 625px;
+  height: 290px;
+  margin: 0 auto;
+}
+.ca-content .ca-content-left {
+  float: left;
+  width: 310px;
+  height: 185px;
+}
+.ca-content .ca-content-left p {
+  margin-bottom: 8px;
+  font-family: "Microsoft YaHei";
+  font-size: 14px;
+  color: #e74c3c;
+}
+.ca-content .ca-content-right {
+  float: right;
+  width: 310px;
+  height: 175px;
+  margin-top: 30px;
+}
+.ca-content .ca-content-right .cardNo-warning,
+.ca-content .ca-content-right .cardPass-warning {
+  float: left;
+  display: inline-block;
+  width: 230px;
+}
+.ca-content .ca-content-right div label {
+  float: left;
+  clear: both;
+  width: 40px;
+  margin-top: 8px;
+  font-weight: normal;
+  color: #666;
+}
+.ca-content .ca-content-right div input {
+  width: 250px;
+  margin: 0;
+  padding: 8px 5px;
+  border: 1px solid #d2d2d2;
+}
+.ca-content .ca-content-right div input:focus {
+  border: 1px solid #3bafda;
+}
+.ca-content .ca-content-right .btn-active {
+  margin: 0px 30px 0 40px;
+  width: 100px;
+  height: 35px;
+  border-radius: 3px;
+  font-size: 14px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-style: solid;
+  border-width: 0;
+  background-color: #3BAFDA;
+  border-color: #2392ba;
+  color: #FFFFFF;
+  transition: background-color 300ms ease-out;
+}
+.ca-content .ca-content-right .btn-active:hover {
+  background-color: #2392ba;
+}
+.ca-content .ca-content-right a {
+  font-size: 14px;
+}
+.prompt-box {
+  width: 1010px;
+  margin: 0 auto;
+  clear: both;
+}
+.prompt-box img.prompt {
+  position: relative;
+  width: 75px;
+  height: 55px;
+  top: 6px;
+  left: 7px;
+}
+.prompt-box .ca-prompt-box {
+  background: #fff8eb;
+  border-radius: 5px;
+  padding: 10px 0 15px 20px;
+}
+.prompt-box .ca-prompt-box h3 {
+  font-size: 14px;
+  font-family: "Microsoft YaHei";
+  color: #666;
+  margin: 6px 0 6px 5px;
+}
+.prompt-box .ca-prompt-box p {
+  font-size: 12px;
+  margin: 0 0 0 5px;
+}
+.prompt-box .ca-prompt-box p strong {
+  font-family: "Microsoft YaHei";
+  font-size: 16px;
+  font-weight: normal;
+  color: #e74c3c;
+}

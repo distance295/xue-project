@@ -5,14 +5,6 @@
  * @date    2015-10-21 14:22:33
  * @version $Id$
  */
-@fa:					"Arial";
-@fg:					"Georgia";
-@ft:					"Tahoma";
-@fl:					"Lucida Console";
-@fs:					"宋体";
-@fw:					"Microsoft YaHei";
-@fd:					"verdana";
-@fs:					"SimSun";
 //课程详情页---包含直播--录播--免费课
 .ui-course-infor-wrap {
 	width: 1190px;margin:10px auto 20px;overflow: hidden;
@@ -40,43 +32,46 @@
 	.course-center-list {
 	   width: 590px;overflow: hidden;height: 400px;margin-left: 10px;
 	   h2.coures-name-title {
-	   		line-height: 180%;font-size: 16px;overflow: hidden;padding-left: 10px;
+	   		line-height: 180%;font-size: 16px;overflow: hidden;padding-left: 10px;margin:10px 0;
 	   }
 	   .attend-class-time {
 	   	overflow: hidden;
 	   	  span {
-			 width: 75px;font-size: 12px;line-height: 25px; padding-left: 10px;
+			 width: 75px;line-height: 25px; padding-left: 10px;
 	   	  }
 	   	  ul {
-	   	  	width: 510px; overflow: hidden;margin:0;
+	   	  	width: 510px; overflow: hidden;margin:0;padding:0;
 	   	  	li {
-	   	  		float:left;width: 235px;height:30px; line-height: 30px; font-size: 12px;border:1px solid #dcdcdc;text-align: center;list-style: none;margin-right: 10px;margin-bottom: 10px;padding:1;cursor: pointer;overflow: hidden;
+	   	  		float:left;width: 235px;height:30px; line-height: 30px;border:1px solid #dcdcdc;text-align: center;list-style: none;padding:1;cursor: pointer;overflow: hidden;margin:0 10px 10px 0;
 	   	  		&.current {
 						border:2px solid #1e89e0;padding:0;background: url(img/icon_infor.png) right bottom no-repeat;
 	   	  		}
 	   	  	}
 	   	  }
 	   	  .time-list-tips {
-	   	  	   width: 100%;height: 30px;line-height: 20px; font-size: 12px;background: url(img/icon_tips.png) 1px 1px no-repeat;padding-left: 22px;margin-left: 75px;
+	   	  	   width: 100%;height: 30px;line-height: 20px; background: url(img/icon_tips.png) 1px 1px no-repeat;padding-left: 22px;margin-left: 75px;
+	   	  	   a {
+	   	  	   	color: #1e89e0;
+	   	  	   }
 	   	  }
 	   }
 	   .course-content-text {
 	   	 height: 86px;background: #f9f9f9;padding-top: 5px;margin-bottom: 20px;
 	   	 span {
-			 width: 75px;font-size: 12px;line-height: 25px; padding-left: 10px;
+			 width: 75px;line-height: 25px; padding-left: 10px;
 	   	  }
 	   	  ul.f-left {
-	   			width: 510px; overflow: hidden;margin:0;
+	   			width: 510px; overflow: hidden;margin:0;padding:0;
 	   			li {
-	   				line-height: 26px; list-style: none;font-size: 12px;
+	   				line-height: 26px; 
 	   				a {
-	   					display: inline-block;margin-left: 20px;background: url(img/icon_conre.png) 0 7px no-repeat;padding-left: 10px;
+	   					display: inline-block;background: url(img/icon_conre.png) 0 7px no-repeat;margin-left: 20px;padding-left: 10px;color: #1e89e0;
 	   				}
 	   			}
 	   		}
 	   }
 	   .course-favorable-list {
-	   		height: 36px;font-size: 12px;padding-left: 10px;
+	   		height: 36px;padding-left: 10px;
 	   		span {
 	   			display: inline-block; background: #e74c3c;color: #fff;margin-right: 10px;padding:0 5px;
 	   		}
@@ -86,18 +81,18 @@
 	   		.favrble-money {
 	   			width: 300px;padding-left: 10px;
 	   			span {
-	   				display:inline-block;font-size: 12px;padding-right: 20px;
+	   				display:inline-block;padding-right: 20px;
 	   				em {font-size: 26px;font-style: normal;}
 	   			}
 	   			del {
-	   				display:inline-block;font-size: 12px;
+	   				display:inline-block;
 	   				em {font-size: 16px;font-style: normal;}
 	   			}
 	   		}
 	   		ul.f-right {
 	   			overflow: hidden;
 	   			li {
-	   				float: right;width: 100px; text-align: center;list-style: none;font-size: 12px;
+	   				float: right;width: 100px; text-align: center;list-style: none;
 	   				em {font-style: normal;}
 	   				&.line {border-left: 1px solid #dcdcdc;}
 	   			}
@@ -164,7 +159,7 @@
 						ul.select-list {
 							overflow: hidden;margin:0;padding:0;
 							li {
-								float: left;width: 80px;height: 30px;line-height: 30px;text-align: center;font-size: 12px;background: url(img/course-btn.png) no-repeat;list-style: none;overflow: hidden;margin-right: 10px;margin-bottom: 10px;
+								float: left;width: 80px;height: 30px;line-height: 30px;text-align: center;background: url(img/course-btn.png) no-repeat;list-style: none;overflow: hidden;margin:0 10px 10px 0;
 								a {display:block;color: #333;padding-left: 10px;}
 								&.current {
 									background: url(img/course-btn-current.png) no-repeat;
@@ -198,7 +193,7 @@
 	.course-right-teacher {
 		width: 240px;border-left: 1px solid #eaeaea;height: 400px;padding-left: 20px;
 		.main-teacher-title {
-			height: 30px;line-height: 30px;font-size: 16px; font-family:@fw;
+			height: 30px;line-height: 30px;font-size: 16px; 
 		}
 		.main-teacher-list {
 			overflow: hidden;border-bottom: 1px dotted #eaeaea;padding:5px 0 15px 0;margin-bottom: 10px;
@@ -258,42 +253,60 @@
 	    max-width: 100%;
 	}
 	.table {
-	    border: 1px solid #e2e2e2;
+	    border: 1px solid #eeeeee;
 	    color: #333333;
 	    font-size: 12px;
 	    margin-bottom: 20px;
 	    width: 100%;
 	}
-	//直播大纲
-	.live_course_nav{
-		width:100%;height:40px;background:#eeeeee;color:#c9c9c9;font-weight: 700;text-align: center;margin:0;padding:0;
-		li{
-			float:left;width:150px;line-height:40px;font-family: @fw;list-style: none;font-size: 12px;
-			&.first{width:480px;text-align:left;padding-left:40px;}
+	
+	//点播大纲
+	.table_outline {
+		border:1px solid #eeeeee;
+		th {
+			height: 40px;
+			background: #eeeeee;
+			text-align: center;
+			color: #999;
+			font-size: 12px;
+			&.t-left {
+				text-align: left;
+				padding-left: 40px;
+			}
 		}
-	}
-	.live_panel{
-		width:100%;height:auto;overflow:hidden;outline:none;border:1px solid #eaeaea;border-bottom: 0;
-		.live_course_detail{
-			overflow:hidden;margin:0;padding:0;
-			li{
-				width:100%;height:34px;line-height:34px;color:#333333;border-bottom:1px solid #ededed;font-size: 12px;font-family: @fs;
-				div{float:left;text-align:center;}
-				.live_name{
-					width:484px;border-right:1px solid #ededed;text-align:left;padding-left:10px;
-					.live_teach{
-						color:#a0a0a0;
-					}
-					.course_live{
-						color:#ff6500;
-					}
-				}
-				.date,.time,.study_status{
-					width:148px;border-right:1px solid #ededed;
-				}
-				.study_status{
-					color:#a0a0a0;border-right: 0;
-				}
+		 td {
+		 	border:1px solid #eeeeee;
+		    border-top: 0 none;
+		    height: 38px;
+		    line-height: 20px;
+		    padding: 0;
+		    text-align: center;
+		    vertical-align: middle;
+		    font-size: 12px;
+		    background: #fcfcfc;
+		    color: #666;
+			span.live_teach {
+			     display: inline-block;color:#a0a0a0;
+			}
+			.goline {
+				border-radius: 9px;
+			    color: #fff;
+			    display: inline-block;
+			    height: 18px;
+			    line-height: 18px;
+			    text-align: center;
+			    width: 50px;
+			    background: #ff9900;
+			}
+			.notStart {
+				color: #999;
+			}
+			&.t-left {
+				text-align: left;
+				padding-left: 10px;
+			}
+			a {
+				color: #1e89e0;
 			}
 		}
 	}
@@ -316,40 +329,89 @@
 		    padding-left: 10px;
 		}
 	}
-	//点播大纲
-	.table_outline {
-		border:0;
-		tr:nth-child(2n) {
-   			 background: #f5f5f5;
+	//课程评价（往下写）
+	.comment-detail-wrap {
+		overflow: hidden;
+		.comment-detail-list {
+			overflow: hidden;margin-bottom: 10px;_width:100%;
+			.user-pic {
+				float: left;display: inline;width: 40px;margin:0 10px;text-align: center;
+				.pic {
+					width: 40px;height: 40px;border-radius: 50%;background: #fcfcfc;overflow: hidden;border:1px solid #ededed;margin-bottom: 10px;
+					img {width: 40px;height: 40px;}
+				}
+				
+				p {
+					font-size: 12px;margin:0;height: 20px;line-height: 20px;overflow: hidden;
+					&.name {color: #333;}
+					&.site {color: #999;}
+				}
+				
 			}
-		 td {
-		    border-bottom: 1px solid #fff;
-		    border-top: 0 none;
-		    height: 38px;
-		    line-height: 20px;
-		    padding: 0;
-		    text-align: left;
-		    vertical-align: middle;
-		    font-size: 12px;
-			.text_c {
-			    text-align: left;
-			    width: 200px !important;
-			}
-			span {
-			    border-radius: 9px;
-			    color: #fff;
-			    display: inline-block;
-			    float: left;
-			    height: 18px;
-			    line-height: 18px;
-			    margin: 0 15px;
-			    text-align: center;
-			    width: 50px;
-			}
-			.goline {
-			    background: #ff9900;
+			.user-text-box {
+				float: right;display: inline;width: 840px;border: 1px solid #ededed;background: #fcfcfc;padding:15px;position: relative;
+				p {
+					font-size: 12px;
+				}
+				.text {font-size: 14px;color: #666;padding-bottom: 20px;}
+				.time {color:#999;}
+				&:before {
+				    display: inline-block;
+					width:0; 
+				    height:0; 
+				    content: "";
+				    border-top:10px solid transparent;
+				    border-bottom:10px solid transparent; 
+				    border-right:10px solid #ededed; 
+				    position: absolute;
+				    left: -10px;
+				    top:8px;
+				}
+				&:after {
+				    display: inline-block;
+					width:0; 
+				    height:0; 
+				    content: "";
+				    border-top:10px solid transparent;
+				    border-bottom:10px solid transparent; 
+				    border-right:10px solid #fcfcfc; 
+				    position: absolute;
+				    left: -9px;
+				    top:8px;
+				}
 			}
 		}
 	}
-	
+
 }
+
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *模拟听课页---讲节列表过多时的滚动条
+ * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+ * may not operate correctly without them.
+ */
+.jspContainer{overflow: hidden;position: relative;}
+.jspPane{position: absolute;}
+.jspHorizontalBar{position: absolute;bottom: 0;left: 0;width: 100%;height: 16px;background: red;display: none;}
+.jspCap{display: none;}
+.jspHorizontalBar .jspCap{float: left;}
+.jspHorizontalBar .jspTrack{float: left;height: 100%;display: none;}
+.jspHorizontalBar .jspDrag{float: left;height: 100%;}
+
+.jspArrow{background: #50506d;text-indent: -20000px;display: block;cursor: pointer;padding: 0;margin: 0;}
+.jspArrow.jspDisabled{cursor: default;background: #80808d;}
+.jspCorner{background: #eeeef4;float: left;height: 100%;}
+
+.jspVerticalBar .jspArrow{height: 16px;}
+.jspHorizontalBar .jspArrow{width: 16px;float: left;height: 100%;}
+.jspVerticalBar .jspArrow:focus{outline: none;}
+.jspVerticalBar{position: absolute;top: 0;right: 0;width: 16px;height: 100%;background: none;}
+/*滚动整条背景色*/
+
+.jspTrack{position: relative;background: none;}
+
+/*滚轮条背景色*/
+.jspDrag{width:8px;border-radius:4px;position: relative;top: 0;left: 0;cursor: pointer;background:#cccccc repeat-y;margin:0 auto;}
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner{margin: 0 -3px 0 0;}

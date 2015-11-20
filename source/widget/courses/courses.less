@@ -25,29 +25,8 @@ ul,li{list-style: none;}
 .course-yellow-label{
 	background: #ffbc3c;
 }
-.button.course-gray{
-	background-color: #fcfcfc;
-	border: 1px solid #eaeaea;
-	color: #333333;
-	&:hover{
-		background-color: #e2e2e2;
-		border: 1px solid #d2d2d2;
-	}
-	&:focus{
-		background-color: #e2e2e2;
-		border: 1px solid #d2d2d2;
-	}
-}
-.button.course-btn{
-	.border-radius(2px);
-	margin-bottom: 0;
-	font-family: 'SimSun';
-	width: 98px;
-	height: 32px;
-	text-align: center;
-	font-size: 14px;
-	padding: 0;
-	line-height: 32px;
+.course-green-label{
+	background: #37bc9b;
 }
 .button-icon{
 	display: inline-block;
@@ -63,19 +42,40 @@ ul,li{list-style: none;}
 	height: 10px;
 	background: url("img/bo-box.png") no-repeat left center;
 }
+
+.icon-record{
+	height: 10px;
+	background: url("img/icon-record.png") no-repeat left center;
+}
 .course-list {
 	font-family: "SimSun";
-	border-top: 1px solid @borderColor;
+	border-bottom: 1px solid @borderColor;
 	width: 100%;
-	padding: 13px 10px;
+	padding: 12px 0px 0 0;
 	overflow: hidden;
-	a{
-		color: @dark333;
+	.btn{
+		.border-radius(2px);
+		margin-bottom: 0;
+		font-family: 'SimSun';
+		width: 98px;
+		height: 32px;
+		text-align: center;
+		font-size: 14px;
+		padding: 0;
+		line-height: 30px;
+	}
+	label{
+		margin-bottom: 0;
+		font-weight: normal;
 	}
 	.ui-avatar{
-		width: 80px;
+		width: 60px;
 		text-align: center;
 		float: left;
+		margin-right: 14px;
+		span.ui-user-name{
+			font-size: 14px;
+		}
 		.avatar-photo{
 			margin-bottom: 4px;
 			display: inline-block;
@@ -86,7 +86,8 @@ ul,li{list-style: none;}
 				width: 800px;
 				height: 60px;
 				margin-left: 0;
-				margin-bottom: 10px;
+				margin-bottom: 9px;
+				padding-left: 0;
 				li{
 					overflow: hidden;
 					float: left;
@@ -143,7 +144,10 @@ ul,li{list-style: none;}
 				}
 			}
 		}
-
+		p.tip-video{
+			background: url("img/video-couseicon.png") no-repeat left center;
+			padding-left: 25px;
+		}
 		.avatar-name{
 			.ui-username{
 				color: #666;
@@ -230,7 +234,7 @@ ul,li{list-style: none;}
 			}
 		}
 		.amount-test{
-			.button{
+			.btn{
 				float: left;
 			}
 			strong{
@@ -246,11 +250,29 @@ ul,li{list-style: none;}
 			}
 		}
 	}
+
+	.cancel-courseList{
+		float: right;
+		font-size: 12px;
+		height: 137px;
+		line-height: 220px;
+		a{
+			color: #3bafda;
+		}
+		em{
+			font-style: normal;
+			color: #666666;
+			i{
+				font-style: normal;
+			}
+		}
+	}
 	.course-num{
 		width: 86px;
 		float: right;
 		font-family: 'Microsoft YaHei';
 		text-align: center;
+		padding-left: 0;
 		p{
 			font-size: 14px;
 			margin-bottom: 3px;
@@ -264,6 +286,7 @@ ul,li{list-style: none;}
 	}
 	.course-right-info{
 		margin-top: 24px;
+		padding-left: 0;
 		li{
 			padding-left: 24px;
 			font-size: 12px;
@@ -282,12 +305,27 @@ ul,li{list-style: none;}
 			background: url("img/answer.png") no-repeat 0 center;
 		}
 	}
-}
-.course-test{
-	height: 160px;
+	.course-right-record{
+		margin-top: 40px;
+		li{
+			padding-left: 24px;
+			font-size: 12px;
+			font-family: 'SimSun';
+			color: #333;
+			text-align: left;
+			margin-top: 6px;
+		}
+		li.interact-flash{
+			background: url("img/interact-flash.png") no-repeat 0 center;
+		}
+		li.direct-help{
+			background: url("img/direct-help.png") no-repeat 0 center;
+		}
+	}
 }
 .course-list .fresh-course-attention{
 	font-size: 12px;
+	height: 20px;
 	em,i{
 		font-style: normal;
 	}
@@ -300,10 +338,12 @@ ul,li{list-style: none;}
 	padding: 0 8px;
 	display: inline-block;
 	font-size: 12px;
+	&:hover{
+		color: #fff;
+	}
 }
 .course-list .fresh-add {
 	font-size: 14px;
-	margin-top: 1px;
 	padding-right: 2px;
 }
 .course-list .fresh-course-attention a.fresh-add-cancel-btn {
@@ -311,7 +351,7 @@ ul,li{list-style: none;}
 }
 .hot-course-list{
 	padding: 10px 0;
-	background: #fcfcfc;
+	// background: #fcfcfc;
 	.ui-avatar{
 		margin-right: 10px;
 		width: 40px;
@@ -378,6 +418,242 @@ ul,li{list-style: none;}
 				strong{
 					color: #e74c3c;
 				}
+			}
+		}
+	}
+}
+.hover-feed{
+	background: #fcfcfc;
+}
+.course-small-list{
+	width: 315px;
+	height: 115px;
+	padding: 13px 3px 13px 0px;
+	border: 1px solid #eaeaea;
+	position: relative;
+	overflow: visible;
+	background: #fcfcfc;
+	.label-course{
+		width: 25px;
+		height: 47px;
+		text-align: center;
+		display: inline-block;
+		position: absolute;
+		right: -25px;
+		color: #fff;
+		font-size: 14px;
+		line-height: 24px;
+	}
+	.label-subject{
+		background: #ffbc3c;
+		top: -1px;
+	}
+	.label-direct{
+		background: #3bafda;
+		top: 48px;
+	}
+	.label-record{
+		background: #37bc9b;
+		top: 48px;
+	}
+	.course-detail{
+		width: 230px;
+		p.tip-video{
+			margin: 3px 0;
+			.tip-video-con{
+				width: 126px;
+				overflow: hidden;
+				height: 14px;
+			}
+			.tip-video-time{
+				width: 72px;
+				height: 14px;
+				overflow: hidden;
+			}
+		}
+		p.tip-for{
+			margin: 3px 0;
+			span{
+				margin-right: 10px;
+			}
+			span.course-static{
+				margin-right: 10px;
+			}
+			span.course-people{
+				margin-right: 0
+			}
+		}
+		p.course-title{
+			margin: 3px 0;
+		}
+	}
+}
+// 老师头像页卡
+.teacher-bomb {
+	height: 266px;
+	width: 375px;
+	border-top: none;
+	ul{
+		padding-left: 0;
+	}
+	.dialog-second {
+		height: 155px;
+		background: url("img/teacher-cardbg.jpg") repeat scroll 0 0;
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		dl.dialog-top {
+			margin-top: 10px;
+			margin-bottom: 0;
+		}
+		.dialog-top {
+			height: 90px;
+			width: 100%;
+			dt {
+				text-align: center;
+				img{
+					border-radius: 50%;
+					width: 60px;
+					height: 60px;
+				}
+			}
+			dd {
+				height: 20px;
+				line-height: 20px;
+				margin: 3px 0;
+				text-align: center;
+				a {
+					color: #fff;
+					font-family: "SimSun";
+					font-size: 14px;
+				}
+				em.icon-s-yverify{
+					font-style: normal;
+					background: url('img/icon-s-yverify.png') no-repeat  left center;
+				}
+				em.icon-s-bverify{
+					font-style: normal;
+					background: url('img/icon-s-bverify.png') no-repeat  left center;
+				}
+				em.icon-s-redverify{
+					font-style: normal;
+					background: url('img/icon-s-redverify.png') no-repeat  left center;
+				}
+				.course-icon{
+					height: 20px;
+					line-height: 20px;
+					display: inline-block;
+					margin: 0 3px;
+					width: 21px;
+					text-indent: -99999px;
+					vertical-align: top;
+				}
+				.gender-b{
+					background: url('img/gender-b.png') no-repeat left center;
+				}
+				.gender-g{
+					background: url('img/gender-g.png') no-repeat left center;
+				}
+			}
+		}
+		.dialog-center {
+			height: 55px;
+			line-height: 55px;
+			overflow: hidden;
+			background: #012c49;
+			color: #fff;
+			p{
+				margin-bottom: 0;
+				line-height: 55px;
+				font-size: 14px;
+				text-align: center;
+				padding: 0 5px;
+				span{
+					margin-left: 25px;
+				}
+			}
+			.level {
+				text-align: center;
+				.level-l {
+					float: left;
+					overflow: hidden;
+					text-align: right;
+					width: 160px;
+					margin: 0;
+					li {
+						display: inline-block;
+						img {
+							margin-right: 3px;
+						}
+					}
+				}
+				.level-r {
+					float: left;
+					width: 190px;
+					img {
+						margin-top: 3px;
+					}
+				}
+			}
+		}
+		.dialog-second{
+			line-height: 25px;
+			p{
+				line-height: 25px;
+			}
+		}
+	}
+	.dialog-down-wrap {
+		overflow: hidden;
+		.dialog-down {
+			position: relative;
+			border-bottom: 1px solid #e5e5e5;
+			height: 40px;
+			margin: 0 10px;
+			padding: 10px 0 6px;
+			text-align: center;
+			ul {
+				display: inline-block;
+				overflow: hidden;
+				padding-left: 0;
+				li {
+					color: #666666;
+					display: inline;
+					float: left;
+					font-family: "SimSun";
+					font-size: 12px;
+					span {
+						color: #333333;
+						margin: 0 5px;
+					}
+					i {
+						color: #e6e6e6;
+						padding: 6px 9px 6px 3px;
+						font-style: normal;
+					}
+				}
+			}
+		}
+	}
+	.btns-L {
+		text-align: center;
+		.for-center {
+			display: inline-block;
+			padding-top: 10px;
+			.fresh-course-attention{
+				float: left;
+				line-height: 20px;
+			}
+			.look-btn {
+				background: #3399cc none repeat scroll 0 0;
+				border-radius: 2px;
+				color: #fff;
+				display: inline-block;
+				font-size: 12px;
+				line-height: 20px;
+				padding: 0 8px;
+				float: left;
+				margin-left: 55px;
 			}
 		}
 	}

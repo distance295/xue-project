@@ -1,0 +1,173 @@
+/**
+ *Table 公用样式
+ *table元素已经设定了BG和border-collapse属性
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.table {
+  width: 100%;
+  border: 1px solid #eaeaea;
+}
+.table thead tr {
+  height: 50px;
+  background-color: #fcfcfc;
+}
+.table thead tr th {
+  text-align: center;
+  vertical-align: middle;
+  font-weight: normal;
+  font-family: "SimSun";
+  font-size: 12px;
+  color: #666;
+  border-bottom: 1px solid #eaeaea;
+}
+.table tbody tr {
+  height: 50px;
+  background-color: #fff;
+}
+.table tbody tr td {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 16px;
+  font-family: "Microsoft YaHei";
+  color: #333;
+  border-bottom: 1px solid #eaeaea;
+}
+/**
+ * table with the solid border
+ *具体在学习中心-个人设置-我的订单使用
+ *------------------------------------
+ */
+.table-solid th,
+.table-solid td {
+  border: 1px solid #eaeaea;
+}
+.order-content {
+  padding: 0 15px;
+}
+.order-content .information h4 {
+  clear: both;
+  line-height: 24px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #666;
+}
+.order-content .information ul {
+  list-style: none;
+  margin: 0;
+}
+.order-content .information ul li {
+  float: left;
+}
+.order-content .information ul .gt-second,
+.order-content .information ul .gt-third,
+.order-content .information ul .gt-fourth {
+  font-family: "Microsoft YaHei";
+  font-size: 16px;
+}
+.order-content .information ul .gt-first {
+  width: 60%;
+  text-align: center;
+}
+.order-content .information ul .gt-second {
+  width: 14%;
+}
+.order-content .information ul .gt-third {
+  width: 13%;
+}
+.order-content .information .order-table tbody tr td {
+  text-align: left;
+  line-height: 20px;
+  padding-left: 30px;
+  border: 1px solid #eaeaea;
+  font-size: 12px;
+}
+.order-content .information .order-table tbody tr td em {
+  color: #e74c3c;
+  font-style: normal;
+  font-weight: bold;
+}
+.order-content .information .order-table tbody tr td:nth-child(1) {
+  width: 120px;
+  padding: 0 35px 0 0;
+  color: #666;
+  text-align: right;
+}
+.order-content .information .order-table tbody tr #order-pay {
+  color: #e74c3c;
+}
+.order-content .information .order-table tbody tr #ot-bold {
+  font-family: "Microsoft YaHei";
+  font-size: 14px;
+}
+.order-content .information .order-table tbody tr #ot-bold em {
+  color: #e74c3c;
+  font-style: normal;
+  font-size: 16px;
+}
+.order-content .goods #goods-ul {
+  display: inline-block;
+  width: 100%;
+  min-width: 800px;
+  height: 145px;
+  border: 1px solid #eaeaea;
+}
+.order-content .goods #goods-ul .goods-title {
+  padding: 15px 0 32px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+.order-content .goods #goods-ul .goods-title li {
+  font-size: 12px;
+  color: #333;
+}
+.order-content .goods #goods-ul .goods-content {
+  height: 95px;
+  padding: 23px 0 0 0;
+  background-color: #fcfcfc;
+}
+.order-content .goods #goods-ul .goods-content li .order-teacher {
+  float: left;
+  width: 465px;
+  height: 80px;
+  margin: -25px 0 0 5px;
+}
+.order-content .goods #goods-ul .goods-content li .order-teacher img {
+  float: left;
+  width: 60px;
+  height: 60px;
+  margin: 20px 15px 0 12px;
+  _margin: 25px 15px 0 12px;
+  border-radius: 50%;
+}
+.order-content .goods #goods-ul .goods-content li .order-teacher em {
+  float: left;
+  margin: 25px 5px 0 0;
+  padding: 1px 8px;
+  border-radius: 3px;
+  font-style: normal;
+  font-size: 12px;
+  color: #fff;
+  background-color: #ffbc3c;
+}
+.order-content .goods #goods-ul .goods-content li .order-teacher span {
+  float: left;
+  width: 330px;
+  height: 18px;
+  margin-top: 24px;
+  font-size: 14px;
+  overflow: hidden;
+}
+.order-content .goods #goods-ul .goods-content li .order-teacher p {
+  float: left;
+  width: 80px;
+  height: 18px;
+  font-size: 12px;
+  margin: 10px 0 0 -60px;
+}
+.order-content .settle .btn-danger {
+  float: right;
+  width: 100px;
+  font-size: 14px;
+}

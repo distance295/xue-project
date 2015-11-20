@@ -12,7 +12,7 @@
 var homeWork = homeWork || {};
 
 //分数图片路径
-homeWork.path = 'img/shuzi';
+homeWork.path = '/static/img/Homework/shuzi';
 
 (function(hm){
   
@@ -33,7 +33,9 @@ homeWork.path = 'img/shuzi';
        	    home_Feedback:$(dom).find('.homework-Feedback'),//作业反馈总框架
        	    home_Feedback_header:$(dom).find('.homework-Feedback-header'),//作业反馈头部框架
        	    home_Feedback_video:$(dom).find('.homework-Feedback-video'),//作业反馈中的推荐视频框架
-       	    home_Feedback_describe:$(dom).find('.homework-Feedback-describe')//作业反馈中文字描述的框架
+       	    home_Feedback_describe:$(dom).find('.homework-Feedback-describe'),//作业反馈中文字描述的框架
+       	    header_topbar:$('#module-topbar'),//头部工具条的框架
+       	    header_myheader:$('#module-myheader'),//我的头部框架
         }
         
         //浏览器可视区域的宽和高
@@ -47,14 +49,15 @@ homeWork.path = 'img/shuzi';
 		}
 		if( _bodyW < 1190){
 	      // _bodyH = (1024*10)/16;
-	        _bodyH = (1190*10)/16;
+	        _bodyH = (1440*10)/16;
 		}else{
-			_bodyH = (1190*10)/16;
+			_bodyH = (1440*10)/16;
 		}
+		console.log(_bodyH)
         
         //具体交作业图片区域的跨度和高度的控制
-		var _home_Thumbnails_H = parseInt(_bodyH - this.box.home_header.height() - 30*2 - 20*2 -20) -20;
-		var _home_bigImg_H = parseInt(_bodyH - this.box.home_header.height() - 30*2 - 20*2 -20);
+		var _home_Thumbnails_H = parseInt(_bodyH - this.box.home_header.height() - this.box.header_topbar.height() - this.box.header_myheader.height() - 30*2 - 20*2 -10*2);
+		var _home_bigImg_H = parseInt(_bodyH - this.box.home_header.height() - this.box.header_topbar.height() - this.box.header_myheader.height() - 30*2 - 20*2);
 
 		this.box.home_samllBox.height(_home_Thumbnails_H);
 		this.box.home_bigBox.height(_home_bigImg_H);
@@ -128,6 +131,8 @@ $.fn.imagePage = function(params){
 	var picsmall_w = $(this).find(params.smallPic).find('ul li').outerWidth(true);
 	var picsmall_h = $(this).find(params.smallPic).find('ul li').outerHeight(true);
 	$(this).find(params.smallPic).find('ul').height(picsmall_num*picsmall_h);
+	//判断作业反馈是否存在
+	var Feedback_flag = $(this).find(params.smallPic).find('li').eq(picsmall_num-1).find('.homework-MaskLayer').length;
 	var pictime;
 	var tpqhnum=0;//当前选中图片的个数
 	var xtqhnum=0;
@@ -153,7 +158,7 @@ $.fn.imagePage = function(params){
 
     //大图切换过程
 	function show(tpqhnum){
-		if( tpqhnum == picsmall_num -1 ){
+		if( tpqhnum == picsmall_num -1 && Feedback_flag == 0 ){
 		  $(_this).find('.homework-Feedback').show();
 		  $(_this).find('.ImageTransformJs').hide();
 		}else{

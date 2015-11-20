@@ -40,8 +40,8 @@ fresh.media = fresh.media || {};
                     _img.siblings('.fresh-type-img').html(_tpl);   
             	}
 	        }
-	        _img.hide();
-	        _img.siblings('.fresh-type-img').show();    
+	        _img.addClass('hide');
+	        _img.siblings('.fresh-type-img').removeClass('hide');    
         }
     }
 
@@ -55,9 +55,14 @@ fresh.media = fresh.media || {};
         var that = $(dom), 
             _wrap = that.closest('.fresh-detail'), 
             _item = _wrap.find('.fresh-type-answer');
-        _item.toggle();
-        if(_item.hasClass('fresh-big-img-answer')){
+
+        if(_item.eq(0).hasClass('hide')){
             _item.find('.fresh-sign-remove').remove();
+            _item.eq(0).removeClass('hide');
+            _item.eq(1).addClass('hide');
+        }else{
+            _item.eq(1).removeClass('hide');
+            _item.eq(0).addClass('hide');
         }
     }
 
@@ -71,7 +76,7 @@ fresh.media = fresh.media || {};
         if($(e.target).data('type') == 'radio'){
             return false;
         }else{
-            that.hide().siblings('.fresh-type-answer').show();
+            that.addClass('hide').siblings('.fresh-type-answer').removeClass('hide');
             if(that.hasClass('fresh-big-img-answer')){
                 that.find('.fresh-sign-remove').remove();
             }
@@ -168,9 +173,9 @@ fresh.media = fresh.media || {};
     fm.video.videoPlay = function(dom){
         var videoBox = $(dom).closest('.fresh-type-video');
         //视频div层显示
-        videoBox.next().show();
+        videoBox.next().removeClass('hide');
         //视频缩略图隐藏
-        videoBox.hide();//图隐藏
+        videoBox.addClass('hide');//图隐藏
         var url = videoBox.next().data('url');
         var video_html ='<div class="fresh-media-big-video">'
                             + '<p class="fresh-media-packUp"><a href="javascript:void(0);" class="fresh-packUp-video">收起</a></p>'
@@ -216,8 +221,8 @@ fresh.media = fresh.media || {};
      */
     fm.video.videoHide = function(dom){
         var videoBox = $(dom).closest(".fresh-media-expand-video");
-        videoBox.hide();
-        videoBox.prev().show();
+        videoBox.addClass('hide');
+        videoBox.prev().removeClass('hide');
         videoBox.find(".fresh-media-big-video").remove();
   } 
 
@@ -246,14 +251,17 @@ fresh.comment = fresh.comment || {};
                         <textarea></textarea>\
                       </div>\
                       <div class="fresh-comment-func">\
-                          <i class="fresh-comment-emote-btn"></i>\
-                          <a href="javascript:void(0);" class="fresh-comment-emotetext">表情</a>\
+                          <div class="fresh-comment-emote-smiles-btn fresh-emote-current" flag="0">\
+                              <i class="fresh-comment-emote-btn"></i>\
+                              <a href="javascript:void(0);" class="fresh-comment-emotetext">表情</a>\
+                          </div>\
                           <div class="fresh-comment-btn">\
                              <span class="fresh-comment-size">您还可以输入<em class="fresh-comment-text-num"> 140 </em>字</span>\
                              <div class="fresh-comment-submit-btn">\
-                                <a href="javascript:void(0);" class="small radius button">评论</a>\
+                                <a href="javascript:void(0);" class="blue-radius-btn">评论</a>\
                              </div>\
                           </div>\
+                          <span class="fresh-comment-tips hide"></span>\
                       </div>\
                   </form>',
       replyForm: '<form class="fresh-comment-form fresh-comment-repley" action="javascript:void(0);">\
@@ -261,13 +269,16 @@ fresh.comment = fresh.comment || {};
                         <textarea>$textarea$</textarea>\
                       </div>\
                       <div class="fresh-comment-func">\
-                          <i class="fresh-comment-emote-btn"></i>\
-                          <a href="javascript:void(0);" class="fresh-comment-emotetext">表情</a>\
+                          <div class="fresh-comment-emote-smiles-btn fresh-emote-current" flag="0">\
+                              <i class="fresh-comment-emote-btn"></i>\
+                              <a href="javascript:void(0);" class="fresh-comment-emotetext">表情</a>\
+                          </div>\
                           <div class="fresh-comment-btn">\
                              <div class="fresh-comment-submit-btn">\
-                                <a href="javascript:void(0);" class="small radius button">评论</a>\
+                                <a href="javascript:void(0);" class="blue-radius-btn">评论</a>\
                              </div>\
                           </div>\
+                          <span class="fresh-comment-tips hide"></span>\
                       </div>\
                   </form>'            
     };
@@ -301,6 +312,7 @@ fresh.comment = fresh.comment || {};
         //获取信息id
         this.id = wraper.data('id');
         var _infoBox = null;
+
         if( wraper.find('.fresh-comment-detail-info').length == 0 ){
             _infoBox = wraper.closest('.fresh-comment-detail-info');
         } else {
@@ -321,7 +333,8 @@ fresh.comment = fresh.comment || {};
             form: wraper.find('.fresh-comment-textarea:eq(0) textarea'),
             submit: wraper.find('.fresh-comment-submit-btn:eq(0) a'),
             textSzie: wraper.find('.fresh-comment-form:eq(0)').find('.fresh-comment-text-num'),
-            status: wraper.find('.fresh-comment-form:eq(0)').find('.fresh-comment-status')
+            status: wraper.find('.fresh-comment-form:eq(0)').find('.fresh-comment-status'),
+            tips: wraper.find('.fresh-comment-tips:eq(0)')
         };
     }
 
@@ -348,14 +361,13 @@ fresh.comment = fresh.comment || {};
      * @param  {Object} dom 任意子节点
      */
     fc.show = function(dom){
-        this.param.bar.addClass('fresh-comment-show');
-        var _formBox = this.tpl.formBox;
-        this.param.commentBox.removeClass('hide')
-        if( this.param.commentBox.find('.fresh-parentComment-formBox').length == 0 ){
-            this.param.commentBox.prepend(_formBox);
+        if(dom){
+           this.setParam(dom);
+        }else{
+           return false;
         }
+        this.param.bar.addClass('fresh-comment-show');
         this.getList(dom);
-
     }
 
     /**
@@ -381,7 +393,7 @@ fresh.comment = fresh.comment || {};
         }else{
            return false;
         }
-        //判断评论类型
+        //判断评论类型，默认评论框是否显示data-type=2显示默认
         if (this.param.bar.data('type') && this.param.bar.data('type') == 2) {
             return false;
         }
@@ -396,8 +408,9 @@ fresh.comment = fresh.comment || {};
 
         if(dom){
           this.setParam(dom);
+        }else{
+           return false;
         }
-
         //ajax获取评论信息
         $.ajax({
             url: 'coment.html',
@@ -424,19 +437,31 @@ fresh.comment = fresh.comment || {};
     /**
      * 设置评论内容信息方法
      * @param  {string} msg 评论信息html内容
+     * @param  {Object} dom 任意子节点
      */
     fc.setMsg = function(msg) {
         if (!msg) {
             return false;
         }
+
         //如果没有评论消息返回的是暂无评论的html
+        this.param.commentBox.removeClass('hide');
         this.param.infoBox.html(msg);
+        
+        //评论发布框
+        var _formBox = this.tpl.formBox;
+        if( this.param.commentBox.find('.fresh-parentComment-formBox').length == 0 ){
+            this.param.commentBox.prepend(_formBox);
+        }
+
+        var _closeBtn = this.param.commentBox.find('.fresh-comment-close-btn');
         this.param.commentBox.find('.fresh-comment-form:eq(0) textarea').focus();
+
         //判断关闭按钮显示与否
-        if ( this.param.bar.data('codetype') && this.param.bar.data('codetype') == 1) {
-            this.param.close.hide();
+        if ( this.param.bar.data('type') && this.param.bar.data('type') == 2) {
+            _closeBtn.hide();
         } else {
-            this.param.close.show();
+            _closeBtn.show();
         }
     }
 
@@ -585,9 +610,10 @@ fresh.comment = fresh.comment || {};
         var val = $.trim(this.param.form.val());
         var len = val.length;
         if( len == 0 ){
-           alert('请您填写内容');
+           this.param.tips.removeClass('hide').html('请您填写内容');
            return false; 
         }
+        this.param.tips.addClass('hide').html('');
         var _dataInfo = $(dom).closest('.fresh-comment-box').prev('.fresh-barinfo').find('.fresh-comment-expand-btn');
         var _par = _dataInfo.data('params');
         var _ty = _dataInfo.data('codetype');
@@ -724,10 +750,18 @@ fresh.comment = fresh.comment || {};
             e.stopPropagation();
         }else{
             e.cancelBubble = true;
-        } 
-        
-        //显示表情弹出层
+        }
+        //显示弹出层
         $('.fresh-dialog-emote').removeClass('hide');
+        //点击表情按钮切换表情弹出层（问题在另一个表情框出来之前前面一个是否消失）
+       /* var _flag = $(dom).attr('flag');
+        if( _flag == 0 ){
+           $('.fresh-dialog-emote').removeClass('hide');
+           $(dom).attr('flag','1');
+        }else if( _flag == 1 ){
+           $('.fresh-dialog-emote').addClass('hide');
+           $(dom).attr('flag','0');
+        }*/
         
         //点击表情插入文本框
         $('.fresh-dialog-emote').off('click', '.fresh-jsSmilies li').on('click', '.fresh-jsSmilies li', function(){
@@ -735,6 +769,7 @@ fresh.comment = fresh.comment || {};
               _currentTextarea.focus();
               _currentTextarea.insertContent(_val);
               $('.fresh-dialog-emote').addClass('hide');
+              //$(dom).attr('flag','0');
         })
 
         //关闭表情层(关闭表情弹出层)
@@ -1051,9 +1086,10 @@ fresh.send = fresh.send || {};
             len = content.length;
 
         if(len < 10 || len > 140 || len == 0){
-            alert('请填写内容，长度在10~140之间');
+            _form.find('.fresh-comment-tips').removeClass('hide').html('请填写内容，长度在10~140之间');
             return false;
         }else{
+            _form.find('.fresh-comment-tips').addClass('hide').html('');
             _form.submit();
         }
     };

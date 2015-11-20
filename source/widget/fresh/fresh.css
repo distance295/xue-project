@@ -3,6 +3,20 @@
  * @author duxinli
  * @version 4.0
  */
+.blue-radius-btn {
+  background: #3bafda;
+  color: #fff;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+}
+.blue-radius-btn:hover,
+.blue-radius-btn:focus {
+  background: #359dc4;
+  color: #fff;
+}
 .fresh-notCourse {
   background: #fcfcfc;
   border: 1px solid #ececec;
@@ -11,6 +25,14 @@
   line-height: 125px;
   text-align: center;
   overflow: hidden;
+}
+.fresh-comment-tips {
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  color: #cc0000;
+  line-height: 30px;
+  font-size: 12px;
 }
 .fresh-commentInfo-loading {
   background: url("img/fresh-load.gif") no-repeat center center;
@@ -25,6 +47,9 @@
   border-bottom: 1px solid #eaeaea;
   padding: 12px;
   overflow: hidden;
+  /** 
+   * 推荐新鲜事鼠标滑过整条信息的背景色改变
+   */
   /** 
    * 热门新鲜事Style
    */
@@ -46,12 +71,19 @@
   display: inline;
   overflow: hidden;
 }
+.fresh-list .fresh-avatar a {
+  float: left;
+  width: 60px;
+  height: 60px;
+}
 .fresh-list .fresh-avatar img {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
+  width: 100%;
+  height: 100%;
 }
 .fresh-list .fresh-detail {
   display: block;
@@ -155,7 +187,6 @@
   display: inline-block;
   float: left;
   margin-right: 10px;
-  min-width: 36px;
   text-align: center;
   position: relative;
   cursor: url("img/big.cur"), auto !important;
@@ -177,13 +208,14 @@
   background: url("img/fresh-exam-right.gif") no-repeat;
 }
 .fresh-list .fresh-detail .fresh-media .fresh-media-small-img img {
-  max-width: 200px;
+  max-width: 120px;
+  min-width: 60px;
   vertical-align: top;
 }
 .fresh-list .fresh-detail .fresh-media .fresh-media-small-img.fresh-media-small-video img {
   cursor: pointer;
-  height: 150px;
-  width: 200px;
+  width: 210px;
+  max-width: 210px;
 }
 .fresh-list .fresh-detail .fresh-media .fresh-media-small-img.fresh-media-small-video .fresh-video-play {
   background: url("img/fresh_videoplay.png") no-repeat;
@@ -205,7 +237,9 @@
   position: relative;
   text-align: center;
   padding: 10px;
-  cursor: url("img/small.cur"), auto !important;
+}
+.fresh-list .fresh-detail .fresh-media-expand.fresh-big-img-answer {
+  cursor: url("img/big.cur"), auto !important;
 }
 .fresh-list .fresh-detail .fresh-media-expand .fresh-big-sign-exam {
   overflow: hidden;
@@ -278,6 +312,7 @@
 }
 .fresh-list .fresh-detail .fresh-media-expand .fresh-media-big-img {
   overflow: hidden;
+  cursor: url("img/small.cur"), auto !important;
 }
 .fresh-list .fresh-detail .fresh-media-expand .fresh-media-big-img img {
   max-width: 100%;
@@ -396,6 +431,7 @@
   box-shadow: none;
   font-size: 12px;
   margin: 0;
+  width: 100%;
 }
 .fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-textarea .fresh-comment-status {
   background: #fcfcfc;
@@ -405,7 +441,7 @@
   left: 1px;
   right: 1px;
   top: 11px;
-  bottom: 11px;
+  bottom: 19px;
   text-align: center;
   z-index: 10;
 }
@@ -441,12 +477,19 @@
   line-height: 45px;
   height: 45px;
 }
+.fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-func .fresh-comment-emote-smiles-btn {
+  float: left;
+  cursor: pointer;
+  height: 21px;
+  line-height: 21px;
+  margin-top: 12px;
+}
 .fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-func .fresh-comment-emote-btn {
   float: left;
   cursor: pointer;
   width: 21px;
   height: 21px;
-  margin: 12px 5px 0 0;
+  margin: 0 5px 0 0;
   background: url('img/fresh-emote.png') no-repeat;
 }
 .fresh-list .fresh-detail .fresh-comment-box .fresh-comment-form .fresh-comment-func .fresh-comment-emotetext {
@@ -505,6 +548,11 @@
   width: 40px;
   height: 40px;
   margin: 0 14px 0 0;
+}
+.fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-list .fresh-avatar-mini a {
+  float: left;
+  width: 40px;
+  height: 40px;
 }
 .fresh-list .fresh-detail .fresh-comment-detail-info .fresh-comment-list .fresh-uesr {
   display: inline;
@@ -610,11 +658,20 @@
   margin: 0 auto;
   width: auto;
 }
+.fresh-list.fresh-hover-style {
+  background: #f1f2f6;
+  cursor: pointer;
+}
 .fresh-list.fresh-popular-list {
   border: none;
 }
 .fresh-list.fresh-popular-list .fresh-avatar {
   margin: 2px 10px 0 0;
+  width: 40px;
+  height: 40px;
+}
+.fresh-list.fresh-popular-list .fresh-avatar a {
+  float: left;
   width: 40px;
   height: 40px;
 }
@@ -678,6 +735,7 @@
   height: 136px;
   resize: none;
   overflow-y: auto;
+  width: 100%;
 }
 .fresh-send-box .fresh-send-preview {
   overflow: hidden;
@@ -689,6 +747,7 @@
   float: left;
   position: relative;
   max-width: 120px;
+  min-width: 36px;
 }
 .fresh-send-box .fresh-send-preview .fresh-send-preview-imgvideo .fresh-preview-close {
   background: url('img/comment-close.png') no-repeat;
@@ -700,6 +759,9 @@
   top: 0;
   cursor: pointer;
 }
+.fresh-send-box .fresh-send-preview .fresh-send-preview-imgvideo img {
+  width: 100%;
+}
 .fresh-send-box .fresh-send-form {
   overflow: hidden;
   margin-top: 10px;
@@ -709,13 +771,19 @@
   color: #999999;
   font-size: 12px;
 }
+.fresh-send-box .fresh-send-emote-click-btn {
+  float: left;
+  height: 22px;
+  line-height: 22px;
+  margin-top: 6px;
+  cursor: pointer;
+}
 .fresh-send-box .fresh-send-emote {
   float: left;
   background: url('img/fresh-smile.png') no-repeat;
   display: inline-block;
   width: 22px;
   height: 22px;
-  margin-top: 6px;
   cursor: pointer;
 }
 .fresh-send-box a {
@@ -740,7 +808,7 @@
   position: absolute;
   z-index: 100;
   bottom: 0;
-  width: 22px;
+  width: 51px;
   height: 19px;
   left: 0;
   top: 0;
@@ -766,6 +834,8 @@
   font-family: "SimSun";
   color: #fff;
   margin: 0;
+  border: none;
+  line-height: normal;
 }
 .fresh-send-box .fresh-send-submit-box .fresh-send-submit-btn:hover {
   text-decoration: none;
@@ -842,6 +912,7 @@
   padding: 8px 26px;
   font-size: 14px;
   font-family: "SimSun";
+  display: inline-block;
   margin: 0;
 }
 .fresh-dialog-verificationCode .fresh-dialog-content .fresh-dialog-medal .fresh-dialog-sure-btn a.fresh-dialog-btn-disabled {
@@ -905,6 +976,7 @@
 .fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-dialog-smilies-box .fresh-dialog-smilies-con ul.fresh-dialog-smilies-list {
   width: 450px;
   margin: 10px 0;
+  padding: 0;
   overflow: hidden;
 }
 .fresh-dialog-emote .fresh-dialog-smilies-medal .fresh-dialog-smilies-box .fresh-dialog-smilies-con ul li {

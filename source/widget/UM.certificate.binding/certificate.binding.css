@@ -1,0 +1,78 @@
+span.error {
+  display: block;
+  width: 288px;
+  height: 30px;
+  margin: 1px 0 0 30px;
+  padding-top: 5px;
+  line-height: 19px;
+  color: #e74c3c;
+}
+.cb-content {
+  width: 625px;
+  height: 290px;
+  margin: 0 auto;
+}
+.cb-content .binding-left {
+  width: 310px;
+  height: 200px;
+  margin: 30px auto;
+}
+.cb-content .binding-left p {
+  margin-bottom: 8px;
+  font-family: "Microsoft YaHei";
+  font-size: 14px;
+  color: #e74c3c;
+}
+.cb-content .binding-left div label {
+  float: left;
+  width: 40px;
+  margin-top: 8px;
+  color: #666;
+  font-weight: normal;
+}
+.cb-content .binding-left div input {
+  width: 250px;
+  margin: 0;
+  padding: 8px 5px;
+  border: 1px solid #d2d2d2;
+}
+.cb-content .binding-left div input:focus {
+  border: 1px solid #3bafda;
+}
+.cb-content .binding-left .btn-bindcard {
+  margin: 0px 30px 0 40px;
+  width: 100px;
+  font-size: 14px;
+}
+.prompt-box {
+  margin: 0 auto;
+  clear: both;
+}
+.prompt-box img.prompt {
+  position: relative;
+  width: 75px;
+  height: 55px;
+  top: 6px;
+  left: 7px;
+}
+.prompt-box .cb-prompt-box {
+  height: 80px;
+  background: #fff8eb;
+  border-radius: 5px;
+  padding: 10px 0 0 20px;
+}
+.prompt-box .cb-prompt-box h3 {
+  font-size: 14px;
+  font-family: "Microsoft YaHei";
+  color: #666;
+  margin: 6px 0 6px 5px;
+}
+.prompt-box .cb-prompt-box p {
+  margin: 0 0 0 5px;
+}
+.prompt-box .cb-prompt-box p strong {
+  font-family: "Microsoft YaHei";
+  font-size: 16px;
+  font-weight: normal;
+  color: #e74c3c;
+}

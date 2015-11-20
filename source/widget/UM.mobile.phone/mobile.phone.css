@@ -1,0 +1,125 @@
+.form-check {
+  width: 420px;
+  margin: 60px auto 0;
+}
+.form-check p {
+  float: left;
+  width: 75px;
+  font-size: 12px;
+  margin: 8px 0 0 0;
+  color: #666;
+  text-align: right;
+}
+.form-check a {
+  color: #1e89e0;
+}
+.form-check label {
+  cursor: text;
+}
+.form-check input {
+  float: left;
+  display: inline-block;
+  width: 280px;
+  padding: 8px 8px 8px 10px;
+  vertical-align: middle;
+  border: 1px solid #d2d2d2;
+}
+.form-check input:focus {
+  border: 1px solid #3bafda;
+}
+.form-check span {
+  display: block;
+  color: #e74c3c;
+  width: 288px;
+  height: 30px;
+  margin: 1px 0 0 65px;
+  padding-top: 5px;
+  line-height: 19px;
+}
+.form-check .phone-user {
+  height: 50px;
+}
+.form-check .phone-user strong {
+  height: 35px;
+  line-height: 35px;
+  font-size: 16px;
+}
+.form-check .phone-k {
+  position: relative;
+  width: 380px;
+}
+.form-check .phone-k .phone-tip {
+  position: absolute;
+  font-weight: normal;
+  color: #a0a0a0;
+  top: 9px;
+  left: 87px;
+}
+.form-check .phone-k .phone-warning {
+  clear: both;
+}
+.form-check .pass-eye {
+  position: relative;
+  width: 380px;
+}
+.form-check .pass-eye .pass-tip {
+  position: absolute;
+  font-weight: normal;
+  color: #a0a0a0;
+  top: 9px;
+  left: 87px;
+}
+.form-check .pass-strength {
+  width: 115px;
+}
+.form-check .pass-warning {
+  float: left;
+  display: inline-block;
+}
+.form-check .verification-k {
+  display: inline-block;
+  position: relative;
+  width: 380px;
+}
+.form-check .verification-k .verification-tip {
+  position: absolute;
+  font-weight: normal;
+  color: #a0a0a0;
+  top: 9px;
+  left: 87px;
+}
+.form-check .verification-k #verificationCode {
+  width: 150px;
+}
+.form-check .verification-k img {
+  width: 120px;
+  height: 35px;
+  margin-left: 12px;
+  cursor: pointer;
+}
+.form-check .phonecode-k {
+  display: inline-block;
+  position: relative;
+}
+.form-check .phonecode-k .phonecode-tip {
+  position: absolute;
+  top: 9px;
+  left: 87px;
+  font-weight: normal;
+  color: #a0a0a0;
+}
+.form-check .phonecode-k #phonecode {
+  width: 150px;
+}
+.form-check .phonecode-k .vcode {
+  width: 120px;
+  height: 35px;
+  margin-left: 12px;
+  font-size: 14px;
+}
+.form-check #form_submit {
+  width: 100px;
+  height: 35px;
+  margin: 0px 30px 0 75px;
+  font-size: 14px;
+}

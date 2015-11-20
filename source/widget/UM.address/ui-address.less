@@ -1,0 +1,117 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-10-21 14:22:33
+ * @version $Id$
+ */
+@fa:					"Arial";
+@fg:					"Georgia";
+@ft:					"Tahoma";
+@fl:					"Lucida Console";
+@fs:					"宋体";
+@fw:					"Microsoft YaHei";
+@fd:					"verdana";
+@fs:					"SimSun";
+
+/*================/ 选择地址 /========================*/
+.ui-setAddress {
+	overflow: hidden;
+}
+.setAddress-title {
+	line-height: 30px; overflow: hidden;margin:20px 0;
+	span {
+		float: right;margin-right: 10px;
+		strong {
+			color: #cc0000;font-size: 12px;
+		}
+	}
+}
+.ui_ship_addr {
+	overflow: hidden;
+	ul.shipadd_list {
+		overflow: hidden;
+		li {
+			display: block;overflow: hidden;padding:10px 20px;
+			.consignee_item {
+				float: left;display: inline;width: 162px;height: 40px;line-height: 30px;border:1px solid #eaeaea;text-align: center;padding: 5px 25px;background: #fff;cursor: pointer;
+				&.current {
+					background:url("http://img04.xesimg.com/payment/icon_right.png")right bottom no-repeat #fff;border: 2px solid #3bafda;color: #3bafda;padding:4px 24px;
+				}
+			}
+			.addr_detail {
+				float: left;display: inline;line-height: 40px;
+				span {
+					display: inline-block;padding-left: 20px;
+				}
+				.default_addr {
+					display: inline-block;
+					width: 70px;
+					height: 24px;
+					line-height: 24px;
+					background: #ffbc3a;
+					color: #fff;
+					padding: 0;
+					text-align: center;
+					margin-left: 20px;
+				}
+			}
+			.ship_btns {
+				float: right;display: inline;line-height: 40px;visibility: hidden;
+				a {
+					margin-left: 10px;
+				}
+			}
+			&.current {
+				background: #fcfcfc;
+				.ship_btns {visibility: visible;}
+			}
+			&.f_detailAddress {display: none;}
+		}
+	}
+}
+
+.addr_switch {
+    width:100px;height: 18px; line-height: 18px; cursor: pointer; padding: 5px 20px;
+    em {
+   		display: inline-block;width: 9px;height: 10px;line-height: 10px;margin-left: 5px;vertical-align: middle; background:url("http://img04.xesimg.com/payment/addr-i.png") no-repeat;
+    }
+    &.switch_off {
+    	em {
+    		background:url("http://img04.xesimg.com/payment/addr-i.png") 0 -10px no-repeat;
+    	}
+    }
+} 
+.user_detail_addr_items {
+	display: none;
+}
+.new_consignee_items {
+	overflow: hidden;border-bottom: 1px solid #eaeaea;margin-top: 10px;
+	.info_from {
+				overflow: hidden;background: #fcfcfc;padding:20px 20px 0;display: none;
+				p {
+					overflow: hidden;height:50px;
+					label {float:left;display: inline;width: 70px;line-height:30px;margin-bottom: 10px;}
+					input {float:left;display: inline;width: 250px;height: 26px;border:1px solid #d2d2d2;padding:5px;}
+					.input_360 {width: 360px;}
+					span {
+						float: left;display: inline; color:#999;margin-right: 5px;
+						&.text {line-height: 35px;}
+					}
+					.select {
+						display: inline;margin-right: 10px;height: 36px;border:1px solid #d2d2d2;
+					}
+					.btn {width:172px;color:#FFF;line-height:35px;text-decoration: none;font-family: @fw;font-size: 16px;background: #3bafda;}
+					.error_tips_address {
+						float:none; padding-left:10px; color:#cc0000;
+						display:inline-block;
+					}
+					.error {
+						border:1px solid #c00;
+					}
+					&.error_tips_address {
+						color: #cc0000;
+					}
+				}
+			}
+}

@@ -8,16 +8,18 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <!-- 这是CSS库文件 -->
-    <link rel="stylesheet" type="text/css" href="../../lib/foundation/css/foundation.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../lib/foundation/css/foundation.css"> -->
+    <!-- 这是CSS库文件 -->
+    <link href="../../lib/bootstrap/3.3.5-custom/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- 这是当前模块样式文件 -->
     <link href="fresh.css" rel="stylesheet">
   </head>
 <body>
-<button id="freshPost">发布新鲜事</button>
-<div class="row">
-        <!--新鲜事单条列表信息开始————图片-->
-        <div class="fresh-list small-12" >
-            <div class="fresh-avatar left">
+
+       <!--新鲜事默认展开评论开始-->
+        <div class="fresh-list">
+            <div class="fresh-avatar pull-left">
                 <a href ="###">
                     <img src="img/fresh_avatar.png" />
                 </a>
@@ -26,8 +28,8 @@
                <!--新鲜事右侧头部文本消息显示开始-->
                <div class="fresh-text">
                   <div class="fresh-myname">
-                     <a href="###"  target="_blank" class="left">顾斐</a>
-                     <i class="fresh-v fresh-v-yellow" class="left"></i>
+                     <a href="###"  target="_blank" class="pull-left">顾斐</a>
+                     <i class="fresh-v fresh-v-yellow" class="pull-left"></i>
                   </div>
                   <div class="fresh-info">
                     亲爱的孩子们，昨天的小新电台——《五月的草场》有没有收听呢？那么今天出一个小题目——草原上的人用什么办法消灭蝗虫呢？随机奖励正确的<img title="挤眼" src="http://img04.xesimg.com/icon/emoji/em_4.png" alt="">五个答案~~加油哦！<img title="出拳" src="http://img04.xesimg.com/icon/emoji/em_46.png" alt="">收听地址： <a href="http://t.xueersi.com/7boW01nx" target="_blank">http://t.xueersi.com/7boW01nx</a>
@@ -46,8 +48,62 @@
                <!--大图结束-->
                <!--评论区域开始-->
                <div class="fresh-barinfo">
-                  <span class="fresh-time left">11小时前</span> 
-                  <div class="fresh-right right">
+                  <span class="fresh-time pull-left">11小时前</span> 
+                  <div class="fresh-right pull-right">
+                      <span class="fresh-right-btn">
+                          <a title="评论" href="javascript:void(0);" class="fresh-comment-expand-btn" data-params="dynId=57362582&amp;type=1&amp;url=http://www.xueersi.com/LearningCenter/" data-codetype="1" data-id="57362582" data-type="2">评论</a>
+                          <em>(<i>33</i>)</em>
+                      </span>
+                      <span class="fresh-right-btn">
+                          <a title="收藏" href="javascript:void(0);" class="fresh-collect-add-btn" data-params="dynId=57362582&amp;type=1&amp;url=http://www.xueersi.com/LearningCenter/">收藏</a>
+                          <em>(<i>125</i>)</em>
+                      </span>
+                  </div>
+               </div>
+               <!--评论区域结束-->
+               <div class="fresh-comment-box hide">
+                  <div class="fresh-comment-detail-info">
+                      
+                  </div>   
+               </div>
+               <!--评论区域结束-->
+            </div>
+        </div>
+        <!--新鲜事默认展开评论结束-->
+
+        <!--新鲜事单条列表信息开始————图片-->
+        <div class="fresh-list">
+            <div class="fresh-avatar pull-left">
+                <a href ="###">
+                    <img src="img/fresh_avatar.png" />
+                </a>
+            </div>
+            <div class="fresh-detail" data-id="57286179">
+               <!--新鲜事右侧头部文本消息显示开始-->
+               <div class="fresh-text">
+                  <div class="fresh-myname">
+                     <a href="###"  target="_blank" class="pull-left">顾斐</a>
+                     <i class="fresh-v fresh-v-yellow" class="pull-left"></i>
+                  </div>
+                  <div class="fresh-info">
+                    亲爱的孩子们，昨天的小新电台——《五月的草场》有没有收听呢？那么今天出一个小题目——草原上的人用什么办法消灭蝗虫呢？随机奖励正确的<img title="挤眼" src="http://img04.xesimg.com/icon/emoji/em_4.png" alt="">五个答案~~加油哦！<img title="出拳" src="http://img04.xesimg.com/icon/emoji/em_46.png" alt="">收听地址： <a href="http://t.xueersi.com/7boW01nx" target="_blank">http://t.xueersi.com/7boW01nx</a>
+                  </div>
+               </div> 
+               <!--新鲜事右侧头部文本消息显示结束-->
+               <!--小图开始-->
+               <div class="fresh-media fresh-type-img fresh-media-img-list">
+                  <div class="fresh-media-small-img">
+                    <img src="http://s03.xesimg.com/dynamic/9f09d2d352ea80e9c3d083f99483b632_small.jpg">
+                  </div>
+               </div>
+               <!--小图结束-->
+               <!--大图开始-->
+               <div class="fresh-media fresh-media-expand fresh-type-img hide"> </div>
+               <!--大图结束-->
+               <!--评论区域开始-->
+               <div class="fresh-barinfo">
+                  <span class="fresh-time pull-left">11小时前</span> 
+                  <div class="fresh-right pull-right">
                       <span class="fresh-right-btn">
                           <a title="评论" href="javascript:void(0);" class="fresh-comment-expand-btn" data-params="dynId=57362582&amp;type=1&amp;url=http://www.xueersi.com/LearningCenter/" data-codetype="1" data-id="57362582">评论</a>
                           <em>(<i>33</i>)</em>
@@ -73,8 +129,8 @@
         <!--新鲜事单条列表信息结束————图片-->
 
          <!--新鲜事单条列表信息开始————视频-->
-        <div class="fresh-list small-12">
-            <div class="fresh-avatar left">
+        <div class="fresh-list">
+            <div class="fresh-avatar pull-left">
                 <a href ="###">
                     <img src="img/fresh_avatar.png" />
                 </a>
@@ -83,8 +139,8 @@
                <!--新鲜事右侧头部文本消息显示开始-->
                <div class="fresh-text">
                   <div class="fresh-myname">
-                     <a href="###"  target="_blank" class="left">顾斐</a>
-                     <i class="fresh-v fresh-v-yellow" class="left"></i>
+                     <a href="###"  target="_blank" class="pull-left">顾斐</a>
+                     <i class="fresh-v fresh-v-yellow" class="pull-left"></i>
                   </div>
                   <div class="fresh-info">
                     亲爱的孩子们，昨天的小新电台——《五月的草场》有没有收听呢？那么今天出一个小题目——草原上的人用什么办法消灭蝗虫呢？随机奖励正确的<img title="挤眼" src="http://img04.xesimg.com/icon/emoji/em_4.png" alt="">五个答案~~加油哦！<img title="出拳" src="http://img04.xesimg.com/icon/emoji/em_46.png" alt="">收听地址： <a href="http://t.xueersi.com/7boW01nx" target="_blank">http://t.xueersi.com/7boW01nx</a>
@@ -105,8 +161,8 @@
                <!--视频大图播放结束-->
                <!--评论区域开始-->
                <div class="fresh-barinfo">
-                  <span class="fresh-time left">11小时前</span> 
-                  <div class="fresh-right right">
+                  <span class="fresh-time pull-left">11小时前</span> 
+                  <div class="fresh-right pull-right">
                       <span class="fresh-right-btn">
                           <a title="评论" href="javascript:void(0);" class="fresh-comment-expand-btn" data-params="dynId=57362582&amp;type=1&amp;url=http://www.xueersi.com/LearningCenter/" data-codetype="1" data-id="57362582">评论</a>
                           <em>(<i>33</i>)</em>
@@ -132,8 +188,8 @@
         <!--新鲜事单条列表信息结束————视频-->
 
         <!--新鲜事单条列表信息开始————作题-->
-        <div class="fresh-list small-12">
-            <div class="fresh-avatar left">
+        <div class="fresh-list">
+            <div class="fresh-avatar pull-left">
                 <a href ="###">
                     <img src="img/fresh_avatar.png" />
                 </a>
@@ -142,8 +198,8 @@
                <!--新鲜事右侧头部文本消息显示开始-->
                <div class="fresh-text">
                   <div class="fresh-myname">
-                     <a href="###"  target="_blank" class="left">顾斐</a>
-                     <i class="fresh-v fresh-v-yellow" class="left"></i>
+                     <a href="###"  target="_blank" class="pull-left">顾斐</a>
+                     <i class="fresh-v fresh-v-yellow" class="pull-left"></i>
                   </div>
                   <div class="fresh-info">
                     亲爱的孩子们，昨天的小新电台——《五月的草场》有没有收听呢？那么今天出一个小题目——草原上的人用什么办法消灭蝗虫呢？随机奖励正确的<img title="挤眼" src="http://img04.xesimg.com/icon/emoji/em_4.png" alt="">五个答案~~加油哦！<img title="出拳" src="http://img04.xesimg.com/icon/emoji/em_46.png" alt="">收听地址： <a href="http://t.xueersi.com/7boW01nx" target="_blank">http://t.xueersi.com/7boW01nx</a>
@@ -165,19 +221,19 @@
                   </div>
                   <div class="fresh-big-answer">
                      <div class="fresh-big-selectAnswer">
-                        <em class="left">选择答案：</em> 
-                        <a href="javascript:void(0);" class="small radius button" data-value="A" data-type="radio">A</a>
-                        <a href="javascript:void(0);" class="small radius button" data-value="B" data-type="radio">B</a>
-                        <a href="javascript:void(0);" class="small radius button" data-value="C" data-type="radio">C</a>
-                        <a href="javascript:void(0);" class="small radius button" data-value="D" data-type="radio">D</a>
+                        <em class="pull-left">选择答案：</em> 
+                        <a href="javascript:void(0);" class="blue-radius-btn" data-value="A" data-type="radio">A</a>
+                        <a href="javascript:void(0);" class="blue-radius-btn" data-value="B" data-type="radio">B</a>
+                        <a href="javascript:void(0);" class="blue-radius-btn" data-value="C" data-type="radio">C</a>
+                        <a href="javascript:void(0);" class="blue-radius-btn" data-value="D" data-type="radio">D</a>
                      </div>
                   </div>
                </div>
                <!--作题大图结束-->
                <!--评论区域开始-->
                <div class="fresh-barinfo">
-                  <span class="fresh-time left">11小时前</span> 
-                  <div class="fresh-right right">
+                  <span class="fresh-time pull-left">11小时前</span> 
+                  <div class="fresh-right pull-right">
                       <span class="fresh-right-btn fresh-answer-btn">
                           <a title="评论" href="javascript:void(0);">作答</a>
                           <em>(33)</em>
@@ -194,8 +250,8 @@
         <!--新鲜事单条列表信息结束————作题-->
 
         <!--新鲜事单条列表信息开始————我自己的头部加这个fresh-myself-list类名详情信息文本换行显示-->
-        <div class="fresh-list fresh-myself-list small-12">
-            <div class="fresh-avatar left">
+        <div class="fresh-list fresh-myself-list">
+            <div class="fresh-avatar pull-left">
                 <a href ="###">
                     <img src="img/fresh_avatar.png" />
                 </a>
@@ -204,8 +260,8 @@
                <!--新鲜事右侧头部文本消息显示开始-->
                <div class="fresh-text">
                   <div class="fresh-myname">
-                     <a href="###"  target="_blank" class="left">我</a>
-                      <i class="fresh-v fresh-v-red" class="left"></i>
+                     <a href="###"  target="_blank" class="pull-left">我</a>
+                      <i class="fresh-v fresh-v-red" class="pull-left"></i>
                   </div>
                   <span class="fresh-my-do">发布了新鲜事</span>
                   <div class="fresh-info">
@@ -225,8 +281,8 @@
                <!--大图结束-->
                <!--评论区域开始-->
                <div class="fresh-barinfo">
-                  <span class="fresh-time left">11小时前</span> 
-                  <div class="fresh-right right">
+                  <span class="fresh-time pull-left">11小时前</span> 
+                  <div class="fresh-right pull-right">
                       <span class="fresh-right-btn">
                           <a title="评论" href="javascript:void(0);" class="fresh-comment-expand-btn" data-params="dynId=57362582&amp;type=1&amp;url=http://www.xueersi.com/LearningCenter/" data-codetype="1" data-id="57362582">评论</a>
                           <em>(<i>33</i>)</em>
@@ -252,8 +308,8 @@
         <!--新鲜事单条列表信息结束————我自己的-->
 
         <!--新鲜事单条列表信息开始————关注的人-->
-        <div class="fresh-list small-12">
-            <div class="fresh-avatar left">
+        <div class="fresh-list">
+            <div class="fresh-avatar pull-left">
                 <a href ="###">
                     <img src="img/fresh_avatar.png" />
                 </a>
@@ -262,15 +318,15 @@
                <!--新鲜事右侧头部文本消息显示开始-->
                <div class="fresh-text">
                   <div class="fresh-myname">
-                     <a href="###"  target="_blank" class="left">顾斐</a>
-                     <i class="fresh-v fresh-v-blue" class="left"></i>
+                     <a href="###"  target="_blank" class="pull-left">顾斐</a>
+                     <i class="fresh-v fresh-v-blue" class="pull-left"></i>
                   </div>
                   <div class="fresh-course-fans">
-                     <span class="left">
+                     <span class="pull-left">
                         <strong>321322</strong>粉丝
                      </span>
-                     <div class="fresh-course-attention right"  data-type="3" data-params="urlStr=840&amp;urlKey=af0030c654f79b371438ebdf40d4bead" data-value="840" data-url="/teachers/follow/">
-                        <a href="javascript:void(0)" class="fresh-attention-btn fresh-add-attention-btn"><span class="fresh-add left">+</span><span class="left">关注</span></a>
+                     <div class="fresh-course-attention pull-right"  data-type="3" data-params="urlStr=840&amp;urlKey=af0030c654f79b371438ebdf40d4bead" data-value="840" data-url="/teachers/follow/">
+                        <a href="javascript:void(0)" class="fresh-attention-btn fresh-add-attention-btn"><span class="fresh-add pull-left">+</span><span class="pull-left">关注</span></a>
 
                       <!--  <em>已关注</em>
                       <i class="fresh-course-line">|</i>
@@ -294,7 +350,7 @@
                <!--大图结束-->
                <!--评论区域开始-->
                <div class="fresh-barinfo">
-                  <span class="fresh-time left">11小时前</span> 
+                  <span class="fresh-time pull-left">11小时前</span> 
                </div>
                <!--评论区域结束-->
             </div>
@@ -303,8 +359,8 @@
 
 
         <!--新鲜事单条列表信息开始————@我的fresh-contact-my-list-->
-        <div class="fresh-list fresh-contact-my-list small-12">
-            <div class="fresh-avatar left">
+        <div class="fresh-list fresh-contact-my-list">
+            <div class="fresh-avatar pull-left">
                 <a href ="###">
                     <img src="img/fresh_avatar.png" />
                 </a>
@@ -313,8 +369,8 @@
                <!--新鲜事右侧头部文本消息显示开始-->
                <div class="fresh-text">
                   <div class="fresh-myname">
-                     <a href="###"  target="_blank" class="left">产品经理之殇</a>
-                     <i class="fresh-v fresh-v-red" class="left"></i>
+                     <a href="###"  target="_blank" class="pull-left">产品经理之殇</a>
+                     <i class="fresh-v fresh-v-red" class="pull-left"></i>
                   </div>
                   <div class="fresh-info">
                     住校生和走读生。。 // @《游戏王》 就是走读生。。。 //<img title="出拳" src="http://img04.xesimg.com/icon/emoji/em_12.png" alt="">收听地址： <a href="###" target="_blank">@产品经理之殇</a>住校生和走读生。。 // @《游戏王》 就是走读生？
@@ -324,8 +380,8 @@
                <div class="fresh-contact-mention">
                   <div class="fresh-text">
                       <div class="fresh-myname">
-                         <a href="###"  target="_blank" class="left">产品经理之殇</a>
-                         <i class="fresh-v fresh-v-red" class="left"></i>
+                         <a href="###"  target="_blank" class="pull-left">产品经理之殇</a>
+                         <i class="fresh-v fresh-v-red" class="pull-left"></i>
                       </div>
                       <div class="fresh-info">
                         住校生和走读生。。 // @《游戏王》 就是走读生。。。 //
@@ -343,8 +399,8 @@
                   <!--大图结束-->
                   <!--评论区域开始-->
                   <div class="fresh-barinfo">
-                      <span class="fresh-time left">11小时前</span> 
-                      <div class="fresh-right left">
+                      <span class="fresh-time pull-left">11小时前</span> 
+                      <div class="fresh-right pull-left">
                           <span class="fresh-right-btn">
                               <a title="全部评论" href="###"  target="_blank">全部评论</a>
                           </span>
@@ -357,8 +413,8 @@
 
                <!--评论区域开始-->
                <div class="fresh-barinfo">
-                  <span class="fresh-time left">11小时前</span> 
-                  <div class="fresh-right right">
+                  <span class="fresh-time pull-left">11小时前</span> 
+                  <div class="fresh-right pull-right">
                       <span class="fresh-right-btn">
                           <a title="评论" href="javascript:void(0);" class="fresh-comment-expand-btn" data-params="dynId=57362582&amp;type=1&amp;url=http://www.xueersi.com/LearningCenter/" data-codetype="1" data-id="57362582">评论</a>
                           <em>(<i>33</i>)</em>
@@ -379,35 +435,35 @@
         </div>
         <!--新鲜事单条列表信息结束————@我的-->
 
-        <!--新鲜事单条列表信息开始————热门新鲜事list加fresh-popular-list-->
-        <div class="fresh-list fresh-popular-list small-12">
-            <div class="fresh-avatar left">
-                <a href ="###">
-                    <img src="img/fresh_avatar.png" />
+        <!--新鲜事单条列表信息开始————热门新鲜事list加fresh-popular-list fresh-hover-item代表滑过效果-->
+        <div class="fresh-list fresh-hover-item fresh-popular-list">
+            <div class="fresh-avatar pull-left">
+                <a target="_blank" href="http://www.xueersi.com/s/979168">
+                    <img src="img/fresh_avatar.png" date-role="fresh-avatar"/>
                 </a>
             </div>
             <div class="fresh-detail">
                <!--新鲜事右侧头部文本消息显示开始-->
                <div class="fresh-text">
                   <div class="fresh-myname">
-                     <a href="###"  target="_blank" class="left">顾斐</a>
-                     <i class="fresh-v fresh-v-yellow" class="left"></i>
+                     <a target="_blank" data-params="userId=979168" href="http://www.xueersi.com/s/979168" class="pull-left">顾斐</a>
+                     <i class="fresh-v fresh-v-yellow" class="pull-left"></i>
                   </div>
                   <div class="fresh-info">
-                    快来看看认真的韬哥和小帆老师在为来访的学员题词~！ 信韬哥！得满分！ 新小帆！
+                    快来看看认真的韬哥和小帆老师在为来访的学员题词~！ 信韬哥！得满分！ 新小帆！<a target="_blank" href="http://t.xueersi.com/7boW01nx">http://t.xueersi.com/7boW01nx</a>
                   </div>
                </div> 
                <!--新鲜事右侧头部文本消息显示结束-->
                <!--评论区域开始-->
                <div class="fresh-barinfo">
-                  <span class="fresh-time left">11小时前</span> 
-                  <div class="fresh-right right">
+                  <span class="fresh-time pull-left">11小时前</span> 
+                  <div class="fresh-right pull-right">
                       <span class="fresh-right-btn">
-                          <a title="评论" href="javascript:void(0);">评论</a>
+                          <a target="_blank" href="http://www.xueersi.com/homes/show/57783276" title="评论">评论</a>
                           <em>(33)</em>
                       </span>
                       <span class="fresh-right-btn">
-                          <a title="评论" href="javascript:void(0);">收藏</a>
+                          <a target="_blank" href="http://www.xueersi.com/homes/show/57783276" title="收藏">收藏</a>
                           <em>(125)</em>
                       </span>
                   </div>
@@ -417,7 +473,6 @@
         </div>
         <!--新鲜事单条列表信息结束————热门新鲜事-->
         
-    </div>
 
     <!--发送新鲜事弹出层效果开始-->
     <form class="fresh-send-box hide" method="POST"  action="/Dynamics/addDynamic" enctype="multipart/form-data" name="formsubmitf">
@@ -429,28 +484,31 @@
              </div>
         </div>
         <div class="fresh-send-form">
-             <i class="fresh-send-emote"></i>
-             <a href="javascript:void(0);">表情</a>
+             <div class="fresh-send-emote-click-btn fresh-emote-current" flag="0">
+                <i class="fresh-send-emote"></i>
+                <a href="javascript:void(0);">表情</a>
+             </div>
              <div class="fresh-send-upload">
                 <input class="fresh-fileToUpload" id="fresh-fileToUpload" type="file" size="45"  name="dynImg" accept="image/*" />
              </div>
              <a href="javascript:void(0);">图片</a>
-            <em>（支持类型 JPG、PNG，大小不超过5M）</em>
-            <div class="fresh-send-submit-box right">
-              <button class="small radius button fresh-send-submit-btn">发布</button>
-            </div>
-            <span class="right">
-                <em class="left">您还可以输入</em>
-                <em class="fresh-send-text-num left">140</em>
-                <em class="left">字</em>
-            </span>
+             <em class="pull-left">（支持类型 JPG、PNG，大小不超过5M）</em>
+             <div class="fresh-send-submit-box pull-right">
+              <button class="blue-radius-btn fresh-send-submit-btn">发布</button>
+             </div>
+             <span class="pull-right">
+                <em class="pull-left">您还可以输入</em>
+                <em class="fresh-send-text-num pull-left">140</em>
+                <em class="pull-left">字</em>
+             </span>
+             <span class="fresh-comment-tips hide"></span>
         </div>
         <input type="hidden" value="0" name="mypretime">
     </form>
     <!--发送新鲜事弹出层效果结束-->
 
     <!--验证码弹出层开始-->
-    <div class="fresh-dialog-verificationCode" style="width: 375px; display:none">
+    <div class="fresh-dialog-verificationCode hide" style="width: 375px;">
         <div class="fresh-dialog-content">
            <div class="fresh-dialog-medal">
                <div class="fresh-dialog-medal-tips">
@@ -465,7 +523,7 @@
                 </div>
                 <span id="fresh-dialog-tips-Code"></span>
                 <div class="fresh-dialog-sure-btn">
-                    <a href="###" class="small radius button">确定</a>
+                    <a href="###" class="blue-radius-btn">确定</a>
                 </div>
            </div>
         </div>

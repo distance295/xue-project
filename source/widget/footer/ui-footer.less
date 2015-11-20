@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-10-29 10:40:12
+ * @version $Id$
+ */
+@fw:					"Microsoft YaHei";
+@fs:					"SimSun";
+@red:                    #e74c3c;
+/*===============/页脚部分/====================*/
+#footer {width:100%; border-top: 1px solid #e5e5e5;padding:0;overflow: hidden;}
+/*===============/下：关于我们部分/====================*/
+#footer .foot-area {
+			padding:20px 0;
+		  p {
+		  	text-align: center;line-height: 180%;font-size: 12px;font-family: @fs;padding:0;margin:0;
+		  	a {padding: 0 5px; color: #333;}
+		  	strong {
+		  		color: @red;
+		  	}
+		  	.red {color: @red;}
+		  }
+		  p.link {padding-top: 15px; }
+}
+/*===============/上：学习经验分享/====================*/
+#footer .foot-service {
+			width: 980px;margin:0 auto;overflow: hidden; padding-bottom: 20px;border-bottom: 1px solid #F1F1F1;
+		 a { 
+		 	float: left; display: inline; width: 215px; overflow: hidden; cursor: pointer; height: 56px; margin: 10px 10px 0 20px; padding-left: 60px; text-decoration: none;font-size: 14px;
+		 	p {line-height: 150%; color: #666;  text-align: left;font-size: 12px;font-family: @fs;}
+		 	&:hover {
+		 		p,span {
+		 			color: #3bafda;
+		 		}
+		 	}
+		 }
+		 a.service-share {background: url(img/A1_01.gif) no-repeat;}
+		 a.service-live {background: url(img/A1_02.gif) no-repeat;}
+		 a.service-system {background: url(img/A1_03.gif) no-repeat;}
+		 a.service-interaction {background: url(img/A1_04.gif) no-repeat;}
+		 a span {display: block;line-height: 22px; font-weight: bold;color: #666;}
+
+}

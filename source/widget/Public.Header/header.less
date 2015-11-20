@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-10-29 10:40:12
+ * @version $Id$
+ */
+
+// <!-- 头部logo**and**搜索**购物车 -->
+#module-header {
+    width: 1190px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+    .h-logo {
+        float: left;
+        width: 350px;
+        line-height: 55px;
+        padding: 22px 0;
+        a {
+            display: block;
+            width: 280px;
+            height: 55px;
+            background: url(img/logo.png?__inline) no-repeat;
+            color: transparent;
+        }
+    }
+    .h-search {
+        float: left;
+        width: 540px;
+        height: 36px;
+        margin-top: 24px;
+        input.h-text {
+            width: 468px;
+            line-height: 24px;
+            border-color: #1e89e0;
+            border-style: solid;
+            border-width: 2px 0 2px 2px;
+            color: #666;
+            margin-bottom: 4px;
+            outline: 0 none;
+            padding: 4px 10px;
+            background: #fff;
+        }
+        .btn-search {
+            width: 70px;
+            height: 36px;
+            font-size: 16px;
+            border-radius: 0;
+            border: 0 none;
+        }
+    }
+    .h-words {
+        width: 540px;
+        height: 30px;
+        line-height: 30px;
+        a {
+            display: inline-block;
+            margin-right: 5px;
+        }
+    }
+    #module-minicart {
+        top: -35px !important;
+    }
+}
+

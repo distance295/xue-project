@@ -1,0 +1,93 @@
+/**
+ *Table 公用样式
+ *table元素已经设定了BG和border-collapse属性
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.table {
+  width: 100%;
+  border: 1px solid #eaeaea;
+}
+.table thead tr {
+  height: 50px;
+  background-color: #fcfcfc;
+}
+.table thead tr th {
+  text-align: center;
+  vertical-align: middle;
+  font-weight: normal;
+  font-family: "SimSun";
+  font-size: 12px;
+  color: #666;
+  border-bottom: 1px solid #eaeaea;
+}
+.table tbody tr {
+  height: 50px;
+  background-color: #fff;
+}
+.table tbody tr td {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 16px;
+  font-family: "Microsoft YaHei";
+  color: #333;
+  border-bottom: 1px solid #eaeaea;
+}
+/**
+ * table with the solid border
+ *具体在学习中心-个人设置-我的订单使用
+ *------------------------------------
+ */
+.table-solid th,
+.table-solid td {
+  border: 1px solid #eaeaea;
+}
+.gift-card-record {
+  position: relative;
+}
+.gift-card-record .gcr-top-up {
+  float: right;
+  margin-bottom: 28px;
+  width: 100px;
+  font-size: 14px;
+}
+.gift-card-record .table.gcr-table {
+  margin-bottom: 40px;
+}
+.gift-card-record .table.gcr-table .gcr-used {
+  color: #999;
+}
+.gift-card-record .table.gcr-table .gcr-red {
+  color: #e74c3c;
+}
+.gift-card-record img {
+  width: 75px;
+  height: 55px;
+  position: relative;
+  top: 6px;
+  left: 7px;
+}
+.gift-card-record .gcr-prompt-box {
+  background: #fff8eb;
+  border-radius: 5px;
+  padding: 10px 0 10px 20px;
+}
+.gift-card-record .gcr-prompt-box h3 {
+  font-size: 14px;
+  font-family: "Microsoft YaHei";
+  color: #666;
+  margin: 6px 0 6px 5px;
+}
+.gift-card-record .gcr-prompt-box p {
+  margin: 0 0 0 5px;
+}
+.gift-card-record .gcr-prompt-box .gcr-prompt {
+  margin-left: 22px;
+  padding: 0;
+  color: #333;
+}
+.gift-card-record .gcr-prompt-box .gcr-prompt li {
+  line-height: 26px;
+}
