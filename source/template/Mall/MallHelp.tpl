@@ -4,7 +4,7 @@
 <!-- 学习中心区域 -->
 <div class="container top m20">
     <div class="row">
-        <div class="col-md-2 col-sm-2 wrap-side wrap-mall">
+        <div class="col-md-2 col-sm-2 wrap-side wrap-mall w-h-198">
             <div class="panel panel-default ">
                 <div class="panel-body">
                     <link rel="import" href="../../widget/help/helpNav.tpl?__inline">
