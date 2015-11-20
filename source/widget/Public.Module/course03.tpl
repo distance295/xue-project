@@ -10,7 +10,7 @@
                     <img src="img/default_photo.png">
                 </div>
             </div>
-            <div class="course-detail">
+            <div class="course-detail pull-left">
                 <p class="course-title">
                     <label class="course-label course-yellow-label">化学</label>
                     <label class="course-label course-blue-label">直播</label>
