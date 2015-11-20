@@ -1,21 +1,18 @@
 var xue =xue || {};
     xue.formCheck = xue.formCheck || {};
 var fCheck = xue.formCheck;
-
-//æç¤ºcssæ ·å¼
 fCheck.setTips = function(select, tips){
   $(select).css({
     'background': 'url("img/warning.png") no-repeat 10px 5px',
     'padding-left':'32px' 
   }).html(tips);
 };
-//æ¸…é™¤æç¤º
 fCheck.clearTips = function(select){
   $(select).css({
     'background':'none'
   }).html(null);
 };
-//è¾¹æ¡†é¢œè‰²å˜åŒ–
+
 fCheck.bordercss = function(argument) {
    if($(argument).val() !== ''){
      $(argument).css('border','1px solid .68c04a');
@@ -25,7 +22,9 @@ fCheck.bordercss = function(argument) {
 $(function(){
     var nickname = $('.nickname');
     $(nickname).on('focus',function(){
-        $(nickname).siblings('.prompt-empty').html('è¯·è¾“å…¥ä¸å¤šäº18ä¸ªå­—ï¼Œæ˜µç§°ä¸ºâ€œæ•°å­—â€â€œå­—æ¯â€â€œä¸­æ–‡â€çš„ä»»æ„ç»„åˆ').css({
+
+        $(nickname).siblings('.prompt-empty').html('ÇëÊäÈë²»¶àÓÚ18¸ö×Ö£¬êÇ³ÆÎª¡°Êı×Ö¡±¡°×ÖÄ¸¡±¡°ÖĞÎÄ¡±µÄÈÎÒâ×éºÏ').css({
+
             color: '#999',
             display: 'block'
         });
@@ -37,31 +36,35 @@ $(function(){
     });
 });
 
-// è¾“å…¥æ¡†ä¿¡æ¯éªŒè¯
+
 var boxs = {
     nickname: '.nickname'
 }
 
-// éªŒè¯æ˜µç§°
+
 $.fn.nickname = function(){
     var box = $(boxs.nickname),
     val = box.val();
     var text = box.next('.nickname-warning'),
     block = text.addClass('success');
     if (val == '') {
-        fCheck.setTips(".nickname-warning",'è¯·è¾“å…¥æ˜µç§°');
+
+        fCheck.setTips(".nickname-warning",'ÇëÊäÈëêÇ³Æ');
+
     }else {
         var reg = /^[0-9a-zA-Z\u4e00-\u9fa5]{1,18}$/;
         if(reg.test(val)){
             $.fn.nicknameajax();
         }else{
-            fCheck.setTips(".nickname-warning",'åªèƒ½è¾“å…¥æ•°å­—ã€æ±‰å­—å’Œå­—æ¯');
+
+            fCheck.setTips(".nickname-warning",'Ö»ÄÜÊäÈëÊı×Ö¡¢ºº×ÖºÍ×ÖÄ¸');
+
             return false;
         }
     }
 };
 $.fn.nicknameajax = function(){
-    // æ˜µç§°ä¸å…¶ä»–ç”¨æˆ·é‡å¤ï¼Œè¯·é‡æ–°è®¾ç½®
+
     var box = $(boxs.nickname),
     val = box.val();
     var d_val = Number($(box).data('nickname'));
@@ -74,7 +77,9 @@ $.fn.nicknameajax = function(){
             async: false,
             success  : function(result){
                 if(result.sign == false){
-                    fCheck.setTips(".nickname-warning",'æ˜µç§°ä¸å…¶ä»–ç”¨æˆ·é‡å¤ï¼Œè¯·é‡æ–°è®¾ç½®');
+
+                    fCheck.setTips(".nickname-warning",'êÇ³ÆÓëÆäËûÓÃ»§ÖØ¸´£¬ÇëÖØĞÂÉèÖÃ');
+
                     return false;
                 } else {
                     fCheck.clearTips(".nickname-warning");
@@ -92,7 +97,6 @@ $.fn.nicknameajax = function(){
     }
 }
 
-// å®Œå–„ä¿¡æ¯æäº¤
 $(function() {
     $(".btn-submit").click(function() {
         $.fn.nickname();

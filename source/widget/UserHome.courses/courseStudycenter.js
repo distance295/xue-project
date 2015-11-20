@@ -179,39 +179,41 @@ function materialForm(){
         success: function(result) {
             if(result){
                createModal.show({
-                    id : 'materialForm',
-                    title : '讲义资料',
-                    cls : 'material-exam',
-                    content : result
-                });
-                $('#materialForm').modal('show');
-                
-            }
-            
-        },
-        // error: function(){
-        //     alert(2)
-        // }
-    });
+                id : 'materialForm',
+                title : '讲义资料',
+                cls : 'material-exam',
+                content : result
+            });
+               $('#materialForm').modal('show');
+           }
+
+       },
+   });
 }
+// 讲义资料弹框tab事件
+$('body').on('click','.material-wrap .material-tab li',function(){
+    var index = $(this).index();
+    $(this).addClass('current').siblings().removeClass('current');
+    $('.material-content').eq(index).show().siblings('.material-content').hide();
+})
 // 考试
 function examTable(){
-     $.ajax({
-        type: "get",
-        url: "/data/courses/exam.html",
-        dataType: "html",
-        success: function(result) {
-            if(result){
-               createModal.show({
-                    id : 'examTable',
-                    title : '本课考试',
-                    cls : 'material-exam',
-                    content : result
-                });
-                $('#examTable').modal('show')
-            }
-            
-        },
+ $.ajax({
+    type: "get",
+    url: "/data/courses/exam.html",
+    dataType: "html",
+    success: function(result) {
+        if(result){
+           createModal.show({
+            id : 'examTable',
+            title : '本课考试',
+            cls : 'material-exam',
+            content : result
+        });
+           $('#examTable').modal('show')
+       }
+
+   },
         // error: function(){
         //     alert(2)
         // }
@@ -219,22 +221,22 @@ function examTable(){
 }
 // 延期
 function delayDate(){
-     $.ajax({
-        type: "get",
-        url: "/data/courses/delayDate.html",
-        dataType: "html",
-        success: function(result) {
-            if(result){
-               createModal.show({
-                    id : 'delayDate',
-                    title : '延期课程',
-                    cls : 'delayDate',
-                    content : result
-                });
-                $('#delayDate').modal('show')
-            }
-            
-        },
+ $.ajax({
+    type: "get",
+    url: "/data/courses/delayDate.html",
+    dataType: "html",
+    success: function(result) {
+        if(result){
+           createModal.show({
+            id : 'delayDate',
+            title : '延期课程',
+            cls : 'delayDate',
+            content : result
+        });
+           $('#delayDate').modal('show')
+       }
+
+   },
         // error: function(){
         //     alert(2)
         // }

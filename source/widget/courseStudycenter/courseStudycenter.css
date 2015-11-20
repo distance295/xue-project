@@ -417,10 +417,14 @@ table tr:nth-of-type(2n) {
   margin-bottom: 22px;
   margin-left: 0;
 }
+.material-wrap .material-layout {
+  display: none;
+}
 .material-wrap .cant-load {
   float: right;
   font-size: 12px;
   line-height: 30px;
+  color: #3bafda;
 }
 .material-wrap li {
   float: left;
