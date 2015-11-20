@@ -41,7 +41,7 @@
     var PAGE_CONFIG = {
         ID: 'Index',
         MODULE: 'Mall',
-        TITLE: '商城首页',
+        TITLE: '找老师',
         NAV_FIXED: false // 如果想要头部分类展开的话，设为true，如果不想直接展开设为false
     };
 
