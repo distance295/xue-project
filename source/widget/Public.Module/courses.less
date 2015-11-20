@@ -49,9 +49,9 @@ ul,li{list-style: none;}
 }
 .course-list {
 	font-family: "SimSun";
-	border-top: 1px solid @borderColor;
+	border-bottom: 1px solid @borderColor;
 	width: 100%;
-	padding: 13px 10px;
+	padding: 12px 0px 0 0;
 	overflow: hidden;
 	.btn{
 		.border-radius(2px);
@@ -69,9 +69,10 @@ ul,li{list-style: none;}
 		font-weight: normal;
 	}
 	.ui-avatar{
-		width: 80px;
+		width: 60px;
 		text-align: center;
 		float: left;
+		margin-right: 14px;
 		span.ui-user-name{
 			font-size: 14px;
 		}
@@ -350,7 +351,7 @@ ul,li{list-style: none;}
 }
 .hot-course-list{
 	padding: 10px 0;
-	// background: #fcfcfc;
+	background: #fcfcfc;
 	.ui-avatar{
 		margin-right: 10px;
 		width: 40px;
@@ -363,6 +364,7 @@ ul,li{list-style: none;}
 		}
 	}
 	.course-detail{
+		width: 78%;
 		p{
 			margin: 3px 0;
 		}
@@ -654,6 +656,23 @@ ul,li{list-style: none;}
 				float: left;
 				margin-left: 55px;
 			}
+		}
+	}
+}
+// 课程筛选页右边广告位
+.sideright-body{
+	padding: 0;
+	.sideright-ad{
+		margin-bottom: 20px;
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	.sideright-hotcourse{
+		h3{
+			font-size: 16px;
+			font-weight: normal;
 		}
 	}
 }
