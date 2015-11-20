@@ -3,7 +3,7 @@
 
 <!-- 学习中心区域 -->
 <div class="container">
-    <ol id="module-breadcrumb" class="breadcrumb findBreadCrumb">
+    <ol id="module-breadcrumb" class="breadcrumb">
         <li><a href="#">首页</a></li>
         <li class="active">当前页</li>
     </ol>
