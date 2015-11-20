@@ -13,7 +13,7 @@
             <!-- *********************** 内容区域开始 *********************** -->
 
             <div class="panel panel-default ">
-                <div class="panel-body findClass">
+                <div class="panel-body">
                 <link rel="import" href="../../widget/Mall.FindTeacher/index.tpl?__inline">
                 </div>
             </div>
@@ -22,13 +22,14 @@
         </div>
         <div class="col-md-2 col-sm-2 wrap-side wrap-mall">
             <div class="panel panel-default">
-                <div class="panel-body findClassRight">
+                <div class="panel-body">
                     <span class="findRightTitle">热门新鲜事</span>
-                    <div class="">
+                    <div class="findRightList">
                         <link rel="import" href="../../widget/Dynamic/dynPopular.tpl?__inline">
                     </div>
                     <span class="findRightTitle">热门专题课</span>
-                    <div class="">
+                    <div class="findRightList">
+                        <link rel="import" href="../../widget/Public.Module/hot-course.tpl?__inline">
                     </div>
                 </div>
             </div>
