@@ -35,7 +35,7 @@
                         </div>
                     </div>
                     <div class="live-enter-box">
-                        <span class="live-enter">直播中,立即进入</span>
+                        <a href = "#"><span class="live-enter">直播中,立即进入</span></a>
                     </div>
                 </div>
                 <div class="live-card">
@@ -95,7 +95,7 @@
                         </div>
                     </div>
                     <div class="live-enter-box">
-                        <span class="live-enter live-blue">已结束,观看回放</span>
+                        <a href = "#"><span class="live-enter live-blue">已结束,观看回放</span></a>
                     </div>
                 </div>
             </div>
