@@ -1,18 +1,22 @@
 var xue =xue || {};
     xue.formCheck = xue.formCheck || {};
 var fCheck = xue.formCheck;
+
+/* 提示信息的css样式 */
 fCheck.setTips = function(select, tips){
   $(select).css({
-    'background': 'url("img/warning.png") no-repeat 10px 5px',
-    'padding-left':'32px' 
+    'display': 'block',
   }).html(tips);
 };
+
+/* 输入正确时，清除提醒 */
 fCheck.clearTips = function(select){
   $(select).css({
-    'background':'none'
+    'display':'none'
   }).html(null);
 };
 
+/* input边框样式 */
 fCheck.bordercss = function(argument) {
    if($(argument).val() !== ''){
      $(argument).css('border','1px solid .68c04a');
@@ -22,9 +26,7 @@ fCheck.bordercss = function(argument) {
 $(function(){
     var nickname = $('.nickname');
     $(nickname).on('focus',function(){
-
-        $(nickname).siblings('.prompt-empty').html('�����벻����18���֣��ǳ�Ϊ�����֡�����ĸ�������ġ����������').css({
-
+        $('.prompt-empty').html('请输入不多于18个字，昵称为“数字”“字母”“中文”的任意组合').css({
             color: '#999',
             display: 'block'
         });
@@ -36,11 +38,10 @@ $(function(){
     });
 });
 
-
+/* 验证昵称 */
 var boxs = {
     nickname: '.nickname'
 }
-
 
 $.fn.nickname = function(){
     var box = $(boxs.nickname),
@@ -48,23 +49,19 @@ $.fn.nickname = function(){
     var text = box.next('.nickname-warning'),
     block = text.addClass('success');
     if (val == '') {
-
-        fCheck.setTips(".nickname-warning",'�������ǳ�');
-
+        fCheck.setTips(".nickname-warning",'请输入昵称');
     }else {
         var reg = /^[0-9a-zA-Z\u4e00-\u9fa5]{1,18}$/;
         if(reg.test(val)){
             $.fn.nicknameajax();
         }else{
-
-            fCheck.setTips(".nickname-warning",'ֻ���������֡����ֺ���ĸ');
-
+            fCheck.setTips(".nickname-warning",'只能输入数字、汉字和字母');
             return false;
         }
     }
 };
 $.fn.nicknameajax = function(){
-
+    // 昵称与其他用户重复，请重新设置
     var box = $(boxs.nickname),
     val = box.val();
     var d_val = Number($(box).data('nickname'));
@@ -77,9 +74,7 @@ $.fn.nicknameajax = function(){
             async: false,
             success  : function(result){
                 if(result.sign == false){
-
-                    fCheck.setTips(".nickname-warning",'�ǳ��������û��ظ�������������');
-
+                    fCheck.setTips(".nickname-warning",'昵称与其他用户重复，请重新设置');
                     return false;
                 } else {
                     fCheck.clearTips(".nickname-warning");
@@ -92,11 +87,65 @@ $.fn.nicknameajax = function(){
             }
         });
     }else{
-        box.parents('.f1').addClass('has-success').removeClass('nickname-warning');
         return false;
     }
 }
+ 
+/* 生日日期 */
+function ymd()   
+{   
+       MonHead = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];   
 
+       //先给年下拉框赋内容
+       var y  = new Date().getFullYear();   
+       for (var i = (y-19); i < (y+1); i++) //ä»¥ä»Šå¹´ä¸ºå‡†ï¼Œå‰30å¹´ï¼ŒåŽ30å¹´   
+               document.date.year.options.add(new Option(" "+ i +" ", i));   
+
+       ////赋月份的下拉框  
+       for (var i = 1; i < 13; i++)   
+               document.date.month.options.add(new Option(" " + i + " ", i));   
+
+       document.date.year.value = y;   
+       document.date.month.value = new Date().getMonth() + 1;   
+       var n = MonHead[new Date().getMonth()];   
+       if (new Date().getMonth() ==1 && IsPinYear(yearvalue)) n++;   
+            writeDay(n); //赋日期下拉框Author:meizz     
+       document.date.day.value = new Date().getDate();   
+}   
+if(document.attachEvent)   
+   window.attachEvent("onload", ymd);   
+else   
+   window.addEventListener('load', ymd, false);   
+function yearday(str) //年发生变化时日期发生变化(主要是判断闰平年)   
+{   
+       var monthvalue = document.date.month.options[document.date.month.selectedIndex].value;   
+       if (monthvalue == ""){ var e = document.date.day; optionsClear(e); return;}   
+       var n = MonHead[monthvalue - 1];   
+       if (monthvalue ==2 && IsPinYear(str)) n++;   
+            writeDay(n)   
+}   
+function monthday(str)   //月发生变化时日期联动   
+{   
+    var yearvalue = document.date.year.options[document.date.year.selectedIndex].value;   
+    if (yearvalue == ""){ var e = document.date.day; optionsClear(e); return;}   
+    var n = MonHead[str - 1];   
+    if (str ==2 && IsPinYear(yearvalue)) n++;   
+   writeDay(n)   
+}   
+function writeDay(n)   //据条件写日期的下拉框    
+{   
+       var e = document.date.day; optionsClear(e);   
+       for (var i=1; i<(n+1); i++)   
+            e.options.add(new Option(" "+ i + " ", i));   
+}   
+function IsPinYear(year)//判断是否闰平年      
+{     return(0 == year%4 && (year%100 !=0 || year%400 == 0));}   
+function optionsClear(e)   
+{   
+    e.options.length = 1;   
+}   
+
+/* 点击提交按钮验证 */
 $(function() {
     $(".btn-submit").click(function() {
         $.fn.nickname();
