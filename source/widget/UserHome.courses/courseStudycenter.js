@@ -112,12 +112,12 @@ $('body').off('click', '.avatar-roll a, .majar-items .prev, .majar-items .next')
     if (that.hasClass('none')) {
         return false;
     } else {
-       courses.avatar.toggle(that)     
-   }
+     courses.avatar.toggle(that)     
+ }
 });
 // 更多服务
-$(function(){
-	$('.more-service h4').on('click',function(event){
+function moreService (){
+    $('.more-service h4').on('click',function(event){
         event.stopPropagation();
         var a = $(this).hasClass('blue-arrow')
         if(a){
@@ -133,32 +133,10 @@ $(function(){
         if (a){
             $('.more-service h4').removeClass('blue-arrow').parents('.more-service').removeClass('show');
         }
-
     })
-}); 
-// 学习中心的直播录播切换
-$(function(){
-    $('.courseList-wrap').on('click','.teacher-tab li',function(){
-        var that = $(this);
-        // var dataUrl = 'direct-courseList.html'
-        $.ajax({
-            type: "POST",
-            url: "direct-courseList.html",
-            // data: 'email=' + $('#username').val(),
-            dataType: "html",
-            timeout: 300,
-            success: function(result) {
-                $('.courseList-wrap').html(result);
-            },
-            error: function() {
-               alert('数据读取错误,请重试..');
-               return false;
-           }
-       });
-    });
-});
+}
 // 随堂测试弹框
-$(function(){
+function testLive(){
     $('.listTest-btn').popover({
         placement: 'top',
         html: true,
@@ -169,7 +147,7 @@ $(function(){
             return listTest_html;
         }
     });
-});
+}
 // 讲义资料弹框
 function materialForm(){
     $.ajax({
@@ -178,17 +156,16 @@ function materialForm(){
         dataType: "html",
         success: function(result) {
             if(result){
-               createModal.show({
+             createModal.show({
                 id : 'materialForm',
                 title : '讲义资料',
                 cls : 'material-exam',
                 content : result
             });
-               $('#materialForm').modal('show');
-           }
-
-       },
-   });
+             $('#materialForm').modal('show');
+         }
+     },
+ });
 }
 // 讲义资料弹框tab事件
 $('body').on('click','.material-wrap .material-tab li',function(){
@@ -198,62 +175,57 @@ $('body').on('click','.material-wrap .material-tab li',function(){
 })
 // 考试
 function examTable(){
- $.ajax({
-    type: "get",
-    url: "/data/courses/exam.html",
-    dataType: "html",
-    success: function(result) {
-        if(result){
-           createModal.show({
-            id : 'examTable',
-            title : '本课考试',
-            cls : 'material-exam',
-            content : result
-        });
-           $('#examTable').modal('show')
-       }
-
-   },
-        // error: function(){
-        //     alert(2)
-        // }
-    });
+    $.ajax({
+        type: "get",
+        url: "/data/courses/exam.html",
+        dataType: "html",
+        success: function(result) {
+            if(result){
+             createModal.show({
+                id : 'examTable',
+                title : '本课考试',
+                cls : 'material-exam',
+                content : result
+            });
+             $('#examTable').modal('show')
+         }
+     },
+ });
 }
 // 延期
 function delayDate(){
- $.ajax({
-    type: "get",
-    url: "/data/courses/delayDate.html",
-    dataType: "html",
-    success: function(result) {
-        if(result){
-           createModal.show({
-            id : 'delayDate',
-            title : '延期课程',
-            cls : 'delayDate',
-            content : result
-        });
-           $('#delayDate').modal('show')
-       }
-
-   },
-        // error: function(){
-        //     alert(2)
-        // }
+    $.ajax({
+        type: "get",
+        url: "/data/courses/delayDate.html",
+        dataType: "html",
+        success: function(result) {
+            if(result){
+                createModal.show({
+                    id : 'delayDate',
+                    title : '延期课程',
+                    cls : 'delayDate',
+                    content : result
+                });
+                $('#delayDate').modal('show')
+            }
+        },
     });
 }
 $(function(){
+    // 更多服务
+    moreService ();
+    // 随堂测试弹框
+    testLive();
+    // 更多服务的资料弹框
     $('.more-list li ').eq(1).on('click',function(){
         materialForm();
-    })
-});
-$(function(){
+    });
+    // 更多服务的考试弹框
     $('.more-list li ').eq(2).on('click',function(){
         examTable();
-    })
-});
-$(function(){
+    });
+    // 延期课程
     $('.label-delay').on('click',function(){
         delayDate();
-    })
+    });
 });
