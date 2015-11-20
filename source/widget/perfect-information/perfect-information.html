@@ -207,42 +207,65 @@
 	<script type="text/javascript">
 // 欢迎信息
 function informationGuid(){
-	var con = $('#welcome-infor').html();
-	createModal.show({
-		id : 'informationGuid',
-		title : '',
-		cls : 'infor-cardModal',
-		content : con
-	}); 
-	$('#informationGuid').modal({backdrop: 'static', keyboard: false,show: true}).find('button.close').remove();
+	$.ajax({
+		type: "get",
+		url: "/",
+		dataType: "html",
+		success: function(result) {
+			if(result){
+				createModal.show({
+					id : 'informationGuid',
+					title : '',
+					cls : 'infor-cardModal',
+					content : result
+				}); 
+				$('#informationGuid').modal({backdrop: 'static', keyboard: false,show: true}).find('button.close').remove();
+			}
+		},
+	});
 }
 // 完善信息
 function welcomeFormList(){
-	var con = $('#welcome-form').html();
-	createModal.show({
-		id : 'welcomeFormList',
-		title : '',
-		cls : 'FormList-cardModal',
-		content : con
-	}); 
-	$('#welcomeFormList').modal({backdrop: 'static', keyboard: false,show: true}).find('button.close').remove();
+	$.ajax({
+		type: "get",
+		url: "/",
+		dataType: "html",
+		success: function(result) {
+			if(result){
+				createModal.show({
+					id : 'welcomeFormList',
+					title : '',
+					cls : 'FormList-cardModal',
+					content : result
+				}); 
+				$('#welcomeFormList').modal({backdrop: 'static', keyboard: false,show: true}).find('button.close').remove();
+			}
+		},
+	});
 }
 
 // 关注老师获取动态
 function showFollowList(cur_grade){
-	var con = $('#FollowList').html();
-	createModal.show({
-		id : 'showFollowList',
-		title : '',
-		cls : 'FormList-cardModal',
-		content : con
-	}); 
-	$('#showFollowList').modal({backdrop: 'static', keyboard: false,show: true}).find('button.close').remove();
+	$.ajax({
+		type: "get",
+		url: "/",
+		dataType: "html",
+		success: function(result) {
+			if(result){
+				createModal.show({
+					id : 'showFollowList',
+					title : '',
+					cls : 'FormList-cardModal',
+					content : result
+				}); 
+				$('#showFollowList').modal({backdrop: 'static', keyboard: false,show: true}).find('button.close').remove();
+			}
+		},
+	});
 }
-
-$(function() {
+$(function(){
 	showFollowList();
-});
+})
 </script>
 </body>
 </html>

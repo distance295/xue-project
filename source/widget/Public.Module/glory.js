@@ -79,7 +79,7 @@ function initSelects(params) {
             }
         },
         error: function() {
-            alert('数据读取错误..');
+            // alert('数据读取错误..');
         }
     });
 };
@@ -139,7 +139,7 @@ function initSelects_2(params, pid) {
                 }
             },
             error: function() {
-                alert('数据读取错误..');
+                // alert('数据读取错误..');
             }
         });
     }
@@ -185,7 +185,7 @@ function initSelects_3(params, ppid, pid) {
                 }
             },
             error: function() {
-                alert('数据读取错误..');
+                // alert('数据读取错误..');
             }
         });
     }
