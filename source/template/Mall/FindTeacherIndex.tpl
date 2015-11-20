@@ -3,7 +3,7 @@
 
 <!-- 学习中心区域 -->
 <div class="container">
-    <ol id="module-breadcrumb" class="breadcrumb findBreadCrumb">
+    <ol id="module-breadcrumb" class="breadcrumb">
         <li><a href="#">首页</a></li>
         <li class="active">当前页</li>
     </ol>
@@ -13,7 +13,7 @@
             <!-- *********************** 内容区域开始 *********************** -->
 
             <div class="panel panel-default ">
-                <div class="panel-body findClass">
+                <div class="panel-body">
                 <link rel="import" href="../../widget/Mall.FindTeacher/index.tpl?__inline">
                 </div>
             </div>
@@ -22,13 +22,14 @@
         </div>
         <div class="col-md-2 col-sm-2 wrap-side wrap-mall">
             <div class="panel panel-default">
-                <div class="panel-body findClassRight">
+                <div class="panel-body">
                     <span class="findRightTitle">热门新鲜事</span>
-                    <div class="">
+                    <div class="findRightList">
                         <link rel="import" href="../../widget/Dynamic/dynPopular.tpl?__inline">
                     </div>
                     <span class="findRightTitle">热门专题课</span>
-                    <div class="">
+                    <div class="findRightList">
+                        <link rel="import" href="../../widget/Public.Module/hot-course.tpl?__inline">
                     </div>
                 </div>
             </div>
@@ -40,7 +41,7 @@
     var PAGE_CONFIG = {
         ID: 'Index',
         MODULE: 'Mall',
-        TITLE: '商城首页',
+        TITLE: '找老师',
         NAV_FIXED: false // 如果想要头部分类展开的话，设为true，如果不想直接展开设为false
     };
 

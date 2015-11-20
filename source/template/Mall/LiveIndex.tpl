@@ -3,7 +3,7 @@
 
 <!-- 学习中心区域 -->
 <div class="container">
-    <ol id="module-breadcrumb" class="breadcrumb liveBreadCrumb">
+    <ol id="module-breadcrumb" class="breadcrumb">
         <li><a href="#">首页</a></li>
         <li class="active">当前页</li>
     </ol>
@@ -22,7 +22,7 @@
     var PAGE_CONFIG = {
         ID: 'Index',
         MODULE: 'Mall',
-        TITLE: '视频直播页',
+        TITLE: '视频直播',
         NAV_FIXED: false // 如果想要头部分类展开的话，设为true，如果不想直接展开设为false
     };
 
