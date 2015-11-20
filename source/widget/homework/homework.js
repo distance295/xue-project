@@ -49,10 +49,11 @@ homeWork.path = '/static/img/Homework/shuzi';
 		}
 		if( _bodyW < 1190){
 	      // _bodyH = (1024*10)/16;
-	        _bodyH = (1190*10)/16;
+	        _bodyH = (1440*10)/16;
 		}else{
-			_bodyH = (1190*10)/16;
+			_bodyH = (1440*10)/16;
 		}
+		console.log(_bodyH)
         
         //具体交作业图片区域的跨度和高度的控制
 		var _home_Thumbnails_H = parseInt(_bodyH - this.box.home_header.height() - this.box.header_topbar.height() - this.box.header_myheader.height() - 30*2 - 20*2 -10*2);
