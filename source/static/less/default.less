@@ -162,3 +162,16 @@ em {
         box-shadow: none;
     }
 }
+
+#module-breadcrumb {
+    background-color: transparent;
+    >.active {
+        color: #333;
+    }
+    >li+li:before{
+        content:">";
+        padding: 0 2px;
+        font-size: 14px;
+        font-family: "Microsoft YaHei";
+    }
+}
