@@ -11,8 +11,10 @@
             <div class="find-teacher-intro">
                 <div class="find-teacher-hover-container">
                     <img src="img/teacher-photo.png" class="find-teacher-photo"/>
-                    <div class='find-teacher-photo-hover' style="top: 200px;"></div>
-                    <span class="find-teacher-follow" style="top: 390px;">＋关注</span>
+                    <div class="find-teacher-hover">
+                        <div class='find-teacher-photo-hover'></div>
+                        <span class="find-teacher-follow">＋关注</span>
+                    </div>
                 </div>
                 <div class="find-teacher-information">
                     <span class="find-teacher-name">顾斐</span>
@@ -34,8 +36,10 @@
             <div class="find-teacher-intro">
                 <div class="find-teacher-hover-container">
                     <img src="img/teacher-photo.png" class="find-teacher-teacher-photo"/>
-                    <div class='find-teacher-photo-hover' style="top: 200px;"></div>
-                    <span class="find-teacher-follow" style="top: 390px;">＋关注</span>
+                    <div class="find-teacher-hover">
+                        <div class='find-teacher-photo-hover'></div>
+                        <span class="find-teacher-follow">＋关注</span>
+                    </div>
                 </div>
                 <div class="find-teacher-information">
                     <span class="find-teacher-name">顾斐</span>
@@ -57,8 +61,10 @@
             <div class="find-teacher-intro">
                 <div class="find-teacher-hover-container">
                     <img src="img/teacher-photo.png" class="find-teacher-photo"/>
-                    <div class='find-teacher-photo-hover' style="top: 200px;"></div>
-                    <span class="find-teacher-follow" style="top: 390px;">＋关注</span>
+                    <div class="find-teacher-hover">
+                        <div class='find-teacher-photo-hover'></div>
+                        <span class="find-teacher-follow">＋关注</span>
+                    </div>
                 </div>
                 <div class="find-teacher-information">
                     <span class="find-teacher-name">顾斐</span>
@@ -80,8 +86,10 @@
             <div class="find-teacher-intro">
                 <div class="find-teacher-hover-container">
                     <img src="img/teacher-photo.png" class="find-teacher-photo"/>
-                    <div class='find-teacher-photo-hover' style="top: 200px;"></div>
-                    <span class="find-teacher-follow" style="top: 390px;">＋关注</span>
+                    <div class="find-teacher-hover">
+                        <div class='find-teacher-photo-hover'></div>
+                        <span class="find-teacher-follow">＋关注</span>
+                    </div>
                 </div>
                 <div class="find-teacher-information">
                     <span class="find-teacher-name">顾斐</span>
@@ -103,8 +111,10 @@
             <div class="find-teacher-intro">
                 <div class="find-teacher-hover-container">
                     <img src="img/teacher-photo.png" class="find-teacher-photo"/>
-                    <div class='find-teacher-photo-hover' style="top: 200px;"></div>
-                    <span class="find-teacher-follow" style="top: 390px;">＋关注</span>
+                    <div class="find-teacher-hover">
+                        <div class='find-teacher-photo-hover'></div>
+                        <span class="find-teacher-follow">＋关注</span>
+                    </div>
                 </div>
                 <div class="find-teacher-information">
                     <span class="find-teacher-name">顾斐</span>
