@@ -23,7 +23,7 @@
             <div class="panel panel-default ">
             	<div class="panel-header">相关课程</div>
                 <div class="panel-body panel-heading pd0">
-                    <link rel="import" href="../../widget/Public.Module/hot-students.tpl?__inline">
+                    <link rel="import" href="../../widget/Public.Module/hot-course.tpl?__inline">
                 </div>
             </div>
         </div>
