@@ -1,4 +1,8 @@
-
+<!--
+   找老师页面
+    @require find-teacher.less
+    @require find-teacher.js
+-->
     <div class="find-teacher-rank-title">
         <div>综合</div>
         <span>学员数<img src="img/down.png" /></span>
