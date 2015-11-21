@@ -1,6 +1,6 @@
 <!--
 	直播课程：
-    @require ui-course-infor.less
+    @require ui-course-info.less
 -->
 <div class="ui-course-infor-wrap">
 	<div class="course-left-player f-left">
