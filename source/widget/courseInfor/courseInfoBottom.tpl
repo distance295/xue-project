@@ -1,6 +1,6 @@
 <!--
- 	@require ui-course-infor.js
-    @require ui-course-infor.less
+ 	@require ui-course-info.js
+    @require ui-course-info.less
 -->
 <ul class="ui-nav-link">
 	<li class="current">直播大纲(10)</li>
