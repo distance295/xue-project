@@ -8,10 +8,10 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<!-- 这是CSS库文件 -->
-	 <link href="../../lib/bootstrap/3.3.5-custom/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href="../../lib/bootstrap/3.3.5-custom/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<!-- 这是当前模块样式文件 -->
-	<link href="ui-course-infor.css" rel="stylesheet"></head>
+	<link href="ui-course-info.css" rel="stylesheet"></head>
 <body>
 	<div id="container" class="container">
 		<div class="ui-course-infor-wrap">
@@ -58,10 +58,8 @@
 				<div class="course-favorable-money">
 					<div class="favrble-money f-left">
 						<span>
-							课程优惠价:
-							<em class="red">￥660</em>
-						</span> <del>原价:
-							<em>￥825</em></del> 
+							课程优惠价: <em class="red">￥660</em>
+						</span> <del>原价: <em>￥825</em></del> 
 					</div>
 					<ul class="f-right">
 						<li class="line">
@@ -256,7 +254,27 @@
 					</div>
 					<!-- 课程介绍 -->
 					<div class="course-detail">
-					<!-- 评价列表 -->
+						<!-- 未登录状态下显示立即登录 -->
+						<div class="detail-login">
+							购买课程后才可以发表评价哦！
+							<a href="http://login.xueersi.com/login/aHR0cDovL3d3dy54dWVlcnNpLmNvbS9rYy82NjE5P2lzQ29tbWVudCNjb21tZW50">立即登录</a>
+						</div>
+						<!-- 未登录状态下显示立即登录 end-->
+						<!-- 评论发表框 -->
+						<div class="ui-comment-info">
+							<div class="comment-title">评输入您对课课的评价</div>
+							<div class="comment-textarea">
+								<textarea rows="10" cols="30" id="comm_content" name=""></textarea>
+							</div>
+							<div class="comment-func">
+								<div id="course-comm-tips" class="comment-tips">请填写内容，长度在1~140之间</div>
+								<div class="comment-button">
+									<button name="comm-submit" type="submit" class="btn btn-info btn-submit ">评价</button>
+								</div>
+							</div>
+						</div>
+						<!-- 评论发表框 end-->
+						<!-- 评价列表 -->
 						<div class="comment-detail-wrap">
 							<div class="comment-detail-list">
 								<div class="user-pic">
@@ -282,6 +300,6 @@
 	<!-- 这是jquery库文件 -->
 	<script type="text/javascript" src="../../lib/jQuery/2.1.1/jquery.min.js"></script>
 	<!-- 这是当前模块js文件 -->
-	<script type="text/javascript" src="ui-course-infor.js"></script>
+	<script type="text/javascript" src="ui-course-info.js"></script>
 </body>
 </html>

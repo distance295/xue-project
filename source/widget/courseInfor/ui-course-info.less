@@ -6,8 +6,9 @@
  * @version $Id$
  */
 //课程详情页---包含直播--录播--免费课
+
 .ui-course-infor-wrap {
-	width: 1190px;margin:10px auto 20px;overflow: hidden;
+	overflow: hidden;margin-bottom:20px;
 	.red{
 		color: #e74c3c;
 	}
@@ -246,6 +247,16 @@
 
 .course-detail {
 	display: none;overflow: hidden;margin-bottom: 10px;
+	.detail-login {
+	    color: #666666;
+	    font-weight: bold;
+	    line-height: 20px;
+	    overflow: hidden;
+	    padding-bottom: 20px;
+	    a {
+	    	color: #cc0000;
+	    }
+	}
 	table {
 	    background-color: #fbfbfb;
 	    border-collapse: collapse;
@@ -383,6 +394,26 @@
 		}
 	}
 
+}
+/*
+ * 课程详情页----课程评论框
+
+ */
+.ui-comment-info {
+	overflow:hidden;background: #f3f3f3 ;padding:20px;margin-bottom: 20px;
+		.comment-title {height:30px;line-height:30px;}
+		.comment-textarea {
+			overflow:hidden;
+			textarea {width:100%;height:100px;padding:5px; border:1px solid #ccc;}
+		}
+		.comment-func {
+			overflow:hidden;height:50px;
+			.comment-tips {float:left;color:#cc0000;line-height:30px;}
+			.comment-button {
+					float:right;
+					.btn-submit {width:70px;height:30px;line-height:20px;margin-top:5px;}
+			}
+		}
 }
 
 /*

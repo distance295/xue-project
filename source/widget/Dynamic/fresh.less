@@ -719,17 +719,14 @@
   }
 
   /** 
-   * 推荐新鲜事鼠标滑过整条信息的背景色改变
-   */
-  &.fresh-hover-style{
-     background: #fcfcfc;
-     cursor: pointer;
-  }
-  /** 
    * 热门新鲜事Style
    */
   &.fresh-popular-list{
-       border: none;
+       cursor: pointer;
+       &:hover{
+           background: #fcfcfc;
+           cursor: pointer;
+       }
        .fresh-avatar{
           margin:2px 10px 0 0;
           width: 40px;
@@ -1198,7 +1195,7 @@
    overflow: hidden;
    background: #fff;
    line-height: 30px;
-   padding: 10px 15px;
+   padding: 12px 15px;
    .font-size;
    .font-family;
    color:@font-color;

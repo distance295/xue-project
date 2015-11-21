@@ -48,9 +48,6 @@
   padding: 12px;
   overflow: hidden;
   /** 
-   * 推荐新鲜事鼠标滑过整条信息的背景色改变
-   */
-  /** 
    * 热门新鲜事Style
    */
   /**
@@ -718,12 +715,12 @@
   margin: 0 auto;
   width: auto;
 }
-.fresh-list.fresh-hover-style {
-  background: #fcfcfc;
+.fresh-list.fresh-popular-list {
   cursor: pointer;
 }
-.fresh-list.fresh-popular-list {
-  border: none;
+.fresh-list.fresh-popular-list:hover {
+  background: #fcfcfc;
+  cursor: pointer;
 }
 .fresh-list.fresh-popular-list .fresh-avatar {
   margin: 2px 10px 0 0;
@@ -1142,7 +1139,7 @@
   overflow: hidden;
   background: #fff;
   line-height: 30px;
-  padding: 10px 15px;
+  padding: 12px 15px;
   font-size: 12px;
   font-family: "SimSun";
   color: #333333;

@@ -2,8 +2,8 @@
 	公开课程：
 	@require xue.mousewheel.js
 	@require xue.sidescroll.min.js
-	@require ui-course-infor.js
-    @require ui-course-infor.less
+	@require ui-course-info.js
+    @require ui-course-info.less
 -->
 <div class="ui-course-infor-wrap">
 		<div class="course-left-player f-left">
