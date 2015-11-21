@@ -19,7 +19,7 @@
             
             <!-- *********************** 内容区域结束 *********************** -->
         </div>
-        <div class="col-md-2 col-sm-2 wrap-side wrap-mall">
+        <div class="col-md-2 col-sm-2 wrap-side wrap-mall pull-right">
             <div class="panel panel-default ">
             	<div class="panel-header">相关课程</div>
                 <div class="panel-body panel-heading">
@@ -35,7 +35,7 @@
     var PAGE_CONFIG = {
         ID: 'Index',
         MODULE: 'Mall',
-        TITLE: '商城首页--课程详情页',
+        TITLE: '商城首页--录播课程详情页',
         NAV_FIXED: false // 如果想要头部分类展开的话，设为true，如果不想直接展开设为false
     };
 </script>

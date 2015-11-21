@@ -8,7 +8,7 @@ fis.set('project.ignore', [
     'widget/**/*.md',
     '/config/**',
 //     '/static/**',
-    '/static/**/*.less',
+//    '/static/**/*.less',
     '/components/**',
     '/lib/foundation/**',
     '/lib/Font-Awesome/master/**',
@@ -30,6 +30,10 @@ fis.match('::packager', {
     })
 });
 
+fis.match('*.less', {
+    parser: fis.plugin('less'), //启用fis-parser-less插件
+    rExt: '.css'
+})
 
 // 不做修改直接拷贝的目录
 fis.match('/lib/*', {
@@ -52,6 +56,7 @@ fis.media('tmpl')
         release: '/data/$0'
     })
 
+
 // JSON文件规则
     .match('/widget/(**)/(*.json)', {
         release: '/data/$1/js/$2',
@@ -68,6 +73,12 @@ fis.media('tmpl')
         rExt: '.css',
         release: '/static/css/$1/$2'
     })
+    .match('/static/less/(*.less)', {
+        parser: fis.plugin('less'), //启用fis-parser-less插件
+        rExt: '.css',
+        release: '/static/css/$1'
+    })
+
 
 // pic资源图片规则
     .match('/widget/(*)/pic/(*.{png,jpg,gif,cur})', {
