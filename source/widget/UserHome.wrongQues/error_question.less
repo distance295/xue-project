@@ -1,0 +1,416 @@
+@charset "UTF-8";
+
+
+
+// html{
+//  font-size: 10px;
+//  min-width: 570px;
+// }
+
+@Nfont-size:1.4rem;
+@Sfont-size:1rem;
+@LRpadding:0.8rem;
+
+//body{
+//  background-color: rgb(241,242,246);
+//  line-height: 1;
+//  font-size: 10px;
+//  color:rgb(51,51,51);
+//}
+p{
+  font-size: @Nfont-size;
+  line-height: 1;
+  text-rendering: optimizeLegibility; 
+}
+div{
+  padding:0;
+  margin:0;
+}
+.columns{
+  padding:0;
+}
+
+/*错误题目css(start)*/
+.queSet{
+  border-bottom: 1px solid rgb(241,242,246);
+  padding-left: @LRpadding;
+  padding-right: @LRpadding;
+}
+.que{
+  float:left;
+  background-color: rgb(255,255,255);
+  padding: 0;
+  font-size: 1.4rem;
+  &{
+    margin-bottom: 2rem;  
+  }
+  
+  .que-tips{
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    color:rgb(153,153,153);
+  }
+}
+.que-head{
+  .queSet;
+  .que-head-source{
+    margin-top:0;
+    margin-bottom: 0;
+    padding-top: 1.3rem;
+    padding-bottom:1.3rem;
+    color:rgb(59,175,218);
+  }
+
+  .que-head-time-form{
+    font-size: @Sfont-size;
+    margin: 1.4rem 0 1.2rem 0;
+    color:rgb(153,153,153);
+  }
+}
+
+.que-point{
+  .queSet;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+  .que-point-know-form{
+    line-height: 1;
+    margin-bottom: 0;
+  }
+  .knowledge{
+    padding-right: 1.375rem;
+  }
+}
+
+.que-body{
+  .queSet;
+  .que-tips-head{
+    font-weight: bold;
+  }
+  .que-body-choice{
+    margin: 1.2rem 0;
+  }
+  .que-body-intro{
+    font-weight: bold;
+    line-height: 1.8;
+  }
+  .que-body-content{
+    font-weight: normal;
+    color:#333;
+    line-height: 1.8;
+  }
+  .que-body-arrow{
+    margin-right: 2rem;
+  }
+  .que-body-show-text{
+    cursor: pointer;
+    width: 70px;
+  }
+}
+
+.que-answer{
+  line-height: 1.8;
+  clear:both;
+  .queSet;
+  .que-answer-head{
+    font-weight: bold;
+  }
+  @RPadding:2rem;
+  .cusAns{
+    padding-right:@RPadding;
+    color:rgb(204,0,0);
+  }
+  .corAns{
+    padding-right: @RPadding;
+    color:rgb(51,153,204);
+  }
+  .explanace{
+    font-weight: normal;
+    color:#333;
+  }
+  .img-answer{
+    margin: 0;
+    vertical-align: top;
+    display:inline-block;
+  }
+  .que-answer-exp{
+    font-weight: bold;
+  }
+}
+
+.que-img{
+  padding: 0.9rem @LRpadding;
+  .stuAns{
+    width: 100px;
+    height: 70px;
+    cursor: pointer;
+  }
+  .que-voice{
+    display:inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 7.7rem;
+    height: 2.7rem;
+    vertical-align: middle;
+    background-color:rgb(55,188,155);
+    border:rgb(56,188,156);
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+    .que-voice-play{
+      position: absolute;
+      top: 30%;
+      left:15%;
+    }
+    .que-voice-img{
+      position: absolute;
+      top: 30%;
+      left:35%;
+    }
+  }
+}
+/* 错误题目css(end) */
+
+/* 链接浮窗css(start) */
+.links{
+  .alert-box{
+    margin-bottom: 0;
+    padding: 0;
+    text-align: center;
+    width: 6rem;
+    height: 7.2rem;
+    font-size:@Nfont-size;
+    border:none;
+    background-color: rgb(59,175,218);
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    .pict-tip {
+      margin: 1.4rem 1.8rem 0.7rem;
+    }
+    &:first-child{
+      border-radius: 0.25rem 0.25rem 0 0;
+    }
+    &:last-child{
+      border-radius: 0 0 0.25rem 0.25rem ;
+    }
+    &:hover{
+      background-color: rgb(37,153,196);
+      color: #fff;
+      transform:scale(1.1) translate(0.3rem,0) ;
+      -webkit-transform: scale(1.1) translate(0.3rem,0);
+      -moz-transform: scale(1.1) translate(0.3rem,0) ;
+      border-radius: 0.25rem;
+      z-index:10;
+      font-size: @Nfont-size*1.1;
+    }
+  }
+}
+/* 链接浮窗css(end) */
+
+/* 年级以及知识点选择css(start) */
+.choiceSet{
+  border-bottom: 1px dashed rgb(241,242,246);
+  padding: 0 @LRpadding;
+}
+@grey:rgb(102,102,102);
+.choiceSetting{
+  font-size: 1.2rem;
+  display: inline-block;
+  border-radius: 2px;
+  margin:1.1rem 1rem 0 0;
+  padding:0.2rem 0.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+.choiceSelect{
+  background-color: rgb(59,175,218);
+  color: #ffffff;
+}
+.choiceTip{
+  color:@grey;
+  font-size: 1.2rem;
+  margin:1.1rem 0 1.1rem 0;
+  padding:0.2rem 0;
+  text-align: center;
+  width:5rem;
+  margin-right:1rem;
+};
+.choice{
+  margin-bottom: 2rem;
+  background-color: rgb(255,255,255);
+  .choice-grade{
+    .choiceSet;
+    .choice-grade-tip{
+      .choiceTip
+    }
+    .choice-grade-cur{
+      span{
+        .choiceSetting;
+      }
+    }
+    .select-grade{
+      .choiceSelect;
+    }
+  }
+
+  .choice-subject{
+    .choiceSet;
+    .choice-subject-tip{
+      .choiceTip
+    }
+    .choice-subject-cur{
+
+      span{
+        .choiceSetting;
+      }
+      .select-subject{
+        .choiceSelect;
+      }
+    }
+  }
+  .choice-point{
+    .choiceSet;
+    .choice-point-tip{
+      .choiceTip;
+      letter-spacing: 0.3rem;
+    }
+    .choice-point-cur{
+      overflow: hidden;
+      height:3rem;
+      padding-right:0;
+      span{
+        .choiceSetting;
+      }
+      .select-point{
+        .choiceSelect;
+      }
+
+    }
+    .choice-cur-show{
+      overflow:auto;
+      height:9.5rem;
+    }
+    .chocie-point-show{
+      padding: 0;
+      width:5rem;
+      span{
+        font-size: 1.2rem;
+        display: inline-block;
+        margin:1.1rem 0 1.1rem 0;
+        padding:0.2rem 0.5rem;
+      }
+    }
+
+    .choice-point-link{
+      padding:0;
+      .chocie-point-show{
+        cursor: pointer;
+      }
+      .chocie-point-download{
+        cursor: pointer;
+        border-radius: 2px;
+        text-align: center;
+        font-size: 1.2rem;
+        color:#fff;
+        width:8.5rem;
+        margin:0.8rem 0 0.8rem 0.5rem;
+        padding:0.5rem 0.5rem;
+        background-color: rgb(59,175,218);
+      }
+    }
+
+  }
+}
+/* 年级以及知识点选择css(end) */
+
+/* 错题本头部css(start) */
+.errorQuestion-head{
+  background-color:rgb(59,175,218);
+  height: 8rem;
+  width: 100%;
+  line-height: 8rem;
+  .left-fade{
+    color:rgb(59,175,218);
+  }
+  .erq-head-min{
+    width: 22rem;
+    .erq-head{
+      width: 6.4rem;
+      height: 6.4rem;
+    }
+  }
+  .erq-info-up{
+    margin-top: 1.8rem;
+    margin-bottom: 0.1rem;
+    width: 18rem;
+    .erq-icon{
+      padding:0 0.3rem 0.1rem;
+      display: inline-block;
+      width: 2.2rem;
+      height: 1.6rem;
+      background: url("img/v1.png") no-repeat 0 0.1rem;
+    }
+    .erq-dis{
+      color:rgb(37,153,196);
+      font-size:1.3rem;
+    }
+    .erq-usePage{
+      color:#fff;
+    }
+    .erq-useName{
+      display: inline-block;
+      font-size: 1.8rem;
+      color: #fff;
+    }
+  }
+  .erq-info-below{
+    .erq-sex{
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background: url("img/sex-woman.png") no-repeat rgb(37,153,196) 45% 45%;
+    }
+    .erq-level{
+      .erq-level-left{
+        margin-top: 0.2rem;
+        margin-left: 0.8rem;
+        display: inline-block;
+        width:1.5rem;
+        height:1.8rem;
+        border-radius: 100% 0 0 100%;
+        background-color: rgb(255,188,60);
+      }
+      .erq-level-right{
+        margin-top: 0.2rem;
+        display: inline-block;
+        width:1.5rem;
+        height:1.8rem;
+        border-radius: 0 100% 100% 0;
+        background-color: rgb(255,188,60);
+      }
+      .erq-level-word{
+        margin-top: 0.2rem;
+        font-size: 1rem;
+        font-style: italic;
+        display: inline-block;
+        width:2.5rem;
+        height: 1.8rem;
+        line-height: 1.8rem;
+        color:#fff;
+        background-color: rgb(255,188,60);
+        text-align: center;
+      }
+
+    }
+  }
+
+  .erq-head-prize{
+    min-width:16rem;
+    .erq-prize{
+      margin: 2.5rem 0 0 1rem;
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+}

@@ -22,6 +22,9 @@
                 <span>学员数</span>
                 <span>价格<img src="/static/img/Mall.FindTeacher/down.png"></span>
             </div>
+            <div class="search_tips">
+                <p>根据关键字“<span>张瑾</span>”搜素</p>
+            </div>
             <div class="panel panel-default ">
                 <div class="panel-body pd0">
                 	<link rel="import" href="../../widget/Public.Module/course05.tpl?__inline">

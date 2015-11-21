@@ -7,7 +7,7 @@
         <li><a href="#">课程分类</a></li>
         <li class="active">三年级</li>
     </ol>
-    <div class="row top m20">
+    <div class="row top m20 pd5">
 <!--   12栏的用这个    -->
        <div class="col-md-12">
            
@@ -19,7 +19,7 @@
             <!-- *********************** 内容区域开始 *********************** -->
 
             <div class="panel panel-default ">
-                <div class="panel-body">
+                <div class="panel-body pd0">
                 	<link rel="import" href="../../widget/Public.Module/course03.tpl?__inline">
                 	<link rel="import" href="../../widget/Public.Module/course03.tpl?__inline">
                 </div>
@@ -27,9 +27,9 @@
 
             <!-- *********************** 内容区域结束 *********************** -->
         </div>
-        <div class="col-md-2 col-sm-2 wrap-side wrap-mall">
+        <div class="col-md-2 col-sm-2 wrap-side wrap-mall pull-right">
             <div class="panel panel-default ">
-                <div class="panel-body sideright-body">
+                <div class="panel-body sideright-body pd0">
                 	<div class="sideright-ad">
 						<a href="###"><img src="http://x04.xesimg.com/web/2015/11/19/14479235823994.jpg" ></a>
                 	</div>
