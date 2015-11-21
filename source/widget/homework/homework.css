@@ -44,57 +44,46 @@ body {
   background: #359dc4;
   color: #fff;
 }
-.homework-wrapper {
+.homework-wrapper-container {
   overflow: hidden;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
+  display: block;
   /**
      * 作业反馈style
      */
   /**
      * 评语部分style
      */
+  /** 
+     * 中等屏幕 桌面显示器 (<=1200px)
+     */
+  /** 
+     * 大屏幕 大桌面显示器 (≥1200px)
+     */
 }
-.homework-wrapper p,
-.homework-wrapper ul,
-.homework-wrapper h1,
-.homework-wrapper h2,
-.homework-wrapper h3,
-.homework-wrapper h4,
-.homework-wrapper h5,
-.homework-wrapper h6 {
+.homework-wrapper-container p,
+.homework-wrapper-container ul,
+.homework-wrapper-container h1,
+.homework-wrapper-container h2,
+.homework-wrapper-container h3,
+.homework-wrapper-container h4,
+.homework-wrapper-container h5,
+.homework-wrapper-container h6 {
   margin: 0;
   padding-bottom: 0;
 }
-.homework-wrapper h1,
-.homework-wrapper h2,
-.homework-wrapper h3,
-.homework-wrapper h4,
-.homework-wrapper h5,
-.homework-wrapper h6 {
+.homework-wrapper-container h1,
+.homework-wrapper-container h2,
+.homework-wrapper-container h3,
+.homework-wrapper-container h4,
+.homework-wrapper-container h5,
+.homework-wrapper-container h6 {
   color: #666;
 }
-.homework-wrapper .homework-container {
-  width: 100%;
-  color: #666;
-  overflow: hidden;
-}
-.homework-wrapper .homework-right-all {
-  width: 59px;
-  height: 500px;
-  margin-left: 30px;
-  background: #3bafda;
-}
-.homework-wrapper .homework-left-all {
+.homework-wrapper-container .homework-header {
   display: block;
   overflow: hidden;
 }
-.homework-wrapper .homework-left-all .homework-header {
-  display: block;
-  overflow: hidden;
-}
-.homework-wrapper .homework-left-all .homework-header p {
+.homework-wrapper-container .homework-header p {
   display: block;
   overflow: hidden;
   background: #ffdd87;
@@ -109,7 +98,7 @@ body {
   border-radius: 5px;
   margin-bottom: 14px;
 }
-.homework-wrapper .homework-left-all .homework-header p i {
+.homework-wrapper-container .homework-header p i {
   float: left;
   background: url("img/homeIcon.png");
   width: 18px;
@@ -118,7 +107,7 @@ body {
   margin: 12px 9px 0 20px;
   background-position: -144px -51px;
 }
-.homework-wrapper .homework-left-all .homework-header h2 {
+.homework-wrapper-container .homework-header h2 {
   display: block;
   overflow: hidden;
   line-height: 32px;
@@ -127,25 +116,25 @@ body {
   color: #666;
   font-family: "Microsoft YaHei";
 }
-.homework-wrapper .homework-left-all .homework-header h2 .homework-name {
+.homework-wrapper-container .homework-header h2 .homework-name {
   font-size: 18px;
   line-height: 28px;
 }
-.homework-wrapper .homework-left-all .homework-header h2 .homework-status {
+.homework-wrapper-container .homework-header h2 .homework-status {
   font-size: 12px;
   margin-left: 10px;
   font-family: "SimSun";
 }
-.homework-wrapper .homework-left-all .homework-header h2 .homework-status.homework-status-green {
+.homework-wrapper-container .homework-header h2 .homework-status.homework-status-green {
   color: #36bd9b;
 }
-.homework-wrapper .homework-left-all .homework-header h2 .homework-status.homework-status-blue {
+.homework-wrapper-container .homework-header h2 .homework-status.homework-status-blue {
   color: #3bafda;
 }
-.homework-wrapper .homework-left-all .homework-header h2 .homework-status.homework-status-yellow {
+.homework-wrapper-container .homework-header h2 .homework-status.homework-status-yellow {
   color: #ffbc3c;
 }
-.homework-wrapper .homework-left-all .homework-header h2 i {
+.homework-wrapper-container .homework-header h2 i {
   background: url("img/homeIcon.png");
   width: 18px;
   height: 18px;
@@ -153,7 +142,7 @@ body {
   margin: 6px 0 0 8px;
   background-position: -164px -51px;
 }
-.homework-wrapper .homework-left-all .homework-header h2 .homework-remind-btn {
+.homework-wrapper-container .homework-header h2 .homework-remind-btn {
   background: #3bafda;
   border: none;
   -webkit-border-radius: 2px;
@@ -171,13 +160,13 @@ body {
   line-height: normal;
   cursor: pointer;
 }
-.homework-wrapper .homework-left-all .homework-header h2 .homework-remind-btn:hover {
+.homework-wrapper-container .homework-header h2 .homework-remind-btn:hover {
   background: #2392ba;
 }
-.homework-wrapper .homework-left-all .homework-header h2 .homework-remind-btn.homework-remind-disabled-btn {
+.homework-wrapper-container .homework-header h2 .homework-remind-btn.homework-remind-disabled-btn {
   background: #c9c9c9;
 }
-.homework-wrapper .homework-left-all .homework-image-box {
+.homework-wrapper-container .homework-image-box {
   background: #fff;
   padding: 30px;
   margin-top: 20px;
@@ -187,67 +176,70 @@ body {
   -o-border-radius: 6px;
   border-radius: 6px;
   overflow: hidden;
+  display: block;
 }
-.homework-wrapper .homework-left-all .homework-image-area {
+.homework-wrapper-container .homework-image-area {
   width: 100%;
   overflow: hidden;
 }
-.homework-wrapper .homework-left-all .homework-Thumbnails-box {
+.homework-wrapper-container .homework-Thumbnails-box {
   width: 150px;
   margin-right: 30px;
-  height: 100%;
+  height: 516px;
   margin-top: 10px;
   overflow: hidden;
 }
-.homework-wrapper .homework-left-all .homework-Thumbnails-box .homework-page-btn {
+.homework-wrapper-container .homework-Thumbnails-box .homework-page-btn {
   float: left;
-  width: 100%;
+  width: 140px;
   height: 18px;
   text-align: center;
 }
-.homework-wrapper .homework-left-all .homework-Thumbnails-box .homework-page-btn i {
+.homework-wrapper-container .homework-Thumbnails-box .homework-page-btn i {
   background: url("img/homeIcon.png");
   width: 33px;
   height: 18px;
   display: inline-block;
 }
-.homework-wrapper .homework-left-all .homework-Thumbnails-box .homework-page-btn i.homework-prev-active {
+.homework-wrapper-container .homework-Thumbnails-box .homework-page-btn i.homework-prev-active {
   background-position: 0 0;
   cursor: pointer;
 }
-.homework-wrapper .homework-left-all .homework-Thumbnails-box .homework-page-btn i.homework-prev-disabled {
+.homework-wrapper-container .homework-Thumbnails-box .homework-page-btn i.homework-prev-disabled {
   background-position: -34px 0;
 }
-.homework-wrapper .homework-left-all .homework-Thumbnails-box .homework-page-btn i.homework-next-active {
+.homework-wrapper-container .homework-Thumbnails-box .homework-page-btn i.homework-next-active {
   background-position: 0 -19px;
   cursor: pointer;
 }
-.homework-wrapper .homework-left-all .homework-Thumbnails-box .homework-page-btn i.homework-next-disabled {
+.homework-wrapper-container .homework-Thumbnails-box .homework-page-btn i.homework-next-disabled {
   background-position: -34px -19px;
 }
-.homework-wrapper .homework-left-all .homework-Thumbnails-box .homework-Thumbnails-img-list {
+.homework-wrapper-container .homework-Thumbnails-box .homework-Thumbnails-img-list {
   float: left;
   width: 100%;
+  height: 480px;
   position: relative;
   overflow: hidden;
 }
-.homework-wrapper .homework-left-all .homework-Thumbnails-box .homework-Thumbnails-img-list ul {
+.homework-wrapper-container .homework-Thumbnails-box .homework-Thumbnails-img-list ul {
   left: 0;
   top: 0;
   margin: 0;
   padding: 0;
   position: absolute;
 }
-.homework-wrapper .homework-left-all .homework-Thumbnails-box .homework-Thumbnails-img-list ul li {
+.homework-wrapper-container .homework-Thumbnails-box .homework-Thumbnails-img-list ul li {
   float: left;
-  width: 100%;
+  width: 136px;
+  height: 96px;
   margin: 10px 0;
   border: 1px solid #eaeaea;
   padding: 1px;
   position: relative;
   box-sizing: content-box;
 }
-.homework-wrapper .homework-left-all .homework-Thumbnails-box .homework-Thumbnails-img-list ul li .homework-MaskLayer {
+.homework-wrapper-container .homework-Thumbnails-box .homework-Thumbnails-img-list ul li .homework-MaskLayer {
   position: absolute;
   left: 0;
   right: 0;
@@ -257,53 +249,54 @@ body {
   opacity: 0.3;
   filter: alpha(opacity=30);
 }
-.homework-wrapper .homework-left-all .homework-Thumbnails-box .homework-Thumbnails-img-list ul li .homework-MaskLayer-num {
+.homework-wrapper-container .homework-Thumbnails-box .homework-Thumbnails-img-list ul li .homework-MaskLayer-num {
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
+  line-height: 100px;
   bottom: 0;
   font-family: "Microsoft YaHei", "微软雅黑";
   font-size: 30px;
-  line-height: 50%;
   text-align: center;
   color: #fff;
   cursor: pointer;
 }
-.homework-wrapper .homework-left-all .homework-Thumbnails-box .homework-Thumbnails-img-list ul li.homework-current {
+.homework-wrapper-container .homework-Thumbnails-box .homework-Thumbnails-img-list ul li.homework-current {
   border: 2px solid #3baeda;
   padding: 0px;
 }
-.homework-wrapper .homework-left-all .homework-Thumbnails-box .homework-Thumbnails-img-list ul li.homework-current i {
+.homework-wrapper-container .homework-Thumbnails-box .homework-Thumbnails-img-list ul li.homework-current i {
   background: url("img/homeIcon.png") no-repeat;
   background-position: -78px 0;
   width: 10px;
   height: 14px;
   position: absolute;
   right: -12px;
-  top: 30px;
+  top: 41px;
   display: inline-block;
 }
-.homework-wrapper .homework-left-all .homework-Thumbnails-box .homework-Thumbnails-img-list ul li img {
+.homework-wrapper-container .homework-Thumbnails-box .homework-Thumbnails-img-list ul li img {
   width: 100%;
   height: 100%;
   cursor: pointer;
 }
-.homework-wrapper .homework-bigImg-box {
+.homework-wrapper-container .homework-bigImg-box {
   display: block;
   overflow: hidden;
+  height: 536px;
   background: #eeeeee;
 }
-.homework-wrapper .homework-bigImg-box .homework-rightMeun {
+.homework-wrapper-container .homework-bigImg-box .homework-rightMeun {
   width: 54px;
   text-align: center;
   height: 100%;
 }
-.homework-wrapper .homework-bigImg-box .homework-rightMeun ul {
+.homework-wrapper-container .homework-bigImg-box .homework-rightMeun ul {
   margin: 0;
   padding: 0;
 }
-.homework-wrapper .homework-bigImg-box .homework-rightMeun ul li {
+.homework-wrapper-container .homework-bigImg-box .homework-rightMeun ul li {
   float: left;
   width: 100%;
   height: 25px;
@@ -311,64 +304,69 @@ body {
   margin-top: 20px;
   text-align: center;
 }
-.homework-wrapper .homework-bigImg-box .homework-rightMeun ul li i {
+.homework-wrapper-container .homework-bigImg-box .homework-rightMeun ul li i {
   background: url("img/homeIcon.png") no-repeat;
   width: 20px;
   height: 20px;
   display: inline-block;
   cursor: pointer;
 }
-.homework-wrapper .homework-bigImg-box .homework-rightMeun ul li i.homework-audio {
+.homework-wrapper-container .homework-bigImg-box .homework-rightMeun ul li i.homework-audio {
   background-position: -180px 0;
 }
-.homework-wrapper .homework-bigImg-box .homework-rightMeun ul li i.homework-audio-disabled {
+.homework-wrapper-container .homework-bigImg-box .homework-rightMeun ul li i.homework-audio-disabled {
   background-position: -92px 0;
 }
-.homework-wrapper .homework-bigImg-box .homework-rightMeun ul li i.homework-zoomout-btn {
+.homework-wrapper-container .homework-bigImg-box .homework-rightMeun ul li i.homework-zoomout-btn {
   background-position: -114px 0;
 }
-.homework-wrapper .homework-bigImg-box .homework-rightMeun ul li i.homework-rightRotate-btn {
+.homework-wrapper-container .homework-bigImg-box .homework-rightMeun ul li i.homework-rightRotate-btn {
   background-position: -158px 0;
 }
-.homework-wrapper .homework-bigImg-box .homework-rightMeun ul li i.homework-leftRotate-btn {
+.homework-wrapper-container .homework-bigImg-box .homework-rightMeun ul li i.homework-leftRotate-btn {
   background-position: -136px -24px;
 }
-.homework-wrapper .homework-bigImg-box .homework-rightMeun ul li i.homework-zoom-btn {
+.homework-wrapper-container .homework-bigImg-box .homework-rightMeun ul li i.homework-zoom-btn {
   background-position: -136px 0;
 }
-.homework-wrapper .homework-ImageTransform {
+.homework-wrapper-container .homework-ImageTransform {
   display: block;
   overflow: hidden;
+  height: 534px;
   background: #fff;
   position: relative;
   border: 1px solid #eaeaea;
   box-sizing: content-box;
 }
-.homework-wrapper .homework-Feedback {
-  background: url("img/htmlBg.png") no-repeat;
-  width: 558px;
-  height: 492px;
+.homework-wrapper-container .homework-Feedback {
+  background: url("img/htmlBg_1190.png") no-repeat;
+  width: 555px;
+  height: 483px;
+  left: 50%;
+  top: 50%;
+  margin-left: -277.5px;
+  margin-top: -241.5px;
   position: absolute;
   display: none;
 }
-.homework-wrapper .homework-Feedback-cont {
+.homework-wrapper-container .homework-Feedback-cont {
   margin: 0 auto;
-  width: 490px;
+  width: 480px;
   font-family: "Microsoft YaHei", "微软雅黑";
 }
-.homework-wrapper .homework-Feedback-header {
+.homework-wrapper-container .homework-Feedback-header {
   float: left;
   width: 480px;
   height: 153px;
-  margin: 31px 0 0 10px;
+  margin: 28px 0 0 0;
   position: relative;
 }
-.homework-wrapper .homework-Feedback-header .homework-likeEmote {
+.homework-wrapper-container .homework-Feedback-header .homework-likeEmote {
   position: absolute;
   top: 43px;
   left: 0;
 }
-.homework-wrapper .homework-Feedback-header .homework-dialog {
+.homework-wrapper-container .homework-Feedback-header .homework-dialog {
   position: absolute;
   top: 0;
   left: 107px;
@@ -376,7 +374,7 @@ body {
   height: 73px;
   background: url("img/Dialog.png") no-repeat;
 }
-.homework-wrapper .homework-Feedback-header .homework-dialog .homework-tipsInfo {
+.homework-wrapper-container .homework-Feedback-header .homework-dialog .homework-tipsInfo {
   display: block;
   overflow: hidden;
   margin: 9px 0 0 10px;
@@ -386,18 +384,18 @@ body {
   color: #333;
   letter-spacing: -0.5px;
 }
-.homework-wrapper .homework-Feedback-header .homework-dialog em {
+.homework-wrapper-container .homework-Feedback-header .homework-dialog em {
   color: #e74c3c;
   font-style: normal;
 }
-.homework-wrapper .homework-Feedback-header .homework-scoreArea {
+.homework-wrapper-container .homework-Feedback-header .homework-scoreArea {
   position: absolute;
   right: 0;
   bottom: 0;
   width: 153px;
   text-align: center;
 }
-.homework-wrapper .homework-Feedback-header .homework-scoreArea .homework-scoreLine {
+.homework-wrapper-container .homework-Feedback-header .homework-scoreArea .homework-scoreLine {
   background: url("img/homeIcon.png") no-repeat;
   width: 123px;
   height: 34px;
@@ -405,57 +403,57 @@ body {
   background-position: 0 -45px;
   overflow: hidden;
 }
-.homework-wrapper .homework-Feedback-header .homework-scoreArea .homework-score {
+.homework-wrapper-container .homework-Feedback-header .homework-scoreArea .homework-score {
   width: 153px;
   display: block;
   overflow: hidden;
 }
-.homework-wrapper .homework-Feedback-header .homework-scoreArea .homework-score img {
+.homework-wrapper-container .homework-Feedback-header .homework-scoreArea .homework-score img {
   padding: 0 3px;
   vertical-align: inherit;
 }
-.homework-wrapper p.homework-Feedback-describe {
+.homework-wrapper-container p.homework-Feedback-describe {
   float: left;
   width: 480px;
   color: #e74c3c;
   font-size: 14px;
   line-height: 24px;
-  height: 200px;
-  margin: 20px 0 0 10px;
+  height: 170px;
+  margin: 20px 0 0 0;
   overflow-y: auto;
   overflow-x: hidden;
   word-break: break-all;
   word-wrap: break-word;
 }
-.homework-wrapper .homework-Feedback-video {
+.homework-wrapper-container .homework-Feedback-video {
   float: left;
   width: 480px;
   color: #666;
   font-size: 12px;
-  margin: 10px 0 0 10px;
+  margin: 10px 0 0 0;
 }
-.homework-wrapper .homework-Feedback-video h3 {
+.homework-wrapper-container .homework-Feedback-video h3 {
   width: 100%;
   line-height: 24px;
   font-size: 14px;
   font-weight: normal;
 }
-.homework-wrapper .homework-Feedback-video .homework-videoInfo {
+.homework-wrapper-container .homework-Feedback-video .homework-videoInfo {
   width: 100%;
   margin-top: 5px;
   font-size: 12px;
   font-family: "SimSun";
 }
-.homework-wrapper .homework-Feedback-video .homework-videoInfo ul {
+.homework-wrapper-container .homework-Feedback-video .homework-videoInfo ul {
   margin: 0;
   padding: 0;
 }
-.homework-wrapper .homework-Feedback-video .homework-videoInfo ul li {
+.homework-wrapper-container .homework-Feedback-video .homework-videoInfo ul li {
   float: left;
   margin-right: 50px;
   line-height: 24px;
 }
-.homework-wrapper .homework-Feedback-video .homework-videoInfo ul li i {
+.homework-wrapper-container .homework-Feedback-video .homework-videoInfo ul li i {
   float: left;
   background: url("img/homeIcon.png") no-repeat;
   width: 17px;
@@ -464,20 +462,20 @@ body {
   display: inline-block;
   background-position: -183px -51px;
 }
-.homework-wrapper .homework-Feedback-video .homework-videoInfo ul li a {
+.homework-wrapper-container .homework-Feedback-video .homework-videoInfo ul li a {
   color: #3bafda;
   text-decoration: none;
 }
-.homework-wrapper .homework-Feedback-video .homework-videoInfo ul li a:hover {
+.homework-wrapper-container .homework-Feedback-video .homework-videoInfo ul li a:hover {
   text-decoration: underline;
 }
-.homework-wrapper .homework-comment-box {
+.homework-wrapper-container .homework-comment-box {
   width: 100%;
   font-family: "Microsoft YaHei";
   padding-top: 30px;
   overflow: hidden;
 }
-.homework-wrapper .homework-comment-box .homework-star {
+.homework-wrapper-container .homework-comment-box .homework-star {
   width: 100%;
   line-height: 24px;
   height: 24px;
@@ -485,15 +483,15 @@ body {
   font-size: 16px;
   color: #666;
 }
-.homework-wrapper .homework-comment-box .homework-star .homework-star-area {
+.homework-wrapper-container .homework-comment-box .homework-star .homework-star-area {
   margin-left: 5px;
   margin-top: 2px;
 }
-.homework-wrapper .homework-comment-box .homework-star .homework-star-area ul {
+.homework-wrapper-container .homework-comment-box .homework-star .homework-star-area ul {
   padding: 0;
   margin: 0;
 }
-.homework-wrapper .homework-comment-box .homework-star .homework-star-area ul li {
+.homework-wrapper-container .homework-comment-box .homework-star .homework-star-area ul li {
   float: left;
   width: 16px;
   height: 16px;
@@ -503,14 +501,14 @@ body {
   background-position: -166px -31px;
   cursor: pointer;
 }
-.homework-wrapper .homework-comment-box .homework-star .homework-star-area ul li.on {
+.homework-wrapper-container .homework-comment-box .homework-star .homework-star-area ul li.on {
   background-position: -184px -31px;
 }
-.homework-wrapper .homework-comment-box .homework-star .homework-star-area .homework-star-score-num {
+.homework-wrapper-container .homework-comment-box .homework-star .homework-star-area .homework-star-score-num {
   float: left;
   display: none;
 }
-.homework-wrapper .homework-comment-box textarea {
+.homework-wrapper-container .homework-comment-box textarea {
   line-height: 24px;
   border: 1px solid #eaeaea;
   height: 135px;
@@ -522,27 +520,27 @@ body {
   overflow-y: auto;
   width: 100%;
 }
-.homework-wrapper .homework-comment-box .homework-comment {
+.homework-wrapper-container .homework-comment-box .homework-comment {
   float: left;
   font-size: 14px;
 }
-.homework-wrapper .homework-comment-box p {
+.homework-wrapper-container .homework-comment-box p {
   width: 100%;
   line-height: 24px;
   color: #333;
   margin-top: 15px;
 }
-.homework-wrapper .homework-comment-box p.homework-date {
+.homework-wrapper-container .homework-comment-box p.homework-date {
   float: left;
   font-family: "SimSun";
   font-size: 12px;
 }
-.homework-wrapper .homework-submit-box {
+.homework-wrapper-container .homework-submit-box {
   float: left;
   width: 100%;
   margin-top: 10px;
 }
-.homework-wrapper .homework-submit-btn {
+.homework-wrapper-container .homework-submit-btn {
   background: #3bafda;
   border: none;
   -webkit-border-radius: 2px;
@@ -560,8 +558,64 @@ body {
   font-family: "SimSun";
   font-size: 14px;
 }
-.homework-wrapper .homework-submit-btn:hover {
+.homework-wrapper-container .homework-submit-btn:hover {
   background: #2392ba;
+}
+@media (max-width: 1200px) {
+  .homework-wrapper-container .homework-Thumbnails-box {
+    width: 128px;
+    height: 452px;
+  }
+  .homework-wrapper-container .homework-Thumbnails-box .homework-page-btn {
+    width: 118px;
+  }
+  .homework-wrapper-container .homework-Thumbnails-box .homework-Thumbnails-img-list {
+    height: 416px;
+  }
+  .homework-wrapper-container .homework-Thumbnails-box .homework-Thumbnails-img-list ul li {
+    width: 114px;
+    height: 80px;
+  }
+  .homework-wrapper-container .homework-Thumbnails-box .homework-Thumbnails-img-list ul li .homework-MaskLayer-num {
+    line-height: 84px;
+  }
+  .homework-wrapper-container .homework-Thumbnails-box .homework-Thumbnails-img-list ul li.homework-current i {
+    top: 33px;
+  }
+  .homework-wrapper-container .homework-bigImg-box {
+    height: 472px;
+  }
+  .homework-wrapper-container .homework-ImageTransform {
+    height: 470px;
+  }
+}
+@media (min-width: 1200px) {
+  .homework-wrapper-container .homework-Thumbnails-box {
+    width: 150px;
+    height: 516px;
+  }
+  .homework-wrapper-container .homework-Thumbnails-box .homework-page-btn {
+    width: 140px;
+  }
+  .homework-wrapper-container .homework-Thumbnails-box .homework-Thumbnails-img-list {
+    height: 480px;
+  }
+  .homework-wrapper-container .homework-Thumbnails-box .homework-Thumbnails-img-list ul li {
+    width: 136px;
+    height: 96px;
+  }
+  .homework-wrapper-container .homework-Thumbnails-box .homework-Thumbnails-img-list ul li .homework-MaskLayer-num {
+    line-height: 100px;
+  }
+  .homework-wrapper-container .homework-Thumbnails-box .homework-Thumbnails-img-list ul li.homework-current i {
+    top: 41px;
+  }
+  .homework-wrapper-container .homework-bigImg-box {
+    height: 536px;
+  }
+  .homework-wrapper-container .homework-ImageTransform {
+    height: 534px;
+  }
 }
 .homework-panel-style.panel {
   margin-bottom: 0;

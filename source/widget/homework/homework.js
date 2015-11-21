@@ -47,17 +47,16 @@ homeWork.path = '/static/img/Homework/shuzi';
 	       _bodyW = document.body.clientWidth;
 		   _bodyH = document.body.clientHeight;
 		}
-		if( _bodyW < 1190){
+		if( _bodyW >= 1200){
 	      // _bodyH = (1024*10)/16;
-	        _bodyH = (1440*10)/16;
+	        _bodyH = 515;
 		}else{
-			_bodyH = (1440*10)/16;
+			_bodyH = 480;
 		}
-		console.log(_bodyH)
         
         //具体交作业图片区域的跨度和高度的控制
-		var _home_Thumbnails_H = parseInt(_bodyH - this.box.home_header.height() - this.box.header_topbar.height() - this.box.header_myheader.height() - 30*2 - 20*2 -10*2);
-		var _home_bigImg_H = parseInt(_bodyH - this.box.home_header.height() - this.box.header_topbar.height() - this.box.header_myheader.height() - 30*2 - 20*2);
+		var _home_Thumbnails_H = parseInt(_bodyH -20/*- this.box.home_header.height() - this.box.header_topbar.height() - this.box.header_myheader.height() - 30*2 - 20*2 -10*2*/);
+		var _home_bigImg_H = parseInt(_bodyH /*- this.box.home_header.height() - this.box.header_topbar.height() - this.box.header_myheader.height() - 30*2 - 20*2*/);
 
 		this.box.home_samllBox.height(_home_Thumbnails_H);
 		this.box.home_bigBox.height(_home_bigImg_H);
@@ -131,12 +130,14 @@ $.fn.imagePage = function(params){
 	var picsmall_w = $(this).find(params.smallPic).find('ul li').outerWidth(true);
 	var picsmall_h = $(this).find(params.smallPic).find('ul li').outerHeight(true);
 	$(this).find(params.smallPic).find('ul').height(picsmall_num*picsmall_h);
+
 	//判断作业反馈是否存在
 	var Feedback_flag = $(this).find(params.smallPic).find('li').eq(picsmall_num-1).find('.homework-MaskLayer').length;
 	var pictime;
 	var tpqhnum=0;//当前选中图片的个数
 	var xtqhnum=0;
 	var popnum=0;
+	var _tabnum = 0;
 	var _src;
 	if( params.isZoom ){
 		var _ImageTransform ='';
@@ -165,6 +166,7 @@ $.fn.imagePage = function(params){
 		  $(_this).find('.homework-Feedback').hide();
 		  $(_this).find('.ImageTransformJs').show();
 		  _src = $(_this).find(params.bigPic).find('li').eq(tpqhnum).find('img').attr('src');
+
 		  //判断是否存在缩放功能
 		  if( params.isZoom ){
                _ImageTransform.load(_src);
@@ -180,8 +182,10 @@ $.fn.imagePage = function(params){
 			  var maxHeight = $(_this).find(params.bigPic).height();
 			  var imgWidth = $(_this).find(params.bigPic).find('.ImageTransformJs').width();
 			  var imgHeight = $(_this).find(params.bigPic).find('.ImageTransformJs').height();
-			  var rate=(maxHeight/imgHeight>maxWidth/imgHeight?maxWidth/imgHeight:maxHeight/imgHeight);
-              
+
+			  var rate=(maxHeight/imgHeight>maxWidth/imgWidth?maxWidth/imgWidth:maxHeight/imgHeight);
+              $(_this).find(params.bigPic).find('.ImageTransformJs').attr('_imgW',imgWidth).attr('_imgH',imgHeight);
+
 			  $(_this).find(params.bigPic).find('.ImageTransformJs').css({
 			  	  'width':imgWidth*rate,
 			  	  'height':imgHeight*rate,
@@ -195,6 +199,7 @@ $.fn.imagePage = function(params){
 
 	//小图切换过程
 	function minshow(tpqhnum){
+		var picsmall_h = $(_this).find(params.smallPic).find('ul li').outerHeight(true);
 		if( picsmall_num > params.min_picnum ){
 
 		   $(_this).find(params.prev_btn).addClass('homework-prev-active').removeClass('homework-prev-disabled');
@@ -212,11 +217,15 @@ $.fn.imagePage = function(params){
 		   var _scrollH = -_scrollnum*picsmall_h;
 		   if( tpqhnum < params.min_picnum-1 ){
 		   	  _scrollH=0;
-		   }
-		   if( tpqhnum == picsmall_num-1 ){
+		   	  console.log(1)
+		   }else if( tpqhnum == picsmall_num-1 ){
 		   	  _scrollH = -(_scrollnum-1)*picsmall_h;
+		   }else{
+		   	   _tabnum = _tabnum +1;
 		   }
-           $(_this).find(params.smallPic).find('ul').stop().animate({'top':_scrollH},params.delayTime);
+		   console.log(_tabnum)
+		   
+           $(_this).find(params.smallPic).find('ul').stop().animate({'top':_scrollH},params.delayTime).attr('_top',_scrollH);
 		}else{
 		  $(_this).find(params.prev_btn).addClass('homework-prev-disabled').removeClass('homework-prev-active');
           $(_this).find(params.next_btn).addClass('homework-next-disabled').removeClass('homework-next-active');

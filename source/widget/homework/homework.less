@@ -52,11 +52,9 @@ html,body {
       color: #fff;
    }
 }
-.homework-wrapper{
+.homework-wrapper-container{
     overflow: hidden;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
+    display: block;
     p,ul,h1,h2,h3,h4,h5,h6{
         margin: 0;
         padding-bottom: 0
@@ -64,214 +62,203 @@ html,body {
     h1, h2, h3, h4, h5, h6{
         color: #666;
     }
-    .homework-container{
-        width: 100%;
-        color: #666;
-        overflow: hidden;
-    }
-    .homework-right-all{
-        width: 59px;
-        height: 500px;
-        margin-left: 30px;
-        background: #3bafda;
-    }
-    .homework-left-all{
-        display: block;
-        overflow: hidden;
-        .homework-header{
+    .homework-header{
+          display: block;
+          overflow: hidden;
+          p{
               display: block;
               overflow: hidden;
-              p{
-                  display: block;
-                  overflow: hidden;
-                  background: #ffdd87;
-                  line-height: 42px;
-                  .font-size(14px);
-                  color: #333;
-                  .font-family("Microsoft YaHei");
-                  .border-radius(5px);
-                  margin-bottom: 14px;
-                  i{
-                      float: left;
-                      background: url("img/homeIcon.png");
-                      width: 18px;
-                      height: 18px;
-                      display: inline-block;
-                      margin:12px 9px 0 20px;
-                      background-position: -144px -51px;
+              background: #ffdd87;
+              line-height: 42px;
+              .font-size(14px);
+              color: #333;
+              .font-family("Microsoft YaHei");
+              .border-radius(5px);
+              margin-bottom: 14px;
+              i{
+                  float: left;
+                  background: url("img/homeIcon.png");
+                  width: 18px;
+                  height: 18px;
+                  display: inline-block;
+                  margin:12px 9px 0 20px;
+                  background-position: -144px -51px;
+              }
+          }
+          h2{
+              display: block;
+              overflow: hidden;
+              line-height: 32px;
+              font-weight: normal;
+              .font-size(14px);
+              color: #666;
+              .font-family("Microsoft YaHei");
+              .homework-name{
+                 .font-size(18px);
+                  line-height: 28px;
+              }
+              .homework-status{
+                 .font-size();
+                  margin-left: 10px;
+                  .font-family();
+                  &.homework-status-green{
+                        color: #36bd9b;
+                  }
+                  &.homework-status-blue{
+                        color: #3bafda;
+                  }
+                  &.homework-status-yellow{
+                        color: #ffbc3c;
                   }
               }
-              h2{
-                  display: block;
-                  overflow: hidden;
-                  line-height: 32px;
-                  font-weight: normal;
-                  .font-size(14px);
-                  color: #666;
-                  .font-family("Microsoft YaHei");
-                  .homework-name{
-                     .font-size(18px);
-                      line-height: 28px;
-                  }
-                  .homework-status{
-                     .font-size();
-                      margin-left: 10px;
-                      .font-family();
-                      &.homework-status-green{
-                            color: #36bd9b;
-                      }
-                      &.homework-status-blue{
-                            color: #3bafda;
-                      }
-                      &.homework-status-yellow{
-                            color: #ffbc3c;
-                      }
-                  }
-                  i{
-                      background: url("img/homeIcon.png");
-                      width: 18px;
-                      height: 18px;
-                      display: inline-block;
-                      margin:6px 0 0 8px;
-                      background-position: -164px -51px;
-                  }
-                  .homework-remind-btn{
-                      background: #3bafda;
-                      border: none;
-                      .border-radius(2px);
-                      text-align: center;
-                      color: #fff;
-                      margin: 0;
-                      padding: 8px 26px;
-                      margin-left: 10px;
-                      .font-family;
-                      .font-size(14px);
-                      line-height: normal;
-                      cursor: pointer;
-                      &:hover{
-                          background: #2392ba;
-                      }
-                      &.homework-remind-disabled-btn{
-                          background: #c9c9c9;
-                      }
-                  }
-                  
+              i{
+                  background: url("img/homeIcon.png");
+                  width: 18px;
+                  height: 18px;
+                  display: inline-block;
+                  margin:6px 0 0 8px;
+                  background-position: -164px -51px;
               }
-        }
-        .homework-image-box{
-             background: #fff;
-             padding: 30px;
-             margin-top:20px; 
-             .border-radius(6px); 
-             overflow: hidden;
-        }
-        .homework-image-area{
-            width: 100%;
-            overflow: hidden;
-        }
-        .homework-Thumbnails-box{
-            width: 150px;
-            margin-right: 30px;
-            height: 100%;
-            margin-top:10px;
-            overflow: hidden;
-            .homework-page-btn{
-                float: left;
-                width: 100%;
+              .homework-remind-btn{
+                  background: #3bafda;
+                  border: none;
+                  .border-radius(2px);
+                  text-align: center;
+                  color: #fff;
+                  margin: 0;
+                  padding: 8px 26px;
+                  margin-left: 10px;
+                  .font-family;
+                  .font-size(14px);
+                  line-height: normal;
+                  cursor: pointer;
+                  &:hover{
+                      background: #2392ba;
+                  }
+                  &.homework-remind-disabled-btn{
+                      background: #c9c9c9;
+                  }
+              }
+              
+          }
+    }
+    .homework-image-box{
+         background: #fff;
+         padding: 30px;
+         margin-top:20px; 
+         .border-radius(6px); 
+         overflow: hidden;
+         display: block;
+    }
+    .homework-image-area{
+        width: 100%;
+        overflow: hidden;
+    }
+    .homework-Thumbnails-box{
+        width: 150px;
+        margin-right: 30px;
+        height: 516px;
+        margin-top:10px;
+        overflow: hidden;
+        .homework-page-btn{
+            float: left;
+            width: 140px;
+            height: 18px;
+            text-align: center;
+            i{
+                background: url("img/homeIcon.png");
+                width: 33px;
                 height: 18px;
-                text-align: center;
-                i{
-                    background: url("img/homeIcon.png");
-                    width: 33px;
-                    height: 18px;
-                    display: inline-block;
-                    &.homework-prev-active{
-                        background-position: 0 0;
-                        cursor: pointer;
-                    }
-                    &.homework-prev-disabled{
-                        background-position: -34px 0;
-                    }
-                    &.homework-next-active{
-                        background-position: 0 -19px;
-                        cursor: pointer;
-                    }
-                    &.homework-next-disabled{
-                        background-position: -34px -19px;
-                    }
+                display: inline-block;
+                &.homework-prev-active{
+                    background-position: 0 0;
+                    cursor: pointer;
+                }
+                &.homework-prev-disabled{
+                    background-position: -34px 0;
+                }
+                &.homework-next-active{
+                    background-position: 0 -19px;
+                    cursor: pointer;
+                }
+                &.homework-next-disabled{
+                    background-position: -34px -19px;
                 }
             }
-            .homework-Thumbnails-img-list{
-                  float: left;
-                  width: 100%;
-                  position: relative;
-                  overflow: hidden;
-                  ul{
-                        left: 0;
-                        top: 0;
-                        margin: 0;
-                        padding:0;
-                        position:absolute;
-                        li{
-                            float: left;
-                            width: 100%;
-                            margin: 10px 0;
-                            border: 1px solid #eaeaea;
-                            padding: 1px;
-                            position: relative;
-                            box-sizing: content-box;
-                            .homework-MaskLayer{
+        }
+        .homework-Thumbnails-img-list{
+              float: left;
+              width: 100%;
+              height: 480px;
+              position: relative;
+              overflow: hidden;
+              ul{
+                    left: 0;
+                    top: 0;
+                    margin: 0;
+                    padding:0;
+                    position:absolute;
+                    li{
+                        float: left;
+                        width: 136px;
+                        height: 96px;
+                        margin: 10px 0;
+                        border: 1px solid #eaeaea;
+                        padding: 1px;
+                        position: relative;
+                        box-sizing: content-box;
+                        .homework-MaskLayer{
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            background: #000;
+                            opacity: 0.3;
+                            filter: Alpha(opacity=30);
+                        }    
+                        .homework-MaskLayer-num{
+                              position: absolute;
+                              left: 0;
+                              right: 0;
+                              top: 0;
+                              line-height: 100px;
+                              bottom: 0;
+                              font-family: "Microsoft YaHei","微软雅黑";
+                              font-size: 30px;
+                              text-align: center;
+                              color: #fff;
+                              cursor: pointer;
+                        }
+                        &.homework-current{
+                            border: 2px solid #3baeda;
+                            padding: 0px;
+                            i{
+                                background: url("img/homeIcon.png") no-repeat;
+                                background-position: -78px 0;
+                                width: 10px;
+                                height: 14px;
                                 position: absolute;
-                                left: 0;
-                                right: 0;
-                                top: 0;
-                                bottom: 0;
-                                background: #000;
-                                opacity: 0.3;
-                                filter: Alpha(opacity=30);
-                            }    
-                            .homework-MaskLayer-num{
-                                  position: absolute;
-                                  left: 0;
-                                  right: 0;
-                                  top: 0;
-                                  bottom: 0;
-                                  font-family: "Microsoft YaHei","微软雅黑";
-                                  font-size: 30px;
-                                  line-height: 50%;
-                                  text-align: center;
-                                  color: #fff;
-                                  cursor: pointer;
-                            }
-                            &.homework-current{
-                                border: 2px solid #3baeda;
-                                padding: 0px;
-                                i{
-                                    background: url("img/homeIcon.png") no-repeat;
-                                    background-position: -78px 0;
-                                    width: 10px;
-                                    height: 14px;
-                                    position: absolute;
-                                    right: -12px;
-                                    top: 30px;
-                                    display: inline-block;
+                                right: -12px;
+                                top: 41px;
+                                display: inline-block;
 
-                                }
-                            }
-                            img{
-                                width: 100%;
-                                height: 100%;
-                                cursor: pointer;
                             }
                         }
-                  }
-            }
-
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            cursor: pointer;
+                        }
+                    }
+              }
         }
+
     }
     .homework-bigImg-box{
           display: block;
           overflow: hidden;
+          height: 536px;
           background: #eeeeee;
           .homework-rightMeun{
               width: 54px;
@@ -319,6 +306,7 @@ html,body {
     .homework-ImageTransform{
         display: block;
         overflow: hidden;
+        height: 534px;
         background: #fff;
         position: relative;
         border: 1px solid #eaeaea;
@@ -329,22 +317,26 @@ html,body {
      * 作业反馈style
      */
     .homework-Feedback{
-         background: url("img/htmlBg.png") no-repeat;
-         width: 558px;
-         height: 492px;
+         background: url("img/htmlBg_1190.png") no-repeat;
+         width: 555px;
+         height: 483px;
+         left: 50%;
+         top: 50%;
+         margin-left: -277.5px;
+         margin-top: -241.5px;
          position: absolute;
          display: none;
     }
     .homework-Feedback-cont{
          margin:0 auto;
-         width: 490px;
+         width: 480px;
          font-family: "Microsoft YaHei","微软雅黑" 
     }
     .homework-Feedback-header{
          float: left;
          width: 480px;
          height: 153px;
-         margin:31px 0 0 10px;
+         margin:28px 0 0 0;
          position:relative;
          .homework-likeEmote{
             position: absolute;
@@ -405,8 +397,8 @@ html,body {
             color: #e74c3c;
             .font-size(14px);
             line-height: 24px;
-            height: 200px;
-            margin: 20px 0 0 10px;
+            height: 170px;
+            margin: 20px 0 0 0;
             overflow-y: auto;
             overflow-x: hidden;
             word-break:break-all; 
@@ -419,7 +411,7 @@ html,body {
         width: 480px;
         color: #666;
         .font-size;
-        margin: 10px 0 0 10px;
+        margin: 10px 0 0 0;
         h3{
             width: 100%;
             line-height: 24px;
@@ -550,6 +542,79 @@ html,body {
             background: #2392ba;
         }
     }
+
+    /** 
+     * 中等屏幕 桌面显示器 (<=1200px)
+     */
+    @media (max-width: 1200px){
+        .homework-Thumbnails-box{
+              width: 128px;
+              height: 452px;
+              .homework-page-btn{
+                  width: 118px;
+              }
+              .homework-Thumbnails-img-list{
+                    height: 416px;
+                    ul{
+                        li{
+                            width: 114px;
+                            height: 80px;
+                            .homework-MaskLayer-num{
+                                  line-height: 84px;
+                            }
+                            &.homework-current{
+                                i{
+                                    top: 33px;
+                                }
+                            }
+                        }
+                    }
+              }
+        }
+        .homework-bigImg-box{
+             height: 472px;
+        }
+        .homework-ImageTransform{
+            height: 470px;
+        }
+    }
+
+    /** 
+     * 大屏幕 大桌面显示器 (≥1200px)
+     */
+    @media (min-width:1200px){
+        .homework-Thumbnails-box{
+              width: 150px;
+              height: 516px;
+              .homework-page-btn{
+                  width: 140px;
+              }
+              .homework-Thumbnails-img-list{
+                    height: 480px;
+                    ul{
+                        li{
+                            width: 136px;
+                            height: 96px;
+                            .homework-MaskLayer-num{
+                                  line-height: 100px;
+                            }
+                            &.homework-current{
+                                i{
+                                    top: 41px;
+                                }
+                            }
+                        }
+                    }
+              }
+        }
+        .homework-bigImg-box{
+             height: 536px;
+        }
+        .homework-ImageTransform{
+            height: 534px;
+        }
+    } 
+   
 }
 
 .homework-panel-style.panel {

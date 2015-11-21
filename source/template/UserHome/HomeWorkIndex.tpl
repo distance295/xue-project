@@ -3,7 +3,7 @@
 <!-- 学习中心区域 -->
 <div class="container top m20">
     <div class="row">
-        <div class="col-md-10 wrap-body">
+        <div class="col-md-10">
             <!-- *********************** 内容区域开始 *********************** -->
 
             <div class="row">              
@@ -29,7 +29,7 @@
     var PAGE_CONFIG = {
         ID: 'Dynamic',
         MODULE: 'UserHome',
-        TITLE: '新鲜事'
+        TITLE: '交作业'
     };
 
 </script>
