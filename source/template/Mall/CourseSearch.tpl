@@ -32,7 +32,7 @@
                     <link rel="import" href="../../widget/Public.Module/course03.tpl?__inline">
                 	<link rel="import" href="../../widget/Public.Module/course04.tpl?__inline">
                     <link rel="import" href="../../widget/Public.Module/course05.tpl?__inline">
-                    <link rel="import" href="../../widget/Dynamic/index.tpl?__inline">
+                    <link rel="import" href="../../widget/Public.Dynamic/index.tpl?__inline">
                 </div>
             </div>
 

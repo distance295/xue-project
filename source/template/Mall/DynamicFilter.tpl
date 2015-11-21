@@ -25,7 +25,7 @@
             </div>
             <div class="panel panel-default ">
                 <div class="panel-body pd0 fresh-main-wrapper">
-                	<link rel="import" href="../../widget/Dynamic/index.tpl?__inline">
+                	<link rel="import" href="../../widget/Public.Dynamic/index.tpl?__inline">
                 </div>
             </div>
 
@@ -36,7 +36,7 @@
                 <div class="panel-body sideright-body">
                 	<div class="sideright-hotcourse">
                 		<h3>热门新鲜事</h3>
-                		<link rel="import" href="../../widget/Dynamic/dynPopular.tpl?__inline">
+                		<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
                 	</div>
                     <div class="sideright-hotcourse">
                         <h3>热门老师</h3>
