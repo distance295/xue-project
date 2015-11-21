@@ -57,6 +57,7 @@ fis.media('tmpl')
     })
 
 
+
 // JSON文件规则
     .match('/widget/(**)/(*.json)', {
         release: '/data/$1/js/$2',
