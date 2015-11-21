@@ -8,7 +8,7 @@ var select = {
         $(that).addClass(className);
     }
 };
-
+//git remote add upstream https://github.com/XUEJS/xue-project.git
 
 $('.choice-point-cur span').on('click',function(){
 	var that = this;
