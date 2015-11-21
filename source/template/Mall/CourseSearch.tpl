@@ -26,18 +26,13 @@
                 <p>根据关键字“<span>张瑾</span>”搜素,为您匹配到12条结果</p>
             </div>
             <div class="panel panel-default ">
-                <div class="panel-body pd0">
+                <div class="panel-body pd0 fresh-main-wrapper">
                     <link rel="import" href="../../widget/Public.Module/course01.tpl?__inline">
                     <link rel="import" href="../../widget/Public.Module/course02.tpl?__inline">
                     <link rel="import" href="../../widget/Public.Module/course03.tpl?__inline">
                 	<link rel="import" href="../../widget/Public.Module/course04.tpl?__inline">
                     <link rel="import" href="../../widget/Public.Module/course05.tpl?__inline">
-                    <link rel="import" href="../../widget/Dynamic/dynMyself.tpl?__inline">
-                    <link rel="import" href="../../widget/Dynamic/dynAnswer.tpl?__inline">
-                    <link rel="import" href="../../widget/Dynamic/dynAttention.tpl?__inline">
-                    <link rel="import" href="../../widget/Dynamic/dynContact.tpl?__inline">
-                    <link rel="import" href="../../widget/Dynamic/dynExpand.tpl?__inline">
-                	<link rel="import" href="../../widget/Dynamic/dynImg.tpl?__inline">
+                    <link rel="import" href="../../widget/Dynamic/index.tpl?__inline">
                 </div>
             </div>
 
