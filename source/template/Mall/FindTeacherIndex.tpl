@@ -26,7 +26,7 @@
                 <div class="panel-body">
                     <span class="findRightTitle">热门新鲜事</span>
                     <div class="findRightList">
-                        <link rel="import" href="../../widget/Dynamic/dynPopular.tpl?__inline">
+                        <link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
                     </div>
                     <span class="findRightTitle">热门专题课</span>
                     <div class="findRightList">

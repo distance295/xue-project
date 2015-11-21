@@ -38,9 +38,9 @@
                 <div class="col-md-10 wrap w930">
                     <div class="panel panel-default">
                         <div class="panel-body fresh-main-wrapper" style="padding:0">
-                            <link rel="import" href="../../widget/Dynamic/dynContact.tpl?__inline">
-                            <link rel="import" href="../../widget/Dynamic/dynContact.tpl?__inline">
-                            <link rel="import" href="../../widget/Dynamic/dynContact.tpl?__inline">
+                            <link rel="import" href="../../widget/Public.Dynamic/dynContact.tpl?__inline">
+                            <link rel="import" href="../../widget/Public.Dynamic/dynContact.tpl?__inline">
+                            <link rel="import" href="../../widget/Public.Dynamic/dynContact.tpl?__inline">
                         </div>                     
                     </div>
                 </div>
