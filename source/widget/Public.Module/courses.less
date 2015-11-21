@@ -129,20 +129,23 @@ ul,li{list-style: none;}
 		display: block;
 		overflow: hidden;
 		p{
-			margin:0 0px 8px;
+			margin: 12px 0;
 			overflow: hidden;
 			font-size: 12px;
 		}
 		p.tip-for{
 			font-size: 12px;
-			color: #666;
-			margin: 8px 0;
+			color: #999;
+			margin: 12px 0;
 			span{
 				margin-right: 15px;
 				float: left;
 				strong{
 					color: #e74c3c;
 				}
+			}
+			span:first-child{
+				color: #333;
 			}
 		}
 		p.tip-video{
@@ -186,6 +189,7 @@ ul,li{list-style: none;}
 		.course-title{
 			line-height: 18px;
 			font-size: 16px;
+			margin-top: 0;
 			span.course-tip{
 				display: inline-block;
 				color: @gray999;
@@ -194,6 +198,9 @@ ul,li{list-style: none;}
 			.title-detail{
 				font-family: 'Microsoft YaHei'
 			}
+		}
+		.course-teacher{
+			margin-top: 0;
 		}
 		.amount-show{
 			strong{
