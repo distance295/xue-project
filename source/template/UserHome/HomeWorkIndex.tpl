@@ -29,7 +29,7 @@
     var PAGE_CONFIG = {
         ID: 'Dynamic',
         MODULE: 'UserHome',
-        TITLE: '新鲜事'
+        TITLE: '交作业'
     };
 
 </script>
