@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-10 wrap-body">
             <!-- *********************** 内容区域开始 *********************** -->
-
+  
             <div class="row">              
                 <div class="col-md-12 wrap">
                     <div class="panel panel-default homework-panel-style">
@@ -29,7 +29,7 @@
     var PAGE_CONFIG = {
         ID: 'Dynamic',
         MODULE: 'UserHome',
-        TITLE: '新鲜事'
+        TITLE: '交作业'
     };
 
 </script>
