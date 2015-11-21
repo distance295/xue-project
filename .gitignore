@@ -46,3 +46,18 @@ source/widget/courses/courses.css
 source/fis-conf-pages.js
 /config
 **.css
+
+# ------------ don't pull ---------
+/source/static/css/default.css
+/source/widget/_homework/
+/source/widget/header/
+/source/widget/fresh/
+/source/widget/gold/
+/source/widget/live/
+/source/widget/footer/
+/source/widget/find-teacher/
+/source/widget/filter/
+/source/widget/courses/
+/source/widget/courseStudycenter/
+/source/widget/errorQuestion/
+/source/widget/glory/
