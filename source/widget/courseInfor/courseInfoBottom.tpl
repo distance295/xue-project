@@ -65,37 +65,37 @@
 			</tbody>
 		</table>
 		<table class="table table_outline">
-						<tbody>
-							<tr>
-								<th>状态</th>
-								<th>讲次</th>
-								<th>名称</th>
-							</tr>
-							<tr>
-								<td>
-									<span class="goline">已上线</span>
-								</td>
-								<td>第一讲：</td>
-								<td class="t-left">圆初步（一）</td>
-							</tr>
-							<tr>
-								<td>
-									<span class="goline">已上线</span>
+			<tbody>
+				<tr>
+					<th>状态</th>
+					<th>讲次</th>
+					<th>名称</th>
+				</tr>
+				<tr>
+					<td>
+						<span class="goline">已上线</span>
+					</td>
+					<td>第一讲：</td>
+					<td class="t-left">圆初步（一）</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="goline">已上线</span>
 
-								</td>
-								<td>第二讲：</td>
-								<td class="t-left">圆拓展（一）</td>
-							</tr>
-							<tr>
-								<td>
-									<span class="goline">已上线</span>
+					</td>
+					<td>第二讲：</td>
+					<td class="t-left">圆拓展（一）</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="goline">已上线</span>
 
-								</td>
-								<td>第三讲：</td>
-								<td class="t-left">圆初步（二）</td>
-							</tr>
-						</tbody>
-					</table>
+					</td>
+					<td>第三讲：</td>
+					<td class="t-left">圆初步（二）</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 	<!-- 直播大纲 -->
 	<div class="course-detail">
@@ -169,6 +169,26 @@
 	</div>
 	<!-- 课程介绍 -->
 	<div class="course-detail">
+	<!-- 未登录状态下显示立即登录 -->
+		<div class="detail-login">
+			购买课程后才可以发表评价哦！
+			<a href="http://login.xueersi.com/login/aHR0cDovL3d3dy54dWVlcnNpLmNvbS9rYy82NjE5P2lzQ29tbWVudCNjb21tZW50">立即登录</a>
+		</div>
+		<!-- 未登录状态下显示立即登录 end-->
+		<!-- 评论发表框 -->
+		<div class="ui-comment-info">
+			<div class="comment-title">评输入您对课课的评价</div>
+			<div class="comment-textarea">
+				<textarea rows="10" cols="30" id="comm_content" name=""></textarea>
+			</div>
+			<div class="comment-func">
+				<div id="course-comm-tips" class="comment-tips">请填写内容，长度在1~140之间</div>
+				<div class="comment-button">
+					<button name="comm-submit" type="submit" class="btn btn-info btn-submit ">评价</button>
+				</div>
+			</div>
+		</div>
+		<!-- 评论发表框 end-->
 		<!-- 评价列表 -->
 		<div class="comment-detail-wrap">
 			<div class="comment-detail-list">
@@ -185,5 +205,5 @@
 			</div>
 		</div>
 	</div>
-	<!-- 课程评价 -->
+	<!-- 课程评价 end-->
 </div>
