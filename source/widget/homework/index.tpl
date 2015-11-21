@@ -9,7 +9,7 @@
 	<!--交作业头部开始-->
 	<div class="homework-header">
 		<!--作业驳回的提示开始-->
-		<!-- <p><i></i><span>作业已被驳回！ 原因：图片不清晰，请尽快重新提交！</span></p> -->
+		<p><i></i><span>作业已被驳回！ 原因：图片不清晰，请尽快重新提交！</span></p>
 		<!--作业驳回的提示开始-->
 		<h2>
 			<span class="homework-name pull-left">第三次作业 三角函数</span>
@@ -118,7 +118,7 @@
 			</div>
 		</div>
 		<!--查看评论区域开始-->
-		<div class="homework-comment-box hiding">
+		<div class="homework-comment-box">
 			<div class="homework-star pull-left">
 				<span class="pull-left">评价作业批改</span>
 				<div class="homework-star-area pull-left">
@@ -137,7 +137,7 @@
 		</div>
 		<!--查看评论区域结束-->
 		<!--可以评论区域开始-->
-		<div class="homework-comment-box hiding">
+		<div class="homework-comment-box">
 			<div class="homework-star pull-left">
 				<span class="pull-left">评价作业批改</span>
 				<div class="homework-star-area pull-left" id="homeworkstarArea" role="homeworkstarArea">
@@ -175,7 +175,6 @@
             	_homeZoom = false;
             }
 
-            var imgObject = imgObject || {};
             //轮播图 
 			$('#home_Image1').imagePage({
 				bigPic:".homework-ImageTransform",//大图框架
@@ -190,7 +189,7 @@
 				leftRotate:".homework-leftRotate-btn",//向左旋转按钮
 				rightRotate:".homework-rightRotate-btn",//向右旋转按钮
 				min_picnum:4,//小图显示个数
-				isZoom:true//是否存在旋转缩放
+				isZoom:_homeZoom//是否存在旋转缩放
 			});
 
 			//分数处理函数
@@ -204,75 +203,28 @@
           
 	       //根据分辨率重新计算图片
 	       $(window).resize(function(){
-	       	var _liCurrent = $('#home_Image1').find('.homework-Thumbnails-img-list li[class*="homework-current"]');
-	       	var _index = $('#home_Image1').find('.homework-Thumbnails-img-list li').index(_liCurrent)
-	       	var _imgW = $('.ImageTransformJs').attr('_imgW');
-	       	var _imgH = $('.ImageTransformJs').attr('_imgH');
-	       	var _maxW = $('#home_ImageTransform1').width();
-	       	var _maxH = $('#home_ImageTransform1').height();
+		       	var _liCurrent = $('#home_Image1').find('.homework-Thumbnails-img-list li[class*="homework-current"]');
+		       	var _index = $('#home_Image1').find('.homework-Thumbnails-img-list li').index(_liCurrent)
+		       	var _imgW = $('#home_Image1').find('.ImageTransformJs').attr('_imgW');
+		       	var _imgH = $('#home_Image1').find('.ImageTransformJs').attr('_imgH');
+		       	var _maxW = $('#home_ImageTransform1').width();
+		       	var _maxH = $('#home_ImageTransform1').height();
 
-	       	var rate=(_maxH/_imgH>_maxW/_imgW?_maxW/_imgW:_maxH/_imgH); 
-			 
-	       	var _left = (_maxW - _imgW*rate)/ 2 + "px";
-	       	var _top = (_maxH - _imgH*rate)/ 2 + "px";
-	       	$('.ImageTransformJs').css({
-	       		  'width':_imgW*rate,
-			  	  'height':_imgH*rate,
-			  	  'left': _left,
-				  'top': _top
-			})
-			
-            var _liNum = $('#Thumbnails').find('ul li').length;
-            var _liH = $('#Thumbnails').find('ul li').outerHeight(true);
-            var _ulTop = $('#Thumbnails').find('ul').attr('_top');
-             console.log(_ulTop)
-            $('#Thumbnails').find('ul').height(_liNum*_liH).css('top', _ulTop);
- 
+		       	var rate=(_maxH/_imgH>_maxW/_imgW?_maxW/_imgW:_maxH/_imgH); 
+				 
+		       	var _left = (_maxW - _imgW*rate)/ 2 + "px";
+		       	var _top = (_maxH - _imgH*rate)/ 2 + "px";
+		       	$('#home_Image1').find('.ImageTransformJs').css({
+		       		  'width':_imgW*rate,
+				  	  'height':_imgH*rate,
+				  	  'left': _left,
+					  'top': _top
+				})
+	            var _liNum = $('#Thumbnails').find('ul li').length;
+	            var _liH = $('#Thumbnails').find('ul li').outerHeight(true);
+	            var _ulTop = -($('#Thumbnails').find('ul').attr('_topNum'))*_liH;
+	            $('#Thumbnails').find('ul').height(_liNum*_liH).css('top', _ulTop);
 
-	       /*	var _liCurrent = $('#home_Image1').find('.homework-Thumbnails-img-list li[class*="homework-current"]');
-	       	var _index = $('#home_Image1').find('.homework-Thumbnails-img-list li').index(_liCurrent);
-	       	var ImageBox_H = $('#home_ImageTransform1').height();
-	       	var ImageBox_W = $('#home_ImageTransform1').width();
-	       
-	       	console.log('----')
-*/
-
-		     /*  	if(document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth){
-				   _bodyW = document.documentElement.clientWidth;
-			    }else{
-			       _bodyW = document.body.clientWidth;
-				}
-				console.log(homeworkflag)
-				if( homeworkflag == 2 && _bodyW >= 1200){
-                    console.log('1200')
-                    homeworkflag = 2;
-                    return false;
-				}else if( homeworkflag == 1 && _bodyW < 1200 ){
-                    console.log('990')
-                    homeworkflag = 1;
-                    return false;
-				}
-
-
-	       	   
-	       	   $('.ImageTransformJs').remove();
-	       	   var _liCurrent = $('#home_Image1').find('.homework-Thumbnails-img-list li[class*="homework-current"]');
-	       	   var _index = $('#home_Image1').find('.homework-Thumbnails-img-list li').index(_liCurrent);
-               $('#home_Image1').imagePage({
-					bigPic:".homework-ImageTransform",//大图框架
-					smallPic:".homework-Thumbnails-img-list",//小图框架
-					prev_btn:".homework-prev_btn",//小图左箭头
-					next_btn:".homework-next-btn",//小图右箭头
-					delayTime:400,//切换一张图片时间
-					order:_index,//当前显示的图片（从0开始）
-					ImageTransform:'home_ImageTransform1',//旋转大图框架
-					zoom:".homework-zoom-btn",//放大按钮
-					zoomout:".homework-zoomout-btn",//缩小按钮
-					leftRotate:".homework-leftRotate-btn",//向左旋转按钮
-					rightRotate:".homework-rightRotate-btn",//向右旋转按钮
-					min_picnum:4,//小图显示个数
-					isZoom:_homeZoom//是否存在旋转缩放
-				});*/
 	       })
 	})
 	

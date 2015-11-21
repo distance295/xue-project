@@ -215,17 +215,16 @@ $.fn.imagePage = function(params){
            }
 		   var _scrollnum = tpqhnum-params.min_picnum +2;
 		   var _scrollH = -_scrollnum*picsmall_h;
+		   _tabnum = _scrollnum;
 		   if( tpqhnum < params.min_picnum-1 ){
 		   	  _scrollH=0;
-		   	  console.log(1)
+		   	  _tabnum=0;
 		   }else if( tpqhnum == picsmall_num-1 ){
 		   	  _scrollH = -(_scrollnum-1)*picsmall_h;
-		   }else{
-		   	   _tabnum = _tabnum +1;
+		   	  _tabnum = _scrollnum-1;
 		   }
-		   console.log(_tabnum)
 		   
-           $(_this).find(params.smallPic).find('ul').stop().animate({'top':_scrollH},params.delayTime).attr('_top',_scrollH);
+           $(_this).find(params.smallPic).find('ul').stop().animate({'top':_scrollH},params.delayTime).attr('_topNum',_tabnum);
 		}else{
 		  $(_this).find(params.prev_btn).addClass('homework-prev-disabled').removeClass('homework-prev-active');
           $(_this).find(params.next_btn).addClass('homework-next-disabled').removeClass('homework-next-active');

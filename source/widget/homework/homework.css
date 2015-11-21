@@ -625,3 +625,11 @@ body {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+/** 
+ * 中等屏幕 桌面显示器 (<=1200px)
+ */
+@media (max-width: 1200px) {
+  .wrap-body {
+    width: 840px !important;
+  }
+}
