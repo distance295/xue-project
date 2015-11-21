@@ -9,7 +9,6 @@ var select = {
     }
 };
 
-
 $('.choice-point-cur span').on('click',function(){
 	var that = this;
     select.chooseSpan('.choice-point-cur span',that,'select-point');
