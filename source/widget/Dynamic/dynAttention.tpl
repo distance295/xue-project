@@ -1,10 +1,10 @@
 <!--
     @require fresh.less
     @require ../Module.popover/xue.popover.js
+    @require ../Module.Modal/Modal.js
     @require fresh.js
     @require fresh.load.min.js
 -->
-
 <!--新鲜事单条列表信息开始————关注的人-->
 <div class="fresh-list">
     <div class="fresh-avatar pull-left">
