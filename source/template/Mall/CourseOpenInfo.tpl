@@ -5,7 +5,7 @@
 <div class="container top m20">
 <!--   12栏的用这个    -->
 	<div class="row pd5">
-			<link rel="import" href="../../widget/courseInfor/courseBackInfor.tpl?__inline">
+			<link rel="import" href="../../widget/courseInfor/courseOpenInfo.tpl?__inline">
 	</div>
 	<!--   12栏结束    -->
 	 <div class="row pd5">
@@ -13,7 +13,7 @@
             <!-- *********************** 内容区域开始 *********************** -->
             <div class="panel panel-default ">
                 <div class="panel-body pd0">
-                    <link rel="import" href="../../widget/courseInfor/courseInforBottom.tpl?__inline">
+                    <link rel="import" href="../../widget/courseInfor/courseInfoBottom.tpl?__inline">
                  </div>
             </div>
             
@@ -35,7 +35,7 @@
     var PAGE_CONFIG = {
         ID: 'Index',
         MODULE: 'Mall',
-        TITLE: '商城首页--录播课程详情页',
+        TITLE: '商城首页--公开课程详情页',
         NAV_FIXED: false // 如果想要头部分类展开的话，设为true，如果不想直接展开设为false
     };
 </script>
