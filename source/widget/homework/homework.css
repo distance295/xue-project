@@ -536,6 +536,11 @@
   background: #2392ba;
 }
 @media (max-width: 1200px) {
+  .homework-wrapper-container {
+    /**
+         * 作业反馈style
+         */
+  }
   .homework-wrapper-container .homework-Thumbnails-box {
     width: 128px;
     height: 452px;
@@ -561,6 +566,18 @@
   }
   .homework-wrapper-container .homework-ImageTransform {
     height: 470px;
+  }
+  .homework-wrapper-container .homework-Feedback {
+    background: url("img/htmlBg_1024.png") no-repeat;
+    height: 460px;
+    margin-left: -277.5px;
+    margin-top: -230px;
+  }
+  .homework-wrapper-container .homework-Feedback-header {
+    margin: 23px 0 0 0;
+  }
+  .homework-wrapper-container p.homework-Feedback-describe {
+    height: 160px;
   }
 }
 @media (min-width: 1200px) {
