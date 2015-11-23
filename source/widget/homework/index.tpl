@@ -200,6 +200,21 @@
 		 	     className:"on",//星星选中状态类
 		 	     scoreNum:".scoreNum"//显示评分分数的类
 	       })
+
+
+	        /**
+			 * 判断浏览器ie版本号
+			 */
+			var $ImageB = $ImageB || {};
+			$ImageB.browser = $ImageB.browser || {};
+			$ImageB.browser.uga = navigator.userAgent.toLowerCase();
+			$ImageB.browser.msie = /msie/.test($ImageB.browser.uga);
+
+			$ImageB.check = $ImageB.check || {};
+			$ImageB.check.isIE6 = !-[1, ] && !window.XMLHttpRequest;
+			$ImageB.check.isIE7 = $ImageB.browser.uga.indexOf("msie 7.0") > 0;
+			$ImageB.check.isIE8 = $ImageB.browser.uga.indexOf("msie 8.0") > 0;
+			$ImageB.check.isIE9 = $ImageB.browser.uga.indexOf("msie 9.0") > 0;
           
 	       //根据分辨率重新计算图片
 	       $(window).resize(function(){
@@ -210,16 +225,31 @@
 		       	var _maxW = $('#home_ImageTransform1').width();
 		       	var _maxH = $('#home_ImageTransform1').height();
 
-		       	var rate=(_maxH/_imgH>_maxW/_imgW?_maxW/_imgW:_maxH/_imgH); 
+		       	var rate=(_maxH/_imgH>_maxW/_imgW?_maxW/_imgW:_maxH/_imgH);
+		       	//判断浏览器
+		       	if( $ImageB.check.isIE6 ||$ImageB.check.isIE7 ||$ImageB.check.isIE8 || $ImageB.check.isIE9 ){
+			       	$('#home_Image1').find('.ImageTransformJs').css({
+			       		  'width':_imgW*rate,
+					  	  'height':_imgH*rate
+					})
+					var _left = (_maxW - $('#home_Image1').find('.ImageTransformJs').width())/ 2 + "px";
+			       	var _top = (_maxH - $('#home_Image1').find('.ImageTransformJs').height())/ 2 + "px";
+					$('#home_Image1').find('.ImageTransformJs').css({
+					  	  'left': _left,
+						  'top': _top
+					}) 
+				}else{
+					var _left = (_maxW - _imgW*rate)/ 2 + "px";
+			       	var _top = (_maxH - _imgH*rate)/ 2 + "px";
+			       	$('#home_Image1').find('.ImageTransformJs').css({
+			       		  'width':_imgW*rate,
+					  	  'height':_imgH*rate,
+					  	  'left': _left,
+						  'top': _top
+					})
+				}
 				 
-		       	var _left = (_maxW - _imgW*rate)/ 2 + "px";
-		       	var _top = (_maxH - _imgH*rate)/ 2 + "px";
-		       	$('#home_Image1').find('.ImageTransformJs').css({
-		       		  'width':_imgW*rate,
-				  	  'height':_imgH*rate,
-				  	  'left': _left,
-					  'top': _top
-				})
+		       	
 	            var _liNum = $('#Thumbnails').find('ul li').length;
 	            var _liH = $('#Thumbnails').find('ul li').outerHeight(true);
 	            var _ulTop = -($('#Thumbnails').find('ul').attr('_topNum'))*_liH;

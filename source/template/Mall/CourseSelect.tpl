@@ -17,12 +17,13 @@
         <div class="col-md-10 wrap-body wrap-mall">
 
             <!-- *********************** 内容区域开始 *********************** -->
-            <div class="find-teacher-rank-title">
-                <div>综合</div>
-                <span>学员数</span>
-                <span>价格<img src="/static/img/Mall.FindTeacher/down.png"></span>
-                <span class="find-teacher-account"><input type="checkbox"/><b>只看直播</b></span>
-            </div>
+            <link rel="import" href="../../widget/UserHome.wrongQues/chooseGrade.tpl?__inline">
+            <ul class="screen-rank">
+                <li class="popular-rank">综合</li>
+                <li>学员数</li>
+                <li>价格<img src="/static/img/Mall.FindTeacher/down.png"></li>
+                <li class="Onlylive-select"><input type="checkbox"/><b>只看直播</b></li>
+            </ul>
             <div class="panel panel-default ">
                 <div class="panel-body pd0">
                 	<link rel="import" href="../../widget/Public.Module/course04.tpl?__inline">
@@ -47,7 +48,7 @@
                   </div>
                   <div class="sideright-hotcourse">
                       <h3>热门新鲜事</h3>
-                      <link rel="import" href="../../widget/Dynamic/dynPopular.tpl?__inline">
+                      <link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
                   </div>
               </div>
           </div>

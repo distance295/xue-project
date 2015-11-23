@@ -1,8 +1,8 @@
-﻿/**
- * ImageTrans图片旋转 缩放 拖拽
- * @authors duxinli
- * @date    2015-10-12
- * @version $Id$
+﻿/*!
+ * ImageTrans
+ * Copyright (c) 2010 cloudgamer
+ * Blog: http://cloudgamer.cnblogs.com/
+ * Date: 2010-8-15
  */
 
 /**
@@ -113,11 +113,7 @@ ImageTrans.prototype = {
 		img.src = src;
 		img.className = 'ImageTransformJs';
 		img.style.cursor="move";
-		img.style.width="auto";//更换图片时初始化宽
-		img.style.height="auto";//更换图片时初始化高
 		this.rotateNum = 1;//更换图片时重新定义
-		this._x = this._y = 1;//更换图片时重新定义水平/垂直变换参数
-		$(this._img).attr('_y',this._y).attr('_x',this._x);
 	}
   },
   //重置
@@ -173,21 +169,20 @@ ImageTrans.modes = function(){
 				/*
 				 *图片缩放
 				 */
-				var maxWidth = this._container.clientWidth;
-				var maxHeight = this._container.clientHeight;
+				var maxWidth = this._clientWidth;
+				var maxHeight = this._clientHeight;
 				var rate=(maxHeight/img.offsetHeight>maxWidth/img.offsetWidth?maxWidth/img.offsetWidth:maxHeight/img.offsetHeight); 
-			   //console.log( this._container.clientWidth)
-                $(img).attr('_imgW',img.offsetWidth).attr('_imgH',img.offsetHeight);
-
-			    //设置等比例图片的宽和高以及居中显示
-			    $$D.setStyle( img, {
+			   
+			    $$D.setStyle( img, {//设置等比例图片的宽和高
 					width: img.offsetWidth*rate + "px",
 					height: img.offsetHeight*rate + "px",
-					top: ( maxHeight - img.offsetHeight*rate ) / 2 + "px",
-					left: ( maxWidth - img.offsetWidth*rate ) / 2 + "px",
-					visibility: "visible"
 				});
 
+				$$D.setStyle( img, {//居中
+					top: ( this._clientHeight - img.offsetHeight ) / 2 + "px",
+					left: ( this._clientWidth - img.offsetWidth ) / 2 + "px",
+					visibility: "visible"
+				});
 			},
 			show: function() {
 				var matrix = getMatrix( this._radian, this._y, this._x );
@@ -208,21 +203,6 @@ ImageTrans.modes = function(){
 			load: function(){
 				this._img.onload = null;//防止ie重复加载gif的bug
 				this._img.style.visibility = "visible";
-				var img = this._img;
-				/*
-				 *图片缩放
-				 */
-				var maxWidth = this._container.clientWidth;
-				var maxHeight = this._container.clientHeight;
-				var rate=(maxHeight/img.offsetHeight>maxWidth/img.offsetWidth?maxWidth/img.offsetWidth:maxHeight/img.offsetHeight); 
-			   //console.log( this._container.clientWidth)
-                $(img).attr('_imgW',img.offsetWidth).attr('_imgH',img.offsetHeight);
-                
-			    //设置等比例图片的宽和高以及居中显示
-			    $$D.setStyle( img, {
-					width: img.offsetWidth*rate + "px",
-					height: img.offsetHeight*rate + "px"
-				});
 			},
 			show: function() {
 				var img = this._img;
@@ -232,15 +212,21 @@ ImageTrans.modes = function(){
 					getMatrix( this._radian, this._y, this._x )
 				);
 
-				var maxWidth = this._container.clientWidth;
-				var maxHeight = this._container.clientHeight;
-                
-			    //设置等比例图片的宽和高以及居中显示
-			    $$D.setStyle( img, {
-					top: ( maxHeight - img.offsetHeight ) / 2 + "px",
-					left: ( maxWidth - img.offsetWidth ) / 2 + "px",
-					visibility: "visible"
+				/*
+				 *图片缩放
+				 */
+				var maxWidth = this._clientWidth;
+				var maxHeight = this._clientHeight;
+				var rate=(maxHeight/img.offsetHeight>maxWidth/img.offsetWidth?maxWidth/img.offsetWidth:maxHeight/img.offsetHeight); 
+			   
+			    $$D.setStyle( img, {//设置等比例图片的宽和高
+					width: img.offsetWidth*rate + "px",
+					height: img.offsetHeight*rate + "px",
 				});
+				
+				//保持居中
+				img.style.top = ( this._clientHeight - img.offsetHeight ) / 2 + "px";
+				img.style.left = ( this._clientWidth - img.offsetWidth ) / 2 + "px";
 			},
 			dispose: function(){ this._container.removeChild(this._img); }
 		},
@@ -251,12 +237,12 @@ ImageTrans.modes = function(){
 					context = this._context = canvas.getContext('2d');
 				//样式设置
 				$$D.setStyle( canvas, { position: "absolute", left: 0, top: 0 } );
-				canvas.width = this._container.clientWidth; canvas.height = this._container.clientHeight;
+				canvas.width = this._clientWidth; canvas.height = this._clientHeight;
 				this._container.appendChild(canvas);
 			},
 			show: function(){
 				var img = this._img, context = this._context,
-					clientWidth = this._container.clientWidth, clientHeight = this._container.clientHeight;
+					clientWidth = this._clientWidth, clientHeight = this._clientHeight;
 				//canvas变换
 				context.save();
 				context.clearRect( 0, 0, clientWidth, clientHeight );//清空内容
@@ -286,16 +272,7 @@ ImageTrans.transforms = {
   //根据弧度旋转
   rotate: function(radian) { this._radian = radian; },
   //向左转90度
-  left: function() { 
-  	this._radian -= Math.PI/2; 
-  	if(this.rotateNum == 1){
-       this.rotateNum = 0;
-  	}else if(this.rotateNum == 0){
-       this.rotateNum = 1;
-  	}
-  	this._img.style.left =  ($(this._container).width() - $(this._img).width())/2  +"px";
-	this._img.style.top =   ($(this._container).height() - $(this._img).height())/2  +"px";
-  },
+  left: function() { this._radian -= Math.PI/2; },
   //向右转90度
   right: function() { 
   	this._radian += Math.PI/2;
@@ -318,18 +295,16 @@ ImageTrans.transforms = {
 	return function(zoom) { if( zoom ){
 		var hZoom = getZoom( this._y, zoom ), vZoom = getZoom( this._x, zoom );
 		if ( hZoom && vZoom ) {
-			//缩小的时候图片居中放置和控制图片缩小的最小的比例
-			if( zoom <0 ){
-				//判断图片缩放的大小限制
-	            if(this._y<0.3){
-	               return false;
-				}
-				//图片重新居中
-				this._img.style.left =  ($(this._container).width() - $(this._img).width())/2  +"px";
-		        this._img.style.top =   ($(this._container).height() - $(this._img).height())/2  +"px";  
-			}	
+            /*if(this._y<0.4){
+               return false;//判断图片缩放的大小限制
+			}*/
 			this._y += hZoom; this._x += vZoom;
 			$(this._img).attr('_y',this._y).attr('_x',this._x);
+			//缩小的时候图片居中放置
+			if( zoom <0 ){
+		       this._img.style.left =  ($(this._container).width() - $(this._img).width())/2  +"px";
+		       this._img.style.top =   ($(this._container).height() - $(this._img).height())/2  +"px";  
+			}
 		}
 	}}
   }(),
@@ -464,7 +439,7 @@ ImageTrans.prototype._initialize = (function(){
 	       * 2.图片宽度不超过div宽度高超过只能向上向下拖动
 	       * 3.图片高度不超过div高度宽超过只能左右拖动
 	       */
-          if( _ViewImgW >= _ImgW && _ViewImgH >= _ImgH ){
+          if( _ViewImgW > _ImgW && _ViewImgH > _ImgH ){
           	 return false;
 	      }
 
