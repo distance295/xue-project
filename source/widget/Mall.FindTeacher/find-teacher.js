@@ -14,7 +14,7 @@ $(function(){
                 mouseleave:function(){
                     $(this).find(".find-teacher-hover").stop().animate({"top":200},300);
 
-                    
+
                 }}
         );
     });
