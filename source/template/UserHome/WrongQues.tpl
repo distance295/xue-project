@@ -1,7 +1,7 @@
 <!-- 公共头部 -->
 <link rel="import" href="../Layer/layer.UserHome.head.tpl?__inline">
 
-<!-- 学习中心区域 -->
+<!-- 直播课错题本 -->
 <div class="container top m20">
     <div class="row">
         <div class="col-md-10 wrap-body">
@@ -9,8 +9,8 @@
 
       		<!-- tab切换开始 -->
             <ul class="nav nav-tabs">
-                <li role="presentation" class="active"><a href="#">直播课</a></li>
-                <li><a href="#">录播课</a></li>
+                <li role="presentation" class="active"><a href="#" class="broadZb">直播课</a></li>
+                <li role="presentation"><a href="#" class="broadLb">录播课</a></li>
             </ul>
             <!-- tab切换结束 -->
 

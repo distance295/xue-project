@@ -9,7 +9,7 @@
 
       		<!-- tab切换开始 -->
             <ul class="nav nav-tabs">
-                <li><a href="#">直播课</a></li>
+                <li role="presentation"><a href="#">直播课</a></li>
                 <li role="presentation" class="active"><a href="#">录播课</a></li>
             </ul>
             <!-- tab切换结束 -->
@@ -18,7 +18,7 @@
             <link rel="import" href="../../widget/UserHome.wrongQues/chooseGradeForLb.tpl?__inline">
 
             <!-- 错题本展示区域 -->
-			<link rel="import" href="../../widget/UserHome.wrongQues/showWrongQues.tpl?__inline">
+			<link rel="import" href="../../widget/UserHome.wrongQues/showWrongQuesForLb.tpl?__inline">
 
             <!-- *********************** 内容区域结束 *********************** -->
         </div>
