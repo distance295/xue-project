@@ -1,12 +1,3 @@
-span.error{
-    display: block;  
-    width: 288px;
-    height: 30px;
-    margin: 1px 0 0 30px;
-    padding-top: 5px;
-    line-height:19px; 
-    color: #e74c3c;         
-}
 .cb-content{
     width: 625px;
     height: 290px;
@@ -15,6 +6,19 @@ span.error{
         width: 310px;
         height: 200px;
         margin: 30px auto;
+        .error-box{
+            display: block;  
+            height: 30px;
+            margin: 1px 0 0 32px;
+            padding-top: 5px;
+            line-height:19px;
+            .error{
+                display: none;
+                color: #e74c3c;
+                background: url("img/warning.png") no-repeat 10px 0;
+                padding-left: 32px; 
+            }
+        }
         p{
             margin-bottom: 8px;
             font-family: "Microsoft YaHei";
