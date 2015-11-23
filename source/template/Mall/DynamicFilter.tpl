@@ -17,12 +17,13 @@
         <div class="col-md-10 wrap-body wrap-mall">
 
             <!-- *********************** 内容区域开始 *********************** -->
-             <div class="find-teacher-rank-title">
-                <div>全部</div>
-                <span>图文</span>
-                <span>题目</span>
-                <span>视频</span>
-            </div>
+            <ul class="screen-rank">
+                <li class="popular-rank">全部</li>
+                <li>图文</li>
+                <li>题目</li>
+                <li>视频</li>
+            </ul>
+             
             <div class="panel panel-default ">
                 <div class="panel-body pd0 fresh-main-wrapper">
                 	<link rel="import" href="../../widget/Public.Dynamic/index.tpl?__inline">
