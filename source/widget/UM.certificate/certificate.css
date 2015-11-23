@@ -1,12 +1,3 @@
-span.error {
-  display: block;
-  width: 210px;
-  height: 30px;
-  margin: 1px 0 0 30px;
-  padding-top: 5px;
-  line-height: 19px;
-  color: #e74c3c;
-}
 .certificate-content {
   width: 635px;
   height: 290px;
@@ -28,6 +19,19 @@ span.error {
   width: 310px;
   height: 175px;
   margin-top: 30px;
+}
+.certificate-content .certificate-content-right .error-box {
+  display: block;
+  height: 30px;
+  margin: 1px 0 0 32px;
+  padding-top: 5px;
+  line-height: 19px;
+}
+.certificate-content .certificate-content-right .error-box .error {
+  display: none;
+  color: #e74c3c;
+  background: url("img/warning.png") no-repeat 10px 0;
+  padding-left: 32px;
 }
 .certificate-content .certificate-content-right .cardNo-warning,
 .certificate-content .certificate-content-right .cardPass-warning {

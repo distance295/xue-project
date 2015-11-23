@@ -1,19 +1,7 @@
-span.error {
-  display: block;
-  width: 288px;
-  height: 30px;
-  margin: 1px 0 0 30px;
-  padding-top: 5px;
-  line-height: 19px;
-  font-size: 12px;
-  font-style: normal;
-  background: #fff;
-  color: #e74c3c;
-}
 .ca-content {
   width: 625px;
   height: 290px;
-  margin: 0 auto;
+  margin: 60px auto 0;
 }
 .ca-content .ca-content-left {
   float: left;
@@ -31,6 +19,20 @@ span.error {
   width: 310px;
   height: 175px;
   margin-top: 30px;
+}
+.ca-content .ca-content-right .error-box {
+  display: block;
+  width: 210px;
+  height: 30px;
+  margin: 1px 0 0 32px;
+  padding-top: 5px;
+  line-height: 19px;
+}
+.ca-content .ca-content-right .error-box .error {
+  display: none;
+  color: #e74c3c;
+  background: url("img/warning.png") no-repeat 10px 0;
+  padding-left: 32px;
 }
 .ca-content .ca-content-right .cardNo-warning,
 .ca-content .ca-content-right .cardPass-warning {
@@ -58,23 +60,11 @@ span.error {
 .ca-content .ca-content-right .btn-active {
   margin: 0px 30px 0 40px;
   width: 100px;
-  height: 35px;
-  border-radius: 3px;
   font-size: 14px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border-style: solid;
-  border-width: 0;
-  background-color: #3BAFDA;
-  border-color: #2392ba;
-  color: #FFFFFF;
-  transition: background-color 300ms ease-out;
-}
-.ca-content .ca-content-right .btn-active:hover {
-  background-color: #2392ba;
 }
 .ca-content .ca-content-right a {
-  font-size: 14px;
+  font-size: 12px;
+  color: #3bafda;
 }
 .prompt-box {
   width: 1010px;
@@ -100,7 +90,6 @@ span.error {
   margin: 6px 0 6px 5px;
 }
 .prompt-box .ca-prompt-box p {
-  font-size: 12px;
   margin: 0 0 0 5px;
 }
 .prompt-box .ca-prompt-box p strong {

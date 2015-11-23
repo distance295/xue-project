@@ -5,7 +5,7 @@
     margin: 20px 0 30px 100px;
     .bi-left{
         float: left;
-        p{
+        div{
             position: relative;
             font-size: 12px;
             color: #666;
@@ -38,14 +38,19 @@
             span{
                 color: #333;
             }
-            .error{
-                display: block;
-                width: 385px;
-                color: #e74c3c;
+            .error-box{
+                position: absolute;
+                clear: both;  
+                width: 288px;
                 height: 30px;
-                margin-left: 50px;
-                padding-top: 5px;
-                line-height:19px;      
+                margin: 1px 0 0 55px;
+                line-height:19px;
+                .error{
+                    display: none;
+                    color: #e74c3c;
+                    background: url("img/warning.png") no-repeat 10px 0;
+                    padding-left: 32px; 
+                }
             }
             .prompt-empty{
                 display: none;
@@ -80,7 +85,7 @@
         .btn-submit{
             width: 100px;
             height: 35px;
-            margin-top: 12px;
+            margin-top: 25px;
             font-size: 14px; 
         }  
     }
