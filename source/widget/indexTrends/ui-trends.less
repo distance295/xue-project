@@ -58,7 +58,42 @@
 			}
 		}
 		.media {
+			height: 110px;
 			padding:20px  0 15px 40px;
+			.media-body {
+				.user-name {
+					overflow: hidden;margin: 10px 0 5px;
+				}
+				.user-info {
+					.user-sex {
+						background: none;
+						padding:4px 6px;
+						.fa {
+							font-size: 16px;
+							font-weight: 700;
+							&.fa-venus {
+								color: #3bafda;
+							}
+							&.fa-mars {
+								color: #e74c3c;
+							}
+						}
+					}
+					.user-level {
+						font-size: 12px;
+						font-style: italic ;
+						border-radius: 25px;
+						padding-bottom: 1px;
+						padding-top:0;
+					}
+				}
+			}
+			.media-heading {
+				font-size: 18px;
+			}
+			.user-v {
+				vertical-align: middle;
+			}
 		}
 		.media-object {
 			width: 60px;
@@ -74,6 +109,9 @@
 				height: 36px;
 				margin-right: 10px;
 				font-size: 16px;
+			}
+			.btn-into-home {
+				width: 96%;
 			}
 		}
 	}
