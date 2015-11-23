@@ -24,14 +24,14 @@
                 <div class="col-md-10 wrap w930">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <link rel="import" href="../../widget/Dynamic/dynAnswer.tpl?__inline">
-                            <link rel="import" href="../../widget/Dynamic/dynAttention.tpl?__inline">
-                            <link rel="import" href="../../widget/Dynamic/dynContact.tpl?__inline">
-                            <link rel="import" href="../../widget/Dynamic/dynExpand.tpl?__inline">
-                            <link rel="import" href="../../widget/Dynamic/dynImg.tpl?__inline">
-                            <link rel="import" href="../../widget/Dynamic/dynMyself.tpl?__inline">
-                            <link rel="import" href="../../widget/Dynamic/dynPopular.tpl?__inline">
-                            <link rel="import" href="../../widget/Dynamic/dynVideo.tpl?__inline">
+                            <link rel="import" href="../../widget/Public.Dynamic/dynAnswer.tpl?__inline">
+                            <link rel="import" href="../../widget/Public.Dynamic/dynAttention.tpl?__inline">
+                            <link rel="import" href="../../widget/Public.Dynamic/dynContact.tpl?__inline">
+                            <link rel="import" href="../../widget/Public.Dynamic/dynExpand.tpl?__inline">
+                            <link rel="import" href="../../widget/Public.Dynamic/dynImg.tpl?__inline">
+                            <link rel="import" href="../../widget/Public.Dynamic/dynMyself.tpl?__inline">
+                            <link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
+                            <link rel="import" href="../../widget/Public.Dynamic/dynVideo.tpl?__inline">
                         </div>
                     </div>
                 </div>

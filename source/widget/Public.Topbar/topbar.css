@@ -6,15 +6,6 @@
  * @date    2015-10-29 10:40:12
  * @version $Id$
  */
-em {
-  font-style: normal;
-  padding: 0 .2rem;
-}
-ul,
-ol {
-  margin: 0;
-  padding-left: 0;
-}
 #module-topbar {
   height: 30px;
   line-height: 30px;

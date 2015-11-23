@@ -42,7 +42,7 @@
                 	</div>
                 	<div class="sideright-hotcourse">
                 		<h3>热门新鲜事</h3>
-                		<link rel="import" href="../../widget/Dynamic/dynPopular.tpl?__inline">
+                		<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
                 	</div>
                 </div>
             </div>
