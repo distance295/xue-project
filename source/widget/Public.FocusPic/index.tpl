@@ -1,9 +1,10 @@
 <!--
-    @require ui-carousel.less
+    @require ui-focusPic.less
 -->
 <div id="index-focus">
 		<ul class="focus-list">
-			<li>
+		<!-- background:url(pic/helloWeen_2015.jpg) top center no-repeat; -->
+			<li style="opacity:1;z-index:2;">
 				<a target="_blank" href="http://www.baidu.com/">23123</a>
 			</li>
 		</ul>
