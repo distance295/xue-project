@@ -2,17 +2,17 @@
         xue.formCheck = xue.formCheck || {};
     var fCheck = xue.formCheck;
 
-    //提示css样式
+    /* 提示信息的css样式 */
     fCheck.setTips = function(select, tips){
       $(select).css({
-        'background': 'url("img/warning.png") no-repeat 10px 5px',
-        'padding-left':'32px' 
+        'display': 'block',
       }).html(tips);
     };
-    //清除提示
+
+    /* 输入正确时，清除提醒 */
     fCheck.clearTips = function(select){
       $(select).css({
-        'background':'none'
+        'display':'none'
       }).html(null);
     };
 

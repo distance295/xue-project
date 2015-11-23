@@ -41,12 +41,11 @@
    * @param {string} tips   [页面显示的提示信息]
    * @description  设置提示(未经ajax认证时调用)
    */
-  fCheck.setTips = function(select, tips){
-    $(select).css({
-      'background': 'url("img/warning.png") no-repeat 10px 5px',
-      'padding-left':'32px' 
-    }).html(tips);
-  };
+   fCheck.setTips = function(select, tips){
+     $(select).css({
+       'display': 'block',
+     }).html(tips);
+   };
 
   /**
    * [clearTips description]
@@ -56,7 +55,7 @@
    */
   fCheck.clearTips = function(select){
     $(select).css({
-      'background':'none'
+      'display':'none'
     }).html(null);
   };
 
