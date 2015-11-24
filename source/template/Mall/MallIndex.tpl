@@ -46,120 +46,364 @@
 	<div class="grade-course-title">
 		<div>
 			<h6>小学课程</h6>
-			<ul class="grade-list">
-				<li class="current">一年级</li>
-				<li>二年级</li>
-				<li>三年级</li>
-				<li>四年级</li>
-				<li>五年级</li>
-				<li>六年级</li>
+			<ul class="grade-list" role="tablist">
+				<li class="active" role="presentation">
+					<a href="#xiao1" aria-controls="xiao1" role="tab" data-toggle="tab">一年级</a>
+				</li>
+				<li role="presentation" >
+					<a href="#xiao2" aria-controls="xiao2" role="tab" data-toggle="tab">二年级</a>
+				</li>
+				<li role="presentation" >
+					<a href="#xiao3" aria-controls="xiao3" role="tab" data-toggle="tab">三年级</a>
+				</li>
+				<li role="presentation" >
+					<a href="#xiao4" aria-controls="xiao4" role="tab" data-toggle="tab">四年级</a>
+				</li>
+				<li role="presentation" >
+					<a href="#xiao5" aria-controls="xiao5" role="tab" data-toggle="tab">五年级</a>
+				</li>
+				<li role="presentation" >
+					<a href="#xiao6" aria-controls="xiao6" role="tab" data-toggle="tab">六年级</a>
+				</li>
 			</ul>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-md-2 col-sm-3 wrap-side wrap-mall">
-			<div class="panel panel-default">
-				<div class="panel-body pd0">
-					<img src="../../widget/Public.FocusPic/pic/index_03.png" height="385" width="240" alt="" class="teacher-pic"></div>
+	<div class="tab-content">
+		<div class="row tab-pane fade active in" role="tabpanel" id="xiao1">
+			<div class="col-md-2 col-sm-3 wrap-side wrap-mall">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<img src="../../widget/Public.FocusPic/pic/index_03.png" height="385" width="240" alt="" class="teacher-pic"></div>
+				</div>
+			</div>
+			<div class="col-md-8 col-sm-6 wrap-center">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline"></div>
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-3 wrap-side wrap-mall pull-right wrap-side-right">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline"></div>
+				</div>
 			</div>
 		</div>
-		<div class="col-md-8 col-sm-6 wrap-center">
-			<div class="panel panel-default">
-				<div class="panel-body pd0">
-					<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
-					<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline">
-					<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
-					<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline">
-					<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
-					<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline"></div>
+		<div class="row tab-pane fade" role="tabpanel" id="xiao2">
+			<div class="col-md-2 col-sm-3 wrap-side wrap-mall">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<img src="../../widget/Public.FocusPic/pic/index_03.png" height="385" width="240" alt="" class="teacher-pic"></div>
+				</div>
+			</div>
+			<div class="col-md-8 col-sm-6 wrap-center">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline"></div>
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-3 wrap-side wrap-mall pull-right wrap-side-right">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline"></div>
+				</div>
 			</div>
 		</div>
-		<div class="col-md-2 col-sm-3 wrap-side wrap-mall pull-right wrap-side-right">
-			<div class="panel panel-default">
-				<div class="panel-body pd0">
-					<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
-					<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
-					<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline"></div>
+		<div class="row tab-pane fade" role="tabpanel" id="xiao3">
+			<div class="col-md-2 col-sm-3 wrap-side wrap-mall">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<img src="../../widget/Public.FocusPic/pic/index_03.png" height="385" width="240" alt="" class="teacher-pic"></div>
+				</div>
+			</div>
+			<div class="col-md-8 col-sm-6 wrap-center">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline"></div>
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-3 wrap-side wrap-mall pull-right wrap-side-right">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline"></div>
+				</div>
 			</div>
 		</div>
+		<div class="row tab-pane fade" role="tabpanel" id="xiao4">
+			<div class="col-md-2 col-sm-3 wrap-side wrap-mall">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<img src="../../widget/Public.FocusPic/pic/index_03.png" height="385" width="240" alt="" class="teacher-pic"></div>
+				</div>
+			</div>
+			<div class="col-md-8 col-sm-6 wrap-center">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline"></div>
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-3 wrap-side wrap-mall pull-right wrap-side-right">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline"></div>
+				</div>
+			</div>
+		</div>
+		<div class="row tab-pane fade" role="tabpanel" id="xiao5">
+			<div class="col-md-2 col-sm-3 wrap-side wrap-mall">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<img src="../../widget/Public.FocusPic/pic/index_03.png" height="385" width="240" alt="" class="teacher-pic"></div>
+				</div>
+			</div>
+			<div class="col-md-8 col-sm-6 wrap-center">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline"></div>
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-3 wrap-side wrap-mall pull-right wrap-side-right">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline"></div>
+				</div>
+			</div>
+		</div>
+		<div class="row tab-pane fade" role="tabpanel" id="xiao6">
+			<div class="col-md-2 col-sm-3 wrap-side wrap-mall">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<img src="../../widget/Public.FocusPic/pic/index_03.png" height="385" width="240" alt="" class="teacher-pic"></div>
+				</div>
+			</div>
+			<div class="col-md-8 col-sm-6 wrap-center">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline"></div>
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-3 wrap-side wrap-mall pull-right wrap-side-right">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline"></div>
+				</div>
+			</div>
+		</div>
+		<!-- repeat -->
 	</div>
 	<!--   小学课程结束    -->
 	<!--   初中课程    -->
 	<div class="grade-course-title">
 		<div>
 			<h6>初中课程</h6>
-			<ul class="grade-list">
-				<li class="current">初一</li>
-				<li>初二</li>
-				<li>初三</li>
+			<ul class="grade-list" role="tablist">
+				<li class="active" role="presentation">
+					<a href="#chu1" aria-controls="chu1" role="tab" data-toggle="tab">初一</a>
+				</li>
+				<li role="presentation" >
+					<a href="#chu2" aria-controls="chu2" role="tab" data-toggle="tab">初二</a>
+				</li>
+				<li role="presentation" >
+					<a href="#chu3" aria-controls="chu3" role="tab" data-toggle="tab">初三</a>
+				</li>
 			</ul>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-md-2 col-sm-3 wrap-side wrap-mall">
-			<div class="panel panel-default">
-				<div class="panel-body pd0">
-					<img src="../../widget/Public.FocusPic/pic/index_03.png" height="385" width="240" alt="" class="teacher-pic"></div>
+	<div class="tab-content">
+		<div class="row tab-pane fade active in" role="tabpanel" id="chu1">
+			<div class="col-md-2 col-sm-3 wrap-side wrap-mall">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<img src="../../widget/Public.FocusPic/pic/index_03.png" height="385" width="240" alt="" class="teacher-pic"></div>
+				</div>
+			</div>
+			<div class="col-md-8 col-sm-6 wrap-center">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline"></div>
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-3 wrap-side wrap-mall pull-right wrap-side-right">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline"></div>
+				</div>
 			</div>
 		</div>
-		<div class="col-md-8 col-sm-6 wrap-center">
-			<div class="panel panel-default">
-				<div class="panel-body pd0">
-					<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
-					<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline">
-					<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
-					<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline">
-					<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
-					<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline"></div>
+		<div class="row tab-pane fade" role="tabpanel" id="chu2">
+			<div class="col-md-2 col-sm-3 wrap-side wrap-mall">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<img src="../../widget/Public.FocusPic/pic/index_03.png" height="385" width="240" alt="" class="teacher-pic"></div>
+				</div>
+			</div>
+			<div class="col-md-8 col-sm-6 wrap-center">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline"></div>
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-3 wrap-side wrap-mall pull-right wrap-side-right">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline"></div>
+				</div>
 			</div>
 		</div>
-		<div class="col-md-2 col-sm-3 wrap-side wrap-mall pull-right wrap-side-right">
-			<div class="panel panel-default">
-				<div class="panel-body pd0">
-					<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
-					<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
-					<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline"></div>
+		<div class="row tab-pane fade" role="tabpanel" id="chu3">
+			<div class="col-md-2 col-sm-3 wrap-side wrap-mall">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<img src="../../widget/Public.FocusPic/pic/index_03.png" height="385" width="240" alt="" class="teacher-pic"></div>
+				</div>
+			</div>
+			<div class="col-md-8 col-sm-6 wrap-center">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline"></div>
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-3 wrap-side wrap-mall pull-right wrap-side-right">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline"></div>
+				</div>
 			</div>
 		</div>
+		<!-- repeat -->
 	</div>
 	<!--   初中课程结束    -->
 	<!--   高中课程    -->
 	<div class="grade-course-title">
 		<div>
 			<h6>高中课程</h6>
-			<ul class="grade-list">
-				<li class="current">高一</li>
-				<li>高二</li>
-				<li>高三</li>
+			<ul class="grade-list" role="tablist">
+				<li class="active" role="presentation">
+					<a href="#gao1" aria-controls="gao1" role="tab" data-toggle="tab">高一</a>
+				</li>
+				<li role="presentation" >
+					<a href="#gao2" aria-controls="gao2" role="tab" data-toggle="tab">高二</a>
+				</li>
+				<li role="presentation" >
+					<a href="#gao3" aria-controls="gao3" role="tab" data-toggle="tab">高三</a>
+				</li>
 			</ul>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-md-2 col-sm-3 wrap-side wrap-mall">
-			<div class="panel panel-default">
-				<div class="panel-body pd0">
-					<img src="../../widget/Public.FocusPic/pic/index_03.png" height="385" width="240" alt="" class="teacher-pic"></div>
+	<div class="tab-content">
+		<div class="row tab-pane fade active in" role="tabpanel" id="gao1">
+			<div class="col-md-2 col-sm-3 wrap-side wrap-mall">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<img src="../../widget/Public.FocusPic/pic/index_03.png" height="385" width="240" alt="" class="teacher-pic"></div>
+				</div>
+			</div>
+			<div class="col-md-8 col-sm-6 wrap-center">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline"></div>
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-3 wrap-side wrap-mall pull-right wrap-side-right">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline"></div>
+				</div>
 			</div>
 		</div>
-		<div class="col-md-8 col-sm-6 wrap-center">
-			<div class="panel panel-default">
-				<div class="panel-body pd0">
-					<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
-					<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline">
-					<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
-					<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline">
-					<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
-					<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline"></div>
+		<div class="row tab-pane fade" role="tabpanel" id="gao2">
+			<div class="col-md-2 col-sm-3 wrap-side wrap-mall">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<img src="../../widget/Public.FocusPic/pic/index_03.png" height="385" width="240" alt="" class="teacher-pic"></div>
+				</div>
+			</div>
+			<div class="col-md-8 col-sm-6 wrap-center">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline"></div>
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-3 wrap-side wrap-mall pull-right wrap-side-right">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline"></div>
+				</div>
 			</div>
 		</div>
-		<div class="col-md-2 col-sm-3 wrap-side wrap-mall pull-right wrap-side-right">
-			<div class="panel panel-default">
-				<div class="panel-body pd0">
-					<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
-					<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
-					<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline"></div>
+		<div class="row tab-pane fade" role="tabpanel" id="gao3">
+			<div class="col-md-2 col-sm-3 wrap-side wrap-mall">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<img src="../../widget/Public.FocusPic/pic/index_03.png" height="385" width="240" alt="" class="teacher-pic"></div>
+				</div>
+			</div>
+			<div class="col-md-8 col-sm-6 wrap-center">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline"></div>
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-3 wrap-side wrap-mall pull-right wrap-side-right">
+				<div class="panel panel-default">
+					<div class="panel-body pd0">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
+						<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline"></div>
+				</div>
 			</div>
 		</div>
+		<!-- repeat -->
 	</div>
 	<!--   高中课程结束    -->
 </div>
