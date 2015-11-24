@@ -8,11 +8,19 @@
 	<div class="grade-course-title">
 		<h6 class="live-title">直播进行中</h6>
 		<a href="#" class="more">更多</a>
-		<ul class="live-list">
+		<ul class="live-list-tabs">
 			<li><i class="fa fa-circle-o fa-circle"></i></li>
 			<li><i class="fa fa-circle-o"></i></li>
 			<li><i class="fa fa-circle-o"></i></li>
 		</ul>
+	</div>
+	<div class="row row-page-turn">
+		<div class="live-content-action">
+			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
+			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
+			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
+			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
+		</div>
 	</div>
 	<!-- 为你推荐 -->
 	<div class="grade-course-title">
