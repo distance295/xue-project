@@ -5,51 +5,42 @@
  * @date    2015-11-22 
  * @version $Id$  首页广告轮播
  */
-#ui-focus-public {
+#carousel-example-generic {
   height: 380px;
   overflow: hidden;
   /*=================/图片轮播大图/============================*/
   /*=================/图片轮播缩小图/============================*/
 }
-#ui-focus-public .focus-list {
+#carousel-example-generic .focus-list {
   overflow: hidden;
   padding: 0;
 }
-#ui-focus-public .focus-list li {
+#carousel-example-generic .focus-list li {
   width: 100%;
   height: 380px;
-  float: left;
-  position: absolute;
-  z-index: 1;
-  list-style: none;
-  opacity: 0;
-  background: url(pic/helloWeen_2015.jpg) top center no-repeat;
 }
-#ui-focus-public .focus-list li a {
+#carousel-example-generic .focus-list li a {
   display: block;
   width: 100%;
   height: 380px;
-  text-indent: -999999em;
 }
-#ui-focus-public .focus-list li.current {
+#carousel-example-generic .focus-list li.current {
   z-index: 10;
 }
-#ui-focus-public .focus-num-wrap {
+#carousel-example-generic .focus-num-wrap {
   width: 980px;
   height: 30px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
-  top: 345px;
+  top: -20px;
 }
-#ui-focus-public .focus-num-wrap ol.focus-num {
+#carousel-example-generic .focus-num-wrap ol.focus-num {
   width: 100%;
-  position: absolute;
-  right: -115px;
+  left: 408px;
 }
-#ui-focus-public .focus-num-wrap ol.focus-num li {
+#carousel-example-generic .focus-num-wrap ol.focus-num li {
   float: left;
-  display: inline;
   width: 110px;
   height: 26px;
   line-height: 26px;
@@ -60,7 +51,9 @@
   list-style: none;
   overflow: hidden;
   background-color: #b4b4b4;
+  text-indent: 0;
+  border: 0;
 }
-#ui-focus-public .focus-num-wrap ol.focus-num li.current {
+#carousel-example-generic .focus-num-wrap ol.focus-num li.active {
   background: #fff;
 }
