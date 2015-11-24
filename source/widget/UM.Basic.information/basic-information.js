@@ -98,7 +98,7 @@ function ymd()
 
        //先给年下拉框赋内容
        var y  = new Date().getFullYear();   
-       for (var i = (y-19); i < (y+1); i++) //ä»¥ä»Šå¹´ä¸ºå‡†ï¼Œå‰30å¹´ï¼ŒåŽ30å¹´   
+       for (var i = (y-19); i < (y+1); i++)  
                document.date.year.options.add(new Option(" "+ i +" ", i));   
 
        ////赋月份的下拉框  

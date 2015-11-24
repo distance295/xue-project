@@ -12,14 +12,14 @@ $(function(){
     var $liveCourseHover = $('.live-course-hover');
     $liveCourseHover.on({
         mouseenter:function(){
-            $(this).find('.live-course-title').animate({"height":80},300);
-            $(this).find('.live-course-show-title').fadeOut(300);
-            $(this).find('.live-course-content').fadeIn(300);
+            $(this).find('.live-course-title').stop().animate({"height":80},300);
+            $(this).find('.live-course-show-title').stop().fadeOut(300);
+            $(this).find('.live-course-content').stop().fadeIn(300);
         },
         mouseleave:function(){
-            $(this).find('.live-course-title').animate({"height":30},300);
-            $(this).find('.live-course-show-title').fadeIn(300);
-            $(this).find('.live-course-content').fadeOut(300);
+            $(this).find('.live-course-title').stop().animate({"height":30},300);
+            $(this).find('.live-course-show-title').stop().fadeIn(300);
+            $(this).find('.live-course-content').stop().fadeOut(300);
         }
     });
     var $liveCourseContent = $('.live-course-content');
