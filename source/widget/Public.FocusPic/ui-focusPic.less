@@ -7,29 +7,28 @@
  */
 
 
-#ui-focus-public {
+#carousel-example-generic {
 		height: 380px;overflow: hidden;
 		/*=================/图片轮播大图/============================*/
 		.focus-list {
 				overflow: hidden;padding:0;
 				li {
-					width: 100%; height: 380px;float: left; position: absolute; z-index: 1;list-style: none;opacity:0;
-					background:url(pic/helloWeen_2015.jpg) top center no-repeat;
+					width: 100%; height: 380px;
 					a {
-						display:block;width:100%;height: 380px; text-indent: -999999em;
+						display:block;width:100%;height: 380px; 
 					}
 				}
 				li.current { z-index: 10;}
 		}
 		/*=================/图片轮播缩小图/============================*/
 		.focus-num-wrap {
-				width:980px;height: 30px; margin: 0 auto; position: relative;z-index: 2;top:345px; 
+				width:980px;height: 30px; margin: 0 auto; position: relative;z-index: 2;top:-20px; 
 				ol.focus-num {
-					width:100%;position: absolute; right:-115px; 
+					width:100%;left:408px; 
 					li { 
-						float: left; display: inline; width: 110px;height: 26px;line-height: 26px; border-radius: 1px; margin:0 1px;cursor: pointer; text-align: center;list-style: none;overflow: hidden;background-color:rgba(180,180,180,1);
+						float: left;width: 110px;height: 26px;line-height: 26px; border-radius: 1px; margin:0 1px;cursor: pointer; text-align: center;list-style: none;overflow: hidden;background-color:rgba(180,180,180,1);text-indent: 0;border:0;
 					}
-					li.current {background: #fff;}
+					li.active {background: #fff;}
 				}
 		}
 }

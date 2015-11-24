@@ -1,21 +1,25 @@
 <!--
     @require ui-focusPic.less
 -->
-<div id="ui-focus-public">
-		<ul class="focus-list">
-		<!-- background:url(pic/helloWeen_2015.jpg) top center no-repeat; -->
-			<li style="opacity:1;z-index:2;">
-				<a target="_blank" href="http://www.baidu.com/">23123</a>
-			</li>
-		</ul>
-		<div class="focus-num-wrap">
-			<ol class="focus-num">
-				<li class="current">学霸节免费直播</li>
-				<li class="">2学霸节免费直播学霸节免费直播</li>
-				<li class="">3</li>
-				<li class="">4</li>
-				<li class="">5</li>
-				<li class="">6</li>
-			</ol>
-		</div>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	<!-- Wrapper for slides-->
+	<ul class="carousel-inner focus-list">
+		<li class="item active">
+			<a target="_blank" href="http://www.xueersi.com/">
+				<img src="pic/helloWeen_2015.jpg" alt="123">
+			</a>
+		</li>
+		<li class="item">
+			<a target="_blank" href="http://www.baidu.com/">
+				<img src="pic/1.jpg" alt="456">
+			</a>
+		</li>
+	</ul>
+	<!-- Indicators -->
+	<div class="focus-num-wrap">
+		<ol class="carousel-indicators focus-num">
+			<li class="active">学霸节免费直播</li>
+			<li>2学霸节免费直播学霸节免费直播</li>
+		</ol>
 	</div>
+</div>
