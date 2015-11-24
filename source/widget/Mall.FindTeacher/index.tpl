@@ -6,7 +6,7 @@
 
 
     <div class="find-teacher-list">
-    <div class="row find-teacher-list-container">
+    <div class="find-teacher-list-container">
         <div class="find-teacher-card">
             <div class="find-teacher-intro">
                 <div class="find-teacher-hover-container">

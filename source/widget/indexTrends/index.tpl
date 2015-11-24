@@ -74,7 +74,7 @@
 		</div>
 		<div class="index-btn-wrap">
 			<!-- 已登录 -->
-			<button type="button" class="btn btn-danger btn-into-home">进入我的网校</button>
+			<a href="#" class="btn btn-danger btn-into-home">进入我的网校</a>
 
 			<!-- 已登录 end-->
 			<!--未登录 
