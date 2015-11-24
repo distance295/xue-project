@@ -3,13 +3,12 @@
   @require personalCenter.js
 -->
 
-<!-- 个人中心头部 -->
 <div class="centerHeader-office-background">
     <div class="centerHeader-ib">
         <div class="centerHeader-img">
             <div class="centerHeader-img-head">
                 <!--title属性仅在学生主页进行设置-->
-                <div class="centerHeader-img-level" title="学而思网校官方账号">
+                <div class="centerHeader-office-img-level" title="学而思网校官方账号">
                     <img src="img/level.png" alt="" class="level-img" />
                 </div>
             </div>
@@ -27,13 +26,15 @@
         <div class="centerHeader-alFocus hide"><span class="centerHeader-alFocus-btn">已关注</span><span class="centerHeader-willFocus-btn">取消关注</span></div>
     </div>
     <link rel="import" href="../../widget/Mall.personCenter/tab-office.tpl?__inline">
-    <div class="row">
+    <div class="row bottom m20">
         <div class="col-md-9 top m20">
-            <link rel="import" href="../../widget/Public.Dynamic/index.tpl?__inline">
+            <link rel="import" href="../../widget/Public.Dynamic/dynAttention.tpl?__inline">
         </div>
         <div class="col-md-3 top m20">
-            <link rel="import" href="../../widget/Mall.personCenter/center-info.tpl?__inline">
-            
+            <div class="center-left-m">
+                <link rel="import" href="center-info.tpl?__inline">
+                <link rel="import" href="center-visit.tpl?__inline">
+            </div>
         </div>
     </div>
 </div>
