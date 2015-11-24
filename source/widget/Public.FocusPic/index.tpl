@@ -1,7 +1,7 @@
 <!--
     @require ui-focusPic.less
 -->
-<div id="index-focus">
+<div id="ui-focus-public">
 		<ul class="focus-list">
 		<!-- background:url(pic/helloWeen_2015.jpg) top center no-repeat; -->
 			<li style="opacity:1;z-index:2;">

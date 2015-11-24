@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors alex liu (liuyanbin@xueersi.com)
+ * @date    2015-11-22 
+ * @version $Id$  首页广告轮播
+ */
+#ui-focus-public {
+  height: 380px;
+  overflow: hidden;
+  /*=================/图片轮播大图/============================*/
+  /*=================/图片轮播缩小图/============================*/
+}
+#ui-focus-public .focus-list {
+  overflow: hidden;
+  padding: 0;
+}
+#ui-focus-public .focus-list li {
+  width: 100%;
+  height: 380px;
+  float: left;
+  position: absolute;
+  z-index: 1;
+  list-style: none;
+  opacity: 0;
+  background: url(pic/helloWeen_2015.jpg) top center no-repeat;
+}
+#ui-focus-public .focus-list li a {
+  display: block;
+  width: 100%;
+  height: 380px;
+  text-indent: -999999em;
+}
+#ui-focus-public .focus-list li.current {
+  z-index: 10;
+}
+#ui-focus-public .focus-num-wrap {
+  width: 980px;
+  height: 30px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  top: 345px;
+}
+#ui-focus-public .focus-num-wrap ol.focus-num {
+  width: 100%;
+  position: absolute;
+  right: -115px;
+}
+#ui-focus-public .focus-num-wrap ol.focus-num li {
+  float: left;
+  display: inline;
+  width: 110px;
+  height: 26px;
+  line-height: 26px;
+  border-radius: 1px;
+  margin: 0 1px;
+  cursor: pointer;
+  text-align: center;
+  list-style: none;
+  overflow: hidden;
+  background-color: #b4b4b4;
+}
+#ui-focus-public .focus-num-wrap ol.focus-num li.current {
+  background: #fff;
+}
