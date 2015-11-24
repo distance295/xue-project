@@ -6,17 +6,19 @@
 <div class="container top m20">
 	<!-- 直播进行中 -->
 	<div class="grade-course-title">
-		<h6 class="live-title">直播进行中</h6>
-		<a href="#" class="more">更多</a>
-		<ul class="live-list-tabs">
-			<li> <i class="fa fa-circle-o fa-circle"></i>
-			</li>
-			<li> <i class="fa fa-circle-o"></i>
-			</li>
-			<li>
-				<i class="fa fa-circle-o"></i>
-			</li>
-		</ul>
+		<div>
+			<h6 class="live-title">直播进行中</h6>
+			<a href="#" class="more">更多</a>
+			<ul class="live-list-tabs">
+				<li> <i class="fa fa-circle-o fa-circle"></i>
+				</li>
+				<li> <i class="fa fa-circle-o"></i>
+				</li>
+				<li>
+					<i class="fa fa-circle-o"></i>
+				</li>
+			</ul>
+		</div>
 	</div>
 	<div class="row row-page-turn">
 		<div class="live-content-action">
@@ -27,7 +29,9 @@
 	</div>
 	<!-- 为你推荐 -->
 	<div class="grade-course-title">
-		<h6>为你推荐</h6>
+		<div>
+			<h6>为你推荐</h6>
+		</div>
 	</div>
 	<div class="row row-page-turn">
 		<span class="page-turn page-up pull-left">向上</span>
@@ -40,15 +44,17 @@
 	<!-- 为你推荐 end-->
 	<!--   小学课程    -->
 	<div class="grade-course-title">
-		<h6>小学课程</h6>
-		<ul class="grade-list">
-			<li class="current">一年级</li>
-			<li>二年级</li>
-			<li>三年级</li>
-			<li>四年级</li>
-			<li>五年级</li>
-			<li>六年级</li>
-		</ul>
+		<div>
+			<h6>小学课程</h6>
+			<ul class="grade-list">
+				<li class="current">一年级</li>
+				<li>二年级</li>
+				<li>三年级</li>
+				<li>四年级</li>
+				<li>五年级</li>
+				<li>六年级</li>
+			</ul>
+		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-2 col-sm-3 wrap-side wrap-mall">
@@ -80,12 +86,14 @@
 	<!--   小学课程结束    -->
 	<!--   初中课程    -->
 	<div class="grade-course-title">
-		<h6>初中课程</h6>
-		<ul class="grade-list">
-			<li class="current">初一</li>
-			<li>初二</li>
-			<li>初三</li>
-		</ul>
+		<div>
+			<h6>初中课程</h6>
+			<ul class="grade-list">
+				<li class="current">初一</li>
+				<li>初二</li>
+				<li>初三</li>
+			</ul>
+		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-2 col-sm-3 wrap-side wrap-mall">
@@ -117,12 +125,14 @@
 	<!--   初中课程结束    -->
 	<!--   高中课程    -->
 	<div class="grade-course-title">
-		<h6>高中课程</h6>
-		<ul class="grade-list">
-			<li class="current">高一</li>
-			<li>高二</li>
-			<li>高三</li>
-		</ul>
+		<div>
+			<h6>高中课程</h6>
+			<ul class="grade-list">
+				<li class="current">高一</li>
+				<li>高二</li>
+				<li>高三</li>
+			</ul>
+		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-2 col-sm-3 wrap-side wrap-mall">
