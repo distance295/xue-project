@@ -7,13 +7,14 @@
         <li><a href="#">首页</a></li>
         <li class="active">当前页</li>
     </ol>
+    <link rel="import" href="../../widget/UserHome.wrongQues/chooseGrade.tpl?__inline">
     <div class="row top m20">
         <div class="col-md-10 wrap-body wrap-mall">
 
             <!-- *********************** 内容区域开始 *********************** -->
 
             <div class="panel panel-default findClass">
-                <div class="panel-body">
+                <div class="panel-body pd0">
                 <link rel="import" href="../../widget/Mall.FindTeacher/teacher-rank.tpl?__inline">
                 <link rel="import" href="../../widget/Mall.FindTeacher/index.tpl?__inline">
                 </div>
@@ -21,9 +22,9 @@
 
             <!-- *********************** 内容区域结束 *********************** -->
         </div>
-        <div class="col-md-2 col-sm-2 wrap-side wrap-mall">
+        <div class="col-md-2 col-sm-2 wrap-side wrap-mall pull-right">
             <div class="panel panel-default">
-                <div class="panel-body">
+                <div class="panel-body pd0">
                     <span class="findRightTitle">热门新鲜事</span>
                     <div class="findRightList">
                         <link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
