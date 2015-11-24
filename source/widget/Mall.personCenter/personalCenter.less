@@ -1,24 +1,38 @@
 /* 个人中心头部centerHeader- start */
 @Hopacity:0.3;
+
 .centerHeader{
   width: 100%;
   padding-top:16px;
   height: 100%;
-  background: url('img/background.png');
-  .centerHeader-background{
-    width: 1190px;
-    //height: 300px;
+  background: url('img/background.png') top center;
+}
+.centerHeader-teacher{
+  width: 100%;
+  padding-top:16px;
+  height: 100%;
+  background: url('img/teacher-back.jpg') top center;
+}
+.centerHeader-stu{
+  width: 100%;
+  padding-top:16px;
+  height: 100%;
+  background: url('img/stuBack.jpg') top center;
+}
+  
+  .centerHeader-teacher-background{
     margin: 0 auto;
     background: url('img/header.jpg');
+    height: 300px;
   }
 
   .centerHeader-office-background{
-    width: 1190px;
-    //height: 300px;
+    //width: 1190px;
+    height: 300px;
     margin: 0 auto;
   }
     .centerHeader-ib{
-      width: 1190px;
+      //width: 1190px;
       height: 300px;
       margin: 0 auto;
       background-color: rgba(0,0,0,0.05);
@@ -34,7 +48,7 @@
             border-radius: 50%;
             position: relative;
             background: url('img/header-img.png');
-            .centerHeader-img-level{
+            .centerHeader-office-img-level{
               position: absolute;
               width: 22px;
               height: 22px;
@@ -42,7 +56,39 @@
               left:80%;
               border-radius: 50%;
               border: 2px solid rgba(255,255,255,0.8);
-              background:rgb(59,175,218);
+              background-color: #3bafda;
+              .level-img{
+                position: absolute;
+                top:20%;
+                left:0;
+                margin-left: 2px;
+              }
+            }
+            .centerHeader-teacher-img-level{
+              position: absolute;
+              width: 22px;
+              height: 22px;
+              top:80%;
+              left:80%;
+              border-radius: 50%;
+              border: 2px solid rgba(255,255,255,0.8);
+              background-color: #ffbc3c;
+              .level-img{
+                position: absolute;
+                top:20%;
+                left:0;
+                margin-left: 2px;
+              }
+            }
+            .centerHeader-stu-img-level{
+              position: absolute;
+              width: 22px;
+              height: 22px;
+              top:80%;
+              left:80%;
+              border-radius: 50%;
+              border: 2px solid rgba(255,255,255,0.8);
+              background-color: #e74c3c;
               .level-img{
                 position: absolute;
                 top:20%;
@@ -105,16 +151,17 @@
       margin-top: 15px;
       color:#fff;
     }
-    .btn{
-      display: inline-block;
-      width: 80px;
-      height: 33px;
-      line-height: 33px;
-      border-radius: 1px;
-      background: rgb(255,188,60);
-    }
+    
     .centerHeader-notFoucs{
       .focus;
+      .btn{
+        display: inline-block;
+        width: 80px;
+        height: 33px;
+        line-height: 33px;
+        border-radius: 1px;
+        background: rgb(255,188,60);
+      }
       .centerHeader-notFoucs-btn{
         letter-spacing: 4px;
         cursor: pointer;
@@ -126,6 +173,14 @@
     }
     .centerHeader-alFocus{
       .focus;
+      .btn{
+        display: inline-block;
+        width: 80px;
+        height: 33px;
+        line-height: 33px;
+        border-radius: 1px;
+        background: rgb(255,188,60);
+      }
       .centerHeader-alFocus-btn{
         .btn;
         cursor: pointer;
@@ -144,26 +199,27 @@
       }
     }
   
-}
+
 /* 个人中心头部 centerHeader end */
 
 /* 个人中心 center-info start */
 .center-left{
-  width: 260px;
+  //width: 260px;
   background: #fff;
   border-radius: 4px;
 }
 @wordColor:rgb(191,191,191);
+.center-left-m{
+  margin-left: 30px;
+}
 .center-info{
   .center-left;
-  margin-left: 30px;
-  height: 50px;
+  //height: 50px;
   font-size: 13px;
   .center-info-all{
     display:inline-block;
     text-align: center;
     width: 80px;
-    height: 36px;
     margin-top: 8px;
   }
   .center-info-fans{
@@ -171,6 +227,7 @@
     border-right: 1px solid rgb(217,217,217);
     .center-info-fans-name{
       color:@wordColor;
+      padding-bottom: 8px;
     }
   }
   .center-info-newThing{
@@ -184,6 +241,7 @@
     border-left: 1px solid rgb(217,217,217);
     .center-info-stud-name{
       color:@wordColor;
+      padding-bottom: 8px;
     }
   }
   .center-info-fans-office{
@@ -220,7 +278,7 @@
 }
 .center-verify-office{
   .center-left;
-  height: 68px;
+  //height: 68px;
   font-size: 12px;
   .center-office-verify{
     float: left;
@@ -234,8 +292,9 @@
 }
 
 .center-verify-teacher{
+  //width: 260px;
   .center-left;
-  height: 145px;
+  //height: 145px;
   font-size: 12px;
   .center-teacher-verify{
     .verify-up-left;
@@ -246,10 +305,11 @@
     width: 130px;
     color:rgb(117,191,238);
     background: url("img/teacher-movie.png") no-repeat 15px 5px;
+    cursor:pointer;
   }
   .center-teacher-desc{
-    width: 260px;
-    height: 40px;
+    // width: 260px;
+    // height: 40px;
     line-height: 40px;
     padding-left: 14px;
     border-bottom: 1px solid rgb(242,242,245);
@@ -293,8 +353,9 @@
 
 /* 个人中心 最近访问 center-visit start */
 .center-visit{
+  margin-top: 20px;
   .center-left;
-  height: 413px;
+  //height: 413px;
   font-size: 12px;
   padding-top: 18px;
   .center-visit-intro{
@@ -337,7 +398,7 @@
 
 /* 个人中心直播献花 center-broadcast start */
 .center-rank-left{
-  width: 920px;
+  //width: 920px;
   border-radius: 4px;
   background-color: #fff;
   font-size: 12px;
@@ -349,6 +410,7 @@
   color: rgb(153,153,153);
   padding-left: 15px;
   padding-right: 15px;
+  border-bottom: 1px solid #eaeaea;
   span{
     color: #000;
     display: inline-block;
@@ -375,16 +437,17 @@
   }
 }
 .center-rank-alive{
-  width: 920px;
-  height: 700px;
+  //width: 920px;
+  //height: 700px;
   border-radius: 4px;
   .center-rank-stud{
     height: 65px;
-    width: 920px;
+    //width: 920px;
     background: #fff;
     font-size: 12px;
     line-height: 65px;
     overflow:hidden;
+    border-bottom: 1px solid #eaeaea;
     .rank-number{
       float:left;
       .number1{
@@ -416,6 +479,7 @@
       display: inline-block;
       width: 40px;
       height: 35px;
+      border-radius: 50%;
     }
     .rank-name{
       float:left;
@@ -437,7 +501,8 @@
       .send-flower1{
         margin-left: 18px;
         font-size: 14px;
-        width: 100px;
+        //width: 100px;
+        padding-right: 50px;
         color: rgb(51,51,51);
         display: inline-block;
         padding-left: 25px;
@@ -445,7 +510,8 @@
       }
       .send-flower2{
         font-size: 14px;
-        width: 100px;
+        //width: 100px;
+        padding-right: 50px;
         display: inline-block;
         color: rgb(51,51,51);
         padding-left: 20px;
@@ -453,7 +519,8 @@
       }
       .send-flower3{
         font-size: 14px;
-        width: 100px;
+        //width: 100px;
+        padding-right: 50px;
         display: inline-block;
         color: rgb(51,51,51);
         padding-left: 20px;
@@ -464,7 +531,8 @@
       font-size: 12px;
       color: #666;
       float: right;
-      width: 130px;
+      //width: 130px;
+      padding-right: 40px;
       height: 65px;
     }
   }
@@ -513,4 +581,81 @@
          }
       }
    }
+}
+
+
+/** 
+ * 新鲜事筛选Style
+ */
+@font-color:#333;
+.border-radius(@radius) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+        -ms-border-radius: @radius;
+         -o-border-radius: @radius;
+            border-radius: @radius;
+}
+.filter-public-tab{
+   display: block;
+   overflow: hidden;
+   background: #fff;
+   line-height: 30px;
+   padding: 12px 15px;
+   .font-size;
+   .font-family;
+   color:@font-color;
+   .border-radius(4px);
+   border-bottom: 1px solid #eaeaea;
+   a{ 
+      outline:none;
+      &:focus{
+          outline:none;
+      }
+    }
+   .filter-text-style{
+      float: left;
+      color:@font-color*3; 
+      margin-right: 3px;
+   }
+   .filter-nav-list{
+       display: block;
+       overflow: hidden;
+       ul{
+          margin: 0;
+          padding: 0;
+          line-height: 30px;
+          .font-size;
+          li{
+             float: left;
+             margin-right: 20px;
+             list-style: none;
+             a{
+               .font-size;
+               .font-family;
+               color:@font-color;
+               &:hover{
+                  color: #2599c4;
+               }
+             }
+             &.current{
+                 a{
+                    color: #2599c4;
+                 }
+                 
+             }
+          }
+       } 
+   }
+}
+/* 在售课程背景色设置 */
+.center-teacher-course{
+  background-color: white;
+  .border-radius(2px);
+}
+.center-teacher-report{
+  background-color: white;
+  .border-radius(2px);
+  .glory-content:nth-child(3n+1){
+    margin-right: 0;
+  }
 }

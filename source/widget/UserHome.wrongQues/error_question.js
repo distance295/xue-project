@@ -33,7 +33,7 @@ $('.chocie-point-show').on('click',function(){
     if($(that).hasClass('show-choice')){
         $(that).children('a').html('更多');
         $(that).children('i').removeClass('fa-angle-up fa-chevron-up').addClass('fa-angle-down fa-chevron-down');
-        $('.choice-point-cur').css('height','2.9rem');
+        $('.choice-point-cur').css('height','3.0rem');
         $(that).removeClass('show-choice');
     }else{
         $(that).children('a').html('收起');
