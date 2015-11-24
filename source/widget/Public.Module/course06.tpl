@@ -12,7 +12,7 @@
                     <!-- <span class="ui-user-name">朱韬</span> -->
                 </div>
             </div>
-            <div class="course-detail">
+            <div class="course-detail pull-left">
                 <p class="course-title">
                     <label class="course-label course-yellow-label">化学</label>
                     <label class="course-label course-green-label">录播</label>
