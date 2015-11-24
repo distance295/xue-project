@@ -173,21 +173,18 @@ ImageTrans.modes = function(){
 				/*
 				 *图片缩放
 				 */
-				var maxWidth = this._container.clientWidth;
-				var maxHeight = this._container.clientHeight;
+				var maxWidth = this._clientWidth;
+				var maxHeight = this._clientHeight;
 				var rate=(maxHeight/img.offsetHeight>maxWidth/img.offsetWidth?maxWidth/img.offsetWidth:maxHeight/img.offsetHeight); 
-			   //console.log( this._container.clientWidth)
-                $(img).attr('_imgW',img.offsetWidth).attr('_imgH',img.offsetHeight);
-
-			    //设置等比例图片的宽和高以及居中显示
+			   
+			   //设置等比例图片的宽和高以及居中显示
 			    $$D.setStyle( img, {
 					width: img.offsetWidth*rate + "px",
 					height: img.offsetHeight*rate + "px",
-					top: ( maxHeight - img.offsetHeight*rate ) / 2 + "px",
-					left: ( maxWidth - img.offsetWidth*rate ) / 2 + "px",
+					top: ( this._clientHeight - img.offsetHeight*rate ) / 2 + "px",
+					left: ( this._clientWidth - img.offsetWidth*rate ) / 2 + "px",
 					visibility: "visible"
 				});
-
 			},
 			show: function() {
 				var matrix = getMatrix( this._radian, this._y, this._x );
@@ -208,6 +205,19 @@ ImageTrans.modes = function(){
 			load: function(){
 				this._img.onload = null;//防止ie重复加载gif的bug
 				this._img.style.visibility = "visible";
+				/*
+				 *图片缩放
+				 */
+				var img = this._img;
+				var maxWidth = this._clientWidth;
+				var maxHeight = this._clientHeight;
+				var rate=(maxHeight/img.offsetHeight>maxWidth/img.offsetWidth?maxWidth/img.offsetWidth:maxHeight/img.offsetHeight); 
+			    
+			    //设置等比例图片的宽和高
+			    $$D.setStyle( img, {
+					width: img.offsetWidth*rate + "px",
+					height: img.offsetHeight*rate + "px",
+				});
 			},
 			show: function() {
 				var img = this._img;
@@ -216,22 +226,11 @@ ImageTrans.modes = function(){
 					img.filters.item("DXImageTransform.Microsoft.Matrix"),
 					getMatrix( this._radian, this._y, this._x )
 				);
-
-				/*
-				 *图片缩放
-				 */
-				var maxWidth = this._container.clientWidth;
-				var maxHeight = this._container.clientHeight;
-				var rate=(maxHeight/img.offsetHeight>maxWidth/img.offsetWidth?maxWidth/img.offsetWidth:maxHeight/img.offsetHeight); 
-			   //console.log( this._container.clientWidth)
-                $(img).attr('_imgW',img.offsetWidth).attr('_imgH',img.offsetHeight);
-                
-			    //设置等比例图片的宽和高以及居中显示
+				
+			    //设置等比例图片的宽和高
 			    $$D.setStyle( img, {
-					width: img.offsetWidth*rate + "px",
-					height: img.offsetHeight*rate + "px",
-					top: ( maxHeight - img.offsetHeight*rate ) / 2 + "px",
-					left: ( maxWidth - img.offsetWidth*rate ) / 2 + "px",
+					top: ( this._clientHeight - img.offsetHeight ) / 2 + "px",
+					left: ( this._clientWidth - img.offsetWidth ) / 2 + "px",
 					visibility: "visible"
 				});
 			},
@@ -244,12 +243,12 @@ ImageTrans.modes = function(){
 					context = this._context = canvas.getContext('2d');
 				//样式设置
 				$$D.setStyle( canvas, { position: "absolute", left: 0, top: 0 } );
-				canvas.width = this._container.clientWidth; canvas.height = this._container.clientHeight;
+				canvas.width = this._clientWidth; canvas.height = this._clientHeight;
 				this._container.appendChild(canvas);
 			},
 			show: function(){
 				var img = this._img, context = this._context,
-					clientWidth = this._container.clientWidth, clientHeight = this._container.clientHeight;
+					clientWidth = this._clientWidth, clientHeight = this._clientHeight;
 				//canvas变换
 				context.save();
 				context.clearRect( 0, 0, clientWidth, clientHeight );//清空内容
@@ -314,7 +313,7 @@ ImageTrans.transforms = {
 			//缩小的时候图片居中放置和控制图片缩小的最小的比例
 			if( zoom <0 ){
 				//判断图片缩放的大小限制
-	            if(this._y<0.3){
+	            if(this._y<0.2){
 	               return false;
 				}
 				//图片重新居中
