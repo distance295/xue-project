@@ -214,7 +214,6 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
-/website/
 /source/fis-conf-pages.js
 /source/pages/
 /source/widget/_homework/
