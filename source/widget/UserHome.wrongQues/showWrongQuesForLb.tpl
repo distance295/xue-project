@@ -9,3 +9,4 @@
 <div class="que">
 	<img src="img/ques2.png"></img>
 </div>
+
