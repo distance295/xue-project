@@ -4,14 +4,18 @@
 <link rel="import" href="../../widget/Public.FocusPic/index.tpl?__inline">
 <!-- 学习中心区域 -->
 <div class="container top m20">
-<!-- 直播进行中 -->
+	<!-- 直播进行中 -->
 	<div class="grade-course-title">
 		<h6 class="live-title">直播进行中</h6>
 		<a href="#" class="more">更多</a>
 		<ul class="live-list-tabs">
-			<li><i class="fa fa-circle-o fa-circle"></i></li>
-			<li><i class="fa fa-circle-o"></i></li>
-			<li><i class="fa fa-circle-o"></i></li>
+			<li> <i class="fa fa-circle-o fa-circle"></i>
+			</li>
+			<li> <i class="fa fa-circle-o"></i>
+			</li>
+			<li>
+				<i class="fa fa-circle-o"></i>
+			</li>
 		</ul>
 	</div>
 	<div class="row row-page-turn">
@@ -19,8 +23,7 @@
 			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
 			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
 			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
-			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
-		</div>
+			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline"></div>
 	</div>
 	<!-- 为你推荐 -->
 	<div class="grade-course-title">
@@ -65,7 +68,7 @@
 					<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline"></div>
 			</div>
 		</div>
-		<div class="col-md-2 col-sm-3 wrap-side wrap-mall pull-right">
+		<div class="col-md-2 col-sm-3 wrap-side wrap-mall pull-right wrap-side-right">
 			<div class="panel panel-default">
 				<div class="panel-body pd0">
 					<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
@@ -102,7 +105,7 @@
 					<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline"></div>
 			</div>
 		</div>
-		<div class="col-md-2 col-sm-3 wrap-side wrap-mall pull-right">
+		<div class="col-md-2 col-sm-3 wrap-side wrap-mall pull-right wrap-side-right">
 			<div class="panel panel-default">
 				<div class="panel-body pd0">
 					<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
@@ -139,7 +142,7 @@
 					<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline"></div>
 			</div>
 		</div>
-		<div class="col-md-2 col-sm-3 wrap-side wrap-mall pull-right">
+		<div class="col-md-2 col-sm-3 wrap-side wrap-mall pull-right wrap-side-right">
 			<div class="panel panel-default">
 				<div class="panel-body pd0">
 					<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
