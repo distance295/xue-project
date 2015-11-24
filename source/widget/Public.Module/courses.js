@@ -130,11 +130,11 @@ $('body').off('click', '.avatar-roll a, .majar-items .prev, .majar-items .next')
      * @param  {string} dom 任意子节点
      */
      fa.addCancel = function(dom){
-        var _url = "data/follow/ajaxFollow.json"//$(dom).data().url;
+        var _url = "/data/follow/ajaxFollow.json"//$(dom).data().url;
         var _type = $(dom).data().type;
         var _params = $(dom).data().params + '&type=' + _type;
         $.ajax({
-            type: "post",
+            type: "get",
             url: _url,
             timeout: 7000,
             dataType: 'json',
@@ -185,13 +185,15 @@ $('body').off('click', '.avatar-roll a, .majar-items .prev, .majar-items .next')
 
 //热门专题课区域增加链接
 var a = $('.course-list.hot-course-list');
+var bLink = $('.course-list.hot-course-link');
 a.on('mouseover', function(){
     $(this).addClass('hover-feed');
 });
 a.on('mouseout', function(){
     $(this).removeClass('hover-feed');
 });
-a.find('.course-detail').off('click').on('click', function(event){
+
+bLink.find('.course-detail').off('click').on('click', function(event){
     var t = $(event.target);
     if(t.attr('href')){
         return;

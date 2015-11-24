@@ -41,10 +41,13 @@ div{
   background-color: rgb(255,255,255);
   padding: 0;
   font-size: 1.4rem;
+  width: 100%;
   &{
-    margin-bottom: 2rem;  
+    margin-top: 2rem;  
   }
-  
+  &:last-child{
+  	margin-bottom: 40px;
+  }
   .que-tips{
     margin-top: 1.2rem;
     margin-bottom: 1.2rem;
@@ -232,14 +235,19 @@ div{
   width:6rem;
 };
 .choice{
-  margin-bottom: 2rem;
   background-color: rgb(255,255,255);
+  .choice-grade-border{
+
+  }
   .choice-grade{
+    margin:0;
     .choiceSet;
     .choice-grade-tip{
       .choiceTip
     }
     .choice-grade-cur{
+      padding-top: 1rem;
+      padding-bottom:1rem;
       .choice-grade-name{
         line-height: 1;
         .choiceSetting;
@@ -256,8 +264,10 @@ div{
       .choiceTip
     }
     .choice-subject-cur{
-
-      span{
+      padding-top: 1rem;
+      padding-bottom: 1rem;  
+      .choice-subject-name{
+        line-height: 1;
         .choiceSetting;
       }
       .select-subject{
@@ -273,25 +283,27 @@ div{
     }
     .choice-point-cur{
       overflow: hidden;
-      height:3rem;
+      height:2.9rem;
       padding-right:0;
-      span{
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      //line-height: 1.8;
+      .choice-point-name{
         .choiceSetting;
+        line-height: 1;
+        margin-bottom: 0.2rem;
       }
-      .select-point{
-        .choiceSelect;
-      }
-
     }
     .choice-cur-show{
       overflow:auto;
-      height:9.5rem;
+      height:7.5rem;
     }
     .chocie-point-show{
       padding: 0;
       width:5rem;
-      span{
+      a{
         font-size: 1.2rem;
+        font-weight: normal;
         display: inline-block;
         margin:1.1rem 0 1.1rem 0;
         padding:0.2rem 0.5rem;

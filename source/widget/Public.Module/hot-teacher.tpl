@@ -1,6 +1,7 @@
 <!--
    课程列表：
-    @require courses.less       
+    @require courses.less           
+    @require courses.js     
 -->
         <div class="course-list hot-course-list">
             <div class="ui-avatar">
