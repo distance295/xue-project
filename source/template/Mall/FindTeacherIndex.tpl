@@ -14,7 +14,7 @@
 
             <div class="panel panel-default findClass">
                 <div class="panel-body">
-                <link rel="import" href="../../widget/Mall.FindTeacher/teacher-rank.tpl?__inline"
+                <link rel="import" href="../../widget/Mall.FindTeacher/teacher-rank.tpl?__inline">
                 <link rel="import" href="../../widget/Mall.FindTeacher/index.tpl?__inline">
                 </div>
             </div>
