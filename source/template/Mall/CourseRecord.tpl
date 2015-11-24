@@ -11,13 +11,13 @@
         <!--   12栏的用这个    -->
         <div class="col-md-12">
 
-            <link rel="import" href="../../widget/UserHome.wrongQues/chooseGrade.tpl?__inline">
         </div>
         <!--   12栏结束    -->
         <!--   左右分栏的用这个    -->
         <div class="col-md-10 wrap-body wrap-mall">
 
             <!-- *********************** 内容区域开始 *********************** -->
+            <link rel="import" href="../../widget/UserHome.wrongQues/chooseGrade.tpl?__inline">
             <ul class="screen-rank">
                 <li class="popular-rank">综合</li>
                 <li>学员数</li>
