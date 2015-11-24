@@ -4,18 +4,27 @@
 <link rel="import" href="../../widget/Public.FocusPic/index.tpl?__inline">
 <!-- 学习中心区域 -->
 <div class="container top m20">
+<!-- 直播进行中 -->
+	<div class="grade-course-title">
+		<h6 class="live-title">直播进行中</h6>
+		<a href="#" class="more">更多</a>
+		<ul class="live-list">
+			<li><i class="fa fa-circle-o fa-circle"></i></li>
+			<li><i class="fa fa-circle-o"></i></li>
+			<li><i class="fa fa-circle-o"></i></li>
+		</ul>
+	</div>
 	<!-- 为你推荐 -->
 	<div class="grade-course-title">
 		<h6>为你推荐</h6>
-
 	</div>
 	<div class="row row-page-turn">
-		<span class="page-turn page-up page-up-disable pull-left">向上</span>
+		<span class="page-turn page-up pull-left">向上</span>
 		<div class="page-turn-box pull-left">
 			<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
 			<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline">
 			<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline"></div>
-		<span class="page-turn page-down page-down-disable pull-right">向下</span>
+		<span class="page-turn page-down pull-right">向下</span>
 	</div>
 	<!-- 为你推荐 end-->
 	<!--   小学课程    -->

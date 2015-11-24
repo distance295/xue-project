@@ -157,6 +157,7 @@ em {
 
 .panel {
     &.panel-default {
+        margin-bottom: 0;
         .panel-heading {
             border-color: #EFEFEF;
         }
@@ -206,6 +207,30 @@ em {
         z-index: 1;
         font-size: 18px;
         color: #999;
+        &.live-title {
+            width: 110px;
+        }
+    }
+    a.more {
+        float: right;
+        font-size: 14px;
+    }
+    ul.live-list {
+        float: right;
+        margin-right: 5px;
+         overflow: hidden;
+        li {
+            float: left;
+            display: inline;
+            margin-right: 5px;
+            i.fa {
+                cursor: pointer;
+                color: #999;
+                &.fa-circle {
+                    color: #3bafda;
+                }
+            }
+        }
     }
     ul.grade-list {
         overflow: hidden;padding-left: 161px;
@@ -261,12 +286,12 @@ em {
         &.page-down {
             background: url(../../widget/Public.Module/img/page-down-default.png) 0 no-repeat;
         }
-        &.page-up-disable {
-                background: url(../../widget/Public.Module/img/page-up-disable.png) 0 no-repeat;
-        }
-        &.page-down-disable {
-                background: url(../../widget/Public.Module/img/page-down-disable.png) 0 no-repeat;
-        }
+        // &.page-up-disable {切到头以后的禁用按钮
+        //         background: url(../../widget/Public.Module/img/page-up-disable.png) 0 no-repeat;
+        // }
+        // &.page-down-disable {
+        //         background: url(../../widget/Public.Module/img/page-down-disable.png) 0 no-repeat;
+        // }
    }
    .page-turn-box {
         overflow: hidden;
