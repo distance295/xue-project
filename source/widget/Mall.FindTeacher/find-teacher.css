@@ -55,6 +55,7 @@
   border-right: 0;
 }
 .find-teacher-card {
+  width: 25%;
   border-right: 1px solid #f6f6f6;
   border-bottom: 1px solid #f6f6f6;
   float: left;
