@@ -1,13 +1,19 @@
 var xue =xue || {};
 //自定义上传头像
-function wq(){
+function hiddenimg(){
     var img = $("#loadFile").val();
     if(img == ''){
       return true;
     }else{
-      $(".btn_up,.hl-box input,.hl-box em,.hl-box span").hide();
+      $(".hidden-btn,.hl-box input,.hl-box em,.hl-box span").hide();
+      $(".btn_up .btn_loadFile,.show-lf").show();
     }
 }
+
+$("#loadFile").change(function(event) {
+    hiddenimg();
+});
+
 function headsSave(){
     var img = $("#loadFile").val();
     if(img == ''){

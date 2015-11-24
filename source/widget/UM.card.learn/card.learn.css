@@ -440,8 +440,7 @@
 .payment_bank .formPastPayment {
   overflow: hidden;
 }
-.payment_bank .formPastPayment .btn_blue {
-  border-radius: 3px;
+.payment_bank .formPastPayment .cl-btn {
+  padding: 6px 28px;
   font-size: 14px;
-  padding: 10px 28px;
 }
