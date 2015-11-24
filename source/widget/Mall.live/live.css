@@ -2,6 +2,7 @@
   color: #999;
   font-size: 18px;
   position: relative;
+  margin-bottom: 20px;
 }
 .live-title span {
   display: inline-block;
@@ -140,4 +141,7 @@
 }
 .liveBreadCrumb {
   margin-top: 17px;
+}
+.choice .row {
+  margin: 0;
 }

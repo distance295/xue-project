@@ -1,0 +1,112 @@
+.ui-index-trends {
+  width: 1190px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+  top: 0;
+}
+.index-new-trends {
+  width: 280px;
+  height: 380px;
+  overflow: hidden;
+  background: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+.index-new-trends .trends-title {
+  width: 260px;
+  height: 40px;
+  line-height: 50px;
+  overflow: hidden;
+  border-bottom: 1px dashed #ccc;
+  margin: 0 auto 10px;
+}
+.index-new-trends .trends-title span {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 14px;
+  color: #999;
+}
+.index-new-trends .trends-title a {
+  display: inline-block;
+  float: right;
+}
+.index-new-trends .trends-list {
+  width: 260px;
+  margin: 0 auto 10px;
+  overflow: hidden;
+  padding: 0;
+}
+.index-new-trends .trends-list li {
+  height: 32px;
+  line-height: 30px;
+  overflow: hidden;
+  color: #666;
+}
+.index-new-trends .index-login-items {
+  height: 160px;
+  background: #f9f9f9;
+  overflow: hidden;
+}
+.index-new-trends .index-login-items .media-info-text {
+  line-height: 180%;
+}
+.index-new-trends .index-login-items .media-info-text strong {
+  color: #cc0000;
+}
+.index-new-trends .index-login-items .media {
+  height: 110px;
+  padding: 20px  0 15px 40px;
+}
+.index-new-trends .index-login-items .media .media-body .user-name {
+  overflow: hidden;
+  margin: 10px 0 5px;
+}
+.index-new-trends .index-login-items .media .media-body .user-info .user-sex {
+  background: none;
+  padding: 4px 6px;
+}
+.index-new-trends .index-login-items .media .media-body .user-info .user-sex .fa {
+  font-size: 16px;
+  font-weight: 700;
+}
+.index-new-trends .index-login-items .media .media-body .user-info .user-sex .fa.fa-venus {
+  color: #3bafda;
+}
+.index-new-trends .index-login-items .media .media-body .user-info .user-sex .fa.fa-mars {
+  color: #e74c3c;
+}
+.index-new-trends .index-login-items .media .media-body .user-info .user-level {
+  font-size: 12px;
+  font-style: italic ;
+  border-radius: 25px;
+  padding-bottom: 1px;
+  padding-top: 0;
+}
+.index-new-trends .index-login-items .media .media-heading {
+  font-size: 18px;
+}
+.index-new-trends .index-login-items .media .user-v {
+  vertical-align: middle;
+}
+.index-new-trends .index-login-items .media-object {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-top: 5px;
+}
+.index-new-trends .index-login-items .index-btn-wrap {
+  overflow: hidden;
+  padding-left: 12px;
+}
+.index-new-trends .index-login-items .index-btn-wrap .btn {
+  width: 120px;
+  height: 36px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+.index-new-trends .index-login-items .index-btn-wrap .btn-into-home {
+  width: 96%;
+}
