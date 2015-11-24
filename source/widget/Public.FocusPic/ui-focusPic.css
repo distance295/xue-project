@@ -24,6 +24,11 @@
   width: 100%;
   height: 380px;
 }
+#carousel-example-generic .focus-list li img {
+  width: auto;
+  margin: auto;
+  max-width: none;
+}
 #carousel-example-generic .focus-list li.current {
   z-index: 10;
 }
