@@ -1,7 +1,6 @@
 <!--
    课程列表：
-    @require courses.less       
-    @require courses.js        
+    @require courses.less      
 -->
         
         <div class="course-list">
@@ -9,8 +8,8 @@
                 <div class="avatar-photo">
                     <img src="img/default_photo.png">
                 </div>
-                <div class="fresh-course-attention" data-url="/teachers/follow/" data-value="840" data-params="urlStr=840&urlKey=af0030c654f79b371438ebdf40d4bead" data-type="3">
-                    <a class="fresh-attention-btn fresh-add-attention-btn" href="javascript:void(0)"><span class="fresh-add left">+</span><span class="left">关注</span></a>
+                <div>
+                    <a class="fresh-attention-btn add-attention-btn" href="javascript:void(0)"><span class="fresh-add left">已关注</span></a>
                 </div>
             </div>
             <div class="course-detail">
