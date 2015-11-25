@@ -46,7 +46,7 @@
                 <img src="img/head.photo.png" alt="头像">
                 <img src="img/head.photo.png" alt="头像">
             </div>
-            <button class="btn btn-info">保存</button>
+            <button id="btn_submit" class="btn btn-info hpr-btn">保存</button>
         </div>
         <div class="hp-local">
             <div class="hl-box">
