@@ -30,9 +30,90 @@
   /** 
      * 中等屏幕 桌面显示器 (<=1200px)
      */
+  /* @media (max-width: 1200px){
+        .homework-Thumbnails-box{
+              width: 128px;
+              height: 452px;
+              .homework-page-btn{
+                  width: 118px;
+              }
+              .homework-Thumbnails-img-list{
+                    height: 416px;
+                    ul{
+                        li{
+                            width: 114px;
+                            height: 80px;
+                            .homework-MaskLayer-num{
+                                  line-height: 84px;
+                            }
+                            &.homework-current{
+                                i{
+                                    top: 33px;
+                                }
+                            }
+                        }
+                    }
+              }
+        }
+        .homework-bigImg-box{
+             height: 472px;
+        }
+        .homework-ImageTransform{
+            height: 470px;
+        }
+    
+        *
+         * 作业反馈style
+        .homework-Feedback{
+             background: url("img/htmlBg_1024.png") no-repeat;
+             height: 460px;
+             margin-left: -277.5px;
+             margin-top: -230px;
+        }
+        .homework-Feedback-header{
+             margin:23px 0 0 0;
+        }
+        p{
+            &.homework-Feedback-describe{
+                height: 160px;
+            }
+        }
+    } */
   /** 
      * 大屏幕 大桌面显示器 (≥1200px)
      */
+  /* @media (min-width:1200px){
+        .homework-Thumbnails-box{
+              width: 150px;
+              height: 516px;
+              .homework-page-btn{
+                  width: 140px;
+              }
+              .homework-Thumbnails-img-list{
+                    height: 480px;
+                    ul{
+                        li{
+                            width: 136px;
+                            height: 96px;
+                            .homework-MaskLayer-num{
+                                  line-height: 100px;
+                            }
+                            &.homework-current{
+                                i{
+                                    top: 41px;
+                                }
+                            }
+                        }
+                    }
+              }
+        }
+        .homework-bigImg-box{
+             height: 536px;
+        }
+        .homework-ImageTransform{
+            height: 534px;
+        }
+    }  */
 }
 .homework-wrapper-container p,
 .homework-wrapper-container ul,
@@ -56,6 +137,16 @@
 .homework-wrapper-container .homework-header {
   display: block;
   overflow: hidden;
+}
+.homework-wrapper-container .homework-header .popover {
+  max-width: 600px;
+}
+.homework-wrapper-container .homework-header .popover .homework-remid-box {
+  width: 193px;
+  font-family: "Microsoft YaHei";
+  font-size: 14px;
+  line-height: 60px;
+  color: #666;
 }
 .homework-wrapper-container .homework-header p {
   display: block;
@@ -211,7 +302,10 @@
   border: 1px solid #eaeaea;
   padding: 1px;
   position: relative;
+  cursor: pointer;
+  text-align: center;
   box-sizing: content-box;
+  overflow: hidden;
 }
 .homework-wrapper-container .homework-Thumbnails-box .homework-Thumbnails-img-list ul li .homework-MaskLayer {
   position: absolute;
@@ -230,7 +324,7 @@
   top: 0;
   line-height: 100px;
   bottom: 0;
-  font-family: "Microsoft YaHei", "微软雅黑";
+  font-family: "Microsoft YaHei";
   font-size: 30px;
   text-align: center;
   color: #fff;
@@ -251,8 +345,8 @@
   display: inline-block;
 }
 .homework-wrapper-container .homework-Thumbnails-box .homework-Thumbnails-img-list ul li img {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
   cursor: pointer;
 }
 .homework-wrapper-container .homework-bigImg-box {
@@ -311,15 +405,16 @@
   position: relative;
   border: 1px solid #eaeaea;
   box-sizing: content-box;
+  background: #fcfcfc;
 }
 .homework-wrapper-container .homework-Feedback {
   background: url("img/htmlBg_1190.png") no-repeat;
-  width: 555px;
+  width: 559px;
   height: 483px;
   left: 50%;
   top: 50%;
-  margin-left: -277.5px;
-  margin-top: -241.5px;
+  margin-left: -279.5px;
+  margin-top: -246px;
   position: absolute;
   display: none;
 }
@@ -331,42 +426,30 @@
 .homework-wrapper-container .homework-Feedback-header {
   float: left;
   width: 480px;
-  height: 153px;
-  margin: 28px 0 0 0;
+  height: 134px;
+  margin: 25px 0 0 0;
+  border-bottom: 1px solid #eaeaea;
   position: relative;
 }
-.homework-wrapper-container .homework-Feedback-header .homework-likeEmote {
-  position: absolute;
-  top: 43px;
-  left: 0;
-}
 .homework-wrapper-container .homework-Feedback-header .homework-dialog {
-  position: absolute;
-  top: 0;
-  left: 107px;
-  width: 228px;
-  height: 73px;
-  background: url("img/Dialog.png") no-repeat;
+  float: left;
+  margin-top: 41px;
 }
 .homework-wrapper-container .homework-Feedback-header .homework-dialog .homework-tipsInfo {
   display: block;
   overflow: hidden;
-  margin: 9px 0 0 10px;
-  line-height: 22px;
+  line-height: 26px;
   text-align: left;
-  font-size: 14px;
+  font-size: 16px;
   color: #333;
-  letter-spacing: -0.5px;
 }
 .homework-wrapper-container .homework-Feedback-header .homework-dialog em {
   color: #e74c3c;
   font-style: normal;
 }
 .homework-wrapper-container .homework-Feedback-header .homework-scoreArea {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 153px;
+  float: right;
+  width: 165px;
   text-align: center;
 }
 .homework-wrapper-container .homework-Feedback-header .homework-scoreArea .homework-scoreLine {
@@ -378,22 +461,67 @@
   overflow: hidden;
 }
 .homework-wrapper-container .homework-Feedback-header .homework-scoreArea .homework-score {
-  width: 153px;
   display: block;
   overflow: hidden;
+  height: 80px;
 }
 .homework-wrapper-container .homework-Feedback-header .homework-scoreArea .homework-score img {
-  padding: 0 3px;
+  padding: 0 5px;
   vertical-align: inherit;
+}
+.homework-wrapper-container .homework-Reviews {
+  float: left;
+  width: 100%;
+  margin-top: 24px;
+}
+.homework-wrapper-container .homework-Reviews .homework-teacher {
+  float: left;
+  line-height: 36px;
+  font-size: 14px;
+  font-weight: normal;
+}
+.homework-wrapper-container .homework-Reviews .homework-audio {
+  float: left;
+  height: 36px;
+  line-height: 36px;
+  width: 100px;
+  margin-left: 22px;
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  -ms-border-radius: 18px;
+  -o-border-radius: 18px;
+  border-radius: 18px;
+  background: #3bafda;
+  overflow: hidden;
+  cursor: pointer;
+  color: #fff;
+}
+.homework-wrapper-container .homework-Reviews .homework-audio:hover {
+  background: #2392ba;
+}
+.homework-wrapper-container .homework-Reviews .homework-audio em {
+  font-size: 18px;
+  font-family: "Microsoft YaHei";
+}
+.homework-wrapper-container .homework-Reviews .homework-icoAudio {
+  float: left;
+  width: 18px;
+  height: 22px;
+  background: url('img/homeWork-iconAudio.png') no-repeat;
+  margin: 8px 20px 0 17px;
+}
+.homework-wrapper-container .homework-Reviews.homework-audio-playing .homework-icoAudio {
+  background: url('img/homeWork-audio.gif') no-repeat;
 }
 .homework-wrapper-container p.homework-Feedback-describe {
   float: left;
   width: 480px;
-  color: #e74c3c;
-  font-size: 14px;
+  color: #333;
+  font-size: 12px;
+  font-family: "SimSun";
   line-height: 24px;
-  height: 170px;
-  margin: 20px 0 0 0;
+  height: 140px;
+  margin: 15px 0 0 0;
   overflow-y: auto;
   overflow-x: hidden;
   word-break: break-all;
@@ -535,79 +663,6 @@
 .homework-wrapper-container .homework-submit-btn:hover {
   background: #2392ba;
 }
-@media (max-width: 1200px) {
-  .homework-wrapper-container {
-    /**
-         * 作业反馈style
-         */
-  }
-  .homework-wrapper-container .homework-Thumbnails-box {
-    width: 128px;
-    height: 452px;
-  }
-  .homework-wrapper-container .homework-Thumbnails-box .homework-page-btn {
-    width: 118px;
-  }
-  .homework-wrapper-container .homework-Thumbnails-box .homework-Thumbnails-img-list {
-    height: 416px;
-  }
-  .homework-wrapper-container .homework-Thumbnails-box .homework-Thumbnails-img-list ul li {
-    width: 114px;
-    height: 80px;
-  }
-  .homework-wrapper-container .homework-Thumbnails-box .homework-Thumbnails-img-list ul li .homework-MaskLayer-num {
-    line-height: 84px;
-  }
-  .homework-wrapper-container .homework-Thumbnails-box .homework-Thumbnails-img-list ul li.homework-current i {
-    top: 33px;
-  }
-  .homework-wrapper-container .homework-bigImg-box {
-    height: 472px;
-  }
-  .homework-wrapper-container .homework-ImageTransform {
-    height: 470px;
-  }
-  .homework-wrapper-container .homework-Feedback {
-    background: url("img/htmlBg_1024.png") no-repeat;
-    height: 460px;
-    margin-left: -277.5px;
-    margin-top: -230px;
-  }
-  .homework-wrapper-container .homework-Feedback-header {
-    margin: 23px 0 0 0;
-  }
-  .homework-wrapper-container p.homework-Feedback-describe {
-    height: 160px;
-  }
-}
-@media (min-width: 1200px) {
-  .homework-wrapper-container .homework-Thumbnails-box {
-    width: 150px;
-    height: 516px;
-  }
-  .homework-wrapper-container .homework-Thumbnails-box .homework-page-btn {
-    width: 140px;
-  }
-  .homework-wrapper-container .homework-Thumbnails-box .homework-Thumbnails-img-list {
-    height: 480px;
-  }
-  .homework-wrapper-container .homework-Thumbnails-box .homework-Thumbnails-img-list ul li {
-    width: 136px;
-    height: 96px;
-  }
-  .homework-wrapper-container .homework-Thumbnails-box .homework-Thumbnails-img-list ul li .homework-MaskLayer-num {
-    line-height: 100px;
-  }
-  .homework-wrapper-container .homework-Thumbnails-box .homework-Thumbnails-img-list ul li.homework-current i {
-    top: 41px;
-  }
-  .homework-wrapper-container .homework-bigImg-box {
-    height: 536px;
-  }
-  .homework-wrapper-container .homework-ImageTransform {
-    height: 534px;
-  }
-}
 .homework-panel-style.panel {
   margin-bottom: 0;
   background: none;
@@ -619,8 +674,8 @@
 /** 
  * 中等屏幕 桌面显示器 (<=1200px)
  */
-@media (max-width: 1200px) {
-  .wrap-body {
-    width: 840px !important;
-  }
-}
+/* @media (max-width: 1200px){
+   .wrap-body{
+        width: 840px !important;
+   }
+} */

@@ -17,75 +17,29 @@ homeWork.path = '/static/img/Homework/shuzi';
 (function(hm){
   
    /**
-	* 控制查看作业区域的高度和宽度，限制的一屏之内
+	* 缩略图等比例缩放
 	* @param  {Object} dom 任意子节点
 	*/
-   hm.imageCtl =function(dom){
-        //关联的元素box
-        this.box = {
-       	    home_header:$('.homework-header'),//交作业区域头部的类名
-       	    home_samllBox:$(dom).find('.homework-Thumbnails-box'),//左侧缩略图的总框架
-       	    home_bigBox:$(dom).find('.homework-bigImg-box'),//右侧大图的总框架
-       	    home_pageBtn:$(dom).find('.homework-page-btn'),//缩略图上下翻页按钮框架
-       	    home_minImg:$(dom).find('.homework-Thumbnails-img-list'),//缩略图图片的总框架
-       	    home_bigImg:$(dom).find('.homework-ImageTransform'),//大图图片框架
-       	    home_size:$(dom).find('.homework-Thumbnails-img-list').find('li .homework-MaskLayer-num'),//图片数字
-       	    home_Feedback:$(dom).find('.homework-Feedback'),//作业反馈总框架
-       	    home_Feedback_header:$(dom).find('.homework-Feedback-header'),//作业反馈头部框架
-       	    home_Feedback_video:$(dom).find('.homework-Feedback-video'),//作业反馈中的推荐视频框架
-       	    home_Feedback_describe:$(dom).find('.homework-Feedback-describe'),//作业反馈中文字描述的框架
-       	    header_topbar:$('#module-topbar'),//头部工具条的框架
-       	    header_myheader:$('#module-myheader'),//我的头部框架
-        }
-        
-        //浏览器可视区域的宽和高
-        var _bodyW, _bodyH;
-		if(document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth){
-		   _bodyW = document.documentElement.clientWidth;
-		   _bodyH = document.documentElement.clientHeight;	
-		}else{
-	       _bodyW = document.body.clientWidth;
-		   _bodyH = document.body.clientHeight;
-		}
-		if( _bodyW >= 1200){
-	      // _bodyH = (1024*10)/16;
-	        _bodyH = 515;
-		}else{
-			_bodyH = 480;
-		}
-        
-        //具体交作业图片区域的跨度和高度的控制
-		var _home_Thumbnails_H = parseInt(_bodyH -20/*- this.box.home_header.height() - this.box.header_topbar.height() - this.box.header_myheader.height() - 30*2 - 20*2 -10*2*/);
-		var _home_bigImg_H = parseInt(_bodyH /*- this.box.home_header.height() - this.box.header_topbar.height() - this.box.header_myheader.height() - 30*2 - 20*2*/);
-
-		this.box.home_samllBox.height(_home_Thumbnails_H);
-		this.box.home_bigBox.height(_home_bigImg_H);
-        
-        //缩略图的高度和宽度等一系列缩略图的控制
-		var _Thumbnails_H = _home_Thumbnails_H - parseFloat(this.box.home_pageBtn.height())*2;
-		var _ImgLi_H = parseInt(_Thumbnails_H/4) - 24;
-		var _ImgLi_W = parseInt((_ImgLi_H*4)/3);
-
-		this.box.home_samllBox.width(_ImgLi_W + 4 + 10);
-		this.box.home_minImg.height(_Thumbnails_H);
-		this.box.home_minImg.find('li').height(_ImgLi_H).width(_ImgLi_W);
-		this.box.home_minImg.find('li').find('i').css('top',_ImgLi_H/2 - 7);
-        this.box.home_size.css('lineHeight', _ImgLi_H +"px");
-
-		//大图的高度控制
-		var _home_ImageTransform_H = _home_bigImg_H - 2;
-		var _home_ImageTransform_W = (_home_ImageTransform_H)*4/3;
-
-		this.box.home_bigImg.height(_home_ImageTransform_H);
-
-		//计算作业反馈中的box中html的居中情况
-		var _home_Feedback_left = (this.box.home_bigImg.width() - this.box.home_Feedback.width())/2;
-		var _home_Feedback_top = (this.box.home_bigImg.height() - this.box.home_Feedback.height())/2;
-		this.box.home_Feedback.css({'left':_home_Feedback_left,'top':_home_Feedback_top})
-
-		//计算作业反馈中文字区域p的高度
-		var _Feedback_describe = this.box.home_Feedback.height() - 40*2 - this.box.home_Feedback_header.height() - this.box.home_Feedback_video.height() - 10 - 20;
-		this.box.home_Feedback_describe.height(_Feedback_describe);
+    hm.imageRate =function(dom){
+    	//判断多个的情况下
+    	$(dom).each(function(){
+	    		var samllBox_W = $(this).find('.homework-Thumbnails-img-list li').width();
+		   	    var samllBox_H = $(this).find('.homework-Thumbnails-img-list li').height();
+		   	    var imgNum = $(this).find('.homework-Thumbnails-img-list li').length;
+		   	    var Feedback_flag = $(this).find('.homework-Thumbnails-img-list').find('li').eq(imgNum-1).find('.homework-MaskLayer').length;
+		   	    $(this).find('.homework-Thumbnails-img-list li').each(function(index){
+		   	    	 if( imgNum-1 == index && Feedback_flag == 0 ){
+		                  return false;
+		   	    	 }
+		   	    	 var img_W = $(this).find('img').width();
+		   	    	 var img_H = $(this).find('img').height();
+		   	    	 var rate=(samllBox_H/img_H>samllBox_W/img_W?samllBox_W/img_W:samllBox_H/img_H);
+		   	    	 var _top = (samllBox_H - img_H*rate)/2 +"px";
+		   	    	 $(this).find('img').width(img_W*rate);
+		   	    	 $(this).find('img').height(img_H*rate);
+		   	    	 $(this).find('img').css('marginTop', _top);
+		   	    })
+    	})
     }
 
     /**
@@ -101,6 +55,77 @@ homeWork.path = '/static/img/Homework/shuzi';
 	   });
 	   $(score).html(_scoreHtml)
 	}
+
+	/**
+	 * 老师评语音播放的相关业务方法
+	 * @param  {Object} dom 任意子节点
+	 */
+	hm.audio =function(dom){
+		 //可能存在多个的情况
+		  $(dom).each(function(){
+		  	  var that = this;
+	          var _ReviewsBox = $(this).find('.homework-Reviews');
+	          var _audioBg = $(this).find('.homework-audio');
+	          var _audioTime = parseFloat(_audioBg.find('em').text());
+	          var _defaultURL = _ReviewsBox.find('.homework-audio-btn').attr('url');
+	          /**
+	           * 判断语音按钮的宽度
+	           * 1-5秒宽度100  5-10秒宽度150  >10S的200
+	           */
+	          if( _audioTime>0 && _audioTime <=5 ){
+                  _audioBg.width('100');
+	          } else if ( _audioTime>5 && _audioTime <=10 ){
+                  _audioBg.width('150');
+	          } else {
+                  _audioBg.width('200');
+	          }
+	          //判断语音的播放和停止
+	          $(this).off('click', '.homework-audio').on('click','.homework-audio', function(){
+                    var  _Playing = _ReviewsBox.hasClass('homework-audio-playing');
+                    var _audioBtn = _ReviewsBox.find('.homework-audio-btn');
+                    var _url = _audioBtn.data('url');
+                    console.log(_Playing)
+                    if( !_Playing){
+                        _ReviewsBox.addClass('homework-audio-playing').siblings().removeClass('homework-audio-playing');
+			            _audioBtn.attr('src', _url);
+                    }else{
+                        _ReviewsBox.removeClass('homework-audio-playing');
+			            _audioBtn.attr('src', _defaultURL);
+                    }
+                    setTimeout(function(){
+						_ReviewsBox.removeClass('homework-audio-playing');
+						_audioBtn.attr('src', _defaultURL);
+					}, _audioTime +'000');
+	          })
+		  })
+	}
+	/**
+	 * 老师评语音播放的相关业务方法
+	 * @param  {Object} dom 任意子节点
+	 */
+	hm.remind =function(dom){
+		$('body').off('click', '.homework-remind-btn').on('click', '.homework-remind-btn', function(){
+			   var that = this;
+			   var _remindFlag = $(this).hasClass('.homework-remind-disabled-btn');
+			   if( _remindFlag ){
+                    return false;
+			   }else{
+			   	    //提示弹出层显示
+			        popoverTips.show({
+			            dom: that,
+			            placement: 'bottom',
+			            trigger: 'click', 
+			            con: '<div class="homework-remid-box">老师会快马加鞭地为你批改哦~</div>'
+			        });
+			        /*setTimeout(function(){
+                       popoverTips.destroy(that);
+			        }, 1000)*/
+			        $(that).addClass('homework-remind-disabled-btn'); 
+			   }
+		      
+		})
+	}
+
 
 })(homeWork)
 
@@ -323,3 +348,4 @@ $.fn.starScore = function(params){
 		} 	
 	}
 }
+
