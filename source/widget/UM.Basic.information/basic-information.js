@@ -101,7 +101,7 @@ function ymd()
        for (var i = (y-19); i < (y+1); i++)  
                document.date.year.options.add(new Option(" "+ i +" ", i));   
 
-       ////赋月份的下拉框  
+       //赋月份的下拉框  
        for (var i = 1; i < 13; i++)   
                document.date.month.options.add(new Option(" " + i + " ", i));   
 
