@@ -533,7 +533,6 @@ table tr td {
   width: 100%;
   color: #666;
   padding-bottom: 16px;
-  border-bottom: 1px solid #eaeaea;
 }
 .present-address-box form {
   margin-top: 20px;
@@ -556,9 +555,6 @@ table tr td {
 }
 .modal-body {
   overflow: hidden;
-}
-.present-address-box span {
-  font-size: 16px;
 }
 .red-card-tip div,
 .present-card-tip div {

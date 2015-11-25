@@ -1,13 +1,31 @@
 var xue =xue || {};
+
+//切换
+function table_qiehuan(d){
+    var that = $(d),
+    box = $('.hp-box-left').children();
+    that.addClass("current").siblings().removeClass("current");  
+    var index =  that.index(); 
+    box.eq(index).show().siblings().hide();
+}
+
+$(function(){
+    $('#head_tab li').click(function(){
+     table_qiehuan(this);
+ });
+});
+
 //自定义上传头像
-function wq(){
+$("#loadFile").change(function(){
     var img = $("#loadFile").val();
     if(img == ''){
       return true;
     }else{
-      $(".btn_up,.hl-box input,.hl-box em,.hl-box span").hide();
+      $(".hidden-btn,.hl-box input,.hl-box em,.hl-box span").hide();
+      $(".btn_up .btn_loadFile,.show-lf").show();
     }
-}
+});
+
 function headsSave(){
     var img = $("#loadFile").val();
     if(img == ''){
@@ -38,10 +56,10 @@ function getFullPath(obj){
                     var newPreview = document.getElementById(id);    
                     var imgDiv = document.createElement("div");
                     document.body.appendChild(imgDiv);
-                    imgDiv.style.width = width + "px";    imgDiv.style.height = height + "px";
+                    imgDiv.style.width = width + "px";
+                    imgDiv.style.height = height + "px";
                     imgDiv.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod = scale)";   
                     imgDiv.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = obj.value;
-                    
                     $(newPreview).find('img').append(imgDiv);    
                 });
                 $('.hp-box-right').show();
@@ -54,8 +72,7 @@ function getFullPath(obj){
                 }else{
                     btn.next('.btn_up').after('<span class="filespath">'+ btn.val() +'</span>');
                 }
-            }
-            
+            }   
         }
         //firefox
         else {
@@ -94,7 +111,7 @@ function getFullPath(obj){
     }
 }   
 
-function validate_img(a){
+$("#imghead").change(function validate_img(a){
    var file = a.value;
    var image = new Image();
    image.src = file;
@@ -107,4 +124,4 @@ function validate_img(a){
    }else{
     return true;
    }
-}
+}); 

@@ -1,10 +1,10 @@
 <!--
     @require fresh.less
     @require ../Module.popover/xue.popover.js
+    @require ../Module.Modal/Modal.js
     @require fresh.js
     @require fresh.load.min.js
 -->
-
 
 <!--新鲜事默认展开评论开始-->
 <div class="fresh-list">

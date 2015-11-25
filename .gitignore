@@ -214,3 +214,25 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+/source/fis-conf-pages.js
+/source/pages/
+/source/widget/_homework/
+/source/widget/errorQuestion/
+/source/widget/courseStudycenter/
+/source/widget/footer/
+/source/widget/filter/
+/source/widget/find-teacher/
+/source/widget/fresh/
+/source/widget/glory/
+/source/widget/gold/
+/source/widget/header/
+/source/widget/live/
+/source/widget/notice/
+/source/widget/courses/
+/source/lib/foundation/
+
+/website/*
+*.css
+*.css
+*.css

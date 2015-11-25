@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors alex liu (liuyanbin@xueersi.com)
+ * @date    2015-11-22 
+ * @version $Id$  首页广告轮播
+ */
+#carousel-example-generic {
+  height: 380px;
+  overflow: hidden;
+  /*=================/图片轮播大图/============================*/
+  /*=================/图片轮播缩小图/============================*/
+}
+#carousel-example-generic .focus-list {
+  overflow: hidden;
+  padding: 0;
+}
+#carousel-example-generic .focus-list li {
+  width: 100%;
+  height: 380px;
+}
+#carousel-example-generic .focus-list li a {
+  display: block;
+  width: 100%;
+  height: 380px;
+}
+#carousel-example-generic .focus-list li img {
+  width: auto;
+  margin: auto;
+  max-width: none;
+}
+#carousel-example-generic .focus-list li.current {
+  z-index: 10;
+}
+#carousel-example-generic .focus-num-wrap {
+  width: 980px;
+  height: 30px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  top: -20px;
+}
+#carousel-example-generic .focus-num-wrap ol.focus-num {
+  width: 100%;
+  left: 408px;
+}
+#carousel-example-generic .focus-num-wrap ol.focus-num li {
+  float: left;
+  width: 110px;
+  height: 26px;
+  line-height: 26px;
+  border-radius: 1px;
+  margin: 0 1px;
+  cursor: pointer;
+  text-align: center;
+  list-style: none;
+  overflow: hidden;
+  background-color: #b4b4b4;
+  text-indent: 0;
+  border: 0;
+}
+#carousel-example-generic .focus-num-wrap ol.focus-num li.active {
+  background: #fff;
+}
