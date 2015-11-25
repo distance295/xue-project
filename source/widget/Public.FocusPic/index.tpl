@@ -5,12 +5,12 @@
 	<!-- Wrapper for slides-->
 	<ul class="carousel-inner focus-list" role="listbox">
 		<li class="item active">
-			<a target="_blank" href="http://www.xueersi.com/">
-				<img src="pic/helloWeen_2015.jpg" alt="123"></a>
+			<a target="_blank" href="http://www.xueersi.com/" style="background: url(http://img04.xesimg.com/skin/helloWeen_2015.jpg) no-repeat top center;"  title="2">
+			</a>
 		</li>
 		<li class="item">
-			<a target="_blank" href="http://www.baidu.com/">
-				<img src="pic/1.jpg" alt="456"></a>
+			<a target="_blank" href="http://www.baidu.com/" style="background: url(http://img04.xesimg.com/skin/Mid_Autumn.png) no-repeat top center;" title="1">
+			</a>
 		</li>
 	</ul>
 	<!-- Indicators -->
