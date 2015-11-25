@@ -2,7 +2,6 @@ ul,
 li {
   list-style: none;
 }
-
 .course-label {
   font-family: "SimSun";
   display: inline-block;
@@ -418,7 +417,9 @@ li {
   right: -25px;
   color: #fff;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 17px;
+  font-family: 'microsoft yahei';
+  padding-top: 8px;
 }
 .course-small-list .label-subject {
   background: #ffbc3c;

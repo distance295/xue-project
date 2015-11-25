@@ -1,6 +1,7 @@
 <!--
     @require fresh.less
     @require ../Module.popover/xue.popover.js
+    @require ../Module.Modal/Modal.js
     @require fresh.js
     @require fresh.load.min.js
 -->

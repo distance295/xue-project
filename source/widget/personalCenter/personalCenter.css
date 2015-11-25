@@ -360,11 +360,15 @@
   height: 413px;
   font-size: 12px;
   padding-top: 18px;
+  background-color: #ccc;
 }
 .center-visit .center-visit-intro {
   margin-left: 14px;
   font-size: 16px;
   color: #b0b0b0;
+}
+.center-visit .center-visit-group{
+  margin: 0 auto;
 }
 .center-visit .center-visit-person {
   display: inline-block;

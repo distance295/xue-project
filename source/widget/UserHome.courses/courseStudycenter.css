@@ -37,8 +37,9 @@ body {
   color: #fff;
   font-size: 14px;
   font-style: normal;
-  line-height: 23px;
+  line-height: 17px;
   cursor: pointer;
+  padding-top: 8px;
 }
 .label-delay {
   background: #3bafda;
