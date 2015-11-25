@@ -266,6 +266,11 @@ body {
   float: left;
   margin-right: 10px;
 }
+.courseList .courseList-teacher .teacher-main .avatar-photo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
 .courseList .courseList-teacher .teacher-main .coach-con {
   float: left;
   margin-top: 3px;
