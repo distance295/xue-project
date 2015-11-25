@@ -191,7 +191,7 @@ em {
   cursor: pointer;
   color: #999;
 }
-.grade-course-title ul.live-list-tabs li i.fa.fa-circle {
+.grade-course-title ul.live-list-tabs li.active i.fa {
   color: #3bafda;
 }
 .grade-course-title ul.grade-list {
@@ -208,7 +208,7 @@ em {
   margin-right: 15px;
   cursor: pointer;
 }
-.grade-course-title ul.grade-list li.current {
+.grade-course-title ul.grade-list li.active {
   border-bottom: 2px solid #3bafda;
   color: #3bafda;
 }
