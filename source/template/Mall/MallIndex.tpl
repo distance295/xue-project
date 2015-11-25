@@ -9,23 +9,37 @@
 		<div>
 			<h6 class="live-title">直播进行中</h6>
 			<a href="#" class="more">更多</a>
-			<ul class="live-list-tabs">
-				<li> <i class="fa fa-circle-o fa-circle"></i>
+			<ul class="live-list-tabs" role="tablist">
+				<li role="presentation" class="active"> 
+					<i class="fa fa-circle" aria-controls="live1" role="tab" data-toggle="tab" href="#live1" ></i>
 				</li>
-				<li> <i class="fa fa-circle-o"></i>
+				<li role="presentation">
+				 	<i class="fa fa-circle" aria-controls="live2" role="tab" data-toggle="tab" href="#live2" ></i>
 				</li>
-				<li>
-					<i class="fa fa-circle-o"></i>
+				<li role="presentation">
+					<i class="fa fa-circle" aria-controls="live3" role="tab" data-toggle="tab" href="#live3" ></i>
 				</li>
 			</ul>
 		</div>
 	</div>
-	<div class="row row-page-turn">
-		<div class="live-content-action">
-			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
-			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
-			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
-			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline"></div>
+	<div class="row row-page-turn tab-content">
+		<div class="live-content-action tab-pane fade active in" role="tabpanel" id="live1">
+				<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
+				<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
+				<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
+				<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
+			</div>
+			<div class="live-content-action tab-pane fade" role="tabpanel" id="live2">
+				<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
+				<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
+				<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
+				
+			</div>
+			<div class="live-content-action tab-pane fade" role="tabpanel" id="live3">
+				<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
+				<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
+				
+			</div>
 	</div>
 	<!-- 为你推荐 -->
 	<div class="grade-course-title">
