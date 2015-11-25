@@ -193,10 +193,14 @@ em {
 }
 /*首页公用标题样式和一些重构样式*/ 
 .grade-course-title {
-    height: 35px;
-    line-height: 35px;
-    border-bottom: 1px solid #3bafda;
-    margin-bottom: 20px;
+    height: 55px;
+    overflow: hidden;
+    div {
+       height: 35px;
+        line-height: 35px;
+        border-bottom: 1px solid #3bafda;
+        margin-bottom: 20px;  
+    }
     h6 {
         position: relative;
         float: left;
@@ -243,7 +247,7 @@ em {
             font-size: 14px;
             margin-right:15px;
             cursor: pointer;
-            &.current {
+            &.active {
              border-bottom:2px solid #3bafda;
              color: #3bafda;
             }
@@ -275,8 +279,13 @@ em {
 .row-page-turn {
     padding:0 5px;
     margin-bottom: 20px;
+    overflow: hidden;
     .live-content-action {
         width: 110%;
+        overflow: hidden;
+        .live-teacher-photo {
+            margin-top:0;
+        }
     }
    .page-turn {
         width: 45px;
