@@ -10,11 +10,9 @@
 			<h6 class="live-title">直播进行中</h6>
 			<a href="#" class="more">更多</a>
 			<ul class="live-list-tabs" role="tablist">
-				<li role="presentation" class="active"> 
-					<i class="fa fa-circle" aria-controls="live1" role="tab" data-toggle="tab" href="#live1" ></i>
+				<li role="presentation" class="active"> <i class="fa fa-circle" aria-controls="live1" role="tab" data-toggle="tab" href="#live1" ></i>
 				</li>
-				<li role="presentation">
-				 	<i class="fa fa-circle" aria-controls="live2" role="tab" data-toggle="tab" href="#live2" ></i>
+				<li role="presentation"> <i class="fa fa-circle" aria-controls="live2" role="tab" data-toggle="tab" href="#live2" ></i>
 				</li>
 				<li role="presentation">
 					<i class="fa fa-circle" aria-controls="live3" role="tab" data-toggle="tab" href="#live3" ></i>
@@ -24,22 +22,17 @@
 	</div>
 	<div class="row row-page-turn tab-content">
 		<div class="live-content-action tab-pane fade active in" role="tabpanel" id="live1">
-				<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
-				<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
-				<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
-				<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
-			</div>
-			<div class="live-content-action tab-pane fade" role="tabpanel" id="live2">
-				<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
-				<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
-				<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
-				
-			</div>
-			<div class="live-content-action tab-pane fade" role="tabpanel" id="live3">
-				<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
-				<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
-				
-			</div>
+			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
+			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
+			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
+			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline"></div>
+		<div class="live-content-action tab-pane fade" role="tabpanel" id="live2">
+			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
+			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
+			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline"></div>
+		<div class="live-content-action tab-pane fade" role="tabpanel" id="live3">
+			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
+			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline"></div>
 	</div>
 	<!-- 为你推荐 -->
 	<div class="grade-course-title">
@@ -47,13 +40,20 @@
 			<h6>为你推荐</h6>
 		</div>
 	</div>
-	<div class="row row-page-turn">
-		<span class="page-turn page-up pull-left">向上</span>
-		<div class="page-turn-box pull-left">
-			<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
-			<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline">
-			<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline"></div>
-		<span class="page-turn page-down pull-right">向下</span>
+	<div class="row carousel slide row-page-turn" id="carousel-page-turn" data-ride="carousel">
+		<span class="page-turn page-up pull-left" href="#carousel-page-turn" role="button" data-slide="prev">向上</span>
+		<div class="carousel-inner page-turn-box pull-left" role="listbox">
+			<div class="item active">
+				<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
+				<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline">
+				<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
+			</div>
+			<div class="item">
+				<link rel="import" href="../../widget/Public.Module/live-modal.tpl?__inline">
+				<link rel="import" href="../../widget/Public.Module/record-modal.tpl?__inline">
+			</div>
+		</div>
+		<span class="page-turn page-down pull-right" href="#carousel-page-turn" role="button" data-slide="next">向下</span>
 	</div>
 	<!-- 为你推荐 end-->
 	<!--   小学课程    -->
