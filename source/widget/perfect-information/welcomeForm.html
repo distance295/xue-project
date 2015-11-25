@@ -1,0 +1,66 @@
+
+<div class="setting-infor">
+	<ul class="infor-title">
+		<li>1.完善信息</li>
+		<li>2.关注老师</li>
+	</ul>
+	<div class="setting-infor-inner">
+		<p class="setting-tip"><span>完善资料</span>    接收网校发送的学习资料、信息</p>
+		<div class="f1">
+			<label  for="inputname">昵称：</label>
+			<p>
+				<input type="text" maxlength="18" value="" class="input-text" id="nickname" data-nickname=""/>
+						<span class="errTips" id="11"></span>
+						<label for="nickname" class="label-value">请输入不超过18个字的昵称</label>
+					</p>
+				</div>
+				<div class="f1">
+					<label for="inputname">姓名：</label>
+					<p>
+						<input type="text" maxlength="10" value="" class="input-text" id="realname" data-realname=""/>
+						<span class="errTips" id="12"></span>
+						<label for="realname" class="label-value">请输入不超过5个汉字的姓名</label>
+					</p>
+				</div>
+				<div class="f1">
+					<label  for="inputname">性别：</label>
+					<p class="sex-tip">
+						<input type="radio"  value="1" name="data[sex]" autocomplete="off"><label>男</label><span class="gender-1"></span>
+						<input type="radio"  value="0" name="data[sex]" autocomplete="off"><label>女</label><span class="gender-0"></span>
+						<span class="errTips" id="13"></span>
+					</p>
+				</div>
+				<div class="f1">
+					<label for="inputname" placeholder="请输入您的所在地">地区：</label>
+					<input type="hidden" id="province" value="0" />
+					<input type="hidden" id="city" value="0" />
+					<input type="hidden" id="country" value="0" />
+					<select id="add-province" name="province" class="select"  style="display: inline-block;"></select>
+					<select id="add-city" name="city" class="select"></select>
+					<select id="add-country" name="country" class="select"></select>
+					<p class="area-tips"><span class="errTips" id="14"></span></p>
+
+				</div>
+			</div>
+			<div class="infor-btn-wrap">
+				<button type="submit" name="submit" class="alert information-btn" id="inforSubmit">下一步</button>
+			</div>
+		</div>
+		<script type="text/javascript" src="perfect-information.js"></script>
+		<script src="areadata.js" type="text/javascript"></script>
+		<script src="areadata_function.js" type="text/javascript"></script>
+		<script type="text/javascript">			
+		function renderAreaSelect () {
+			var defaults = {
+				s1:'add-province',
+				s2:'add-city',
+				s3:'add-country',
+				v1:$("#province").val(),
+				v2:$("#city").val(),
+				v3:$("#country").val()
+			};
+			$('#add-province').empty('');
+			threeSelect(defaults);
+		};
+		renderAreaSelect();
+	</script>			
