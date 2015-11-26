@@ -142,11 +142,12 @@
   max-width: 600px;
 }
 .homework-wrapper-container .homework-header .popover .homework-remid-box {
-  width: 193px;
+  width: 200px;
   font-family: "Microsoft YaHei";
   font-size: 14px;
   line-height: 60px;
-  color: #666;
+  color: #000;
+  text-align: center;
 }
 .homework-wrapper-container .homework-header p {
   display: block;
@@ -480,7 +481,7 @@
   font-size: 14px;
   font-weight: normal;
 }
-.homework-wrapper-container .homework-Reviews .homework-audio {
+.homework-wrapper-container .homework-Reviews .homework-audio-box {
   float: left;
   height: 36px;
   line-height: 36px;
@@ -496,10 +497,10 @@
   cursor: pointer;
   color: #fff;
 }
-.homework-wrapper-container .homework-Reviews .homework-audio:hover {
+.homework-wrapper-container .homework-Reviews .homework-audio-box:hover {
   background: #2392ba;
 }
-.homework-wrapper-container .homework-Reviews .homework-audio em {
+.homework-wrapper-container .homework-Reviews .homework-audio-box em {
   font-size: 18px;
   font-family: "Microsoft YaHei";
 }

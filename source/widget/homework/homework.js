@@ -21,6 +21,9 @@ homeWork.path = '/static/img/Homework/shuzi';
 	* @param  {Object} dom 任意子节点
 	*/
     hm.imageRate =function(dom){
+    	if( !dom ){
+           return false;
+		}
     	//判断多个的情况下
     	$(dom).each(function(){
 	    		var samllBox_W = $(this).find('.homework-Thumbnails-img-list li').width();
@@ -47,13 +50,19 @@ homeWork.path = '/static/img/Homework/shuzi';
 	 * @param  {number} score 分数d
 	 */
 	hm.score = function(score){
-	   var _score = $(score).attr('score');
-	   var _scoreArr = _score.split('');
-	   var _scoreHtml = '';
-	   $.each(_scoreArr, function(k, v) {
-	       _scoreHtml += '<img src="' + homeWork.path + '/' + v + '.png" alt="" />';
-	   });
-	   $(score).html(_scoreHtml)
+		if( !score ){
+           return false;
+		}
+		//多个情况下的使用
+		$(score).each(function(){
+			   var _score = $(this).attr('score');
+			   var _scoreArr = _score.split('');
+			   var _scoreHtml = '';
+			   $.each(_scoreArr, function(k, v) {
+			       _scoreHtml += '<img src="' + homeWork.path + '/' + v + '.png" alt="" />';
+			   });
+			   $(this).html(_scoreHtml) 
+		})
 	}
 
 	/**
@@ -61,13 +70,17 @@ homeWork.path = '/static/img/Homework/shuzi';
 	 * @param  {Object} dom 任意子节点
 	 */
 	hm.audio =function(dom){
+		 //判断dom元素是否存在
+		 if( !dom ){
+           return false;
+		 }
 		 //可能存在多个的情况
 		  $(dom).each(function(){
 		  	  var that = this;
 	          var _ReviewsBox = $(this).find('.homework-Reviews');
-	          var _audioBg = $(this).find('.homework-audio');
+	          var _audioBg = $(this).find('.homework-audio-box');
 	          var _audioTime = parseFloat(_audioBg.find('em').text());
-	          var _defaultURL = _ReviewsBox.find('.homework-audio-btn').attr('url');
+	          var _defaultURL = $('body').find('#homework-audio-btn-box').attr('url');
 	          /**
 	           * 判断语音按钮的宽度
 	           * 1-5秒宽度100  5-10秒宽度150  >10S的200
@@ -79,14 +92,16 @@ homeWork.path = '/static/img/Homework/shuzi';
 	          } else {
                   _audioBg.width('200');
 	          }
+
 	          //判断语音的播放和停止
-	          $(this).off('click', '.homework-audio').on('click','.homework-audio', function(){
+	          $(this).off('click', '.homework-audio-box').on('click','.homework-audio-box', function(){
                     var  _Playing = _ReviewsBox.hasClass('homework-audio-playing');
-                    var _audioBtn = _ReviewsBox.find('.homework-audio-btn');
-                    var _url = _audioBtn.data('url');
+                    var _audioBtn = $('body').find('#homework-audio-btn-box');
+                    var _url = $(this).data('url');
                     console.log(_Playing)
                     if( !_Playing){
-                        _ReviewsBox.addClass('homework-audio-playing').siblings().removeClass('homework-audio-playing');
+                    	$('body').find('.homework-Reviews').removeClass('homework-audio-playing');
+                        _ReviewsBox.addClass('homework-audio-playing')
 			            _audioBtn.attr('src', _url);
                     }else{
                         _ReviewsBox.removeClass('homework-audio-playing');
@@ -99,14 +114,14 @@ homeWork.path = '/static/img/Homework/shuzi';
 	          })
 		  })
 	}
+
 	/**
 	 * 老师评语音播放的相关业务方法
-	 * @param  {Object} dom 任意子节点
 	 */
-	hm.remind =function(dom){
+	hm.remind =function(){
 		$('body').off('click', '.homework-remind-btn').on('click', '.homework-remind-btn', function(){
 			   var that = this;
-			   var _remindFlag = $(this).hasClass('.homework-remind-disabled-btn');
+			   var _remindFlag = $(this).hasClass('homework-remind-disabled-btn');
 			   if( _remindFlag ){
                     return false;
 			   }else{
@@ -117,14 +132,65 @@ homeWork.path = '/static/img/Homework/shuzi';
 			            trigger: 'click', 
 			            con: '<div class="homework-remid-box">老师会快马加鞭地为你批改哦~</div>'
 			        });
-			        /*setTimeout(function(){
+			        setTimeout(function(){
                        popoverTips.destroy(that);
-			        }, 1000)*/
+			        }, 3000)
 			        $(that).addClass('homework-remind-disabled-btn'); 
 			   }
 		      
 		})
 	}
+
+	/**
+	 * 星星评分方法
+	 * @param  {Object} params 参数对象
+	 */
+	 
+	hm.starScore =function(params){
+        params = $.extend({
+        	 starBox:null,//星星评分的框架
+			 className:"on",//星星选中状态类
+ 	         scoreNum:null,//显示评分分数的类
+ 	         starIndex:0//开始默认选择星星
+		}, params || {});
+
+		//判断是否存在dom元素
+		if( !(params.starBox) ){
+            return false;
+		}
+        
+        //多个的情况下依然可以使用
+        $(params.starBox).each(function(){
+        	var that = this;
+			var _starLi = $(this).find('li');
+		    var i = 0;
+		    var _starIndex = params.starIndex;
+		    fnPoint(_starIndex);
+			//鼠标滑过星星的效果
+			$(this).find('li').hover(function (){
+				var _index = $(this).closest('ul').find('li').index(this);
+				fnPoint(_index+1);
+			},function(){
+		        fnPoint();
+			});
+
+			//点击后进行评分处理
+			$(this).find('li').click(function (){
+				var _index = $(this).closest('ul').find('li').index(this);
+				_starIndex = _index + 1;
+				$(that).find(params.scoreNum).text(_starIndex);
+			})
+
+			//评分处理
+			function fnPoint(num){
+				var _iScore = num || _starIndex;
+				for (i = 0; i < _starLi.length; i++){
+					_starLi[i].className = i < _iScore ? params.className : "";
+				} 	
+			}
+        })
+	}
+
 
 
 })(homeWork)
@@ -135,6 +201,12 @@ homeWork.path = '/static/img/Homework/shuzi';
  * @param  {Object} params 参数对象
  */
 $.fn.imagePage = function(params){
+
+	//判断dom元素是否存在
+	if( !this ){
+        return false;
+	}
+
 	params = $.extend({
 					bigPic:null,//大图框架
 					smallPic:null,//小图框架
@@ -283,69 +355,30 @@ $.fn.imagePage = function(params){
 			return false;
 		}	
 	})
+	
+	/**
+	 * (1)点击放大按钮放大大图
+	 * (2)判断是否存在缩放功能,如果存在缩放功能才有下面的一系列事件
+	 */
+	if( params.isZoom ){
+		$(this).find(params.zoom).click(function(){ 
+			_ImageTransform.zoomin(); 
+		})
 
-	//点击放大按钮放大大图
-	$(this).find(params.zoom).click(function(){ 
-		_ImageTransform.zoomin(); 
-	})
+		//点击缩小按钮缩小大图
+		$(this).find(params.zoomout).click(function(){ 
+			_ImageTransform.zoomout(); 
+		})
 
-	//点击缩小按钮缩小大图
-	$(this).find(params.zoomout).click(function(){ 
-		_ImageTransform.zoomout(); 
-	})
+		//点击向左旋转按钮旋转大图
+		$(this).find(params.leftRotate).click(function(){ 
+			_ImageTransform.left(); 
+		})
 
-	//点击向左旋转按钮旋转大图
-	$(this).find(params.leftRotate).click(function(){ 
-		_ImageTransform.left(); 
-	})
-
-	//点击向右旋转按钮旋转大图
-	$(this).find(params.rightRotate).click(function(){ 
-		_ImageTransform.right(); 
-	})
-}
-
-/**
- * 星星评分插件
- * @param  {Object} params 参数对象
- * @example
- * $('#starArea1').starScore({
-	 	     className:"on",//星星选中状态类
-	 	     scoreNum:".scoreNum"//显示评分分数的类
-	 })
- */
-$.fn.starScore = function(params){
-	params = $.extend({
-					 className:"on",//星星选中状态类
-	     	         scoreNum:null,//显示评分分数的类
-	     	         starIndex:0//开始默认选择星星
-				}, params || {});
-	var that = this;
-	var _starLi = $(this).find('li');
-    var i = 0;
-    var _starIndex = params.starIndex;
-    fnPoint(_starIndex);
-	//鼠标滑过星星的效果
-	$(this).find('li').hover(function (){
-		var _index = $(this).closest('ul').find('li').index(this);
-		fnPoint(_index+1);
-	},function(){
-        fnPoint();
-	});
-
-	//点击后进行评分处理
-	$(this).find('li').click(function (){
-		var _index = $(this).closest('ul').find('li').index(this);
-		_starIndex = _index + 1;
-		$(that).find(params.scoreNum).text(_starIndex);
-	})
-
-	//评分处理
-	function fnPoint(num){
-		var _iScore = num || _starIndex;
-		for (i = 0; i < _starLi.length; i++){
-			_starLi[i].className = i < _iScore ? params.className : "";
-		} 	
-	}
+		//点击向右旋转按钮旋转大图
+		$(this).find(params.rightRotate).click(function(){ 
+			_ImageTransform.right(); 
+		})
+	}	
 }
 
