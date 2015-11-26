@@ -1,29 +1,29 @@
 body {
   background: rgba(0, 0, 0, 0.6);
 }
-.infor-cardModal .modal-dialog {
+.infor-Modal .modal-dialog {
   width: 530px;
   height: 520px;
 }
-.infor-cardModal .modal-content {
+.infor-Modal .modal-content {
   width: 530px;
   height: 520px;
 }
-.infor-cardModal .modal-header {
+.infor-Modal .modal-header {
   border-bottom: none;
 }
-.FormList-cardModal .modal-content {
+.FormList-Modal .modal-content {
   width: 530px;
   height: 520px;
   overflow: hidden;
   background-color: '';
 }
-.FormList-cardModal .modal-header {
+.FormList-Modal .modal-header {
   border-bottom: none;
   min-height: 0;
   padding: 0;
 }
-.FormList-cardModal .modal-body {
+.FormList-Modal .modal-body {
   padding: 0;
 }
 .information-guid {
