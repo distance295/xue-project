@@ -18,8 +18,8 @@ $(function(){
         presentAdd = '.present-add',
         presentDec = '.present-dec',
         //presentNum = '.present-num',
-        $dateStart = $('#dateStart'),
-        $dateEnd = $('#dateEnd'),
+        $dateStart = $('#dateStart') || {},
+        $dateEnd = $('#dateEnd') || {},
         $cardCreateModal = $('.card-createModal'),
         $presentCreateModal = $('.present-createModal');
 

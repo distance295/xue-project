@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65a5177b-cc0d-4bfb-a852-a009f5ea707f" name="Default" comment="Merge remote-tracking branch 'XUEJS/master'&#10;&#10;Conflicts:&#10;&#9;source/widget/gold/gold.css&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/widget/UserHome.gold/gold-address.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/widget/UserHome.gold/gold.css" afterPath="$PROJECT_DIR$/source/widget/UserHome.gold/gold.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/widget/UserHome.gold/gold.html" afterPath="$PROJECT_DIR$/source/widget/UserHome.gold/gold.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/widget/UserHome.gold/gold.js" afterPath="$PROJECT_DIR$/source/widget/UserHome.gold/gold.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/widget/UserHome.gold/gold.less" afterPath="$PROJECT_DIR$/source/widget/UserHome.gold/gold.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/widget/UserHome.gold/index.tpl" afterPath="$PROJECT_DIR$/source/widget/UserHome.gold/index.tpl" />
     </list>
     <list id="65f74e84-b66d-4c76-8e30-ad6df2d3b00e" name="New changelist" comment="" />
     <ignored path="xue-project.iws" />
@@ -33,76 +28,25 @@
       <file leaf-file-name="gold.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.83226836">
-              <caret line="447" column="0" selection-start-line="447" selection-start-column="0" selection-end-line="447" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7428115">
+              <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
               <folding>
-                <marker date="1448419438000" expanded="true" signature="7002:7024" placeholder="..." />
-                <marker date="1448419438000" expanded="true" signature="13721:14253" placeholder="..." />
-                <marker date="1448419438000" expanded="true" signature="14305:14384" placeholder="..." />
-                <marker date="1448419438000" expanded="true" signature="14425:14742" placeholder="..." />
-                <marker date="1448419438000" expanded="true" signature="14781:15054" placeholder="..." />
+                <marker date="1448510003000" expanded="true" signature="7014:7036" placeholder="..." />
+                <marker date="1448510003000" expanded="true" signature="13733:14265" placeholder="..." />
+                <marker date="1448510003000" expanded="true" signature="14317:14396" placeholder="..." />
+                <marker date="1448510003000" expanded="true" signature="14437:14754" placeholder="..." />
+                <marker date="1448510003000" expanded="true" signature="14793:15066" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gold.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.25">
-              <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-              <folding>
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/index.tpl">
+      <file leaf-file-name="dropdown.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/widget/Module.Dropdown/dropdown.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+              <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gold-address.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold-address.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.625">
-              <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gold.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.2156863">
-              <caret line="87" column="108" selection-start-line="87" selection-start-column="108" selection-end-line="87" selection-end-column="108" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ui-address.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/widget/Public.Address/ui-address.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="157" column="0" selection-start-line="0" selection-start-column="1" selection-end-line="157" selection-end-column="0" />
-              <folding>
-                <marker date="1447991946000" expanded="true" signature="732:1408" placeholder="..." />
-                <marker date="1447991946000" expanded="true" signature="1472:1575" placeholder="..." />
-                <marker date="1447991946000" expanded="true" signature="1628:1993" placeholder="..." />
-                <marker date="1447991946000" expanded="true" signature="2044:2365" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -297,7 +241,51 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Public.Address" />
+              <option name="myItemId" value="UM.mobile.phone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xue-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xue-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="widget" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Module.Modal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xue-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xue-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="widget" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Module.Dropdown" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -589,30 +577,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/install.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16134185">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/template/Layer/layer.UserHome.head.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/widget/Module.Dropdown/dropdown.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/widget/Public.Topbar/topbar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1005,16 +969,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/source/widget/Public.Dynamic/fresh.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.739662">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <marker date="1448248451000" expanded="true" signature="956:1070" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="6635:9436" placeholder="..." />
+            <marker date="1448248451000" expanded="false" signature="6830:6843" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="6844:9401" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="6976:9364" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="8075:9264" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="8832:9175" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="10059:11413" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="10116:10319" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="10379:10456" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="10512:11386" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="10613:10818" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="10877:11281" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="11069:11247" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="11517:12498" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="11577:11664" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="11720:12471" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="11821:12026" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="12085:12366" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="12154:12332" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="22191:23496" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="22255:23464" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="22320:23428" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="22394:22513" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="22586:23107" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="22832:23063" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="23259:23389" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="30394:30985" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="30470:30948" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="30635:30907" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="34559:34951" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="34634:34916" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="34705:34877" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="41474:43594" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="41664:42039" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="41773:42003" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="42098:43483" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="42202:42387" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="42453:42646" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="42882:43038" placeholder="..." />
+            <marker date="1448248451000" expanded="true" signature="43098:43365" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/widget/Module.Dropdown/dropdown.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/widget/UM.mobile.phone/mobile.phone.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.022970904">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.83226836">
-          <caret line="447" column="0" selection-start-line="447" selection-start-column="0" selection-end-line="447" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7428115">
+          <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
           <folding>
-            <marker date="1448419438000" expanded="true" signature="7002:7024" placeholder="..." />
-            <marker date="1448419438000" expanded="true" signature="13721:14253" placeholder="..." />
-            <marker date="1448419438000" expanded="true" signature="14305:14384" placeholder="..." />
-            <marker date="1448419438000" expanded="true" signature="14425:14742" placeholder="..." />
-            <marker date="1448419438000" expanded="true" signature="14781:15054" placeholder="..." />
+            <marker date="1448510003000" expanded="true" signature="7014:7036" placeholder="..." />
+            <marker date="1448510003000" expanded="true" signature="13733:14265" placeholder="..." />
+            <marker date="1448510003000" expanded="true" signature="14317:14396" placeholder="..." />
+            <marker date="1448510003000" expanded="true" signature="14437:14754" placeholder="..." />
+            <marker date="1448510003000" expanded="true" signature="14793:15066" placeholder="..." />
           </folding>
         </state>
       </provider>
