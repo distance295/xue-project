@@ -1,5 +1,6 @@
 <!--
     @require homework.less
+    @require ../Module.popover/xue.popover.js
     @require homework.ImageSet.min.js
     @require homework.ImageTrans.min.js
     @require homework.js
@@ -9,14 +10,14 @@
 	<!--交作业头部开始-->
 	<div class="homework-header">
 		<!--作业驳回的提示开始-->
-		<p><i></i><span>作业已被驳回！ 原因：图片不清晰，请尽快重新提交！</span></p>
+		<!-- <p><i></i><span>作业已被驳回！ 原因：图片不清晰，请尽快重新提交！</span></p> -->
 		<!--作业驳回的提示开始-->
 		<h2>
 			<span class="homework-name pull-left">第三次作业 三角函数</span>
 			<span class="homework-status homework-status-yellow pull-left">已驳回</span>
 			<i class="pull-left"></i>
 			<!--提醒批改作业开始-->
-			<button class="homework-remind-btn pull-right">提醒</button>
+			<button class="homework-remind-btn  pull-right" data-toggle="modal" data-target="#homework-dialog-remind">提醒</button>
 			<span class="pull-right">提醒老师尽快为我批改</span>
 			<!--提醒批改作业结束-->
 		</h2>
@@ -87,17 +88,25 @@
 						<!-- <li><img src="img/small1.png" /></li> -->
 					</ul>
 					<!--作业反馈开始-->
-					<div class="homework-Feedback hiding">
+					<div class="homework-Feedback hiding" style="display:block">
 						<div class="homework-Feedback-cont">
 							<div class="homework-Feedback-header pull-left">
-								<img src="img/emote.png" class="homework-likeEmote">
 								<div class="homework-dialog">
-									<p class="homework-tipsInfo">完成作业奖励<em>15</em>金币和<em>1500</em>学力。辅导老师额外奖励你<em>150</em>个金币！</p>
+									<p class="homework-tipsInfo">完成作业奖励<em>15</em>金币和<em>150</em>学力。</p>
+									<p class="homework-tipsInfo">辅导老师额外奖励你<em>150</em>个金币！</p>
 								</div>
 								<div class="homework-scoreArea">
-									<span class="homework-score" id="homework-score" score = "2"></span>
+									<span class="homework-score" id="homework-score" score = "89"></span>
 									<span class="homework-scoreLine"></span>
 								</div>
+							</div>
+							<div class="homework-Reviews">
+								<h3 class="homework-teacher">老师评语</h3>
+								<div class="homework-audio">
+									 <i class="homework-icoAudio"></i>
+									 <em>20 "</em>
+								</div>
+								<audio class="homework-audio-btn hiding"  data-url ="我的好兄弟.mp3" autoplay="true" controls="true" src="img/emote.png"> </audio>
 							</div>
 							<p class="homework-Feedback-describe">
 									32分，满分是50，还是有点偏低。错了一道逻辑推理的题目，和一道零点分段法的题目，这部分要好好再看看课程哦，要学会对题目归纳总结。但是其他题目做得都不错，看得出来暑假还是用心预习了的，字也写得很漂亮，很棒！但是老师还是要小小提醒你一下，看看老师帮你写了多少个解啊，咱们做题的时候一定要规范作答，上了初中，这一点非常重要哦~加油，下一次老师期待你提交上来完美的试卷！
@@ -165,7 +174,13 @@
 
 <script type="text/javascript">
 	$(function(){
-            //homeWork.imageCtl('.homework-image-box');
+
+		    //缩略图等比例缩放
+            homeWork.imageRate('.homework-image-box');
+            //语音存在的情况下
+            homeWork.audio('.homework-image-box');
+            //点击提醒按钮
+            homeWork.remind();
             //判断是否存在缩放图片
             var _isZoom = false;
             var _homeZoom = $('#home_Image1').data('zoom');
@@ -199,62 +214,6 @@
 	        $('#homeworkstarArea[role="homeworkstarArea"]').starScore({
 		 	     className:"on",//星星选中状态类
 		 	     scoreNum:".scoreNum"//显示评分分数的类
-	       })
-
-
-	        /**
-			 * 判断浏览器ie版本号
-			 */
-			var $ImageB = $ImageB || {};
-			$ImageB.browser = $ImageB.browser || {};
-			$ImageB.browser.uga = navigator.userAgent.toLowerCase();
-			$ImageB.browser.msie = /msie/.test($ImageB.browser.uga);
-
-			$ImageB.check = $ImageB.check || {};
-			$ImageB.check.isIE6 = !-[1, ] && !window.XMLHttpRequest;
-			$ImageB.check.isIE7 = $ImageB.browser.uga.indexOf("msie 7.0") > 0;
-			$ImageB.check.isIE8 = $ImageB.browser.uga.indexOf("msie 8.0") > 0;
-			$ImageB.check.isIE9 = $ImageB.browser.uga.indexOf("msie 9.0") > 0;
-          
-	       //根据分辨率重新计算图片
-	       $(window).resize(function(){
-		       	var _liCurrent = $('#home_Image1').find('.homework-Thumbnails-img-list li[class*="homework-current"]');
-		       	var _index = $('#home_Image1').find('.homework-Thumbnails-img-list li').index(_liCurrent)
-		       	var _imgW = $('#home_Image1').find('.ImageTransformJs').attr('_imgW');
-		       	var _imgH = $('#home_Image1').find('.ImageTransformJs').attr('_imgH');
-		       	var _maxW = $('#home_ImageTransform1').width();
-		       	var _maxH = $('#home_ImageTransform1').height();
-
-		       	var rate=(_maxH/_imgH>_maxW/_imgW?_maxW/_imgW:_maxH/_imgH);
-		       	//判断浏览器
-		       	if( $ImageB.check.isIE6 ||$ImageB.check.isIE7 ||$ImageB.check.isIE8 || $ImageB.check.isIE9 ){
-			       	$('#home_Image1').find('.ImageTransformJs').css({
-			       		  'width':_imgW*rate,
-					  	  'height':_imgH*rate
-					})
-					var _left = (_maxW - $('#home_Image1').find('.ImageTransformJs').width())/ 2 + "px";
-			       	var _top = (_maxH - $('#home_Image1').find('.ImageTransformJs').height())/ 2 + "px";
-					$('#home_Image1').find('.ImageTransformJs').css({
-					  	  'left': _left,
-						  'top': _top
-					}) 
-				}else{
-					var _left = (_maxW - _imgW*rate)/ 2 + "px";
-			       	var _top = (_maxH - _imgH*rate)/ 2 + "px";
-			       	$('#home_Image1').find('.ImageTransformJs').css({
-			       		  'width':_imgW*rate,
-					  	  'height':_imgH*rate,
-					  	  'left': _left,
-						  'top': _top
-					})
-				}
-				 
-		       	
-	            var _liNum = $('#Thumbnails').find('ul li').length;
-	            var _liH = $('#Thumbnails').find('ul li').outerHeight(true);
-	            var _ulTop = -($('#Thumbnails').find('ul').attr('_topNum'))*_liH;
-	            $('#Thumbnails').find('ul').height(_liNum*_liH).css('top', _ulTop);
-
 	       })
 	})
 	

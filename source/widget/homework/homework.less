@@ -40,6 +40,16 @@
     .homework-header{
           display: block;
           overflow: hidden;
+          .popover{
+             max-width: 600px;
+             .homework-remid-box{
+                width: 193px;
+                .font-family("Microsoft YaHei");
+                .font-size(14px);
+                line-height: 60px;
+                color: #666; 
+             }
+          }
           p{
               display: block;
               overflow: hidden;
@@ -181,7 +191,10 @@
                         border: 1px solid #eaeaea;
                         padding: 1px;
                         position: relative;
+                        cursor: pointer;
+                        text-align: center;
                         box-sizing: content-box;
+                        overflow: hidden;
                         .homework-MaskLayer{
                             position: absolute;
                             left: 0;
@@ -199,7 +212,7 @@
                               top: 0;
                               line-height: 100px;
                               bottom: 0;
-                              font-family: "Microsoft YaHei","微软雅黑";
+                              .font-family("Microsoft YaHei");
                               font-size: 30px;
                               text-align: center;
                               color: #fff;
@@ -221,8 +234,8 @@
                             }
                         }
                         img{
-                            width: 100%;
-                            height: 100%;
+                            width: auto;
+                            height: auto;
                             cursor: pointer;
                         }
                     }
@@ -286,6 +299,7 @@
         position: relative;
         border: 1px solid #eaeaea;
         box-sizing:content-box;
+        background: #fcfcfc;
     }
 
     /**
@@ -293,12 +307,12 @@
      */
     .homework-Feedback{
          background: url("img/htmlBg_1190.png") no-repeat;
-         width: 555px;
+         width: 559px;
          height: 483px;
          left: 50%;
          top: 50%;
-         margin-left: -277.5px;
-         margin-top: -241.5px;
+         margin-left: -279.5px;
+         margin-top: -246px;
          position: absolute;
          display: none;
     }
@@ -310,30 +324,20 @@
     .homework-Feedback-header{
          float: left;
          width: 480px;
-         height: 153px;
-         margin:28px 0 0 0;
+         height: 134px;
+         margin:25px 0 0 0;
+         border-bottom: 1px solid #eaeaea;
          position:relative;
-         .homework-likeEmote{
-            position: absolute;
-            top:43px;
-            left: 0;
-         }
          .homework-dialog{
-              position: absolute;
-              top:0;
-              left: 107px;
-              width: 228px;
-              height: 73px;
-              background:url("img/Dialog.png") no-repeat; 
+              float: left;
+              margin-top: 41px;
               .homework-tipsInfo{
                   display: block;
                   overflow: hidden;
-                  margin: 9px 0 0 10px;
-                  line-height: 22px;
+                  line-height: 26px;
                   text-align: left;
-                  .font-size(14px);
+                  .font-size(16px);
                   color: #333;
-                  letter-spacing: -0.5px;
               }
               em{
                  color: #e74c3c;
@@ -341,10 +345,8 @@
               }
          }
          .homework-scoreArea{
-              position:absolute;
-              right: 0;
-              bottom: 0;
-              width: 153px;
+              float: right;
+              width: 165px;
               text-align: center;
               .homework-scoreLine{
                 background:url("img/homeIcon.png") no-repeat; 
@@ -355,25 +357,71 @@
                 overflow: hidden;
               }
               .homework-score{
-                  width: 153px;
                   display: block;
                   overflow: hidden;
+                  height: 80px;
                   img{
-                     padding: 0 3px;
+                     padding: 0 5px;
                      vertical-align: inherit;
                   }
               }
           }
     }
+    .homework-Reviews{
+        float: left;
+        width: 100%;
+        margin-top: 24px;
+        .homework-teacher{
+            float: left;
+            line-height: 36px;
+            .font-size(14px);
+            font-weight: normal;
+        }
+        .homework-audio{
+            float: left;
+            height: 36px;
+            line-height: 36px;
+            width: 100px;
+            margin-left: 22px;
+            .border-radius(18px);
+            background: #3bafda;
+            overflow: hidden;
+            cursor: pointer;
+            color: #fff;
+            &:hover{
+               background: #2392ba;
+            }
+            em{
+               .font-size(18px);
+               .font-family("Microsoft YaHei");
+            }
+        }
+        .homework-icoAudio{
+             float: left;
+             width: 18px;
+             height: 22px;
+             background: url('img/homeWork-iconAudio.png') no-repeat;
+             margin: 8px 20px 0 17px;
+        }
+        &.homework-audio-playing{
+           .homework-icoAudio{
+               background: url('img/homeWork-audio.gif') no-repeat;
+           }
+        }
+
+    }
+
+
     p{
         &.homework-Feedback-describe{
             float: left;
             width: 480px;
-            color: #e74c3c;
-            .font-size(14px);
+            color: #333;
+            .font-size(12px);
+            .font-family;
             line-height: 24px;
-            height: 170px;
-            margin: 20px 0 0 0;
+            height: 140px;
+            margin: 15px 0 0 0;
             overflow-y: auto;
             overflow-x: hidden;
             word-break:break-all; 
@@ -521,7 +569,7 @@
     /** 
      * 中等屏幕 桌面显示器 (<=1200px)
      */
-    @media (max-width: 1200px){
+    /* @media (max-width: 1200px){
         .homework-Thumbnails-box{
               width: 128px;
               height: 452px;
@@ -552,10 +600,9 @@
         .homework-ImageTransform{
             height: 470px;
         }
-
-        /**
+    
+        *
          * 作业反馈style
-         */
         .homework-Feedback{
              background: url("img/htmlBg_1024.png") no-repeat;
              height: 460px;
@@ -570,12 +617,12 @@
                 height: 160px;
             }
         }
-    }
+    } */
 
     /** 
      * 大屏幕 大桌面显示器 (≥1200px)
      */
-    @media (min-width:1200px){
+    /* @media (min-width:1200px){
         .homework-Thumbnails-box{
               width: 150px;
               height: 516px;
@@ -606,7 +653,7 @@
         .homework-ImageTransform{
             height: 534px;
         }
-    } 
+    }  */
    
 }
 
@@ -621,11 +668,11 @@
 /** 
  * 中等屏幕 桌面显示器 (<=1200px)
  */
-@media (max-width: 1200px){
+/* @media (max-width: 1200px){
    .wrap-body{
         width: 840px !important;
    }
-}
+} */
 
 
 
