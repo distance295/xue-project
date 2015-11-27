@@ -5,34 +5,7 @@
  * @version $Id$
  */
 var glory = glory || {};
-    $(function() {
-        modules_params = {
-            // 系统模块json文件url
-            'jsonUrl': '/Glorys/getGloryTypeJson/',
-            
-            // 系统模块联动容器
-            'container': 'span',
-            // 系统模块联动容器id
-            'container_id': 'glorys',
-            
-            // 一级系统模块标识
-            'level_1_id': 'type1',
-            // 一级系统模块默认值
-            'level_1_default': '',
-            
-            // 二级系统模块标识
-            'level_2_id': 'type2',
-            // 二级系统模块默认值
-            'level_2_default': '',
-            
-            // 三级系统模块标识
-            'level_3_id': 'type3',
-            // 三级系统模块默认值
-            'level_3_default': ''
-        };
-        initSelects(modules_params);
-    });
-
+    
 /**
  * 初始化三级联动下拉框
  *

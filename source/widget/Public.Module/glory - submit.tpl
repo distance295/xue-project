@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>晒成绩-上传成绩</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <!-- <link href="http://css04.xesimg.com/page_login.css?1447408750" type="text/css" rel="stylesheet" /> -->
-
-    <!-- 这是CSS库文件 -->
-    <link rel="stylesheet" type="text/css" href="../../lib/bootstrap/3.3.5-custom/css/bootstrap.min.css">
-    <!-- 这是当前模块样式文件 -->
-    <link href="glory.css" rel="stylesheet">
-    <script type="text/javascript" src="../../lib/jQuery/2.1.1/jquery.min.js"></script>
+<!--
+   晒成绩
+    @require glory.less       
+    @require glory.js       
+-->
     <script type="text/javascript">
     function selectType3(s){
         var checkeds=$(s).find('option:checked');
@@ -380,4 +370,4 @@ $(function() {
     });
 
 </script>
-</html>
+
