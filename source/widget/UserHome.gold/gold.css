@@ -569,3 +569,7 @@ table tr td {
   color: #333;
   font-weight: bold;
 }
+.alertImg {
+  margin-right: 10px;
+  margin-bottom: 3px;
+}
