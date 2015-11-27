@@ -12,9 +12,10 @@ $('#head_tab li').click(function(){
   table_qiehuan(this);
 });
 //推荐头像
-$(".hpr-img").on('click',function setImg(url){
-    $('#hp-small img, #hp-middle img, #hp-big img').attr('src',url);
-});
+$(".hpr-img").on("click",function(){
+   var url = $(this).attr("src");
+   $("#hp-small img, #hp-middle img, #hp-big img").attr("src",url)
+})
 
 //自定义上传头像
 $("#loadFile").change(function(){
