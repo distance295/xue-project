@@ -1,24 +1,31 @@
-.order-modal{
-    width: 580px;
-    height: 560px;
-    margin: 0 auto;
-    h4{
-        width: 100%;
-        height: 50px;
-        line-height: 50px;
-        padding-left: 20px;
-        border-bottom: 1px solid #eaeaea;
-        font-family: "Microsoft YaHei";
-        font-size: 16px;
-        color: #666;
+.modal-content{
+    .modal-header{
+        border-radius: 3px 3px 0 0;
         background-color: #fcfcfc;
+        h4{
+            color: #666;
+        }
+        button{
+            span{
+                font-size: 30px;
+            }
+        }
     }
+    .modal-body{
+        padding: 0;
+    }
+}
+.order-modal{
+    height: 505px;
+    margin: 0 auto;
     .om-content{
-        width: 540px;
+        height: 445px;
+        padding: 20px 10px 0 20px;
+        overflow: auto;
         .om-error{
             height: 35px;
             line-height: 35px;
-            margin: 20px auto;
+            margin-bottom: 15px;
             font-family: "Microsoft Yahei";
             font-size: 14px;
             background-color: #fcfcfc;
@@ -27,21 +34,43 @@
                 margin-right: 10px;
             }
         }
-        .can-buy{}
-        .cannt-buy{}
+        .can-buy{
+            strong{
+                display: inline-block;
+                margin: 0 15px 5px 0;
+            }
+        }
+        .cannt-buy{
+            position: relative;
+            margin-top: 8px;
+            strong{
+                display: inline-block;
+                margin-bottom: 5px;
+            }
+            .order-teacher{
+                strong{
+                    float: right;
+                    color: #e74c3c;
+                }
+            }
+        }
+        .ot-first{
+            border-top: 1px solid #eaeaea;
+        }
         .order-teacher{
-            width: 545px;
             height: 80px;
+            padding-top: 10px;
+            clear: both;
             img{
                 float: left;
                 width: 60px;
                 height: 60px;
-                margin: 20px 15px 0 12px;
+                margin-right: 15px;
                 border-radius: 50%;
             }
             em{
                 float: left;
-                margin: 25px 5px 0 0;
+                margin: 5px 5px 0 0;
                 padding: 1px 8px;
                 border-radius: 3px;
                 font-style: normal;
@@ -52,7 +81,7 @@
                 float: left;
                 width: 330px;
                 height: 18px;
-                margin-top: 24px;
+                margin-top: 4px;
                 font-size: 14px;
                 overflow: hidden;
             }
@@ -67,8 +96,14 @@
         }
     }
     .om-footer{
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        border-radius: 0 0 3px 3px;
+        background-color: #fcfcfc;
         button{
-           width: 100px;
+           width: 140px;
+           margin: 0 10px;
            font-family: "Microsoft YaHei";
            font-size: 16px; 
         }

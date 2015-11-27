@@ -1,5 +1,7 @@
 <!--
     @require order.less
+    @require order.modal.less
+    @require order.modal.js
 -->
 <div class="order-content">
     <div class="order information">
@@ -59,7 +61,7 @@
                </tr>
            </tbody>
         </table>
-        <button class="btn btn-danger">重新支付</button>
+        <button class="btn btn-danger" data-toggle="modal" data-target="#orderModal" onclick="orderModal();">重新支付</button>
     </div>
     <div class="consignee information">
         <h4>收货人信息</h4>
