@@ -32,7 +32,7 @@
     <link rel="import" href="tab-stu-fresh.tpl?__inline">
     <div class="row bottom m20">
         <div class="col-md-9 top m20 fresh-main-wrapper">
-            <link rel="import" href="../../widget/Public.Dynamic/dynAnswer.tpl?__inline">
+            <link rel="import" href="../../widget/Public.Dynamic/dynMy.tpl?__inline">
         </div>
         <div class="col-md-3 top m20">
             <div class="center-left-m">

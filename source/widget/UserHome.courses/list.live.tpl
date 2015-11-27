@@ -6,7 +6,7 @@
 
 <div class="courselayout-list courseList-wrap">
     <div class="courseList-title">
-        <p>初一数学目标满分班人教版 直播课程大纲</p>
+        <p>初一数学目标满分班人教版 直播课程大纲<span>调课中</span></p>
     </div>
     <!-- <ul class="teacher-tab">
                 <li class="current">主讲老师直播</li>
@@ -25,7 +25,7 @@
             <tr>
                 <td class="static-gray">2015-10-11 90:00-10:30</td>
                 <td>第1讲 初一数学目标满分班人教版 第一场直播<span class="studied-end">（补课）</span></td>
-                <td class="text-style yellow-mark">未参加<em class="mark"></em></td>
+                <td class="text-style yellow-mark">未完成<em class="mark"></em></td>
                 <td class="text-style">
                     <a class="btn btn-primary" href="##"><em class="button-icon icon-will-red"></em>立即回看</a>
                 </td>
@@ -73,7 +73,7 @@
             <tr>
                 <td class="static-gray">2015-10-11 90:00-10:30</td>
                 <td class="static-gray">第1讲 初一数学目标满分班人教版 第一场直播</td>
-                <td class="text-style yellow-mark">未参加<em class="mark"></em></td>
+                <td class="text-style yellow-mark">未完成<em class="mark"></em></td>
                 <td class="text-style">
                     <button class="btn course-btn-gray" disabled>等待回看</button>
                 </td>

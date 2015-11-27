@@ -33,10 +33,10 @@ function informationGuid(){
 				createModal.show({
 					id : 'informationGuid',
 					title : '',
-					cls : 'infor-cardModal',
+					cls : 'infor-Modal',
 					content : result
 				}); 
-				$('#informationGuid').modal({backdrop: 'static', keyboard: false,show: true}).find('button.close').remove();
+				$('#informationGuid').modal({0: 'static', keyboard: false,show: true}).find('button.close').remove();
 			}
 		},
 	});
@@ -52,7 +52,7 @@ function welcomeFormList(){
 				createModal.show({
 					id : 'welcomeFormList',
 					title : '',
-					cls : 'FormList-cardModal',
+					cls : 'FormList-Modal',
 					content : result
 				});
 				$('#welcomeFormList').modal({backdrop: 'static', keyboard: false,show: true}).find('button.close').remove();
@@ -72,7 +72,7 @@ function showFollowList(cur_grade){
 				createModal.show({
 					id : 'showFollowList',
 					title : '',
-					cls : 'FormList-cardModal',
+					cls : 'FormList-Modal',
 					content : result
 				}); 
 				$('#showFollowList').modal({backdrop: 'static', keyboard: false,show: true}).find('button.close').remove();
