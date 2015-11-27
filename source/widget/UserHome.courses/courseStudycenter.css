@@ -176,6 +176,8 @@ body {
 }
 .courseList .courseList-body .course-title .change-course {
   color: #e74c3c;
+  font-size: 14px;
+  margin-left: 10px;
 }
 .courseList .courseList-body .title-more {
   margin-top: 38px;
@@ -512,7 +514,8 @@ table tr:nth-of-type(2n) {
 }
 .courselayout-list .courseList-title p span {
   color: #e74c3c;
-  margin-left: 5px;
+  margin-left: 10px;
+  font-size: 14px;
 }
 .courselayout-list .course-table {
   background: #fff;

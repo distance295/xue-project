@@ -1,5 +1,8 @@
 <!--
     @require all.order.less
+    @require order.modal.less
+    @require order.modal.js
+    @require Modal.js
 -->
 
 <div class="ao-content">
@@ -101,7 +104,7 @@
                 <li class="ao-third ao-li">已取消</li>
                 <li class="ao-li">
                     <div class="ao-operation">
-                        <button class="btn btn-danger">重新购买</button>
+                        <button class="btn btn-danger" data-toggle="modal" data-target="#orderModal" onclick="orderModal();">重新购买</button>
                         <span>
                             <a href="#">查看详情</a>
                         </span>

@@ -10,8 +10,8 @@
     <div class="hp-box-left">
         <div class="hp-recommend">
             <div class="hpr-box">
-                <img src="img/head.photo.png" alt="头像">
-                <img src="img/head.photo.png" alt="头像">
+                <img class="hpr-img" src="http://tx.haiqq.com/uploads/allimg/150321/110H2E40-6.jpg" alt="头像">
+                <img class="hpr-img" src="img/head.photo.png" alt="头像">
                 <img src="img/head.photo.png" alt="头像">
                 <img src="img/head.photo.png" alt="头像">
                 <img src="img/head.photo.png" alt="头像">
