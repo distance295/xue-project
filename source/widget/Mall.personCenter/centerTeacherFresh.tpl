@@ -1,6 +1,7 @@
 <!--
   @require personalCenter.less
   @require personalCenter.js
+  @require ../Module.Modal/Modal.js
 -->
 
 <div class="centerHeader-teacher-background">

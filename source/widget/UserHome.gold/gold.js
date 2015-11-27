@@ -18,8 +18,8 @@ $(function(){
         presentAdd = '.present-add',
         presentDec = '.present-dec',
         //presentNum = '.present-num',
-        $dateStart = $('#dateStart'),
-        $dateEnd = $('#dateEnd'),
+        $dateStart = $('#dateStart') || {},
+        $dateEnd = $('#dateEnd') || {},
         $cardCreateModal = $('.card-createModal'),
         $presentCreateModal = $('.present-createModal');
 
@@ -284,7 +284,7 @@ $(function(){
             if(div !== ''){
                 event.preventDefault();
             }else{
-                $rct.append('<div class="alert alert-danger fade in"><span>兑换失败,你的金币余额不足哦~</span></div>')
+                $rct.append('<div class="alert alert-danger fade in"><img src="/static/img/UserHome.gold/Spam.png" class="alertImg"><span>兑换失败,你的金币余额不足哦~</span></div>')
             }
         });
     });

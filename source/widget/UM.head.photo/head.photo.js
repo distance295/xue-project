@@ -8,11 +8,12 @@ function table_qiehuan(d){
     var index =  that.index(); 
     box.eq(index).show().siblings().hide();
 }
-
-$(function(){
-    $('#head_tab li').click(function(){
-     table_qiehuan(this);
- });
+$('#head_tab li').click(function(){
+  table_qiehuan(this);
+});
+//推荐头像
+$(".hpr-img").on('click',function setImg(url){
+    $('#hp-small img, #hp-middle img, #hp-big img').attr('src',url);
 });
 
 //自定义上传头像
@@ -108,20 +109,14 @@ function getFullPath(obj){
             return false;  
         }
         $('#imghead, #hp-small img, #hp-middle img, #hp-big img').attr('src',url);
+         img=document.createElement("img");  
+         img.src=location;
+         if(img.fileSize>102400){
+          alert("图片尺寸请不要大于100KB");
+          return false;
+         }else{
+            return true;
+        }
     }
 }   
 
-$("#imghead").change(function validate_img(a){
-   var file = a.value;
-   var image = new Image();
-   image.src = file;
-   var height = image.height;
-   var width = image.width;
-   var filesize = image.filesize;
-   if(width<200 && height<200 && filesize>2048){
-    alert('照片尺寸请大于200×200 或者大小小于2M的图片');
-    return false;
-   }else{
-    return true;
-   }
-}); 

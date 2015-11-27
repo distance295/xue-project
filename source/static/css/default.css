@@ -257,6 +257,8 @@ em {
   background: url(../../widget/Public.Module/img/page-down-default.png) 0 no-repeat;
 }
 .row-page-turn .page-turn-box {
+  float: left;
+  width: 1100px;
   overflow: hidden;
 }
 .row-page-turn .page-turn-box .course-small-list {
