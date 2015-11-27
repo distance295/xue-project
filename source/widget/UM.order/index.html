@@ -11,7 +11,9 @@
     <link href="../../lib/bootstrap/3.3.5-custom/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css">    
     <!-- 这是当前模块样式文件 -->
-    <link href="order.css" rel="stylesheet"></head>
+    <link href="order.css" rel="stylesheet">
+    <link href="order.modal.css" rel="stylesheet">
+</head>
 <body>
     <div class="order-content">
         <div class="order information">
@@ -71,7 +73,7 @@
                    </tr>
                </tbody>
             </table>
-            <button class="btn btn-danger">重新支付</button>
+            <button class="btn btn-danger" data-toggle="modal" data-target="#orderModal" onclick="orderModal();">重新支付</button>
         </div>
         <div class="consignee information">
             <h4>收货人信息</h4>
@@ -103,7 +105,9 @@
     </div>
     <!-- 这是jquery库文件 -->
     <script type="text/javascript" src="../../lib/jQuery/1.11.1/jquery.min.js"></script>
+    <script src="../../lib/bootstrap/3.3.5-custom/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../Module.Modal/Modal.js"></script>
     <!-- 这是当前模块js文件 -->
-    <script type="text/javascript" src="order.js"></script>
+    <script type="text/javascript" src="order.modal.js"></script>
 </body>
 </html>

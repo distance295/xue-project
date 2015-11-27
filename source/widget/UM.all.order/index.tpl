@@ -2,8 +2,9 @@
     @require all.order.less
     @require order.modal.less
     @require order.modal.js
+    @require Modal.js
 -->
-<div id="order-modal" data-toggle="modal" data-target="#orderModal"></div>
+
 <div class="ao-content">
     <ul class="ao-list">
         <li class="current"><a href="#">全部订单 32</a></li>
@@ -103,7 +104,7 @@
                 <li class="ao-third ao-li">已取消</li>
                 <li class="ao-li">
                     <div class="ao-operation">
-                        <button class="btn btn-danger" onclick="orderModal();">重新购买</button>
+                        <button class="btn btn-danger" data-toggle="modal" data-target="#orderModal" onclick="orderModal();">重新购买</button>
                         <span>
                             <a href="#">查看详情</a>
                         </span>
@@ -219,7 +220,3 @@
         </div>
     </div>
 </div>
-<!-- 这是jquery库文件 -->
-<script type="text/javascript" src="../../lib/jQuery/1.11.1/jquery.min.js"></script>
-<script src="../../lib/bootstrap/3.3.5-custom/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../Module.Modal/Modal.js"></script>
