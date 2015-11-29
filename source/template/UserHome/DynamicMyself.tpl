@@ -7,9 +7,9 @@
             <!-- *********************** 内容区域开始 *********************** -->
 
             <ul class="nav nav-tabs">  
-                <li  role="presentation" class="active"><a href="/pages/UserHome/DynamicIndex.html">新鲜事</a></li>
-                <li><a href="/pages/UserHome/DynamicContact.html">@我的</a></li>
-                <li><a href="/pages/UserHome/DynamicAttention.html">关注的人</a></li>
+                <li  role="presentation" class="active"><a href="DynamicIndex.html">新鲜事</a></li>
+                <li><a href="DynamicContact.html">@我的</a></li>
+                <li><a href="DynamicAttention.html">关注的人</a></li>
                 <li class="pull-right">
                     <a href="#" class="btn btn-danger" id="freshPost" data-toggle="modal" data-target="#fresh-sendInfo-box" >
                         <i class="fa fa-plus"></i> 发新鲜事
@@ -27,8 +27,8 @@
                 <div class="col-md-2 wrap w120">                 
                     <div class="panel panel-default wrap h630">
                         <div class="list-group top m20">
-                            <a href="/pages/UserHome/DynamicIndex.html" class="list-group-item">我关注的</a>
-                            <a href="/pages/UserHome/DynamicMyself.html" class="list-group-item active">我自己的</a>
+                            <a href="DynamicIndex.html" class="list-group-item">我关注的</a>
+                            <a href="DynamicMyself.html" class="list-group-item active">我自己的</a>
 
                         </div>   
                     </div>

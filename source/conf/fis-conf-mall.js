@@ -8,7 +8,7 @@ fis.set('project.ignore', [
     'conf/*'
 ]);
 
-fis.media('account')
+fis.media('mall')
     .match('*', {
       release: '/$0'
     })
