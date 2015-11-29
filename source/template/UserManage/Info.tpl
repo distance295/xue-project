@@ -32,6 +32,13 @@
         MODULE: 'UserManage',
         TITLE: '基本信息-个人设置'
     };
+    $(function(){
+        if(document.attachEvent){
+            window.attachEvent("onload", ymd);   
+        }else{
+            window.addEventListener('load', ymd, false);  
+        }
+    });
 </script>
 
 <!-- 公共底部 -->

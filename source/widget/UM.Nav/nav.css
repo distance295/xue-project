@@ -26,6 +26,7 @@
 }
 .user-manage-body .panel {
   border-color: #FFF;
+  margin-bottom: 20px;
 }
 .user-manage-body .panel .panel-heading {
   height: 50px;
