@@ -2,7 +2,7 @@
 <link rel="import" href="../Layer/layer.UserHome.head.tpl?__inline">
 <!-- 学习中心区域 -->
 <div class="container top m20">
-    <link rel="import" href="../../widget/studyCourse/index.tpl?__inline">
+    <link rel="import" href="../../widget/UserHome.learning/index.tpl?__inline">
 </div>
 
 <!-- 页面配置 -->

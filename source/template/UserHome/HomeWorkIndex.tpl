@@ -10,7 +10,7 @@
                 <div class="col-md-12 wrap">
                     <div class="panel panel-default homework-panel-style">
                         <div class="panel-body" style="padding:0">
-                            <link rel="import" href="../../widget/Homework/index.tpl?__inline">
+                            <link rel="import" href="../../widget/UserHome.homework/index.tpl?__inline">
                         </div>                     
                     </div>
                 </div>

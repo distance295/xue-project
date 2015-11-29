@@ -14,10 +14,10 @@
                 <div class="col-md-2 wrap w120">
                     <div class="panel panel-default wrap h630">
                         <div id="sub-nav" class="list-group top m30">
-                            <a data-id="Fresh" href="/pages/UserHome/CollectDynamicIndex.html" class="list-group-item ">新鲜事</a>
-                            <a data-id="Course" href="/pages/UserHome/CollectcourseIndex.html" class="list-group-item active">课程</a>
-                            <a data-id="FreeCourse" href="/pages/UserHome/CollectFreeCourseIndex.html" class="list-group-item ">免费课程</a>
-                            <a data-id="Appschool" href="/pages/UserHome/CollectAppIndex.html#" class="list-group-item">网校App</a>
+                            <a data-id="Fresh" href="CollectDynamicIndex.html" class="list-group-item ">新鲜事</a>
+                            <a data-id="Course" href="CollectcourseIndex.html" class="list-group-item active">课程</a>
+                            <a data-id="FreeCourse" href="CollectFreeCourseIndex.html" class="list-group-item ">免费课程</a>
+                            <a data-id="Appschool" href="CollectAppIndex.html#" class="list-group-item">网校App</a>
                         </div>
                     </div>
                 </div>
