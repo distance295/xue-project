@@ -37,8 +37,9 @@ body {
   color: #fff;
   font-size: 14px;
   font-style: normal;
-  line-height: 23px;
+  line-height: 17px;
   cursor: pointer;
+  padding-top: 8px;
 }
 .label-delay {
   background: #3bafda;
@@ -173,6 +174,11 @@ body {
   float: right;
   margin-right: 10px;
 }
+.courseList .courseList-body .course-title .change-course {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-left: 10px;
+}
 .courseList .courseList-body .title-more {
   margin-top: 38px;
 }
@@ -264,6 +270,11 @@ body {
 .courseList .courseList-teacher .teacher-main .avatar-photo {
   float: left;
   margin-right: 10px;
+}
+.courseList .courseList-teacher .teacher-main .avatar-photo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
 .courseList .courseList-teacher .teacher-main .coach-con {
   float: left;
@@ -437,13 +448,15 @@ table tr:nth-of-type(2n) {
   color: #1e89e0;
 }
 .load-btn {
-  padding: 0px 22px;
-  line-height: 33px;
+  padding: 0px 15px;
+  line-height: 34px;
   font-size: 14px;
-  background: #37bc9b;
-  color: #fff;
   border-radius: 2px;
   margin-bottom: 0;
+  margin-right: 12px;
+}
+.load-btn-none {
+  color: #999;
 }
 .bom-delay {
   padding: 30px 40px;
@@ -498,6 +511,11 @@ table tr:nth-of-type(2n) {
   font-size: 18px;
   font-family: 'Microsoft YaHei';
   line-height: 34px;
+}
+.courselayout-list .courseList-title p span {
+  color: #e74c3c;
+  margin-left: 10px;
+  font-size: 14px;
 }
 .courselayout-list .course-table {
   background: #fff;

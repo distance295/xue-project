@@ -45,8 +45,9 @@ body{
 	color: #fff;
 	font-size: 14px;
 	font-style: normal;
-	line-height: 23px;
+	line-height: 17px;
 	cursor: pointer;
+	padding-top: 8px;
 }
 .label-delay{
 	background: #3bafda;
@@ -161,6 +162,11 @@ body{
 				float: right;
 				margin-right: 10px;
 			}
+			.change-course{
+				color: #e74c3c;
+				font-size: 14px;
+				margin-left: 10px;
+			}
 		}
 		.title-more{
 			margin-top: 38px;
@@ -261,6 +267,11 @@ body{
 			.avatar-photo{
 				float: left;
 				margin-right: 10px;
+				img{
+					width: 60px;
+					height: 60px;
+					border-radius: 50%;
+				}
 			}
 			.coach-con{
 				float: left;
@@ -459,13 +470,15 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 	}
 }
 .load-btn{
-	padding: 0px 22px;
-	line-height: 33px;
+	padding: 0px 15px;
+	line-height: 34px;
 	font-size: 14px;
-	background: #37bc9b;
-	color: #fff;
 	border-radius: 2px;
 	margin-bottom: 0;
+	margin-right: 12px;
+}
+.load-btn-none{
+	color: #999;
 }
 // 延期弹框
 .bom-delay{
@@ -512,6 +525,11 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 			font-size: 18px;
 			font-family: 'Microsoft YaHei';
 			line-height: 34px;
+			span{
+				color: #e74c3c;
+				margin-left: 10px;
+				font-size: 14px;
+			}
 		}
 	}
 	.course-table{

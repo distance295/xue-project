@@ -30,7 +30,7 @@
             <em>网校会在每年7月1日自动为你更新年级</em>
         </div>
         <div>
-            <form name="date">
+            <form id="date" name="date">
                 <label for="">生日：</label>
                 <select class="year" name="year" onchange="yearday(this.value)">
                   <option>请选择</option>
@@ -51,7 +51,7 @@
             <span>北京市  市辖区  东城区</span>
         </div>
         <div>
-            <label for="">学校：</label>
+            <label for="school">学校：</label>
             <input class="school" type="text" maxlength="50">
             <div class="error-box">
                 <span class="school-warning error"></span>

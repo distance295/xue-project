@@ -14,7 +14,8 @@
         <li>41-60</li>
         <li>61-80</li>
         <li>80-100</li>
-        <li>附赠奖</li>
+        <li>附赠奖1-20</li>
+        <li>附赠奖21-40</li>
     </ul>
     <table class="table course-table">
         <thead>

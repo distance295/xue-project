@@ -231,8 +231,9 @@ pip-log.txt
 /source/widget/notice/
 /source/widget/courses/
 /source/lib/foundation/
-
+/.idea/workspace.xml
 /website/*
 *.css
 *.css
 *.css
+/config/

@@ -76,11 +76,11 @@ $(function(){
     // placeholder样式
     var nickname = $('#nickname');
     var realname = $('#realname');
-    // 昵称
+    
     $(nickname).on('focus',function(){
         $(nickname).siblings('.label-value').css('display','none');
     });
-    $(nickname).on('blur',function(){
+    nickname.on('blur',function(){
         $.fn.nickname();
     });
 
@@ -123,6 +123,10 @@ $.fn.nickname = function(){
     }
 };
 $.fn.nicknameajax = function(){
+    var box = $(boxs.nickname),
+    val = box.val();
+    var text = box.next('.errTips'),
+    block = text.addClass('success');
     // 昵称与其他用户重复，请重新设置
     var box = $(boxs.nickname),
     val = box.val();
@@ -151,6 +155,7 @@ $.fn.nicknameajax = function(){
             }
         });
     }else{
+        block.html('');
         box.parents('.f1').addClass('has-success').removeClass('has-error');
         return false;
     }
@@ -248,37 +253,37 @@ $('.setting-infor').off('click', '#inforSubmit').on('click', '#inforSubmit', fun
     $.fn.areaprovince();
     $.fn.areacity();
     $.fn.areacountry();
-    // if (error.length > 0) {
-    //     return false;
-    // } else {
-    //     $.ajax({
-    //         url : '',
-    //         type: 'POST',
-    //         dataType: "json",
-    //         data: 'nickname=' + $('#nickname').val() + 'realname=' + $('#realname').val(),
-    //         timeout: 7000,
-    //         beforeSend: function(){
+    if (error.length > 0) {
+        return false;
+    } else {
+        $.ajax({
+            url : '',
+            type: 'POST',
+            dataType: "json",
+            data: 'nickname=' + $('#nickname').val() + 'realname=' + $('#realname').val(),
+            timeout: 7000,
+            beforeSend: function(){
 
-    //         },
-    //         success:function(d){
-    //             var tp = d.sign,
-    //             msg = d.msg;
-    //             if (tp == 0) {
+            },
+            success:function(d){
+                var tp = d.sign,
+                msg = d.msg;
+                if (tp == 0) {
 
-    //                 return false;
-    //             } else if (tp == -1) {
+                    return false;
+                } else if (tp == -1) {
 
-    //                 return false;
-    //             } else {
-    //                 window.location.href = '/Reg/regSuccess';
-    //             }
-    //         },
-    //         complete: function () {
+                    return false;
+                } else {
+                    window.location.href = '/Reg/regSuccess';
+                }
+            },
+            complete: function () {
 
-    //         },
-    //         error: function(){
+            },
+            error: function(){
 
-    //         }
-    //     });
-    // }
+            }
+        });
+    }
 });

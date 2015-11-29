@@ -1,6 +1,7 @@
 <!--
   @require personalCenter.less
   @require personalCenter.js
+  @require ../Module.Modal/Modal.js
 -->
 
 <div class="centerHeader-teacher-background">
@@ -29,7 +30,7 @@
         <div class="centerHeader-notFoucs"><span class="centerHeader-notFoucs-btn">+关注</span></div>
 
         <!--2、已经关注-->
-        <div class="centerHeader-alFocus hide"><span class="centerHeader-alFocus-btn">已关注</span><span class="centerHeader-willFocus-btn">取消关注</span></div>
+        <div class="centerHeader-alFocus hide"><span class="centerHeader-alFocus-btn">已关注</span><a href="###" class="centerHeader-willFocus-btn">取消关注</a></div>
     </div>
     <link rel="import" href="../../widget/Mall.personCenter/tab-teacher-report.tpl?__inline">
     <div class="row bottom m20">

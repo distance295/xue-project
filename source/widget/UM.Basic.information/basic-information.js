@@ -16,11 +16,11 @@ fCheck.clearTips = function(select){
   }).html(null);
 };
 
-/* input边框样式 */
+/* 边框样式 */
 fCheck.bordercss = function(argument) {
    if($(argument).val() !== ''){
-     $(argument).css('border','1px solid .68c04a');
-   }else{$(argument).css('border','1px solid .eaeaea');}
+     $(argument).css('border','1px solid #68c04a');
+   }else{$(argument).css('border','1px solid #eaeaea');}
 }
 
 $(function(){
@@ -40,7 +40,8 @@ $(function(){
 
 /* 验证昵称 */
 var boxs = {
-    nickname: '.nickname'
+    nickname: '.nickname',
+    school:'.school'
 }
 
 $.fn.nickname = function(){
@@ -94,23 +95,20 @@ $.fn.nicknameajax = function(){
 /* 生日日期 */
 function ymd()   
 {   
-       MonHead = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];   
-
-       //先给年下拉框赋内容
-       var y  = new Date().getFullYear();   
-       for (var i = (y-19); i < (y+1); i++)  
-               document.date.year.options.add(new Option(" "+ i +" ", i));   
-
-       //赋月份的下拉框  
-       for (var i = 1; i < 13; i++)   
-               document.date.month.options.add(new Option(" " + i + " ", i));   
-
-       document.date.year.value = y;   
-       document.date.month.value = new Date().getMonth() + 1;   
-       var n = MonHead[new Date().getMonth()];   
-       if (new Date().getMonth() ==1 && IsPinYear(yearvalue)) n++;   
-            writeDay(n); //赋日期下拉框Author:meizz     
-       document.date.day.value = new Date().getDate();   
+   MonHead = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];   
+   //先给年下拉框赋内容
+   var y  = new Date().getFullYear();   
+   for (var i = (y-19); i < (y+1); i++)  
+           document.date.year.options.add(new Option(" "+ i +" ", i));   
+   //赋月份的下拉框  
+   for (var i = 1; i < 13; i++)   
+           document.date.month.options.add(new Option(" " + i + " ", i));   
+   document.date.year.value = y;   
+   document.date.month.value = new Date().getMonth() + 1;   
+   var n = MonHead[new Date().getMonth()];   
+   if (new Date().getMonth() ==1 && IsPinYear(yearvalue)) n++;   
+        writeDay(n); //赋日期下拉框Author:meizz     
+   document.date.day.value = new Date().getDate();   
 }   
 if(document.attachEvent)   
    window.attachEvent("onload", ymd);   
@@ -145,6 +143,29 @@ function optionsClear(e)
     e.options.length = 1;   
 }   
 
+/* 学校格式验证 */
+$.fn.school = function(){
+    var box = $(boxs.school),
+    val = box.val();
+    var text = box.next('.school-warning'),
+    block = text.addClass('success');
+    if (val == '') {
+        fCheck.clearTips(".school-warning");
+    }else {
+        var reg = /^[0-9a-zA-Z\u4e00-\u9fa5]{1,18}$/;
+        if(reg.test(val)){
+            fCheck.clearTips(".school-warning");
+            fCheck.bordercss('.school');
+        }else{
+            fCheck.setTips(".school-warning",'只能输入数字、汉字和字母');
+            $('.school').css('border','1px solid #eaeaea');
+            return false;
+        }
+    }
+};
+$('.school').on('blur',function(){
+    $.fn.school();
+});
 /* 点击提交按钮验证 */
 $(function() {
     $(".btn-submit").click(function() {

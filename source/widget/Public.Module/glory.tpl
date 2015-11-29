@@ -19,6 +19,7 @@
     <li >高一</li>
     <li >高二</li>
     <li >高三</li>
+    <li class="screen-look-grades"><a href="##">查看成绩</a></li>
 </ul>
 <div class="glory-content-wrap">
     <ul class="glory-content">
