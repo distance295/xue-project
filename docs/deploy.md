@@ -13,9 +13,7 @@
     $ release.bat
     ```
     
-    > 此时文件均已发布至本fis3地默认的目录中
-    > 
-    > C:\Users\MrPai\AppData\Local\.fis3-tmp\www
+    > 此时文件均已发布至本fis3地默认的目录中（C:\Users\MrPai\AppData\Local\.fis3-tmp\www）
 
 2. 启动服务
     ```
