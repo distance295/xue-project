@@ -92,7 +92,7 @@ $(function(){
         });
     }
     // 保存收货地址
-    $('#address_submit_btn').on('click', function() {
+    $('body').on('click','#address_submit_btn',function() {
         var inputs = $(addressInput),
             errorbox = $('.error_tips_address');
 
@@ -316,7 +316,7 @@ $(function(){
             if(div !== ''){
                 event.preventDefault();
             }else{
-                $rct.append('<div class="alert alert-danger fade in"><img src="/static/img/UserHome.gold/Spam.png" class="alertImg"><span>兑换失败,你的金币余额不足哦~</span></div>')
+                $rct.append('<div class="alert alert-danger fade in"><img src="../../static/img/UserHome.gold/Spam.png" class="alertImg"><span>兑换失败,你的金币余额不足哦~</span></div>')
             }
         });
     };
@@ -423,7 +423,7 @@ $(function(){
             if(div !== ''){
                 event.preventDefault();
             }else{
-                $pct.append('<div class="alert alert-danger fade in"><span>兑换失败,你的金币余额不足哦~</span></div>')
+                $pct.append('<div class="alert alert-danger fade in"><img src="../../static/img/UserHome.gold/Spam.png" class="alertImg"><span>兑换失败,你的金币余额不足哦~</span></div>')
             }
         });
     }
