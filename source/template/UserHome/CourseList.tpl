@@ -35,7 +35,7 @@
         MODULE: 'UserHome',
         TITLE: '我的课程-学习中心'
     };
-
+    courseStudyInit();
 </script>
 
 <!-- 公共底部 -->

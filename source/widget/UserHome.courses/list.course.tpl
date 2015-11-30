@@ -45,8 +45,8 @@
                 <h4 class="gray-arrow">更多服务</h4>
                 <ul class="more-list">
                     <li><a href="###">录播视频</a></li>
-                    <li><a href="###" data-toggle="modal" data-target="#show">资料</a></li>
-                    <li><a href="###">考试</a></li>
+                    <li class="courseList-material"><a href="###">资料</a></li>
+                    <li class="courseList-exam"><a href="###">考试</a></li>
                 </ul>
             </div>
 
@@ -120,8 +120,8 @@
                 <h4 class="gray-arrow">更多服务</h4>
                 <ul class="more-list">
                     <li><a href="###">录播视频</a></li>
-                    <li><a href="###" data-toggle="modal" data-target="#show">资料</a></li>
-                    <li><a href="###">考试</a></li>
+                    <li class="courseList-material"><a href="###">资料</a></li>
+                    <li class="courseList-exam"><a href="###">考试</a></li>
                 </ul>
             </div>
 
@@ -189,8 +189,8 @@
                 <h4 class="gray-arrow">更多服务</h4>
                 <ul class="more-list">
                     <li><a href="###">录播视频</a></li>
-                    <li><a href="###">资料</a></li>
-                    <li><a href="###">考试</a></li>
+                    <li class="courseList-material"><a href="###">资料</a></li>
+                    <li class="courseList-exam"><a href="###">考试</a></li>
                 </ul>
             </div>
             <div class="courseList-teacher">
@@ -257,8 +257,8 @@
                 <h4 class="gray-arrow">更多服务</h4>
                 <ul class="more-list">
                     <li><a href="###">录播视频</a></li>
-                    <li><a href="###">资料</a></li>
-                    <li><a href="###">考试</a></li>
+                    <li class="courseList-material"><a href="###">资料</a></li>
+                    <li class="courseList-exam"><a href="###">考试</a></li>
                 </ul>
             </div>
             <div class="courseList-teacher">
@@ -326,8 +326,8 @@
                 <h4 class="gray-arrow">更多服务</h4>
                 <ul class="more-list">
                     <li><a href="###">录播视频</a></li>
-                    <li><a href="###">资料</a></li>
-                    <li><a href="###">考试</a></li>
+                    <li class="courseList-material"><a href="###">资料</a></li>
+                    <li class="courseList-exam"><a href="###">考试</a></li>
                 </ul>
             </div>
             <div class="courseList-teacher ">
@@ -370,6 +370,3 @@
         <label class="label-study label-continun">续报</label>
     </div>
 </div>
-<script type="text/javascript">
-
-</script>
