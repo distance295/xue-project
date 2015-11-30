@@ -25,7 +25,7 @@ homeWork.path = '/static/img/Homework/shuzi';
            return false;
 		}
     	//判断多个的情况下
-    	$(dom).each(function(){
+    	/*$(dom).each(function(){
 	    		var samllBox_W = $(this).find('.homework-Thumbnails-img-list li').width();
 		   	    var samllBox_H = $(this).find('.homework-Thumbnails-img-list li').height();
 		   	    var imgNum = $(this).find('.homework-Thumbnails-img-list li').length;
@@ -42,8 +42,46 @@ homeWork.path = '/static/img/Homework/shuzi';
 		   	    	 $(this).find('img').height(img_H*rate);
 		   	    	 $(this).find('img').css('marginTop', _top);
 		   	    })
+    	})*/
+
+        $(dom).each(function(){
+	    		var samllBox_W = $(this).find('.homework-Thumbnails-img-list li').width();
+		   	    var samllBox_H = $(this).find('.homework-Thumbnails-img-list li').height();
+		   	    var imgNum = $(this).find('.homework-Thumbnails-img-list li').length;
+		   	    var Feedback_flag = $(this).find('.homework-Thumbnails-img-list').find('li').eq(imgNum-1).find('.homework-MaskLayer').length;
+		   	    $(this).find('.homework-Thumbnails-img-list li').each(function(index){
+		   	    	 if( imgNum-1 == index && Feedback_flag == 0 ){
+		                  return false;
+		   	    	 }
+		   	    	 var that = $(this).find('img');
+		   	    	 var _imgs = new Image();
+		   	    	 //_imgs.src = that.attr('src');
+		   	    	 _imgs.onload = function(){
+		   	    	 	  hm.showImg(this, samllBox_W, samllBox_H);
+					      var _top = (samllBox_H - _imgs.height)/2 +"px";
+			   	    	  that.width(_imgs.width);
+			   	    	  that.height(_imgs.height);
+			   	    	  that.css('marginTop', _top);
+			   	      }
+			   	      _imgs.src = that.attr('src');
+		   	    })
     	})
+        
     }
+   
+	/**
+	 * 图片等比例缩放方法
+	 * @param  {html|string} img  预加载图片html元素
+	 * @param  {number} maxWidth  最大宽
+	 * @param  {number} maxHeight 最大高
+	 * @return {html|string}   预加载图片html元素       
+	 */
+	hm.showImg = function(img,maxWidth,maxHeight){
+		var rate = (maxHeight/img.height>maxWidth/img.width?maxWidth/img.width:maxHeight/img.height);
+	    img.width = img.width*rate;
+	    img.height = img.height*rate;
+	    return img;
+	}
 
     /**
 	 * 作业反馈分数显示事件
