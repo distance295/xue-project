@@ -38,6 +38,7 @@
 ## 五、JS写法
 1. 外部资源的引用
     > 如果需要引用外部资源，请用`__uri()` 将其括起来
+
     > 例如：` var img = __uri('images/logo.gif');`
     
 2. 声明模块名
@@ -76,20 +77,29 @@
 
 5. 避免所有即执行脚本
     
-    > 由于我们的模块要合并到一起，所以不要再模块中写立即执行的脚本，需要把这些立即执行的内容封装到对应的方法中；
+    > 由于我们的模块要合并到一起，所以不要在模块中写立即执行的脚本，需要把这些立即执行的内容封装到对应的方法中；
     
     + 给模块增加即执行方法：
         ```
-        simple.onload = function(){};
+        simple.onload = function(){
+            this.onClick();
+            this.onShow();
+            // ... 这里写需要即执行的事件内容
+        };
         ```
         
     + 给模块增加事件绑定方法：
         ```
-        simple.onClick = function(){};
+        simple.onClick = function(){
+            $(this.opt.dom).on('click', function(){
+                // ... 这里写事件的内容
+            });
+        };
         simple.onShow = function(){};
         ```
     
 6. 增加init方法
+
     + 初始化配置
         ```
         simple.init = function(conf){
@@ -97,6 +107,7 @@
             $.extend(this.opt, conf);
         };
         ```
+        
     + 初始化事件绑定
         ```
         simple.init = function(conf){
