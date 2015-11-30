@@ -15,7 +15,6 @@
 var PAGE_CONFIG = PAGE_CONFIG || {};
 
 PAGE_CONFIG.NAV_URL = __uri('/data/Public.Nav/nav.json');
-//PAGE_CONFIG.COMMENT_URL = __uri('/data/Dynamic/coment.html');
 
 $(function(){
     document.title = PAGE_CONFIG.TITLE;
@@ -29,11 +28,6 @@ $(function(){
     try{
         sidebar.setActive(PAGE_CONFIG.ID);
     }catch(e){}
-//    try{
-//        fresh.init({
-//            commentUrl: PAGE_CONFIG.COMMENT_URL
-//        });
-//    }catch(e){}
     try{
         sideNav.setActive(PAGE_CONFIG.ID);
     }catch(e){}
