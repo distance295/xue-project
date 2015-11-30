@@ -165,7 +165,7 @@
   fCheck.imgCodeAjax = function(){
      $.ajax({
       type:"POST",
-      url:"/Reg/getVerificationCode",
+      url:"/MyInfos/getVerificationCode",
       data: 'verifyCode=' + $('#verificationCode').val(),
       dataType: "json",
       timeout: 7000,
@@ -212,7 +212,7 @@
       var that = btn;
     $.ajax({
       type: "POST",
-      url: "/Reg/getPassCode",
+      url: "/MyInfos/getPassCode",
       data: 'phone=' + $('#phone').val(),
       dataType: "json",
       timeout: 7000,
@@ -365,10 +365,10 @@
     }else{
       fCheck.phonecode('#phonecode');
       if( fCheck.param.cMessage){
-        /* 正常注册 */
+        /* 正常绑定 */
          $.ajax({
           type:"GET",
-          url:"/Reg/registerOprea",
+          url:"/MyInfos/bindStuPhone",
           dataType: "json",
           data: 'phone=' + $('#phone').val() + '&curPwd=' + $('#curPwd').val() + '&imgcode=' + $('#verificationCode').val()+'&phonecode='+$('#phonecode').val(),
           timeout: 7000,
