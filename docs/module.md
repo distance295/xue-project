@@ -194,14 +194,14 @@
     -->
     ```
 
-> 参照：http://fis.baidu.com/fis3/docs/user-dev/require.html
+    > 参照：http://fis.baidu.com/fis3/docs/user-dev/require.html
 
 2. 定位资源
     ```
     var img = __uri('images/simple.gif');
     ```
 
-> 参照：http://fis.baidu.com/fis3/docs/user-dev/uri.html
+    > 参照：http://fis.baidu.com/fis3/docs/user-dev/uri.html
 
 3. 内容嵌入
 
@@ -210,4 +210,4 @@
     <link rel="import" href="simple.html?__inline">
     ```
 
-> 参照：http://fis.baidu.com/fis3/docs/user-dev/inline.html
+    > 参照：http://fis.baidu.com/fis3/docs/user-dev/inline.html
