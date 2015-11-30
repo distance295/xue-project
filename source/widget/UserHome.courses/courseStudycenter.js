@@ -211,21 +211,22 @@ function delayDate(){
         },
     });
 }
-$(function(){
+// 学习中心首页js调用封装
+function courseStudyInit(){
     // 更多服务
     moreService ();
     // 随堂测试弹框
     testLive();
     // 更多服务的资料弹框
-    $('.more-list li ').eq(1).on('click',function(){
+    $('.more-list li.courseList-material').on('click',function(){
         materialForm();
     });
     // 更多服务的考试弹框
-    $('.more-list li ').eq(2).on('click',function(){
+    $('.more-list li.courseList-exam').on('click',function(){
         examTable();
     });
     // 延期课程
     $('.label-delay').on('click',function(){
         delayDate();
     });
-});
+}
