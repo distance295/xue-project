@@ -276,7 +276,7 @@
     <div class="live-list-container">
         <div class="live-card">
             <div class="live-course-box">
-                <img src="img/live-teacher-photo1.png" class="live-teacher-photo"/>
+                <img src="../../widget/Mall.live/img/live-teacher-photo1.png" class="live-teacher-photo"/>
                 <div class="live-course-hover">
                     <div class="live-course-title"></div>
                     <span class="live-course-show-title">韬哥认为你一定 会的小学知识点</span>
@@ -286,7 +286,7 @@
             <div class="live-time-tip">
                 <div class="live-time-tip-container">
                     <span>08-23 15:30-16:30</span>
-                    <img src="img/ic_views.png" />
+                    <img src="../../widget/Mall.live/img/ic_views.png" />
                     <p>4612453</p>
                 </div>
             </div>
@@ -296,7 +296,7 @@
         </div>
         <div class="live-card">
             <div class="live-course-box">
-                <img src="img/live-teacher-photo2.png" class="live-teacher-photo"/>
+                <img src="../../widget/Mall.live/img/live-teacher-photo2.png" class="live-teacher-photo"/>
                 <div class="live-course-hover">
                     <div class="live-course-title"></div>
                     <span class="live-course-show-title">攻克电磁学 章鱼军团逆袭计划之路</span>
@@ -306,7 +306,7 @@
             <div class="live-time-tip">
                 <div class="live-time-tip-container">
                     <span>今天 15:30-16:30</span>
-                    <img src="img/ic_views.png" />
+                    <img src="../../widget/Mall.live/img/ic_views.png" />
                     <p>4612453</p>
                 </div>
             </div>
@@ -316,7 +316,7 @@
         </div>
         <div class="live-card">
             <div class="live-course-box">
-                <img src="img/live-teacher-photo3.png" class="live-teacher-photo"/>
+                <img src="../../widget/Mall.live/img/live-teacher-photo3.png" class="live-teacher-photo"/>
                 <div class="live-course-hover">
                     <div class="live-course-title"></div>
                     <span class="live-course-show-title">［轻松写作］初中必考亲情作文</span>
@@ -326,7 +326,7 @@
             <div class="live-time-tip">
                 <div class="live-time-tip-container">
                     <span>今天 15:30-16:30</span>
-                    <img src="img/ic_views.png" />
+                    <img src="../../widget/Mall.live/img/ic_views.png" />
                     <p>4612453</p>
                 </div>
             </div>
@@ -336,7 +336,7 @@
         </div>
         <div class="live-card">
             <div class="live-course-box">
-                <img src="img/live-teacher-photo4.png" class="live-teacher-photo"/>
+                <img src="../../widget/Mall.live/img/live-teacher-photo4.png" class="live-teacher-photo"/>
                 <div class="live-course-hover">
                     <div class="live-course-title"></div>
                     <span class="live-course-show-title">［老杜物理］理科学霸征集令第一讲</span>
@@ -346,7 +346,7 @@
             <div class="live-time-tip">
                 <div class="live-time-tip-container">
                     <span>今天 15:30-16:30</span>
-                    <img src="img/ic_views.png" />
+                    <img src="../../widget/Mall.live/img/ic_views.png" />
                     <p>4612453</p>
                 </div>
             </div>
@@ -356,7 +356,7 @@
         </div>
         <div class="live-card">
             <div class="live-course-box">
-                <img src="img/live-teacher-photo1.png" class="live-teacher-photo"/>
+                <img src="../../widget/Mall.live/img/live-teacher-photo1.png" class="live-teacher-photo"/>
                 <div class="live-course-hover">
                     <div class="live-course-title"></div>
                     <span class="live-course-show-title">韬哥认为你一定 会的小学知识点</span>
@@ -366,7 +366,7 @@
             <div class="live-time-tip">
                 <div class="live-time-tip-container">
                     <span>08-23 15:30-16:30</span>
-                    <img src="img/ic_views.png" />
+                    <img src="../../widget/Mall.live/img/ic_views.png" />
                     <p>4612453</p>
                 </div>
             </div>
@@ -376,7 +376,7 @@
         </div>
         <div class="live-card">
             <div class="live-course-box">
-                <img src="img/live-teacher-photo2.png" class="live-teacher-photo"/>
+                <img src="../../widget/Mall.live/img/live-teacher-photo2.png" class="live-teacher-photo"/>
                 <div class="live-course-hover">
                     <div class="live-course-title"></div>
                     <span class="live-course-show-title">攻克电磁学 章鱼军团逆袭计划之路</span>
@@ -386,7 +386,7 @@
             <div class="live-time-tip">
                 <div class="live-time-tip-container">
                     <span>今天 15:30-16:30</span>
-                    <img src="img/ic_views.png" />
+                    <img src="../../widget/Mall.live/img/ic_views.png" />
                     <p>4612453</p>
                 </div>
             </div>
@@ -396,7 +396,7 @@
         </div>
         <div class="live-card">
             <div class="live-course-box">
-                <img src="img/live-teacher-photo3.png" class="live-teacher-photo"/>
+                <img src="../../widget/Mall.live/img/live-teacher-photo3.png" class="live-teacher-photo"/>
                 <div class="live-course-hover">
                     <div class="live-course-title"></div>
                     <span class="live-course-show-title">［轻松写作］初中必考亲情作文</span>
@@ -406,7 +406,7 @@
             <div class="live-time-tip">
                 <div class="live-time-tip-container">
                     <span>今天 15:30-16:30</span>
-                    <img src="img/ic_views.png" />
+                    <img src="../../widget/Mall.live/img/ic_views.png" />
                     <p>4612453</p>
                 </div>
             </div>
@@ -416,7 +416,7 @@
         </div>
         <div class="live-card">
             <div class="live-course-box">
-                <img src="img/live-teacher-photo4.png" class="live-teacher-photo"/>
+                <img src="../../widget/Mall.live/img/live-teacher-photo4.png" class="live-teacher-photo"/>
                 <div class="live-course-hover">
                     <div class="live-course-title"></div>
                     <span class="live-course-show-title">［老杜物理］理科学霸征集令第一讲</span>
@@ -426,7 +426,7 @@
             <div class="live-time-tip">
                 <div class="live-time-tip-container">
                     <span>今天 15:30-16:30</span>
-                    <img src="img/ic_views.png" />
+                    <img src="../../widget/Mall.live/img/ic_views.png" />
                     <p>4612453</p>
                 </div>
             </div>
