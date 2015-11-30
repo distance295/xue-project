@@ -1,8 +1,6 @@
 /**
  * Created by yangmengyuan on 15/10/24.
  */
-
-$(function(){
     var addressInput = '#realname, #add_province, #add_city, #address, #zipcode, #phone';
 //提交生成收货地址列表
     function saveNewAddress(inputs){
@@ -162,12 +160,13 @@ $(function(){
     });
 
 //tab切换
+function tabChange(){
     var
-        $gdtbtn = $('.gold-detail-title'),
-        $gstbtn = $('.gold-store-title-container'),
-        $getbtn = $('.gold-exchange-title-container'),
-        $gerspan = $('.gold-exchange-rank');
-    $gdtbtn.on("click",'li',function(e){
+        $gdtbtn = $('.gold-detail-title li'),
+        $gstbtn = $('.gold-store-title-container li'),
+        $getbtn = $('.gold-exchange-title-container li'),
+        $gerspan = $('.gold-exchange-rank span');
+    $gdtbtn.on("click",function(e){
         var $target = $(e.target);
         var index = $target.index();
         $(this).addClass('active').siblings().removeClass('active gold-detail-title-on');
@@ -176,7 +175,7 @@ $(function(){
         $('.gold-detail-block-change').fadeOut(0);
         $targetBox.fadeIn(300);
     });
-    $gstbtn.on("click",'li',function(e){
+    $gstbtn.on("click",function(e){
         var $target = $(e.target);
         var index = $target.index();
         $gstbtn.removeClass('gold-store-title-on').eq(index).addClass('gold-store-title-on');
@@ -184,7 +183,7 @@ $(function(){
         $('.gold-store-block-change').fadeOut(0);
         $targetBox.fadeIn(300);
     });
-    $getbtn.on("click",'li',function(e){
+    $getbtn.on("click",function(e){
         var $target = $(e.target);
         var index = $target.index();
         $getbtn.removeClass('gold-exchange-title-on').eq(index).addClass('gold-exchange-title-on');
@@ -192,7 +191,7 @@ $(function(){
         $('.gold-exchange-block-change').fadeOut(0);
         $targetBox.fadeIn(300);
     });
-    $gerspan.on('click','span',function(e){
+    $gerspan.on('click',function(e){
         var $target = $(e.target);
         var index = $(this).closest('.gold-exchange-rank').find('span').index(this);
         $gerspan.removeClass('gold-exchange-use-focus').eq(index).addClass('gold-exchange-use-focus');
@@ -200,14 +199,16 @@ $(function(){
         $('.gold-exchange-use-block-change').fadeOut(0);
         $targetBox.fadeIn(300);
     });
+}
 //鼠标移到目标卡片交互
 
+function cardOnFocus(){
     var
-        $gsp = $('.gold-store-present-card-box'),
-        $gsc = $('.gold-store-card-box-over'),
-        $gep = $('.gold-exchange-present-card-box');
+        $gsp = $('.gold-store-present-card'),
+        $gsc = $('.gold-store-card'),
+        $gep = $('.gold-exchange-present-card');
 
-    $gsp.on({
+    $gsp.off().on({
         mouseenter:function(){
             $(this)
                 .css({'box-shadow':'0 1px 5px 0px #666'},300)
@@ -218,9 +219,8 @@ $(function(){
                 .css({'box-shadow':'none'},300)
                 .animate({'margin-top':10},300)
         }
-    },'gold-store-present-card');
-
-    $gsc.on({
+    });
+    $gsc.off().on({
         mouseenter:function(){
             $(this)
                 .css({'box-shadow':'0 1px 5px 0px #666'},300)
@@ -231,8 +231,8 @@ $(function(){
                 .css({'box-shadow':'none'},300)
                 .animate({'margin-top':10},300)
         }
-    },'.gold-store-card');
-    $gep.on({
+    });
+    $gep.off().on({
         mouseenter:function(){
             $(this)
                 .css({'box-shadow':'0 1px 5px 0px #666'},300)
@@ -243,8 +243,10 @@ $(function(){
                 .css({'box-shadow':'none'},300)
                 .animate({'margin-top':10},300)
         }
-    },'gold-exchange-present-card');
+    });
+}
 //时间插件
+//function checkTime(){
     var
         $dateStart = $('#dateStart'),
         $dateEnd = $('#dateEnd');
@@ -268,8 +270,10 @@ $(function(){
             lowerLimit: new Date("2010/01/01")
         });
     }
+//}
 
 //魔法卡兑换模态框
+function cardCreateModal(){
     var $cardCreateModal = $('.card-createModal');
 
     $cardCreateModal.on('click',function(){
@@ -296,8 +300,10 @@ $(function(){
             }
         });
     });
+}
 
 //实物兑换模态框
+function presentCreateModal(){
     var
         $body = $('body'),
         pabLabel = '.present-address-box form label',
@@ -455,4 +461,4 @@ $(function(){
             }
         });
     });
-})
+}
