@@ -7,10 +7,10 @@
         <li><a href="#">课程分类</a></li>
         <li class="active">三年级</li>
     </ol>
-    <div class="row top m20 pd5">
+    <div class="row top m20">
 <!--   12栏的用这个    -->
        <div class="col-md-12">
-            <link rel="import" href="../../widget/UserHome.wrongQues/chooseGrade.tpl?__inline"> 
+            <link rel="import" href="../../widget/Public.Selector/index.tpl?__inline"> 
        </div>
 <!--   12栏结束    -->
 <!--   左右分栏的用这个    -->

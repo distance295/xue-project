@@ -7,7 +7,7 @@
         <div class="col-md-2 col-sm-2 wrap-side wrap-mall w-h-198">
             <div class="panel panel-default ">
                 <div class="panel-body">
-                    <link rel="import" href="../../widget/help/helpNav.tpl?__inline">
+                    <link rel="import" href="../../widget/Mall.help/helpNav.tpl?__inline">
                 </div>
             </div>
         </div>
@@ -16,7 +16,7 @@
             
             <div class="panel panel-default ">
                 <div class="panel-body">
-                    <link rel="import" href="../../widget/help/index.tpl?__inline">
+                    <link rel="import" href="../../widget/Mall.help/index.tpl?__inline">
                  </div>
             </div>
             

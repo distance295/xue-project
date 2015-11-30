@@ -1,0 +1,3 @@
+@echo off
+:: loading...
+fis3 release mall -d ../website/Mall

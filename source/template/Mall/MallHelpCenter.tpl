@@ -3,7 +3,7 @@
 
 <!-- 学习中心区域 -->
 <div class="container top m20">
-    <link rel="import" href="../../widget/help/helpCenter.tpl?__inline">
+    <link rel="import" href="../../widget/Mall.help/helpCenter.tpl?__inline">
 
 </div>
 <!-- 页面配置 -->

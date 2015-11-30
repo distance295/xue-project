@@ -8,9 +8,9 @@
             <!-- *********************** 内容区域开始 *********************** -->
 
             <ul class="nav nav-tabs">  
-                <li ><a href="/pages/UserHome/DynamicIndex.html">新鲜事</a></li>
-                <li><a href="/pages/UserHome/DynamicContact.html">@我的</a></li>
-                <li role="presentation" class="active"><a href="/pages/UserHome/DynamicAttention.html">关注的人</a></li>
+                <li ><a href="DynamicIndex.html">新鲜事</a></li>
+                <li><a href="DynamicContact.html">@我的</a></li>
+                <li role="presentation" class="active"><a href="DynamicAttention.html">关注的人</a></li>
                 <li class="pull-right">
                     <a href="#" class="btn btn-danger" id="freshPost" data-toggle="modal" data-target="#fresh-sendInfo-box" >
                         <i class="fa fa-plus"></i> 发新鲜事

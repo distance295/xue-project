@@ -7,7 +7,7 @@
         <li><a href="#">首页</a></li>
         <li class="active">当前页</li>
     </ol>
-    <link rel="import" href="../../widget/UserHome.wrongQues/chooseGrade.tpl?__inline">
+    <link rel="import" href="../../widget/Public.Selector/index.tpl?__inline">
     <div class="row top m20">
         <div class="col-md-10 wrap-body wrap-mall">
 

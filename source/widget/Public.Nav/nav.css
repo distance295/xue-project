@@ -11,6 +11,8 @@
   margin: 0 auto;
   font-size: 14px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 4;
 }
 .ui-head-nav .container {
   position: relative;
@@ -108,6 +110,9 @@
 }
 .ui-categorys .category-dd .category-item.hover {
   background-color: rgba(0, 0, 0, 0.2);
+}
+.ui-categorys .category-dd .category-item:nth-last-child(1) {
+  border-bottom: 0 none;
 }
 .ui-categorys .category-dd .category-layer {
   display: none;

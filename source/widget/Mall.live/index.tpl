@@ -270,7 +270,7 @@
         <span>历史直播</span>
         <div></div>
     </div>
-    <link rel="import" href="../../widget/UserHome.wrongQues/chooseGrade.tpl?__inline">
+    <link rel="import" href="../../widget/Public.Selector/index.tpl?__inline">
     <!-- 历史直播卡片 -->
     <div class="live-list">
     <div class="live-list-container">

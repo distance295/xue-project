@@ -5,16 +5,16 @@
 <!-- 学习中心区域 -->
 <div class="container top m20">
 <!--   12栏的用这个    -->
- 	<div class="row pd5">
-			<link rel="import" href="../../widget/courseInfor/liveCourseInfo.tpl?__inline">
+ 	<div class="row">
+			<link rel="import" href="../../widget/Mall.courseInfo/liveCourseInfo.tpl?__inline">
 		</div>
 	<!--   12栏结束   -->
-	 <div class="row pd5">
+	 <div class="row">
 	      <div class="col-md-10 wrap-body wrap-mall">
             <!-- *********************** 内容区域开始 *********************** -->
             <div class="panel panel-default ">
                 <div class="panel-body pd0">
-                    <link rel="import" href="../../widget/courseInfor/courseInfoBottom.tpl?__inline">
+                    <link rel="import" href="../../widget/Mall.courseInfo/courseInfoBottom.tpl?__inline">
                  </div>
             </div>
             <!-- *********************** 内容区域结束 *********************** -->
