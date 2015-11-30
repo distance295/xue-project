@@ -76,7 +76,7 @@
         <div class="gold-store-card-box-over">
             <div class="gold-store-card">
                 <div class="gold-store-card-img-box">
-                    <img src="img/gold-card-icon.png" />
+                    <img src="../../widget/UserHome.gold/img/gold-card-icon.png" />
                 </div>
                 <div class="gold-store-card-price-box">
                     <span class="gold-store-card-price">金币:<em>860</em>/张</span>
@@ -87,7 +87,7 @@
             </div>
             <div class="gold-store-card">
                 <div class="gold-store-card-img-box">
-                    <img src="img/gold-card-icon.png" />
+                    <img src="../../widget/UserHome.gold/img/gold-card-icon.png" />
                 </div>
                 <div class="gold-store-card-price-box">
                     <span class="gold-store-card-price">金币:<em>860</em>/张</span>
@@ -98,7 +98,7 @@
             </div>
             <div class="gold-store-card">
                 <div class="gold-store-card-img-box">
-                    <img src="img/gold-card-icon.png" />
+                    <img src="../../widget/UserHome.gold/img/gold-card-icon.png" />
                 </div>
                 <div class="gold-store-card-price-box">
                     <span class="gold-store-card-price">金币:<em>860</em>/张</span>
@@ -109,7 +109,7 @@
             </div>
             <div class="gold-store-card">
                 <div class="gold-store-card-img-box">
-                    <img src="img/gold-card-icon.png" />
+                    <img src="../../widget/UserHome.gold/img/gold-card-icon.png" />
                 </div>
                 <div class="gold-store-card-price-box">
                     <span class="gold-store-card-price">金币:<em>860</em>/张</span>
@@ -122,7 +122,7 @@
         <div class="gold-store-card-box-over">
             <div class="gold-store-card">
                 <div class="gold-store-card-img-box">
-                    <img src="img/gold-card-icon.png" />
+                    <img src="../../widget/UserHome.gold/img/gold-card-icon.png" />
                 </div>
                 <div class="gold-store-card-price-box">
                     <span class="gold-store-card-price">金币:<em>860</em>/张</span>
@@ -133,7 +133,7 @@
             </div>
             <div class="gold-store-card">
                 <div class="gold-store-card-img-box">
-                    <img src="img/gold-card-icon.png" />
+                    <img src="../../widget/UserHome.gold/img/gold-card-icon.png" />
                 </div>
                 <div class="gold-store-card-price-box">
                     <span class="gold-store-card-price">金币:<em>860</em>/张</span>
@@ -144,7 +144,7 @@
             </div>
             <div class="gold-store-card">
                 <div class="gold-store-card-img-box">
-                    <img src="img/gold-card-icon.png" />
+                    <img src="../../widget/UserHome.gold/img/gold-card-icon.png" />
                 </div>
                 <div class="gold-store-card-price-box">
                     <span class="gold-store-card-price">金币:<em>860</em>/张</span>
@@ -155,7 +155,7 @@
             </div>
             <div class="gold-store-card">
                 <div class="gold-store-card-img-box">
-                    <img src="img/gold-card-icon.png" />
+                    <img src="../../widget/UserHome.gold/img/gold-card-icon.png" />
                 </div>
                 <div class="gold-store-card-price-box">
                     <span class="gold-store-card-price">金币:<em>860</em>/张</span>
@@ -170,14 +170,14 @@
     <div class="gold-store-present-box gold-store-block-change">
         <div class="gold-store-present-rank">
             <span class="gold-store-present-rank-by">排序 : <em>金币</em></span>
-            <img src="img/up.png" />
+            <img src="../../widget/UserHome.gold/img/up.png" />
             <span class="gold-store-present-rank-new">最新</span>
         </div>
         <div class="gold-store-present-card-container">
             <div class="gold-store-present-card-box">
                 <div class="gold-store-present-card gold-store-present-card-center">
                     <div class="gold-store-present-img-box">
-                        <img src="img/present-img.png" />
+                        <img src="../../widget/UserHome.gold/img/present-img.png" />
                     </div>
                     <span class="gold-store-present-card-name">清华大学扑克牌</span>
                     <span class="gold-store-present-card-stock">库存还剩347套</span>
@@ -186,7 +186,7 @@
                 </div>
                 <div class="gold-store-present-card gold-store-present-card-center">
                     <div class="gold-store-present-img-box">
-                        <img src="img/present-img.png" />
+                        <img src="../../widget/UserHome.gold/img/present-img.png" />
                     </div>
                     <span class="gold-store-present-card-name">清华大学扑克牌</span>
                     <span class="gold-store-present-card-stock">库存还剩347套</span>
@@ -195,7 +195,7 @@
                 </div>
                 <div class="gold-store-present-card gold-store-present-card-center">
                     <div class="gold-store-present-img-box">
-                        <img src="img/present-img.png" />
+                        <img src="../../widget/UserHome.gold/img/present-img.png" />
                     </div>
                     <span class="gold-store-present-card-name">清华大学扑克牌</span>
                     <span class="gold-store-present-card-stock">库存还剩347套</span>
@@ -204,7 +204,7 @@
                 </div>
                 <div class="gold-store-present-card gold-store-present-card-center">
                     <div class="gold-store-present-img-box">
-                        <img src="img/present-img.png" />
+                        <img src="../../widget/UserHome.gold/img/present-img.png" />
                     </div>
                     <span class="gold-store-present-card-name">清华大学扑克牌</span>
                     <span class="gold-store-present-card-stock">库存还剩347套</span>
@@ -215,7 +215,7 @@
             <div class="gold-store-present-card-box">
                 <div class="gold-store-present-card gold-store-present-card-center">
                     <div class="gold-store-present-img-box">
-                        <img src="img/present-img.png" />
+                        <img src="../../widget/UserHome.gold/img/present-img.png" />
                     </div>
                     <span class="gold-store-present-card-name">清华大学扑克牌</span>
                     <span class="gold-store-present-card-stock">库存还剩347套</span>
@@ -224,7 +224,7 @@
                 </div>
                 <div class="gold-store-present-card gold-store-present-card-center">
                     <div class="gold-store-present-img-box">
-                        <img src="img/present-img.png" />
+                        <img src="../../widget/UserHome.gold/img/present-img.png" />
                     </div>
                     <span class="gold-store-present-card-name">清华大学扑克牌</span>
                     <span class="gold-store-present-card-stock">库存还剩347套</span>
@@ -233,7 +233,7 @@
                 </div>
                 <div class="gold-store-present-card gold-store-present-card-center">
                     <div class="gold-store-present-img-box">
-                        <img src="img/present-img.png" />
+                        <img src="../../widget/UserHome.gold/img/present-img.png" />
                     </div>
                     <span class="gold-store-present-card-name">清华大学扑克牌</span>
                     <span class="gold-store-present-card-stock">库存还剩347套</span>
@@ -242,7 +242,7 @@
                 </div>
                 <div class="gold-store-present-card gold-store-present-card-center">
                     <div class="gold-store-present-img-box">
-                        <img src="img/present-img.png" />
+                        <img src="../../widget/UserHome.gold/img/present-img.png" />
                     </div>
                     <span class="gold-store-present-card-name">清华大学扑克牌</span>
                     <span class="gold-store-present-card-stock">库存还剩347套</span>
@@ -274,21 +274,21 @@
             </div>
             <div class="gold-exchange-show-container">
                 <div class="gold-exchange-show" style="border-top: none">
-                    <span class="gold-exchange-img"><img src="img/gold-card-icon.png" /></span>
+                    <span class="gold-exchange-img"><img src="../../widget/UserHome.gold/img/gold-card-icon.png" /></span>
                     <span class="gold-exchange-name">红名卡</span>
                     <span class="gold-exchange-time">2015-10-25 15:46</span>
                     <span class="gold-exchange-show-overdue">2015-10-25</span>
                     <div class="gold-exchange-use"><span>使用</span></div>
                 </div>
                 <div class="gold-exchange-show">
-                    <span class="gold-exchange-img"><img src="img/gold-card-icon.png" /></span>
+                    <span class="gold-exchange-img"><img src="../../widget/UserHome.gold/img/gold-card-icon.png" /></span>
                     <span class="gold-exchange-name">红名卡</span>
                     <span class="gold-exchange-time">2015-10-25 15:46</span>
                     <span class="gold-exchange-show-overdue">2015-10-25</span>
                     <div class="gold-exchange-use"><span>使用</span></div>
                 </div>
                 <div class="gold-exchange-show">
-                    <span class="gold-exchange-img"><img src="img/gold-card-icon.png" /></span>
+                    <span class="gold-exchange-img"><img src="../../widget/UserHome.gold/img/gold-card-icon.png" /></span>
                     <span class="gold-exchange-name">红名卡</span>
                     <span class="gold-exchange-time">2015-10-25 15:46</span>
                     <span class="gold-exchange-show-overdue">2015-10-25</span>
@@ -306,21 +306,21 @@
             </div>
             <div class="gold-exchange-show-container">
                 <div class="gold-exchange-show" style="border-top: none">
-                    <span class="gold-exchange-img"><img src="img/gold-card-icon.png" /></span>
+                    <span class="gold-exchange-img"><img src="../../widget/UserHome.gold/img/gold-card-icon.png" /></span>
                     <span class="gold-exchange-name">红名卡</span>
                     <span class="gold-exchange-time">2015-10-25 15:46</span>
                     <span class="gold-exchange-show-overdue">2015-10-25</span>
                     <div class="gold-exchange-use">生效中</div>
                 </div>
                 <div class="gold-exchange-show">
-                    <span class="gold-exchange-img"><img src="img/gold-card-icon.png" /></span>
+                    <span class="gold-exchange-img"><img src="../../widget/UserHome.gold/img/gold-card-icon.png" /></span>
                     <span class="gold-exchange-name">红名卡</span>
                     <span class="gold-exchange-time">2015-10-25 15:46</span>
                     <span class="gold-exchange-show-overdue">2015-10-25</span>
                     <div class="gold-exchange-use">生效中</div>
                 </div>
                 <div class="gold-exchange-show">
-                    <span class="gold-exchange-img"><img src="img/gold-card-icon.png" /></span>
+                    <span class="gold-exchange-img"><img src="../../widget/UserHome.gold/img/gold-card-icon.png" /></span>
                     <span class="gold-exchange-name">红名卡</span>
                     <span class="gold-exchange-time">2015-10-25 15:46</span>
                     <span class="gold-exchange-show-overdue">2015-10-25</span>
@@ -334,7 +334,7 @@
             <div class="gold-exchange-present-card-box">
                 <div class="gold-exchange-present-card">
                     <div class="gold-exchange-present-img-box">
-                        <img src="img/present-img.png" />
+                        <img src="../../widget/UserHome.gold/img/present-img.png" />
                     </div>
                     <div class="gold-exchange-present-intro-box">
                         <span class="gold-exchange-present-card-name">奖品名称:<span>网校定制扑克牌2副</span></span>
@@ -345,7 +345,7 @@
                 </div>
                 <div class="gold-exchange-present-card">
                     <div class="gold-exchange-present-img-box">
-                        <img src="img/present-img.png" />
+                        <img src="../../widget/UserHome.gold/img/present-img.png" />
                     </div>
                     <div class="gold-exchange-present-intro-box">
                         <span class="gold-exchange-present-card-name">奖品名称:<span>网校定制扑克牌2副</span></span>
@@ -356,7 +356,7 @@
                 </div>
                 <div class="gold-exchange-present-card">
                     <div class="gold-exchange-present-img-box">
-                        <img src="img/present-img.png" />
+                        <img src="../../widget/UserHome.gold/img/present-img.png" />
                     </div>
                     <div class="gold-exchange-present-intro-box">
                         <span class="gold-exchange-present-card-name">奖品名称:<span>网校定制扑克牌2副</span></span>
@@ -367,7 +367,7 @@
                 </div>
                 <div class="gold-exchange-present-card">
                     <div class="gold-exchange-present-img-box">
-                        <img src="img/present-img.png" />
+                        <img src="../../widget/UserHome.gold/img/present-img.png" />
                     </div>
                     <div class="gold-exchange-present-intro-box">
                         <span class="gold-exchange-present-card-name">奖品名称:<span>网校定制扑克牌2副</span></span>
@@ -380,7 +380,7 @@
             <div class="gold-exchange-present-card-box">
                 <div class="gold-exchange-present-card">
                     <div class="gold-exchange-present-img-box">
-                        <img src="img/present-img.png" />
+                        <img src="../../widget/UserHome.gold/img/present-img.png" />
                     </div>
                     <div class="gold-exchange-present-intro-box">
                         <span class="gold-exchange-present-card-name">奖品名称:<span>网校定制扑克牌2副</span></span>
@@ -391,7 +391,7 @@
                 </div>
                 <div class="gold-exchange-present-card">
                     <div class="gold-exchange-present-img-box">
-                        <img src="img/present-img.png" />
+                        <img src="../../widget/UserHome.gold/img/present-img.png" />
                     </div>
                     <div class="gold-exchange-present-intro-box">
                         <span class="gold-exchange-present-card-name">奖品名称:<span>网校定制扑克牌2副</span></span>
@@ -402,7 +402,7 @@
                 </div>
                 <div class="gold-exchange-present-card">
                     <div class="gold-exchange-present-img-box">
-                        <img src="img/present-img.png" />
+                        <img src="../../widget/UserHome.gold/img/present-img.png" />
                     </div>
                     <div class="gold-exchange-present-intro-box">
                         <span class="gold-exchange-present-card-name">奖品名称:<span>网校定制扑克牌2副</span></span>
@@ -413,7 +413,7 @@
                 </div>
                 <div class="gold-exchange-present-card">
                     <div class="gold-exchange-present-img-box">
-                        <img src="img/present-img.png" />
+                        <img src="../../widget/UserHome.gold/img/present-img.png" />
                     </div>
                     <div class="gold-exchange-present-intro-box">
                         <span class="gold-exchange-present-card-name">奖品名称:<span>网校定制扑克牌2副</span></span>
@@ -426,5 +426,3 @@
         </div>
     </div>
 </div>
-
-
