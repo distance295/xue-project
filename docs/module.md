@@ -103,14 +103,14 @@
     + 配置
         ```
         simple.setCls = function(){
-            $(this.opt.dom).addClass(this.opt.cls);
+            $(this.opt.dom).addClass(this.opt.cls); // 这里取的是 simple.opt.cls 内容
         };
         ```
         
     + 参数
         ```
         simple.setContent = function(content){
-            $(this.opt.dom).html(content);
+            $(this.opt.dom).html(content); // 在这里直接取参数中的content内容
         };
         ```
 
@@ -155,6 +155,33 @@
         };
         ```
 
+7. 所有用到的变量、参数，以及要绑定事件的dom元素，都需要增加合法性的判断
+    + 要绑定元素不存在时的处理：
+        ```
+        if($(this.opt.dom).length == 0){
+            return false;
+        }
+        ```
+        
+    + 内容存在时再执行：
+        ```
+        if(content){
+            $(this.opt.dom).html(content);
+        }
+        ```
+        
+    + 增加公共异常处理方法：
+        ```
+        /**
+         * 异常处理方法
+         * @param {String} err        错误内容
+         * @param {DOM Object} dom    相关的DOM元素，可以是出错的元素，可以是显示错误信息的元素等
+         * @param {Function} callback 出现错误时的回调函数
+         */
+        simple.error = function(err, dom, callback){
+            // ... 这里是异常处理的代码实现
+        };
+        ```
 
 
 ## 七、FIS3 的内置语法
