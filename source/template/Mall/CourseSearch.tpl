@@ -7,7 +7,7 @@
         <li><a href="#">课程分类</a></li>
         <li class="active">三年级</li>
     </ol>
-    <div class="row top pd5">
+    <div class="row top ">
 <!--   12栏的用这个    -->
        <div class="col-md-12">
           
@@ -20,7 +20,7 @@
             <ul class="screen-rank">
                 <li class="popular-rank">综合</li>
                 <li>学员数</li>
-                <li>价格<img src="/static/img/Mall.FindTeacher/down.png"></li>
+                <li>价格<img src="../../widget/Mall.FindTeacher/img/down.png"></li>
             </ul>
             <div class="search_tips">
                 <p>根据关键字“<span>张瑾</span>”搜素,为您匹配到12条结果</p>

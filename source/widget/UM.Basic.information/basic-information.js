@@ -110,10 +110,7 @@ function ymd()
         writeDay(n); //赋日期下拉框Author:meizz     
    document.date.day.value = new Date().getDate();   
 }   
-if(document.attachEvent)   
-   window.attachEvent("onload", ymd);   
-else   
-   window.addEventListener('load', ymd, false);   
+ 
 function yearday(str) //年发生变化时日期发生变化(主要是判断闰平年)   
 {   
        var monthvalue = document.date.month.options[document.date.month.selectedIndex].value;   

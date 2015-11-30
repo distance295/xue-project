@@ -15,7 +15,7 @@
             <!-- tab切换结束 -->
 
             <!-- 年级选择展示区域 -->
-            <link rel="import" href="../../widget/UserHome.wrongQues/chooseGrade.tpl?__inline">
+            <link rel="import" href="../../widget/Public.Selector/index.tpl?__inline">
 
             <!-- 错题本展示区域 -->
 			<link rel="import" href="../../widget/UserHome.wrongQues/showWrongQues.tpl?__inline">
