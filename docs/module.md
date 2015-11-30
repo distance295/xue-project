@@ -12,8 +12,8 @@
 
 ## 三、文件夹内容
 1. 模板文件，后缀为`.tpl`
-    如果只涉及一个模板文件的，直接用 `index.tpl`
-    如果多个的，主文件用index，其他可以按照功能命名
+    + 如果只涉及一个模板文件的，直接用 `index.tpl`
+    + 如果多个的，主文件用index，其他可以按照功能命名
     
 2. 样式文件，后缀为`.less`
 
@@ -23,25 +23,31 @@
 
 ## 四、tpl模板内容
 1. 头部声明依赖
+    ```
+    <!--
+        @require demo.js
+        @require "demo.css"
+    -->
+    ```
 
 2. 模块ID
     + 如果是页面中唯一存在的模块，则外层必须加上ID，
-    + ID以 `module-` 开头
-    + 如果页面中存在多个，则外层用class，同时增加属性 `data-module-id` 
+    + ID以 `module-` 开头，例如：`module-simple`
+    + 如果页面中存在多个，则外层用class，同时增加属性 `data-module-id`，例如：`data-module-id="simple"`
     
 ## 五、JS写法
 1. 外部资源的引用
-    如果需要引用外部资源，请用`__uri()` 将其括起来
-    例如：` var img = __uri('images/logo.gif');`
+    > 如果需要引用外部资源，请用`__uri()` 将其括起来
+    > 例如：` var img = __uri('images/logo.gif');`
     
 2. 声明模块名
     ```
-    var module = module || {};
+    var simple = simple || {};
     ```
 
 3. 给模块增加配置属性
     ```
-    module.opt = module.opt || {
+    simple.opt = simple.opt || {
         id : 'ModuleSimple',
         dom : '#module-simple',
         cls : 'active',
@@ -50,43 +56,50 @@
     };
     ```
 
-4. 模块中可变内容均已配置或参数形式存在
-    如果模块中涉及到一些可变的内容，则可以按照下面两种方式处理：
+4. 模块中可变内容均以配置或参数形式存在
+    
+    > 如果模块中涉及到一些可变的内容，则可以按照下面两种方式处理：
+    
     + 配置
         ```
-        module.setCls = function(){
+        simple.setCls = function(){
             $(this.opt.dom).addClass(this.opt.cls);
         };
         ```
         
     + 参数
-        module.setContent = function(content){
+        ```
+        simple.setContent = function(content){
             $(this.opt.dom).html(content);
         };
+        ```
 
 5. 避免所有即执行脚本
-    由于我们的模块要合并到一起，所以不要再模块中写立即执行的脚本，需要把这些立即执行的内容封装到对应的方法中；
+    
+    > 由于我们的模块要合并到一起，所以不要再模块中写立即执行的脚本，需要把这些立即执行的内容封装到对应的方法中；
+    
     + 给模块增加即执行方法：
         ```
-        module.onload = function(){};
+        simple.onload = function(){};
         ```
+        
     + 给模块增加事件绑定方法：
         ```
-        module.onClick = function(){};
-        module.onShow = function(){};
+        simple.onClick = function(){};
+        simple.onShow = function(){};
         ```
     
 6. 增加init方法
     + 初始化配置
         ```
-        module.init = function(conf){
+        simple.init = function(conf){
             // 更新配置信息
             $.extend(this.opt, conf);
         };
         ```
     + 初始化事件绑定
         ```
-        module.init = function(conf){
+        simple.init = function(conf){
             // 事件绑定
             $(this.opt.dom).on('click', this.onClick);
         };
@@ -99,8 +112,8 @@
 1. 声明依赖
     ```
     <!--
-        @require demo.js
-        @require "demo.css"
+        @require simple.js
+        @require "simple.css"
     -->
     ```
 
@@ -108,7 +121,7 @@
 
 2. 定位资源
     ```
-    var img = __uri('images/logo.gif');
+    var img = __uri('images/simple.gif');
     ```
 
 > 参照：http://fis.baidu.com/fis3/docs/user-dev/uri.html
@@ -118,7 +131,7 @@
     ```
     ?__inline
 
-    <link rel="import" href="demo.html?__inline">
+    <link rel="import" href="simple.html?__inline">
     ```
 
 > 参照：http://fis.baidu.com/fis3/docs/user-dev/inline.html
