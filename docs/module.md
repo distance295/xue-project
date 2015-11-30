@@ -35,7 +35,44 @@
     + ID以 `module-` 开头，例如：`module-simple`
     + 如果页面中存在多个，则外层用class，同时增加属性 `data-module-id`，例如：`data-module-id="simple"`
     
-## 五、JS内容
+## 五、Less 文件内容
+1. 模块中不用写公用变量，已在 `/source/static/less/default.less` 中声明
+2. 最好不要写全局类，如：
+    ```
+    .hide {}
+    ul {}
+    ```
+3. 如非必要，请不要修改bootstrap默认类，如：
+    ```
+    .panel {}
+    .tab {}
+    ```
+4. 尽量把自己模块的内容，都放到模块ID的类下面，如：
+    ```
+    #module-simple {
+        .simple-wrap {}
+        .item {
+            a {}
+        }
+    }
+    ```
+    
+    错误的：
+    ```
+    #module-simple {
+        .simple-wrap {}
+    }
+    .item {
+        a {}
+    }
+    ```
+    
+5. 能够用到bootstrap的，尽量就不要自己再写了。再好好熟悉下bootstrap 的 API，里面提供丰富的 UI组件。
+    + 全局CSS样式：http://v3.bootcss.com/css/
+    + 组件：http://v3.bootcss.com/components/
+    + JavaScript 插件：http://v3.bootcss.com/javascript/
+
+## 六、JS内容
 1. 外部资源的引用
     > 如果需要引用外部资源，请用`__uri()` 将其括起来
 
@@ -118,7 +155,7 @@
 
 
 
-## 六、内置语法
+## 七、FIS3 的内置语法
 
 1. 声明依赖
     ```
