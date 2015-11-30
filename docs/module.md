@@ -35,7 +35,7 @@
     + ID以 `module-` 开头，例如：`module-simple`
     + 如果页面中存在多个，则外层用class，同时增加属性 `data-module-id`，例如：`data-module-id="simple"`
     
-## 五、JS写法
+## 五、JS内容
 1. 外部资源的引用
     > 如果需要引用外部资源，请用`__uri()` 将其括起来
 
@@ -139,9 +139,8 @@
 
 3. 内容嵌入
 
+    > 引用路径后面加：?__inline
     ```
-    ?__inline
-
     <link rel="import" href="simple.html?__inline">
     ```
 
