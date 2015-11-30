@@ -163,11 +163,11 @@ $(function(){
 
 //tab切换
     var
-        $gdtbtn = $('.gold-detail-title'),
-        $gstbtn = $('.gold-store-title-container'),
-        $getbtn = $('.gold-exchange-title-container'),
-        $gerspan = $('.gold-exchange-rank');
-    $gdtbtn.on("click",'li',function(e){
+        $gdtbtn = $('.gold-detail-title li'),
+        $gstbtn = $('.gold-store-title-container li'),
+        $getbtn = $('.gold-exchange-title-container li'),
+        $gerspan = $('.gold-exchange-rank span');
+    $gdtbtn.on("click",function(e){
         var $target = $(e.target);
         var index = $target.index();
         $(this).addClass('active').siblings().removeClass('active gold-detail-title-on');
@@ -176,7 +176,7 @@ $(function(){
         $('.gold-detail-block-change').fadeOut(0);
         $targetBox.fadeIn(300);
     });
-    $gstbtn.on("click",'li',function(e){
+    $gstbtn.on("click",function(e){
         var $target = $(e.target);
         var index = $target.index();
         $gstbtn.removeClass('gold-store-title-on').eq(index).addClass('gold-store-title-on');
@@ -184,7 +184,7 @@ $(function(){
         $('.gold-store-block-change').fadeOut(0);
         $targetBox.fadeIn(300);
     });
-    $getbtn.on("click",'li',function(e){
+    $getbtn.on("click",function(e){
         var $target = $(e.target);
         var index = $target.index();
         $getbtn.removeClass('gold-exchange-title-on').eq(index).addClass('gold-exchange-title-on');
@@ -192,7 +192,7 @@ $(function(){
         $('.gold-exchange-block-change').fadeOut(0);
         $targetBox.fadeIn(300);
     });
-    $gerspan.on('click','span',function(e){
+    $gerspan.on('click',function(e){
         var $target = $(e.target);
         var index = $(this).closest('.gold-exchange-rank').find('span').index(this);
         $gerspan.removeClass('gold-exchange-use-focus').eq(index).addClass('gold-exchange-use-focus');
@@ -273,8 +273,30 @@ $(function(){
     var $cardCreateModal = $('.card-createModal');
 
     $cardCreateModal.on('click',function(){
+
+        goldCardModal.getModal();
+
+    });
+
+    var goldCardModal = goldCardModal || {};
+
+    goldCardModal.getModal = function(){
+        $.ajax({
+            url : '/data/gold/gold-card-modal.html',
+            type : 'get',
+            dataType : 'html',
+            data : {
+                id:"111"
+            },
+            success : function(result){
+                goldCardModal.showModal(result);
+            }
+        })
+    };
+
+    goldCardModal.showModal = function(con){
         var that = $(this), data = that.data();
-        var con = "<div class='red-card-tip'></div><div class='red-card-box'><img src='/static/img/UserHome.gold/Modal-red-card.png' /><div class='red-card-intro'><span class='red-card-name'>红名卡</span><div class='red-card-intro-name'><span class='red-card-intro-title'>数<span>量 ：</span></span><div class='red-card-num'>1</div><span>仅剩 <em>19</em> 张</span></div><div class='red-card-intro-name'><span class='red-card-intro-title'>兑换额 ：</span><span><em>260</em>金币</span></div><div class='red-card-intro-name'><span class='red-card-intro-title'>等<span>级 ：</span></span><span>12</span></div><div class='red-card-intro-name'><span class='red-card-intro-title'>有效期 ：</span><span>7*12小时</span></div><div class='red-card-exchange'>确认兑换</div></div></div>"
+        var con = con;
 
         createModal.show({
             id : 'cardModal',
@@ -283,6 +305,8 @@ $(function(){
             cls : 'cardModal bbb',
             content : con
         });
+
+        $('#cardModal').modal('show');
 
         var
             $rce = $('.red-card-exchange'),
@@ -295,116 +319,33 @@ $(function(){
                 $rct.append('<div class="alert alert-danger fade in"><img src="/static/img/UserHome.gold/Spam.png" class="alertImg"><span>兑换失败,你的金币余额不足哦~</span></div>')
             }
         });
-    });
+    };
 
 //实物兑换模态框
-    var
-        $body = $('body'),
-        pabLabel = '.present-address-box form label',
-        presentAdd = '.present-add',
-        presentDec = '.present-dec',
-        $presentCreateModal = $('.present-createModal');
-
-    $body.on("click",pabLabel, function(e){
-        var
-            $target = $(e.target),
-            $pabLabel = $(pabLabel),
-            $pan = $('.present-address-new'),
-            $df = $('#details_form');
-        if($target[0].nodeName != 'LABEL'){
-            $target = $target.parents('label');
-            var index = $target.index();
-        }
-        $pabLabel.removeClass('present-address-focus').eq(index).addClass('present-address-focus');
-        if($pan.hasClass('present-address-focus')){
-            $df.show();
-        }else {
-            $df.hide();
-        }
-    });
+    var $presentCreateModal = $('.present-createModal');
 
     $presentCreateModal.on('click',function(){
-        var that = $(this), data = that.data();
-        var con = '' +
-            '<div class="present-card-tip">' +
-            '</div><div class="present-box">' +
-            '<img src="/static/img/UserHome.gold/Modal-present.png" />' +
-            '<div class="present-intro"><span class="present-name">清华大学扑克牌</span> ' +
-            '<div class="present-intro-name">' +
-            '<span class="present-intro-title">描<span>述 ：</span></span>' +
-            '<span class="present-intro-content">清华园，孺子牛.......想要更深入了解清华大学么，那就一起玩会扑克牌吧。让玩耍与认知达到统一，美观而便捷</span>' +
-            '</div><div class="present-intro-name">' +
-            '<span class="present-intro-title">数<span>量 ：</span></span>' +
-            '<div class="present-dec"><p class="p1"></p></div><div class="present-num">1</div>' +
-            '<div class="present-add"><p class="p1"</p><p class="p2"></p></div>' +
-            '<span class="present-piece">仅剩 <em>'+ data.num +'</em> 张</span></div>' +
-            '<div class="present-intro-name"><span class="present-intro-title">兑换额 ：</span>' +
-            '<span class="present-intro-gold"><em>'+ data.price +'</em>金币</span></div>' +
-            '</div></div><div class="present-address-box"><span>请选择收货地址</span>' +
-            '<form action="" method="get">' +
-            '<label class="present-address-focus"><input type="radio" name="address" checked/>测试河北省 石家庄市 网校测试不用审核通过 15101089366</label><label class="present-address-new">' +
-            '<input type="radio" name="address"/>使用新的地址</label>' +
-            '<div class="info_from" id="details_form"><p><label for="">收货人</label>' +
-            '<span class="add-opt"><input type="text" autocomplete="off" id="realname" name="realname" value=""></span>' +
-            '<span class="text">请准确填写真实姓名</span></p>' +
-            '<p><label for="">所在地区</label><span class="add-opt">' +
-            '<script src="http://www.xueersi.com/js/areadata.js" type="text/javascript"></script>' +
-            '<script src="http://www.xueersi.com/js/areadata_function.js" type="text/javascript"></script>' +
-            '<input type="hidden" autocomplete="off" id="province" value="0">' +
-            '<input type="hidden" autocomplete="off" id="city" value="0">' +
-            '<input type="hidden" autocomplete="off" id="country" value="0">' +
-            '<select id="add_province" name="province" class="select" style="display: inline-block;">' +
-            '<option value="">省份</option>' +
-            '<option value="1">北京市</option>' +
-            '<option value="2">天津市</option>' +
-            '<option value="3">河北省</option>' +
-            '<option value="4">山西省</option>' +
-            '<option value="5">内蒙古自治区</option>' +
-            '<option value="6">辽宁省</option>' +
-            '<option value="7">吉林省</option>' +
-            '<option value="8">黑龙江省</option>' +
-            '<option value="9">上海市</option>' +
-            '<option value="10">江苏省</option>' +
-            '<option value="11">浙江省</option>' +
-            '<option value="12">安徽省</option>' +
-            '<option value="13">福建省</option>' +
-            '<option value="14">江西省</option>' +
-            '<option value="15">山东省</option>' +
-            '<option value="16">河南省</option>' +
-            '<option value="17">湖北省</option>' +
-            '<option value="18">湖南省</option>' +
-            '<option value="19">广东省</option>' +
-            '<option value="20">广西壮族自治区</option>' +
-            '<option value="21">海南省</option>' +
-            '<option value="22">重庆市</option>' +
-            '<option value="23">四川省</option>' +
-            '<option value="24">贵州省</option>' +
-            '<option value="25">云南省</option>' +
-            '<option value="26">西藏自治区</option>' +
-            '<option value="27">陕西省</option>' +
-            '<option value="28">甘肃省</option>' +
-            '<option value="29">青海省</option>' +
-            '<option value="30">宁夏回族自治区</option>' +
-            '<option value="31">新疆维吾尔自治区</option>' +
-            '<option value="32">台湾省</option>' +
-            '<option value="33">香港特别行政区</option>' +
-            '<option value="34">澳门特别行政区</option>'+
-            '</select>'+
-            '<select id="add_city" name="city" class="select"> ' +
-            '<option value=" ">城市</option> </select>'+
-            '<select id="add_country" name="country" class="select"><option value="">区县</option></select>'+
-            '</span><span></span></p><p>'+
-            '<label for="">详细地址</label><span class="add-opt">'+
-            '<input type="text" autocomplete="off" id="address" name="address" class="add-input"></span>'+
-            '<span class="text">请填写详细路名及门牌号</span></p><p><label for="">手机号码</label>'+
-            '<span class="add-opt"><input type="text" autocomplete="off" id="phone" name="phone" value=""></span>'+
-            '<span class="text">用于接收发货通知短信和送货前通知</span></p><p><label for="">邮政编码</label>'+
-            '<span class="add-opt"><input type="text" autocomplete="off" id="zipcode" name="zipcode" value=""></span>'+
-            '<span class="text">用于快递确定送货地址</span></p><p><label></label>'+
-            '<input type="hidden" autocomplete="off" id="add_id" value="0">'+
-            '<a href="javascript:void(0);" id="address_submit_btn" class="btn btn_red">保存收货人信息</a></p>'+
-            '<p class="error_tips_address"></p></div></form></div><div class="present-exchange">确认兑换</div>';
+        goldPresentModal.getModal();
+    });
 
+    var goldPresentModal = goldPresentModal || {};
+
+    goldPresentModal.getModal = function(){
+        $.ajax({
+            url : '/data/gold/gold-present-modal.html',
+            type : 'get',
+            dataType : 'html',
+            data : {},
+            success : function(result){
+                goldPresentModal.showModal(result);
+            }
+        })
+    };
+
+    goldPresentModal.showModal = function(con){
+        var that = $(this), data = that.data();
+        var con = con;
+        console.log(data);
         createModal.show({
             id : 'presentModal',
             width : '740',
@@ -412,6 +353,36 @@ $(function(){
             cls : "presentModal aaa ccc",
             content : con
         });
+
+        $('#presentModal').modal('show');
+
+        var
+            $body = $('body'),
+            pabLabel = '.present-address-box form label',
+            presentAdd = '.present-add',
+            presentDec = '.present-dec';
+
+        $body.on("click",pabLabel, function(e){
+            var
+                $target = $(e.target),
+                $pabLabel = $(pabLabel),
+                $pan = $('.present-address-new'),
+                $df = $('#details_form'),
+                $pe = $('.present-exchange');
+            if($target[0].nodeName != 'LABEL'){
+                $target = $target.parents('label');
+                var index = $target.index();
+            }
+            $pabLabel.removeClass('present-address-focus').eq(index).addClass('present-address-focus');
+            if($pan.hasClass('present-address-focus')){
+                $df.show();
+                $pe.hide()
+            }else {
+                $df.hide();
+                $pe.show();
+            }
+        });
+
         var
         //pig = '.present-intro-gold em',
             $pig = $('.present-intro-gold em'),
@@ -446,6 +417,7 @@ $(function(){
         var
             $pct = $('.present-card-tip'),
             $pe = $('.present-exchange');
+
         $pe.on('click',function(event){
             var div = $pct.html();
             if(div !== ''){
@@ -454,5 +426,5 @@ $(function(){
                 $pct.append('<div class="alert alert-danger fade in"><span>兑换失败,你的金币余额不足哦~</span></div>')
             }
         });
-    });
+    }
 })

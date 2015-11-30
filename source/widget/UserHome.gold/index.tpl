@@ -169,7 +169,7 @@
     <!-- 实物礼品 -->
     <div class="gold-store-present-box gold-store-block-change">
         <div class="gold-store-present-rank">
-            <span class="gold-store-present-rank-by">排序 : <em>金币</em></span>
+            <span class="gold-store-present-rank-by">排序 : <a href="#"><em>金币</em></a></span>
             <img src="../../widget/UserHome.gold/img/up.png" />
             <span class="gold-store-present-rank-new">最新</span>
         </div>
