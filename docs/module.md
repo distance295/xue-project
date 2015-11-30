@@ -174,9 +174,9 @@
         ```
         /**
          * 异常处理方法
-         * @param {String} err        错误内容
-         * @param {DOM Object} dom    相关的DOM元素，可以是出错的元素，可以是显示错误信息的元素等
-         * @param {Function} callback 出现错误时的回调函数
+         * @param {String}      err         错误内容
+         * @param {DOM Object}  dom         相关的DOM元素，可以是出错的元素，可以是显示错误信息的元素等
+         * @param {Function}    callback    出现错误时的回调函数
          */
         simple.error = function(err, dom, callback){
             // ... 这里是异常处理的代码实现
