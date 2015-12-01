@@ -1,16 +1,14 @@
 //切换
-function table_qiehuan(d){
+function changeTab(d,box){
     var that = $(d),
-    box = $('.contentbind').children();
+    box = $(box).children();
     that.addClass("current").siblings().removeClass("current");  
     var index =  that.index(); 
     box.eq(index).show().siblings().hide();
 }
 
-$(function(){
-    $('#pay_tab li').click(function(){
-     table_qiehuan(this);
- });
+$('#pay_tab li').click(function(){
+  changeTab(this,".contentbind");
 });
 
 var xue =xue || {};
