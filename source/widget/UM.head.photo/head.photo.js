@@ -1,15 +1,15 @@
 var xue =xue || {};
 
 //切换
-function table_qiehuan(d){
+function changeTab(d,box){
     var that = $(d),
-    box = $('.hp-box-left').children();
+    box = $(box).children();
     that.addClass("current").siblings().removeClass("current");  
     var index =  that.index(); 
     box.eq(index).show().siblings().hide();
 }
 $('#head_tab li').click(function(){
-  table_qiehuan(this);
+  changeTab(this,".hp-box-left");
 });
 //推荐头像
 $(".hpr-img").on("click",function(){
@@ -23,10 +23,18 @@ $("#loadFile").change(function(){
     if(img == ''){
       return true;
     }else{
-      $(".hidden-btn,.hl-box input,.hl-box em,.hl-box span").hide();
-      $(".btn_up .btn_loadFile,.show-lf").show();
+        $(".hl-box em,.hl-box span").hide();
+        $(".btn_loadFile,.hl-box input").css({
+            position: 'absolute',
+            top: '360px',
+            left: '300px',
+            fontSize: '14px',
+            width: '100px',
+            height: '35px'
+        });
     }
 });
+
 
 function headsSave(){
     var img = $("#loadFile").val();
