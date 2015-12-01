@@ -147,7 +147,6 @@
               fCheck.setTips(".curPwd-warning",'密码不能少于6位字符').show();
               return false;
           }
-          fCheck.bordercss('#curPwd');
 
           $.ajax({
               type: "POST",
@@ -162,6 +161,7 @@
                   }
               }
           });
+          fCheck.bordercss('#curPwd');
 
           if ($("#newPwd").val() == '') {
               fCheck.setTips(".newPwd-warning",'请设置密码').show();
