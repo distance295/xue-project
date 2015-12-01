@@ -1,3 +1,4 @@
+//收货地址全部交互
 var addressInput = '#realname, #add_province, #add_city, #address, #zipcode, #phone';
 
     //鼠标进入时增加样式

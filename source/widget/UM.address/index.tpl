@@ -5,15 +5,17 @@
     @require ui-address.less
 -->
 <!-- 收货地址 -->
+
 <div id="ui-setAddress">
     <div class="setAddress-title">
         <span class="btn btn-info newCreateAddress">新增收货地址</span>
         <span>
             你已创建 <strong>5</strong>
-            个收货地址,最多可以创建 <strong>10</strong>
+            个收货地址,最多可以创建 <strong>1000000</strong>
             个
         </span>
     </div>
+
     <div class="ui_ship_addr">
         <ul class="shipadd_list">
             <li id="28126" class="">
