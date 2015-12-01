@@ -18,13 +18,13 @@
         <li class="app-weibo bounded">
             <h5>新浪微博</h5>
             <span>已绑定</span>
-            <a class="app-user" href="#"><img src="img/tb.head.portrait.jpg">快乐的小鸟</a>
+            <a class="app-user" href="#">快乐的小鸟</a>
             <a href="#">解除绑定</a>
         </li>
         <li class="app-jia bounded">
             <h5>家长帮</h5>
             <span >已绑定</span>
-            <a class="app-user" href="#"><img src="img/tb.head.portrait.jpg">快乐的小鸟</a>
+            <a class="app-user" href="#">快乐的小鸟</a>
             <a href="#">解除绑定</a>
         </li>
     </ul>

@@ -64,9 +64,37 @@
                 margin-bottom: 20px;
                 background-color: #eee;
                 #preview{
-                    #imghead{
-                        max-width: 400px;
-                        max-height: 340px;
+                    display: table-cell !important;
+                    display: block;
+                    width: 299px;
+                    height: 299px;
+                    overflow: hidden;
+                    text-align: center;
+                    position: static !important;
+                    position: relative;
+                    vertical-align: middle;
+                    _font-size: 0;
+                    span{
+                        display: table-cell !important;
+                        display: block;
+                        margin: 0;
+                        position: static !important;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 400px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        #imghead{
+                            position: static !important;
+                            position: relative;
+                            top: auto !important;
+                            top: -50%;
+                            left: auto !important;
+                            left: -50%;
+                            max-width: 400px;
+                            max-height: 340px;
+                        }
                     }
                 }
                 .btn_up{

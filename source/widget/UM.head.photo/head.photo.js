@@ -35,7 +35,6 @@ $("#loadFile").change(function(){
     }
 });
 
-
 function headsSave(){
     var img = $("#loadFile").val();
     if(img == ''){
