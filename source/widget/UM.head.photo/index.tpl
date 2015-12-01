@@ -22,7 +22,7 @@
                     <div id="preview" style="display:inline-block;">
                         <img id="imghead" src=''>
                     </div>
-                    <div class="btn_up hidden-btn">
+                    <div class="btn_up">
                         <button class="btn_loadFile btn btn-info">+ 上传头像</button>
                     </div>
                     <input id="loadFile" type="file" name="img" class="input_file" onchange="getFullPath(this);" />
@@ -30,10 +30,6 @@
                     <span>仅支持JPG、GIF、PNG且文件小于2M，照片尺寸请大于200×200</span>
                 </form>
             </div>
-            <div class="btn_up">
-                <button class="btn_loadFile btn btn-info">重新上传</button>
-            </div>
-            <input id="loadFile" type="file" name="img" class="input_file show-lf" onchange="getFullPath(this);" />
             <button id="btn_submit" class="btn btn-info" onclick="headsSave();">保存</button>
         </div>
     </div>
