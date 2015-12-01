@@ -1094,6 +1094,9 @@ fresh.send = fresh.send || {};
         if( that.length == 0 ){
           return false;
         }
+        if(that.val() == ''){
+          return false;
+        }
         if (!/\.(gif|jpg|jpeg|png|GIF|JPG|PNG)$/.test(dom.value)) {
             alert('图片格式无效！');
             return false;
@@ -1101,44 +1104,47 @@ fresh.send = fresh.send || {};
         //显示图片预览区域
         $('#fresh-send-preview').removeClass('hiding');
         $('.fresh-send-preview-imgvideo').find('img').attr('src', 'http://img04.xesimg.com/loading.gif');
-        this.setImagePreview('fresh-fileToUpload', 'fresh-send-preview-img', 'fresh-send-preview-imgvideo');
+        this.setImagePreview('fresh-fileToUpload', 'fresh-send-preview-imgvideo',120, 36);
     };
 
     /**
      * 上传图片本地预览方法
      * @param {Object} fileObj 上传文件file的id元素  fresh-fileToUpload 
-     * @param {Object} previewObj 上传图片的预览id元素  fresh-send-preview-img
-     * @param {Object} localImg 预览图片的父层id元素  fresh-send-preview-imgvideo
+     * @param {Object} previewObj 预览图片的父层id元素  fresh-send-preview-imgvideo
+     * @param {Number} maxWidth 预览图最大宽  
+     * @param {Number} minWidth 预览图最小宽  
      */
-    fs.setImagePreview =function(fileObj, previewObj, localImg) {
+    fs.setImagePreview =function(fileObj, previewObj, maxWidth, minWidth) {
           var docObj = document.getElementById(fileObj);
           var imgObjPreview = document.getElementById(previewObj);
 
           if (docObj.files && docObj.files[0]) {
               //火狐下，直接设img属性
-              //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式  
-              imgObjPreview.src = window.URL.createObjectURL(docObj.files[0]);
+              //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
+              imgObjPreview.innerHTML ='<img id="fresh-send-preview-img"><i class="fresh-preview-close"></i>';
+              var img = document.getElementById('fresh-send-preview-img');
+              img.src = window.URL.createObjectURL(docObj.files[0]);
           } else {
               //IE下，使用滤镜
-              docObj.select();
-              var imgSrc = document.selection.createRange().text;
-              var localImagId = document.getElementById(localImg);
-              //必须设置初始大小
-              // localImagId.style.width = "120px";
-              // localImagId.style.height = "80px";
-              //图片异常的捕捉，防止用户修改后缀来伪造图片
               try {
-                  localImagId.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
-                  localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+                  var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+                  docObj.select();
+                  imgObjPreview.focus();//防止在ie9下拒绝访问，解决办法是让其他的div元素获取焦点
+                  var imgSrc = document.selection.createRange().text;
+                  imgObjPreview.innerHTML ='<img id="fresh-send-preview-img"><i class="fresh-preview-close"></i>';
+                  var img = document.getElementById('fresh-send-preview-img');
+                  img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = imgSrc;
+                  //var rate = (maxWidth/img.height>maxWidth/img.width?maxWidth/img.width:maxHeight/img.height);
+                  //等比例缩放图片的大小
+                  var rate = (img.offsetWidth>maxWidth)?(maxWidth/img.offsetWidth):(img.offsetWidth>minWidth?1:minWidth/img.offsetWidth);
+                  imgObjPreview.innerHTML = "<div id='fresh-send-preview-img' style='width:"+img.offsetWidth*rate+"px;height:"+img.offsetHeight*rate+"px;"+sFilter+imgSrc+"\"'></div><i class='fresh-preview-close'></i>";
               } catch (e) {
                   alert("您上传的图片格式不正确，请重新选择!");
                   return false;
               }
-              imgObjPreview.style.display = 'none';
-              document.selection.empty();
+              //document.selection.empty();
           }
-
-          return true;
+          //return true;
     }
 
     /**
@@ -1151,7 +1157,7 @@ fresh.send = fresh.send || {};
                             <textarea class="fresh-send-textareaBox" name="content"></textarea>\
                             <div class="fresh-send-preview hiding" id="fresh-send-preview">\
                                  <div class="fresh-send-preview-imgvideo" id="fresh-send-preview-imgvideo">\
-                                     <img id="fresh-send-preview-img" src="'+fresh.path.img+'fresh-send-img.png">\
+                                     <img id="fresh-send-preview-img" src="">\
                                      <i class="fresh-preview-close"></i>\
                                  </div>\
                             </div>\
@@ -1161,7 +1167,7 @@ fresh.send = fresh.send || {};
                                     <a href="javascript:void(0);">表情</a>\
                                  </div>\
                                  <div class="fresh-send-upload">\
-                                    <input class="fresh-fileToUpload" id="fresh-fileToUpload" type="file" size="45"  name="dynImg" accept="image/*" />\
+                                    <input class="fresh-fileToUpload" id="fresh-fileToUpload" type="file" size="45" autocomplete="off"  name="dynImg" accept="image/*" />\
                                  </div>\
                                  <a href="javascript:void(0);">图片</a>\
                                  <em class="pull-left">（支持类型 JPG、PNG，大小不超过5M）</em>\
@@ -1182,6 +1188,13 @@ fresh.send = fresh.send || {};
                cls:'fresh-send-box-modal-dialog',
                title:'发新鲜事',
                content:_sendBox
+        });
+
+        //点击关闭图片区域按钮
+        $('body').off('click', '.fresh-send-box .fresh-preview-close').on('click', '.fresh-send-box .fresh-preview-close', function(){
+            //删除图片同时清空file的值。以防再次上传同一张图片的时候change不改变无法正常运行
+            $('.fresh-send-upload').html('<input class="fresh-fileToUpload" id="fresh-fileToUpload" type="file" size="45" autocomplete="off"  name="dynImg" accept="image/*" />')
+            $('#fresh-send-preview').addClass('hiding');
         });                
     };
 

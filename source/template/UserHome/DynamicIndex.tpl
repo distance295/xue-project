@@ -11,7 +11,7 @@
                 <li><a href="DynamicContact.html">@我的</a></li>
                 <li><a href="DynamicAttention.html">关注的人</a></li>
                 <li class="pull-right">
-                    <a href="#" class="btn btn-danger" id="freshPost" data-toggle="modal" data-target="#fresh-sendInfo-box" >
+                    <a href="javascript:void(0)" class="btn btn-danger" id="freshPost" data-toggle="modal" data-target="#fresh-sendInfo-box" >
                         <i class="fa fa-plus"></i> 发新鲜事
                     </a>
                 </li>                                
