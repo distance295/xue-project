@@ -1,15 +1,15 @@
 var xue =xue || {};
 
 //切换
-function table_qiehuan(d){
+function changeTab(d,box){
     var that = $(d),
-    box = $('.hp-box-left').children();
+    box = $(box).children();
     that.addClass("current").siblings().removeClass("current");  
     var index =  that.index(); 
     box.eq(index).show().siblings().hide();
 }
 $('#head_tab li').click(function(){
-  table_qiehuan(this);
+  changeTab(this,".hp-box-left");
 });
 //推荐头像
 $(".hpr-img").on("click",function(){

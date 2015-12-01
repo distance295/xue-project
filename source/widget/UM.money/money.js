@@ -1,9 +1,9 @@
-function orderTab(ordertype,page){
+function moneyAjax(page){
     $.ajax({
         type: "post",
         url: "/MyPayCenters/ajaxGiftCardData",
         dataType: "html",
-        data:'type=' + ordertype + '&curpage=' + page,
+        data: '&curpage=' + page,
         success:function(result){  
             alert(result);  
             $(".ao-list li").addClass("current");
