@@ -23,10 +23,18 @@ $("#loadFile").change(function(){
     if(img == ''){
       return true;
     }else{
-      $(".hidden-btn,.hl-box input,.hl-box em,.hl-box span").hide();
-      $(".btn_up .btn_loadFile,.show-lf").show();
+        $(".hl-box em,.hl-box span").hide();
+        $(".btn_loadFile,.hl-box input").css({
+            position: 'absolute',
+            top: '360px',
+            left: '300px',
+            fontSize: '14px',
+            width: '100px',
+            height: '35px'
+        });
     }
 });
+
 
 function headsSave(){
     var img = $("#loadFile").val();
