@@ -33,10 +33,20 @@
         TITLE: '基本信息-个人设置'
     };
     $(function(){
-        if(document.attachEvent){
-            window.attachEvent("onload", ymd);   
-        }else{
-            window.addEventListener('load', ymd, false);  
+        if($('#date').length > 0){
+            var yy = $('#date').data('date');
+            if(yy){
+                date_select.ymd(yy);
+            }else{
+                date_select.ymd();
+            }
+            $('#year').on('change', function(){
+                date_select.yearday(this.value);
+            });
+            $('#month').on('change', function(){
+                date_select.monthday(this.value);
+            });
+
         }
     });
 </script>
