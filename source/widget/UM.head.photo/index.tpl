@@ -19,7 +19,7 @@
         <div class="hp-local">
             <form action="" method="POST" enctype="multipart/form-data" id="headsImg">
                 <div class="message-error">
-                    <span>12</span>
+                    <span></span>
                 </div>
                 <div class="hl-box">
                     <div id="preview" style="display:inline-block;">
