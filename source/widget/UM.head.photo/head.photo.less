@@ -56,7 +56,22 @@
         }
         .hp-local{
             display: none;
+            position: relative;
             margin-left: 60px;
+            .message-error{
+                display: none;
+                position: absolute;
+                top: -40px;
+                width: 325px;
+                border: 1px solid #e74c3c; 
+                background-color: #fef6f5;
+                span{
+                    display: inline-block;
+                    padding: 6px 0 6px 30px;
+                    color: #e74c3c;
+                    background: url("img/warning.png") 5px 4px no-repeat;
+                }
+            }
             .hl-box{
                 position: relative;
                 width: 400px;
@@ -66,8 +81,8 @@
                 #preview{
                     display: table-cell !important;
                     display: block;
-                    width: 299px;
-                    height: 299px;
+                    width: 400px;
+                    height: 340px;
                     overflow: hidden;
                     text-align: center;
                     position: static !important;
