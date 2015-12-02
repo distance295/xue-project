@@ -121,7 +121,7 @@ function getFullPath(obj){
             return false;  
         }else{
             if (size>2*1024) {
-                alert("图片大小请不要大于2MB");
+                alert('图片大小请不要大于2MB');
                 return false;
             }else{
                 $('#imghead, #hp-small img, #hp-middle img, #hp-big img').attr('src',url);

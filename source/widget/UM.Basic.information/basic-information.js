@@ -216,6 +216,7 @@ $(function() {
             window.location.href= '/Reg/RegSuc';
           }else{
             fCheck.setTips('.message-error span',result.msg);
+            setTimeout("fCheck.clearTips('.message-error span')",18000);
           }
         },
         error: function() {
