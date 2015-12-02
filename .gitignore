@@ -221,3 +221,4 @@ pip-log.txt
 /website/*
 *.css
 /source/conf/*
+*.css
