@@ -28,10 +28,10 @@
                 <button id="btn_submit" class="btn btn-info hpr-btn">保存</button>
             </div>
             <div class="hp-local">
-                <div class="hl-box">
-                    <form action="" method="POST" enctype="multipart/form-data" id="headsImg">
+                <form action="" method="POST" enctype="multipart/form-data" id="headsImg">
+                    <div class="hl-box">
                         <div id="preview" style="display:inline-block;">
-                            <img id="imghead" src=''>
+                            <span><img id="imghead" src='img/headp.jpg'></span>
                         </div>
                         <div class="btn_up">
                             <button class="btn_loadFile btn btn-info">+ 上传头像</button>
@@ -39,9 +39,9 @@
                         <input id="loadFile" type="file" name="img" class="input_file" onchange="getFullPath(this);" />
                         <em>每次上传消耗3000金币</em>
                         <span>仅支持JPG、GIF、PNG且文件小于2M，照片尺寸请大于200×200</span>
-                    </form>
-                </div>
-                <button id="btn_submit" class="btn btn-info" onclick="headsSave();">保存</button>
+                    </div>
+                    <button id="btn_submit" class="btn btn-info" onclick="headsSave();">保存</button>
+                </form>
             </div>
         </div>
         <div class="hp-box-right">

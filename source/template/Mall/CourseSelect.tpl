@@ -17,12 +17,12 @@
         <!--   左右分栏的用这个    -->
         <div class="col-md-10 wrap-body wrap-mall">
 
-            <!-- *********************** 内容区域开始 *********************** -->
+            <!-- *********************** 内容区域开始 ********************** -->
             <ul class="screen-rank">
                 <li class="popular-rank">综合</li>
                 <li>学员数</li>
                 <li>价格<img src="../../widget/Mall.FindTeacher/img/down.png"></li>
-                <li class="Onlylive-select"><input type="checkbox"/><b>只看直播</b></li>
+                <li class="Onlylive-select"><a href="##"><input type="checkbox"/><b>只看直播</b></a></li>
             </ul>
             <div class="panel panel-default ">
                 <div class="panel-body pd0">
