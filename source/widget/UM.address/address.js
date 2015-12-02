@@ -14,17 +14,19 @@ var addressInput = '#realname, #add_province, #add_city, #address, #zipcode, #ph
 //删除收货人地址
 function delAddress(id) {
     var _data = id;
-    var _die =$('.shipadd_list li input').val();
-		$('.shipadd_list li#' + _die).remove();
-   $.ajax({///ShoppingCart/delStuAddress
-       url: 'http://html04.xesimg.com/del.json',
-       type: 'POST',
-       dataType: 'json',
-       data: {id: _data},
-       success:function(result){
-        var resData = xue.ajaxCheck.JSON(result);
-       }
-   })
+    $.ajax({
+        url: '/MyInfos/delAddress',
+        type: 'POST',
+        dataType: 'json',
+        data: {id: _data},
+        success:function(result){
+             if (result.sign == 1) {
+                 $('.shipadd_list li#' + _data).remove();
+             } else {
+                 alert(result.msg);
+             }
+        }
+    })
 }
 //提交生成收货地址列表
 function saveNewAddress(inputs){
@@ -73,16 +75,17 @@ function saveNewAddress(inputs){
 
     var o = {
         id : data.id,
-        realname : data.realname,
-        province_id : data.province,
-        city_id : data.city,
-        country_id : data.country,
+        recipient : data.realname,
+        province : data.province,
+        city : data.city,
+        county : data.country,
         address : data.address,
         zipcode : data.zipcode,
         phone : data.phone
+
     };
     $.ajax({
-        url : 'addr.json',
+        url : '/MyInfos/editAddressInfo',
         type: 'POST',
         dataType:'json',
         data : o,
@@ -105,6 +108,7 @@ function saveNewAddress(inputs){
             tp = tp.replace(/\$country_text\$/g, data.country_text);
         
             if(result.type === 1){
+                alert(1);
                 $('<li id="'+_id+'">'+ tp + '</li>').prependTo('ul.shipadd_list');
             }else if(result.type === 2){
                  $('#addid_'+data.id).parent().html(tp);
@@ -129,6 +133,7 @@ function updateAddress(id){
 		            $('#' + _id).val(data[_id]);
 		        }else{
 		            $(this).val(data[_id]);
+
 		        }
 		    });
 		    renderAreaSelect();
@@ -206,13 +211,13 @@ function updateAddress(id){
      saveNewAddress(inputs);
 
  });
- // 新增收货人地址显示或隐藏
+ // // 新增收货人地址显示或隐藏 
+ 
     $('.newCreateAddress').on('click', function(){
         var newAddress = $('#details_form');
+         $(addressInput).val('');
         if(newAddress.is(':hidden')){
         	newAddress.show();
-        	$(addressInput).val('');
-        }else{
-        	newAddress.hide();
         }
     });
+
