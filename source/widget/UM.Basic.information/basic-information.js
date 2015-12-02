@@ -80,6 +80,7 @@ $.fn.nicknameajax = function(){
                 } else {
                     fCheck.clearTips(".nickname-warning");
                     fCheck.bordercss('.nickname');
+                    $(box).data('nickname',val);
                     return true;
                 }
             },
@@ -140,6 +141,7 @@ var date_select = {};
          n++;
      }
      this.writeDay(n)
+     fCheck.bordercss('#year');
  };
  d.monthday = function(str) {
      var yearvalue = document.date.year.options[document.date.year.selectedIndex].value;
@@ -155,6 +157,7 @@ var date_select = {};
          n++;
      }
      this.writeDay(n)
+     fCheck.bordercss('#month');
  };
  d.writeDay = function(n) {
      var e = document.date.day;
@@ -162,6 +165,9 @@ var date_select = {};
      for (var i = 1; i < (n + 1); i++) {
          e.options.add(new Option(" " + i + " ", i));
      }
+     $("#day").change(function() {
+         fCheck.bordercss('#day');
+     });
  };
  d.IsPinYear = function(year) {
      return (0 == year % 4 && (year % 100 != 0 || year % 400 == 0));
