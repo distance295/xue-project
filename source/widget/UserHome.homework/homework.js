@@ -12,7 +12,7 @@
 var homeWork = homeWork || {};
 
 //分数图片路径
-homeWork.path = '/static/img/Homework/shuzi';
+homeWork.path = '/static/img';
 
 (function(hm){
   
