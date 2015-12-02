@@ -146,7 +146,7 @@ $.fn.nicknameajax = function(){
                 } else {
                     block.html('');
                     box.parents('.f1').addClass('has-success').removeClass('has-error');
-                    $(val).data('nickname',val);
+                    $(box).data('nickname',val);
                     return true;
                 }
             },
