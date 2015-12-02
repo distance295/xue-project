@@ -220,3 +220,5 @@ pip-log.txt
 /.idea/workspace.xml
 /website/*
 *.css
+source/conf/deploy-home.bat
+source/conf/deploy-mall.bat
