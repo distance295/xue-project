@@ -35,7 +35,7 @@ function balanceAjax(page){
            });//end $each  
            $(".cloneajax").hide();//隐藏id=clone的tr，因为该tr中的td没有数据，不隐藏起来会在生成的table第一行显示一个空行  
            $("#generatedTable").show();  
-        }//end success  ,  
+        },//end success    
         error:function(){  
             alert("异步失败");  
         }  
