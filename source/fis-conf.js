@@ -79,11 +79,11 @@ fis.media('tmpl')
     })
     // img素材图片规则
     .match('/widget/(*)/img/(*.{png,jpg,gif,cur})', {
-        release: '/static/img/$1$3$5$7/$2$4$6$8'
+        release: '/static/img/$2$4$6$8'
     })
     // img里面存在文件夹时的规则
     .match('/widget/(**)/img/(**)/(*.png)', {
-        release:'/static/img/$1/$2/$3'
+        release:'/static/img/$3'
     })
 ;
 

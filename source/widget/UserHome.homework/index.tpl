@@ -62,7 +62,7 @@
 							<span class="homework-MaskLayer-num">6</span>
 							<img src="img/small2.png" /><i></i>
 						</li>
-						<li><img src="img/small1.png"/><i></i></li>
+						<li><img src="img/small1.png" class="homework-Feedback-small-img"/><i></i></li>
 					</ul>
 			    </div>
 				<div class="homework-page-btn"><i class="homework-next-btn homework-next-active"></i></div>
@@ -206,7 +206,7 @@
 							<span class="homework-MaskLayer-num">6</span>
 							<img src="img/small2.png" /><i></i>
 						</li>
-						<li><img src="img/small1.png"/><i></i></li>
+						<li><img src="img/small1.png" class="homework-Feedback-small-img"/><i></i></li>
 					</ul>
 			    </div>
 				<div class="homework-page-btn"><i class="homework-next-btn homework-next-active"></i></div>
