@@ -58,9 +58,6 @@ function saveNewAddress(inputs){
                 +'      name="data[addid]" '
                 +'      id="addid_$id$"'
                 +'  />'
-                +'<div class="consignee_item current">'
-                +'  <span>$realname$ $province_text$</span>'
-                +'</div>'
                 +'<div class="addr_detail">'
                 +'  <span class="addr_name" title="$realname$">$realname$</span>'
                 +'  <span class="addr_info" title="$province_text$ $city_text$ $country_text$ $address$">$province_text$ $city_text$ $country_text$ $address$</span>'
@@ -106,17 +103,20 @@ function saveNewAddress(inputs){
             tp = tp.replace(/\$province_text\$/g, data.province_text);
             tp = tp.replace(/\$city_text\$/g, data.city_text) 
             tp = tp.replace(/\$country_text\$/g, data.country_text);
-        
+            var _addid = $('#addid_'+data.id).parent();
             if(result.type === 1){
-                alert(1);
                 $('<li id="'+_id+'">'+ tp + '</li>').prependTo('ul.shipadd_list');
-            }else if(result.type === 2){
-                 $('#addid_'+data.id).parent().html(tp);
-             }
+            }
+            if(result.type === 2){
+                 _addid.html(tp);
+            }
+            if(result.default == 1){
+                 _addid.html(tp);
+                 _addid.find('.addr_detail').append('<span class="default_addr">默认地址</span>');
+                 _addid.find('.setdefault_consignee').remove();
+            }
             $('.info_from').hide();
-        }
-    });
-}
+
 //编辑收货人地址
 function updateAddress(id){
 		    $(addressInput).removeClass('error');
