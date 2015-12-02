@@ -5,13 +5,16 @@
 <div class="bi-content">
     <form action="" name="date">
         <div class="bi-left">
+            <div class="message-error">
+                <span></span>
+            </div>
             <div>
                 <label for="">用户名：</label>
                 <span>gonghai1234@100tal.com</span>
             </div>
             <div>
                 <label for="">昵称：</label>
-                <input class="nickname" type="text" maxlength="18">
+                <input class="nickname" type="text" maxlength="18" data-nickname="">
                 <div class="error-box">
                     <span class="nickname-warning error"></span>
                 </div>
