@@ -68,6 +68,7 @@ function getFullPath(obj){
                     imgDiv.style.width = width + "px";
                     imgDiv.style.height = height + "px";
                     imgDiv.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod = scale)";   
+                    //console.log(document.selection.text)
                     imgDiv.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = obj.value;
                     $(newPreview).find('img').append(imgDiv);    
                 });
@@ -113,8 +114,25 @@ function getFullPath(obj){
         var lastname = strSrc.substring(pos, strSrc.length);
 
         var dom = document.getElementById('loadFile');
-        var size = $("#loadFile")[0].files.item(0).size/1024;
-
+        var size = null;
+        try{
+            //非ie9以下的浏览器
+            size = dom.files.item(0).size/1024;
+        }catch(e){
+            try{
+                dom.select();
+                $('.hl-box').focus();
+                var _img = new Image();
+                _img.src = document.selection.createRange().text;
+                _img.onload = function(){
+                      size = _img.fileSize/1024;
+                }
+                _img.src = document.selection.createRange().text;//为了箭筒ie8重新赋值
+            }catch(e){
+                return false;
+            }
+        }
+       
         if (lastname.toLowerCase() != ".jpg" && lastname.toLowerCase() != ".gif" && lastname.toLowerCase() != ".png" && lastname.toLowerCase() != ".jpeg") {  
             $('#loadFile').val('');
             alert("您选择的文件类型为" + lastname + "，图片必须为 JPG,GIF,PNG 类型");
