@@ -204,7 +204,7 @@ var __ignore = {
         'Public.Footer',
         'Public.Header',
         'Public.MiniCart',
-        'UserHome.gold',    // 临时屏蔽下
+//        'UserHome.gold',    // 临时屏蔽下
         'Public.Nav',
         'Public.Selector'        
     ].toString(),
@@ -412,9 +412,9 @@ fis.media('home')
     .match('/widget/Public.Topbar/img/*', {
         release: false
     })
-    .match('/template/UserHome/GoldIndex.tpl',{
-        release: false
-    })
+//    .match('/template/UserHome/GoldIndex.tpl',{
+//        release: false
+//    })
     // ----------------
     .match('/conf/*',{
         release: false
