@@ -26,6 +26,7 @@ fCheck.bordercss = function(argument) {
 $(function(){
     var nickname = $('.nickname');
     $(nickname).on('focus',function(){
+        nickname.data('lastVal', $.trim(nickname.val()));
         $('.prompt-empty').html('请输入不多于18个字，昵称为“数字”“字母”“中文”的任意组合').css({
             color: '#999',
             display: 'block'
@@ -34,7 +35,9 @@ $(function(){
     });
     $(nickname).on('blur',function(){
         fCheck.clearTips(".prompt-empty");
-        $.fn.nickname();
+        if(nickname.data('lastVal') != $.trim(nickname.val())) {
+           $.fn.nickname();
+        }
     });
 });
 
@@ -43,6 +46,7 @@ var boxs = {
     nickname: '.nickname',
     school:'.school'
 }
+var oldVal = "";
 
 $.fn.nickname = function(){
     var box = $(boxs.nickname),
@@ -92,90 +96,6 @@ $.fn.nicknameajax = function(){
         return false;
     }
 }
-
-/* 生日日期 */
-var date_select = {};
-(function() {
- var d = date_select;
- d.opt = {
-     year: '#year',
-     month: '#month',
-     day: '#day',
-     formName: 'date'
- };
- d.MonHead = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
- d.ymd = function(year_data) {
-     var _date = year_data ? year_data.split('-') : false;     
-     //先给年下拉框赋内容
-     var y = new Date().getFullYear();
-     var _dom = {
-         year: $(d.opt.year),
-         month: $(d.opt.month),
-         day: $(d.opt.day),
-     };
-     for (var i = (y - 19); i < (y + 1); i++) {
-         _dom.year.append('<option value="' + i + '">' + i + '</option>');
-     }
-     //赋月份的下拉框
-     for (var i = 1; i < 13; i++) {
-         _dom.month.append('<option value="' + i + '">' + i + '</option>');
-     }
-     _dom.year.val(_date[0] || y);
-     _dom.month.val(_date[1] || new Date().getMonth() + 1);
-     var n = d.MonHead[new Date().getMonth()];
-     if (new Date().getMonth() == 1 && this.IsPinYear(yearvalue)) n++; {
-         this.writeDay(n); //赋日期下拉框Author:meizz
-     }
-     _dom.day.val(_date[2] || new Date().getDate());
- };
- d.yearday = function(str) {
-     var monthvalue = document.date.month.options[document.date.month.selectedIndex].value;
-     console.log(monthvalue);
-     if (monthvalue == "") {
-         var e = document.date.day;
-         this.optionsClear(e);
-         return;
-     }
-     var n = d.MonHead[monthvalue - 1];
-     if (monthvalue == 2 && this.IsPinYear(str)) {
-         n++;
-     }
-     this.writeDay(n)
-     fCheck.bordercss('#year');
- };
- d.monthday = function(str) {
-     var yearvalue = document.date.year.options[document.date.year.selectedIndex].value;
-     console.log(yearvalue);
-
-     if (yearvalue == "") {
-         var e = document.date.day;
-         this.optionsClear(e);
-         return;
-     }
-     var n = d.MonHead[str - 1];
-     if (str == 2 && this.IsPinYear(yearvalue)) {
-         n++;
-     }
-     this.writeDay(n)
-     fCheck.bordercss('#month');
- };
- d.writeDay = function(n) {
-     var e = document.date.day;
-     this.optionsClear(e);
-     for (var i = 1; i < (n + 1); i++) {
-         e.options.add(new Option(" " + i + " ", i));
-     }
-     $("#day").change(function() {
-         fCheck.bordercss('#day');
-     });
- };
- d.IsPinYear = function(year) {
-     return (0 == year % 4 && (year % 100 != 0 || year % 400 == 0));
- };
- d.optionsClear = function(e) {
-     e.options.length = 1;
- };
-})();
 
 /* 学校格式验证 */
 $.fn.school = function(){
