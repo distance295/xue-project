@@ -1,17 +1,21 @@
 <!--
     @require basic-information.less
     @require basic-information.js
+    @require birthday.js
 -->
 <div class="bi-content">
     <form action="" name="date">
         <div class="bi-left">
+            <div class="message-error">
+                <span></span>
+            </div>
             <div>
                 <label for="">用户名：</label>
                 <span>gonghai1234@100tal.com</span>
             </div>
             <div>
                 <label for="">昵称：</label>
-                <input class="nickname" type="text" maxlength="18">
+                <input class="nickname" type="text" maxlength="18" data-nickname=""/>
                 <div class="error-box">
                     <span class="nickname-warning error"></span>
                 </div>
@@ -33,16 +37,13 @@
             <div>
                 <div id="date" data-date="2012-10-1">
                     <label for="">生日：</label>
-                    <select id="year" class="year" name="year" >
-                      <option>请选择</option>
+                    <select id="sel_year" name="year" >
                     </select>
                     <i>年</i>
-                    <select id="month" class="month" name="month" >
-                      <option>请选择</option>
+                    <select id="sel_month" name="month" >
                     </select>
                     <i>月</i>
-                    <select id="day" class="day" name="day">
-                      <option>请选择</option>
+                    <select id="sel_day" name="day">
                     </select>
                     <i>日</i>
                 </div>
@@ -65,4 +66,3 @@
     </div>
     </form>
 </div>
-

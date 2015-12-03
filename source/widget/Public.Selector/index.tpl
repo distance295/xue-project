@@ -5,11 +5,12 @@
 -->    
     <div class="choice">
       <div class="row">
-        <dl class="choice-grade">
+        <dl class="choice-grade clearfix">
             <dt class="choice-grade-tip col-xs-2 col-sm-2 clo-md-1 ">所在年级</dt>
             <dd class="choice-grade-cur col-xs-10 col-sm-10 clo-md-11 ">
                 <ul class="nav nav-pills">
-                  <li role="presentation" class="active"><a class="choice-grade-name" href="#">一年级</a></li>
+                  <li role="presentation" class="active"><a href="#" class="choice-grade-name">全部</a></li>
+                  <li role="presentation"><a class="choice-grade-name" href="#">一年级</a></li>
                   <li role="presentation"><a href="#" class="choice-grade-name">二年级</a></li>
                   <li role="presentation"><a href="#" class="choice-grade-name">三年级</a></li>
                   <li role="presentation"><a href="#" class="choice-grade-name">四年级</a></li>
@@ -26,12 +27,12 @@
         </dl>
       </div>
       <div class="row">
-        <dl class="choice-subject">
+        <dl class="choice-subject clearfix">
             <dt class="choice-subject-tip col-xs-2 col-sm-2 col-md-1 ">学习科目</dt>
             <dd class="choice-subject-cur col-xs-10 col-sm-10 col-md-11 ">
               <ul class="nav nav-pills">
-                <li role="presentation"><a class="choice-subject-name">全部</a></li>
-                <li role="presentation" class="active"><a class="choice-subject-name">语文</a></li>
+                <li role="presentation" class="active"><a class="choice-subject-name">全部</a></li>
+                <li role="presentation"><a class="choice-subject-name">语文</a></li>
                 <li role="presentation"><a class="choice-subject-name">数学</a></li>
                 <li role="presentation"><a class="choice-subject-name">英语</a></li>
               </ul>
@@ -39,7 +40,7 @@
         </dl>
       </div>
       <div class="row">
-        <dl class="choice-point">
+        <dl class="choice-point clearfix">
             <dt class="choice-point-tip col-xs-1 col-sm-2 col-md-1 ">知识点</dt>
             <dd class="choice-point-cur col-xs-8 col-sm-8 col-md-9 ">
               <ul class="nav nav-pills">
@@ -79,7 +80,7 @@
             </dd>
             <dt class="choice-point-link col-xs-3 col-sm-2 col-md-2  clearfix">
                 <div class="chocie-point-show pull-left">
-                    <a>更多</a>
+                    <a>更多知识点</a>
                     <i class="fa fa-angle-down fa-chevron-down que-body-arrow"></i>
                 </div>
                 <!--<div class="chocie-point-download left">下载复习笔记</div>-->

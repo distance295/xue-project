@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65a5177b-cc0d-4bfb-a852-a009f5ea707f" name="Default" comment="Merge remote-tracking branch 'XUEJS/master'&#10;&#10;Conflicts:&#10;&#9;source/widget/gold/gold.css&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/widget/UserHome.gold/gold.js" afterPath="$PROJECT_DIR$/source/widget/UserHome.gold/gold.js" />
-    </list>
+    <list default="true" id="65a5177b-cc0d-4bfb-a852-a009f5ea707f" name="Default" comment="Merge remote-tracking branch 'XUEJS/master'&#10;&#10;Conflicts:&#10;&#9;source/widget/gold/gold.css&#10;" />
     <list id="65f74e84-b66d-4c76-8e30-ad6df2d3b00e" name="New changelist" comment="" />
     <ignored path="xue-project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="gold.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gold.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21565495">
-              <caret line="94" column="45" selection-start-line="94" selection-start-column="45" selection-end-line="94" selection-end-column="45" />
+            <state vertical-scroll-proportion="-4.851852">
+              <caret line="403" column="11" selection-start-line="403" selection-start-column="11" selection-end-line="403" selection-end-column="11" />
               <folding>
                 <element signature="e#201#3764#0" expanded="false" />
                 <marker date="1448881244000" expanded="true" signature="742:1274" placeholder="..." />
@@ -37,6 +34,16 @@
                 <marker date="1448881244000" expanded="true" signature="1446:1763" placeholder="..." />
                 <marker date="1448881244000" expanded="true" signature="1802:2075" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gold.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="2.516693">
+              <caret line="142" column="6" selection-start-line="24" selection-start-column="0" selection-end-line="142" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -309,7 +316,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xue-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xue-project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gold" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -422,7 +451,7 @@
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>$USER_HOME$/.subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -493,7 +522,7 @@
     <frame x="-4" y="23" width="1280" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -874,16 +903,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6899841">
-          <caret line="142" column="6" selection-start-line="24" selection-start-column="0" selection-end-line="142" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#select#0;n#span#0;n#p#1;n#div#0;n#form#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/data/Dynamic/ajaxDynamicList.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -986,8 +1005,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21565495">
-          <caret line="94" column="45" selection-start-line="94" selection-start-column="45" selection-end-line="94" selection-end-column="45" />
+        <state vertical-scroll-proportion="-4.851852">
+          <caret line="403" column="11" selection-start-line="403" selection-start-column="11" selection-end-line="403" selection-end-column="11" />
           <folding>
             <element signature="e#201#3764#0" expanded="false" />
             <marker date="1448881244000" expanded="true" signature="742:1274" placeholder="..." />
@@ -995,6 +1014,14 @@
             <marker date="1448881244000" expanded="true" signature="1446:1763" placeholder="..." />
             <marker date="1448881244000" expanded="true" signature="1802:2075" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.516693">
+          <caret line="142" column="6" selection-start-line="24" selection-start-column="0" selection-end-line="142" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>

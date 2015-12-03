@@ -1,6 +1,4 @@
 <!--
-    @require ../../static/js/xue.ui.calendar.js
-    @require ../Module.Modal/Modal.js
     @require address.js
     @require ui-address.less
 -->
