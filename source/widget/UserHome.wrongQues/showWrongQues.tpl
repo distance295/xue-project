@@ -1,12 +1,13 @@
 <!--
    错题本展示：
     @require error_question.less
-    @require error_question.js
+    
 -->
 
     <div class="que">
         <div class="que-head clearfix">
-            <p class="que-head-source pull-left"><span class="que-tips">试题来源：</span>《高考英语总复习年卡（一轮+二轮）（通用版）——学而思网校高中英语暑期期末考试》</p>
+            <p class="que-head-source pull-left"><span class="que-tips">试题来源：</span>
+            <a class="que-head-href" href="##">《高考英语总复习年卡（一轮+二轮）（通用版）——学而思网校高中英语暑期期末考试》</a></p>
             <p class="que-head-time-form pull-right">作答时间：2015-8-16</p>
         </div>
         <div class="que-point">
@@ -35,7 +36,8 @@
     </div>
     <div class="que">
         <div class="que-head clearfix">
-                <p class="que-head-source pull-left"><span class="que-tips">试题来源：</span>《高考英语总复习年卡（一轮+二轮）（通用版）——学而思网校高中英语暑期期末考试》</p>
+                <p class="que-head-source pull-left"><span class="que-tips">试题来源：</span>
+                <a class="que-head-href" href="##">《高考英语总复习年卡（一轮+二轮）（通用版）——学而思网校高中英语暑期期末考试》</a></p>
                 <p class="que-head-time-form pull-right">作答时间：2015-8-16</p>
             </div>
             <div class="que-point">
@@ -65,7 +67,8 @@
     </div>
     <div class="que">
         <div class="que-head clearfix">
-            <p class="que-head-source pull-left"><span class="que-tips">试题来源：</span>《高考英语总复习年卡（一轮+二轮）（通用版）——学而思网校高中英语暑期期末考试》</p>
+            <p class="que-head-source pull-left"><span class="que-tips">试题来源：</span>
+            <a class="que-head-href" href="##">《高考英语总复习年卡（一轮+二轮）（通用版）——学而思网校高中英语暑期期末考试》</a></p>
             <p class="que-head-time-form pull-right">作答时间：2015-8-16</p>
         </div>
         <div class="que-point">
