@@ -1,5 +1,5 @@
 //收货地址全部交互
-var addressInput = '#realname, #add_province, #add_city, add_country, #address, #zipcode, #phone';
+var addressInput = '#realname, #add_province, #add_city, #add_country, #address, #zipcode, #phone';
 //鼠标进入时增加样式
 $('#ui-setAddress').on('mouseenter', '.shipadd_list li', function(event) {
     var that = $(this);
