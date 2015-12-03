@@ -311,12 +311,13 @@ $(function(){
         var
             $rce = $('.red-card-exchange'),
             $rct = $('.red-card-tip');
+        var $spam = __uri('img/Spam.png');
         $rce.on('click',function(event){
             var div = $rct.html();
             if(div !== ''){
                 event.preventDefault();
             }else{
-                $rct.append('<div class="alert alert-danger fade in"><img src="../../static/img/UserHome.gold/Spam.png" class="alertImg"><span>兑换失败,你的金币余额不足哦~</span></div>')
+                $rct.append('<div class="alert alert-danger fade in"><img src="'+ $spam +'" class="alertImg"><span>兑换失败,你的金币余额不足哦~</span></div>')
             }
         });
     };

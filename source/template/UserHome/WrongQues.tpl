@@ -1,8 +1,9 @@
+
 <!-- 公共头部 -->
 <link rel="import" href="../Layer/layer.UserHome.head.tpl?__inline">
 
 <!-- 直播课错题本 -->
-<div class="container top m20">
+<div class="container top m20 wrongQuest">
     <div class="row">
         <div class="col-md-10 wrap-body">
             <!-- *********************** 内容区域开始 *********************** -->
@@ -14,8 +15,8 @@
             </ul>
             <!-- tab切换结束 -->
 
-            <!-- 年级选择展示区域 -->
-            <link rel="import" href="../../widget/Public.Selector/index.tpl?__inline">
+            <!-- 年级筛选 -->
+            <link rel="import" href="../../widget/UserHome.wrongQues/chooseShow.tpl?__inline">
 
             <!-- 错题本展示区域 -->
 			<link rel="import" href="../../widget/UserHome.wrongQues/showWrongQues.tpl?__inline">

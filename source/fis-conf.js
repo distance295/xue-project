@@ -79,11 +79,11 @@ fis.media('tmpl')
     })
     // img素材图片规则
     .match('/widget/(*)/img/(*.{png,jpg,gif,cur})', {
-        release: '/static/img/$1$3$5$7/$2$4$6$8'
+        release: '/static/img/$2$4$6$8'
     })
     // img里面存在文件夹时的规则
     .match('/widget/(**)/img/(**)/(*.png)', {
-        release:'/static/img/$1/$2/$3'
+        release:'/static/img/$3'
     })
 ;
 
@@ -204,7 +204,7 @@ var __ignore = {
         'Public.Footer',
         'Public.Header',
         'Public.MiniCart',
-        'UserHome.gold',    // 临时屏蔽下
+//        'UserHome.gold',    // 临时屏蔽下
         'Public.Nav',
         'Public.Selector'        
     ].toString(),
@@ -412,9 +412,9 @@ fis.media('home')
     .match('/widget/Public.Topbar/img/*', {
         release: false
     })
-    .match('/template/UserHome/GoldIndex.tpl',{
-        release: false
-    })
+//    .match('/template/UserHome/GoldIndex.tpl',{
+//        release: false
+//    })
     // ----------------
     .match('/conf/*',{
         release: false

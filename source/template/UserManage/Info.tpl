@@ -31,14 +31,16 @@
         ID: 'Info',
         MODULE: 'UserManage',
         TITLE: '基本信息-个人设置'
-    };
-    $(function(){
-        if(document.attachEvent){
-            window.attachEvent("onload", ymd);   
-        }else{
-            window.addEventListener('load', ymd, false);  
-        }
-    });
+    }; 
+    
+    $(function () {
+        $.ms_DatePicker({
+                YearSelector: ".sel_year",
+                MonthSelector: ".sel_month",
+                DaySelector: ".sel_day"
+        });
+        $.ms_DatePicker();
+    }); 
 </script>
 
 <!-- 公共底部 -->

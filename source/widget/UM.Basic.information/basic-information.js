@@ -26,6 +26,7 @@ fCheck.bordercss = function(argument) {
 $(function(){
     var nickname = $('.nickname');
     $(nickname).on('focus',function(){
+        nickname.data('lastVal', $.trim(nickname.val()));
         $('.prompt-empty').html('请输入不多于18个字，昵称为“数字”“字母”“中文”的任意组合').css({
             color: '#999',
             display: 'block'
@@ -34,7 +35,9 @@ $(function(){
     });
     $(nickname).on('blur',function(){
         fCheck.clearTips(".prompt-empty");
-        $.fn.nickname();
+        if(nickname.data('lastVal') != $.trim(nickname.val())) {
+           $.fn.nickname();
+        }
     });
 });
 
@@ -43,6 +46,7 @@ var boxs = {
     nickname: '.nickname',
     school:'.school'
 }
+var oldVal = "";
 
 $.fn.nickname = function(){
     var box = $(boxs.nickname),
@@ -68,7 +72,7 @@ $.fn.nicknameajax = function(){
     var d_val = Number($(box).data('nickname'));
     if(Number(val) != d_val){
         $.ajax({
-            url : '',
+            url : '/MyInfos/getNicknameUseful',
             type : 'GET',
             dataType : 'json',
             timeout: 7000,
@@ -80,6 +84,7 @@ $.fn.nicknameajax = function(){
                 } else {
                     fCheck.clearTips(".nickname-warning");
                     fCheck.bordercss('.nickname');
+                    $(box).data('nickname',val);
                     return true;
                 }
             },
@@ -91,54 +96,6 @@ $.fn.nicknameajax = function(){
         return false;
     }
 }
- 
-/* 生日日期 */
-function ymd()   
-{   
-   MonHead = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];   
-   //先给年下拉框赋内容
-   var y  = new Date().getFullYear();   
-   for (var i = (y-19); i < (y+1); i++)  
-           document.date.year.options.add(new Option(" "+ i +" ", i));   
-   //赋月份的下拉框  
-   for (var i = 1; i < 13; i++)   
-           document.date.month.options.add(new Option(" " + i + " ", i));   
-   document.date.year.value = y;   
-   document.date.month.value = new Date().getMonth() + 1;   
-   var n = MonHead[new Date().getMonth()];   
-   if (new Date().getMonth() ==1 && IsPinYear(yearvalue)) n++;   
-        writeDay(n); //赋日期下拉框Author:meizz     
-   document.date.day.value = new Date().getDate();   
-}   
- 
-function yearday(str) //年发生变化时日期发生变化(主要是判断闰平年)   
-{   
-       var monthvalue = document.date.month.options[document.date.month.selectedIndex].value;   
-       if (monthvalue == ""){ var e = document.date.day; optionsClear(e); return;}   
-       var n = MonHead[monthvalue - 1];   
-       if (monthvalue ==2 && IsPinYear(str)) n++;   
-            writeDay(n)   
-}   
-function monthday(str)   //月发生变化时日期联动   
-{   
-    var yearvalue = document.date.year.options[document.date.year.selectedIndex].value;   
-    if (yearvalue == ""){ var e = document.date.day; optionsClear(e); return;}   
-    var n = MonHead[str - 1];   
-    if (str ==2 && IsPinYear(yearvalue)) n++;   
-   writeDay(n)   
-}   
-function writeDay(n)   //据条件写日期的下拉框    
-{   
-       var e = document.date.day; optionsClear(e);   
-       for (var i=1; i<(n+1); i++)   
-            e.options.add(new Option(" "+ i + " ", i));   
-}   
-function IsPinYear(year)//判断是否闰平年      
-{     return(0 == year%4 && (year%100 !=0 || year%400 == 0));}   
-function optionsClear(e)   
-{   
-    e.options.length = 1;   
-}   
 
 /* 学校格式验证 */
 $.fn.school = function(){
@@ -166,6 +123,26 @@ $('.school').on('blur',function(){
 /* 点击提交按钮验证 */
 $(function() {
     $(".btn-submit").click(function() {
-        $.fn.nickname();
+       $.fn.nickname();
+       $.ajax({
+        type:"GET",
+        url:"/MyInfos/editStuInfo",
+        dataType: "json",
+        data: 'nickname=' + $('.nickname').val() + '&date=' + $('.date').val() + '&school=' + $('.school').val(),
+        timeout: 7000,
+        success: function(result) {
+          /* 填写的信息验证不通过 */
+          if(result.sign == 1){
+            window.location.href= '/Reg/RegSuc';
+          }else{
+            fCheck.setTips('.message-error span',result.msg);
+            setTimeout("fCheck.clearTips('.message-error span')",18000);
+          }
+        },
+        error: function() {
+          alert('数据读取错误,请重试..');
+          return false;
+        }
+       });
     })
 }) 

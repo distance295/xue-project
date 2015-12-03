@@ -147,21 +147,22 @@
               fCheck.setTips(".curPwd-warning",'密码不能少于6位字符').show();
               return false;
           }
-          fCheck.bordercss('#curPwd');
 
           $.ajax({
               type: "POST",
-              url: "/RequestPassword/UpdatePassword",
-              data: "curPwd=" + $(".curPwd").val(),
-              success: function(msg) {
-                  if (msg == "True") {
-                      location.href = "/RequestPassword/UpdatePasswordSecuess";
+              url: "/MyInfos/changeStuPwd",
+              data: "curPwd=" + curpasswd + '&newPwd=' + newpassword + 'confirm',
+              dataType: 'json',
+              success: function(d) {
+                  if (d.sign == 1) {
+                      location.href = "/MyInfos/passwordManager";
                   } else {
-                      fCheck.setTips('.curPwd-warning','当前密码错误');
+                      fCheck.setTips('.curPwd-warning',d.msg);
                       $('.curPwd').css('border','1px solid #eaeaea');
                   }
               }
           });
+          fCheck.bordercss('#curPwd');
 
           if ($("#newPwd").val() == '') {
               fCheck.setTips(".newPwd-warning",'请设置密码').show();
