@@ -222,3 +222,4 @@ pip-log.txt
 *.css
 source/conf/deploy-home.bat
 source/conf/deploy-mall.bat
+source/conf/deploy-home.bat
