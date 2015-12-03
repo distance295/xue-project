@@ -1,34 +1,9 @@
 @charset "UTF-8";
 
 
-
-// html{
-//  font-size: 10px;
-//  min-width: 570px;
-// }
-
 @Nfont-size:1.4rem;
 @Sfont-size:1rem;
 @LRpadding:0.8rem;
-
-//body{
-//  background-color: rgb(241,242,246);
-//  line-height: 1;
-//  font-size: 10px;
-//  color:rgb(51,51,51);
-//}
-p{
-  font-size: @Nfont-size;
-  line-height: 1;
-  text-rendering: optimizeLegibility; 
-}
-div{
-  padding:0;
-  margin:0;
-}
-.columns{
-  padding:0;
-}
 
 
 
@@ -39,12 +14,9 @@ div{
 }
 @grey:rgb(102,102,102);
 .choiceSetting{
-  font-size: 1.2rem;
   display: inline-block;
   border-radius: 2px;
   padding:0.4rem 0.8rem;
-  text-align: center;
-  cursor: pointer;
 }
 .choiceSelect{
   background-color: rgb(59,175,218);
@@ -57,6 +29,36 @@ div{
   text-align: center;
   width:6rem;
 };
+
+
+.choice { // 最外层
+    .choice-dl { // 每一横条
+        .choice-title { // 左侧标题
+            
+        } 
+        .choice-items {  // 右侧内容
+
+            .choice-item { // 每一个小项
+                
+            } 
+        }
+        .choice-handle{}
+    }
+    &.choice-hasmore {
+        .choice-items {
+            height: 30px;
+            &.choice-open {
+                height: auto;
+            }
+        }
+        
+    }
+};
+
+
+
+
+
 .choice{
   input{
     margin-top: 2px;
@@ -87,7 +89,7 @@ div{
     .choice-grade-cur{
       padding-top: 1rem;
       padding-bottom:1rem;
-      .choice-grade-name{
+      .choice-item{
         line-height: 1;
         .choiceSetting;
       }
@@ -109,7 +111,7 @@ div{
     .choice-subject-cur{
       padding-top: 1rem;
       padding-bottom: 1rem;  
-      .choice-subject-name{
+      .choice-item{
         line-height: 1;
         .choiceSetting;
       }
@@ -142,7 +144,7 @@ div{
       padding-top: 1rem;
       padding-bottom: 1rem;
       //line-height: 1.8;
-      .choice-point-name{
+      .choice-item{
         .choiceSetting;
         line-height: 1;
         margin-bottom: 0.2rem;
