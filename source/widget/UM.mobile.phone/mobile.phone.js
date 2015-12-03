@@ -85,7 +85,7 @@
         fCheck.param.cPhone = 0;
       }else if( isPhone ){
         /* 手机号码输入正确(两种操作) */
-        fCheck.phoneAjax();
+        /*fCheck.phoneAjax();*/
       }else{
         fCheck.setTips(phoneWarn,'不支持该手机号号段');
         fCheck.param.cPhone = 0;
@@ -358,7 +358,7 @@
 
   /* 判断是否可以点击操作"完成"按钮 */
 
-  $("#form_submit").on('click',function(e){
+  $("#mpform_submit").on('click',function(e){
     var isError = fCheck.isError(e);
     if(isError){
       return false;
