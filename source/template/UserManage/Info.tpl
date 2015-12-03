@@ -31,24 +31,16 @@
         ID: 'Info',
         MODULE: 'UserManage',
         TITLE: '基本信息-个人设置'
-    };
-    $(function(){
-        if($('#date').length > 0){
-            var yy = $('#date').data('date');
-            if(yy){
-                date_select.ymd(yy);
-            }else{
-                date_select.ymd();
-            }
-            $('#year').on('change', function(){
-                date_select.yearday(this.value);
-            });
-            $('#month').on('change', function(){
-                date_select.monthday(this.value);
-            });
-
-        }
-    });
+    }; 
+    
+    $(function () {
+        $.ms_DatePicker({
+                YearSelector: ".sel_year",
+                MonthSelector: ".sel_month",
+                DaySelector: ".sel_day"
+        });
+        $.ms_DatePicker();
+    }); 
 </script>
 
 <!-- 公共底部 -->

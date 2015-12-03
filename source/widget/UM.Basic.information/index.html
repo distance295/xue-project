@@ -26,7 +26,7 @@
                 </div>
                 <div>
                     <label for="">昵称：</label>
-                    <input class="nickname" type="text" maxlength="18" data-nickname="">
+                    <input class="nickname" type="text" maxlength="18" data-nickname=""/>
                     <div class="error-box">
                         <span class="nickname-warning error"></span>
                     </div>
@@ -48,16 +48,13 @@
                 <div>
                     <div id="date" data-date="2012-10-1">
                         <label for="">生日：</label>
-                        <select id="year" class="year" name="year" >
-                          <option>请选择</option>
+                        <select id="sel_year" name="year" >
                         </select>
                         <i>年</i>
-                        <select id="month" class="month" name="month" >
-                          <option>请选择</option>
+                        <select id="sel_month" name="month" >
                         </select>
                         <i>月</i>
-                        <select id="day" class="day" name="day">
-                          <option>请选择</option>
+                        <select id="sel_day" name="day">
                         </select>
                         <i>日</i>
                     </div>
@@ -83,7 +80,18 @@
     <!-- 这是jquery库文件 -->
     <script type="text/javascript" src="../../lib/jQuery/1.11.1/jquery.min.js"></script>
     <!-- 这是当前模块js文件 -->
+    <script type="text/javascript" src="birthday.js"></script>
     <script type="text/javascript" src="basic-information.js"></script>
+    <script>  
+    $(function () {
+        $.ms_DatePicker({
+                YearSelector: ".sel_year",
+                MonthSelector: ".sel_month",
+                DaySelector: ".sel_day"
+        });
+        $.ms_DatePicker();
+    }); 
+    </script> 
 </body>
 </html>
 
