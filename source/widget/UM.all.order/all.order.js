@@ -9,6 +9,8 @@ $("#order_tab li").on('click', function(){
     that.addClass("current").siblings().removeClass("current"); 
     orderTab(ordertype,page);
 });
+$('#order_tab li:first').click();
+
 function orderTab(ordertype,page){
     $.ajax({
         type: "get",
@@ -17,7 +19,7 @@ function orderTab(ordertype,page){
         data:'type=' + ordertype + '&curpage=' + page, 
         success: function(list){
             var box = $('#page_list');
-            box.innerHTML="list";
+            box.html(list);
         },
         error:function(){  
             alert("异步失败");  
