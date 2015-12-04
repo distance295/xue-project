@@ -13,7 +13,7 @@
   border: 1px solid #eaeaea;
   background-color: #fcfcfc;
 }
-.find-teacher-rank-focus {
+.find-teacher-rank-focus a:hover {
   color: #1e89e0;
 }
 .find-teacher-rank-title .glyphicon {
