@@ -11,7 +11,7 @@
 </div>
 
 <!-- 年级选择展示区域 -->
-<div class="choiceHide hide">
+<div class="choiceHide">
     <link rel="import" href="../Public.Selector/inputSelect.tpl?__inline">
 
 </div>

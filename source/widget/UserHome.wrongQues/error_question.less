@@ -1,33 +1,14 @@
 @charset "UTF-8";
 
-
-
-// html{
-//  font-size: 10px;
-//  min-width: 570px;
-// }
-
 @Nfont-size:1.4rem;
 @Sfont-size:1rem;
 @LRpadding:0.8rem;
 
-//body{
-//  background-color: rgb(241,242,246);
-//  line-height: 1;
-//  font-size: 10px;
-//  color:rgb(51,51,51);
-//}
-
-p{
-  font-size: @Nfont-size;
-  line-height: 1;
-  text-rendering: optimizeLegibility; 
+#wrongQuestionFlow{
+    .modal-title{
+        text-align: center;
+    }
 }
-div{
-  padding:0;
-  margin:0;
-}
-
 .wrongQuest{
   .selector{
     background-color: rgb(249,249,249);
@@ -48,6 +29,7 @@ div{
 
 .choiceHide{
   margin-bottom: 2rem;
+  display: none;
 }
 
 /*错误题目css(start)*/
@@ -138,6 +120,7 @@ div{
 .que-answer{
   line-height: 1.8;
   clear:both;
+    display: none;
   .queSet;
   .que-answer-head{
     font-weight: bold;
