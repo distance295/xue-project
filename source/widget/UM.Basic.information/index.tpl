@@ -4,7 +4,7 @@
     @require birthday.js
 -->
 <div class="bi-content">
-    <form action="" name="date">
+    <form action="" name="">
         <div class="bi-left">
             <div class="message-error">
                 <span></span>
