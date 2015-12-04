@@ -5,8 +5,7 @@ $(function(){
     var
         $hcontainer = $(".find-teacher-hover-container"),
         $ftlist = $(".find-teacher-list"),
-        $ftfollow = $(".find-teacher-follow"),
-        $ftrtitle = $('.find-teacher-rank-title');
+        $ftfollow = $(".find-teacher-follow");
     $ftlist.each(function(){
         $hcontainer.on({
                 mouseenter:function(){
@@ -22,8 +21,5 @@ $(function(){
     $ftfollow.on("click",function(){
         $(this).addClass("find-teacher-have-followed").html("已关注");
     });
-    $ftrtitle.on('click','a',function(){
-        $(this).addClass('active').siblings().removeClass('active find-teacher-rank-focus');
-    })
 });
 
