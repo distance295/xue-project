@@ -17,6 +17,28 @@ $(".hpr-img").on("click",function(){
    $("#hp-small img, #hp-middle img, #hp-big img").attr("src",url)
 })
 
+$(".hpr-btn").on('click', function(headimg){
+    var headimg = $(".hpr-img").val();
+    $.ajax({
+        type: "POST",
+        url: "/MyHeadImg/ajaxUpdateHeadImg/",
+        dataType: "JSON",
+        data:'type=' + headimg,
+        success: function(msg){
+            if(msg){
+                if(msg.sign == 1){
+                    window.location.reload();
+                }else{
+                  alert('失败');
+                }
+            }
+        },
+        error:function(){  
+            alert("异步失败");  
+        }  
+    });
+});
+
 //自定义上传头像
 $("#loadFile").change(function(){
     var img = $("#loadFile").val();
@@ -114,24 +136,7 @@ function getFullPath(obj){
         var lastname = strSrc.substring(pos, strSrc.length);
 
         var dom = document.getElementById('loadFile');
-        var size = null;
-        try{
-            //非ie9以下的浏览器
             size = dom.files.item(0).size/1024;
-        }catch(e){
-            try{
-                dom.select();
-                $('.hl-box').focus();
-                var _img = new Image();
-                _img.src = document.selection.createRange().text;
-                _img.onload = function(){
-                      size = _img.fileSize/1024;
-                }
-                _img.src = document.selection.createRange().text;//为了箭筒ie8重新赋值
-            }catch(e){
-                return false;
-            }
-        }
        
         if (lastname.toLowerCase() != ".jpg" && lastname.toLowerCase() != ".gif" && lastname.toLowerCase() != ".png" && lastname.toLowerCase() != ".jpeg") {  
             $('#loadFile').val('');
@@ -143,7 +148,6 @@ function getFullPath(obj){
                 return false;
             }else{
                 $('#imghead, #hp-small img, #hp-middle img, #hp-big img').attr('src',url);
-                return true;
             };
         }
     }
