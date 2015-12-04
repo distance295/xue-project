@@ -17,7 +17,7 @@ function orderTab(ordertype,page){
         data:'type=' + ordertype + '&curpage=' + page, 
         success: function(list){
             var box = $('#page_list');
-            box.html(list);
+            box.innerHTML="list";
         },
         error:function(){  
             alert("异步失败");  
