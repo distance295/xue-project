@@ -9,6 +9,7 @@
     <div class="find-teacher-list-container">
         <div class="find-teacher-card">
             <div class="find-teacher-intro">
+            <a href="#">
                 <div class="find-teacher-hover-container">
                     <img src="../../widget/Mall.FindTeacher/img/teacher-photo.png" class="find-teacher-photo"/>
                     <div class="find-teacher-hover">
@@ -16,8 +17,9 @@
                         <span class="find-teacher-follow">＋关注</span>
                     </div>
                 </div>
+            </a>
                 <div class="find-teacher-information">
-                    <span class="find-teacher-name">顾斐</span>
+                    <a href="#"><span class="find-teacher-name">顾斐</span></a>
                     <img src="../../widget/Mall.FindTeacher/img/v.png" class="find-teacher-v"/>
                     <span class="find-teacher-sort">数学老师</span>
                 </div>
@@ -34,6 +36,7 @@
         </div>
         <div class="find-teacher-card">
             <div class="find-teacher-intro">
+            <a href="#">
                 <div class="find-teacher-hover-container">
                     <img src="../../widget/Mall.FindTeacher/img/teacher-photo.png" class="find-teacher-teacher-photo"/>
                     <div class="find-teacher-hover">
@@ -42,10 +45,11 @@
                     </div>
                 </div>
                 <div class="find-teacher-information">
-                    <span class="find-teacher-name">顾斐</span>
+                    <a href="#"><span class="find-teacher-name">顾斐</span></a>
                     <img src="../../widget/Mall.FindTeacher/img/v.png" class="find-teacher-v"/>
                     <span class="find-teacher-sort">数学老师</span>
                 </div>
+            </a>
             </div>
             <div class="find-teacher-course">
                 <span class="find-teacher-recommend-course">推荐课:</span>
@@ -59,6 +63,7 @@
         </div>
         <div class="find-teacher-card">
             <div class="find-teacher-intro">
+            <a href="#">
                 <div class="find-teacher-hover-container">
                     <img src="../../widget/Mall.FindTeacher/img/teacher-photo.png" class="find-teacher-photo"/>
                     <div class="find-teacher-hover">
@@ -67,10 +72,11 @@
                     </div>
                 </div>
                 <div class="find-teacher-information">
-                    <span class="find-teacher-name">顾斐</span>
+                    <a href="#"><span class="find-teacher-name">顾斐</span></a>
                     <img src="../../widget/Mall.FindTeacher/img/v.png" class="find-teacher-v"/>
                     <span class="find-teacher-sort">数学老师</span>
                 </div>
+            </a>
             </div>
             <div class="find-teacher-course">
                 <span class="find-teacher-recommend-course">推荐课:</span>
@@ -84,6 +90,7 @@
         </div>
         <div class="find-teacher-card">
             <div class="find-teacher-intro">
+            <a href="#">
                 <div class="find-teacher-hover-container">
                     <img src="../../widget/Mall.FindTeacher/img/teacher-photo.png" class="find-teacher-photo"/>
                     <div class="find-teacher-hover">
@@ -92,10 +99,11 @@
                     </div>
                 </div>
                 <div class="find-teacher-information">
-                    <span class="find-teacher-name">顾斐</span>
+                    <a href="#"><span class="find-teacher-name">顾斐</span></a>
                     <img src="../../widget/Mall.FindTeacher/img/v.png" class="find-teacher-v"/>
                     <span class="find-teacher-sort">数学老师</span>
                 </div>
+            </a>
             </div>
             <div class="find-teacher-course">
                 <span class="find-teacher-recommend-course">推荐课:</span>
@@ -109,6 +117,7 @@
         </div>
         <div class="find-teacher-card">
             <div class="find-teacher-intro">
+            <a href="#">
                 <div class="find-teacher-hover-container">
                     <img src="../../widget/Mall.FindTeacher/img/teacher-photo.png" class="find-teacher-photo"/>
                     <div class="find-teacher-hover">
@@ -117,10 +126,11 @@
                     </div>
                 </div>
                 <div class="find-teacher-information">
-                    <span class="find-teacher-name">顾斐</span>
+                    <a href="#"><span class="find-teacher-name">顾斐</span></a>
                     <img src="../../widget/Mall.FindTeacher/img/v.png" class="find-teacher-v"/>
                     <span class="find-teacher-sort">数学老师</span>
                 </div>
+            </a>
             </div>
             <div class="find-teacher-course">
                 <span class="find-teacher-recommend-course">推荐课:</span>
