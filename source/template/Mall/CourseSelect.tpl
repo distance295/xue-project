@@ -19,9 +19,9 @@
 
             <!-- *********************** 内容区域开始 ********************** -->
             <ul class="screen-rank">
-                <li class="popular-rank">综合</li>
-                <li>学员数</li>
-                <li>价格<img src="../../widget/Mall.FindTeacher/img/down.png"></li>
+                <li class="popular-rank active"><a href="##">综合</a></li>
+                <li><a href="##">学员数</a></li>
+                <li><a href="##">价格<img src="../../widget/Mall.FindTeacher/img/down.png"></a></li>
                 <li class="Onlylive-select"><a href="##"><input type="checkbox"/><b>只看直播</b></a></li>
             </ul>
             <div class="panel panel-default ">
