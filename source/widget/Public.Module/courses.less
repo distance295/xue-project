@@ -794,3 +794,45 @@ ul,li{list-style: none;}
 		}
 	}
 }
+// 分页样式
+.ui_pages {
+	margin: 10px auto;
+	text-align: center;
+	li {
+		display: inline-block;
+		width: auto;
+		.btn.btn_disable {
+			background-color: #f3f3f3;
+			color: #999;
+		}
+		span {
+			border: 1px solid #cfcfcf;
+			border-radius: 0;
+			color: #333333;
+			display: inline-block;
+			height: 25px;
+			line-height: 25px;
+			margin: 0 5px;
+			padding: 0 10px;
+		}
+	}
+	li.pages_current {
+		color: #ffffff;
+		span {
+			background-color: #ffffff;
+			border-color: #ffffff;
+			color: #f60;
+			font-weight: bold;
+		}
+		a {
+			background-color: #ffffff;
+			border-color: #ffffff;
+			color: #f60;
+			font-weight: bold;
+		}
+	}
+	li.pages_more span {
+		border: 1px solid #ffffff;
+		margin: 0;
+	}
+}
