@@ -80,7 +80,7 @@ fresh.media = fresh.media || {};
             }
         }
     }
-
+  
     /**
      * 选择动态试题答案：提交答案
      * @param  {Object} dom 任意子节点
