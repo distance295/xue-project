@@ -26,13 +26,13 @@
                         <span><img id="imghead" src='img/headp.jpg'></span>
                     </div>
                     <div class="btn_up">
-                        <button class="btn_loadFile btn btn-info">+ 上传头像</button>
+                        <button id="upload_img" class="btn_loadFile btn btn-info">+ 上传头像</button>
                     </div>
                     <input id="loadFile" type="file" name="img" class="input_file" onchange="getFullPath(this);" />
                     <em>每次上传消耗3000金币</em>
                     <span>仅支持JPG、GIF、PNG且文件小于2M，照片尺寸请大于200×200</span>
                 </div>
-                <button id="btn_submit" class="btn btn-info" onclick="headsSave();">保存</button>
+                <button id="btn_submit" class="btn btn-info hpl-btn" onclick="headsSave();">保存</button>
             </form>
         </div>
     </div>
