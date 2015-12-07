@@ -175,7 +175,35 @@ function generateMixed(n) {
     }
     return res;
 };
-
+ function showCourse( dom){
+ 	var t= $(dom).siblings('.glory-window'),
+ 	b=g_sign = $('#window_sign'),
+ 	bl=g_id_unexist = $('#window_sign').length == !!0,
+ 	tl=g_class_unexist=t.children('.window_detail').length==!!0,
+ 	h=-10,
+ 	that =$(dom);
+ 	t.html('<div class="window_arrow"></div><div class="window_detail"><span class="learning">1111</span><span class="teacher_name"><a target="_blank" href="/t/zhutao">222</a> </span><span class="learning">啊哈黑</span> <a title="33333" class="learning_course_name" target="_blank" href="/kc/19236.html" xes_id="gloryCourse">201511ankai额世界上几个IE</a></div>');
+            // if(tl){
+            //     $.ajax({
+            //         url : '/glorys/ajaxStuCourse',
+            //         data : 'gloryId='+gloryId+'&stuId='+stuId,
+            //         type: "POST",
+            //         dataType: 'html',
+            //         success: function(result) { 
+            //             if(result){
+            //                 t.html(result);
+            //                 winContorl(t,b,bl,h,that);
+            //             }       
+            //         },
+            //         error: function() {
+            //             alert('');
+            //             return false;
+            //         }
+            //     });
+            // }else{
+            	winContorl(t,b,bl,h,that);
+            // }       
+        };
         function winContorl(t,b,bl,h,that){
         	var left=that.offset().left,
         	top=that.offset().top,
