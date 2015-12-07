@@ -11,6 +11,7 @@ function changeTab(d,box){
 $('#head_tab li').click(function(){
   changeTab(this,".hp-box-left");
 });
+
 //推荐头像
 $(".hpr-img").on("click",function(){
    var url = $(this).attr("src");
@@ -18,19 +19,15 @@ $(".hpr-img").on("click",function(){
 })
 
 $(".hpr-btn").on('click', function(){
-    var headimg = $(".hpr-img").val();
+    var headId = $(".hpr-img").data('id');
     $.ajax({
         type: "POST",
-        url: "/MyHeadImg/ajaxUpdateHeadImg/",
+        url: "/MyInfos/changeImg",
         dataType: "JSON",
-        data:'type=' + headimg,
+        data:'type=' + headId,
         success: function(msg){
-            if(msg){
-                if(msg.sign == 1){
-                    window.location.reload();
-                }else{
-                  alert('失败');
-                }
+            if(msg.sign == 1){
+                window.location.reload();
             }
         },
         error:function(){  
