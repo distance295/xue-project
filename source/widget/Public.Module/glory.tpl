@@ -179,32 +179,3 @@
         </li>
     </ul>
 </div>
-<script type="text/javascript">
-function showCourse( dom){
-    var t= $(dom).siblings('.glory-window'),
-    b=g_sign = $('#window_sign'),
-    bl=g_id_unexist = $('#window_sign').length == !!0,
-    tl=g_class_unexist=t.children('.window_detail').length==!!0,
-    h=-10,
-    that =$(dom);
-    if(tl){
-        $.ajax({
-            url : '/glorys/ajaxStuCourse',
-            data : 'gloryId='+gloryId+'&stuId='+stuId,
-            type: "POST",
-            dataType: 'html',
-            success: function(result) { 
-                if(result){
-                    t.html(result);
-                    winContorl(t,b,bl,h,that);
-                }       
-            },
-            error: function() {
-                return false;
-            }
-        });
-    }else{
-        winContorl(t,b,bl,h,that);
-    }       
-};
-</script>
