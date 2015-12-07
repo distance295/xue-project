@@ -1,13 +1,17 @@
 <!--
    课程列表：
     @require coursestudycenter.js
+    @require cycle.js
+    @require raphael.js
     @require ../Module.Modal/Modal.js
     @require coursestudycenter.less       
 -->
 <div class="courseList-wrap courseList-label">
     <div class="courseList">
         <div class="study-report">
-            <div class="progress-show"><img src="img/circular.png"></div>
+            <div class="progress-show">
+                <div class="processingbar"><font>10%</font></div>    
+            </div>
             <p>本课程共<span>50</span>次直播</p>
             <p>你已参加<span>10</span>次</p>
             <p>未按时参加<span>5</span>次</p>
@@ -81,7 +85,9 @@
 <div class="courseList-wrap courseList-label">
     <div class="courseList">
         <div class="study-report">
-            <div class="progress-show"><img src="img/circular.png"></div>
+            <div class="progress-show">
+                <div class="processingbar"><font>30%</font></div>    
+            </div>
             <p>本课程共<span>50</span>次直播</p>
             <p>你已参加<span>10</span>次</p>
             <p>未按时参加<span>5</span>次</p>
@@ -156,7 +162,9 @@
 <div class="courseList-wrap courseList-label">
     <div class="courseList">
         <div class="study-report">
-            <div class="progress-show"><img src="img/circular.png"></div>
+            <div class="progress-show">
+                <div class="processingbar"><font>60%</font></div>    
+            </div>
             <p>本课程共<span>50</span>次直播</p>
             <p>你已参加<span>10</span>次</p>
             <p>未按时参加<span>5</span>次</p>
@@ -224,7 +232,9 @@
 <div class="courseList-wrap courseList-label">
     <div class="courseList">
         <div class="study-report">
-            <div class="progress-show"><img src="img/circular.png"></div>
+            <div class="progress-show">
+                <div class="processingbar"><font>10%</font></div>    
+            </div>
             <p>本课程共<span>50</span>次直播</p>
             <p>你已参加<span>10</span>次</p>
             <p>未按时参加<span>5</span>次</p>
@@ -291,7 +301,9 @@
 <div class="courseList-wrap courseList-label">
     <div class="courseList">
         <div class="study-report">
-            <div class="progress-show"><img src="img/circular.png"></div>
+            <div class="progress-show">
+                <div class="processingbar"><font>80%</font></div>    
+            </div>
             <p>本课程共<span>50</span>次直播</p>
             <p>你已参加<span>10</span>次</p>
             <p>超过<span>20%</span>的学员</p>
