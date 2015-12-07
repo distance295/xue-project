@@ -24,7 +24,7 @@ $(".hpr-btn").on('click', function(){
         type: "POST",
         url: "/MyInfos/changeImg",
         dataType: "JSON",
-        data:'type=' + headId,
+        data:'headId=' + headId,
         success: function(msg){
             if(msg.sign == 1){
                 window.location.reload();
