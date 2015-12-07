@@ -17,6 +17,28 @@ $(".hpr-img").on("click",function(){
    $("#hp-small img, #hp-middle img, #hp-big img").attr("src",url)
 })
 
+$(".hpr-btn").on('click', function(){
+    var headimg = $(".hpr-img").val();
+    $.ajax({
+        type: "POST",
+        url: "/MyHeadImg/ajaxUpdateHeadImg/",
+        dataType: "JSON",
+        data:'type=' + headimg,
+        success: function(msg){
+            if(msg){
+                if(msg.sign == 1){
+                    window.location.reload();
+                }else{
+                  alert('失败');
+                }
+            }
+        },
+        error:function(){  
+            alert("异步失败");  
+        }  
+    });
+});
+
 //自定义上传头像
 $("#loadFile").change(function(){
     var img = $("#loadFile").val();
@@ -24,15 +46,13 @@ $("#loadFile").change(function(){
       return true;
     }else{
         $(".hl-box em,.hl-box span").hide();
-        $(".btn_loadFile,.hl-box input").css({
-            position: 'absolute',
-            top: '360px',
-            left: '300px',
-            fontSize: '14px',
-            width: '100px',
-            height: '35px'
-        });
+        $("#upload_img").removeClass("btn_loadFile").addClass("btn-change");
     }
+});
+
+$("#upload_img").on('click', function(e) {
+    e.preventDefault();
+    $("#loadFile").click();
 });
 
 function headsSave(){
@@ -108,44 +128,53 @@ function getFullPath(obj){
         return obj.value;
       }
     
-    function setImg(url){
-        var strSrc = $("#loadFile").val();
-        var pos = strSrc.lastIndexOf("."); 
-        var lastname = strSrc.substring(pos, strSrc.length);
+        function setImg(url){
+              var strSrc = $("#loadFile").val();
+              var pos = strSrc.lastIndexOf("."); 
+              var lastname = strSrc.substring(pos, strSrc.length);
 
-        var dom = document.getElementById('loadFile');
-        var size = null;
-        try{
-            //非ie9以下的浏览器
-            size = dom.files.item(0).size/1024;
-        }catch(e){
-            try{
-                dom.select();
-                $('.hl-box').focus();
-                var _img = new Image();
-                _img.src = document.selection.createRange().text;
-                _img.onload = function(){
-                      size = _img.fileSize/1024;
-                }
-                _img.src = document.selection.createRange().text;//为了箭筒ie8重新赋值
-            }catch(e){
-                return false;
-            }
+              var dom = document.getElementById('loadFile');
+
+              if( !isIE9() ) {
+
+                  var size = dom.files.item(0).size/1024;
+              }
+             
+              if (lastname.toLowerCase() != ".jpg" && lastname.toLowerCase() != ".gif" && lastname.toLowerCase() != ".png" && lastname.toLowerCase() != ".jpeg") {  
+                  $('#loadFile').val('');
+                  alert("您选择的文件类型为" + lastname + "，图片必须为 JPG,GIF,PNG 类型");
+                  return false;  
+              }else{
+                  if (!isIE9() && size>2*1024) {
+                      alert('图片大小请不要大于2MB');
+                      return false;
+                  }else{
+                      $('#imghead, #hp-small img, #hp-middle img, #hp-big img').attr('src',url);
+                  };
+              }
         }
-       
-        if (lastname.toLowerCase() != ".jpg" && lastname.toLowerCase() != ".gif" && lastname.toLowerCase() != ".png" && lastname.toLowerCase() != ".jpeg") {  
-            $('#loadFile').val('');
-            alert("您选择的文件类型为" + lastname + "，图片必须为 JPG,GIF,PNG 类型");
-            return false;  
-        }else{
-            if (size>2*1024) {
-                alert('图片大小请不要大于2MB');
-                return false;
-            }else{
-                $('#imghead, #hp-small img, #hp-middle img, #hp-big img').attr('src',url);
+
+        function isIE9 () {
+            var browser=navigator.appName 
+            var b_version=navigator.appVersion 
+            var version=b_version.split(";"); 
+            var trim_Version=version[1].replace(/[ ]/g,""); 
+            if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE6.0") 
+            { 
                 return true;
-            };
+            } 
+            else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE7.0") 
+            { 
+                return true;
+            } 
+            else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE8.0") 
+            { 
+                return true;
+            } 
+            else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE9.0") 
+            { 
+                return true;
+            } 
         }
-    }
 }   
 

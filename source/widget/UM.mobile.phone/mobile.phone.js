@@ -5,7 +5,6 @@
  * @version
  */
  var xue =xue || {};
-
      xue.formCheck = xue.formCheck || {};
 
 !function(){
@@ -33,8 +32,6 @@
     cMessage     : 0
   }; 
 
-
-
   /**
    * [setTips description]
    * @param {string} select [标签选择]
@@ -58,7 +55,6 @@
       'display':'none'
     }).html(null);
   };
-
 
   /**
    * [checkPhone description]
@@ -84,8 +80,7 @@
         fCheck.setTips(phoneWarn,"手机号由11位数字组成");
         fCheck.param.cPhone = 0;
       }else if( isPhone ){
-        /* 手机号码输入正确(两种操作) */
-        /*fCheck.phoneAjax();*/
+        $('#phone').css('border','1px solid #68c04a');
       }else{
         fCheck.setTips(phoneWarn,'不支持该手机号号段');
         fCheck.param.cPhone = 0;
@@ -93,39 +88,6 @@
     }
   };
 
-  /**
-   * [phoneAjax description]
-   * @param  {string} value [手机输入框内的值]
-   * @return {boolean}      [返回true或false方便进行验证]
-   * @description           与后台连接检验输入的手机号码是否符合要求
-   */
-  fCheck.phoneAjax = function () {
-    /* 利用ajax确定是否已经注册(未验证) */
-     $.ajax({
-      type:"POST",
-      url:"/Reg/isPhoneUseable",
-      data: 'phone=' + $('#phone').val(),
-      dataType: "json",
-      timeout: 7000,
-      async: false,
-      success: function(result) {
-        
-        if (result.sign != 1) {
-          
-          fCheck.setTips(fCheck.param.phoneWarn, '该手机号已被注册，您可以直接去登录');
-          fCheck.param.cPhone = 0;
-        }else{
-          fCheck.clearTips(fCheck.param.phoneWarn);
-          fCheck.param.cPhone = 1;
-        }
-      },
-      error: function() {
-        alert('数据读取错误,请重试..');
-        return false;
-      }
-     });
-  };
-  
   // 更新验证码图片
   fCheck.changeVerificationImg = function (imgId) {
     var newVerificationImg = '/Verifications/show?' + fCheck.generateMixed(12);
@@ -165,14 +127,14 @@
   fCheck.imgCodeAjax = function(){
      $.ajax({
       type:"POST",
-      url:"/MyInfos/getVerificationCode",
-      data: 'verifyCode=' + $('#verificationCode').val(),
+      url:"/MyInfos/bindStuPhone",
       dataType: "json",
+      data: 'phone=' + $('#phone').val() + '&curPwd=' + $('#curPwd').val() + '&imgcode=' + $('#verificationCode').val()+'&phoneCode='+$('#phonecode').val(),
       timeout: 7000,
-      async: false,
       success: function(result) {
         /* 填写的信息验证不通过 */
-        if (result.sign != 1) {
+        if(result.sign == 1){
+          window.location.href= '/MyInfos/bindStuPhone';
           fCheck.setTips('.veri-warning','网站验证码填写错误');
           fCheck.param.cImg = 0;
         }else{
@@ -218,7 +180,6 @@
       timeout: 7000,
       async: false,
       success: function (result) {
-
         if(!result.sign){
           fCheck.clearTips('#tips-phonecode');
           fCheck.setTips('#tips-phonecode',result.msg);

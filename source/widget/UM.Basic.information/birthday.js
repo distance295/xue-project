@@ -2,9 +2,9 @@
 $.extend({
 ms_DatePicker: function (options) {
             var defaults = {
-                YearSelector: "#sel_year",
-                MonthSelector: "#sel_month",
-                DaySelector: "#sel_day",
+                YearSelector: "#year",
+                MonthSelector: "#month",
+                DaySelector: "#day",
                 FirstText: "请选择",
                 FirstValue: 0
             };
@@ -84,9 +84,20 @@ ms_DatePicker: function (options) {
             }
             $MonthSelector.change(function () {
                 BuildDay();
+                $('#sel_month').css({
+                    border: '1px solid #68c04a'
+                });
             });
             $YearSelector.change(function () {
                 BuildDay();
+                $('#sel_year').css({
+                    border: '1px solid #68c04a'
+                });
+            });
+            $DaySelector.change(function () {
+                $('#sel_day').css({
+                    border: '1px solid #68c04a'
+                });
             });
 			if($DaySelector.attr("rel")!=""){
 				BuildDay();

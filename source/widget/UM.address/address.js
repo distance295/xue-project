@@ -86,7 +86,8 @@ function saveNewAddress(inputs) {
         data: o,
         success: function(result) {
             if (!result.sign) {
-                return;
+                alert(result.msg);
+                return false;
             }
             var _id = result.addId;
             var tp = _tpl;

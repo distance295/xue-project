@@ -171,7 +171,7 @@ $(function(){
         var $target = $(e.target);
         var index = $target.index();
         $(this).addClass('active').siblings().removeClass('active gold-detail-title-on');
-//        $gdtbtn.removeClass('gold-detail-title-on').eq(index).addClass('gold-detail-title-on');
+        //$gdtbtn.removeClass('gold-detail-title-on').eq(index).addClass('gold-detail-title-on');
         var $targetBox = $($target.attr('data-target'));
         $('.gold-detail-block-change').fadeOut(0);
         $targetBox.fadeIn(300);
@@ -247,7 +247,9 @@ $(function(){
 //时间插件
     var
         $dateStart = $('#dateStart'),
-        $dateEnd = $('#dateEnd');
+        $dateEnd = $('#dateEnd'),
+        $golddc = $('.gold-detail-check');
+    var dateStart,dateEnd;
     if($dateStart.calendar){
         $dateStart.calendar({
             controlId: "dateStartCalendar",
@@ -267,6 +269,21 @@ $(function(){
             upperLimit: new Date(),
             lowerLimit: new Date("2010/01/01")
         });
+        $golddc.on('click',function(){
+            dateStart = $dateStart.val();
+            dateEnd = $dateEnd.val();
+            //console.log(dateStart);
+            //console.log(dateEnd);
+            $.ajax({
+                url : '/GoldShop/ajaxGetGoldLogs',
+                type : 'post',
+                dataType : 'html',
+                data : {
+                    sTime:dateStart,
+                    eTime:dateEnd
+                }
+            })
+        })
     }
 
 //魔法卡兑换模态框
