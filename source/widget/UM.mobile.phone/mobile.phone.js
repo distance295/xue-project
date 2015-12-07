@@ -125,15 +125,15 @@
 
   /* 验证图片验证码 */
   fCheck.imgCodeAjax = function(){
-     $.ajax({
-      type:"POST",
-      url:"/MyInfos/bindStuPhone",
-      dataType: "json",
-      data: 'phone=' + $('#phone').val() + '&curPwd=' + $('#curPwd').val() + '&imgcode=' + $('#verificationCode').val()+'&phoneCode='+$('#phonecode').val(),
-      timeout: 7000,
-      success: function(result) {
-        /* 填写的信息验证不通过 */
-        if(result.sign == 1){
+   $.ajax({
+        type:"POST",
+        url:"/MyInfos/getVerificationCode",
+        data: 'verifyCode=' + $('#verificationCode').val(),
+        dataType: "json",
+        timeout: 7000,
+        success: function(result) {
+          /* 填写的信息验证不通过 */
+          if(result.sign != 1){
           window.location.href= '/MyInfos/bindStuPhone';
           fCheck.setTips('.veri-warning','网站验证码填写错误');
           fCheck.param.cImg = 0;
