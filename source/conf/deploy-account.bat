@@ -1,3 +1,3 @@
 @echo off
 :: loading...
-fis3 release account -d E:\SVN\account\app\webroot
+fis3 release account -d E:\svn\wx4.0\account\app\webroot
