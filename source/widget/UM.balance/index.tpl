@@ -15,7 +15,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="cloneajax">
+            <tr>
                 <td></td>
                 <td></td>
                 <td></td>
