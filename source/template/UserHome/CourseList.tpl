@@ -30,13 +30,15 @@
 
 <!-- 页面配置 -->
 <script>
-    var PAGE_CONFIG = {
-        ID: 'Courses',
-        MODULE: 'UserHome',
-        TITLE: '我的课程-学习中心'
-    };
+var PAGE_CONFIG = {
+    ID: 'Courses',
+    MODULE: 'UserHome',
+    TITLE: '我的课程-学习中心'
+};
+$(function  () {
     courseStudyInit();
-    
+    progressBar();
+})
 </script>
 
 <!-- 公共底部 -->
