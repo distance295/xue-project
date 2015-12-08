@@ -36,6 +36,7 @@ courses.avatar = courses.avatar || {};
         this.box.btn = btn;
         this.box.prev = btn.hasClass('prev') ? btn : btn.siblings('.prev');
         this.box.next = btn.hasClass('next') ? btn : btn.siblings('.next');
+        this.step = $(".avatar-items li").width();
         this.size = this.box.list.length;
         this.max = this.size - 1;
 
@@ -107,14 +108,16 @@ courses.avatar = courses.avatar || {};
 })(courses.avatar);
 
 // 绑定老师头像切换事件
-$('body').off('click', '.avatar-roll a, .majar-items .prev, .majar-items .next').on('click', '.avatar-roll a, .majar-items .prev, .majar-items .next', function() {
-    var that = $(this);
-    if (that.hasClass('none')) {
-        return false;
-    } else {
-       courses.avatar.toggle(that)     
-   }
-});
+$(function(){
+    $('body').off('click', '.avatar-roll a, .majar-items .prev, .majar-items .next').on('click', '.avatar-roll a, .majar-items .prev, .majar-items .next', function() {
+        var that = $(this);
+        if (that.hasClass('none')) {
+            return false;
+        } else {
+         courses.avatar.toggle(that)     
+     }
+ });
+})
 // 更多服务
 function moreService (){
     $('.more-service h4').on('click',function(event){
@@ -156,16 +159,16 @@ function materialForm(){
         dataType: "html",
         success: function(result) {
             if(result){
-               createModal.show({
+             createModal.show({
                 id : 'materialForm',
                 title : '讲义资料',
                 cls : 'material-exam',
                 content : result
             });
-               $('#materialForm').modal('show');
-           }
-       },
-   });
+             $('#materialForm').modal('show');
+         }
+     },
+ });
 }
 // 讲义资料弹框tab事件
 $('body').on('click','.material-wrap .material-tab li',function(){
@@ -181,16 +184,16 @@ function examTable(){
         dataType: "html",
         success: function(result) {
             if(result){
-               createModal.show({
+             createModal.show({
                 id : 'examTable',
                 title : '本课考试',
                 cls : 'material-exam',
                 content : result
             });
-               $('#examTable').modal('show')
-           }
-       },
-   });
+             $('#examTable').modal('show')
+         }
+     },
+ });
 }
 // 延期
 function delayDate(){
