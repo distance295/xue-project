@@ -68,9 +68,11 @@ $(function() {
 
 $(".cl-btn").on('click', function() {
     var value = document.getElementById("bankpay").value;
+    var isbank = (/^[1-9]\d$|^[1-9]\d\d$|^[1-9]\d\d\d$|^[1-4]\d\d\d\d$|^50000$/.test(value) ? true : false);
     if (isbank) {
         console.log(1);
     }else{
+        alert("只能填写大于等于10，小于等于50000 的整数金额");
     };
 });
 
