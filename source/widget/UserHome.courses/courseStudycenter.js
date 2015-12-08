@@ -112,8 +112,8 @@ $('body').off('click', '.avatar-roll a, .majar-items .prev, .majar-items .next')
     if (that.hasClass('none')) {
         return false;
     } else {
-     courses.avatar.toggle(that)     
- }
+       courses.avatar.toggle(that)     
+   }
 });
 // 更多服务
 function moreService (){
@@ -156,16 +156,16 @@ function materialForm(){
         dataType: "html",
         success: function(result) {
             if(result){
-             createModal.show({
+               createModal.show({
                 id : 'materialForm',
                 title : '讲义资料',
                 cls : 'material-exam',
                 content : result
             });
-             $('#materialForm').modal('show');
-         }
-     },
- });
+               $('#materialForm').modal('show');
+           }
+       },
+   });
 }
 // 讲义资料弹框tab事件
 $('body').on('click','.material-wrap .material-tab li',function(){
@@ -181,16 +181,16 @@ function examTable(){
         dataType: "html",
         success: function(result) {
             if(result){
-             createModal.show({
+               createModal.show({
                 id : 'examTable',
                 title : '本课考试',
                 cls : 'material-exam',
                 content : result
             });
-             $('#examTable').modal('show')
-         }
-     },
- });
+               $('#examTable').modal('show')
+           }
+       },
+   });
 }
 // 延期
 function delayDate(){
@@ -229,7 +229,13 @@ function courseStudyInit(){
     $('.label-delay').on('click',function(){
         delayDate();
     });
-    $('.wrap-body .nav-tabs li').on('click',function() {
-        $(this).addClass('active').siblings().removeClass('active');
-    })
 }
+// 录播课程
+function tabRecord(){
+
+    $('.teacher-tab li').on('click',function(){ 
+        index = $(this).index();
+        $(this).addClass('current').siblings().removeClass('current');
+        $('.tab-record-content .tab-pane').eq(index).addClass('active').siblings().removeClass('active');
+    });
+};
