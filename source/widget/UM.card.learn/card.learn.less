@@ -120,6 +120,7 @@
             }
         }
         .cl-bank{
+            display: none;
             .cl-input{
                 margin: 70px 0 150px 240px;
                 span{
@@ -243,7 +244,10 @@
             padding:2px 5px;
         }
         .bank_list{
-            input{ width:15px; margin-top:10px;}
+            input{ 
+                width:15px; 
+                margin-top:10px;
+            }
         }
     }
     .setting_menu{
@@ -388,16 +392,25 @@
 }
  //网银支付
      .payment_bank {
-         overflow: hidden;margin-left:215px;margin-top: 20px;
+        display: none;
+        overflow: hidden;
+        margin-left:215px;
+        margin-top: 20px;
                 .recharge_sum {
                     overflow: hidden;
                     strong {
                         color: #cc0000;
                     }
                 }
-                .payment_text {padding-left:40px;}
+                .payment_text {
+                    padding-left:40px;
+                }
                 .paylists {
-                    overflow: hidden;line-height: auto;margin-bottom: 15px;display: none;*padding-bottom: 15px;
+                    overflow: hidden;
+                    line-height: auto;
+                    margin-bottom: 15px;
+                    display: none;
+                    *padding-bottom: 15px;
                         #chose_other{
                             float:left;
                             display:inline;
@@ -423,8 +436,13 @@
                             }
                         }
                     }
-                    .bank_more {margin:0 7px 10px 0;height: 42px;}
-                    h6.shopcar_title {font-weight: normal;}
+                    .bank_more {
+                        margin:0 7px 10px 0;
+                        height: 42px;
+                    }
+                    h6.shopcar_title {
+                        font-weight: normal;
+                    }
                     &.hasCkecked {
                             _width:100%;overflow:hidden;
                             .bank_list {
