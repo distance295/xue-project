@@ -45,7 +45,7 @@
                  </div>
              </div>
          </div>
-         <div class="cl-bank" style="display:none;">
+         <div class="cl-bank">
              <div class="cl-input">
                  <span>充值金额：</span>
                  <input id="bankpay" type="text">
