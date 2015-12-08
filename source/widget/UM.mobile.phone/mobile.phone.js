@@ -151,24 +151,21 @@
 
   /* 校验短信验证码 */
   fCheck.phonecode = function(param){
-        var box = $(param);
-        var val = box.val();
-        if(val == undefined){
-            fCheck.setTips(id, '手机验证码不能为空');
-        }else{
-            if(val.length == 6 && /^[1-9]\d*|0$/.test(Number(val))){
-
-              /* 验证手机短信验证码 */
-               
-        fCheck.clearTips('#tips-phonecode');
-        fCheck.param.cMessage = 1;
-            }else{
-                fCheck.setTips('#tips-phonecode', '手机验证码不正确');
-        fCheck.param.cMessage = 0;
-            }
-        }
-        
-    };
+      var box = $(param);
+      var val = box.val();
+      if(val == ''){
+          fCheck.setTips('#tips-phonecode', '短信验证码不能为空');
+      }else{
+          if(val.length == 6 && /^[1-9]\d*|0$/.test(Number(val))){
+              /* 验证手机短信验证码 */     
+              fCheck.clearTips('#tips-phonecode');
+              fCheck.param.cMessage = 1;
+          }else{
+              fCheck.setTips('#tips-phonecode', '短信验证码不正确');
+              fCheck.param.cMessage = 0;
+          }
+      }      
+  };
     
     fCheck.phonecodeAjax = function(btn){
       var that = btn;
