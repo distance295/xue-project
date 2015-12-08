@@ -223,4 +223,5 @@ pip-log.txt
 source/conf/deploy-home.bat
 source/conf/deploy-mall.bat
 source/conf/deploy-account.bat
+/source/conf/*
 

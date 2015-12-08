@@ -6,8 +6,7 @@ var select = select || {};
 
 select.opt = {
     item      : '.choice-item-each',
-    point     : '.choice-more-download',
-    pointInput: '.choice-point-cur-input',
+    pointInput: '.choice-items-spe-input',
     itemSpe   : '.choice-items-spe',
     pointShow : '.choice-more-download',
     selector  : '.selector',
@@ -43,12 +42,14 @@ $(select.opt.pointShow).on('click',function(){
         $(that).children('a').html('更多知识点');
         $(that).children('i').removeClass('fa-angle-up fa-chevron-up').addClass('fa-angle-down fa-chevron-down');
         if($(select.opt.itemSpe).length){
+            $(select.opt.itemSpe).scrollTop(0);
             $(select.opt.itemSpe).removeClass('choice-items-open');    
         }else{
             $(select.opt.pointInput).css({
                 'height':'2.9rem',
                 'overflow':'hidden'
             }); 
+            
         }
         
         $(that).removeClass('show-choice');

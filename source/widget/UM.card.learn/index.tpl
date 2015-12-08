@@ -21,7 +21,7 @@
                  <div class="cl-content-right">
                      <div>
                          <label for="">密码：</label>
-                         <input class="studyCardPwd" type="password">
+                         <input class="studyCardPwd" type="text">
                      </div>
                      <div class="error-box">
                          <span class="studyCardPwd-warning error"></span>
@@ -45,10 +45,10 @@
                  </div>
              </div>
          </div>
-         <div class="cl-bank" style="display:none;">
+         <div class="cl-bank">
              <div class="cl-input">
                  <span>充值金额：</span>
-                 <input type="text">
+                 <input id="bankpay" type="text">
                  <span>元</span>
                  <p>只能填写大于等于10，小于等于50000 的整数金额</p>
                  <button class="cl-btn btn btn-info">下一步</button>
@@ -160,9 +160,9 @@
                          <span>更多银行</span>
                      </p>
                  </div>
-                  <div class="formPastPayment">
-                 <button class="cl-btn btn btn-info" type="button">去充值</button>
-             </div>
+                 <div class="formPastPayment">
+                    <button class="cl-btn btn btn-info" type="button">去充值</button>
+                 </div>
              </div>
             
              <div class="prompt-box">
