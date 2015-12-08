@@ -229,7 +229,4 @@ function courseStudyInit(){
     $('.label-delay').on('click',function(){
         delayDate();
     });
-    $('.wrap-body .nav-tabs li').on('click',function() {
-        $(this).addClass('active').siblings().removeClass('active');
-    })
 }
