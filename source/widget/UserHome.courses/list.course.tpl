@@ -316,21 +316,19 @@
                     <a href="##" class="course_estimate">评价</a>
                 </p>
                 <p class="end-time">
-                    <span>有效期至：<strong>2015-9-20</strong></span>
+                    <span>剩余天数：<strong>100</strong>天</span>
                 </p>
 
                 <p class="course-title title-more">
-                    <a class="title-detail" href="##">第三讲：三角函数的各种知识 </a>
+                    <span>上次学到：</span><a class="title-detail" href="##">第三讲：三角函数的各种知识 </a>
                 </p>
 
                 <p class="end-time">
-                    <span><strong>2015-8-10（周六）9:00—11:30 </strong></span>
                 </p>
                 <p class="amount-show">
                     <a class="btn-danger btn " href="##"><em class="button-icon icon-just-white"></em>立即学习</a>
                     <a class="btn btn-default " href="##">课程大纲</a>
                     <a class="btn btn-default last" href="##"><label class="newLabel live-label">live</label>直播辅导</a>
-                    <span class="direct-btn">直播中，<a href="###">立即进入 >></a></span>
                 </p>
             </div>
 
@@ -351,7 +349,7 @@
                             </a>
                             <div class="coach-con">
                                 <p class="teacher-coach">张三</p>
-                                <p class="teacher-majar"><a href="##" class="phone_icon">找辅导老师</a></p>
+                                <p class="teacher-majar"><a href="##" class="phone_icon">去老师主页</a></p>
                             </div>
                         </li>
                         <li>
