@@ -1,7 +1,7 @@
 <!--
    年级选择：
-    @require error_question.less
-    @require error_question.js
+    @require selector.less
+    @require selector.js
 --> <div class="choice">   
         <div class="row">
             <dl class="choice-dl clearfix">
