@@ -13,9 +13,10 @@
                 <li role="presentation" class="active"><a href="#">录播课</a></li>
             </ul>
             <!-- tab切换结束 -->
-
+            <div class="chooseGradeForLb">
             <!-- 年级选择展示区域 -->
-            <link rel="import" href="../../widget/Public.Selector/chooseGradeForLb.tpl?__inline">
+                <link rel="import" href="../../widget/Public.Selector/chooseGradeForLb.tpl?__inline">
+            </div>
 
             <!-- 错题本展示区域 -->
 			<link rel="import" href="../../widget/UserHome.wrongQues/showWrongQuesForLb.tpl?__inline">
