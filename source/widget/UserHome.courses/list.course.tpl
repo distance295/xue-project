@@ -21,7 +21,7 @@
                 <p class="course-title">
                     <label class="course-label course-blue-label">直播</label>
                     <a class="title-detail" href="##">【飞遍化学】炸开你的化学世界大门(第三季)&mdash;&mdash;大揭秘 </a>
-                    <a href="##" class="course_estimate">评价</a>
+                    <a href="##" class="course_estimate">评论</a>
                 </p>
                 <p class="end-time">
                     <span>有效期至：<strong>2015-9-20</strong></span>
@@ -98,7 +98,7 @@
                     <label class="course-label course-blue-label">直播</label>
                     <a class="title-detail" href="##">【飞遍化学】炸开你的化学世界大门(第三季)&mdash;&mdash;大揭秘 </a>
                     <span class="change-course">调课中</span>
-                    <a href="##" class="course_estimate">评价</a>
+                    <a href="##" class="course_estimate">评论</a>
                 </p>
                 <p class="end-time">
                     <span>有效期至：<strong>2015-9-20</strong></span>
@@ -174,7 +174,7 @@
                 <p class="course-title">
                     <label class="course-label course-blue-label">直播</label>
                     <a class="title-detail" href="##">【飞遍化学】炸开你的化学世界大门(第三季)&mdash;&mdash;大揭秘 </a>
-                    <a href="##" class="course_estimate">评价</a>
+                    <a href="##" class="course_estimate">评论</a>
                 </p>
                 <p class="end-time">
                     <span>有效期至：<strong>2015-9-20</strong></span>
@@ -244,7 +244,7 @@
                 <p class="course-title">
                     <label class="course-label course-blue-label">直播</label>
                     <a class="title-detail" href="##">【飞遍化学】炸开你的化学世界大门(第三季)&mdash;&mdash;大揭秘 </a>
-                    <a href="##" class="course_estimate">评价</a>
+                    <a href="##" class="course_estimate">评论</a>
                 </p>
                 <p class="end-time">
                     <span>有效期至：<strong>2015-9-20</strong></span>
@@ -313,7 +313,7 @@
                 <p class="course-title">
                     <label class="course-label course-green-label">录播</label>
                     <a class="title-detail" href="##">【飞遍化学】炸开你的化学世界大门(第三季)&mdash;&mdash;大揭秘 </a>
-                    <a href="##" class="course_estimate">评价</a>
+                    <a href="##" class="course_estimate">评论</a>
                 </p>
                 <p class="end-time">
                     <span>剩余天数：<strong>100</strong>天</span>
@@ -326,7 +326,7 @@
                 <p class="end-time">
                 </p>
                 <p class="amount-show">
-                    <a class="btn-danger btn " href="##"><em class="button-icon icon-just-white"></em>立即学习</a>
+                    <a class="btn-danger btn " href="##"><em class="button-icon icon-will-red"></em>立即学习</a>
                     <a class="btn btn-default " href="##">课程大纲</a>
                     <a class="btn btn-default last" href="##"><label class="newLabel live-label">live</label>直播辅导</a>
                 </p>
