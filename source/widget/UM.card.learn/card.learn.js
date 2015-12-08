@@ -64,13 +64,13 @@ $(function() {
  
 })  
 
-/* 银行卡城中 */
-
+/* 银行卡充值 */
 $(".cl-btn").on('click', function() {
     var value = document.getElementById("bankpay").value;
     var isbank = (/^[1-9]\d$|^[1-9]\d\d$|^[1-9]\d\d\d$|^[1-4]\d\d\d\d$|^50000$/.test(value) ? true : false);
     if (isbank) {
-        console.log(1);
+        $('.cl-input').hide();
+        $('.payment_bank').show();
     }else{
         alert("只能填写大于等于10，小于等于50000 的整数金额");
     };
