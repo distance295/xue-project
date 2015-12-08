@@ -23,7 +23,9 @@
         MODULE: 'UserHome',
         TITLE: '录播列表-学习中心',
     };
-
+    $(function(){
+        tabRecord();
+    });
 </script>
 
 <!-- 公共底部 -->

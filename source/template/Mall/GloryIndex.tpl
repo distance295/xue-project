@@ -37,5 +37,6 @@ var PAGE_CONFIG = {
 </script>
 
 
+
 <!-- 公共底部 -->
 <link rel="import" href="../Layer/layer.Mall.foot.tpl?__inline">

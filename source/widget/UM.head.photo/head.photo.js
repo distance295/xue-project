@@ -11,26 +11,24 @@ function changeTab(d,box){
 $('#head_tab li').click(function(){
   changeTab(this,".hp-box-left");
 });
+
 //推荐头像
 $(".hpr-img").on("click",function(){
    var url = $(this).attr("src");
+   $(this).addClass('imghover').siblings().removeClass("imghover");
    $("#hp-small img, #hp-middle img, #hp-big img").attr("src",url)
 })
 
 $(".hpr-btn").on('click', function(){
-    var headimg = $(".hpr-img").val();
+    var headId = $(".hpr-img").data('id');
     $.ajax({
         type: "POST",
-        url: "/MyHeadImg/ajaxUpdateHeadImg/",
+        url: "/MyInfos/changeImg",
         dataType: "JSON",
-        data:'type=' + headimg,
+        data:'headId=' + headId,
         success: function(msg){
-            if(msg){
-                if(msg.sign == 1){
-                    window.location.reload();
-                }else{
-                  alert('失败');
-                }
+            if(msg.sign == 1){
+                window.location.reload();
             }
         },
         error:function(){  
@@ -136,7 +134,6 @@ function getFullPath(obj){
               var dom = document.getElementById('loadFile');
 
               if( !isIE9() ) {
-
                   var size = dom.files.item(0).size/1024;
               }
              
@@ -155,26 +152,20 @@ function getFullPath(obj){
         }
 
         function isIE9 () {
-            var browser=navigator.appName 
-            var b_version=navigator.appVersion 
-            var version=b_version.split(";"); 
-            var trim_Version=version[1].replace(/[ ]/g,""); 
-            if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE6.0") 
-            { 
-                return true;
-            } 
-            else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE7.0") 
-            { 
-                return true;
-            } 
-            else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE8.0") 
-            { 
-                return true;
-            } 
-            else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE9.0") 
-            { 
-                return true;
-            } 
+            if(navigator.userAgent.indexOf("MSIE")>0){   
+                  if(navigator.userAgent.indexOf("MSIE 6.0")>0){   
+                    return true;   
+                  }   
+                  if(navigator.userAgent.indexOf("MSIE 7.0")>0){  
+                    return true;    
+                  }   
+                  if(navigator.userAgent.indexOf("MSIE 9.0")>0 && !window.innerWidth){
+                    return true;   
+                  }   
+                  if(navigator.userAgent.indexOf("MSIE 9.0")>0){  
+                    return true;  
+                  }   
+                } 
         }
 }   
 
