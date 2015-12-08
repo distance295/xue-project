@@ -15,21 +15,21 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="cloneajaxtr">
+            <tr>
                 <td>s201509190726</td>
                 <td>2015-09-21</td>
                 <td>2015-09-21</td>
                 <td>50</td>
                 <td>未使用</td>
             </tr>
-            <tr class="cloneajaxtr">
+            <tr>
                 <td>s201509190726</td>
                 <td>2015-09-21</td>
                 <td>2015-09-21</td>
                 <td>50</td>
                 <td class="gcr-red">使用中</td>
             </tr>
-            <tr class="cloneajaxtr">
+            <tr>
                 <td>s201509190726</td>
                 <td>2015-09-21</td>
                 <td>2015-09-21</td>

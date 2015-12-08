@@ -154,6 +154,9 @@ body{
 			line-height: 18px;
 			margin-bottom: 8px;
 			font-family: 'Microsoft YaHei';
+			span{
+				color: #999;
+			}
 			.course_estimate{
 				color: @dark333;
 				font-size: 12px;
@@ -170,6 +173,7 @@ body{
 		}
 		.title-more{
 			margin-top: 38px;
+			font-size: 14px;
 		}
 		.end-time{
 			color: #666;
@@ -532,6 +536,14 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 			}
 		}
 	}
+	.tab-record-content{
+		.tab-pane{
+			display: none;
+		}
+		.active{
+			display: block;
+		}
+	}
 	.course-table{
 		background: #fff;
 		td{
@@ -613,11 +625,21 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 		line-height: 30px;
 		padding: 0 15px;
 		cursor: pointer;
+		a{
+			outline: none;
+		}
 	}
 	li.current{
 		background: #3bafda;
 		color: #fff;
 		border-radius: 4px 4px 0 0;
+		a{
+			outline: none;
+			color: #fff;
+			&:hover{
+				color: #fff;
+			}
+		}
 	}
 }
 .amount-show{
