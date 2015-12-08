@@ -6,10 +6,11 @@
   display: inline-block;
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 .ao-content .ao-list {
   height: 28px;
-  margin: 0 0 20px -13px;
+  margin: 0 0 20px -23px;
 }
 .ao-content .ao-list li {
   float: left;
@@ -41,16 +42,16 @@
   font-size: 12px;
 }
 .ao-content .some-order .ao-title .ao-first {
-  width: 575px;
+  width: 57%;
 }
 .ao-content .some-order .ao-title .ao-second {
-  width: 160px;
+  width: 16%;
 }
 .ao-content .some-order .ao-title .ao-third {
-  width: 115px;
+  width: 12%;
 }
 .ao-content .some-order .ao-title .ao-fourth {
-  width: 155px;
+  width: 15%;
 }
 .ao-content .some-order .ao-details {
   height: 1%;
@@ -113,7 +114,6 @@
   padding: 1px 8px;
   border-radius: 3px;
   font-style: normal;
-  font-size: 12px;
   color: #fff;
   background-color: #ffbc3c;
 }
@@ -145,16 +145,14 @@
   margin: 0 25px;
 }
 .ao-content .some-order .ao-details ul li .ao-operation span a {
-  font-family: "SimSun";
   font-size: 12px;
+  font-family: "SimSun";
   color: #333;
 }
 .ao-content .some-order .ao-details ul li .ao-operation button {
   width: 100px;
-  height: 30px;
   margin-bottom: 12px;
-  padding: 0;
-  border-radius: 3px;
+  font-family: "simsun";
   font-size: 14px;
 }
 .ao-content .some-order .ao-details ul .ao-li {

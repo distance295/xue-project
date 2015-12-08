@@ -1,19 +1,22 @@
 <!--
     @require all.order.less
+    @require order.modal.less
+    @require all.order.js
+    @require Modal.js
 -->
 
 <div class="ao-content">
-    <ul class="ao-list">
-        <li class="current"><a href="#">全部订单 32</a></li>
-        <li><a href="#">已完成 19</a></li>
-        <li><a href="#">待支付 22</a></li>
-        <li><a href="#">已取消 11</a></li>
-        <li><a href="#">待审核 10</a></li>
-        <li><a href="#">审核未通过 5</a></li>
-        <li><a href="#">待发货 5</a></li>
-        <li><a href="#">待收货 6</a></li>
+    <ul id="order_tab" class="ao-list">
+        <li class="current" data-pages="" data-params="1"><a href="#">全部订单 32</a></li>
+        <li data-pages="" data-params="2"><a href="#">已完成 19</a></li>
+        <li data-pages="" data-params="3"><a href="#">待支付 22</a></li>
+        <li data-pages="" data-params="4"><a href="#">已取消 11</a></li>
+        <li data-pages="" data-params="5"><a href="#">待审核 10</a></li>
+        <li data-pages="" data-params="6"><a href="#">审核未通过 5</a></li>
+        <li data-pages="" data-params="7"><a href="#">待发货 5</a></li>
+        <li data-pages="" data-params="8"><a href="#">待收货 6</a></li>
     </ul>
-    <div class="some-order">
+    <div id="page_list" class="some-order">
         <ul class="ao-title">
             <li class="ao-first">订单详情</li>
             <li class="ao-second">总计</li>
@@ -22,9 +25,7 @@
         </ul>
         <div class="ao-details">
             <ul class="ao-subtitle">
-                <li>
-                    <p>2015-08-02 14:32:12</p>
-                </li>
+                <li><p>2015-08-02  14:32:12</p></li>
                 <li><span>订单号：201508021432120909</span></li>
                 <li>你需要在<em>47小时</em>之内支付</li>
             </ul>
@@ -35,8 +36,7 @@
                             <img src="img/order-teacher.png" alt="">
                             <em>语文</em>
                             <span>[课程升级] 2015学年五升六年级奥数年卡（竞赛班）</span>
-                            <p>顾斐老师
-                                <br/>赠品：奥数思维训练汇编六年级</p>
+                            <p>顾斐老师<br/>赠品：奥数思维训练汇编六年级</p>
                         </div>
                         <div class="order-teacher">
                             <img src="img/order-teacher.png" alt="">
@@ -50,20 +50,18 @@
                 <li class="ao-third ao-li">待支付</li>
                 <li class="ao-li">
                     <div class="ao-operation">
-                        <button class="alert">立即支付</button>
+                        <button class="btn btn-danger">立即支付</button>
                         <span>
-                                <a href="#">查看详情</a>
-                                <a href="#">取消订单</a>
-                            </span>
+                            <a href="#">查看详情</a>
+                            <a href="#">取消订单</a>
+                        </span>
                     </div>
                 </li>
             </ul>
         </div>
         <div class="ao-details">
             <ul class="ao-subtitle">
-                <li>
-                    <p>2015-08-02 14:32:12</p>
-                </li>
+                <li><p>2015-08-02  14:32:12</p></li>
                 <li><span>订单号：201508021432120909</span></li>
             </ul>
             <ul>
@@ -81,16 +79,14 @@
                 <li class="ao-third ao-li">已完成</li>
                 <li class="ao-li">
                     <div class="ao-operation">
-                        <button>查看详情</button>
+                        <button class="btn btn-info">查看详情</button>
                     </div>
                 </li>
             </ul>
         </div>
         <div class="ao-details">
             <ul class="ao-subtitle">
-                <li>
-                    <p>2015-08-02 14:32:12</p>
-                </li>
+                <li><p>2015-08-02  14:32:12</p></li>
                 <li><span>订单号：201508021432120909</span></li>
             </ul>
             <ul>
@@ -108,19 +104,17 @@
                 <li class="ao-third ao-li">已取消</li>
                 <li class="ao-li">
                     <div class="ao-operation">
-                        <button class="alert">重新购买</button>
+                        <button class="btn btn-danger" data-toggle="modal" data-target="#orderModal" onclick="orderModal();">重新购买</button>
                         <span>
-                                <a href="#">查看详情</a>
-                            </span>
+                            <a href="#">查看详情</a>
+                        </span>
                     </div>
                 </li>
             </ul>
         </div>
         <div class="ao-details">
             <ul class="ao-subtitle">
-                <li>
-                    <p>2015-08-02 14:32:12</p>
-                </li>
+                <li><p>2015-08-02  14:32:12</p></li>
                 <li><span>订单号：201508021432120909</span></li>
             </ul>
             <ul>
@@ -138,19 +132,17 @@
                 <li class="ao-third ao-li">待审核</li>
                 <li class="ao-li">
                     <div class="ao-operation">
-                        <button>查看详情</button>
+                        <button class="btn btn-info">查看详情</button>
                         <span>
-                                <a href="#">取消订单</a>
-                            </span>
+                            <a href="#">取消订单</a>
+                        </span>
                     </div>
                 </li>
             </ul>
         </div>
         <div class="ao-details">
             <ul class="ao-subtitle">
-                <li>
-                    <p>2015-08-02 14:32:12</p>
-                </li>
+                <li><p>2015-08-02  14:32:12</p></li>
                 <li><span>订单号：201508021432120909</span></li>
             </ul>
             <ul>
@@ -168,19 +160,17 @@
                 <li class="ao-third ao-li">待收货</li>
                 <li class="ao-li">
                     <div class="ao-operation">
-                        <button class="alert">确认收货</button>
+                        <button class="btn btn-danger">确认收货</button>
                         <span>
-                                <a href="#">查看详情</a>
-                            </span>
+                            <a href="#">查看详情</a>
+                        </span>
                     </div>
                 </li>
             </ul>
         </div>
         <div class="ao-details">
             <ul class="ao-subtitle">
-                <li>
-                    <p>2015-08-02 14:32:12</p>
-                </li>
+                <li><p>2015-08-02  14:32:12</p></li>
                 <li><span>订单号：201508021432120909</span></li>
             </ul>
             <ul>
@@ -198,16 +188,14 @@
                 <li class="ao-third ao-li">待发货</li>
                 <li class="ao-li">
                     <div class="ao-operation">
-                        <button>查看详情</button>
+                        <button class="btn btn-info">查看详情</button>
                     </div>
                 </li>
             </ul>
         </div>
         <div class="ao-details">
             <ul class="ao-subtitle">
-                <li>
-                    <p>2015-08-02 14:32:12</p>
-                </li>
+                <li><p>2015-08-02  14:32:12</p></li>
                 <li><span>订单号：201508021432120909</span></li>
             </ul>
             <ul>
@@ -225,7 +213,7 @@
                 <li class="ao-third ao-li">审核未通过</li>
                 <li class="ao-li">
                     <div class="ao-operation">
-                        <button>查看详情</button>
+                        <button class="btn btn-info">查看详情</button>
                     </div>
                 </li>
             </ul>

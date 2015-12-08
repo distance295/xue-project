@@ -8,65 +8,73 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <!-- 这是CSS库文件 -->
-    <link rel="stylesheet" type="text/css" href="../../lib/foundation/css/foundation.css">
+    <link href="../../lib/bootstrap/3.3.5-custom/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- 这是当前模块样式文件 -->
     <link href="basic-information.css" rel="stylesheet">
 </head>
 <body>
     <div class="bi-content">
-        <div class="bi-left">
-            <p>
-                <label for="">用户名：</label>
-                <span>gonghaibin3018@100tal.com</span>
-            </p>
-            <p>
-                <label for="">昵称：</label>
-                <span><a href="#">请进入学习中心完善该条信息</a></span>
-            </p>
-            <p>
-                <label for="">真实姓名：</label>
-                <span><a href="#">请进入学习中心完善该条信息</a></span>
-            </p>
-            <p>
-                <label for="">性别：</label>
-                <span><a href="#">请进入学习中心完善该条信息</a></span>
-            </p>
-            <p>
-                <label for="">年级：</label>
-                <span>初三</span>
-                <em>网校会在每年7月1日自动为你更新年级</em>
-            </p>
-            <p>
-                <span class="birthday">
-                    <label for="">生日：</label>
-                    <select>
-                      <option>请选择</option>
-                    </select>
-                    <i>年</i>
-                    <select>
-                      <option>请选择</option>
-                    </select>
-                    <i>月</i>
-                    <select>
-                      <option>请选择</option>
-                    </select>
-                    <i>日</i>
-                </span>
-            </p>
-            <p>
-                <label for="">所在地：</label>
-                <span><a href="#">请进入学习中心完善该条信息</a></span>
-            </p>
-            <p>
-                <label for="">学校：</label>
-                <input class="user-school" type="text">
-                <span class="user-school-warning error"></span>
-            </p>
-            <button id="form_submit" class="login_btn btn_submit" name="submit" type="submit">保存</button>
-        </div>
+        <form action="" name="">
+            <div class="bi-left">
+                <div class="message-error">
+                    <span></span>
+                </div>
+                <div>
+                    <label for="">用户名：</label>
+                    <span>gonghai1234@100tal.com</span>
+                </div>
+                <div>
+                    <label for="">昵称：</label>
+                    <span><a href="#">请进入学习中心完善该条信息</a></span>
+                </div>
+                <div>
+                    <label for="">真实姓名：</label>
+                    <span><a href="#">请进入学习中心完善该条信息</a></span>
+                </div>
+                <div>
+                    <label for="">性别：</label>
+                    <span><a href="#">请进入学习中心完善该条信息</a></span>
+                </div>
+                <div>
+                    <label for="">年级：</label>
+                    <span>初三</span>
+                    <em>网校会在每年7月1日自动为你更新年级</em>
+                </div>
+                <div>
+                    <div id="date" data-date="2012-10-1">
+                        <label for="">生日：</label>
+                        <select id="year" class="year" name="year" >
+                          <option>请选择</option>
+                        </select>
+                        <i>年</i>
+                        <select id="month" class="month" name="month" >
+                          <option>请选择</option>
+                        </select>
+                        <i>月</i>
+                        <select id="day" class="day" name="day">
+                          <option>请选择</option>
+                        </select>
+                        <i>日</i>
+                    </div>
+                </div>
+                <div>
+                    <label for="">所在地：</label>
+                    <span><a href="#">请进入学习中心完善该条信息</a></span>
+                </div>
+                <div>
+                    <label for="school">学校：</label>
+                    <input class="school" type="text" maxlength="50">
+                    <div class="error-box">
+                        <span class="school-warning error"></span>
+                    </div>
+                </div>
+                <button class="btn-submit btn btn-info" name="submit" type="submit">保存</button>
+            </div>
         <div class="bi-right">
             <span>真实姓名、性别、所在地、年级等基本资料如需修改请拨打客服电话：<em>400-800-2211</em></span>
         </div>
+        </form>
     </div>
     <!-- 这是jquery库文件 -->
     <script type="text/javascript" src="../../lib/jQuery/1.11.1/jquery.min.js"></script>

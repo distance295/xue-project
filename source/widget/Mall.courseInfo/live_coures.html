@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>直播课程详情页</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<!-- 这是CSS库文件 -->
+	<link href="../../lib/bootstrap/3.3.5-custom/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<!-- 这是当前模块样式文件 -->
+	<link href="ui-course-info.css" rel="stylesheet"></head>
+<body>
+	<div id="container" class="container">
+		<div class="ui-course-infor-wrap">
+			<div class="course-left-player f-left">
+				<div class="video-images-player">
+					<a href="#" target="_blank">
+						<img src="pic/xiangqing_03.jpg" height="340" width="340" alt=""></a>
+				</div>
+			</div>
+			<div class="course-center-list f-left">
+				<h2 class="coures-name-title">人教版四升五年级上下全册数学满分班</h2>
+				<div class="attend-class-time">
+					<span class="f-left">上课时间：</span>
+					<ul class="time-list f-left">
+						<li class="current">07月01日-08月20日 每天19:00-20:00</li>
+						<li>07月01日-08月20日 每天19:00-20:00</li>
+					</ul>
+					<div class="time-list-tips f-left">
+						以上时间为参考时间，实际上课时间可能会有些许出入。
+						<a href="#lookTime" id="lookTimeList">点击查看详细时间表</a>
+					</div>
+				</div>
+				<div class="course-content-text">
+					<span class="f-left">课程内容：</span>
+					<ul class="f-left">
+						<li>
+							20场直播课程+作业反馈
+							<a href="#" target="_blank">立即试听</a>
+						</li>
+						<li>
+							20讲视频课程
+							<a href="#" target="_blank">立即试听</a>
+						</li>
+						<li>3次阶段考试</li>
+					</ul>
+				</div>
+				<div class="course-favorable-list">
+					课程优惠：
+					<span>续报9折</span>
+					<span>送u盘</span>
+					<span>送练习册</span>
+					<span>实物礼品</span>
+				</div>
+				<div class="course-favorable-money">
+					<div class="favrble-money f-left">
+						<span>
+							课程优惠价: <em class="red">￥660</em>
+						</span> <del>原价: <em>￥825</em></del> 
+					</div>
+					<ul class="f-right">
+						<li class="line">
+							已购买
+							<br/>
+							<em class="red">23000</em>
+						</li>
+						<li>
+							课程满意度
+							<br/>
+							<em class="red">92.99</em>
+						</li>
+					</ul>
+				</div>
+				<div class="course-button-list">
+					<span class="f-left">
+						<button class="btn btn-danger button_apply">立即报名</button>
+					</span>
+					<span class="collect f-left">
+						<a id="collectId" onclick="collect(11323)" href="javascript:void(0);">收藏课程</a>
+					</span>
+				</div>
+			</div>
+			<div class="course-right-teacher f-right">
+				<h5 class="main-teacher-title red">主讲老师</h5>
+				<div class="main-teacher-list">
+					<div class="main-teacher">
+						<div class="ui-avatar f-left">
+							<img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt=""></div>
+						<div class="teacher-avatar-infor f-left">
+							<p>朱韬老师</p>
+							<p>
+								教学满意度
+								<span>92.71</span>
+							</p>
+						</div>
+					</div>
+					<div class="teacher-infor">主讲老师将为您提供课程讲授／知识点强化服务</div>
+				</div>
+				<h5 class="main-teacher-title">辅导老师</h5>
+				<div class="main-teacher-list noBorder">
+					<div class="main-teacher">
+						<div class="ui-avatar f-left">
+							<img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt=""></div>
+						<div class="teacher-avatar-infor f-left">
+							<p>朱韬老师</p>
+							<p>
+								教学满意度
+								<span>92.71</span>
+							</p>
+						</div>
+					</div>
+					<div class="teacher-infor">主讲老师将为您提供课程讲授／知识点强化服务</div>
+				</div>
+			</div>
+		</div>
+		<!-- 课程上半部分 -->
+		<div class="columns-wrap">
+			<div class="columns-left f-left">
+				<ul class="ui-nav-link">
+					<li class="current">直播大纲(10)</li>
+					<li>点播大纲(10)</li>
+					<li>课程介绍</li>
+					<li class="last">课程评价</li>
+				</ul>
+				<div class="course-info-box">
+					<div class="course-detail" style="display:block;" id="lookTime">
+						<table class="table table_outline">
+							<tbody>
+								<tr>
+									<th class="t-left">讲名称</th>
+									<th>上课日期</th>
+									<th>上课时间</th>
+									<th>学习状态</th>
+								</tr>
+								<tr>
+									<td class="t-left">
+										<span class="live_teach">[直播辅导]</span>
+										计算机爱空间上的课教案和时间肯
+									</td>
+									<td>7月1好</td>
+									<td>17:00-19:00</td>
+									<td>
+										<a href="#">立即试听</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="t-left">
+										<span class="live_teach">[直播辅导]</span>
+										计算机爱空间上的课教案和时间肯
+									</td>
+									<td>7月1好</td>
+									<td>17:00-19:00</td>
+									<td>
+										<a href="#">观看回放</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="t-left">
+										<span class="live_teach">[直播辅导]</span>
+										计算机爱空间上的课教案和时间肯
+									</td>
+									<td>7月1好</td>
+									<td>17:00-19:00</td>
+									<td>
+										<span>未开始</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="t-left">
+										<span class="live_teach">[直播辅导]</span>
+										计算机爱空间上的课教案和时间肯
+									</td>
+									<td>7月1好</td>
+									<td>17:00-19:00</td>
+									<td>
+										<a href="#">立即试听</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- 直播大纲 -->
+					<div class="course-detail">
+						<table class="table table_outline">
+							<tbody>
+								<tr>
+									<th class="t-left">讲名称</th>
+									<th>上课日期</th>
+									<th>学习状态</th>
+								</tr>
+								<tr>
+									<td class="t-left">
+										<span class="live_teach">[直播辅导]</span>
+										计算机爱空间上的课教案和时间肯
+									</td>
+									<td>2015-10-11至2015-11-11</td>
+									<td>
+										<a href="#" style="color:red;">进行中</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="t-left">
+										<span class="live_teach">[直播辅导]</span>
+										计算机爱空间上的课教案和时间肯
+									</td>
+									<td>2015-10-11至2015-11-11</td>
+									<td>
+										<span>未开始</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="t-left">
+										<span class="live_teach">[直播辅导]</span>
+										计算机爱空间上的课教案和时间肯
+									</td>
+									<td>2015-10-11至2015-11-11</td>
+									<td>
+										<span class="notStart">已结束</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="t-left">
+										<span class="live_teach">[直播辅导]</span>
+										计算机爱空间上的课教案和时间肯
+									</td>
+
+									<td>2015-10-11至2015-11-11</td>
+									<td>
+										<span>未开始</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- 点播大纲 -->
+					<div class="course-detail">
+						<dl>
+							<dt>课程有效期</dt>
+							<dd>
+								本课程有效期自购买之日开始计算，请于 <font color="red">2015-08-31</font>
+								学完，合理安排学习时间。
+							</dd>
+						</dl>
+						<dl>
+							<dt>课程更新时间</dt>
+							<dd>
+								本课程更新于 <font color="red">2013-04-23</font>
+								。
+							</dd>
+						</dl>
+					</div>
+					<!-- 课程介绍 -->
+					<div class="course-detail">
+						<!-- 未登录状态下显示立即登录 -->
+						<div class="detail-login">
+							购买课程后才可以发表评价哦！
+							<a href="http://login.xueersi.com/login/aHR0cDovL3d3dy54dWVlcnNpLmNvbS9rYy82NjE5P2lzQ29tbWVudCNjb21tZW50">立即登录</a>
+						</div>
+						<!-- 未登录状态下显示立即登录 end-->
+						<!-- 评论发表框 -->
+						<div class="ui-comment-info">
+							<div class="comment-title">评输入您对课课的评价</div>
+							<div class="comment-textarea">
+								<textarea rows="10" cols="30" id="comm_content" name=""></textarea>
+							</div>
+							<div class="comment-func">
+								<div id="course-comm-tips" class="comment-tips">请填写内容，长度在1~140之间</div>
+								<div class="comment-button">
+									<button name="comm-submit" type="submit" class="btn btn-info btn-submit ">评价</button>
+								</div>
+							</div>
+						</div>
+						<!-- 评论发表框 end-->
+						<!-- 评价列表 -->
+						<div class="comment-detail-wrap">
+							<div class="comment-detail-list">
+								<div class="user-pic">
+									<p class="pic">
+										<img width="40" height="40" src="http://file.xueersi.com/award/boy/small_00002.jpg"></p>
+									<p title="小芋头s" class="name">小芋头s</p>
+									<p title="湖南省" class="site">湖南省</p>
+								</div>
+								<div class="user-text-box">
+									<p class="text">中国人所qqqqqqqq</p>
+									<p class="time">2015-11-05 11:07:46</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 课程评价 -->
+				</div>
+			</div>
+			<div class="columns-right f-right">9 columns</div>
+		</div>
+		<!-- 课程下半部分 -->
+	</div>
+	<!-- 这是jquery库文件 -->
+	<script type="text/javascript" src="../../lib/jQuery/2.1.1/jquery.min.js"></script>
+	<!-- 这是当前模块js文件 -->
+	<script type="text/javascript" src="ui-course-info.js"></script>
+</body>
+</html>

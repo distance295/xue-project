@@ -2,20 +2,21 @@ var xue =xue || {};
     xue.formCheck = xue.formCheck || {};
 var fCheck = xue.formCheck;
 
-//提示css样式
+/* 提示信息的css样式 */
 fCheck.setTips = function(select, tips){
   $(select).css({
-    'background': 'url("img/warning.png") no-repeat 10px 5px',
-    'padding-left':'32px' 
+    'display': 'block',
   }).html(tips);
 };
-//清除提示
+
+/* 输入正确时，清除提醒 */
 fCheck.clearTips = function(select){
   $(select).css({
-    'background':'none'
+    'display':'none'
   }).html(null);
 };
-//边框样式
+
+/* 边框样式 */
 fCheck.bordercss = function(argument) {
    if($(argument).val() !== ''){
      $(argument).css('border','1px solid #68c04a');
@@ -23,7 +24,7 @@ fCheck.bordercss = function(argument) {
 }
 
 $(function() {
-    $(".btn_blue").click(function() {
+    $(".btn-certificate").click(function() {
         if ($(".serialNo").val() == '') {
               fCheck.setTips(".serialNo-warning",'请输入课程绑定卡卡号');
             $(".serialNo").focus(function() {

@@ -5,7 +5,6 @@
  * @version
  */
  var xue =xue || {};
-
      xue.formCheck = xue.formCheck || {};
 
 !function(){
@@ -15,13 +14,13 @@
   fCheck.param = {
     form         : '#form-register',
     phone        : '#phone',
-    password     : '#password',
+    curPwd       : '#curPwd',
     verifiCode   : '#verificationCode',
     phoneCode    : '#phonecode',
     phoneTip     : '.phone-tip',
     phoneWarn    : '.phone-warning',
-    passwordTip  : '.pass-tip',
-    passwordWarn : '.pass-warning',
+    curPwdTip    : '.pass-tip',
+    curPwdWarn   : '.pass-warning',
     passSecurity : '.security',
     verification : '#verificationImg',
     veriTip      : '.verification-tip',
@@ -33,20 +32,17 @@
     cMessage     : 0
   }; 
 
-
-
   /**
    * [setTips description]
    * @param {string} select [标签选择]
    * @param {string} tips   [页面显示的提示信息]
    * @description  设置提示(未经ajax认证时调用)
    */
-  fCheck.setTips = function(select, tips){
-    $(select).css({
-      'background': 'url("img/warning.png") no-repeat 10px 5px',
-      'padding-left':'32px' 
-    }).html(tips);
-  };
+   fCheck.setTips = function(select, tips){
+     $(select).css({
+       'display': 'block',
+     }).html(tips);
+   };
 
   /**
    * [clearTips description]
@@ -56,10 +52,9 @@
    */
   fCheck.clearTips = function(select){
     $(select).css({
-      'background':'none'
+      'display':'none'
     }).html(null);
   };
-
 
   /**
    * [checkPhone description]
@@ -85,8 +80,7 @@
         fCheck.setTips(phoneWarn,"手机号由11位数字组成");
         fCheck.param.cPhone = 0;
       }else if( isPhone ){
-        /* 手机号码输入正确(两种操作) */
-        fCheck.phoneAjax();
+        $('#phone').css('border','1px solid #68c04a');
       }else{
         fCheck.setTips(phoneWarn,'不支持该手机号号段');
         fCheck.param.cPhone = 0;
@@ -94,39 +88,6 @@
     }
   };
 
-  /**
-   * [phoneAjax description]
-   * @param  {string} value [手机输入框内的值]
-   * @return {boolean}      [返回true或false方便进行验证]
-   * @description           与后台连接检验输入的手机号码是否符合要求
-   */
-  fCheck.phoneAjax = function () {
-    /* 利用ajax确定是否已经注册(未验证) */
-     $.ajax({
-      type:"POST",
-      url:"/Reg/isPhoneUseable",
-      data: 'phone=' + $('#phone').val(),
-      dataType: "json",
-      timeout: 7000,
-      async: false,
-      success: function(result) {
-        
-        if (result.sign != 1) {
-          
-          fCheck.setTips(fCheck.param.phoneWarn, '该手机号已被注册，您可以直接去登录');
-          fCheck.param.cPhone = 0;
-        }else{
-          fCheck.clearTips(fCheck.param.phoneWarn);
-          fCheck.param.cPhone = 1;
-        }
-      },
-      error: function() {
-        alert('数据读取错误,请重试..');
-        return false;
-      }
-     });
-  };
-  
   // 更新验证码图片
   fCheck.changeVerificationImg = function (imgId) {
     var newVerificationImg = '/Verifications/show?' + fCheck.generateMixed(12);
@@ -164,16 +125,16 @@
 
   /* 验证图片验证码 */
   fCheck.imgCodeAjax = function(){
-     $.ajax({
-      type:"POST",
-      url:"/Reg/getVerificationCode",
-      data: 'verifyCode=' + $('#verificationCode').val(),
-      dataType: "json",
-      timeout: 7000,
-      async: false,
-      success: function(result) {
-        /* 填写的信息验证不通过 */
-        if (result.sign != 1) {
+   $.ajax({
+        type:"POST",
+        url:"/MyInfos/getVerificationCode",
+        data: 'verifyCode=' + $('#verificationCode').val(),
+        dataType: "json",
+        timeout: 7000,
+        success: function(result) {
+          /* 填写的信息验证不通过 */
+          if(result.sign != 1){
+          window.location.href= '/MyInfos/bindStuPhone';
           fCheck.setTips('.veri-warning','网站验证码填写错误');
           fCheck.param.cImg = 0;
         }else{
@@ -213,13 +174,12 @@
       var that = btn;
     $.ajax({
       type: "POST",
-      url: "/Reg/getPassCode",
+      url: "/MyInfos/getPassCode",
       data: 'phone=' + $('#phone').val(),
       dataType: "json",
       timeout: 7000,
       async: false,
       success: function (result) {
-
         if(!result.sign){
           fCheck.clearTips('#tips-phonecode');
           fCheck.setTips('#tips-phonecode',result.msg);
@@ -256,11 +216,11 @@
     fCheck.isError = function(e){
     fCheck.checkPhone(fCheck.param.phoneTip,fCheck.param.phoneWarn,$("#phone").val());
     fCheck.imgcode();
-    var value = $(fCheck.param.password).val();
+    var value = $(fCheck.param.curPwd).val();
     if(value.length > 0 && value.length < 6 ){
-      fCheck.setTips(fCheck.param.passwordWarn,'密码不能少于6位字符');
+      fCheck.setTips(fCheck.param.curPwdWarn,'密码不能少于6位字符');
     }else if(value.length == 0){
-      fCheck.setTips(fCheck.param.passwordWarn,'请输入密码');
+      fCheck.setTips(fCheck.param.curPwdWarn,'请输入密码');
     }
     var param = fCheck.param;
       if( param.cPhone && param.cPass && param.cGrade && param.cImg ){
@@ -285,23 +245,23 @@
   });
 
   /* 密码框的操作 */
-  $(fCheck.param.password).on('focus',function(){
-    $(fCheck.param.passwordTip).hide();
-    fCheck.clearTips(fCheck.param.passwordWarn);
+  $(fCheck.param.curPwd).on('focus',function(){
+    $(fCheck.param.curPwdTip).hide();
+    fCheck.clearTips(fCheck.param.curPwdWarn);
   });
 
-  $(fCheck.param.password).blur(function(e){
-    var value = $(fCheck.param.password).val();
+  $(fCheck.param.curPwd).blur(function(e){
+    var value = $(fCheck.param.curPwd).val();
     if(value.length > 0 && value.length < 6 ){
-      fCheck.setTips(fCheck.param.passwordWarn,'密码不能少于6位字符');
+      fCheck.setTips(fCheck.param.curPwdWarn,'密码不能少于6位字符');
     }else if(value.length == 0){
-      fCheck.setTips(fCheck.param.passwordWarn,'请输入密码');
-      $(fCheck.param.passwordTip).show();
+      fCheck.setTips(fCheck.param.curPwdWarn,'请输入密码');
+      $(fCheck.param.curPwdTip).show();
     }
     if(fCheck.param.cPass == 1){
-      $('#password').css('border','1px solid #68c04a');
+      $('#curPwd').css('border','1px solid #68c04a');
     }else{
-      $('#password').css('border','1px solid #eaeaea');
+      $('#curPwd').css('border','1px solid #eaeaea');
     }  
   });
 
@@ -359,19 +319,19 @@
 
   /* 判断是否可以点击操作"完成"按钮 */
 
-  $("#form_submit").on('click',function(e){
+  $("#mpform_submit").on('click',function(e){
     var isError = fCheck.isError(e);
     if(isError){
       return false;
     }else{
       fCheck.phonecode('#phonecode');
       if( fCheck.param.cMessage){
-        /* 正常注册 */
+        /* 正常绑定 */
          $.ajax({
           type:"GET",
-          url:"/Reg/registerOprea",
+          url:"/MyInfos/bindStuPhone",
           dataType: "json",
-          data: 'phone=' + $('#phone').val() + '&password=' + $('#password').val() + '&imgcode=' + $('#verificationCode').val()+'&phonecode='+$('#phonecode').val(),
+          data: 'phone=' + $('#phone').val() + '&curPwd=' + $('#curPwd').val() + '&imgcode=' + $('#verificationCode').val()+'&phonecode='+$('#phonecode').val(),
           timeout: 7000,
           success: function(result) {
             /* 填写的信息验证不通过 */

@@ -8,7 +8,8 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <!-- 这是CSS库文件 -->
-    <link rel="stylesheet" type="text/css" href="../../lib/foundation/css/foundation.css">
+    <link href="../../lib/bootstrap/3.3.5-custom/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- 这是当前模块样式文件 -->
     <link href="certificate.binding.css" rel="stylesheet"></head>
 <body>
@@ -19,15 +20,19 @@
                 <label for="">卡号：</label>
                 <input class="bindcardNo" type="text">
             </div>
-            <span class="bindcardNo-warning error"></span>
+            <div class="error-box">
+                <span class="bindcardNo-warning error"></span>
+            </div>
 
             <div>
                 <label for="">密码：</label>
                 <input class="bindcardPass" type="password">
             </div>
-            <span class="bindcardPass-warning error"></span>
-
-            <button class="btn_blue">激活</button>
+            <div class="error-box">
+                <span class="bindcardPass-warning error"></span>
+            </div>
+            
+            <button class="btn-bindcard btn btn-info">激活</button>
         </div>
     </div>
     <div class="prompt-box">

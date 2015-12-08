@@ -1,0 +1,382 @@
+.infor-Modal{
+	.modal-dialog{
+		width: 530px;
+		height: 520px;
+	}
+	.modal-content{
+		width: 530px;
+		height: 520px;
+	}
+	.modal-header{
+		border-bottom: none;
+	}
+}
+.FormList-Modal{
+	.modal-content{
+		width: 530px;
+		height: 520px;
+		overflow: hidden;
+		background-color: '';
+	}
+	.modal-header{
+		border-bottom: none;
+		min-height: 0;
+		padding: 0;
+	}
+	.modal-body{
+		padding: 0;
+	}
+}
+.information-guid{
+	// width: 530px;
+	// height: 520px;
+	background: #fff;
+	border-radius: 4px;
+	text-align: center;
+	padding: 10px 0 40px 0px;
+	label{
+		font-weight: normal;
+	}
+	p{
+		margin-bottom: 20px;
+	}
+	p.tips-infor1{
+		font-size: 18px;
+		margin-top: 30px;
+		span{
+			color: #e74c3c;
+		}
+	}
+	p.tips-infor2{
+		font-size: 14px;
+	}
+}
+.infor-btn-wrap{
+	text-align: center;
+	.information-btn{
+		background-color: #e74c3c;
+		border-radius: 2px;
+		color: #ffffff;
+		font-size: 16px;
+		height: 48px;
+		width: 320px;
+		line-height: 16px;
+	}
+}
+.setting-infor{
+	background: #fff;
+	border-radius: 6px;
+	label{
+		font-weight: normal;
+	}
+	select {
+		-moz-appearance: none !important;
+		background-color: #fafafa;
+		background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+");
+		background-position: 100% center;
+		background-repeat: no-repeat;
+		border-color: #cccccc;
+		border-radius: 0;
+		border-style: solid;
+		border-width: 1px;
+		color: rgba(0, 0, 0, 0.75);
+		font-family: inherit;
+		font-size: 14px;
+		height: 35px;
+		line-height: normal;
+		padding: 0 18px;
+	}
+	input[type="file"], input[type="checkbox"], input[type="radio"], select {
+		margin: 0 0 1rem;
+	}
+	select:focus{
+		background: #f3f3f3;
+		color: #999;
+	}
+	.infor-title{
+		margin: 0;
+		height: 50px;
+		background: url("img/setting-infor.jpg") no-repeat center center;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		padding-left: 0;
+		li{
+			width: 49%;
+			text-align: center;
+			float: left;
+			font-size: 16px;
+			line-height: 50px;
+			list-style: none;
+			color: #fff;
+		}
+	}
+	.setting-infor-inner{
+		overflow: hidden;
+		padding-left: 40px;
+		p.setting-tip{
+			font-size: 16px;
+			margin-top: 20px;
+			span{
+				color: #e74c3c;
+				margin-right: 20px;
+			}
+		}
+	}
+	.f1{
+		overflow: hidden;
+		margin-bottom: 0px;
+		height: 82px;
+		label {
+			display: inline;
+			float: left;
+			font-size: 14px;
+			text-align: left;
+			width: 50px;
+			color: #666;
+			height: 46px;
+			line-height: 46px;
+		} 
+		p {
+			display: inline;
+			float: left;
+			margin-bottom: 10px;
+			position: relative;
+			.label-value{
+				position: absolute;
+				top: 0;
+				width: auto;
+				left: 10px;
+				color: #ccc;
+			}
+			.input-text {
+				border: 1px solid #ccc;
+				height: 46px;
+				width: 320px;
+				margin-bottom: 0;
+				box-shadow: none;
+				color: #333;
+				display: block;
+				padding-left: 10px;
+			}
+			.errTips {
+				color: #cc0000;
+				height: 20px;
+				display: inline-block;
+				font-size: 12px;
+				line-height: 20px;
+			}
+			.gender-1 {
+				background: url("img/man.png") no-repeat scroll center top;
+				display: inline-block;
+				height: 20px;
+				margin-right: 35px;
+				width: 18px;
+			}
+			.gender-0 {
+				background: rgba(0, 0, 0, 0) url("img/woman.png") no-repeat scroll center top;
+				display: inline-block;
+				height: 20px;
+				padding-right: 23px;
+				width: 13px;
+			}
+		}
+		p.area-tips{
+			display: block;
+			float: none;
+		}
+		p.sex-tip{
+			padding-top: 15px;
+			margin-bottom: 20px;
+			input{
+				float: left;
+				margin-top: 3px;
+				margin-bottom: 0;
+			}
+			.gender-1{
+				float: left;
+			}
+			.gender-0{
+				float: left;
+			}
+			label{
+				float: left;
+				width: 20px;
+				margin-right: 0;
+				height: auto;
+				line-height: 21px;
+			}
+			.errTips{
+				display: block;
+				clear: both;
+			}
+		}
+		.select{
+			display: inline-block;
+			width: auto;
+			padding: 0 18px;
+			margin-bottom: 0;
+		}
+		.select.has-success{
+			border: 1px solid #68c04a;
+		}
+	}
+	.has-success{
+		p{
+			.input-text{
+				border: 1px solid #68c04a;
+			}
+		}
+	}
+	.has-error{
+		p{
+			.input-text{
+				border: 1px solid #ccc;
+			}
+		}
+	}
+}
+.focus-teacher{
+	width: 530px;
+	height: 520px;
+	background: #fff;
+	border-radius: 4px;
+	label{
+		font-weight: normal;
+	}
+	.infor-title{
+		margin: 0;
+		height: 50px;
+		background: url("img/foucs-teacher.jpg") no-repeat center center;
+		li{
+			width: 50%;
+			text-align: center;
+			float: left;
+			font-size: 16px;
+			line-height: 50px;
+			list-style: none;
+			color: #fff;
+		}
+	}
+	.setting-infor-inner{
+		overflow-y: auto;
+		padding: 0 16px;
+		height: 355px;
+		margin-bottom: 30px;
+		p.setting-tip{
+			font-size: 16px;
+			margin-top: 20px;
+			margin-bottom: 10px;
+			span{
+				color: #e74c3c;
+				margin-right: 20px;
+			}
+		}
+		.fun-follow-item{
+			.follow-list {
+				border: 1px solid #f0f0f0;
+				display: inline;
+				float: left;
+				height: 110px;
+				margin: 10px 10px 0 0px;
+				overflow: hidden;
+				width: 230px;
+				p{
+					margin-bottom: 0;
+				}
+				.ui-avatar {
+					display: inline;
+					float: left;
+					margin: 10px;
+					overflow: hidden;
+					position: static;
+					img{
+						width: 60px;
+						height: 60px;
+						border-radius: 50%;
+					}
+				}
+				.follow-con-fun {
+					display: inline;
+					float: left;
+					margin-top: 10px;
+					overflow: hidden;
+					width: 125px;
+					.fun-username {
+						color: #333333;
+						font-size: 14px;
+						overflow: hidden;
+						.ui-username{
+							float: left;
+							color: #333;
+						}
+						.course-icon{
+							display: inline-block;
+							float: left;
+							height: 17px;
+							margin: 0 8px;
+							width: 21px;
+							text-indent: -99999px;
+						}
+						.icon-bverify {
+							background: url("img/icon-bverify.png") no-repeat left 0px;
+						}
+						.icon-yverify {
+							background: url("img/icon-yverify.png") no-repeat left 0px;
+						}
+					}
+					.fun-usres {
+						color: #999999;
+						height: 25px;
+						line-height: 25px;
+						overflow: hidden;
+						font-size: 12px;
+					}
+					.fresh-course-attention{
+						font-size: 12px;
+						height: 20px;
+						// em,i{
+						// 	font-style: normal;
+						// }
+						em{
+							display: inline-block;
+							font-size: 12px;
+							line-height: 20px;
+							padding: 0 8px;
+							background: #dfdfdf;
+							color: #999999;
+							margin-right: 5px;
+							font-style: normal;
+						}
+					}
+					.fresh-attention-btn {
+						background: #ffbc3c;
+						border-radius: 2px;
+						color: #fff;
+						line-height: 20px;
+						padding: 0 8px;
+						display: inline-block;
+						font-size: 12px;
+					}
+					.fresh-add {
+						font-size: 14px;
+						padding-right: 2px;
+					}
+					.fresh-course-attention a.fresh-add-cancel-btn {
+						color: #3bafda;
+					}
+				}
+				.follow-con-info {
+					color: #999999;
+					display: inline;
+					float: left;
+					height: 25px;
+					line-height: 25px;
+					overflow: hidden;
+					padding-left: 12px;
+					width: 100%;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}

@@ -5,7 +5,7 @@
  * @date    2015-10-21 14:22:33
  * @version $Id$
  */
-/*================/ 选择地址 /========================*/
+/*================/ 选择地址 1/========================*/
 .ui-setAddress {
   overflow: hidden;
 }
@@ -89,31 +89,8 @@
 .ui_ship_addr ul.shipadd_list li.f_detailAddress {
   display: none;
 }
-.addr_switch {
-  width: 100px;
-  height: 18px;
-  line-height: 18px;
-  cursor: pointer;
-  padding: 5px 20px;
-}
-.addr_switch em {
-  display: inline-block;
-  width: 9px;
-  height: 10px;
-  line-height: 10px;
-  margin-left: 5px;
-  vertical-align: middle;
-  background: url("http://img04.xesimg.com/payment/addr-i.png") no-repeat;
-}
-.addr_switch.switch_off em {
-  background: url("http://img04.xesimg.com/payment/addr-i.png") 0 -10px no-repeat;
-}
-.user_detail_addr_items {
-  display: none;
-}
 .new_consignee_items {
   overflow: hidden;
-  border-bottom: 1px solid #eaeaea;
   margin-top: 10px;
 }
 .new_consignee_items .info_from {
@@ -137,7 +114,7 @@
   float: left;
   display: inline;
   width: 250px;
-  height: 26px;
+  height: 36px;
   border: 1px solid #d2d2d2;
   padding: 5px;
 }
@@ -164,7 +141,6 @@
   color: #FFF;
   line-height: 35px;
   text-decoration: none;
-  font-family: "Microsoft YaHei";
   font-size: 16px;
   background: #3bafda;
 }
@@ -178,5 +154,7 @@
   border: 1px solid #c00;
 }
 .new_consignee_items .info_from p.error_tips_address {
+  height: 25px;
+  line-height: 25px;
   color: #cc0000;
 }

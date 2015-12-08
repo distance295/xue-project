@@ -1,0 +1,118 @@
+//首页最新资讯
+.ui-index-trends {
+	width: 1190px;
+	margin:0 auto;
+	position: relative;
+	z-index: 3;
+	top:0;
+}
+.index-new-trends {
+	width: 280px;
+	height: 380px;
+	overflow: hidden;
+	background:#fff;
+	position: absolute;
+	right: 0;
+	top:0;
+	z-index: 1;
+	.trends-title {
+		width: 260px;
+		height: 40px;
+		line-height: 50px;
+		overflow: hidden;
+		border-bottom: 1px dashed #ccc;
+		margin:0 auto 10px;
+		span {
+			display: inline-block;
+			font-weight: 700;
+			font-size: 14px;
+			color: #999;
+		}
+		a {
+			display: inline-block;
+			float: right;
+
+		}
+	}
+	.trends-list {
+		width: 260px;
+		margin:0 auto 10px;
+		overflow: hidden;
+		padding:0;
+		li {
+			height: 32px;
+			line-height: 30px;
+			overflow: hidden;
+			color: #666;
+
+		}
+	}
+	.index-login-items {
+		height: 160px;
+		background:#f9f9f9;
+		overflow: hidden;
+		.media-info-text {
+			line-height: 180%;
+			strong {
+				color: #cc0000;
+			}
+		}
+		.media {
+			height: 110px;
+			padding:20px  0 15px 40px;
+			.media-body {
+				.user-name {
+					overflow: hidden;margin: 10px 0 5px;
+				}
+				.user-info {
+					.user-sex {
+						background: none;
+						padding:4px 6px;
+						.fa {
+							font-size: 16px;
+							font-weight: 700;
+							&.fa-venus {
+								color: #3bafda;
+							}
+							&.fa-mars {
+								color: #e74c3c;
+							}
+						}
+					}
+					.user-level {
+						font-size: 12px;
+						font-style: italic ;
+						border-radius: 25px;
+						padding-bottom: 1px;
+						padding-top:0;
+					}
+				}
+			}
+			.media-heading {
+				font-size: 18px;
+			}
+			.user-v {
+				vertical-align: middle;
+			}
+		}
+		.media-object {
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			margin-top:5px;
+		}
+		.index-btn-wrap {
+			overflow: hidden;
+			padding-left: 12px;
+			.btn {
+				width: 120px;
+				height: 36px;
+				margin-right: 10px;
+				font-size: 16px;
+			}
+			.btn-into-home {
+				width: 96%;
+			}
+		}
+	}
+}

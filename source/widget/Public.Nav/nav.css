@@ -9,27 +9,32 @@
 .ui-head-nav {
   height: 45px;
   margin: 0 auto;
-  position: relative;
   font-size: 14px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 4;
 }
-.ui-head-nav ul.head-nav {
+.ui-head-nav .container {
+  position: relative;
+}
+.ui-head-nav .container ul.head-nav {
   overflow: hidden;
   margin: 0;
   padding: 0;
   padding-left: 210px;
   font-size: 16px;
 }
-.ui-head-nav ul.head-nav li {
+.ui-head-nav .container ul.head-nav li {
   float: left;
   width: 70px;
   line-height: 45px;
   text-align: center;
   list-style: none;
 }
-.ui-head-nav ul.head-nav li a:hover {
+.ui-head-nav .container ul.head-nav li a:hover {
   color: #3bafda;
 }
-.ui-head-nav ul.head-nav li.current a {
+.ui-head-nav .container ul.head-nav li.current a {
   color: #3bafda;
 }
 .ui-categorys {
@@ -60,7 +65,7 @@
   color: #fff;
   display: block;
   font: 400 15px/44px "microsoft yahei";
-  height: 44px;
+  height: 45px;
   padding: 0 20px;
   margin: 0;
   background: #1e89e0;
@@ -105,6 +110,9 @@
 }
 .ui-categorys .category-dd .category-item.hover {
   background-color: rgba(0, 0, 0, 0.2);
+}
+.ui-categorys .category-dd .category-item:nth-last-child(1) {
+  border-bottom: 0 none;
 }
 .ui-categorys .category-dd .category-layer {
   display: none;

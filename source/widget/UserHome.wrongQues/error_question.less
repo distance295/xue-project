@@ -1,0 +1,186 @@
+@charset "UTF-8";
+
+@Nfont-size:1.4rem;
+@Sfont-size:1rem;
+@LRpadding:0.8rem;
+
+#wrongQuestionFlow{
+    .modal-title{
+        text-align: center;
+    }
+}
+.wrongQuest{
+  .selector{
+    background-color: rgb(249,249,249);
+    margin-right: 5px;
+    width: 90px;
+    height: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  
+  .nav-tabs{
+    margin-bottom: 10px;
+  } 
+}
+
+.choiceHide{
+  margin-bottom: 2rem;
+  display: none;
+}
+
+/*错误题目css(start)*/
+.queSet{
+  border-bottom: 1px solid rgb(241,242,246);
+  padding-left: @LRpadding;
+  padding-right: @LRpadding;
+}
+.que{
+  float:left;
+  background-color: rgb(255,255,255);
+  padding: 0;
+  font-size: 1.4rem;
+  width: 100%;
+  margin-bottom: 2rem;  
+  
+  &:last-child{
+  	margin-bottom: 40px;
+  }
+  .que-tips{
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    color:rgb(153,153,153);
+  }
+}
+.que-head{
+  .queSet;
+  .que-head-source{
+    margin-top:0;
+    margin-bottom: 0;
+    padding-top: 1.3rem;
+    padding-bottom:1.3rem;
+    color:rgb(59,175,218);
+  }
+
+  .que-head-time-form{
+    font-size: @Sfont-size;
+    margin: 1.4rem 0 1.2rem 0;
+    color:rgb(153,153,153);
+  }
+  .que-head-href{
+    color:rgb(59,175,218);
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+.que-point{
+  .queSet;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+  .que-point-know-form{
+    line-height: 1;
+    margin-bottom: 0;
+  }
+  .knowledge{
+    padding-right: 1.375rem;
+  }
+}
+
+.que-body{
+  .queSet;
+  .que-tips-head{
+    font-weight: bold;
+  }
+  .que-body-choice{
+    margin: 1.2rem 0;
+  }
+  .que-body-intro{
+    font-weight: bold;
+    line-height: 1.8;
+  }
+  .que-body-content{
+    font-weight: normal;
+    color:#333;
+    line-height: 1.8;
+  }
+  .que-body-arrow{
+    margin-right: 2rem;
+  }
+  .que-body-show-text{
+    cursor: pointer;
+    width: 70px;
+  }
+}
+
+.que-answer{
+  line-height: 1.8;
+  clear:both;
+    display: none;
+  .queSet;
+  .que-answer-head{
+    font-weight: bold;
+  }
+  @RPadding:2rem;
+  .cusAns{
+    padding-right:@RPadding;
+    color:rgb(204,0,0);
+  }
+  .corAns{
+    padding-right: @RPadding;
+    color:rgb(51,153,204);
+  }
+  .explanace{
+    font-weight: normal;
+    color:#333;
+  }
+  .img-answer{
+    margin: 0;
+    vertical-align: top;
+    display:inline-block;
+  }
+  .que-answer-exp{
+    font-weight: bold;
+  }
+}
+
+.que-img{
+  padding: 0.9rem @LRpadding;
+  .stuAns{
+    width: 100px;
+    height: 70px;
+    cursor: pointer;
+  }
+  .que-voice{
+    display:inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 7.7rem;
+    height: 2.7rem;
+    vertical-align: middle;
+    background-color:rgb(55,188,155);
+    border:rgb(56,188,156);
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+    .que-voice-play{
+      position: absolute;
+      top: 30%;
+      left:15%;
+    }
+    .que-voice-img{
+      position: absolute;
+      top: 30%;
+      left:35%;
+    }
+  }
+}
+/* 错误题目css(end) */
+
+
+
+
+
