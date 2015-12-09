@@ -1,4 +1,4 @@
-$(document).ready(function moneyAjax(page){
+function moneyAjax(page){
     $.ajax({
         type: "GET",
         url: "/MyPayCenters/ajaxGiftCardData",
@@ -13,4 +13,4 @@ $(document).ready(function moneyAjax(page){
           alert("异步失败");  
         }  
     });
-})
+}
