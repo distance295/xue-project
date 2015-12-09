@@ -12,13 +12,8 @@
                 <strong>[通知]：</strong>今晚7点，辅导老师 李丽 将定语从句的关键考点为大家举办一次复习直播，请报名学员参加
             </div>
             
-            <ul class="nav nav-tabs">
-                <li role="presentation" class="active"><a href="#">全部</a></li>
-                <li><a href="#">直播</a></li>
-                <li><a href="#">录播</a></li>
-                <li><a href="#">已过期课程</a></li>
-            </ul>
-            <link rel="import" href="../../widget/UserHome.courses/list.course.tpl?__inline">
+            
+            <link rel="import" href="../../widget/UserHome.courses/none.tpl?__inline">
 
             <!-- *********************** 内容区域结束 **************** -->
         </div>
@@ -30,15 +25,12 @@
 
 <!-- 页面配置 -->
 <script>
-var PAGE_CONFIG = {
-    ID: 'Courses',
-    MODULE: 'UserHome',
-    TITLE: '我的课程-学习中心'
-};
-$(function  () {
+    var PAGE_CONFIG = {
+        ID: 'Courses',
+        MODULE: 'UserHome',
+        TITLE: '我的课程-学习中心-没有课程'
+    };
     courseStudyInit();
-    progressBar();
-})
 </script>
 
 <!-- 公共底部 -->

@@ -36,6 +36,7 @@ courses.avatar = courses.avatar || {};
         this.box.btn = btn;
         this.box.prev = btn.hasClass('prev') ? btn : btn.siblings('.prev');
         this.box.next = btn.hasClass('next') ? btn : btn.siblings('.next');
+        this.step = $(".avatar-items li").width();
         this.size = this.box.list.length;
         this.max = this.size - 1;
 
@@ -107,14 +108,16 @@ courses.avatar = courses.avatar || {};
 })(courses.avatar);
 
 // 绑定老师头像切换事件
-$('body').off('click', '.avatar-roll a, .majar-items .prev, .majar-items .next').on('click', '.avatar-roll a, .majar-items .prev, .majar-items .next', function() {
-    var that = $(this);
-    if (that.hasClass('none')) {
-        return false;
-    } else {
-     courses.avatar.toggle(that)     
- }
-});
+$(function(){
+    $('body').off('click', '.avatar-roll a, .majar-items .prev, .majar-items .next').on('click', '.avatar-roll a, .majar-items .prev, .majar-items .next', function() {
+        var that = $(this);
+        if (that.hasClass('none')) {
+            return false;
+        } else {
+         courses.avatar.toggle(that)     
+     }
+ });
+})
 // 更多服务
 function moreService (){
     $('.more-service h4').on('click',function(event){
@@ -230,3 +233,12 @@ function courseStudyInit(){
         delayDate();
     });
 }
+// 录播课程
+function tabRecord(){
+
+    $('.teacher-tab li').on('click',function(){ 
+        index = $(this).index();
+        $(this).addClass('current').siblings().removeClass('current');
+        $('.tab-record-content .tab-pane').eq(index).addClass('active').siblings().removeClass('active');
+    });
+};

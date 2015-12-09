@@ -4,7 +4,7 @@
 -->
 <div class="gift-card-record">
      <button class="gcr-top-up btn btn-info">去激活</button>
-     <table class="table gcr-table">
+     <table id="moneyTable" class="table gcr-table">
         <thead>
             <tr>
                 <th>卡号</th>
