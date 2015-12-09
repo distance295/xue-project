@@ -31,11 +31,18 @@ ms_DatePicker: function (options) {
             }
 
             // 月份列表
-			var monthSel = $MonthSelector.attr("rel");
-            for (var i = 1; i <= 12; i++) {
-				var sed = monthSel==i?"selected":"";
-                var monthStr = "<option value=\"" + i + "\" "+sed+">" + i + "</option>";
-                $MonthSelector.append(monthStr);
+            function BuildMonth() {
+                var monthSel = $MonthSelector.attr("rel");
+                if ($YearSelector.val() == 0) {
+                    $MonthSelector.html(str);
+                }else{
+                    $MonthSelector.html(str);
+                    for (var i = 1; i <= 12; i++) {
+                        var sed = monthSel==i?"selected":"";
+                        var monthStr = "<option value=\"" + i + "\" "+sed+">" + i + "</option>";
+                        $MonthSelector.append(monthStr);
+                    }
+                }
             }
 
             // 日列表(仅当选择了年月)
@@ -84,18 +91,19 @@ ms_DatePicker: function (options) {
             }
             $MonthSelector.change(function () {
                 BuildDay();
-                $('#sel_month').css({
+                $('#month').css({
                     border: '1px solid #68c04a'
                 });
             });
             $YearSelector.change(function () {
+                BuildMonth()
                 BuildDay();
-                $('#sel_year').css({
+                $('#year').css({
                     border: '1px solid #68c04a'
                 });
             });
             $DaySelector.change(function () {
-                $('#sel_day').css({
+                $('#day').css({
                     border: '1px solid #68c04a'
                 });
             });

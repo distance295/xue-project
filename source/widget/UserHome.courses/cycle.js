@@ -75,7 +75,7 @@
 		})
 	}
 })(jQuery);
-$(function() {
+function progressBar(){
 	var c = $('.processingbar');
 	animateEle();
 	$(window).scroll(function() {
@@ -119,7 +119,7 @@ $(function() {
 			}
 		})
 	}
-});
+}
 var pie = {
 	run: function(a) {
 		if (!a.id) throw new Error("must be canvas id.");

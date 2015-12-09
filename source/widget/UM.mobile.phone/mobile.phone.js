@@ -81,6 +81,7 @@
         fCheck.param.cPhone = 0;
       }else if( isPhone ){
         $('#phone').css('border','1px solid #68c04a');
+        fCheck.param.cPhone = 1;
       }else{
         fCheck.setTips(phoneWarn,'不支持该手机号号段');
         fCheck.param.cPhone = 0;
@@ -116,6 +117,7 @@
       /* 调用ajax取值 */
       fCheck.clearTips('.veri-warning');
       fCheck.imgCodeAjax();
+      fCheck.param.cImg = 1;
       
     }else{
       fCheck.setTips('.veri-warning','请输入正确的验证码');
@@ -157,7 +159,7 @@
           fCheck.setTips('#tips-phonecode', '短信验证码不能为空');
       }else{
           if(val.length == 6 && /^[1-9]\d*|0$/.test(Number(val))){
-              /* 验证手机短信验证码 */     
+              /* 验证手机短信验证码 */    
               fCheck.clearTips('#tips-phonecode');
               fCheck.param.cMessage = 1;
           }else{

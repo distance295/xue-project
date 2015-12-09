@@ -37,25 +37,34 @@ body{
 }
 .label-study{
 	width: 25px;
-	height: 47px;
+	height: 60px;
 	text-align: center;
 	display: inline-block;
 	position: absolute;
 	right: 0px;
 	color: #fff;
-	font-size: 14px;
+	font-size: 12px;
 	font-style: normal;
-	line-height: 17px;
 	cursor: pointer;
 	padding-top: 8px;
+	font-weight: normal;
+	padding: 0 2px;
 }
 .label-delay{
 	background: #3bafda;
-	top: 57px;
+	top: 17px;
+}
+.label-delayed{
+	background: #ccd1d9;
+	top: 17px;
 }
 .label-continun{
 	background: #37bc9b;
-	top: 105px;
+	top: 78px;
+}
+.label-sheng{
+	cursor: default;
+	top: 78px;
 }
 .courseList-label{
 	padding-right: 25px;
@@ -161,6 +170,10 @@ body{
 			font-family: 'Microsoft YaHei';
 			span{
 				color: #999;
+			}
+			.title-detail-gray{
+				color: #999;
+				cursor: default;
 			}
 			.course_estimate{
 				color: @dark333;
@@ -691,7 +704,7 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 // 进度条
 .processingbar {
 	text-align: center;
-	margin: 14px 28px 0 0;
+	margin: 8px 28px 0 0;
 	position: relative;
 	width: 100px;
 }
