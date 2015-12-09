@@ -184,7 +184,6 @@
           fCheck.setTips('#tips-phonecode',result.msg);
         }else{
           /* 短信发送成功提醒 */
-          $('#tips-phonecode').css({'padding-left': '0', 'width': '300px', 'background': 'none'});
           $('#tips-phonecode').text('由于运营商原因，手机短信可能会有延迟，请您耐心等待');
           /* 操作按钮文本显示 */
           $(that).text("60秒后重新获取");

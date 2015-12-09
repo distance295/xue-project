@@ -56,7 +56,6 @@ function delayDate(){
 }
 
 $(function  () {
-    courseStudyInit();
     progressBar();
 
     // 更多服务
