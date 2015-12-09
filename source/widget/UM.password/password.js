@@ -149,6 +149,21 @@
               if (curpasswd.length < 6) {
                   fCheck.setTips(".curPwd-warning",'密码不能少于6位字符');
                   return false;
+              }else{
+                  $.ajax({
+                      type: "POST",
+                      url: "/MyInfos/changeStuPwd",
+                      data: "curPwd=" + curpasswd,
+                      dataType: 'json',
+                      async: false, 
+                      success: function(d) {
+                          if (d.sign == 1) {
+                              fCheck.bordercss('#curPwd');
+                          } else {
+                              fCheck.setTips('.curPwd-warning',d.msg);
+                          }
+                      }
+                  });    
               }    
           }
           /* 新密码设置 */
@@ -189,6 +204,5 @@
                   }
               }
           });
-          fCheck.bordercss('#curPwd');
         })  
     })  
