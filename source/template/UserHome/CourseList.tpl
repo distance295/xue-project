@@ -35,10 +35,108 @@ var PAGE_CONFIG = {
     MODULE: 'UserHome',
     TITLE: '我的课程-学习中心'
 };
+// 延期
+function delayDate(){
+    $.ajax({
+        type: "get",
+        url: "/data/courses/delayDate.html",
+        dataType: "html",
+        success: function(result) {
+            if(result){
+                createModal.show({
+                    id : 'delayDate',
+                    title : '延期课程',
+                    cls : 'delayDate',
+                    content : result
+                });
+                $('#delayDate').modal('show')
+            }
+        },
+    });
+}
+
 $(function  () {
-    courseStudyInit();
     progressBar();
+
+    // 更多服务
+    moreService ();
+    // 延期课程
+    $('.label-delay').on('click',function(){
+        delayDate();
+    });
+    // 更多服务的资料弹框
+    $('.more-list li.courseList-material').on('click',function(){
+        materialForm();
+    });
+    // 更多服务的考试弹框
+    $('.more-list li.courseList-exam').on('click',function(){
+        examTable();
+    });
 })
+// 更多服务
+function moreService (){
+    $('.more-service h4').on('click',function(event){
+        event.stopPropagation();
+        var a = $(this).hasClass('blue-arrow')
+        if(a){
+            // $(this).removeClass('show').children('h4').removeClass('blue-arrow');
+            $(this).removeClass('blue-arrow').parents('.more-service').removeClass('show');
+        }else{
+            // $(this).addClass('show').children('h4').addClass('blue-arrow');
+            $(this).addClass('blue-arrow').parents('.more-service').addClass('show');
+        }
+    });
+    $(document.body).on('click',function(event){
+        var a = $('.more-service h4').hasClass('blue-arrow');
+        if (a){
+            $('.more-service h4').removeClass('blue-arrow').parents('.more-service').removeClass('show');
+        }
+    })
+}
+// 讲义资料弹框
+function materialForm(){
+    $.ajax({
+        type: "get",
+        url: "/data/courses/material.html",
+        dataType: "html",
+        success: function(result) {
+            if(result){
+             createModal.show({
+                id : 'materialForm',
+                title : '讲义资料',
+                cls : 'material-exam',
+                content : result
+            });
+             $('#materialForm').modal('show');
+         }
+     },
+ });
+}
+// 讲义资料弹框tab事件
+$('body').on('click','.material-wrap .material-tab li',function(){
+    var index = $(this).index();
+    $(this).addClass('current').siblings().removeClass('current');
+    $('.material-content').eq(index).show().siblings('.material-content').hide();
+})
+// 考试
+function examTable(){
+    $.ajax({
+        type: "get",
+        url: "/data/courses/exam.html",
+        dataType: "html",
+        success: function(result) {
+            if(result){
+             createModal.show({
+                id : 'examTable',
+                title : '本课考试',
+                cls : 'material-exam',
+                content : result
+            });
+             $('#examTable').modal('show')
+         }
+     },
+ });
+}
 </script>
 
 <!-- 公共底部 -->
