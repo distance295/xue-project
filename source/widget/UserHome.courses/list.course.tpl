@@ -78,8 +78,9 @@
         </div>
     </div>
     <div class="label-study-wrap">
-        <label class="label-study label-delay">延期</label>
+        <label class="label-study label-delay label-delayed">已延期</label>
         <label class="label-study label-continun">续报</label>
+        <label class="label-study label-sheng">升级</label>
     </div>
 </div>
 <div class="courseList-wrap courseList-label">
@@ -157,6 +158,7 @@
     <div class="label-study-wrap">
         <label class="label-study label-delay">延期</label>
         <label class="label-study label-continun">续报</label>
+        <label class="label-study label-continun">升级</label>
     </div>
 </div>
 <div class="courseList-wrap courseList-label">
