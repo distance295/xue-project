@@ -58,45 +58,61 @@ xue.ajaxCheck.Initfn = function(){
    });
 }
 function errorfn(){
-  $("#showResult").append("<div>请求出错啦！</div>");
-}
-function beforeSendfn(){
-  $("#showResult").append('<i class="fa fa-spinner fa-spin"></i>');
-}
-function completefn(){
-  $("#showResult").remove();
+  $("body").append("<div>请求出错啦！</div>");
 }
 function successfn(msg){
-  $("#showResult").append("<div>请求成功，回传数:"+msg+"<div>");
+  $("body").append("<div>请求成功，回传数:"+msg+"<div>");
 }
-xue.ajaxCheck.InitParamfn = function(url, data, async, type, dataType, successfn, errorfn){
-    /**
-     * ajax封装
-     * url 发送请求的地址
-     * data 发送到服务器的数据，数组存储，如：{"date": new Date().getTime(), "state": 1}
-     * async 默认值: true。默认设置下，所有请求均为异步请求。如果需要发送同步请求，请将此选项设置为 false。
-     *       注意，同步请求将锁住浏览器，用户其它操作必须等待请求完成才可以执行。
-     * type 请求方式("POST" 或 "GET")， 默认为 "GET"
-     * dataType 预期服务器返回的数据类型，常用的如：xml、html、json、text
-     * successfn 成功回调函数
-     * errorfn 失败回调函数
-     */
-    async = (async==null || async=="" || typeof(async)=="undefined")? "true" : async;
-    type = (type==null || type=="" || typeof(type)=="undefined")? "post" : type;
-    dataType = (dataType==null || dataType=="" || typeof(dataType)=="undefined")? "json" : dataType;
-    data = (data==null || data=="" || typeof(data)=="undefined")? {"date": new Date().getTime()} : data;
-    $.ajax({
-        type: type,
-        async: async,
-        data: data,
-        url: url,
-        dataType: dataType,
-        beforeSend: beforeSendfn,
-        success: successfn(msg),
-        error: errorfn(e)
-    });
-}
+/**   
+*  页面加载等待页面 
+*/    
+var height = window.screen.height-180;     
+var width = window.screen.width;     
+var leftW = 300;     
+ if(width>1200){     
+    leftW = 500;     
+ }else if(width>1000){     
+    leftW = 350;     
+ }else {     
+    leftW = 100;     
+ }         
+ var loadingHtml = "<div id='loading' style=\"position:absolute;left:0;width:100%;height:" + height + "px;top:0;background:#E0ECFF;opacity:0.8;filter:alpha(opacity=80);\"><div style=\"position:absolute;  cursor1:wait;left:"+leftW+"px;top:200px;width:auto;height:16px;padding:12px 5px 10px 30px;\"><i class='fa fa-spinner fa-spin'></i></div></div>";     
 
+ function beforeSendfn(){  
+    $("body").html(loadingHtml);  
+ }  
+   
+ function completefn(){  
+    $("body").remove(loadingHtml);
+ }  
+
+xue.ajaxCheck.InitParamfn = function(url, data, async, type, dataType, successfn, errorfn){
+   /**
+    * ajax封装
+    * url 发送请求的地址
+    * data 发送到服务器的数据，数组存储，如：{"date": new Date().getTime(), "state": 1}
+    * async 默认值: true。默认设置下，所有请求均为异步请求。如果需要发送同步请求，请将此选项设置为 false。
+    *       注意，同步请求将锁住浏览器，用户其它操作必须等待请求完成才可以执行。
+    * type 请求方式("POST" 或 "GET")， 默认为 "GET"
+    * dataType 预期服务器返回的数据类型，常用的如：xml、html、json、text
+    * successfn 成功回调函数
+    * errorfn 失败回调函数
+    */
+   async = (async==null || async=="" || typeof(async)=="undefined")? "true" : async;
+   type = (type==null || type=="" || typeof(type)=="undefined")? "post" : type;
+   dataType = (dataType==null || dataType=="" || typeof(dataType)=="undefined")? "json" : dataType;
+   data = (data==null || data=="" || typeof(data)=="undefined")? {"date": new Date().getTime()} : data;
+   $.ajax({
+       type: type,
+       async: async,
+       data: data,
+       url: url,
+       dataType: dataType,
+       beforeSend: beforeSendfn,
+       success: successfn(msg),
+       error: errorfn(e)
+   });
+}
 /**
  * ajax封装
  * url 发送请求的地址
@@ -133,27 +149,3 @@ xue.ajaxCheck.successError=function(url, data, successfn, errorfn) {
         error: errorfn(e)
     });
 };
-
-
-/**   
-*  页面加载等待页面 
-*/    
-var height = window.screen.height-180;     
-var width = window.screen.width;     
-var leftW = 300;     
- if(width>1200){     
-    leftW = 500;     
- }else if(width>1000){     
-    leftW = 350;     
- }else {     
-    leftW = 100;     
- }         
- var loadingHtml = "<div id='loading' style=\"position:absolute;left:0;width:100%;height:" + height + "px;top:0;background:#E0ECFF;opacity:0.8;filter:alpha(opacity=80);\"><div style=\"position:absolute;  cursor1:wait;left:"+leftW+"px;top:200px;width:auto;height:16px;padding:12px 5px 10px 30px;\"><i class='fa fa-spinner fa-spin'></i></div></div>";     
-
- function beforeSendfn(){  
-    $("#showResult").html(loadingHtml);  
- }  
-   
- function completefn(){  
-    $("#showResult").remove(loadingHtml);
- }  
