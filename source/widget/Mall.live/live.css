@@ -118,6 +118,11 @@
   color: #666;
   margin: 0;
 }
+.live-time-tip-container p .fa {
+  margin-right: 5px;
+  color: #ddd;
+  font-size: 16px;
+}
 .live-enter {
   width: 150px;
   height: 36px;

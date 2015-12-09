@@ -30,8 +30,8 @@
                     <div class="live-time-tip">
                         <div class="live-time-tip-container">
                             <span>08-23 15:30-16:30</span>
-                            <img src="img/ic_views.png" />
-                            <p>4612453</p>
+<!--                            -->
+                            <p><i class="fa fa-eye"></i>4612453</p>
                         </div>
                     </div>
                     <div class="live-enter-box">
@@ -50,8 +50,8 @@
                     <div class="live-time-tip">
                         <div class="live-time-tip-container">
                             <span>今天 15:30-16:30</span>
-                            <img src="img/ic_views.png" />
-                            <p>4612453</p>
+                            
+                            <p><i class="fa fa-eye"></i>4612453</p>
                         </div>
                     </div>
                     <div class="live-enter-box">
@@ -70,8 +70,8 @@
                     <div class="live-time-tip">
                         <div class="live-time-tip-container">
                             <span>今天 15:30-16:30</span>
-                            <img src="img/ic_views.png" />
-                            <p>4612453</p>
+                            
+                            <p><i class="fa fa-eye"></i>4612453</p>
                         </div>
                     </div>
                     <div class="live-enter-box">
@@ -90,8 +90,8 @@
                     <div class="live-time-tip">
                         <div class="live-time-tip-container">
                             <span>今天 15:30-16:30</span>
-                            <img src="img/ic_views.png" />
-                            <p>4612453</p>
+                            
+                            <p><i class="fa fa-eye"></i>4612453</p>
                         </div>
                     </div>
                     <div class="live-enter-box">
@@ -112,8 +112,8 @@
                     <div class="live-time-tip">
                         <div class="live-time-tip-container">
                             <span>08-23 15:30-16:30</span>
-                            <img src="img/ic_views.png" />
-                            <p>4612453</p>
+                            
+                            <p><i class="fa fa-eye"></i>4612453</p>
                         </div>
                     </div>
                     <div class="live-enter-box">
@@ -132,8 +132,8 @@
                     <div class="live-time-tip">
                         <div class="live-time-tip-container">
                             <span>今天 15:30-16:30</span>
-                            <img src="img/ic_views.png" />
-                            <p>4612453</p>
+                            
+                            <p><i class="fa fa-eye"></i>4612453</p>
                         </div>
                     </div>
                     <div class="live-enter-box">
@@ -152,8 +152,8 @@
                     <div class="live-time-tip">
                         <div class="live-time-tip-container">
                             <span>今天 15:30-16:30</span>
-                            <img src="img/ic_views.png" />
-                            <p>4612453</p>
+                            
+                            <p><i class="fa fa-eye"></i>4612453</p>
                         </div>
                     </div>
                     <div class="live-enter-box">
@@ -172,8 +172,8 @@
                     <div class="live-time-tip">
                         <div class="live-time-tip-container">
                             <span>今天 15:30-16:30</span>
-                            <img src="img/ic_views.png" />
-                            <p>4612453</p>
+                            
+                            <p><i class="fa fa-eye"></i>4612453</p>
                         </div>
                     </div>
                     <div class="live-enter-box">
@@ -194,8 +194,8 @@
                     <div class="live-time-tip">
                         <div class="live-time-tip-container">
                             <span>08-23 15:30-16:30</span>
-                            <img src="img/ic_views.png" />
-                            <p>4612453</p>
+                            
+                            <p><i class="fa fa-eye"></i>4612453</p>
                         </div>
                     </div>
                     <div class="live-enter-box">
@@ -214,8 +214,8 @@
                     <div class="live-time-tip">
                         <div class="live-time-tip-container">
                             <span>今天 15:30-16:30</span>
-                            <img src="img/ic_views.png" />
-                            <p>4612453</p>
+                            
+                            <p><i class="fa fa-eye"></i>4612453</p>
                         </div>
                     </div>
                     <div class="live-enter-box">
@@ -234,8 +234,8 @@
                     <div class="live-time-tip">
                         <div class="live-time-tip-container">
                             <span>今天 15:30-16:30</span>
-                            <img src="img/ic_views.png" />
-                            <p>4612453</p>
+                            
+                            <p><i class="fa fa-eye"></i>4612453</p>
                         </div>
                     </div>
                     <div class="live-enter-box">
@@ -254,8 +254,8 @@
                     <div class="live-time-tip">
                         <div class="live-time-tip-container">
                             <span>今天 15:30-16:30</span>
-                            <img src="img/ic_views.png" />
-                            <p>4612453</p>
+                            
+                            <p><i class="fa fa-eye"></i>4612453</p>
                         </div>
                     </div>
                     <div class="live-enter-box">
@@ -286,8 +286,8 @@
             <div class="live-time-tip">
                 <div class="live-time-tip-container">
                     <span>08-23 15:30-16:30</span>
-                    <img src="../../widget/Mall.live/img/ic_views.png" />
-                    <p>4612453</p>
+                    
+                    <p><i class="fa fa-eye"></i>4612453</p>
                 </div>
             </div>
             <div class="live-enter-box">
@@ -306,8 +306,8 @@
             <div class="live-time-tip">
                 <div class="live-time-tip-container">
                     <span>今天 15:30-16:30</span>
-                    <img src="../../widget/Mall.live/img/ic_views.png" />
-                    <p>4612453</p>
+                    
+                    <p><i class="fa fa-eye"></i>4612453</p>
                 </div>
             </div>
             <div class="live-enter-box">
@@ -326,8 +326,8 @@
             <div class="live-time-tip">
                 <div class="live-time-tip-container">
                     <span>今天 15:30-16:30</span>
-                    <img src="../../widget/Mall.live/img/ic_views.png" />
-                    <p>4612453</p>
+                    
+                    <p><i class="fa fa-eye"></i>4612453</p>
                 </div>
             </div>
             <div class="live-enter-box">
@@ -346,8 +346,8 @@
             <div class="live-time-tip">
                 <div class="live-time-tip-container">
                     <span>今天 15:30-16:30</span>
-                    <img src="../../widget/Mall.live/img/ic_views.png" />
-                    <p>4612453</p>
+                    
+                    <p><i class="fa fa-eye"></i>4612453</p>
                 </div>
             </div>
             <div class="live-enter-box">
@@ -366,8 +366,8 @@
             <div class="live-time-tip">
                 <div class="live-time-tip-container">
                     <span>08-23 15:30-16:30</span>
-                    <img src="../../widget/Mall.live/img/ic_views.png" />
-                    <p>4612453</p>
+                    
+                    <p><i class="fa fa-eye"></i>4612453</p>
                 </div>
             </div>
             <div class="live-enter-box">
@@ -386,8 +386,8 @@
             <div class="live-time-tip">
                 <div class="live-time-tip-container">
                     <span>今天 15:30-16:30</span>
-                    <img src="../../widget/Mall.live/img/ic_views.png" />
-                    <p>4612453</p>
+                    
+                    <p><i class="fa fa-eye"></i>4612453</p>
                 </div>
             </div>
             <div class="live-enter-box">
@@ -406,8 +406,8 @@
             <div class="live-time-tip">
                 <div class="live-time-tip-container">
                     <span>今天 15:30-16:30</span>
-                    <img src="../../widget/Mall.live/img/ic_views.png" />
-                    <p>4612453</p>
+                    
+                    <p><i class="fa fa-eye"></i>4612453</p>
                 </div>
             </div>
             <div class="live-enter-box">
@@ -426,8 +426,8 @@
             <div class="live-time-tip">
                 <div class="live-time-tip-container">
                     <span>今天 15:30-16:30</span>
-                    <img src="../../widget/Mall.live/img/ic_views.png" />
-                    <p>4612453</p>
+                    
+                    <p><i class="fa fa-eye"></i>4612453</p>
                 </div>
             </div>
             <div class="live-enter-box">

@@ -725,9 +725,13 @@ ul,li{list-style: none;}
 	}
 	li.popular-rank {
 		border-right: 1px solid #eaeaea;
-		color: #1e89e0;
 		padding: 0 20px;
-		background: #fff;
+	}
+	li.active{
+		a{
+			color: #3bafda;
+			background: #fff;
+		}
 	}
 	.Onlylive-select {
 		color: #999999;
@@ -753,8 +757,12 @@ ul,li{list-style: none;}
 	font-size: 12px;
 	color: #999999;
 	font-family: "SimSun";
-	span{
-		color: #e74c3c;
+	p{
+		font-size: 12px;
+		line-height: 42px;	
+		span{
+			color: #e74c3c;
+		}
 	}
 
 }
@@ -792,5 +800,57 @@ ul,li{list-style: none;}
 		a{
 			float: left;
 		}
+	}
+}
+// 分页样式
+.ui_pages {
+	margin: 10px auto;
+	text-align: center;
+	li {
+		display: inline-block;
+		width: auto;
+		.btn.btn_disable {
+			background-color: #f3f3f3;
+			color: #999;
+		}
+		span {
+			border: 1px solid #cfcfcf;
+			border-radius: 0;
+			color: #333333;
+			display: inline-block;
+			height: 25px;
+			line-height: 25px;
+			margin: 0 5px;
+			padding: 0 10px;
+		}
+		a {
+			border: 1px solid #cfcfcf;
+			border-radius: 0;
+			color: #333333;
+			display: inline-block;
+			height: 25px;
+			line-height: 25px;
+			margin: 0 5px;
+			padding: 0 10px;
+		}
+	}
+	li.pages_current {
+		color: #ffffff;
+		span {
+			background-color: #ffffff;
+			border-color: #ffffff;
+			color: #f60;
+			font-weight: bold;
+		}
+		a {
+			background-color: #ffffff;
+			border-color: #ffffff;
+			color: #f60;
+			font-weight: bold;
+		}
+	}
+	li.pages_more span {
+		border: 1px solid #ffffff;
+		margin: 0;
 	}
 }

@@ -1,6 +1,7 @@
 <!--
    金币商城首页
     @require gold.less
+    @require ../../lib/Font-Awesome/4.4.0/css/font-awesome.css
     @require ../../static/css/ui.calendar.css
     @require ../../static/js/xue.ui.calendar.js
     @require gold.js
@@ -169,9 +170,10 @@
     <!-- 实物礼品 -->
     <div class="gold-store-present-box gold-store-block-change">
         <div class="gold-store-present-rank">
-            <span class="gold-store-present-rank-by">排序 : <a href="#"><em>金币</em></a></span>
-            <img src="../../widget/UserHome.gold/img/up.png" />
-            <span class="gold-store-present-rank-new">最新</span>
+            <span class="gold-store-present-rank-by">排序 :
+                <a href="#"><em>金币</em><i class="glyphicon glyphicon-arrow-up"></i></a>
+                <a href="#"><em class="gold-store-present-rank-new">最新</em><i class="glyphicon glyphicon-arrow-up"></i></a>
+            </span>
         </div>
         <div class="gold-store-present-card-container">
             <div class="gold-store-present-card-box">

@@ -171,7 +171,7 @@ $(function(){
         var $target = $(e.target);
         var index = $target.index();
         $(this).addClass('active').siblings().removeClass('active gold-detail-title-on');
-//        $gdtbtn.removeClass('gold-detail-title-on').eq(index).addClass('gold-detail-title-on');
+        //$gdtbtn.removeClass('gold-detail-title-on').eq(index).addClass('gold-detail-title-on');
         var $targetBox = $($target.attr('data-target'));
         $('.gold-detail-block-change').fadeOut(0);
         $targetBox.fadeIn(300);
@@ -247,7 +247,9 @@ $(function(){
 //时间插件
     var
         $dateStart = $('#dateStart'),
-        $dateEnd = $('#dateEnd');
+        $dateEnd = $('#dateEnd'),
+        $golddc = $('.gold-detail-check');
+    var dateStart,dateEnd;
     if($dateStart.calendar){
         $dateStart.calendar({
             controlId: "dateStartCalendar",
@@ -267,6 +269,21 @@ $(function(){
             upperLimit: new Date(),
             lowerLimit: new Date("2010/01/01")
         });
+        $golddc.on('click',function(){
+            dateStart = $dateStart.val();
+            dateEnd = $dateEnd.val();
+            //console.log(dateStart);
+            //console.log(dateEnd);
+            $.ajax({
+                url : '/GoldShop/ajaxGetGoldLogs',
+                type : 'post',
+                dataType : 'html',
+                data : {
+                    sTime:dateStart,
+                    eTime:dateEnd
+                }
+            })
+        })
     }
 
 //魔法卡兑换模态框
@@ -311,12 +328,13 @@ $(function(){
         var
             $rce = $('.red-card-exchange'),
             $rct = $('.red-card-tip');
+        var $spam = __uri('img/Spam.png');
         $rce.on('click',function(event){
             var div = $rct.html();
             if(div !== ''){
                 event.preventDefault();
             }else{
-                $rct.append('<div class="alert alert-danger fade in"><img src="../../static/img/UserHome.gold/Spam.png" class="alertImg"><span>兑换失败,你的金币余额不足哦~</span></div>')
+                $rct.append('<div class="alert alert-danger fade in"><img src="'+ $spam +'" class="alertImg"><span>兑换失败,你的金币余额不足哦~</span></div>')
             }
         });
     };

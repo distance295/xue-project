@@ -50,7 +50,7 @@
     </div>
 
     <div>
-        <button id="form_submit" class="btn btn-info" name="submit" type="submit">保存</button>
+        <button id="mpform_submit" class="btn btn-info" name="submit" type="submit">保存</button>
     </div>      
 </div>
 <script>

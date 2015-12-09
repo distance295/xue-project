@@ -13,16 +13,21 @@
   border: 1px solid #eaeaea;
   background-color: #fcfcfc;
 }
+.find-teacher-rank-focus {
+  color: #1e89e0;
+}
+.find-teacher-rank-title .glyphicon {
+  top: 2px;
+}
 .find-teacher-rank-title div {
   float: left;
   width: 65px;
   height: 36px;
-  color: #1e89e0;
+  background-color: #fff;
   text-align: center;
   padding-top: 11px;
   margin-right: 3px;
   border-right: 1px solid #eaeaea;
-  background-color: #fff;
 }
 .find-teacher-rank-title span {
   padding-left: 27px;
@@ -171,7 +176,4 @@
   overflow: hidden;
   border: 1px solid #eaeaea;
   margin-top: -1px;
-}
-.row {
-  margin: 0;
 }
