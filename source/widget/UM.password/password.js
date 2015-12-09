@@ -90,38 +90,21 @@
     }
 
     //显示隐藏label
-    $('#curPwd').focus(function(){
-      $('.curPwd-tip').hide();
-      fCheck.clearTips(".curPwd-warning");
-    });
-    $("#curPwd").blur(function(){
-      var value = $("#curPwd").val();
-      if(value == ''){
-        $('.curPwd-tip').show();
-      }
-    })
-
-    $('#newPwd').focus(function(){
-      $('.newPwd-tip').hide();
-      fCheck.clearTips(".newPwd-warning");
-    });
-    $("#newPwd").blur(function(){
-      var value = $("#newPwd").val();
-      if(value == ''){
-        $('.newPwd-tip').show();
-      }
-    })
-
-    $('#confirmPwd').focus(function(){
-      $('.confirmPwd-tip').hide();
-      fCheck.clearTips(".confirmPwd-warning");
-    });
-    $("#confirmPwd").blur(function(){
-      var value = $("#confirmPwd").val();
-      if(value == ''){
-        $('.confirmPwd-tip').show();
-      }
-    })
+    function labelfn(pwd,tip,warning) {
+      $(pwd).focus(function(){
+        $(tip).hide();
+        fCheck.clearTips(warning);
+      });
+      $(pwd).blur(function(){
+        var value = $(pwd).val();
+        if(value == ''){
+          $(tip).show();
+        }
+      })
+    }
+    labelfn("#curPwd",".curPwd-tip",".curPwd-warning");
+    labelfn("#newPwd",".newPwd-tip",".newPwd-warning");
+    labelfn("#confirmPwd",".confirmPwd-tip",".confirmPwd-warning");
 
     /* 新密码强度验证 */
     $('#newPwd').off('keyup').on('keyup',function(e){
@@ -149,6 +132,21 @@
               if (curpasswd.length < 6) {
                   fCheck.setTips(".curPwd-warning",'密码不能少于6位字符');
                   return false;
+              }else{
+                  $.ajax({
+                      type: "POST",
+                      url: "/MyInfos/changeStuPwd",
+                      data: "curPwd=" + curpasswd,
+                      dataType: 'json',
+                      async: false, 
+                      success: function(d) {
+                          if (d.sign == 1) {
+                              fCheck.bordercss('#curPwd');
+                          } else {
+                              fCheck.setTips('.curPwd-warning',d.msg);
+                          }
+                      }
+                  });    
               }    
           }
           /* 新密码设置 */
@@ -189,6 +187,5 @@
                   }
               }
           });
-          fCheck.bordercss('#curPwd');
         })  
     })  

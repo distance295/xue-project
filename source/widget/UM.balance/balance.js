@@ -1,4 +1,4 @@
-$(document).ready(function balanceAjax(page){
+function balanceAjax(page){
     $.ajax({
         type: "GET",
         url: "/MyPayCenters/ajaxRechargeData",
@@ -13,7 +13,7 @@ $(document).ready(function balanceAjax(page){
             alert("异步失败");  
         }  
     });
-})
+}
 
 
            
