@@ -38,6 +38,7 @@ courses.avatar = courses.avatar || {};
         this.box.next = btn.hasClass('next') ? btn : btn.siblings('.next');
         this.size = this.box.list.length;
         this.max = this.size - 1;
+        this.step = $(".avatar-items li").width();
 
         var list = pic.find('li');
         var left = pic.css('margin-left');
@@ -112,8 +113,8 @@ $('body').off('click', '.avatar-roll a, .majar-items .prev, .majar-items .next')
     if (that.hasClass('none')) {
         return false;
     } else {
-     courses.avatar.toggle(that)     
- }
+       courses.avatar.toggle(that)     
+   }
 });
 /**
  * 
