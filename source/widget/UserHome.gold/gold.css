@@ -283,15 +283,25 @@ table tr td {
   margin-left: 22px;
   color: #999;
   cursor: pointer;
+  position: relative;
 }
-.gold-store-present-rank-by em:hover {
+.gold-store-present-rank-by a:hover {
   color: #3bafda;
 }
 .gold-store-present-rank-by .glyphicon {
   top: 2px;
 }
 .gold-store-present-rank-new {
-  margin-left: 20px;
+  width: 52px;
+  position: absolute;
+  left: 100px;
+}
+.gold-store-new-arrow {
+  position: absolute;
+  left: 133px;
+}
+.gold-store-present-rank-focus {
+  color: #3bafda;
 }
 .gold-store-present-card-container {
   overflow: hidden;
