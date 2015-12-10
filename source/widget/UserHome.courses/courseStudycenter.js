@@ -132,7 +132,12 @@ function testLive(){
         }
     });
 }
-
+// 讲义资料弹框tab事件
+$('body').on('click','.material-wrap .material-tab li',function(){
+    var index = $(this).index();
+    $(this).addClass('current').siblings().removeClass('current');
+    $('.material-content').eq(index).show().siblings('.material-content').hide();
+})
 // 录播课程
 function tabRecord(){
 
