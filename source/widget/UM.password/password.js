@@ -70,8 +70,7 @@
         $(fCheck.param.passStrength).removeClass().addClass('strong' + tp);
         /* 方便最后的验证 */
         fCheck.param.cPass = 1;     
-      }else if(val.length > 0 && val.length <= 5){
-        
+      }else if(val.length > 0 && val.length <= 5){  
         $(tip).hide();
         $(passStrong).css({
           'display' : 'none'
