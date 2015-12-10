@@ -19,7 +19,9 @@
 <!-- 页面配置 -->
 <script>
 $(function () {
-  $('[data-toggle="popover"]').popover();
+  $('[data-toggle="popover"]').popover({
+        content: 1111
+  });
 })
     var PAGE_CONFIG = {
         ID: 'Courses',
