@@ -43,11 +43,12 @@ body{
 	position: absolute;
 	right: 0px;
 	color: #fff;
-	font-size: 12px;
+	font-size: 14px;
 	font-style: normal;
 	cursor: pointer;
 	font-weight: normal;
 	padding: 0 2px;
+	line-height: 17px;
 }
 .label-delay{
 	background: #3bafda;
@@ -73,19 +74,22 @@ body{
 .courseList-label{
 	padding-right: 25px;
 }
-.popover{
-	background-color: #f9f9f9;
-	padding: 4px 3px;
-	font-size: 14px;
-	color: #666;
-	border-color: #e5e5e5;
-	box-shadow: none;
-}
-.popover.top > .arrow::after{
-	border-top-color: #f9f9f9;
-}
-.popover.top > .arrow{
-	border-top-color: #e5e5e5;
+.courselayout-list{
+	
+	.popover{
+		background-color: #f9f9f9;
+		padding: 4px 3px;
+		font-size: 14px;
+		color: #666;
+		border-color: #e5e5e5;
+		box-shadow: none;
+	}
+	.popover.top > .arrow::after{
+		border-top-color: #f9f9f9;
+	}
+	.popover.top > .arrow{
+		border-top-color: #e5e5e5;
+	}
 }
 .wrap-body{
 	a,a:focus,a.btn:focus,a.btn:active{
@@ -260,7 +264,7 @@ body{
 				background: url("img/blue-arrow.png") no-repeat right center;
 			}
 			.more-list{
-				padding: 5px 8px;
+				padding: 5px 0px;
 				border: 1px solid #f5f5f5;
 				background: #fcfcfc;
 				width: 62px;
@@ -373,13 +377,13 @@ body{
 	}
 }
 // 弹框
-.material-exam{
+.material-exam,.courseInformation{
 	.modal-dialog{
-		width: 750px;
+		width: 770px;
 		height: 380px;
 	}
 	.modal-body{
-		height: 295px;
+		height: 315px;
 		overflow-y: auto;
 		padding-bottom: 25px;
 	}
@@ -451,19 +455,30 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 	.material{
 		tr{
 			td{
-				border: 1px solid @borderColor;
 				padding:  9px 17px;
+				display: inline-block;
+				width: 357px;
+				border: none;
 				p{
 					color: #666;
 					font-size: 12px;
 					line-height: 34px;
 					margin-bottom: 10px;
+					height: 34px;
+					width: 322px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					text-align: left;
 				}
 				span{
 					color: #999999;
 					font-size: 12px;
 					margin-left: 10px;
 				}
+			}
+			td:first-child{
+				border-right: 1px solid @borderColor;
 			}
 		}
 	}
@@ -503,6 +518,14 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 }
 .load-btn-none{
 	color: #999;
+	cursor: default;
+	&:hover,&:visited{
+		color: #999;
+	}
+	&:active,&.active{
+		box-shadow: none;
+		color: #999;
+	}
 }
 // 延期弹框
 .bom-delay{
