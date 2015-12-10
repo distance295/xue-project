@@ -72,6 +72,7 @@ $(function  () {
     $('.more-list li.courseList-exam').on('click',function(){
         examTable();
     });
+    testLive();
 })
 // 更多服务
 function moreService (){

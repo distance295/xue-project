@@ -17,7 +17,7 @@ var PAGE_CONFIG = PAGE_CONFIG || {};
 PAGE_CONFIG.NAV_URL = __uri('/data/Public.Nav/nav.json');
 
 $(function(){
-    document.title = PAGE_CONFIG.TITLE;
+//    document.title = PAGE_CONFIG.TITLE;
     dropdown.init();
     try{
         nav.init({
