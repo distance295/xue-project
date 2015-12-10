@@ -218,7 +218,7 @@ $(function(){
                 .css({'box-shadow':'none'},300)
                 .animate({'margin-top':10},300)
         }
-    },'gold-store-present-card');
+    },'.gold-store-present-card');
 
     $gsc.on({
         mouseenter:function(){
@@ -243,7 +243,7 @@ $(function(){
                 .css({'box-shadow':'none'},300)
                 .animate({'margin-top':10},300)
         }
-    },'gold-exchange-present-card');
+    },'.gold-exchange-present-card');
 //时间插件
     var
         $dateStart = $('#dateStart'),
@@ -286,11 +286,57 @@ $(function(){
         })
     }
 
+//实物礼品排序
+    var $goldstoreprb = $('.gold-store-present-rank-by'),
+        sort_type = '',
+        gold_sort = '';
+    var $goldstoreprg = $('.gold-store-present-rank-gold'),
+        $goldstorega = $('.gold-store-gold-arrow');
+    $goldstoreprg.on('click',function(){
+        $goldstorega.toggleClass('glyphicon-arrow-down');
+    });
+    $goldstoreprb.on('click','a',function(){
+        $(this).addClass('gold-store-present-rank-focus').siblings().removeClass('gold-store-present-rank-focus');
+        var $findi = $(this).find('i').addClass('glyphicon glyphicon-arrow-up').parent().siblings().find('i');
+        var $this = $(this).find('em');
+        $findi.removeClass('glyphicon glyphicon-arrow-down').removeClass('glyphicon glyphicon-arrow-up');
+        if($this.hasClass('gold-store-present-rank-gold')){
+            sort_type = 1;
+        }else if($this.hasClass('gold-store-present-rank-new')){
+            sort_type = 2;
+        }
+        if ($goldstorega.hasClass('glyphicon-arrow-down')) {
+            gold_sort = 2;
+
+        }else if($this.hasClass('gold-store-present-rank-new')){
+            gold_sort = '';
+        }
+        else {
+            gold_sort = 1;
+        }
+        //console.log(sort_type);
+        //console.log(gold_sort);
+        $.ajax({
+            url : '/GoldShop/ajaxGetAwardList',
+            type : 'post',
+            dataType : 'html',
+            data : {
+                sort_type : sort_type,
+                gold_sort : gold_sort
+            }
+        })
+    })
+
+    var
+        $body = $('body'),
+        pabLabel = '.present-address-box form label',
+        presentAdd = '.present-add',
+        presentDec = '.present-dec';
+
 //魔法卡兑换模态框
-    var $cardCreateModal = $('.card-createModal');
+    var $cardCreateModal = $('.gold-store-card-box');
 
-    $cardCreateModal.on('click',function(){
-
+    $cardCreateModal.on('click','.gold-store-card',function(){
         goldCardModal.getModal();
 
     });
@@ -298,12 +344,13 @@ $(function(){
     var goldCardModal = goldCardModal || {};
 
     goldCardModal.getModal = function(){
+        var cardid = $(this).closest('.gold-store-card').attr('id');
         $.ajax({
-            url : '/data/gold/gold-card-modal.html',
-            type : 'get',
+            url : '/GoldShop/magicDetail',
+            type : 'post',
             dataType : 'html',
             data : {
-                id:"111"
+                id : cardid
             },
             success : function(result){
                 goldCardModal.showModal(result);
@@ -325,35 +372,54 @@ $(function(){
 
         $('#cardModal').modal('show');
 
-        var
-            $rce = $('.red-card-exchange'),
-            $rct = $('.red-card-tip');
-        var $spam = __uri('img/Spam.png');
-        $rce.on('click',function(event){
-            var div = $rct.html();
-            if(div !== ''){
-                event.preventDefault();
-            }else{
-                $rct.append('<div class="alert alert-danger fade in"><img src="'+ $spam +'" class="alertImg"><span>兑换失败,你的金币余额不足哦~</span></div>')
-            }
-        });
     };
 
-//实物兑换模态框
-    var $presentCreateModal = $('.present-createModal');
+//魔法卡兑换
+    $body.on('click','.red-card-exchange',function(){
+        var redCardId = $(this).closest('.red-card-box').attr('id'),
+            $spam = __uri('img/Spam.png'),
+            $rct = $('.red-card-tip');
+        var div = $rct.html();
+        $.ajax({
+            url : '/GoldShop/useMagicCard',
+            type : 'post',
+            dataType : 'json',
+            data : {
+                id : redCardId
+            },
+            success : function(msg,event){
+                if(msg.sign == 0){
+                    if(div !== ''){
+                        event.preventDefault();
+                    }else{
+                        $rct.append('<div class="alert alert-danger fade in"><img src="'+ $spam +'" class="alertImg"><span>兑换失败,你的金币余额不足哦~</span></div>')
+                    }
+                }
+                if(msg.sign == 1){
+                    window.location.href = msg.url;
+                }
+            }
+        })
+    });
 
-    $presentCreateModal.on('click',function(){
+//实物兑换模态框
+    var $presentCreateModal = $('.gold-store-present-card-container');
+
+    $presentCreateModal.on('click','.gold-store-present-card',function(){
         goldPresentModal.getModal();
     });
 
     var goldPresentModal = goldPresentModal || {};
 
     goldPresentModal.getModal = function(){
+        var presentid = $(this).closest('.gold-store-present-card').attr('id');
         $.ajax({
-            url : '/data/gold/gold-present-modal.html',
-            type : 'get',
+            url : '/GoldShop/realAwardDetail',
+            type : 'post',
             dataType : 'html',
-            data : {},
+            data : {
+                id : presentid
+            },
             success : function(result){
                 goldPresentModal.showModal(result);
             }
@@ -374,11 +440,6 @@ $(function(){
 
         $('#presentModal').modal('show');
 
-        var
-            $body = $('body'),
-            pabLabel = '.present-address-box form label',
-            presentAdd = '.present-add',
-            presentDec = '.present-dec';
 
         $body.on("click",pabLabel, function(e){
             var
@@ -432,17 +493,71 @@ $(function(){
                 $pig.html(gold * (num - 1));
             }
         });
+    };
+//实物礼品兑换
+    $body.on('click','.present-exchange',function(){
         var
             $pct = $('.present-card-tip'),
-            $pe = $('.present-exchange');
-
-        $pe.on('click',function(event){
-            var div = $pct.html();
-            if(div !== ''){
-                event.preventDefault();
-            }else{
-                $pct.append('<div class="alert alert-danger fade in"><img src="../../static/img/UserHome.gold/Spam.png" class="alertImg"><span>兑换失败,你的金币余额不足哦~</span></div>')
+            presentId = $(this).closest('.present-box').attr('id'),
+            $presentNum = $('.present-num');
+        var num = parseInt($presentNum.html());
+        var div = $pct.html();
+        $.ajax({
+            url : '/GoldShop/ajaxExchange',
+            type : 'post',
+            dataType : 'json',
+            data : {
+                award_type : 1,
+                id : presentId,
+                num : num,
+                addId : addId
+            },
+            success : function(msg,event){
+                if(msg.sign == 0){
+                    if(div !== ''){
+                        event.preventDefault();
+                    }else{
+                        $pct.append('<div class="alert alert-danger fade in"><img src="../../static/img/UserHome.gold/Spam.png" class="alertImg"><span>兑换失败,你的金币余额不足哦~</span></div>')
+                    }
+                }
+                if(msg.sign == 1){
+                    window.location.href = msg.url;
+                }
             }
         });
-    }
-})
+    });
+
+//我兑换的 魔法卡兑换列表
+    var $goldexr = $('.gold-exchange-rank'),
+        is_used = 0;
+    $goldexr.on('click','span',function(){
+        if($(this).hasClass('gold-exchange-not-use') ){
+            is_used = 0;
+        }else if($(this).hasClass('gold-exchange-used')){
+            is_used = 1;
+        }
+        $.ajax({
+            url : '/GoldShop/ajaxGetMagicExLogs',
+            type : 'post',
+            dataType : 'html',
+            data : {
+                is_used : is_used
+            }
+        })
+    });
+
+    var $goldexscon = $('.gold-exchange-show-container');
+
+    $goldexscon.on('click','.gold-exchange-use span',function(){
+        var exchangeid = $(this).closest('.gold-exchange-show').attr('id');
+        //console.log(exchangeid);
+        $.ajax({
+            url : '/GoldShop/useMagicCard',
+            type : 'post',
+            dataType : 'html',
+            data : {
+                id : exchangeid
+            }
+        })
+    })
+});
