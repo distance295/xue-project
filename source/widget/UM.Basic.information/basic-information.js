@@ -37,7 +37,8 @@ $(function(){
     $(nickname).on('blur',function(){
         fCheck.clearTips(".prompt-empty");
         if(nickname.data('lastVal') != $.trim(nickname.val())) {
-           $.fn.nickname();
+            $(".nickname").css('border','1px solid #eaeaea');
+            $.fn.nickname();
         }
     });
 });
@@ -85,7 +86,6 @@ $.fn.nicknameajax = function(){
                 } else {
                     fCheck.clearTips(".nickname-warning");
                     fCheck.bordercss('.nickname');
-                    $(box).data('nickname',val);
                     return true;
                 }
             },
