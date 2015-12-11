@@ -7,7 +7,7 @@
 
     <div class="find-teacher-list">
     <div class="find-teacher-list-container">
-        <div class="find-teacher-card">
+        <div class="find-teacher-card" id="t1">
             <div class="find-teacher-intro">
                 <div class="find-teacher-hover-container">
                     <img src="../../widget/Mall.FindTeacher/img/teacher-photo.png" class="find-teacher-photo"/>
@@ -32,7 +32,7 @@
                 <span class="find-teacher-data-statistics"><img src="../../widget/Mall.FindTeacher/img/ic_user.png" />444230</span>
             </div>
         </div>
-        <div class="find-teacher-card">
+        <div class="find-teacher-card" id="t2">
             <div class="find-teacher-intro">
                 <div class="find-teacher-hover-container">
                     <img src="../../widget/Mall.FindTeacher/img/teacher-photo.png" class="find-teacher-teacher-photo"/>
