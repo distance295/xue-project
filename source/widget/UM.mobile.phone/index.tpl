@@ -31,7 +31,7 @@
             <p>短信验证码：</p>
             <input id="phonecode" name="code" type="text"/>
             <label for="phonecode" class="phonecode-tip">请输入短信验证码</label>
-            <button class="vcode btn btn-info" id="vcode">获取短信验证码</button>
+            <sapn class="vcode btn btn-info" id="vcode">获取短信验证码</sapn>
         </div>
         <div class="error-box">
             <span id="tips-phonecode" class="tips error"></span>
@@ -50,7 +50,7 @@
     </div>
 
     <div>
-        <button id="mpform_submit" class="btn btn-info" name="submit" type="submit">保存</button>
+        <sapn id="mpform_submit" class="btn btn-info" name="submit" type="submit">保存</sapn>
     </div>      
 </div>
 <script>

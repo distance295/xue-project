@@ -26,6 +26,9 @@
     veriTip      : '.verification-tip',
     selectWarn   : '.select-warning',
     tPhoneCode   : '#tips-phonecode',
+    passStrong   : '.pass-strong',
+    passStrength : '.pass-strong strong',
+    strong       : 'strong',
     cPhone       : 0,
     cPass        : 0,
     cImg         : 0,
@@ -109,16 +112,13 @@
   fCheck.imgcode = function() {
     var input = $(fCheck.param.verifiCode),
       v = input.val();
-
     if (v == '') {
       fCheck.setTips('.veri-warning','请输入右侧验证码');
       fCheck.param.cImg = 0;
     }else if(/^\w{4}$/.test(v)){
       /* 调用ajax取值 */
       fCheck.clearTips('.veri-warning');
-      fCheck.imgCodeAjax();
-      fCheck.param.cImg = 1;
-      
+      fCheck.imgCodeAjax();     
     }else{
       fCheck.setTips('.veri-warning','请输入正确的验证码');
       fCheck.param.cImg = 0;
@@ -132,16 +132,16 @@
         url:"/MyInfos/getVerificationCode",
         data: 'verifyCode=' + $('#verificationCode').val(),
         dataType: "json",
-        timeout: 7000,
         success: function(result) {
           /* 填写的信息验证不通过 */
           if(result.sign != 1){
-          window.location.href= '/MyInfos/bindStuPhone';
+          fCheck.changeVerificationImg("verificationImg");
           fCheck.setTips('.veri-warning','网站验证码填写错误');
           fCheck.param.cImg = 0;
         }else{
           fCheck.clearTips('.veri-warning');
           fCheck.param.cImg = 1;
+          $('#verificationCode').css('border','1px solid #68c04a');
         }
       },
       error: function() {
@@ -215,19 +215,20 @@
     fCheck.checkPhone(fCheck.param.phoneTip,fCheck.param.phoneWarn,$("#phone").val());
     fCheck.imgcode();
     var value = $(fCheck.param.curPwd).val();
-    if(value.length > 0 && value.length < 6 ){
-      fCheck.setTips(fCheck.param.curPwdWarn,'密码不能少于6位字符');
-    }else if(value.length == 0){
-      fCheck.setTips(fCheck.param.curPwdWarn,'请输入密码');
-    }
+    if(value.length == 0){
+           fCheck.setTips(fCheck.param.curPwdWarn,'请输入密码');
+       }else{
+           if (value.length > 0 && value.length < 6) {
+               fCheck.setTips(fCheck.param.curPwdWarn,'密码不能少于6位字符');
+           }
+    };
     var param = fCheck.param;
-      if( param.cPhone && param.cPass && param.cGrade && param.cImg ){
+      if( param.cPhone && param.cMessage && param.cImg ){
         return false;
       }else{
         return true;
       }
     }
-
   /* 手机号码输入框的操作 */
   $(fCheck.param.phone).focus(function(){
     $(fCheck.param.phoneTip).hide();
@@ -237,9 +238,9 @@
   $(fCheck.param.phone).blur(function(){
     var value =  $("#phone").val();
     fCheck.checkPhone(fCheck.param.phoneTip,fCheck.param.phoneWarn,value);
-    if(fCheck.param.cPhone == 1){
-      $('#phone').css('border','1px solid #68c04a');
-    }else{$('#phone').css('border','1px solid #eaeaea');}
+    if(fCheck.param.cPhone !== 1){
+      $('#phone').css('border','1px solid #eaeaea');
+    }
   });
 
   /* 密码框的操作 */
@@ -255,12 +256,7 @@
     }else if(value.length == 0){
       fCheck.setTips(fCheck.param.curPwdWarn,'请输入密码');
       $(fCheck.param.curPwdTip).show();
-    }
-    if(fCheck.param.cPass == 1){
-      $('#curPwd').css('border','1px solid #68c04a');
-    }else{
-      $('#curPwd').css('border','1px solid #eaeaea');
-    }  
+    } 
   });
 
   /* 点击切换验证码 */
@@ -275,12 +271,11 @@
 
   $("#verificationCode").on('blur',function(){
     var value = $("#verificationCode").val();
-    if(value == ''){$(fCheck.param.veriTip).show();}
-    fCheck.imgcode();
-    if(fCheck.param.cImg == 1){
-      $('#verificationCode').css('border','1px solid #68c04a');
+    $('#verificationCode').css('border','1px solid #eaeaea');
+    if(value == ''){
+      $(fCheck.param.veriTip).show();
     }else{
-      $('#verificationCode').css('border','1px solid #eaeaea');
+      fCheck.imgcode();
     }
   });
 
@@ -307,7 +302,6 @@
     fCheck.clearTips('#tips-phonecode');
   })
 
-
   $("#phonecode").on("blur",function(){
     var value = $('#phonecode').val();
     if(value.length == 0){
@@ -316,37 +310,37 @@
   })
 
   /* 判断是否可以点击操作"完成"按钮 */
-
   $("#mpform_submit").on('click',function(e){
     var isError = fCheck.isError(e);
     if(isError){
       return false;
     }else{
       fCheck.phonecode('#phonecode');
-      if( fCheck.param.cMessage){
-        /* 正常绑定 */
-         $.ajax({
-          type:"GET",
-          url:"/MyInfos/bindStuPhone",
-          dataType: "json",
-          data: 'phone=' + $('#phone').val() + '&curPwd=' + $('#curPwd').val() + '&imgcode=' + $('#verificationCode').val()+'&phonecode='+$('#phonecode').val(),
-          timeout: 7000,
-          success: function(result) {
-            /* 填写的信息验证不通过 */
-            if(result.sign == 1){
-              window.location.href= '/Reg/RegSuc';
+      /* 正常绑定 */
+      $.ajax({
+        type:"GET",
+        url:"/MyInfos/bindStuPhone",
+        dataType: "json",
+        data: 'phone=' + $('#phone').val() + '&curPwd=' + $('#curPwd').val() + '&imgcode=' + $('#verificationCode').val()+'&phonecode='+$('#phonecode').val(),
+        timeout: 7000,
+        success: function(result) {
+          /* 填写的信息验证不通过 */
+          if(result.sign == 1){
+            window.location.href= '/Reg/RegSuc';
+          }else{
+            fCheck.setTips('#tips-phonecode',result.msg);
+            if(fCheck.param.cPass == 1){
+              $('#curPwd').css('border','1px solid #68c04a');
             }else{
-              fCheck.setTips('#tips-phonecode',result.msg);
-            }
-          },
-          error: function() {
-            alert('数据读取错误,请重试..');
-            return false;
+              $('#curPwd').css('border','1px solid #eaeaea');
+            } 
           }
-         });
-      }else{
-        return false;
-      }
+        },
+        error: function() {
+          alert('数据读取错误,请重试..');
+          return false;
+        }
+      });
     }
   });
   fCheck.changeVerificationImg("verificationImg");

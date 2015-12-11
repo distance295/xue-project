@@ -44,16 +44,13 @@
                 <div>
                     <div id="date" data-date="2012-10-1">
                         <label for="">生日：</label>
-                        <select id="year" class="year" name="year" >
-                          <option>请选择</option>
+                        <select id="year" name="year" >
                         </select>
                         <i>年</i>
-                        <select id="month" class="month" name="month" >
-                          <option>请选择</option>
+                        <select id="month" name="month" >
                         </select>
                         <i>月</i>
-                        <select id="day" class="day" name="day">
-                          <option>请选择</option>
+                        <select id="day" name="day">
                         </select>
                         <i>日</i>
                     </div>
@@ -69,7 +66,7 @@
                         <span class="school-warning error"></span>
                     </div>
                 </div>
-                <button class="btn-submit btn btn-info" name="submit" type="submit">保存</button>
+                <span class="btn-submit btn btn-info" name="submit" type="submit">保存</span>
             </div>
         <div class="bi-right">
             <span>真实姓名、性别、所在地、年级等基本资料如需修改请拨打客服电话：<em>400-800-2211</em></span>
@@ -79,17 +76,17 @@
     <!-- 这是jquery库文件 -->
     <script type="text/javascript" src="../../lib/jQuery/1.11.1/jquery.min.js"></script>
     <!-- 这是当前模块js文件 -->
+    <script type="text/javascript" src="birthday.js"></script>
     <script type="text/javascript" src="basic-information.js"></script>
-    <script>
-        /* 火狐浏览器刷新之后的界面不同的处理 */
-        !function(){
-            $('#phone').val('');
-            $('#password').val('');
-            $('#grade').val('')
-            $('#verificationCode').val('');
-            $('#phonecode').val('');
-        }();
-    </script>
+    <script>  
+    $(function () {
+        $.ms_DatePicker({
+                YearSelector: "#year",
+                MonthSelector: "#month",
+                DaySelector: "#day"
+        });
+        $.ms_DatePicker();
+    }); 
+    </script> 
 </body>
 </html>
-

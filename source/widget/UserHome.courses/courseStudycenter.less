@@ -75,7 +75,7 @@ body{
 	padding-right: 25px;
 }
 .courselayout-list{
-	
+
 	.popover{
 		background-color: #f9f9f9;
 		padding: 4px 3px;
@@ -606,49 +606,55 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 				}
 			}
 		}
-		tr{
-			font-size: 14px;
-			font-family: "SimSun";
-			.text-style{
-				text-align: center;
-				font-size: 12px;
-				span{
-					color: #999;
-				}
-				a.homework-wait-submit{
-					color: #ffbc3c;
-					cursor: pointer;
-				}
-			}
-			.studied-end{
-				color: @red;
-			}
-			.yellow-mark{
-				color: #ffbc3c;
-			}
-			.studied{
-				color: #37bc9b;
-			}
-			.static-gray{
-				color: #999999;
-			}
-			.static-red{
-				color: @red;
-			}
-			.wait-look{
-				color: #3bafda;
-			}
-			td.yellow-mark{
-				em{
-					display: inline-block;
-					width: 18px;
-					height: 18px;
-					margin-left: 5px;
-				}
-				.mark{
-					background: url("img/spam.png") no-repeat right center;
-					vertical-align: middle;
+		tbody{
 
+			tr{
+				font-size: 14px;
+				font-family: "SimSun";
+				.text-style{
+					text-align: center;
+					font-size: 12px;
+					span{
+						color: #999;
+					}
+					a.homework-wait-submit{
+						color: #ffbc3c;
+						cursor: pointer;
+					}
+				}
+				td{
+					border-top: none;
+				}
+				.studied-end{
+					color: @red;
+				}
+				.yellow-mark{
+					color: #ffbc3c;
+				}
+				.studied{
+					color: #37bc9b;
+				}
+				.static-gray{
+					color: #999999;
+				}
+				.static-red{
+					color: @red;
+				}
+				.wait-look{
+					color: #3bafda;
+				}
+				td.yellow-mark{
+					em{
+						display: inline-block;
+						width: 18px;
+						height: 18px;
+						margin-left: 5px;
+					}
+					.mark{
+						background: url("img/spam.png") no-repeat right center;
+						vertical-align: middle;
+
+					}
 				}
 			}
 		}
@@ -730,7 +736,7 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 // 进度条
 .processingbar {
 	text-align: center;
-	margin: 8px 28px 0 0;
+	margin: 3px 0 0 20px;
 	position: relative;
 	width: 100px;
 }
