@@ -61,7 +61,7 @@
                </tr>
            </tbody>
         </table>
-        <button class="btn btn-danger" data-toggle="modal" data-target="#orderModal" onclick="orderModal();">重新支付</button>
+        <span class="btn btn-danger" data-toggle="modal" data-target="#orderModal" onclick="orderModal();">重新支付</span>
     </div>
     <div class="consignee information">
         <h4>收货人信息</h4>

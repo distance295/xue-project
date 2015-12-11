@@ -3,7 +3,7 @@
     @require money.js   
 -->
 <div class="gift-card-record">
-     <button class="gcr-top-up btn btn-info">去激活</button>
+     <span class="gcr-top-up btn btn-info">去激活</span>
      <table id="moneyTable" class="table gcr-table">
         <thead>
             <tr>
