@@ -607,56 +607,56 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 			}
 		}
 		tbody{
-
-		tr{
-			font-size: 14px;
-			font-family: "SimSun";
-			.text-style{
-				text-align: center;
-				font-size: 12px;
-				span{
-					color: #999;
+			
+			tr{
+				font-size: 14px;
+				font-family: "SimSun";
+				.text-style{
+					text-align: center;
+					font-size: 12px;
+					span{
+						color: #999;
+					}
+					a.homework-wait-submit{
+						color: #ffbc3c;
+						cursor: pointer;
+					}
 				}
-				a.homework-wait-submit{
+				td{
+					border-top: none;
+				}
+				.studied-end{
+					color: @red;
+				}
+				.yellow-mark{
 					color: #ffbc3c;
-					cursor: pointer;
 				}
-			}
-			td{
-				border-top: none;
-			}
-			.studied-end{
-				color: @red;
-			}
-			.yellow-mark{
-				color: #ffbc3c;
-			}
-			.studied{
-				color: #37bc9b;
-			}
-			.static-gray{
-				color: #999999;
-			}
-			.static-red{
-				color: @red;
-			}
-			.wait-look{
-				color: #3bafda;
-			}
-			td.yellow-mark{
-				em{
-					display: inline-block;
-					width: 18px;
-					height: 18px;
-					margin-left: 5px;
+				.studied{
+					color: #37bc9b;
 				}
-				.mark{
-					background: url("img/spam.png") no-repeat right center;
-					vertical-align: middle;
+				.static-gray{
+					color: #999999;
+				}
+				.static-red{
+					color: @red;
+				}
+				.wait-look{
+					color: #3bafda;
+				}
+				td.yellow-mark{
+					em{
+						display: inline-block;
+						width: 18px;
+						height: 18px;
+						margin-left: 5px;
+					}
+					.mark{
+						background: url("img/spam.png") no-repeat right center;
+						vertical-align: middle;
 
+					}
 				}
 			}
-		}
 		}
 	}
 }
