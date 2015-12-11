@@ -79,7 +79,7 @@ $(function(){
                 tp = tp.replace(/\$province\$/g, data.province);
                 tp = tp.replace(/\$realname\$/g, data.realname);
                 tp = tp.replace(/\$province_text\$/g, data.province_text);
-                tp = tp.replace(/\$city_text\$/g, data.city_text)
+                tp = tp.replace(/\$city_text\$/g, data.city_text);
                 tp = tp.replace(/\$country_text\$/g, data.country_text);
 
                 if(result.type === 1){
@@ -337,14 +337,9 @@ $(function(){
     var $cardCreateModal = $('.gold-store-card-box');
 
     $cardCreateModal.on('click','.gold-store-card',function(){
-        goldCardModal.getModal();
-
-    });
-
-    var goldCardModal = goldCardModal || {};
-
-    goldCardModal.getModal = function(){
+        //goldCardModal.getModal();
         var cardid = $(this).closest('.gold-store-card').attr('id');
+        //console.log(cardid);
         $.ajax({
             url : '/GoldShop/magicDetail',
             type : 'post',
@@ -356,7 +351,9 @@ $(function(){
                 goldCardModal.showModal(result);
             }
         })
-    };
+    });
+
+    var goldCardModal = goldCardModal || {};
 
     goldCardModal.showModal = function(con){
         var that = $(this), data = that.data();
@@ -407,11 +404,6 @@ $(function(){
 
     $presentCreateModal.on('click','.gold-store-present-card',function(){
         goldPresentModal.getModal();
-    });
-
-    var goldPresentModal = goldPresentModal || {};
-
-    goldPresentModal.getModal = function(){
         var presentid = $(this).closest('.gold-store-present-card').attr('id');
         $.ajax({
             url : '/GoldShop/realAwardDetail',
@@ -424,7 +416,9 @@ $(function(){
                 goldPresentModal.showModal(result);
             }
         })
-    };
+    });
+
+    var goldPresentModal = goldPresentModal || {};
 
     goldPresentModal.showModal = function(con){
         var that = $(this), data = that.data();
