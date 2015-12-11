@@ -24,7 +24,7 @@
             <span class="serialPass-warning error"></span>
         </div>
 
-        <button class="btn-certificate btn btn-info">激活</button>
+        <span class="btn-certificate btn btn-info">激活</span>
     </div>
 </div>
 <div class="prompt-box">
