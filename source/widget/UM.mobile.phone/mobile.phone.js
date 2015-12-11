@@ -215,19 +215,20 @@
     fCheck.checkPhone(fCheck.param.phoneTip,fCheck.param.phoneWarn,$("#phone").val());
     fCheck.imgcode();
     var value = $(fCheck.param.curPwd).val();
-    if(value.length > 0 && value.length < 6 ){
-      fCheck.setTips(fCheck.param.curPwdWarn,'密码不能少于6位字符');
-    }else if(value.length == 0){
-      fCheck.setTips(fCheck.param.curPwdWarn,'请输入密码');
-    }
+    if(value.length == 0){
+           fCheck.setTips(fCheck.param.curPwdWarn,'请输入密码');
+       }else{
+           if (value.length > 0 && value.length < 6) {
+               fCheck.setTips(fCheck.param.curPwdWarn,'密码不能少于6位字符');
+           }
+    };
     var param = fCheck.param;
-      if( param.cPhone && param.cPass && param.cGrade && param.cImg ){
+      if( param.cPhone && param.cMessage && param.cImg ){
         return false;
       }else{
         return true;
       }
     }
-
   /* 手机号码输入框的操作 */
   $(fCheck.param.phone).focus(function(){
     $(fCheck.param.phoneTip).hide();
@@ -323,30 +324,26 @@
       return false;
     }else{
       fCheck.phonecode('#phonecode');
-      if( fCheck.param.cMessage){
-        /* 正常绑定 */
-         $.ajax({
-          type:"GET",
-          url:"/MyInfos/bindStuPhone",
-          dataType: "json",
-          data: 'phone=' + $('#phone').val() + '&curPwd=' + $('#curPwd').val() + '&imgcode=' + $('#verificationCode').val()+'&phonecode='+$('#phonecode').val(),
-          timeout: 7000,
-          success: function(result) {
-            /* 填写的信息验证不通过 */
-            if(result.sign == 1){
-              window.location.href= '/Reg/RegSuc';
-            }else{
-              fCheck.setTips('#tips-phonecode',result.msg);
-            }
-          },
-          error: function() {
-            alert('数据读取错误,请重试..');
-            return false;
+      /* 正常绑定 */
+      $.ajax({
+        type:"GET",
+        url:"/MyInfos/bindStuPhone",
+        dataType: "json",
+        data: 'phone=' + $('#phone').val() + '&curPwd=' + $('#curPwd').val() + '&imgcode=' + $('#verificationCode').val()+'&phonecode='+$('#phonecode').val(),
+        timeout: 7000,
+        success: function(result) {
+          /* 填写的信息验证不通过 */
+          if(result.sign == 1){
+            window.location.href= '/Reg/RegSuc';
+          }else{
+            fCheck.setTips('#tips-phonecode',result.msg);
           }
-         });
-      }else{
-        return false;
-      }
+        },
+        error: function() {
+          alert('数据读取错误,请重试..');
+          return false;
+        }
+      });
     }
   });
   fCheck.changeVerificationImg("verificationImg");
