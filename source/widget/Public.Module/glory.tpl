@@ -1,25 +1,26 @@
 <!--
    课程列表：
     @require glory.less       
+    @require courses.less       
     @require glory.js       
 -->
 
 <ul class="screen-rank">
-    <li class="popular-rank">人气</li>
-    <li >幼升小</li>
-    <li >一年级</li>
-    <li >二年级</li>
-    <li >三年级</li>
-    <li >四年级</li>
-    <li >五年级</li>
-    <li >六年级</li>
-    <li >初一</li>
-    <li >初二</li>
-    <li >初三</li>
-    <li >高一</li>
-    <li >高二</li>
-    <li >高三</li>
-    <li class="screen-look-grades"><a href="##">查看成绩</a></li>
+    <li class="popular-rank active"><a href="##">人气</a></li>
+    <li ><a href="##">幼升小</a></li>
+    <li ><a href="##">一年级</a></li>
+    <li ><a href="##">二年级</a></li>
+    <li ><a href="##">三年级</a></li>
+    <li ><a href="##">四年级</a></li>
+    <li ><a href="##">五年级</a></li>
+    <li ><a href="##">六年级</a></li>
+    <li ><a href="##">初一</a></li>
+    <li ><a href="##">初二</a></li>
+    <li ><a href="##">初三</a></li>
+    <li ><a href="##">高一</a></li>
+    <li ><a href="##">高二</a></li>
+    <li ><a href="##">高三</a></li>
+    <li class="screen-look-grades pull-right"><a href="##">查看成绩</a></li>
 </ul>
 <div class="glory-content-wrap">
     <ul class="glory-content">

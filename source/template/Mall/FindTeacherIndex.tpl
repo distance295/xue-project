@@ -7,8 +7,11 @@
         <li><a href="#">首页</a></li>
         <li class="active">当前页</li>
     </ol>
-    <link rel="import" href="../../widget/Public.Selector/index.tpl?__inline">
+   
     <div class="row top m20">
+        <div class="col-md-12">
+             <link rel="import" href="../../widget/Public.Selector/index.tpl?__inline">
+        </div>
         <div class="col-md-10 wrap-body wrap-mall">
 
             <!-- *********************** 内容区域开始 *********************** -->
