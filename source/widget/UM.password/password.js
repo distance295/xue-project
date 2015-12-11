@@ -2,13 +2,6 @@
         xue.formCheck = xue.formCheck || {};
     var fCheck = xue.formCheck;
 
-    /* 获取form表单元素 */
-    fCheck.param = {
-      passStrong   : '.pass-strong',
-      passStrength : '.pass-strong strong',
-      strong       : 'strong',
-    }; 
-
     /* 输入正确时，清除提醒 */
     fCheck.clearTips = function(select){
       $(select).css({
@@ -157,7 +150,6 @@
           }else{
               if (newpasswd != confirmpasswd) {
                   fCheck.setTips(".confirmPwd-warning",'新密码与确认密码不一致');
-                  $("#confirmPwd").focus();
                   return false;
               }
               fCheck.bordercss('#confirmPwd');
