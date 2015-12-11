@@ -24,7 +24,7 @@
         </div>
         <div class="col-md-2 col-sm-2 wrap-side wrap-mall pull-right">
             <div class="panel panel-default">
-                <div class="panel-body pd0">
+                <div class="panel-body pd0 sideright-body">
                     <div class="sideright-ad">
                         <a href="###"><img src="http://x04.xesimg.com/web/2015/11/19/14479235823994.jpg"></a>
                     </div>
