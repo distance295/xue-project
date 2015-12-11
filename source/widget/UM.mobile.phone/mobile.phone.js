@@ -116,9 +116,7 @@
     }else if(/^\w{4}$/.test(v)){
       /* 调用ajax取值 */
       fCheck.clearTips('.veri-warning');
-      fCheck.imgCodeAjax();
-      fCheck.param.cImg = 1;
-      
+      fCheck.imgCodeAjax();     
     }else{
       fCheck.setTips('.veri-warning','请输入正确的验证码');
       fCheck.param.cImg = 0;
@@ -136,7 +134,7 @@
         success: function(result) {
           /* 填写的信息验证不通过 */
           if(result.sign != 1){
-          window.location.href= '/MyInfos/bindStuPhone';
+          fCheck.changeVerificationImg("verificationImg");
           fCheck.setTips('.veri-warning','网站验证码填写错误');
           fCheck.param.cImg = 0;
         }else{
@@ -256,12 +254,7 @@
     }else if(value.length == 0){
       fCheck.setTips(fCheck.param.curPwdWarn,'请输入密码');
       $(fCheck.param.curPwdTip).show();
-    }
-    if(fCheck.param.cPass == 1){
-      $('#curPwd').css('border','1px solid #68c04a');
-    }else{
-      $('#curPwd').css('border','1px solid #eaeaea');
-    }  
+    } 
   });
 
   /* 点击切换验证码 */
@@ -308,7 +301,6 @@
     fCheck.clearTips('#tips-phonecode');
   })
 
-
   $("#phonecode").on("blur",function(){
     var value = $('#phonecode').val();
     if(value.length == 0){
@@ -317,7 +309,6 @@
   })
 
   /* 判断是否可以点击操作"完成"按钮 */
-
   $("#mpform_submit").on('click',function(e){
     var isError = fCheck.isError(e);
     if(isError){
@@ -337,6 +328,11 @@
             window.location.href= '/Reg/RegSuc';
           }else{
             fCheck.setTips('#tips-phonecode',result.msg);
+            if(fCheck.param.cPass == 1){
+              $('#curPwd').css('border','1px solid #68c04a');
+            }else{
+              $('#curPwd').css('border','1px solid #eaeaea');
+            } 
           }
         },
         error: function() {
