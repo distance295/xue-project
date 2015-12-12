@@ -26,6 +26,9 @@
     veriTip      : '.verification-tip',
     selectWarn   : '.select-warning',
     tPhoneCode   : '#tips-phonecode',
+    passStrong   : '.pass-strong',
+    passStrength : '.pass-strong strong',
+    strong       : 'strong',
     cPhone       : 0,
     cPass        : 0,
     cImg         : 0,
@@ -109,7 +112,6 @@
   fCheck.imgcode = function() {
     var input = $(fCheck.param.verifiCode),
       v = input.val();
-
     if (v == '') {
       fCheck.setTips('.veri-warning','请输入右侧验证码');
       fCheck.param.cImg = 0;
@@ -130,7 +132,6 @@
         url:"/MyInfos/getVerificationCode",
         data: 'verifyCode=' + $('#verificationCode').val(),
         dataType: "json",
-        timeout: 7000,
         success: function(result) {
           /* 填写的信息验证不通过 */
           if(result.sign != 1){
@@ -140,6 +141,7 @@
         }else{
           fCheck.clearTips('.veri-warning');
           fCheck.param.cImg = 1;
+          $('#verificationCode').css('border','1px solid #68c04a');
         }
       },
       error: function() {
@@ -236,9 +238,9 @@
   $(fCheck.param.phone).blur(function(){
     var value =  $("#phone").val();
     fCheck.checkPhone(fCheck.param.phoneTip,fCheck.param.phoneWarn,value);
-    if(fCheck.param.cPhone == 1){
-      $('#phone').css('border','1px solid #68c04a');
-    }else{$('#phone').css('border','1px solid #eaeaea');}
+    if(fCheck.param.cPhone !== 1){
+      $('#phone').css('border','1px solid #eaeaea');
+    }
   });
 
   /* 密码框的操作 */
@@ -269,12 +271,11 @@
 
   $("#verificationCode").on('blur',function(){
     var value = $("#verificationCode").val();
-    if(value == ''){$(fCheck.param.veriTip).show();}
-    fCheck.imgcode();
-    if(fCheck.param.cImg == 1){
-      $('#verificationCode').css('border','1px solid #68c04a');
+    $('#verificationCode').css('border','1px solid #eaeaea');
+    if(value == ''){
+      $(fCheck.param.veriTip).show();
     }else{
-      $('#verificationCode').css('border','1px solid #eaeaea');
+      fCheck.imgcode();
     }
   });
 
