@@ -1,13 +1,20 @@
 <!--
    课程列表：
     @require courses.less           
-    @require courses.js    
+    @require courses_dialog.less           
+    @require courses.js      
+    @require courses_dialog.js   
+    @require xue.userinfo.min.js   
 -->
         <div class="course-list course-test">
             <div class="ui-avatar">
                 <div class="avatar-photo">
                     <ul class="avatar-items">
-                        <li><a href="##"><img src="img/default_photo.png"></a></li>
+                        <li data-params="userId=292" class="ui-userinfo" data-id="292">
+                            <a target="_blank" class="userpic" href="http://www.xueersi.com/t/yangyajing/">
+                                <img alt="" src="http://r03.xesimg.com/teacher/2014/02/28/13935689945281.jpg">
+                            </a>
+                        </li>
                     </ul>
                     <!-- <span class="ui-user-name">朱韬</span> -->
                 </div>
