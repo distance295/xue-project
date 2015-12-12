@@ -392,6 +392,7 @@ body{
 	border-collapse: collapse;
 	border-spacing: 0;
 	width: 100%;
+	border-radius: 5px;
 	thead{
 		background: #fcfcfc;
 		tr{
@@ -572,6 +573,7 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 			font-size: 18px;
 			font-family: 'Microsoft YaHei';
 			line-height: 34px;
+			color: #666;
 			span{
 				color: #e74c3c;
 				margin-left: 10px;
@@ -580,6 +582,9 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 		}
 	}
 	.tab-record-content{
+		border-radius: 5px;
+		display: block;
+		overflow: hidden;
 		.tab-pane{
 			display: none;
 		}
@@ -588,7 +593,6 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 		}
 	}
 	.course-table{
-		background: #fff;
 		td{
 			display: table-cell;
 			line-height: 42px;
@@ -598,7 +602,6 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 			line-height: 50px;
 			height: 50px;
 			border-radius: 4px;
-			border: 1px solid @borderColor;
 			tr{
 				th{
 					font-size: 16px;
@@ -609,8 +612,12 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 		tbody{
 
 			tr{
+
+				border-right: none;
+				border-right: none;
 				font-size: 14px;
 				font-family: "SimSun";
+				background: #fff;
 				.text-style{
 					text-align: center;
 					font-size: 12px;
@@ -623,7 +630,7 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 					}
 				}
 				td{
-					border-top: none;
+					border: none;
 				}
 				.studied-end{
 					color: @red;
@@ -656,6 +663,12 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 
 					}
 				}
+			}
+		}
+		tr:last-child{
+			border: none;
+			td{
+				border: none;
 			}
 		}
 	}
