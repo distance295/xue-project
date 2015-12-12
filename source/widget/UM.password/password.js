@@ -2,13 +2,6 @@
         xue.formCheck = xue.formCheck || {};
     var fCheck = xue.formCheck;
 
-    /* 获取form表单元素 */
-    fCheck.param = {
-      passStrong   : '.pass-strong',
-      passStrength : '.pass-strong strong',
-      strong       : 'strong',
-    }; 
-
     /* 输入正确时，清除提醒 */
     fCheck.clearTips = function(select){
       $(select).css({
@@ -56,6 +49,35 @@
         return score;
 
     };
+    /* 显示隐藏label */
+    function labelfn(pwd,tip,warning) {
+      $(pwd).focus(function(){
+        $(tip).hide();
+        fCheck.clearTips(warning);
+      });
+      $(pwd).blur(function(){
+        var value = $(pwd).val();
+        if(value == ''){
+          $(tip).show();
+        }
+      })
+    }
+
+    labelfn("#curPwd",".curPwd-tip",".curPwd-warning");
+    labelfn("#newPwd",".newPwd-tip",".newPwd-warning");
+    labelfn("#confirmPwd",".confirmPwd-tip",".confirmPwd-warning");
+
+    /* 新密码强度验证 */
+    $('#newPwd').off('keyup').on('keyup',function(e){
+      var value = $('#newPwd').val();
+      var s = $('#newPwd').next('strong');
+      if(e.keyCode != 32){
+        fCheck.checkStrength('.newPwd-tip','.newPwd-warning',value,fCheck.param.passStrong,e);
+      }else{
+        $('.newPwd-tip').hide();
+        fCheck.clearTips('.newPwd-warning');
+      }
+    });
 
     fCheck.checkStrength  = function(tip,passwordWarn,value,passStrong,e){
       var val = $.trim(value);
@@ -88,35 +110,6 @@
       }
     }
 
-    //显示隐藏label
-    function labelfn(pwd,tip,warning) {
-      $(pwd).focus(function(){
-        $(tip).hide();
-        fCheck.clearTips(warning);
-      });
-      $(pwd).blur(function(){
-        var value = $(pwd).val();
-        if(value == ''){
-          $(tip).show();
-        }
-      })
-    }
-    labelfn("#curPwd",".curPwd-tip",".curPwd-warning");
-    labelfn("#newPwd",".newPwd-tip",".newPwd-warning");
-    labelfn("#confirmPwd",".confirmPwd-tip",".confirmPwd-warning");
-
-    /* 新密码强度验证 */
-    $('#newPwd').off('keyup').on('keyup',function(e){
-      var value = $('#newPwd').val();
-      var s = $('#newPwd').next('strong');
-      if(e.keyCode != 32){
-        fCheck.checkStrength('.newPwd-tip','.newPwd-warning',value,fCheck.param.passStrong,e);
-      }else{
-        $('.newPwd-tip').hide();
-        fCheck.clearTips('.newPwd-warning');
-      }
-    });
-
     /* 密码验证流程 */
     $(function() {
         $("#form_submit").click(function() {
@@ -141,6 +134,12 @@
               if (newpasswd.length < 6) {
                   fCheck.setTips(".newPwd-warning",'密码不能少于6位字符');
                   return false;
+              }else{
+                if (newpasswd == curpasswd) {
+                    $(".pass-strong").hide();
+                    fCheck.setTips(".newPwd-warning",'新密码与当前密码相同');
+                    return false;
+                }
               }
               fCheck.bordercss('#newPwd');
           }
@@ -151,7 +150,6 @@
           }else{
               if (newpasswd != confirmpasswd) {
                   fCheck.setTips(".confirmPwd-warning",'新密码与确认密码不一致');
-                  $("#newPwd").focus();
                   return false;
               }
               fCheck.bordercss('#confirmPwd');
