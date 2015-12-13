@@ -1,15 +1,12 @@
 var xue =xue || {};
 
 //切换
-function changeTab(d,box){
-    var that = $(d),
-    box = $(box).children();
-    that.addClass("current").siblings().removeClass("current");  
-    var index =  that.index(); 
-    box.eq(index).show().siblings().hide();
-}
-$('#head_tab li').click(function(){
-  changeTab(this,".hp-box-left");
+$('#head_tab li').click(function(e){
+    var box = $(".hp-box-left").children();
+    e.preventDefault();
+    $(this).addClass("current").siblings().removeClass("current");  
+    var index =  $(this).index(); 
+    box.eq(index).addClass("active").siblings().removeClass("active");
 });
 
 //推荐头像
@@ -133,7 +130,7 @@ function getFullPath(obj){
 
               var dom = document.getElementById('loadFile');
 
-              if( !isIE9() ) {
+              if( !isIE(9) ) {
                   var size = dom.files.item(0).size/1024;
               }
              
@@ -142,7 +139,7 @@ function getFullPath(obj){
                   alert("您选择的文件类型为" + lastname + "，图片必须为 JPG,GIF,PNG 类型");
                   return false;  
               }else{
-                  if (!isIE9() && size>2*1024) {
+                  if (!isIE(9) && size>2*1024) {
                       alert('图片大小请不要大于2MB');
                       return false;
                   }else{
@@ -151,21 +148,10 @@ function getFullPath(obj){
               }
         }
 
-        function isIE9 () {
-            if(navigator.userAgent.indexOf("MSIE")>0){   
-                  if(navigator.userAgent.indexOf("MSIE 6.0")>0){   
-                    return true;   
-                  }   
-                  if(navigator.userAgent.indexOf("MSIE 7.0")>0){  
-                    return true;    
-                  }   
-                  if(navigator.userAgent.indexOf("MSIE 9.0")>0 && !window.innerWidth){
-                    return true;   
-                  }   
-                  if(navigator.userAgent.indexOf("MSIE 9.0")>0){  
-                    return true;  
-                  }   
-                } 
-        }
+        function isIE(ver){
+                var b = document.createElement('b');
+                b.innerHTML = '<!--[if lte IE ' + ver + ']><i></i><![endif]-->';
+                return b.getElementsByTagName('i').length === 1;
+            }
 }   
 
