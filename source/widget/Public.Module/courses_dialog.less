@@ -1,0 +1,397 @@
+@charset "UTF-8";
+
+/**
+ * 
+ * Copyright 2013 xueersi.com All rights reserved.
+ *
+ * @description 
+ *
+ * @author Marco (marco@xesui.com)
+ * @modify 2013-07-12 20:37:35
+ * @version $Id$
+ */
+/**
+ * ui_follow.less 公用样式
+ */
+
+
+/**
+ * Dialog
+ *
+ * z-index:
+ *     dialog: 1000;
+ *     dialog_close: 1001;
+ *     dialog_arrow: 1001;
+ *     dialog_bg : 999;
+ *     
+ * @type {String}
+ */
+ @dialog_path :'http://img04.xesimg.com/dialog';
+ /* 透明边框宽度 */
+ @dialog_br_size : 4px;
+ /* 四个角的背景 */
+ @dialog_br_path : '@{dialog_path}/dialog_border.png';
+ /* 上下水平边框 */
+ @dialog_line_h : '@{dialog_path}/dialog_hline.png';
+ /* 左右垂直边框 */
+ @dialog_line_v : '@{dialog_path}/dialog_vline.png';
+
+ @dialog_arrow_b : '@{dialog_path}/dialog_arrow_b.png';
+ @dialog_arrow_t : '@{dialog_path}/dialog_arrow_t.png';
+
+ .dialog {
+    width:auto; /*overflow:hidden;*/
+    position:fixed;
+    _position:absolute;
+    top:100px; left:40%;
+    z-index:1000;
+    table {background-color:transparent;}
+    /**
+     * 指示箭头：
+     * 上左：arrow_tl
+     * 上右：arrow_tr
+     * 上中：arrow_tc
+     * 下左：arrow_bl
+     * 下右：arrow_br
+     * 下中：arrow_bc
+     */
+     .dialog_arrow {
+        position:absolute; z-index:1001;
+        width:100%; height:11px;
+        background-repeat: no-repeat;
+
+        /* 底部：左中右 */
+        &.arrow_bl, &.arrow_bc, &.arrow_br { bottom:-7px; background-image:url("@{dialog_arrow_b}");}
+        /* 顶部：左中右 */
+        &.arrow_tl, &.arrow_tc, &.arrow_tr { top:-7px; background-image:url("@{dialog_arrow_t}");}
+        
+        &.arrow_bl, &.arrow_tl { background-position: 30% 0;}
+        &.arrow_br, &.arrow_tr { background-position: 70% 0;}
+
+        &.arrow_bc, &.arrow_tc { background-position: center 0;}
+        
+        /* 左右侧 */
+        &.arrow_lt, &.arrow_lc, &.arrow_lb, 
+        &.arrow_rt, &.arrow_rc, &.arrow_rb {
+            width: 11px; height: 100%; top:0;
+        }
+
+        /* 左侧：上中下 */
+        &.arrow_lt, &.arrow_lc, &.arrow_lb { left: -7px; background-image: url("@{dialog_path}/dialog_arrow_l.png")}
+        /* 右侧：上中下 */
+        &.arrow_rt, &.arrow_rc, &.arrow_rb { right: -7px; background-image: url("@{dialog_path}/dialog_arrow_r.png")}
+
+        &.arrow_lt, &.arrow_rt { background-position: 0 30%}
+        &.arrow_lb, &.arrow_rb { background-position: 0 70%}
+        &.arrow_lc, &.arrow_rc { background-position: 0 center}
+
+
+    }
+    
+    /**
+     * 关闭按钮
+     */
+     .dialog_close {
+        width: 15px; height:15px; display:inline-block; 
+        position:absolute; right:22px; top:15px; z-index:1001;
+        overflow:hidden; text-indent: -2000px;
+        background:url("@{dialog_path}/dialog_close_new.png") no-repeat left 0;
+        &:hover {background:url("@{dialog_path}/dialog_close_hover.png") no-repeat left 0;}
+    }
+
+    /**
+     * 处理弹窗透明边框及内容区域背景
+     */
+     .dialog_box {
+
+        .tl, .tc, .tr, .bl, .bc, .br { height : @dialog_br_size; }
+        .tl, .tr, .cl, .cr, .bl, .br { width: @dialog_br_size; }
+        .tl { background:url("@{dialog_path}/dialog_tl.png") no-repeat left 0; }
+        .tr { background:url("@{dialog_path}/dialog_tr.png") no-repeat right 0; }
+        .bl { background:url("@{dialog_br_path}") no-repeat left bottom; }
+        .br { background:url("@{dialog_br_path}") no-repeat right bottom; }
+        .tc { background:url("@{dialog_line_h}") repeat-x left 0; }
+        .bc { background:url("@{dialog_line_h}") repeat-x left bottom; }
+        .cl { background:url("@{dialog_line_v}") repeat-y left 0; }
+        .cr { background:url("@{dialog_line_v}") repeat-y right 0; }
+        .dialog_handle, .dialog_content_wrap {
+            background-color:#FFF;
+        }
+    }
+    
+    /**
+     * 弹窗头部 Title 区域
+     */
+     .dialog_handle {
+        height:30px; line-height:30px;
+        padding:5px 35px 5px 15px;
+        background:url("@{dialog_path}/dialog_header.png");
+        
+        .dialog_title {
+            display:inline-block;
+            font-size:14px; font-weight:700; color:#333;
+        }
+    }
+
+    /**
+     * 弹窗内容区域
+     */
+     .dialog_content {
+        /*position:relative;*/
+        min-width:100px;
+        padding:25px 20px;
+        overflow: auto;
+        // overflow-x:hidden;
+        .dialog_icon {
+            width:32px;height:32px; display:inline-block; margin-left:10px; float:left;
+            background-position:left top;
+            background-repeat: no-repeat;
+        }
+        .dialog_success {
+            .dialog_icon {
+                background-image:url("@{dialog_path}/icon/check-64.png");
+            }
+        }
+        .dialog_warning {
+            .dialog_icon {
+                background-image:url("@{dialog_path}/icon/attention.png");
+            }
+        }
+        .dialog_error {
+            .dialog_icon {
+                background-image:url("@{dialog_path}/icon/delete_2.png");
+            }
+        }
+        .dialog_info {
+            .dialog_icon {
+                background-image:url("@{dialog_path}/icon/information.png");
+            }
+        }
+    }
+
+   
+
+
+    
+    /**
+     * 没有边框的情况
+     */
+     &.dialog_noborder {
+        .tl, .tc, .tr, .cl, .cr, .bl, .bc, .br { background:none; } 
+        /*箭头去掉边框*/
+        .dialog_arrow {
+            background:url("@{dialog_path}/dialog_arrow_b_n.png") no-repeat left 0;
+            &.arrow_tl, &.arrow_tr {
+                background-image:url("@{dialog_path}/dialog_arrow_t_n.png");
+            }
+            &.arrow_bl, &.arrow_br { bottom:-6px; }
+            &.arrow_tl, &.arrow_tr { top: -6px;   }
+        }
+        /*有头部时的圆角*/
+        .dialog_handle {
+            border-radius:5px 5px 0 0;
+        }
+
+        /*有底部时的圆角*/
+        .dialog_buttons {
+            border-radius:0 0 5px 5px;
+        }
+
+
+        /* 当没有边框，且没有遮罩时，需要增加1px的border */
+        &.dialog_noMask {
+            .dialog_handle {
+                border : 1px #ccc solid;
+                border-width: 1px 1px 0 1px;
+            }
+            .dialog_buttons {
+                border : 1px #ccc solid;
+                border-width: 0px 1px 1px ;
+            }
+            .dialog_content_wrap{
+                border:1px #ccc solid;
+                border-width:0 1px;
+                &.dialog_radius_top {
+                    border-top-width:1px;
+                    &.dialog_radius_bottom{
+                    }
+                }
+                &.dialog_radius_bottom {
+                    border-bottom-width:1px;
+                }    
+            }
+        }
+    }
+
+    &.dialog_alert {
+        .dialog_buttons {
+            padding:0 20px 10px 20px; text-align:center;
+            .btn {
+                // .btn_small;
+                margin:0 5px;
+                &a{ color:#FFF; }
+            }
+            .btn_gray {
+                &a{ color:#555; }
+            }
+        }
+        .dialog_content {
+            text-align:center;
+            padding:20px 30px 10px;
+        }
+    }
+    &.dialog_poptips {
+        position:absolute;
+        .dialog_content {
+            text-align:center; line-height:32px;
+            padding:15px 20px 15px 10px;
+
+        }
+    }
+    &.dialog_follow{
+        position:absolute;
+    }
+
+    &.dialog_userinfo{
+        position: absolute;
+        .dialog_content {
+            padding:0px;
+        }
+        .arrow_bl {
+            background-position: 20% 0;
+        }
+        .arrow_br {
+            background-position: 80% 0;
+        }
+        .arrow_tl {
+            background-position: 20% 0;
+        }
+        .arrow_tr {
+            background-position: 80% 0;
+        }
+    }
+    &.dialog_gift {
+        position: absolute;
+        .arrow_lt {
+            background-position: 0 20%;
+        }
+        .arrow_rt {
+            background-position: 0 20%;
+        }    
+    }
+
+    &.dialog_leave {
+        .dialog_content {
+            padding: 10px;
+
+        }
+    }
+
+    &.dialog_noshadow {
+        /**
+         * 处理弹窗透明边框及内容区域背景
+         */
+         .dialog_box {
+            // display: none;
+            .tl { background:url("@{dialog_path}/gif/dialog_tl.gif") no-repeat left 0; }
+            .tr { background:url("@{dialog_path}/gif/dialog_tr.gif") no-repeat right 0; }
+            .bl { background:url("@{dialog_path}/gif/dialog_border.gif") no-repeat left bottom; }
+            .br { background:url("@{dialog_path}/gif/dialog_border.gif") no-repeat right bottom; }
+            .tc { background:url("@{dialog_path}/gif/dialog_hline.gif") repeat-x left 0; }
+            .bc { background:url("@{dialog_path}/gif/dialog_hline.gif") repeat-x left bottom; }
+            .cl { background:url("@{dialog_path}/gif/dialog_vline.gif") repeat-y left 0; }
+            .cr { background:url("@{dialog_path}/gif/dialog_vline.gif") repeat-y right 0; }
+        }
+        /**
+         * 弹窗头部 Title 区域
+         */
+         .dialog_handle {
+            background:url("@{dialog_path}/gif/dialog_header.gif");
+        }
+        /**
+         * 关闭按钮
+         */
+         .dialog_close {
+            background:url("@{dialog_path}/gif/dialog_close.gif") no-repeat left 0;
+        }
+        /**
+         * 指示箭头：
+         * 上左：arrow_tl
+         * 上右：arrow_tr
+         * 上中：arrow_tc
+         * 下左：arrow_bl
+         * 下右：arrow_br
+         * 下中：arrow_bc
+         */
+         .dialog_arrow {
+            position:absolute; z-index:1001;
+            width:auto; height:11px;
+            background-repeat: no-repeat;
+
+            /* 底部：左中右 */
+            &.arrow_bl, &.arrow_bc, &.arrow_br { bottom:-11px; background-image:url("@{dialog_path}/gif/dialog_arrow_b.gif");}
+            /* 顶部：左中右 */
+            &.arrow_tl, &.arrow_tc, &.arrow_tr { top:-7px; background-image:url("@{dialog_path}/gif/dialog_arrow_t.gif");}
+
+            &.arrow_bl, &.arrow_tl { background-position: 20% 0;}
+            &.arrow_br, &.arrow_tr { background-position: 80% 0;}
+
+            &.arrow_bc, &.arrow_tc { background-position: center 0;}
+            
+            /* 左右侧 */
+            &.arrow_lt, &.arrow_lc, &.arrow_lb, 
+            &.arrow_rt, &.arrow_rc, &.arrow_rb {
+                width: 11px; height: auto; top:0;
+            }
+
+            /* 左侧：上中下 */
+            &.arrow_lt, &.arrow_lc, &.arrow_lb { left: -7px; background-image: url("@{dialog_path}/gif/dialog_arrow_l.gif")}
+            /* 右侧：上中下 */
+            &.arrow_rt, &.arrow_rc, &.arrow_rb { right: -7px; background-image: url("@{dialog_path}/gif/dialog_arrow_r.gif")}
+
+            &.arrow_lt, &.arrow_rt { background-position: 0 15%}
+            &.arrow_lb, &.arrow_rb { background-position: 0 85%}
+            &.arrow_lc, &.arrow_rc { background-position: 0 center}
+
+
+        }
+    }
+
+}
+
+
+
+.dialog_mask {
+    width:100%; height:100%;
+    position :fixed; _position :absolute; 
+    top:0; left:0; z-index:999;
+    background-color:#000;
+    filter:alpha(opacity=30); opacity:0.3;
+    &.mask_bg {
+        background:url("@{dialog_path}/dialog_mask.png") left 0;
+    }
+}
+
+/**
+ * 增加别名
+ */
+ /*.xuebox { .dialog; }*/
+
+
+
+ /* 上传图片时的弹窗样式 */
+
+ .img_preview {
+    position: absolute;
+    .dialog_arrow.arrow_tl {
+        background-position: 10% 0;
+    }
+    .dialog_content {
+        padding:10px;
+    }
+
+
+}
+.dialog_head.hidden {
+  display: none;
+}
