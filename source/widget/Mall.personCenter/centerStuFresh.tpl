@@ -30,16 +30,5 @@
         <div class="centerHeader-alFocus hide"><span class="centerHeader-alFocus-btn">已关注</span><a href="###" class="centerHeader-willFocus-btn">取消关注</a></div>
     </div>
     <link rel="import" href="tab-stu-fresh.tpl?__inline">
-    <div class="row bottom m20">
-        <div class="col-md-9 top m20 fresh-main-wrapper">
-            <link rel="import" href="../../widget/Public.Dynamic/dynMy.tpl?__inline">
-        </div>
-        <div class="col-md-3 top m20">
-            <div class="center-left-m">
-                <link rel="import" href="center-stu-info.tpl?__inline">
-                <link rel="import" href="stuVerify.tpl?__inline">
-                <link rel="import" href="center-visit.tpl?__inline">
-            </div>
-        </div>
-    </div>
+    
 </div>

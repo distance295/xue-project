@@ -27,7 +27,6 @@
         <p class="que-body-choice">D、与a和b的大小无关．</p>
         <i class="fa fa-angle-down fa-chevron-down pull-right que-body-arrow"></i>
         <p class="que-body-show-text text-right pull-right">展开答案</p>
-
     </div>
     <div class="que-answer">
         <p class="que-tips que-answer-head">你的答案：<span class="cusAns">A</span>正确答案：<span class="corAns">B</span></p>
