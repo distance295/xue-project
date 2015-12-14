@@ -409,7 +409,6 @@ $(function(){
     var $presentCreateModal = $('.gold-store-present-card-container');
 
     $presentCreateModal.on('click','.gold-store-present-card',function(){
-        goldPresentModal.getModal();
         var presentid = $(this).closest('.gold-store-present-card').attr('id');
         $.ajax({
             url : '/GoldShop/realAwardDetail',
