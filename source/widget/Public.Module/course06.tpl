@@ -19,7 +19,7 @@
                     <!-- <span class="ui-user-name">朱韬</span> -->
                 </div>
             </div>
-            <div class="course-detail pull-left">
+            <div class="course-detail">
                 <p class="course-title">
                     <label class="course-label course-yellow-label">化学</label>
                     <label class="course-label course-green-label">录播</label>
@@ -33,9 +33,10 @@
                 <p class="amount-show amount-test">
                     <a href="##" class="btn btn-default"><em class="button-icon icon-test"></em>视听直播</a>
                     <strong class="test-price"><span>￥</span>13.44</strong>
+                    <span class="cancel-courseList"><a href="###" class="">取消收藏</a><!-- <em>(<i>33</i>)</em> --></span>
                 </p>
             </div>
-            <span class="cancel-courseList"><a href="###" class="">取消收藏</a><!-- <em>(<i>33</i>)</em> --></span>
+           
         </div>
 
 
