@@ -8,7 +8,7 @@
       <li><a href="#">本地上传</a></li>
     </ul>
     <div class="hp-box-left">
-        <div class="hp-recommend">
+        <div class="hp-recommend active">
             <div class="hpr-box">
                 <img class="hpr-img" src="http://tx.haiqq.com/uploads/allimg/150321/110H2E40-6.jpg" data-id="12" alt="头像">
                 <img class="hpr-img" src="img/head.photo.png" alt="头像">
@@ -32,7 +32,7 @@
                     <em>每次上传消耗3000金币</em>
                     <span>仅支持JPG、GIF、PNG且文件小于2M，照片尺寸请大于200×200</span>
                 </div>
-                <span id="btn_submit" class="btn btn-info" onclick="headsSave();">保存</span>
+                <span id="btn_submit" class="btn btn-info hpl-btn" onclick="headsSave();">保存</span>
             </form>
         </div>
     </div>
