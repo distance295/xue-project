@@ -39,7 +39,7 @@
                        <span class="filter-text-style">筛选：</span>
                        <div class="filter-nav-list">
                           <ul id="fresh-filter-nav">
-                              <li class="current" data-params="category=1" data-type="0"><a href="javascript:void(0)">全部</a></li>
+                              <li class="current" data-type="0"><a href="javascript:void(0)">全部</a></li>
                               <li data-type="20"><a href="javascript:void(0)">题目</a></li>
                               <li data-type="2"><a href="javascript:void(0)">图文</a></li>
                               <li data-type="21"><a href="javascript:void(0)">视频</a></li>
@@ -78,4 +78,34 @@
 <!-- 公共底部 -->
 <link rel="import" href="../Layer/layer.UserHome.foot.tpl?__inline">
 
+<script type="text/javascript">
+    //tab切换
+    $(function(){
 
+        $('#fresh-filter-nav li').click(function(){
+              //切换改变样式
+              $(this).addClass('current').siblings('li').removeClass('current');
+              var _type = $(this).data('type');
+              //ajax请求列表信息
+              $.ajax({
+                  url : '/data/Dynamic/ajaxDynamicList.html',
+                  data : {
+                     category:_type
+                  },
+                  type: "get",
+                  dataType: 'html',
+                  success: function(data){
+                      if(data){
+                          $('.fresh-main-wrapper').html(data);
+                      }else{
+                          $('.fresh-main-wrapper').html('');
+                      }
+                  }
+              })
+        })
+
+        //默认加载第一个标签
+        $('#fresh-filter-nav li:first').click();
+       
+    })
+</script>
