@@ -79,7 +79,7 @@
                     
             </dd>
             <dt class="choice-more col-xs-3 col-sm-2 col-md-2  clearfix">
-                <div class="choice-more-download pull-left">
+                <div class="choice-more-download hide pull-left">
                     <a>更多知识点</a>
                     <i class="fa fa-angle-down fa-chevron-down que-body-arrow"></i>
                 </div>

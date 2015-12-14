@@ -9,8 +9,9 @@ select.opti = {
     pointInput: '.choice-items-spe-input',
     itemSpe   : '.choice-items-spe',
     pointShow : '.choice-more-download',
-    selector  : '.selector',
-    choiceHide: '.choiceHide'
+//    selector  : '.selector',
+    choiceHide: '.choiceHide',
+    choiceSpe : '.choice-items-spe'
 }
 
 /**
@@ -34,9 +35,18 @@ $(select.opti.item).on('click',function(){
         thatLi = $(that).parent('li');
     select.chooseSpan(all,thatLi,'active');
 })
+/* 更多知识点按钮是否出现在ajax中判断 */
+if($('.choice-items-spe-input').length){
+    $('.choice-more').removeClass('hide');
+    var height = $('.choice-items-spe').css('height');
+    console.log(height);
+    if(height > '22px'){
+        $('.choice-items-spe').css({'height':'22px'});
+    }
+}
 
 /* 知识点展示“更多”交互 */
-$(select.opti.pointShow).on('click',function(){
+$('body').on('click', '.choice-more-download',function(){
     var that = this;
     if($(that).hasClass('show-choice')){
         $(that).children('a').html('更多知识点');
@@ -46,7 +56,7 @@ $(select.opti.pointShow).on('click',function(){
             $(select.opti.itemSpe).removeClass('choice-items-open');    
         }else{
             $(select.opti.pointInput).css({
-                'height':'2.9rem',
+                'height':'22px',
                 'overflow':'hidden'
             }); 
             
@@ -60,7 +70,7 @@ $(select.opti.pointShow).on('click',function(){
             $(select.opti.itemSpe).addClass('choice-items-open');    
         }else{
             $(select.opti.pointInput).css({
-                'height':'7.4rem',
+                'height':'74px',
                 'overflow':'auto'
             })
         }
