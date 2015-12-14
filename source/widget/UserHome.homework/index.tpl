@@ -349,8 +349,8 @@
 					zoomout:".homework-zoomout-btn",//缩小按钮
 					leftRotate:".homework-leftRotate-btn",//向左旋转按钮
 					rightRotate:".homework-rightRotate-btn",//向右旋转按钮
-					min_picnum:4,//小图显示个数
-					isZoom:_homeZoom//是否存在旋转缩放
+					min_picnum:4,//小图默认显示个数
+					isZoom:_homeZoom//是否存在旋转缩放 false不存在，true存在
 				});
 
             })
