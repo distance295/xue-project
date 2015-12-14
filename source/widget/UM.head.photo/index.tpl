@@ -32,7 +32,7 @@
                     <em>每次上传消耗3000金币</em>
                     <span>仅支持JPG、GIF、PNG且文件小于2M，照片尺寸请大于200×200</span>
                 </div>
-                <span id="btn_submit" class="btn btn-info hpl-btn" onclick="headsSave();">保存</span>
+                <button id="btn_submit" class="btn btn-info hpl-btn" onclick="headsSave();">保存</button>
             </form>
         </div>
     </div>
