@@ -50,6 +50,15 @@ $("#upload_img").on('click', function(e) {
     $("#loadFile").click();
 });
 
+if ($(".message-error span").val() !== '') {
+    $(".message-error").hide()
+}else{
+    $(".message-error").show();
+    $(".hp-recommend").removeClass('active');
+    $(".hp-local").addClass('active');
+    $('#head_tab li').removeClass("current").siblings().addClass("current");  
+};
+
 function headsSave(){
     var img = $("#loadFile").val();
     if(img == ''){

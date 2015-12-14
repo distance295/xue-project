@@ -326,7 +326,7 @@
         success: function(result) {
           /* 填写的信息验证不通过 */
           if(result.sign == 1){
-            window.location.href= '/Reg/RegSuc';
+            window.location.href= '/MyInfos/phoneManager';
           }else{
             fCheck.setTips('#tips-phonecode',result.msg);
             if(fCheck.param.cPass == 1){
