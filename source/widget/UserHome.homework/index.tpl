@@ -70,7 +70,7 @@
 			<div class="homework-bigImg-box">
 				<div class="homework-rightMeun pull-right">
 					<ul>
-						<li><i class="homework-audio"></i></li>
+						<!-- <li><i class="homework-audio"></i></li> -->
 						<li><i class="homework-leftRotate-btn"></i></li>
 						<li><i class="homework-rightRotate-btn"></i></li>
 						<li><i class="homework-zoom-btn"></i></li>
@@ -92,7 +92,7 @@
 						<div class="homework-Feedback-cont">
 							<div class="homework-Feedback-header pull-left">
 								<div class="homework-dialog">
-									<p class="homework-tipsInfo">完成作业奖励<em>15</em>金币和<em>150</em>学力。</p>
+									<p class="homework-tipsInfo">完成作业奖励<em>150</em>学力。</p>
 									<p class="homework-tipsInfo">辅导老师额外奖励你<em>150</em>个金币！</p>
 								</div>
 								<div class="homework-scoreArea">
