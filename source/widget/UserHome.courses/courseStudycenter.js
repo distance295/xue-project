@@ -124,7 +124,7 @@ function testLive(){
     $('.listTest-btn').popover({
         placement: 'top',
         html: true,
-        trigger: 'click',
+        trigger: 'hover',
         title: '',
         content: function() {
             var listTest_html = $(this).parents('.amount-show').siblings('.listTest-pop').html();
