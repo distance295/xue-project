@@ -17,7 +17,7 @@
         <div class="col-md-10 wrap-body wrap-mall">
 
             <!-- *********************** 内容区域开始 *********************** -->
-            <ul class="screen-rank">
+            <ul class="screen-rank mt0">
                 <li class="popular-rank">综合</li>
                 <li>学员数</li>
                 <li>价格<img src="../../widget/Mall.FindTeacher/img/down.png"></li>
@@ -40,7 +40,7 @@
         </div>
         <div class="col-md-2 col-sm-2 wrap-side wrap-mall pull-right">
             <div class="panel panel-default ">
-                <div class="panel-body sideright-body pd0">
+                <div class="panel-body sideright-body pd0 mt0">
                 	<div class="sideright-hotcourse">
                 		<h3 class='search-rank-title'>搜索排行</h3>
                         <ul class="search-rank-list">
