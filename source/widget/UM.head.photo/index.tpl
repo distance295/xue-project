@@ -5,7 +5,7 @@
 <div class="hp-content">
     <ul id="head_tab">
       <li class="current"><a href="#">推荐头像</a></li>
-      <li><a href="#">本地上传</a></li>
+      <li class="tab-local"><a href="#">本地上传</a></li>
     </ul>
     <div class="hp-box-left">
         <div class="hp-recommend active">
@@ -18,7 +18,7 @@
         </div>
         <div class="hp-local">
             <form action="" method="POST" enctype="multipart/form-data" id="headsImg">
-                <div class="message-error">
+                <div class="img-error">
                     <span>123</span>
                 </div>
                 <div class="hl-box">
@@ -32,7 +32,7 @@
                     <em>每次上传消耗3000金币</em>
                     <span>仅支持JPG、GIF、PNG且文件小于2M，照片尺寸请大于200×200</span>
                 </div>
-                <span id="btn_submit" class="btn btn-info hpl-btn" onclick="headsSave();">保存</span>
+                <button id="btn_submit" class="btn btn-info hpl-btn" onclick="headsSave();">保存</button>
             </form>
         </div>
     </div>
