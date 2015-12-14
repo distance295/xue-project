@@ -8,8 +8,8 @@
 
 <!--新鲜事单条列表信息开始————热门新鲜事list加fresh-popular-list fresh-hover-item代表滑过效果-->
 <div class="fresh-list fresh-hover-item fresh-popular-list">
-    <div class="fresh-avatar pull-left">
-        <a target="_blank" href="http://www.xueersi.com/s/979168">
+    <div class="fresh-avatar pull-left ui-userinfo" data-id="292" class="ui-userinfo" data-params="userId=292">
+        <a target="_blank" href="http://www.xueersi.com/s/979168" class="userpic">
             <img src="img/fresh_avatar.png" date-role="fresh-avatar"/>
         </a>
     </div>

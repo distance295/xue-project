@@ -43,8 +43,8 @@ $(function() {
 
         $.ajax({
             type: "POST",
-            url: "/RequestPassword/UpdatePassword",
-            data: "bindcardNo=" + $(".bindcardNo").val() + "&bindcardPass=" + $("#bindcardPass").val(),
+            url: "/MyCards/courseCardActive",
+            data: "bindcardNo=" + $(".bindcardNo").val() + "&bindcardPass=" + $(".bindcardPass").val(),
             success: function(msg) {
                 if (msg == "True") {
                     location.href = "/RequestPassword/UpdatePasswordSecuess";
