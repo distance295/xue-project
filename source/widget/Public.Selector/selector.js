@@ -36,14 +36,14 @@ $(select.opti.item).on('click',function(){
     select.chooseSpan(all,thatLi,'active');
 })
 /* 更多知识点按钮是否出现在ajax中判断 */
-if($('.choice-items-spe-input').length){
-    $('.choice-more').removeClass('hide');
-    var height = $('.choice-items-spe').css('height');
-    console.log(height);
-    if(height > '22px'){
-        $('.choice-items-spe').css({'height':'22px'});
-    }
-}
+//if($('.choice-items-spe-input').length){
+//    $('.choice-more').removeClass('hide');
+//    var height = $('.choice-items-spe').css('height');
+//    console.log(height);
+//    if(height > '22px'){
+//        $('.choice-items-spe').css({'height':'22px'});
+//    }
+//}
 
 /* 知识点展示“更多”交互 */
 //$('body').on('click', '.choice-more-download',function(){

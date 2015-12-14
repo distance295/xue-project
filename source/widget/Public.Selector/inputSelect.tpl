@@ -71,12 +71,10 @@
                 <label class="radio-inline"><input type="radio" value="" name="choice-point-name" class="choice-item-input" />英语四级</label>
                 <label class="radio-inline"><input type="radio" value="" name="choice-point-name" class="choice-item-input" />英语六级</label>
                 <label class="radio-inline"><input type="radio" value="" name="choice-point-name" class="choice-item-input" />大话西游</label>
-<!--
                 <label class="radio-inline"><input type="radio" value="" name="choice-point-name" class="choice-item-input" />JavaScript设计模式</label>
                 <label class="radio-inline"><input type="radio" value="" name="choice-point-name" class="choice-item-input" />格斗</label>
                 <label class="radio-inline"><input type="radio" value="" name="choice-point-name" class="choice-item-input" />拳皇</label>
                 <label class="radio-inline"><input type="radio" value="" name="choice-point-name" class="choice-item-input" />前端工程</label>
--->
               
             </dd>
             <dt class="choice-more col-xs-3 col-sm-2 col-md-2 clearfix">
