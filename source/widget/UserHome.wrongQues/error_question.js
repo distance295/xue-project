@@ -12,7 +12,7 @@ select.opt = {
     selector   : '.selector',
     choiceHide : '.choiceHide',
     answerShow : '.que-body-show-text',
-    imgAnswer  : '.stuAns'
+    imgAnswer  : '.stuAns',
 };
 
 /*展现 知识点+年级+学科 选择框*/
@@ -32,6 +32,7 @@ $(select.opt.selector).on('click', function () {
         $(select.opt.choiceHide).slideDown();
     }
 });
+
 
 /* 错题本答案交互 */
 $(select.opt.answerShow).on('click', function () {

@@ -213,3 +213,262 @@
 .jspDrag{width:8px;border-radius:4px;position: relative;top: 0;left: 0;cursor: pointer;background:#cccccc repeat-y;margin:0 auto;}
 /* Yuk! CSS Hack for IE6 3 pixel bug :( */
 * html .jspCorner{margin: 0 -3px 0 0;}
+
+/* 讲测评css start */
+.class_test{
+    overflow: hidden;
+}
+.test_list_new .answer span .current,
+.testcon .answer span .current {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border: 0;
+  color: #ffffff;
+  background: #3399cc;
+}
+
+.class_test address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+.class_test .btn_red {
+  background: #cb0000;
+}
+.class_test .btn_small {
+  padding: 3px 5px;
+}
+.class_test .test_list_new .answer span a,
+.testcon .answer span a {
+  display: block;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border: 0;
+  color: #ffffff;
+  background: #f3f3f3;
+  color: #333;
+  text-shadow: 1px;
+  padding: 3px 15px;
+  line-height: 15px;
+}
+.class_test h4 {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 15px;
+  background-color: #f3f3f3;
+}
+.class_test .btn {
+  margin-bottom: 15px;
+}
+.class_test .class_test_sum {
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+  background: #FDF0F0;
+  padding-left: 10px;
+  margin-top: 3px;
+}
+.class_test .class_test_sum span {
+  float: left;
+  display: inline;
+}
+.class_test .class_test_sum .test_more {
+  float: right;
+  display: inline;
+  margin-right: 25px;
+}
+.class_test .class_test_sum .test_more li, .class_test .class_test_sum .test_more li > a {
+  float: left;
+}
+.class_test .class_test_sum .test_more li > a {
+  margin-left: 15px;
+}
+.class_test .selected_answer {
+  overflow: hidden;
+  background: #FDF0F0;
+}
+.class_test .testcon {
+  color: #cc0000;
+  padding: 20px 40px;
+  overflow: hidden;
+  border: 0 none;
+  width: 720px;
+}
+.class_test .testcon .answer {
+  border: 0 none;
+}
+.class_test .testcon .answer span {
+  float: none;
+}
+.class_test .testcon .answer input {
+  width: 50px;
+}
+.class_test .testcon p {
+  padding: 0;
+}
+.class_test .testcon ol span {
+  color: #333333;
+  margin-left: 10px;
+}
+.class_test .testcon .testcon_title {
+  color: #999;
+  font-size: 14px;
+}
+.class_test .close {
+  float: right;
+  padding: 5px 10px 0 0;
+}
+.class_test .btn {
+  float: right;
+  margin-right: 15px;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 10px;
+}
+/*=============/节练习题/==================*/
+.wrong_title {
+  overflow: hidden;
+  background: #fbfbfb;
+  border: 1px solid #e7e7e7;
+  margin-bottom: 10px;
+}
+.wrong_title .subhead {
+  padding-left: 15px;
+  line-height: 30px;
+  color: #666;
+}
+.wrong_title .title {
+  height: 35px;
+  line-height: 35px;
+  overflow: hidden;
+  border-bottom: 1px dashed #e7e7e7;
+}
+.wrong_title .title .name {
+  color: #666;
+  float: left;
+  width: 550px;
+  padding-left: 15px;
+}
+.wrong_title .title .times {
+  float: right;
+  padding-right: 15px;
+  color: #999;
+}
+.wrong_title .tabsWrong {
+  float: left;
+  display: inline;
+  padding-left: 15px;
+  overflow: hidden;
+}
+.wrong_title .num_bulist {
+  display: inline;
+}
+.wrong_title .num_bulist li {
+  float: left;
+  font-size: 12px;
+  color: #999;
+  margin-left: 20px;
+}
+.wrong_title .num_bulist li strong {
+  color: #333333;
+}
+.wrong_title .wrong_info {
+  height: 40px;
+}
+.wrong_title .wrong_info .wrong_btn {
+  margin-left: 10px;
+  line-height: 15px;
+  float: left;
+  margin-top: 8px;
+  padding: 5px 10px;
+  color: #333333;
+  text-decoration: none;
+  color: #ffffff;
+  background: #3399cc;
+}
+.wrong_list_new {
+  border: 1px solid;
+  margin-bottom: 20px;
+  border-color: #eeeeee;
+}
+.wrong_list_new p {
+  width: 938px;
+  line-height: 30px;
+  overflow: hidden;
+  margin: 5px 20px;
+}
+.wrong_list_new .wrong_list_anwser p {
+  padding-left: 30px;
+}
+.wrong_list_new .wrong_list_anwser strong {
+  color: #000;
+}
+.wrong_list_new .wrong_list_anwser .red {
+  color: #cc0000;
+}
+.wrong_list_new .wrong_list_anwser .error_big {
+  background: url('http://img04.xesimg.com/icon/error_big.png') 0 3px no-repeat;
+}
+.wrong_list_new .wrong_list_anwser .right_big {
+  background: url('http://img04.xesimg.com/icon/right_big.png') 0 3px no-repeat;
+}
+.wrong_list_new .wrong_list_anwser span {
+  padding-right: 20px;
+}
+.wrong_list_new .wrong_list_knowledge {
+  width: 868px;
+  overflow: hidden;
+  padding: 0 0 0 70px;
+  background: url("http://img04.xesimg.com/wrong_icon_knowledge.png") no-repeat left 0px top 5px;
+}
+.wrong_list_new .wrong_list_analysis {
+  width: 868px;
+  overflow: hidden;
+  padding: 0 0 0 70px;
+  background: url("http://img04.xesimg.com/wrong_icon_analysis.png") no-repeat left 0px top 10px;
+}
+.class_answer ul, li {
+    list-style: none;
+}
+.class_answer a,
+a:link {
+  text-decoration: none;
+  color: #0076b3;
+}
+.class_answer a:visited {
+  text-decoration: none;
+  color: #0076b3;
+}
+.class_answer a:hover {
+  text-decoration: underline;
+  color: #0076b3;
+}
+.class_answer a:active {
+  text-decoration: underline;
+  color: #F00;
+}
+.class_answer a {
+  outline: none;
+}
+.class_answer .wrong_list_new {
+  border: 0 none;
+}
+.class_answer .wrong_list_new p {
+  width: 700px;
+}
+.class_answer .wrong_list_new span {
+  margin: 0 20px;
+  font-size: 14px;
+}
