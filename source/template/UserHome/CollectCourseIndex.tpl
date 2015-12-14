@@ -14,7 +14,7 @@
                 <div class="col-md-2 wrap w120">
                     <div class="panel panel-default wrap h630">
                         <div id="sub-nav" class="list-group top m30">
-                            <a data-id="Fresh" href="CollectDynamicIndex.html" class="list-group-item ">新鲜事</a>
+                            <a data-id="Fresh" href="###" class="list-group-item ">新鲜事</a>
                             <a data-id="Course" href="CollectcourseIndex.html" class="list-group-item active">课程</a>
                             <a data-id="FreeCourse" href="CollectFreeCourseIndex.html" class="list-group-item ">免费课程</a>
                             <a data-id="Appschool" href="CollectAppIndex.html#" class="list-group-item">网校App</a>
@@ -43,12 +43,39 @@
 
 <!-- 页面配置 -->
 <script>
-    var PAGE_CONFIG = {
-        ID: 'Notice',
-        SUBJECT:'System',
-        MODULE: 'UserHome',
-        TITLE: '网校通知-我的收藏-课程'
-    };
+var PAGE_CONFIG = {
+    ID: 'Notice',
+    SUBJECT:'System',
+    MODULE: 'UserHome',
+    TITLE: '网校通知-我的收藏-课程'
+};
+$(function () {
+    collectTabAjax();
+})
+// 收藏ajax请求
+function collectTabAjax(){
+    $('#sub-nav a').on('click',function(){
+        var that = $(this);
+        var URL = that.data('url');
+        var param = that.data('param');
+        $.ajax({
+            url : url,
+            data : param,
+            type: "POST",
+            dataType: 'html',
+            success: function(d){
+                if(d){
+                 $('.panel-body').html(d)
+            },
+            error: function(){
+                
+            }
+
+         }
+     })
+        
+    })
+}
 </script>
 
 <!-- 公共底部 -->

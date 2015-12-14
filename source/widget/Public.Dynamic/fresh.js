@@ -80,7 +80,7 @@ fresh.media = fresh.media || {};
             }
         }
     }
-
+  
     /**
      * 选择动态试题答案：提交答案
      * @param  {Object} dom 任意子节点
@@ -1346,46 +1346,6 @@ fresh.emote = fresh.emote || {};
     }
 
 })(fresh.emote)
-
-
-/**
- * 
- * 新鲜事图片视频等tab切换相关方法
- * @param {Object} ft fresh.tab
- * 
- */
-fresh.tab = fresh.tab || {};
-
-(function(ft){
-    
-    /**
-     * 切换标签时获取列表的方法
-     * @param  {number} type 类型
-     * @param  {Object} dom 任何子节点
-     */
-    ft.getDynamicList = function(type, dom){
-          url = fresh.path.url + 'ajaxDynamicList.html',
-          param = 'category=1&type_id='+type;
-          //切换改变样式
-          $(dom).addClass('current').siblings('li').removeClass('current');
-          //ajax请求列表信息
-          $.ajax({
-              url : url,
-              data : param,
-              type: "get",
-              dataType: 'html',
-              success: function(data){
-                  if(data){
-                      $('.fresh-main-wrapper').html(data);
-                  }else{
-                      $('.fresh-main-wrapper').html('');
-                  }
-              }
-          })
-    }
-
-})(fresh.tab)
-
 
 /*******************************************
  *

@@ -38,6 +38,7 @@ courses.avatar = courses.avatar || {};
         this.box.next = btn.hasClass('next') ? btn : btn.siblings('.next');
         this.size = this.box.list.length;
         this.max = this.size - 1;
+        this.step = $(".avatar-items li").width();
 
         var list = pic.find('li');
         var left = pic.css('margin-left');
@@ -112,8 +113,8 @@ $('body').off('click', '.avatar-roll a, .majar-items .prev, .majar-items .next')
     if (that.hasClass('none')) {
         return false;
     } else {
-     courses.avatar.toggle(that)     
- }
+       courses.avatar.toggle(that)     
+   }
 });
 /**
  * 
@@ -202,3 +203,31 @@ bLink.find('.course-detail').off('click').on('click', function(event){
         window.open(b.attr('href'));
     }
 })
+
+
+/**
+ * XESUI 
+ * Copyright 2013 xueersi.com All rights reserved.
+ *
+ * @description 
+ *
+ * @author Marco (marco@xesui.com)
+ * @modify 2013-07-08 16:57:28
+ * @version $Id$
+ * 
+ * @links http://xesui.com
+ */
+
+
+/**
+ * @name ui.userinfo.js
+ * @description 弹出的用户信息窗口
+ * 
+ * @module 
+ * @submodule 
+ * @main 
+ * @class 
+ * @constructor 
+ * @static 
+ */
+

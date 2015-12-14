@@ -1,22 +1,22 @@
 <!--
     @require all.order.less
     @require order.modal.less
-    @require order.modal.js
+    @require all.order.js
     @require Modal.js
 -->
 
 <div class="ao-content">
-    <ul class="ao-list">
-        <li class="current" data-url="/MyOrders/ajaxOrderList/" data-params="1"><a href="#">全部订单 32</a></li>
-        <li data-url="/MyOrders/ajaxOrderList/" data-params="2"><a href="#">已完成 19</a></li>
-        <li data-url="/MyOrders/ajaxOrderList/" data-params="3"><a href="#">待支付 22</a></li>
-        <li data-url="/MyOrders/ajaxOrderList/" data-params="4"><a href="#">已取消 11</a></li>
-        <li data-url="/MyOrders/ajaxOrderList/" data-params="5"><a href="#">待审核 10</a></li>
-        <li data-url="/MyOrders/ajaxOrderList/" data-params="6"><a href="#">审核未通过 5</a></li>
-        <li data-url="/MyOrders/ajaxOrderList/" data-params="7"><a href="#">待发货 5</a></li>
-        <li data-url="/MyOrders/ajaxOrderList/" data-params="8"><a href="#">待收货 6</a></li>
+    <ul id="order_tab" class="ao-list">
+        <li class="current" data-pages="" data-params="1"><a href="#">全部订单 32</a></li>
+        <li data-pages="" data-params="2"><a href="#">已完成 19</a></li>
+        <li data-pages="" data-params="3"><a href="#">待支付 22</a></li>
+        <li data-pages="" data-params="4"><a href="#">已取消 11</a></li>
+        <li data-pages="" data-params="5"><a href="#">待审核 10</a></li>
+        <li data-pages="" data-params="6"><a href="#">审核未通过 5</a></li>
+        <li data-pages="" data-params="7"><a href="#">待发货 5</a></li>
+        <li data-pages="" data-params="8"><a href="#">待收货 6</a></li>
     </ul>
-    <div class="some-order">
+    <div id="page_list" class="some-order">
         <ul class="ao-title">
             <li class="ao-first">订单详情</li>
             <li class="ao-second">总计</li>
@@ -50,7 +50,7 @@
                 <li class="ao-third ao-li">待支付</li>
                 <li class="ao-li">
                     <div class="ao-operation">
-                        <button class="btn btn-danger">立即支付</button>
+                        <span class="btn btn-danger">立即支付</span>
                         <span>
                             <a href="#">查看详情</a>
                             <a href="#">取消订单</a>
@@ -79,7 +79,7 @@
                 <li class="ao-third ao-li">已完成</li>
                 <li class="ao-li">
                     <div class="ao-operation">
-                        <button class="btn btn-info">查看详情</button>
+                        <span class="btn btn-info">查看详情</span>
                     </div>
                 </li>
             </ul>
@@ -104,7 +104,7 @@
                 <li class="ao-third ao-li">已取消</li>
                 <li class="ao-li">
                     <div class="ao-operation">
-                        <button class="btn btn-danger" data-toggle="modal" data-target="#orderModal" onclick="orderModal();">重新购买</button>
+                        <span class="btn btn-danger" data-toggle="modal" data-target="#orderModal" onclick="orderModal();">重新购买</span>
                         <span>
                             <a href="#">查看详情</a>
                         </span>
@@ -132,7 +132,7 @@
                 <li class="ao-third ao-li">待审核</li>
                 <li class="ao-li">
                     <div class="ao-operation">
-                        <button class="btn btn-info">查看详情</button>
+                        <span class="btn btn-info">查看详情</span>
                         <span>
                             <a href="#">取消订单</a>
                         </span>
@@ -160,7 +160,7 @@
                 <li class="ao-third ao-li">待收货</li>
                 <li class="ao-li">
                     <div class="ao-operation">
-                        <button class="btn btn-danger">确认收货</button>
+                        <span class="btn btn-danger">确认收货</span>
                         <span>
                             <a href="#">查看详情</a>
                         </span>
@@ -188,7 +188,7 @@
                 <li class="ao-third ao-li">待发货</li>
                 <li class="ao-li">
                     <div class="ao-operation">
-                        <button class="btn btn-info">查看详情</button>
+                        <span class="btn btn-info">查看详情</span>
                     </div>
                 </li>
             </ul>
@@ -213,7 +213,7 @@
                 <li class="ao-third ao-li">审核未通过</li>
                 <li class="ao-li">
                     <div class="ao-operation">
-                        <button class="btn btn-info">查看详情</button>
+                        <span class="btn btn-info">查看详情</span>
                     </div>
                 </li>
             </ul>

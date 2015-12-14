@@ -22,7 +22,7 @@
             <span class="bindcardPass-warning error"></span>
         </div>
         
-        <button class="btn-bindcard btn btn-info">激活</button>
+        <span class="btn-bindcard btn btn-info">激活</span>
     </div>
 </div>
 <div class="prompt-box">

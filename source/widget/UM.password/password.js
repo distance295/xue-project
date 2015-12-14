@@ -2,13 +2,6 @@
         xue.formCheck = xue.formCheck || {};
     var fCheck = xue.formCheck;
 
-    /* 获取form表单元素 */
-    fCheck.param = {
-      passStrong   : '.pass-strong',
-      passStrength : '.pass-strong strong',
-      strong       : 'strong',
-    }; 
-
     /* 输入正确时，清除提醒 */
     fCheck.clearTips = function(select){
       $(select).css({
@@ -21,6 +14,13 @@
         'display': 'block',
       }).html(tips);
     };
+
+    /* input边框样式 */
+    fCheck.bordercss = function(argument) {
+       if($(argument).val() !== ''){
+         $(argument).css('border','1px solid #68c04a');
+       }else{$(argument).css('border','1px solid #eaeaea');}
+    }
 
     /* 密码安全强度 */
     fCheck.strength = function(password){
@@ -49,6 +49,35 @@
         return score;
 
     };
+    /* 显示隐藏label */
+    function labelfn(pwd,tip,warning) {
+      $(pwd).focus(function(){
+        $(tip).hide();
+        fCheck.clearTips(warning);
+      });
+      $(pwd).blur(function(){
+        var value = $(pwd).val();
+        if(value == ''){
+          $(tip).show();
+        }
+      })
+    }
+
+    labelfn("#curPwd",".curPwd-tip",".curPwd-warning");
+    labelfn("#newPwd",".newPwd-tip",".newPwd-warning");
+    labelfn("#confirmPwd",".confirmPwd-tip",".confirmPwd-warning");
+
+    /* 新密码强度验证 */
+    $('#newPwd').off('keyup').on('keyup',function(e){
+      var value = $('#newPwd').val();
+      var s = $('#newPwd').next('strong');
+      if(e.keyCode != 32){
+        fCheck.checkStrength('.newPwd-tip','.newPwd-warning',value,fCheck.param.passStrong,e);
+      }else{
+        $('.newPwd-tip').hide();
+        fCheck.clearTips('.newPwd-warning');
+      }
+    });
 
     fCheck.checkStrength  = function(tip,passwordWarn,value,passStrong,e){
       var val = $.trim(value);
@@ -63,8 +92,7 @@
         $(fCheck.param.passStrength).removeClass().addClass('strong' + tp);
         /* 方便最后的验证 */
         fCheck.param.cPass = 1;     
-      }else if(val.length > 0 && val.length <= 5){
-        
+      }else if(val.length > 0 && val.length <= 5){  
         $(tip).hide();
         $(passStrong).css({
           'display' : 'none'
@@ -82,109 +110,63 @@
       }
     }
 
-    //显示隐藏label
-    $('#curPwd').focus(function(){
-      $('.curPwd-tip').hide();
-      fCheck.clearTips(".curPwd-warning");
-    });
-    $("#curPwd").blur(function(){
-      var value = $("#curPwd").val();
-      if(value == ''){
-        $('.curPwd-tip').show();
-      }
-    })
-
-    $('#newPwd').focus(function(){
-      $('.newPwd-tip').hide();
-      fCheck.clearTips(".newPwd-warning");
-    });
-    $("#newPwd").blur(function(){
-      var value = $("#newPwd").val();
-      if(value == ''){
-        $('.newPwd-tip').show();
-      }
-    })
-
-    $('#confirmPwd').focus(function(){
-      $('.confirmPwd-tip').hide();
-      fCheck.clearTips(".confirmPwd-warning");
-    });
-    $("#confirmPwd").blur(function(){
-      var value = $("#confirmPwd").val();
-      if(value == ''){
-        $('.confirmPwd-tip').show();
-      }
-    })
-
-    /* input边框样式 */
-    fCheck.bordercss = function(argument) {
-       if($(argument).val() !== ''){
-         $(argument).css('border','1px solid #68c04a');
-       }else{$(argument).css('border','1px solid #eaeaea');}
-    }
-
-    /* 新密码强度验证 */
-    $('#newPwd').off('keyup').on('keyup',function(e){
-      var value = $('#newPwd').val();
-      var s = $('#newPwd').next('strong');
-      if(e.keyCode != 32){
-        fCheck.checkStrength('.newPwd-tip','.newPwd-warning',value,fCheck.param.passStrong,e);
-      }else{
-        $('.newPwd-tip').hide();
-        fCheck.clearTips('.newPwd-warning');
-      }
-    });
-
     /* 密码验证流程 */
     $(function() {
         $("#form_submit").click(function() {
-          if ($("#curPwd").val() == '') {
-              fCheck.setTips(".curPwd-warning",'请输入当前密码').show();
+          var curpasswd = $("#curPwd").val();
+          var newpasswd = $("#newPwd").val();
+          var confirmpasswd = $("#confirmPwd").val();
+          /* 当前密码设置 */
+          if (curpasswd == '') {
+              fCheck.setTips(".curPwd-warning",'请输入当前密码');
               return false;
+          }else{
+              if (curpasswd.length < 6) {
+                  fCheck.setTips(".curPwd-warning",'密码不能少于6位字符');
+                  return false;
+              }   
           }
-          var passwd = $("#curPwd").val();
-          if (passwd.length < 6) {
-              fCheck.setTips(".curPwd-warning",'密码不能少于6位字符').show();
+          /* 新密码设置 */
+          if (newpasswd == '') {
+              fCheck.setTips(".newPwd-warning",'请设置密码');
               return false;
+          }else{
+              if (newpasswd.length < 6) {
+                  fCheck.setTips(".newPwd-warning",'密码不能少于6位字符');
+                  return false;
+              }else{
+                if (newpasswd == curpasswd) {
+                    $(".pass-strong").hide();
+                    fCheck.setTips(".newPwd-warning",'新密码与当前密码相同');
+                    return false;
+                }
+              }
+              fCheck.bordercss('#newPwd');
           }
-
+          /* 确认新密码 */
+          if (confirmpasswd == '') {
+              fCheck.setTips(".confirmPwd-warning",'请输入确认密码');
+              return false;
+          }else{
+              if (newpasswd != confirmpasswd) {
+                  fCheck.setTips(".confirmPwd-warning",'新密码与确认密码不一致');
+                  return false;
+              }
+              fCheck.bordercss('#confirmPwd');
+            }
+          /* ajax发送请求 */
           $.ajax({
               type: "POST",
               url: "/MyInfos/changeStuPwd",
-              data: "curPwd=" + curpasswd + '&newPwd=' + newpassword + 'confirm',
+              data: "curPwd=" + curpasswd + '&newPwd=' + newpasswd + '&confirmPwd=' + confirmpasswd,
               dataType: 'json',
               success: function(d) {
                   if (d.sign == 1) {
                       location.href = "/MyInfos/passwordManager";
                   } else {
                       fCheck.setTips('.curPwd-warning',d.msg);
-                      $('.curPwd').css('border','1px solid #eaeaea');
                   }
               }
           });
-          fCheck.bordercss('#curPwd');
-
-          if ($("#newPwd").val() == '') {
-              fCheck.setTips(".newPwd-warning",'请设置密码').show();
-              return false;
-          }
-          var passwd = $("#newPwd").val();
-          if (passwd.length < 6) {
-              fCheck.setTips(".newPwd-warning",'密码不能少于6位字符').show();
-              return false;
-          }
-          fCheck.bordercss('#newPwd');
-
-          if ($("#confirmPwd").val() == '') {
-              fCheck.setTips(".confirmPwd-warning",'请输入确认密码').show();
-              $("#confirmPwd").focus();
-              return false;
-          }
-          if ($("#newPwd").val() != $("#confirmPwd").val()) {
-              fCheck.setTips(".confirmPwd-warning",'新密码与确认密码不一致').show();
-              $("#newPwd").focus();
-              return false;
-          }
-          fCheck.bordercss('#confirmPwd');
         })  
     })  

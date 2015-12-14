@@ -23,6 +23,7 @@ fCheck.bordercss = function(argument) {
    }else{$(argument).css('border','1px solid #eaeaea');}
 }
 
+/* 验证昵称 */
 $(function(){
     var nickname = $('.nickname');
     $(nickname).on('focus',function(){
@@ -36,12 +37,12 @@ $(function(){
     $(nickname).on('blur',function(){
         fCheck.clearTips(".prompt-empty");
         if(nickname.data('lastVal') != $.trim(nickname.val())) {
-           $.fn.nickname();
+            $(".nickname").css('border','1px solid #eaeaea');
+            $.fn.nickname();
         }
     });
 });
 
-/* 验证昵称 */
 var boxs = {
     nickname: '.nickname',
     school:'.school'
@@ -75,8 +76,9 @@ $.fn.nicknameajax = function(){
             url : '/MyInfos/getNicknameUseful',
             type : 'GET',
             dataType : 'json',
+            data : 'nickname=' + $('.nickname').val(),
             timeout: 7000,
-            async: false,
+            async: true,
             success  : function(result){
                 if(result.sign == false){
                     fCheck.setTips(".nickname-warning",'昵称与其他用户重复，请重新设置');
@@ -84,7 +86,6 @@ $.fn.nicknameajax = function(){
                 } else {
                     fCheck.clearTips(".nickname-warning");
                     fCheck.bordercss('.nickname');
-                    $(box).data('nickname',val);
                     return true;
                 }
             },
@@ -124,25 +125,13 @@ $('.school').on('blur',function(){
 $(function() {
     $(".btn-submit").click(function() {
        $.fn.nickname();
-       $.ajax({
-        type:"GET",
-        url:"/MyInfos/editStuInfo",
-        dataType: "json",
-        data: 'nickname=' + $('.nickname').val() + '&date=' + $('.date').val() + '&school=' + $('.school').val(),
-        timeout: 7000,
-        success: function(result) {
-          /* 填写的信息验证不通过 */
-          if(result.sign == 1){
-            window.location.href= '/Reg/RegSuc';
-          }else{
-            fCheck.setTips('.message-error span',result.msg);
-            setTimeout("fCheck.clearTips('.message-error span')",18000);
-          }
-        },
-        error: function() {
-          alert('数据读取错误,请重试..');
-          return false;
-        }
-       });
     })
-}) 
+})
+
+var messageError = $(".message-error span").is(":empty");
+if (messageError == '0') {
+    $('.message-error').css({
+        display: 'block'
+    });
+    setTimeout("fCheck.clearTips('.message-error')",6000); 
+}

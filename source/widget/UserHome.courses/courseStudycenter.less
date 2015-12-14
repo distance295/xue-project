@@ -37,7 +37,7 @@ body{
 }
 .label-study{
 	width: 25px;
-	height: 47px;
+	height: 60px;
 	text-align: center;
 	display: inline-block;
 	position: absolute;
@@ -45,34 +45,56 @@ body{
 	color: #fff;
 	font-size: 14px;
 	font-style: normal;
-	line-height: 17px;
 	cursor: pointer;
-	padding-top: 8px;
+	font-weight: normal;
+	padding: 0 2px;
+	line-height: 17px;
 }
 .label-delay{
 	background: #3bafda;
-	top: 57px;
+	padding-top: 12px;
+	top: 9px;
+}
+.label-delayed{
+	background: #ccd1d9;
+	top: 9px;
+	padding-top: 5px;
+	cursor: default;
 }
 .label-continun{
 	background: #37bc9b;
-	top: 105px;
+	top: 71px;
+	padding-top: 12px;
+}
+.label-sheng{
+	top: 132px;
+	padding-top: 12px;
+	background: #ffaa09;
 }
 .courseList-label{
 	padding-right: 25px;
 }
-.popover{
-	background-color: #f9f9f9;
-	padding: 4px 3px;
-	font-size: 14px;
-	color: #666;
-	border-color: #e5e5e5;
-	box-shadow: none;
+.courselayout-list{
+
+	.popover{
+		background-color: #f9f9f9;
+		padding: 4px 3px;
+		font-size: 14px;
+		color: #666;
+		border-color: #e5e5e5;
+		box-shadow: none;
+	}
+	.popover.top > .arrow::after{
+		border-top-color: #f9f9f9;
+	}
+	.popover.top > .arrow{
+		border-top-color: #e5e5e5;
+	}
 }
-.popover.top > .arrow::after{
-	border-top-color: #f9f9f9;
-}
-.popover.top > .arrow{
-	border-top-color: #e5e5e5;
+.wrap-body{
+	a,a:focus,a.btn:focus,a.btn:active{
+		outline: none;
+	}
 }
 .courseList-wrap{
 	clear: both;
@@ -154,6 +176,13 @@ body{
 			line-height: 18px;
 			margin-bottom: 8px;
 			font-family: 'Microsoft YaHei';
+			span{
+				color: #999;
+			}
+			.title-detail-gray{
+				color: #999;
+				cursor: default;
+			}
 			.course_estimate{
 				color: @dark333;
 				font-size: 12px;
@@ -161,6 +190,7 @@ body{
 				vertical-align: top;
 				float: right;
 				margin-right: 10px;
+				font-family: "SimSun";
 			}
 			.change-course{
 				color: #e74c3c;
@@ -170,6 +200,7 @@ body{
 		}
 		.title-more{
 			margin-top: 38px;
+			font-size: 14px;
 		}
 		.end-time{
 			color: #666;
@@ -178,6 +209,7 @@ body{
 			span{
 				strong{
 					color: #e74c3c;
+					font-weight: normal;
 				}
 			}
 		}
@@ -202,7 +234,11 @@ body{
 				}
 				.live-label{
 					border-radius: 3px;
-					right: -21px;
+					right: -15px;
+					width: 30px;
+					display: inline-block;
+					background: url('img/live-label.png') no-repeat 0 0;
+					text-indent: -99999px;
 				}
 			}
 			.last{
@@ -217,7 +253,7 @@ body{
 		}
 		.more-service{
 			margin-right: 10px;
-			margin-top: 2px;
+			margin-top: 3px;
 			h4{
 				color: #333333;
 				font-size: 12px;
@@ -234,11 +270,10 @@ body{
 				background: url("img/blue-arrow.png") no-repeat right center;
 			}
 			.more-list{
-				padding-top: 5px;
+				padding: 5px 0px;
 				border: 1px solid #f5f5f5;
 				background: #fcfcfc;
 				width: 62px;
-				height: 92px;
 				color: #333;
 				font-size: 12px;
 				line-height: 28px;
@@ -284,7 +319,6 @@ body{
 					}
 				}
 				p.teacher-coach{
-					color: #3bafda;
 					font-size: 14px;
 					font-family: "Microsoft YaHei";
 				}
@@ -349,13 +383,13 @@ body{
 	}
 }
 // 弹框
-.material-exam{
+.material-exam,.courseInformation{
 	.modal-dialog{
-		width: 750px;
+		width: 770px;
 		height: 380px;
 	}
 	.modal-body{
-		height: 295px;
+		height: 315px;
 		overflow-y: auto;
 		padding-bottom: 25px;
 	}
@@ -364,6 +398,7 @@ body{
 	border-collapse: collapse;
 	border-spacing: 0;
 	width: 100%;
+	border-radius: 5px;
 	thead{
 		background: #fcfcfc;
 		tr{
@@ -427,19 +462,30 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 	.material{
 		tr{
 			td{
-				border: 1px solid @borderColor;
 				padding:  9px 17px;
+				display: inline-block;
+				width: 357px;
+				border: none;
 				p{
 					color: #666;
 					font-size: 12px;
 					line-height: 34px;
 					margin-bottom: 10px;
+					height: 34px;
+					width: 322px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					text-align: left;
 				}
 				span{
 					color: #999999;
 					font-size: 12px;
 					margin-left: 10px;
 				}
+			}
+			td:first-child{
+				border-right: 1px solid @borderColor;
 			}
 		}
 	}
@@ -479,6 +525,14 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 }
 .load-btn-none{
 	color: #999;
+	cursor: default;
+	&:hover,&:visited{
+		color: #999;
+	}
+	&:active,&.active{
+		box-shadow: none;
+		color: #999;
+	}
 }
 // 延期弹框
 .bom-delay{
@@ -525,6 +579,7 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 			font-size: 18px;
 			font-family: 'Microsoft YaHei';
 			line-height: 34px;
+			color: #666;
 			span{
 				color: #e74c3c;
 				margin-left: 10px;
@@ -532,28 +587,95 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 			}
 		}
 	}
-	.course-table{
-		background: #fff;
-		td{
-			display: table-cell;
-			line-height: 42px;
+	.tab-record-content{
+		border-radius: 5px;
+		display: block;
+		overflow: hidden;
+		.tab-pane{
+			display: none;
 		}
-		thead{
-			background: #fff;
-			line-height: 50px;
-			height: 50px;
-			border-radius: 4px;
-			border: 1px solid @borderColor;
-			tr{
-				th{
-					font-size: 16px;
-					border-bottom: 1px solid #eaeaea;
+		.active{
+			display: block;
+		}
+	}
+	.course-table-title{
+		background-color: #fff;
+		border-radius: 5px;
+		color: #999;
+		font-size: 16px;
+		height: 52px;
+		width: 100%;
+		span{
+			width: 32%;
+			display: inline-block;
+			height: 52px;
+			line-height: 52px;
+			text-align: center;
+		}
+	}
+	.course-table-live-title{
+		span{
+			width: 24%;
+		}
+		span.span-w1{
+			width: 30%;
+		}
+		span.span-w2{
+			width: 42%;
+		}
+		span.span-w3{
+			width: 10%;
+		}
+		span.span-w4{
+			width: 14%;
+		}
+	}
+	.course-table.course-live-table{
+		li{
+			span.span-w1{
+				width: 30%;
+				float: left;
+			}
+			span.span-w2{
+				width: 42%;
+				float: left;
+				text-align: left;
+				.studied-end{
+					width: 57px;
 				}
 			}
+			span.span-w3{
+				width: 10%;
+				float: left;
+			}
+			span.span-w4{
+				width: 14%;
+				float: left;
+			}
 		}
-		tr{
+	}
+	.course-table{
+		margin-top: 1px;
+		border-radius: 5px;
+		background: #fff;
+		li:first-child{
+			border: none;
+		}
+		li{
+			
+			border-right: none;
+			border-left: none;
 			font-size: 14px;
 			font-family: "SimSun";
+			line-height: 62px;
+			height: 62px;
+			border-top: 1px solid #f5f5f5;
+			span{
+				width: 32%;
+				display: inline-block;
+				text-align: center;
+				height: 62px;
+			}
 			.text-style{
 				text-align: center;
 				font-size: 12px;
@@ -583,7 +705,7 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 			.wait-look{
 				color: #3bafda;
 			}
-			td.yellow-mark{
+			span.yellow-mark{
 				em{
 					display: inline-block;
 					width: 18px;
@@ -591,7 +713,7 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 					margin-left: 5px;
 				}
 				.mark{
-					background: url("img/spam.png") no-repeat right center;
+					background: url("img/exclamation.png") no-repeat right center;
 					vertical-align: middle;
 
 				}
@@ -613,11 +735,21 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 		line-height: 30px;
 		padding: 0 15px;
 		cursor: pointer;
+		a{
+			outline: none;
+		}
 	}
 	li.current{
 		background: #3bafda;
 		color: #fff;
 		border-radius: 4px 4px 0 0;
+		a{
+			outline: none;
+			color: #fff;
+			&:hover{
+				color: #fff;
+			}
+		}
 	}
 }
 .amount-show{
@@ -635,4 +767,51 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 			}
 		}
 	}
+}
+.none-content{
+	float: left;
+	position: relative;
+	left: 50%;
+	.nc-center{
+		position: relative;
+		left: -50%;
+		img{
+			_float: left;
+			_margin-right: 240px;
+		}
+		p{
+			float: right;
+			_float: none;
+			_width: 120px;
+			margin: 30px 0 0 20px;
+			line-height: 35px;
+			font-family: "Microsoft YaHei";
+			font-size: 16px;
+			em{
+				font-style: normal;
+				color: #e74c3c;
+			}
+		}
+	}
+}
+// 进度条
+.processingbar {
+	text-align: center;
+	margin: 3px 0 0 20px;
+	position: relative;
+	width: 100px;
+}
+.processingbar font {
+	color: #999;
+	display: block;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 22px;
+	text-align: center;
+	position: absolute;
+	font-weight: bold;
+	left: 0;
+	top: 0;
+	margin: 0px 0 0 0px;
 }

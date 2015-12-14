@@ -8,12 +8,12 @@
         <li class="app-qq unbounded">
             <h5>腾讯QQ</h5>
             <span>未绑定</span>
-            <button class="btn btn-info">立即绑定</button>
+            <span class="btn btn-info">立即绑定</span>
         </li>
         <li class="app-weixin unbounded">
             <h5>腾讯微信</h5>
             <span>未绑定</span>
-            <button class="btn btn-info">立即绑定</button>
+            <span class="btn btn-info">立即绑定</span>
         </li>
         <li class="app-weibo bounded">
             <h5>新浪微博</h5>
@@ -28,4 +28,12 @@
             <a href="#">解除绑定</a>
         </li>
     </ul>
+
+    <div class="prompt-box">
+        <img class="prompt" src="img/prompt.png">
+        <div class="cb-prompt-box">
+            <h3>提示</h3>
+            <p>同一账号只能绑定一个相同类型的第三方账号（QQ/微博/家长帮）”，如果你的账号之前绑定过多个相同类型的第三方账号，当进行“解除绑定”操作时，我们将会对“你已绑定的、相同类型的第三方账号”进行全部解绑。</p>
+        </div>
+    </div>
 </div>

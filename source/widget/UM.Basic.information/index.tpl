@@ -4,7 +4,7 @@
     @require birthday.js
 -->
 <div class="bi-content">
-    <form action="" name="date">
+    <form action="" name="">
         <div class="bi-left">
             <div class="message-error">
                 <span></span>
@@ -15,7 +15,7 @@
             </div>
             <div>
                 <label for="">昵称：</label>
-                <input class="nickname" type="text" maxlength="18" data-nickname=""/>
+                <input class="nickname" type="text" maxlength="18" data-nickname="" autocomplete="off"/>
                 <div class="error-box">
                     <span class="nickname-warning error"></span>
                 </div>
@@ -35,15 +35,15 @@
                 <em>网校会在每年7月1日自动为你更新年级</em>
             </div>
             <div>
-                <div id="date" data-date="2012-10-1">
+                <div id="date">
                     <label for="">生日：</label>
-                    <select id="sel_year" name="year" >
+                    <select id="year" name="year" rel="2014" >
                     </select>
                     <i>年</i>
-                    <select id="sel_month" name="month" >
+                    <select id="month" name="month"  rel="04" >
                     </select>
                     <i>月</i>
-                    <select id="sel_day" name="day">
+                    <select id="day" name="day" rel="24" >
                     </select>
                     <i>日</i>
                 </div>
@@ -54,7 +54,7 @@
             </div>
             <div>
                 <label for="school">学校：</label>
-                <input class="school" type="text" maxlength="50">
+                <input class="school" type="text" maxlength="50" autocomplete="off"/>
                 <div class="error-box">
                     <span class="school-warning error"></span>
                 </div>

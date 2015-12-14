@@ -13,7 +13,7 @@
         <div class="error-box"><span class="cardNo-warning error"></span></div>
         <div><label for="">密码：</label><input class="cardPass" type="password"></div>
         <div class="error-box"><span class="cardPass-warning error"></span></div>
-        <button class="btn-active btn btn-info">激活</button><a href="">查看激活记录</a>
+        <sapn class="btn-active btn btn-info">激活</sapn><a href="">查看激活记录</a>
     </div>
 </div>
 <div class="prompt-box">

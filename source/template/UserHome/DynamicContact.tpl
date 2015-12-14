@@ -26,11 +26,11 @@
             <div class="row">              
                 <div class="col-md-2 wrap w120">                 
                     <div class="panel panel-default wrap h630">
-                        <div class="list-group top m20">
-                            <a href="#" class="list-group-item active">全部</a>
-                            <a href="#" class="list-group-item">老师</a>
-                            <a href="#" class="list-group-item">学员</a>
-                            <a href="#" class="list-group-item">官方</a>
+                        <div class="list-group top m20 fresh-DynamicContact-tab">
+                            <a href="#" class="list-group-item active" data-category = '0'>全部</a>
+                            <a href="#" class="list-group-item" data-category = '1'>老师</a>
+                            <a href="#" class="list-group-item" data-category = '2'>学员</a>
+                            <a href="#" class="list-group-item" data-category = '3'>官方</a>
 
                         </div>   
                     </div>
@@ -68,5 +68,36 @@
 
 <!-- 公共底部 -->
 <link rel="import" href="../Layer/layer.UserHome.foot.tpl?__inline">
+<script type="text/javascript">
+    //tab切换
+    $(function(){
+
+        $('.fresh-DynamicContact-tab a').click(function(){
+              //切换改变样式
+              $(this).addClass('active').siblings('a').removeClass('active');
+              var _category = $(this).data('category');
+              //ajax请求列表信息
+              $.ajax({
+                  url : '/data/Dynamic/ajaxDynamicList.html',
+                  data : {
+                     category:_category
+                  },
+                  type: "get",
+                  dataType: 'html',
+                  success: function(data){
+                      if(data){
+                          $('.fresh-main-wrapper').html(data);
+                      }else{
+                          $('.fresh-main-wrapper').html('');
+                      }
+                  }
+              })
+        })
+
+        //默认加载第一个标签
+        $('.fresh-DynamicContact-tab a:first').click();
+       
+    })
+</script>
 
 
