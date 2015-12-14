@@ -98,7 +98,7 @@
                         <img src="http://s03.xesimg.com/dynamic/9f09d2d352ea80e9c3d083f99483b632_small.jpg">
                     </div>
                 </div>
-                <div class="colect-media colect-media-expand colect-type-img hide"> </div>
+                <div class="colect-media colect-media-expand colect-type-img hiding"> </div>
             </div>
         </div>
         <!-- <span class="cancel-collect">取消收藏</span> -->
