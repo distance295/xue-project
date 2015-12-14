@@ -23,6 +23,7 @@ fCheck.bordercss = function(argument) {
    }else{$(argument).css('border','1px solid #eaeaea');}
 }
 
+/* 验证昵称 */
 $(function(){
     var nickname = $('.nickname');
     $(nickname).on('focus',function(){
@@ -36,12 +37,12 @@ $(function(){
     $(nickname).on('blur',function(){
         fCheck.clearTips(".prompt-empty");
         if(nickname.data('lastVal') != $.trim(nickname.val())) {
-           $.fn.nickname();
+            $(".nickname").css('border','1px solid #eaeaea');
+            $.fn.nickname();
         }
     });
 });
 
-/* 验证昵称 */
 var boxs = {
     nickname: '.nickname',
     school:'.school'
@@ -77,7 +78,7 @@ $.fn.nicknameajax = function(){
             dataType : 'json',
             data : 'nickname=' + $('.nickname').val(),
             timeout: 7000,
-            async: false,
+            async: true,
             success  : function(result){
                 if(result.sign == false){
                     fCheck.setTips(".nickname-warning",'昵称与其他用户重复，请重新设置');
@@ -85,7 +86,6 @@ $.fn.nicknameajax = function(){
                 } else {
                     fCheck.clearTips(".nickname-warning");
                     fCheck.bordercss('.nickname');
-                    $(box).data('nickname',val);
                     return true;
                 }
             },

@@ -4,14 +4,14 @@
  * @date    2015-10-19 23:24:37
  * @version $Id$
  */
-var glory = glory || {};
-    
+ var glory = glory || {};
+
 /**
  * 初始化三级联动下拉框
  *
  * @return
  */
-function initSelects(params) {
+ function initSelects(params) {
     $.ajax({
         type: "post", 
         url: params.jsonUrl,
@@ -61,7 +61,7 @@ function initSelects(params) {
 /**
  * 初始化二级联动下拉框
  */
-function initSelects_2(params, pid) {
+ function initSelects_2(params, pid) {
     if(pid == '') {
         // 如果没有选择一级,则删除二级,三级下拉框
         $(params.container + ' select[id="' + params.level_2_id + '"]').remove();
@@ -78,7 +78,7 @@ function initSelects_2(params, pid) {
                     var str = '';
                     str += '<select id="' + params.level_2_id + '" name="' + params.level_2_id + '" onchange="selectType2(this)">';
                     str += '<option value="" selected>--请选择--</option>';
-                
+
                     $.each(result[pid]['child'], function(i, j) {
                         if (params.level_2_default != '') {
                             str += '<option value="' + i + '"';
@@ -102,7 +102,7 @@ function initSelects_2(params, pid) {
                     $(params.container + ' select[id="' + params.level_2_id + '"]').remove();
                     $(params.container + ' select[id="' + params.level_3_id + '"]').remove();
                     $(params.container + ' select[id="' + params.level_1_id + '"]').after(str);
-                
+
                     $(params.container + ' select[id="' + params.level_2_id + '"]').bind("change", function(){
                         initSelects_3(params, pid, $(this).val());
                     }); 
@@ -115,14 +115,14 @@ function initSelects_2(params, pid) {
                 // alert('数据读取错误..');
             }
         });
-    }
+}
 };
 
 
 /**
  * 初始化三级联动下拉框
  */
-function initSelects_3(params, ppid, pid) { 
+ function initSelects_3(params, ppid, pid) { 
     if(pid == '') {
         // 如果没有选择二级,则删除三级下拉框
         $(params.container + ' select[id="' + params.level_3_id + '"]').remove();
@@ -154,14 +154,14 @@ function initSelects_3(params, ppid, pid) {
                     $(params.container + ' select[id="' + params.level_3_id + '"]').remove();
                     $(params.container + ' select[id="' + params.level_2_id + '"]').after(str);
                 }else{
-                $(params.container + ' select[id="' + params.level_3_id + '"]').remove();
+                    $(params.container + ' select[id="' + params.level_3_id + '"]').remove();
                 }
             },
             error: function() {
                 // alert('数据读取错误..');
             }
         });
-    }
+}
 };
 
 
@@ -175,82 +175,54 @@ function generateMixed(n) {
     }
     return res;
 };
- function showCourse( dom){
- 	var t= $(dom).siblings('.glory-window'),
- 	b=g_sign = $('#window_sign'),
- 	bl=g_id_unexist = $('#window_sign').length == !!0,
- 	tl=g_class_unexist=t.children('.window_detail').length==!!0,
- 	h=-10,
- 	that =$(dom);
- 	t.html('<div class="window_arrow"></div><div class="window_detail"><span class="learning">1111</span><span class="teacher_name"><a target="_blank" href="/t/zhutao">222</a> </span><span class="learning">啊哈黑</span> <a title="33333" class="learning_course_name" target="_blank" href="/kc/19236.html" xes_id="gloryCourse">201511ankai额世界上几个IE</a></div>');
-            // if(tl){
-            //     $.ajax({
-            //         url : '/glorys/ajaxStuCourse',
-            //         data : 'gloryId='+gloryId+'&stuId='+stuId,
-            //         type: "POST",
-            //         dataType: 'html',
-            //         success: function(result) { 
-            //             if(result){
-            //                 t.html(result);
-            //                 winContorl(t,b,bl,h,that);
-            //             }       
-            //         },
-            //         error: function() {
-            //             alert('');
-            //             return false;
-            //         }
-            //     });
-            // }else{
-            	winContorl(t,b,bl,h,that);
-            // }       
-        };
-        function winContorl(t,b,bl,h,that){
-        	var left=that.offset().left,
-        	top=that.offset().top,
-        	h=-5;
-        	t.children().each(function(){
-        		var ch=$(this).innerHeight();
-        		h+=ch;
-        	}).last().removeClass('hasborder_1');;
 
-        	if($('.glory_window_come').length == 0){
-        		$(document.body).append('<div class="glory_window_come"></div>');
-        	}
-        	var content=t.html(); 
-        	if(bl){
-        		that.attr('id','window_sign');
-        		$('.glory_window_come').html(content).offset({
-        			left:left,
-        			top:top-h-10
-        		}).height(h).fadeIn();
+function winContorl(t,b,bl,h,that){
+ var left=that.offset().left,
+ top=that.offset().top,
+ h=-5;
+ t.children().each(function(){
+  var ch=$(this).innerHeight();
+  h+=ch;
+}).last().removeClass('hasborder_1');;
 
-        	}else if(typeof that.attr('id')=='undefined'){
-        		$('#window_sign').removeAttr('id');
-        		that.attr('id','window_sign');
-        		$('.glory_window_come').html(content).height(h).offset({
-        			left:left,
-        			top:top-h-10
-        		});
+ if($('.glory_window_come').length == 0){
+  $(document.body).append('<div class="glory_window_come"></div>');
+}
+var content=t.html(); 
+if(bl){
+  that.attr('id','window_sign');
+  $('.glory_window_come').html(content).offset({
+   left:left,
+   top:top-h-10
+}).height(h).fadeIn();
 
-        	}else{
-        		$('.glory_window_come').html('').remove();
-        		$('#window_sign').removeAttr('id');
+}else if(typeof that.attr('id')=='undefined'){
+  $('#window_sign').removeAttr('id');
+  that.attr('id','window_sign');
+  $('.glory_window_come').html(content).height(h).offset({
+   left:left,
+   top:top-h-10
+});
 
-        	}
-        }
-        $(function(){
-        	$(document.body).on('click',function(event){
-        		var a=$(event.target).hasClass('show-course'),
-        		b=$(event.target).hasClass('glory_window_come');
-        		if (!a && !b && $('.glory_window_come').length!==0){
+}else{
+  $('.glory_window_come').html('').remove();
+  $('#window_sign').removeAttr('id');
 
-        			$('.glory_window_come').remove();
-        			$('#window_sign').removeAttr('id');
+}
+}
+$(function(){
+ $(document.body).on('click',function(event){
+  var a=$(event.target).hasClass('show-course'),
+  b=$(event.target).hasClass('glory_window_come');
+  if (!a && !b && $('.glory_window_come').length!==0){
 
-        		}
+   $('.glory_window_come').remove();
+   $('#window_sign').removeAttr('id');
 
-        	})
-        }); 
+}
+
+})
+}); 
 
 glory.comment = glory.comment || {};
 /**

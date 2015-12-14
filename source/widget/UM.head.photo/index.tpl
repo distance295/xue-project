@@ -8,18 +8,18 @@
       <li><a href="#">本地上传</a></li>
     </ul>
     <div class="hp-box-left">
-        <div class="hp-recommend">
+        <div class="hp-recommend active">
             <div class="hpr-box">
-                <img class="hpr-img" src="http://tx.haiqq.com/uploads/allimg/150321/110H2E40-6.jpg" alt="头像">
+                <img class="hpr-img" src="http://tx.haiqq.com/uploads/allimg/150321/110H2E40-6.jpg" data-id="12" alt="头像">
                 <img class="hpr-img" src="img/head.photo.png" alt="头像">
                 <img class="hpr-img" src="http://tx.haiqq.com/uploads/allimg/150321/110H2E40-6.jpg" alt="头像">
             </div>
-            <button id="btn_submit" class="btn btn-info hpr-btn">保存</button>
+            <span id="btn_submit" class="btn btn-info hpr-btn">保存</span>
         </div>
         <div class="hp-local">
             <form action="" method="POST" enctype="multipart/form-data" id="headsImg">
                 <div class="message-error">
-                    <span></span>
+                    <span>123</span>
                 </div>
                 <div class="hl-box">
                     <div id="preview" style="display:inline-block;">

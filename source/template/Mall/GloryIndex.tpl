@@ -3,8 +3,8 @@
 
 <!-- 学习中心区域 -->
 <!--   12栏的用这个    -->
-<div class="col-md-12">
-  <div class="gloryConPicId">
+<div class="col-md-12 gloryConPicId">
+  <!-- <div class="gloryConPicId" style='background:  url("/static/img/glory-banner.jpg") no-repeat scroll center top'>
     <div class="gloryConPicId-inner">
         <a href="/vips/apply">立即申请</a>
         <ul class="glory-grades-list">
@@ -18,7 +18,10 @@
             <li>学而思图书大狂欢</li>
         </ul>
     </div>
-</div> 
+</div>  -->
+
+<link rel="import" href="../../widget/Public.Module/gloryAd.tpl?__inline">
+<link rel="import" href="../../widget/Public.FocusPic/index.tpl?__inline">
 </div>
 <!--   12栏结束    -->
 
@@ -34,9 +37,9 @@ var PAGE_CONFIG = {
     TITLE: '看学霸',
         NAV_FIXED: false // 如果想要头部分类展开的话，设为true，如果不想直接展开设为false
     };
-</script>
+    </script>
 
 
 
-<!-- 公共底部 -->
-<link rel="import" href="../Layer/layer.Mall.foot.tpl?__inline">
+    <!-- 公共底部 -->
+    <link rel="import" href="../Layer/layer.Mall.foot.tpl?__inline">

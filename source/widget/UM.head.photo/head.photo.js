@@ -1,30 +1,28 @@
 var xue =xue || {};
 
-//切换
-function changeTab(d,box){
-    var that = $(d),
-    box = $(box).children();
-    that.addClass("current").siblings().removeClass("current");  
-    var index =  that.index(); 
-    box.eq(index).show().siblings().hide();
-}
-$('#head_tab li').click(function(){
-  changeTab(this,".hp-box-left");
+//头像tab切换
+$('#head_tab li').click(function(e){
+    var box = $(".hp-box-left").children();
+    e.preventDefault();
+    $(this).addClass("current").siblings().removeClass("current");  
+    var index =  $(this).index(); 
+    box.eq(index).addClass("active").siblings().removeClass("active");
 });
 
 //推荐头像
 $(".hpr-img").on("click",function(){
    var url = $(this).attr("src");
+   $(this).addClass('imghover').siblings().removeClass("imghover");
    $("#hp-small img, #hp-middle img, #hp-big img").attr("src",url)
 })
 
 $(".hpr-btn").on('click', function(){
-    var headId = $(".hpr-img").data('id');
+    var headId = $(".imghover").data('id');
     $.ajax({
         type: "POST",
         url: "/MyInfos/changeImg",
         dataType: "JSON",
-        data:'type=' + headId,
+        data:'headId=' + headId,
         success: function(msg){
             if(msg.sign == 1){
                 window.location.reload();
@@ -132,8 +130,7 @@ function getFullPath(obj){
 
               var dom = document.getElementById('loadFile');
 
-              if( !isIE9() ) {
-
+              if( !isIE(9) ) {
                   var size = dom.files.item(0).size/1024;
               }
              
@@ -142,7 +139,7 @@ function getFullPath(obj){
                   alert("您选择的文件类型为" + lastname + "，图片必须为 JPG,GIF,PNG 类型");
                   return false;  
               }else{
-                  if (!isIE9() && size>2*1024) {
+                  if (!isIE(9) && size>2*1024) {
                       alert('图片大小请不要大于2MB');
                       return false;
                   }else{
@@ -151,27 +148,10 @@ function getFullPath(obj){
               }
         }
 
-        function isIE9 () {
-            var browser=navigator.appName 
-            var b_version=navigator.appVersion 
-            var version=b_version.split(";"); 
-            var trim_Version=version[1].replace(/[ ]/g,""); 
-            if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE6.0") 
-            { 
-                return true;
-            } 
-            else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE7.0") 
-            { 
-                return true;
-            } 
-            else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE8.0") 
-            { 
-                return true;
-            } 
-            else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE9.0") 
-            { 
-                return true;
-            } 
-        }
+        function isIE(ver){
+                var b = document.createElement('b');
+                b.innerHTML = '<!--[if lte IE ' + ver + ']><i></i><![endif]-->';
+                return b.getElementsByTagName('i').length === 1;
+            }
 }   
 

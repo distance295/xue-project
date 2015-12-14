@@ -77,11 +77,20 @@ ul,li{list-style: none;}
 		span.ui-user-name{
 			font-size: 14px;
 		}
+		.ui-userinfo{
+			.userpic{
+				display: block;
+				width: 60px;
+				height: 60px;
+			}
+		}
 		.avatar-photo{
 			margin-bottom: 4px;
 			display: inline-block;
 			width: 60px;
 			overflow: hidden;
+			padding-left: 0;
+			margin-top: 0;
 			img{
 				border-radius: 50%;
 				width: 60px;
@@ -129,6 +138,9 @@ ul,li{list-style: none;}
 				}
 			}
 		}
+	}
+	.course-detail-wrap{
+		overflow: hidden;
 	}
 	.course-detail{
 		display: block;
@@ -267,8 +279,7 @@ ul,li{list-style: none;}
 	.cancel-courseList{
 		float: right;
 		font-size: 12px;
-		height: 137px;
-		line-height: 220px;
+		padding-top: 14px;
 		a{
 			color: #3bafda;
 		}
@@ -377,6 +388,18 @@ ul,li{list-style: none;}
 		display: inline;
 		.avatar-photo{
 			width: 40px;
+			ul{
+				li{
+					width: 40px;
+				}
+			}
+			.ui-userinfo{
+				.userpic{
+					display: block;
+					width: 40px;
+					height: 40px;
+				}
+			}
 			img{
 				width: 40px;
 				height: 40px;
@@ -519,7 +542,8 @@ ul,li{list-style: none;}
 .teacher-bomb {
 	height: 266px;
 	width: 375px;
-	border-top: none;
+	border: none;
+	padding: 0;
 	ul{
 		padding-left: 0;
 	}
@@ -595,6 +619,7 @@ ul,li{list-style: none;}
 				font-size: 14px;
 				text-align: center;
 				padding: 0 5px;
+				margin-top: 0;
 				span{
 					margin-left: 25px;
 				}
@@ -687,7 +712,7 @@ ul,li{list-style: none;}
 }
 // 课程筛选页右边广告位
 .sideright-body{
-	padding: 0;
+	margin-top: 20px;
 	.sideright-ad{
 		margin-bottom: 20px;
 		img{
@@ -717,10 +742,12 @@ ul,li{list-style: none;}
 		float: left;
 		font-size: 12px;
 		list-style: outside none none;
-		padding: 0 10px;
-
-		img{
-			margin-left: 5px;
+		padding: 0 0px 0 27px;
+		a{
+			i{
+				color: #a1a2a1;
+				margin-left: 5px;
+			}
 		}
 	}
 	li.popular-rank {
@@ -747,6 +774,9 @@ ul,li{list-style: none;}
 			float: left;
 			font-weight: normal;
 		}
+	}
+	.screen-look-grades{
+		margin-right: 15px;
 	}
 }
 

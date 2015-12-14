@@ -1,38 +1,39 @@
 @borderColor: #eaeaea;
-.gloryConPicId {
+.glory-grades-wrap{
+	width: 1190px;
+	margin:0 auto;
+	position: relative;
+	z-index: 3;
+	top:0;
+	
+}
+.glory-grades-trends{
+	width: 280px;
+	height: 300px;
 	overflow: hidden;
-	width: 100%;
-	background: rgba(0, 0, 0, 0) url("/static/img/Public.Module/glory-banner.jpg") no-repeat scroll center top;
-	.gloryConPicId-inner{
-		width: 1190px;
-		height: 380px;
-		margin: 0 auto;
-		position: relative;
-		a {
-			display: block;
-			height: 380px;
-			text-indent: -999999em;
-		}
-	}
-	.glory-grades-list{
-		position: absolute;
-		right: 0;
-		top: 40px;
-		width: 280px;
-		height: 300px;
-		background: rgba(0,0,0,0.6);
-		list-style: none;
-		color: #fff;
-		padding-left: 0;
+	position: absolute;
+	right: 0;
+	top:0;
+	z-index: 1;
+	background: rgba(0,0,0,0.6);
+	margin-top: 36px;
+	.trends-title{
+		margin-bottom: 15px;
 		h3{
 			border-bottom: 1px solid #000;
 			font-size: 16px;
 			line-height: 50px;
 			font-weight: normal;
-			margin-bottom: 15px;
 			padding-left: 23px;
 			margin-top: 0;
+			overflow: hidden;
+			color: #fff;
 		}
+	}
+	.glory-grades-list{
+		list-style: none;
+		color: #fff;
+		padding-left: 0;
 		li{
 			line-height: 30px;
 			font-size: 12px;
@@ -41,6 +42,7 @@
 		}
 	}
 }
+
 .glory-content.last{
 	margin-right: 0;
 }
@@ -168,7 +170,7 @@
 
 }
 .window_detail {
-	height: 70px;
+	height: 100px;
 	margin: 0 5px;
 	padding: 15px 5px 10px;
 	font-size: 12px;

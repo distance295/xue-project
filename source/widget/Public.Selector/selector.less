@@ -4,23 +4,9 @@
 @Sfont-size:1rem;
 @LRpadding:0.8rem;
 
-
-//p{
-//  font-size: @Nfont-size;
-//  line-height: 1;
-//  text-rendering: optimizeLegibility; 
-//}
-//div{
-//  padding:0;
-//  margin:0;
-//}
-.columns{
-  padding:0;
-}
-
 /* 年级以及知识点选择css(start) */
 .choiceSet{
-  border: 1px dashed rgb(241,242,246);
+  border: 1px solid rgb(241,242,246);
   padding: 0 @LRpadding;
 }
 @grey:rgb(102,102,102);
@@ -29,177 +15,42 @@
   border-radius: 2px;
   padding:0.4rem 0.8rem;
 }
-.choiceSelect{
-  background-color: rgb(59,175,218);
-  color: #ffffff;
-}
 .choiceTip{
   color:@grey;
 //  font-size: 1.2rem;
   padding:1.2rem 1.2rem 1.2rem 0;
   text-align: center;
   width:6rem;
+  font-weight: normal;
 };
 
 
-.choice { // 最外层
-    .choice-dl { // 每一横条
-        .choice-title { // 左侧标题
-            
-        } 
-        .choice-items {  // 右侧内容
-
-            .choice-item { // 每一个小项
-                
-            } 
-        }
-        .choice-handle{}
-    }
-    &.choice-hasmore {
-        .choice-items {
-            height: 30px;
-            &.choice-open {
-                height: auto;
-            }
-        }
-        
-    }
-};
-
-
-
-
-
-.choice{
-  input{
-    margin-top: 2px;
-  }
-  background-color: rgb(255,255,255);
-  dl{
-    margin-bottom: 0;
-  }
-  .filter{
-    margin-top:1rem;
-    margin-bottom: 1rem;
-    position: relative;
-    left:45%;
-  }
-  .choice-grade{
-    margin:0;
-    .choiceSet;
-    .choice-grade-tip{
-      .choiceTip
-    }
-    .choice-grade-cur-input{
-      padding-top: 1.2rem;
-      padding-bottom:1.2rem;
-    }
-    .choice-grade-cur{
-      padding-top: 1rem;
-      padding-bottom:1rem;
-      .choice-item{
-        line-height: 1;
-        .choiceSetting;
-      }
-    }
-    .select-grade{
-      .choiceSelect;
-    }
-  }
-
-  .choice-subject{
-    .choiceSet;
-    .choice-subject-tip{
-      .choiceTip
-    }
-    .choice-subject-cur-input{
-      padding-top: 1.2rem;
-      padding-bottom: 1.2rem;  
-    }
-    .choice-subject-cur{
-      padding-top: 1rem;
-      padding-bottom: 1rem;  
-      .choice-item{
-        line-height: 1;
-        .choiceSetting;
-      }
-      .select-subject{
-        .choiceSelect;
-      }
-    }
-  }
-  .choice-point{
-    .choiceSet;
-    .choice-point-tip{
-      .choiceTip;
-      letter-spacing: 0.3rem;
-    }
-    .choice-point-cur-input{
-      overflow: hidden;
-      height:2.9rem;
-      padding-right:0;
-      .radio-inline{
-        margin-left: 0;
-        margin-right:10px;
-        margin-top: 1.2rem;
-        margin-bottom:1.2rem;
-      }
-    }
-    .choice-point-cur{
-      overflow: hidden;
-      height:3.0rem;
-      padding-right:0;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-
-      //line-height: 1.8;
-      .choice-item{
-      .choice-point-name{
-        .choiceSetting;
-        line-height: 1;
-        margin-bottom: 0.2rem;
-      }
-    }
-    .choice-cur-show{
-      overflow:auto;
-      height:7.5rem;
-    }
-    .chocie-point-show{
-      padding: 0;
-      width:9rem;
-      a{
-        font-size: 1.2rem;
-        font-weight: normal;
-        display: inline-block;
-        margin:1.1rem 0 1.1rem 0;
-        padding:0.2rem 0.5rem;
-      }
-    }
-
-    .choice-point-link{
-      padding:0;
-      .chocie-point-show{
-        cursor: pointer;
-      }
-      .chocie-point-download{
-        cursor: pointer;
-        border-radius: 2px;
-        text-align: center;
-        font-size: 1.2rem;
-        color:#fff;
-        width:8.5rem;
-        margin:0.8rem 0 0.8rem 0.5rem;
-        padding:0.5rem 0.5rem;
-        background-color: rgb(59,175,218);
-      }
-    }
-
-  }
-}
 /* 年级以及知识点选择css(end) */
 
 /* 年级以及知识点选择css重构(start) */
 .choice{//最外层
+    /* 覆盖bootstrap默认设置start */
+    .nav > li > a:hover,
+    .nav > li > a:focus {
+      text-decoration: none;
+      background-color: #fff;
+        
+    }
+    .nav-pills > li.active > a,
+    .nav-pills > li.active > a:hover,
+    .nav-pills > li.active > a:focus {
+      color: #fff;
+      background-color: #3bafda;
+    }
+    /* 覆盖bootstrap默认设置end */
+    
+    background-color: rgb(255,255,255);
+    dl{
+        margin-bottom: 0;
+      }
+    input{
+        margin-top: 2px;
+    }
     .choice-dl{//每一横条
         .choiceSet;
         line-height: 1;
@@ -207,13 +58,19 @@
             .choiceTip;
         }
         .choice-items{//右侧选项
+            cursor: pointer;
             height:3.0rem;
             padding-top: 1rem;
             padding-bottom: 1rem;
             .choice-item-each{//单个选项
+                
                 line-height: 1;
                 .choiceSetting;
             }
+        }
+        .choice-items-input{
+            padding-top: 1.2rem;
+            padding-bottom: 1.2rem;
         }
         .choice-more{//更多知识点
             .choice-more-download{
@@ -229,21 +86,42 @@
             }
             
         }
+        
+    }
+    .filter{//"根据以上条件筛选按钮"
+            margin-top:0.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            left:45%;
     }
     .choice-special{//知识点选择（特殊情况加类名）
         .choice-title{//三个字，加文字间距
             letter-spacing: 0.3rem;
         }
-        .choice-items-spe{
-            overflow: hidden;
-            height:2rem;
+        .choice-items-spe{//普通情况下的
+//            overflow: hidden;
+//            height:2rem;
             margin-top: 1rem;
             margin-bottom: 1rem;
+            max-height:98px;
+            overflow: auto;
             .choice-item-each{
                 line-height: 1;
-                margin-bottom: 1rem;
+                margin-bottom: 10px;
                 .choiceSetting;
+                cursor: pointer;
             }
+            .radio-inline{
+                margin-bottom: 1rem;
+                margin-left: 0;
+                margin-right: 10px;
+            }
+        }
+        .choice-items-spe-input{//input框所添加的特殊类名
+            margin-top: 1.2rem;
+            margin-bottom: 0;
+            max-height:88px;
+            overflow: auto;
         }
         .choice-items-open{
             overflow: auto;
@@ -251,4 +129,6 @@
         }
     }
 }
-
+.chooseGradeForLb{
+    margin-bottom: 2rem;
+}

@@ -205,8 +205,8 @@ var __ignore = {
         'Public.Header',
         'Public.MiniCart',
 //        'UserHome.gold',    // 临时屏蔽下
-        'Public.Nav',
-        'Public.Selector'        
+        'Public.Nav'
+//        'Public.Selector'        
     ].toString(),
     mall : [
         'UM.address',

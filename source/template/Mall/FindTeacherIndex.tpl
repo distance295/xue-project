@@ -7,8 +7,11 @@
         <li><a href="#">首页</a></li>
         <li class="active">当前页</li>
     </ol>
-    <link rel="import" href="../../widget/Public.Selector/index.tpl?__inline">
+   
     <div class="row top m20">
+        <div class="col-md-12">
+             <link rel="import" href="../../widget/Public.Selector/index.tpl?__inline">
+        </div>
         <div class="col-md-10 wrap-body wrap-mall">
 
             <!-- *********************** 内容区域开始 *********************** -->
@@ -24,7 +27,13 @@
         </div>
         <div class="col-md-2 col-sm-2 wrap-side wrap-mall pull-right">
             <div class="panel panel-default">
-                <div class="panel-body pd0">
+                <div class="panel-body pd0 sideright-body">
+                    <div class="sideright-ad">
+                        <a href="###"><img src="http://x04.xesimg.com/web/2015/11/19/14479235823994.jpg"></a>
+                    </div>
+                    <div class="sideright-ad">
+                        <a href="###"><img src="http://x04.xesimg.com/web/2015/11/19/14479235823994.jpg"></a>
+                    </div>
                     <span class="findRightTitle">热门新鲜事</span>
                     <div class="findRightList">
                         <link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">

@@ -37,7 +37,7 @@
         </div>
     </div>
 
-    <button id="form_submit" class="btn btn-info" name="submit" type="submit">保存</button>     
+    <button id="form_submit" class="btn btn-info" name="submit" type="submit">保存</button>         
 </div>
     <script>
         /* 火狐浏览器刷新之后的界面不同的处理 */
