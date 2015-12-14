@@ -6,7 +6,7 @@
     <div>
         <div class="phone-k">
             <p>手机号码：</p>
-            <input id="phone" name="phone" type="text" maxlength="11"/>
+            <input id="phone" name="phone" type="text" maxlength="11"  autocomplete="off"/>
             <label for="phone" class="phone-tip">请输入手机号</label>
         </div>
         <div class="error-box">
@@ -17,7 +17,7 @@
     <div>
         <div class="verification-k">
             <p>验证码：</p>
-            <input type="text" maxlength="4" id="verificationCode" class="verification" name="verificationCode" />
+            <input type="text" maxlength="4" id="verificationCode" class="verification" name="verificationCode" autocomplete="off"/>
             <label for="verificationCode" class="verification-tip">请输入右侧的验证码</label>
             <img height="35" width="120" id="verificationImg" alt="验证码" src="http://www.xueersi.com/verifications/show?6Inw5RD3cqVg"/>
         </div>
@@ -29,7 +29,7 @@
     <div>
         <div class="phonecode-k">
             <p>短信验证码：</p>
-            <input id="phonecode" name="code" type="text"/>
+            <input id="phonecode" name="code" type="text" autocomplete="off"/>
             <label for="phonecode" class="phonecode-tip">请输入短信验证码</label>
             <sapn class="vcode btn btn-info" id="vcode">获取短信验证码</sapn>
         </div>
@@ -41,7 +41,7 @@
     <div>
         <div class="pass-eye">
             <p>当前密码：</p>
-            <input id="curPwd" name="password" type="password" maxlength="18" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;"/>
+            <input id="curPwd" name="password" type="password" maxlength="18" autocomplete="off" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;"/>
             <label for="curPwd" class="pass-tip">请输入当前网站密码</label>
         </div>
         <div class="error-box">
