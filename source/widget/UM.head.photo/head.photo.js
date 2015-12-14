@@ -17,7 +17,7 @@ $(".hpr-img").on("click",function(){
 })
 
 $(".hpr-btn").on('click', function(){
-    var headId = $(".hpr-img").data('id');
+    var headId = $(".imghover").data('id');
     $.ajax({
         type: "POST",
         url: "/MyInfos/changeImg",
@@ -49,15 +49,6 @@ $("#upload_img").on('click', function(e) {
     e.preventDefault();
     $("#loadFile").click();
 });
-
-if ($(".message-error span").val() !== '') {
-    $(".message-error").hide()
-}else{
-    $(".message-error").show();
-    $(".hp-recommend").removeClass('active');
-    $(".hp-local").addClass('active');
-    $('#head_tab li').removeClass("current").siblings().addClass("current");  
-};
 
 function headsSave(){
     var img = $("#loadFile").val();
