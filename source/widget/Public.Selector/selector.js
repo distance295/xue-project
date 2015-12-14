@@ -46,38 +46,38 @@ if($('.choice-items-spe-input').length){
 }
 
 /* 知识点展示“更多”交互 */
-$('body').on('click', '.choice-more-download',function(){
-    var that = this;
-    if($(that).hasClass('show-choice')){
-        $(that).children('a').html('更多知识点');
-        $(that).children('i').removeClass('fa-angle-up fa-chevron-up').addClass('fa-angle-down fa-chevron-down');
-        if($(select.opti.itemSpe).length){
-            $(select.opti.itemSpe).scrollTop(0);
-            $(select.opti.itemSpe).removeClass('choice-items-open');    
-        }else{
-            $(select.opti.pointInput).css({
-                'height':'22px',
-                'overflow':'hidden'
-            }); 
-            
-        }
-        
-        $(that).removeClass('show-choice');
-    }else{
-        $(that).children('a').html('收起知识点');
-        $(that).children('i').removeClass('fa-angle-down fa-chevron-down').addClass('fa-angle-up fa-chevron-up');
-        if($(select.opti.itemSpe).length){
-            $(select.opti.itemSpe).addClass('choice-items-open');    
-        }else{
-            $(select.opti.pointInput).css({
-                'height':'74px',
-                'overflow':'auto'
-            })
-        }
-        
-        $(that).addClass('show-choice');
-    }
-})
+//$('body').on('click', '.choice-more-download',function(){
+//    var that = this;
+//    if($(that).hasClass('show-choice')){
+//        $(that).children('a').html('更多知识点');
+//        $(that).children('i').removeClass('fa-angle-up fa-chevron-up').addClass('fa-angle-down fa-chevron-down');
+//        if($(select.opti.itemSpe).length){
+//            $(select.opti.itemSpe).scrollTop(0);
+//            $(select.opti.itemSpe).removeClass('choice-items-open');    
+//        }else{
+//            $(select.opti.pointInput).css({
+//                'height':'22px',
+//                'overflow':'hidden'
+//            }); 
+//            
+//        }
+//        
+//        $(that).removeClass('show-choice');
+//    }else{
+//        $(that).children('a').html('收起知识点');
+//        $(that).children('i').removeClass('fa-angle-down fa-chevron-down').addClass('fa-angle-up fa-chevron-up');
+//        if($(select.opti.itemSpe).length){
+//            $(select.opti.itemSpe).addClass('choice-items-open');    
+//        }else{
+//            $(select.opti.pointInput).css({
+//                'height':'74px',
+//                'overflow':'auto'
+//            })
+//        }
+//        
+//        $(that).addClass('show-choice');
+//    }
+//})
 
 
 
