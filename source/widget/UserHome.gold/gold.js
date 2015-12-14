@@ -210,11 +210,13 @@ $(function(){
     $gsp.on({
         mouseenter:function(){
             $(this)
+                .stop()
                 .css({'box-shadow':'0 1px 5px 0px #666'},300)
                 .animate({'margin-top':5},300);
         },
         mouseleave:function(){
             $(this)
+                .stop()
                 .css({'box-shadow':'none'},300)
                 .animate({'margin-top':10},300)
         }
@@ -223,11 +225,13 @@ $(function(){
     $gsc.on({
         mouseenter:function(){
             $(this)
+                .stop()
                 .css({'box-shadow':'0 1px 5px 0px #666'},300)
                 .animate({'margin-top':5},300);
         },
         mouseleave:function(){
             $(this)
+                .stop()
                 .css({'box-shadow':'none'},300)
                 .animate({'margin-top':10},300)
         }
@@ -235,11 +239,13 @@ $(function(){
     $gep.on({
         mouseenter:function(){
             $(this)
+                .stop()
                 .css({'box-shadow':'0 1px 5px 0px #666'},300)
                 .animate({'margin-top':5},300);
         },
         mouseleave:function(){
             $(this)
+                .stop()
                 .css({'box-shadow':'none'},300)
                 .animate({'margin-top':10},300)
         }
