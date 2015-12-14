@@ -35,7 +35,7 @@
                     <span><strong>2015-8-10（周六）9:00—11:30 </strong></span>
                 </p>
                 <p class="amount-show">
-                    <a class="btn-danger btn " href="##"><em class="button-icon icon-will-red"></em>立即听课</a>
+                    <a class="btn-danger btn " href="##"><em class="button-icon icon-just-white"></em>立即听课</a>
                     <a class="btn btn-default " href="##" >课程大纲<label class="newLabel">5</label></a>
                     <a class="btn btn-default last listTest-btn" href="##">随堂测<label class="newLabel homeworkLabel">10</label></a>
                 </p>
@@ -113,7 +113,7 @@
                     <span><strong>2015-8-10（周六）9:00—11:30 </strong></span>
                 </p>
                 <p class="amount-show">
-                    <a class="btn-danger btn " href="##"><em class="button-icon icon-will-red"></em>立即听课</a>
+                    <a class="btn-danger btn " href="##"><em class="button-icon icon-just-white"></em>立即听课</a>
                     <a class="btn btn-default " href="##" >课程大纲<label class="newLabel">5</label></a>
                     <a class="btn btn-default last listTest-btn" href="##">随堂测<label class="newLabel homeworkLabel">10</label></a>
                 </p>
@@ -306,8 +306,8 @@
             <div class="progress-show">
                 <div class="processingbar"><font>80%</font></div>    
             </div>
-            <p>本课程共<span>50</span>次直播</p>
-            <p>你已参加<span>10</span>次</p>
+            <p>本课程共<span>50</span>节</p>
+            <p>你已学习<span>10</span>节</p>
             <p>超过<span>20%</span>的学员</p>
         </div>
         <div class="courseList-body">
@@ -337,7 +337,6 @@
             <div class="more-service left">
                 <h4 class="gray-arrow">更多服务</h4>
                 <ul class="more-list">
-                    <li><a href="###">录播视频</a></li>
                     <li class="courseList-material"><a href="###">资料</a></li>
                     <li class="courseList-exam"><a href="###">考试</a></li>
                 </ul>
