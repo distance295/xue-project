@@ -45,6 +45,19 @@ $("#loadFile").change(function(){
     }
 });
 
+var imgError = $(".img-error span").is(":empty");
+if (imgError == '0') {
+    $('.img-error').css({
+        display: 'block'
+    });
+    $('.hp-local').addClass('active').siblings().removeClass("active");
+    $('.tab-local').addClass('current').siblings().removeClass("current");
+}else{
+    $('.img-error').css({
+        display: 'none'
+    });
+}
+
 $("#upload_img").on('click', function(e) {
     e.preventDefault();
     $("#loadFile").click();
