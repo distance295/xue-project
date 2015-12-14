@@ -6,7 +6,7 @@
 
 /* 年级以及知识点选择css(start) */
 .choiceSet{
-  border: 1px dashed rgb(241,242,246);
+  border: 1px solid rgb(241,242,246);
   padding: 0 @LRpadding;
 }
 @grey:rgb(102,102,102);
@@ -99,13 +99,15 @@
             letter-spacing: 0.3rem;
         }
         .choice-items-spe{//普通情况下的
-            overflow: hidden;
-            height:2rem;
+//            overflow: hidden;
+//            height:2rem;
             margin-top: 1rem;
             margin-bottom: 1rem;
+            max-height:98px;
+            overflow: auto;
             .choice-item-each{
                 line-height: 1;
-                margin-bottom: 1rem;
+                margin-bottom: 10px;
                 .choiceSetting;
                 cursor: pointer;
             }
@@ -117,8 +119,9 @@
         }
         .choice-items-spe-input{//input框所添加的特殊类名
             margin-top: 1.2rem;
-            margin-bottom: 1.2rem;
-            height:1.8rem;
+            margin-bottom: 0;
+            max-height:88px;
+            overflow: auto;
         }
         .choice-items-open{
             overflow: auto;

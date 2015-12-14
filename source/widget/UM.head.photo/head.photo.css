@@ -29,9 +29,12 @@
   clear: both;
   margin-left: 110px;
 }
+.hp-content .hp-box-left .hp-recommend {
+  display: none;
+}
 .hp-content .hp-box-left .hp-recommend .hpr-box {
   width: 540px;
-  height: 280px;
+  height: 288px;
   overflow: auto;
   overflow-x: hidden;
   margin-bottom: 35px;
@@ -44,6 +47,12 @@
   cursor: pointer;
 }
 .hp-content .hp-box-left .hp-recommend .hpr-box img:hover {
+  border: 3px solid #3bafda;
+  box-shadow: 0px 0px 10px #3bafda;
+  -moz-box-shadow: 0px 0px 10px #3bafda;
+  -webkit-box-shadow: 0px 0px 10px #3bafda;
+}
+.hp-content .hp-box-left .hp-recommend .hpr-box .imghover {
   border: 3px solid #3bafda;
   box-shadow: 0px 0px 10px #3bafda;
   -moz-box-shadow: 0px 0px 10px #3bafda;
@@ -122,7 +131,7 @@
 }
 .hp-content .hp-box-left .hp-local .hl-box .btn_up .btn-change {
   position: absolute;
-  top: 360px;
+  top: 375px;
   left: 300px;
   fontSize: 14px;
   width: 100px;
@@ -149,6 +158,9 @@
   font-family: "SimSun";
   font-size: 12px;
   color: #666;
+}
+.hp-content .hp-box-left .active {
+  display: block;
 }
 .hp-content .hp-box-left .btn-info {
   width: 100px;

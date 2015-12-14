@@ -26,6 +26,7 @@
         <div class="centerHeader-alFocus hide"><span class="centerHeader-alFocus-btn">已关注</span><a href="###" class="centerHeader-willFocus-btn">取消关注</a></div>
     </div>
     <link rel="import" href="../../widget/Mall.personCenter/tab-office.tpl?__inline">
+<!--
     <div class="row bottom m20">
         <div class="col-md-9 top m20">
             <link rel="import" href="../../widget/Public.Dynamic/dynAttention.tpl?__inline">
@@ -37,4 +38,5 @@
             </div>
         </div>
     </div>
+-->
 </div>
