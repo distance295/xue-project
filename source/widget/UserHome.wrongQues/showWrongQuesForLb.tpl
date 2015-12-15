@@ -2,6 +2,7 @@
    年级选择：
     @require error_question.less
     @require error_question.js
+    @require ../Module.Modal/modal.js
 -->
 <div class="que">
     <div class="que-head clearfix">
@@ -32,7 +33,8 @@
             <div class="button round que-voice"><img src="img/voice-play.png" class="que-voice-play"><img src="img/vocie-img.png" alt="" class="que-voice-img" /></div>
         </div>
 -->
-        <p class="que-tips que-answer-head">解析：<span class="explanace">由题意知，5条鱼的进价为(3a+2b)元，售价为5(a+b)2，5(a+b)2−(3a+2b)=b−a2又∵b−a2<0，所以b&lta</span></p>
+        <div class="que-tips que-answer-head img-answer">解析：</div>
+        <img class="stuAns img-answer-lb" src="img/answer-img.png" data-url="question1.jpg"/>
     </div>
 </div>
 <div class="que">
@@ -41,14 +43,9 @@
             <a class="que-head-href" href="##">《高考英语总复习年卡（一轮+二轮）（通用版）——学而思网校高中英语暑期期末考试》</a></p>
         <p class="que-head-time-form pull-right">作答时间：2015-8-16</p>
     </div>
-    <div class="que-point">
-        <p class="que-point-know-form">
-            <span class="que-tips">知识点：</span>
-            <span class="knowledge">写作类-高考高分作文赏析</span><span class="knowledge">代数法</span><span class="knowledge">三角函数</span>
-        </p>
-    </div>
+    
     <div class="que-body clearfix">
-        <img src="img/ques2.png"></img>
+        <img src="img/ques2.png" class="que-body-img-lb"></img>
         <i class="fa fa-angle-down fa-chevron-down pull-right que-body-arrow"></i>
         <p class="que-body-show-text text-right pull-right">展开答案</p>
 
@@ -56,6 +53,7 @@
     <div class="que-answer">
         <!--用户答案为字母或者数字的情况-->
         <p class="que-tips que-answer-head">你的答案：<span class="cusAns">A</span>正确答案：<span class="corAns">B</span></p>
-        <p class="que-tips que-answer-head">解析：<span class="explanace">由题意知，5条鱼的进价为(3a+2b)元，售价为5(a+b)2，5(a+b)2−(3a+2b)=b−a2又∵b−a2<0，所以b&lta</span></p>
+        <div class="que-tips que-answer-head img-answer">解析：</div>
+        <img class="stuAns  img-answer-lb" src="img/answer-img.png" data-url="question1.jpg"/>
     </div>
 </div>

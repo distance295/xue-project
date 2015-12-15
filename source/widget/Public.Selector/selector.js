@@ -79,5 +79,15 @@ $(select.opti.item).on('click',function(){
 //    }
 //})
 
+/**
+当用户选择了一个某一个知识点之后，可以点击筛选按钮
+*/
+$('.choice-items-spe-input .radio-inline').on('click',function(){
+    
+        $('#choice-btn-disable-remove').removeAttr('disabled');    
+    
+    
+})
+
 
 
