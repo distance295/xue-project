@@ -27,7 +27,9 @@
     margin-bottom: 10px;
       overflow: hidden;
   } 
-    .wrongQuest-sum{
+    
+}
+.wrongQuest-sum{
         margin-top: 10px;
         margin-bottom: 0;
         color:rgb(153,153,153);
@@ -36,7 +38,6 @@
                 color:rgb(231,76,60);
             }
     }
-}
 
 .choiceHide{
   margin-bottom: 2rem;
@@ -61,8 +62,8 @@
   	margin-bottom: 40px;
   }
   .que-tips{
-    margin-top: 1.2rem;
-    margin-bottom: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     color:rgb(153,153,153);
   }
 }
@@ -100,6 +101,9 @@
   .knowledge{
     padding-right: 1.375rem;
   }
+    .selected{
+        color:#e74c3c;
+    }
 }
 
 .que-body{
@@ -121,11 +125,15 @@
   }
   .que-body-arrow{
     margin-right: 2rem;
+      margin-top:4px;
   }
   .que-body-show-text{
     cursor: pointer;
     width: 70px;
   }
+    .que-body-img-lb{
+        display:block;
+    }
 }
 
 .que-answer{
@@ -138,11 +146,11 @@
   }
   @RPadding:2rem;
   .cusAns{
-    padding-right:@RPadding;
+    padding-right:15px;
     color:rgb(204,0,0);
   }
   .corAns{
-    padding-right: @RPadding;
+    padding-right: 15px;
     color:rgb(51,153,204);
   }
   .explanace{
@@ -154,6 +162,9 @@
     vertical-align: top;
     display:inline-block;
   }
+    .img-answer-lb{
+        margin-bottom: 10px;
+    }
   .que-answer-exp{
     font-weight: bold;
   }

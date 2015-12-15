@@ -214,16 +214,9 @@
     fCheck.isError = function(e){
     fCheck.checkPhone(fCheck.param.phoneTip,fCheck.param.phoneWarn,$("#phone").val());
     fCheck.imgcode();
-    var value = $(fCheck.param.curPwd).val();
-    if(value.length == 0){
-           fCheck.setTips(fCheck.param.curPwdWarn,'请输入密码');
-       }else{
-           if (value.length > 0 && value.length < 6) {
-               fCheck.setTips(fCheck.param.curPwdWarn,'密码不能少于6位字符');
-           }
-    };
+    passwordfn();
     var param = fCheck.param;
-      if( param.cPhone && param.cMessage && param.cImg ){
+      if( param.cPhone && param.cMessage && param.cImg && param.cPass ){
         return false;
       }else{
         return true;
@@ -244,6 +237,21 @@
   });
 
   /* 密码框的操作 */
+  passwordfn = function () {
+    var value = $(fCheck.param.curPwd).val();
+    if(value.length == 0){
+           fCheck.setTips(fCheck.param.curPwdWarn,'请输入密码');
+           fCheck.param.cPass = 0;
+       }else{
+           if (value.length > 0 && value.length < 6) {
+               fCheck.setTips(fCheck.param.curPwdWarn,'密码不能少于6位字符');
+               fCheck.param.cPass = 0;
+           }else{
+            fCheck.param.cPass = 1;
+           }
+    };
+  }
+
   $(fCheck.param.curPwd).on('focus',function(){
     $(fCheck.param.curPwdTip).hide();
     fCheck.clearTips(fCheck.param.curPwdWarn);
@@ -329,11 +337,6 @@
             window.location.href= '/MyInfos/phoneManager';
           }else{
             fCheck.setTips('#tips-phonecode',result.msg);
-            if(fCheck.param.cPass == 1){
-              $('#curPwd').css('border','1px solid #68c04a');
-            }else{
-              $('#curPwd').css('border','1px solid #eaeaea');
-            } 
           }
         },
         error: function() {
