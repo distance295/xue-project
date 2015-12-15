@@ -22,7 +22,7 @@
             <li>
                 <span class="static-gray span-w1">2015-10-11 90:00-10:30</span>
                 <span class="span-w2">第1讲 初一数学目标满分班人教版 第一场直播<span class="studied-end">（补课）</span></span>
-                <span class="text-style yellow-mark span-w3">未完成<em class="mark"></em></span>
+                <span class="text-style yellow-mark span-w3"><a href="###" class="mark">未完成</a></span>
                 <span class="text-style span-w4">
                     <a class="btn btn-primary" href="##"><em class="button-icon icon-will-red"></em>立即回看</a>
                 </span>
@@ -30,7 +30,7 @@
             <li>
                 <span class="static-red span-w1">2015-10-11 90:00-10:30</span>
                 <span class="span-w2">第1讲 初一数学目标满分班人教版 第一场直播</span>
-                <span class="text-style studied-end span-w3">已开始</span>
+                <span class="text-style studied-end span-w3"><a href="###" class="">已开始</a></span>
                 <span class="text-style span-w4">
                     <a class="btn-danger btn" href="##"><em class="button-icon icon-will-red"></em>立即上课</a>
                 </span>
@@ -38,7 +38,7 @@
             <li>
                 <span class="static-gray span-w1">2015-10-11 90:00-10:30</span>
                 <span class="span-w2">第1讲 初一数学目标满分班人教版 第一场直播</span>
-                <span class="text-style studied span-w3">已参加</span>
+                <span class="text-style studied span-w3"><a href="###" class="">已参加</a></span>
                 <span class="text-style span-w4">
                     <a class="btn btn-primary" href="##"><em class="button-icon icon-will-red"></em>立即回看</a>
                 </span>
@@ -46,7 +46,7 @@
             <li>
                 <span class="static-gray span-w1">2015-10-11 90:00-10:30</span>
                 <span class="span-w2">第1讲 初一数学目标满分班人教版 第一场直播</span>
-                <span class="text-style studied span-w3">已回看</span>
+                <span class="text-style studied span-w3"><a href="###" class="">已回看</a></span>
                 <span class="text-style span-w4">
                     <a class="btn btn-primary" href="##"><em class="button-icon icon-will-red"></em>立即回看</a>
                 </span>
@@ -62,7 +62,7 @@
             <li>
                 <span class="static-gray span-w1">2015-10-11 90:00-10:30</span>
                 <span class="static-gray span-w2">第1讲 初一数学目标满分班人教版 第一场直播</span>
-                <span class="text-style studied span-w3">已参加</span>
+                <span class="text-style studied span-w3"><a href="###" class="">已参加</a></span>
                 <span class="text-style span-w4">
                     <button class="btn course-btn-gray" disabled>等待回看</button>
                 </span>
@@ -70,7 +70,7 @@
             <li>
                 <span class="static-gray span-w1">2015-10-11 90:00-10:30</span>
                 <span class="static-gray span-w2">第1讲 初一数学目标满分班人教版 第一场直播</span>
-                <span class="text-style yellow-mark span-w3">未完成<em class="mark"></em></span>
+                <span class="text-style yellow-mark span-w3"><a href="###" class="mark">未完成</a></span>
                 <span class="text-style span-w4">
                     <button class="btn course-btn-gray" disabled>等待回看</button>
                 </span>
