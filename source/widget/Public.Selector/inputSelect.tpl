@@ -88,5 +88,5 @@
             </dt>
         </dl> 
       </div>
-      <button class="filter btn btn-primary">根据以上条件筛选</button>
+      <button class="filter btn btn-primary" disabled="disabled" id="choice-btn-disable-remove">根据以上条件筛选</button>
     </div>

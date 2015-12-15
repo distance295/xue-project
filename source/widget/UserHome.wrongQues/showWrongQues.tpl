@@ -47,8 +47,8 @@
     </div>
     <div class="que-body clearfix">
         <p class="que-tips que-tips-head">
-            <span class="que-body-intro">材料</span>
-            <span class="que-body-content">甲从一个鱼摊上买了三条鱼，平均每条a元，又从另一个鱼摊上买了两条鱼，平均每条b元，后来他又以每条a+b2元的价格把鱼全部卖给了乙，结果发现赔了钱，原因是（ ）.</span>
+            <span class="que-body-intro">材料：</span>
+            <span class="que-body-content que-body-latex">(此处导入latex题干信息)甲从一个鱼摊上买了三条鱼，平均每条a元，又从另一个鱼摊上买了两条鱼，平均每条b元，后来他又以每条a+b2元的价格把鱼全部卖给了乙，结果发现赔了钱，原因是（ ）.</span>
         </p>
         <p class="que-tips que-tips-head"> 
             <span class="que-body-intro">题目：</span>
