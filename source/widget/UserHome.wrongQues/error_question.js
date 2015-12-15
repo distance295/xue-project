@@ -35,23 +35,23 @@ select.opt = {
 
 
 /* 错题本答案交互 */
-//$(select.opt.answerShow).on('click', function () {
-//    var that   = this,
-//        answer = $(that).parent('.que-body').next('.que-answer');
-//        /* 答案未展开处理分支 */
-//    if ($(that).hasClass('showAnswer')) {
-//        $(that).removeClass('showAnswer');
-//        $(that).html('展开答案');
-//        $(that).prev('i').removeClass('fa-angle-up fa-chevron-up').addClass('fa-angle-down fa-chevron-down');
-//        answer.slideUp();
-//    } else {
-//        /* 答案已展开处理分支 */
-//        $(that).addClass('showAnswer');
-//        answer.slideDown();
-//        $(that).html('收起答案');
-//        $(that).prev('i').removeClass('fa-angle-down fa-chevron-down').addClass('fa-angle-up fa-chevron-up');
-//    }
-//});
+$(select.opt.answerShow).on('click', function () {
+    var that   = this,
+        answer = $(that).parent('.que-body').next('.que-answer');
+        /* 答案未展开处理分支 */
+    if ($(that).hasClass('showAnswer')) {
+        $(that).removeClass('showAnswer');
+        $(that).html('展开答案');
+        $(that).prev('i').removeClass('fa-angle-up fa-chevron-up').addClass('fa-angle-down fa-chevron-down');
+        answer.slideUp();
+    } else {
+        /* 答案已展开处理分支 */
+        $(that).addClass('showAnswer');
+        answer.slideDown();
+        $(that).html('收起答案');
+        $(that).prev('i').removeClass('fa-angle-down fa-chevron-down').addClass('fa-angle-up fa-chevron-up');
+    }
+});
 
 /* 错题本图片答案交互 */
 $(select.opt.imgAnswer).on('click', function () {
