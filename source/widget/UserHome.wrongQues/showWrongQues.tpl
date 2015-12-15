@@ -64,7 +64,8 @@
     </div>
     <div class="que-answer">
         <!--用户答案为字母或者数字的情况-->
-        <p class="que-tips que-answer-head">你的答案：<span class="cusAns">A</span>正确答案：<span class="corAns">B</span></p>
+        <p class="que-tips que-answer-head">你的答案：<span class="cusAns">A</span><span class="cusAns">B</span><span class="cusAns">C</span></p>
+        <p class="que-tips que-answer-head">正确答案：<span class="corAns">B</span><span class="corAns">D</span></p>
         <p class="que-tips que-answer-head">解析：<span class="explanace">由题意知，5条鱼的进价为(3a+2b)元，售价为5(a+b)2，5(a+b)2−(3a+2b)=b−a2又∵b−a2<0，所以b&lta</span></p>
     </div>
 </div>
