@@ -38,8 +38,7 @@ courses.avatar = courses.avatar || {};
         this.box.next = btn.hasClass('next') ? btn : btn.siblings('.next');
         this.size = this.box.list.length;
         this.max = this.size - 1;
-        this.step = $(".avatar-items li").width();
-
+        this.step = pic.find('li').width();
         var list = pic.find('li');
         var left = pic.css('margin-left');
 
