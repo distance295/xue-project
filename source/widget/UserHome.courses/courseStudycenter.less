@@ -460,6 +460,9 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 		border-radius: 4px 4px 0 0;
 	}
 	.material{
+		.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn.active.focus{
+			outline: none;
+		}
 		tr{
 			td{
 				padding:  9px 17px;
@@ -675,6 +678,7 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 				display: inline-block;
 				text-align: center;
 				height: 62px;
+				float: left;
 			}
 			.text-style{
 				text-align: center;
