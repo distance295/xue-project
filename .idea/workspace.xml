@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65a5177b-cc0d-4bfb-a852-a009f5ea707f" name="Default" comment="Merge remote-tracking branch 'XUEJS/master'&#10;&#10;Conflicts:&#10;&#9;source/widget/gold/gold.css&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/widget/UserHome.gold/gold.js" afterPath="$PROJECT_DIR$/source/widget/UserHome.gold/gold.js" />
     </list>
     <list id="65f74e84-b66d-4c76-8e30-ad6df2d3b00e" name="New changelist" comment="" />
@@ -28,13 +27,13 @@
       <file leaf-file-name="gold.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5283308">
-              <caret line="247" column="23" selection-start-line="247" selection-start-column="23" selection-end-line="247" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.4027565">
+              <caret line="410" column="73" selection-start-line="410" selection-start-column="73" selection-end-line="410" selection-end-column="73" />
               <folding>
-                <marker date="1450074786000" expanded="true" signature="742:1274" placeholder="..." />
-                <marker date="1450074786000" expanded="true" signature="1326:1405" placeholder="..." />
-                <marker date="1450074786000" expanded="true" signature="1446:1763" placeholder="..." />
-                <marker date="1450074786000" expanded="true" signature="1802:2075" placeholder="..." />
+                <marker date="1450093260000" expanded="true" signature="742:1274" placeholder="..." />
+                <marker date="1450093260000" expanded="true" signature="1326:1405" placeholder="..." />
+                <marker date="1450093260000" expanded="true" signature="1446:1763" placeholder="..." />
+                <marker date="1450093260000" expanded="true" signature="1802:2075" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -455,7 +454,7 @@
     <frame x="0" y="23" width="1280" height="773" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -882,13 +881,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5283308">
-          <caret line="247" column="23" selection-start-line="247" selection-start-column="23" selection-end-line="247" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.4027565">
+          <caret line="410" column="73" selection-start-line="410" selection-start-column="73" selection-end-line="410" selection-end-column="73" />
           <folding>
-            <marker date="1450074786000" expanded="true" signature="742:1274" placeholder="..." />
-            <marker date="1450074786000" expanded="true" signature="1326:1405" placeholder="..." />
-            <marker date="1450074786000" expanded="true" signature="1446:1763" placeholder="..." />
-            <marker date="1450074786000" expanded="true" signature="1802:2075" placeholder="..." />
+            <marker date="1450093260000" expanded="true" signature="742:1274" placeholder="..." />
+            <marker date="1450093260000" expanded="true" signature="1326:1405" placeholder="..." />
+            <marker date="1450093260000" expanded="true" signature="1446:1763" placeholder="..." />
+            <marker date="1450093260000" expanded="true" signature="1802:2075" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -209,6 +209,7 @@ body{
 			span{
 				strong{
 					color: #e74c3c;
+					font-weight: normal;
 				}
 			}
 		}
@@ -597,84 +598,125 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 			display: block;
 		}
 	}
-	.course-table{
-		td{
-			display: table-cell;
-			line-height: 42px;
+	.course-table-title{
+		background-color: #fff;
+		border-radius: 5px;
+		color: #999;
+		font-size: 16px;
+		height: 52px;
+		width: 100%;
+		span{
+			width: 32%;
+			display: inline-block;
+			height: 52px;
+			line-height: 52px;
+			text-align: center;
 		}
-		thead{
-			background: #fff;
-			line-height: 50px;
-			height: 50px;
-			border-radius: 5px;
-			tr{
-				th{
-					font-size: 16px;
-					border-bottom: none;
+	}
+	.course-table-live-title{
+		span{
+			width: 24%;
+		}
+		span.span-w1{
+			width: 30%;
+		}
+		span.span-w2{
+			width: 42%;
+		}
+		span.span-w3{
+			width: 10%;
+		}
+		span.span-w4{
+			width: 14%;
+		}
+	}
+	.course-table.course-live-table{
+		li{
+			span.span-w1{
+				width: 30%;
+				float: left;
+			}
+			span.span-w2{
+				width: 42%;
+				float: left;
+				text-align: left;
+				.studied-end{
+					width: 57px;
+				}
+			}
+			span.span-w3{
+				width: 10%;
+				float: left;
+			}
+			span.span-w4{
+				width: 14%;
+				float: left;
+			}
+		}
+	}
+	.course-table{
+		margin-top: 1px;
+		border-radius: 5px;
+		background: #fff;
+		li:first-child{
+			border: none;
+		}
+		li{
+			
+			border-right: none;
+			border-left: none;
+			font-size: 14px;
+			font-family: "SimSun";
+			line-height: 62px;
+			height: 62px;
+			border-top: 1px solid #f5f5f5;
+			span{
+				width: 32%;
+				display: inline-block;
+				text-align: center;
+				height: 62px;
+			}
+			.text-style{
+				text-align: center;
+				font-size: 12px;
+				span{
 					color: #999;
 				}
-			}
-		}
-		tbody{
-
-			tr{
-
-				border-right: none;
-				border-right: none;
-				font-size: 14px;
-				font-family: "SimSun";
-				background: #fff;
-				.text-style{
-					text-align: center;
-					font-size: 12px;
-					span{
-						color: #999;
-					}
-					a.homework-wait-submit{
-						color: #ffbc3c;
-						cursor: pointer;
-					}
-				}
-				td{
-					border: none;
-				}
-				.studied-end{
-					color: @red;
-				}
-				.yellow-mark{
+				a.homework-wait-submit{
 					color: #ffbc3c;
-				}
-				.studied{
-					color: #37bc9b;
-				}
-				.static-gray{
-					color: #999999;
-				}
-				.static-red{
-					color: @red;
-				}
-				.wait-look{
-					color: #3bafda;
-				}
-				td.yellow-mark{
-					em{
-						display: inline-block;
-						width: 18px;
-						height: 18px;
-						margin-left: 5px;
-					}
-					.mark{
-						background: url("img/spam.png") no-repeat right center;
-						vertical-align: middle;
-
-					}
+					cursor: pointer;
 				}
 			}
-		}
-		tr:last-child{
-			border: none;
-			td{
-				border: none;
+			.studied-end{
+				color: @red;
+			}
+			.yellow-mark{
+				color: #ffbc3c;
+			}
+			.studied{
+				color: #37bc9b;
+			}
+			.static-gray{
+				color: #999999;
+			}
+			.static-red{
+				color: @red;
+			}
+			.wait-look{
+				color: #3bafda;
+			}
+			span.yellow-mark{
+				em{
+					display: inline-block;
+					width: 18px;
+					height: 18px;
+					margin-left: 5px;
+				}
+				.mark{
+					background: url("img/exclamation.png") no-repeat right center;
+					vertical-align: middle;
+
+				}
 			}
 		}
 	}
