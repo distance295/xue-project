@@ -2,7 +2,7 @@
 <link rel="import" href="../Layer/layer.UserHome.head.tpl?__inline">
 
 <!-- 学习中心区域 -->
-<div class="container top m20 wrongQuest">
+<div class="container top m20">
     <div class="row">
         <div class="col-md-10 wrap-body">
             <!-- *********************** 内容区域开始 *********************** -->
