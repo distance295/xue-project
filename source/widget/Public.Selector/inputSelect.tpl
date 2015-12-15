@@ -90,11 +90,3 @@
       </div>
       <button class="filter btn btn-primary" disabled="disabled" id="choice-btn-disable-remove">根据以上条件筛选</button>
     </div>
-<script>
-$('.choice-items-spe-input choice-item-input').off('click').on('click',function(){
-    if($(this).val()){
-        $('#choice-btn-disable-remove').removeAttr('disabled');    
-    }
-    
-})        
-</script>
