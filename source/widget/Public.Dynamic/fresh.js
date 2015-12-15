@@ -103,17 +103,19 @@ fresh.media = fresh.media || {};
         var smallRight_html = '<i class="fresh-examIcon $smallRightIcon$"></i>';
 
         //作题结果提示html
-        var examRezult_html = '';
+        var examRezult_html = '', 
+            _url = window.location.pathname,
+            _dynId = that.closest('.fresh-detail').data("id"),
+            _stuAnswer = $.trim(that.text());
 
-        var _url = window.location.pathname;
         $.ajax({
               url: fresh.path.url + 'answer.json',
               type : 'get',
               dataType : 'json',
               data : {
                   url : _url,
-                  dynId : that.closest('.feed_detail').data('id'),
-                  stuAnswer : $.trim(that.text())
+                  dynId : _dynId,
+                  stuAnswer : _stuAnswer
               },
               success : function(data){
                     if( data.sign != 1 ){
@@ -854,6 +856,7 @@ fresh.comment = fresh.comment || {};
         var _type = $(dom).data().sign;
         //需要传递的参数
         var _data = $(dom).data('params');
+        var _url = $(dom).data('url');
         
         //提示信息
         var tipInfo = null;
@@ -1153,7 +1156,7 @@ fresh.send = fresh.send || {};
      */
     fs.box = function(dom) {
         //虚拟弹出层显示新鲜事弹出层
-        var _sendBox = '<form class="fresh-send-box" method="POST" action="/Dynamics/addDynamic" enctype="multipart/form-data" name="formsubmitf">\
+        var _sendBox = '<form class="fresh-send-box" method="POST" action="/Dynamic/addDynamic" enctype="multipart/form-data" name="formsubmitf">\
                             <textarea class="fresh-send-textareaBox" name="content"></textarea>\
                             <div class="fresh-send-preview hiding" id="fresh-send-preview">\
                                  <div class="fresh-send-preview-imgvideo" id="fresh-send-preview-imgvideo">\
