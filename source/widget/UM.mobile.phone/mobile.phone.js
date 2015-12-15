@@ -246,6 +246,8 @@
            if (value.length > 0 && value.length < 6) {
                fCheck.setTips(fCheck.param.curPwdWarn,'密码不能少于6位字符');
                fCheck.param.cPass = 0;
+           }else{
+            fCheck.param.cPass = 1;
            }
     };
   }
@@ -335,11 +337,6 @@
             window.location.href= '/MyInfos/phoneManager';
           }else{
             fCheck.setTips('#tips-phonecode',result.msg);
-            if(fCheck.param.cPass == 1){
-              $('#curPwd').css('border','1px solid #68c04a');
-            }else{
-              $('#curPwd').css('border','1px solid #eaeaea');
-            } 
           }
         },
         error: function() {
