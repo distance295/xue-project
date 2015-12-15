@@ -153,7 +153,7 @@ $('body').off('click', '.avatar-roll a, .majar-items .prev, .majar-items .next')
                         $(dom).data({type:3});
                         break;
                         case 3:
-                        $(dom).html('<em>已关注</em><i class="fresh-course-line">|</i><a href="javascript:void(0)" class="fresh-add-cancel-btn">取消</a>');
+                        $(dom).html('<em>已关注</em>');
                         $(dom).data({type:2});
                         break;
                     }
@@ -178,11 +178,11 @@ $('body').off('click', '.avatar-roll a, .majar-items .prev, .majar-items .next')
         courses.attention.addCancel(that);
     })
 
-    //点击添加取消关注按钮
-    $('.course-list').off('click', '.fresh-course-attention .fresh-add-cancel-btn').on('click', '.fresh-course-attention .fresh-add-cancel-btn', function(){
-        var that = $(this).closest('.fresh-course-attention');
-        courses.attention.addCancel(that);
-    });
+    // //点击添加取消关注按钮
+    // $('.course-list').off('click', '.fresh-course-attention .fresh-add-cancel-btn').on('click', '.fresh-course-attention .fresh-add-cancel-btn', function(){
+    //     var that = $(this).closest('.fresh-course-attention');
+    //     courses.attention.addCancel(that);
+    // });
 
 //热门专题课区域增加链接
 var a = $('.course-list.hot-course-list');
