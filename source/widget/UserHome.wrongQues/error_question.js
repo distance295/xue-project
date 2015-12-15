@@ -16,22 +16,22 @@ select.opt = {
 };
 
 /*展现 知识点+年级+学科 选择框*/
-$(select.opt.selector).on('click', function () {
-    var that = this;
-        /* 选择框已经打开处理分支 */
-    if ($(that).hasClass('showSelect')) {
-    	$(that).children('a').html('显示筛选');
-        $(that).children('i').removeClass('fa-angle-up fa-chevron-up').addClass('fa-angle-down fa-chevron-down');
-        $(that).removeClass('showSelect');
-        $(select.opt.choiceHide).slideUp();
-    } else {
-        /* 选择框未打开处理分支 */
-    	$(that).children('a').html('收起筛选');
-        $(that).children('i').removeClass('fa-angle-down fa-chevron-down').addClass('fa-angle-up fa-chevron-up');
-        $(that).addClass('showSelect');
-        $(select.opt.choiceHide).slideDown();
-    }
-});
+//$(select.opt.selector).on('click', function () {
+//    var that = this;
+//        /* 选择框已经打开处理分支 */
+//    if ($(that).hasClass('showSelect')) {
+//    	$(that).children('a').html('显示筛选');
+//        $(that).children('i').removeClass('fa-angle-up fa-chevron-up').addClass('fa-angle-down fa-chevron-down');
+//        $(that).removeClass('showSelect');
+//        $(select.opt.choiceHide).slideUp();
+//    } else {
+//        /* 选择框未打开处理分支 */
+//    	$(that).children('a').html('收起筛选');
+//        $(that).children('i').removeClass('fa-angle-down fa-chevron-down').addClass('fa-angle-up fa-chevron-up');
+//        $(that).addClass('showSelect');
+//        $(select.opt.choiceHide).slideDown();
+//    }
+//});
 
 
 /* 错题本答案交互 */
