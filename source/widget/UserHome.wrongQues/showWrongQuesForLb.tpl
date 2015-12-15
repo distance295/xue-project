@@ -52,7 +52,8 @@
     </div>
     <div class="que-answer">
         <!--用户答案为字母或者数字的情况-->
-        <p class="que-tips que-answer-head">你的答案：<span class="cusAns">A</span>正确答案：<span class="corAns">B</span></p>
+        <p class="que-tips que-answer-head">你的答案：<span class="cusAns">A</span><span class="cusAns">B</span><span class="cusAns">C</span></p>
+        <p class="que-tips que-answer-head">正确答案：<span class="corAns">B</span><span class="corAns">D</span></p>
         <div class="que-tips que-answer-head img-answer">解析：</div>
         <img class="stuAns  img-answer-lb" src="img/answer-img.png" data-url="question1.jpg"/>
     </div>
