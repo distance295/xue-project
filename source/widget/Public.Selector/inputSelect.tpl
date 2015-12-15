@@ -77,14 +77,16 @@
                 <label class="radio-inline"><input type="radio" value="" name="choice-point-name" class="choice-item-input" />前端工程</label>
               
             </dd>
-            <dt class="choice-more col-xs-3 col-sm-2 col-md-2  clearfix">
-                <div class="choice-more-download pull-right">
+            <dt class="choice-more col-xs-3 col-sm-2 col-md-2 clearfix">
+<!--
+                <div class="choice-more-download pull-right  hide">
                     <a>更多知识点</a>
                     <i class="fa fa-angle-down fa-chevron-down que-body-arrow"></i>
                 </div>
+-->
                 <!--<div class="chocie-point-download left">下载复习笔记</div>-->
             </dt>
         </dl> 
       </div>
-      <button class="filter btn btn-primary">根据以上条件筛选</button>
+      <button class="filter btn btn-primary" disabled="disabled" id="choice-btn-disable-remove">根据以上条件筛选</button>
     </div>

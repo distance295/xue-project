@@ -28,7 +28,9 @@
 	<div class="homework-image-box" id="homework-Image-box-1" data-zoom="true">
 		<div class="homework-image-area">
 			<div class="homework-Thumbnails-box pull-left">
-				<div class="homework-page-btn"><i class="homework-prev_btn homework-prev-active"></i></div>
+				<div class="homework-page-btn">
+					<a href="javascript:void(0)" class="homework-prev_btn homework-prev-active"></a>
+				</div>
 				<div class="homework-Thumbnails-img-list" id="Thumbnails">
 					<ul>
 						<li>
@@ -65,16 +67,18 @@
 						<li><img src="img/small1.png" class="homework-Feedback-small-img"/><i></i></li>
 					</ul>
 			    </div>
-				<div class="homework-page-btn"><i class="homework-next-btn homework-next-active"></i></div>
+				<div class="homework-page-btn">
+					<a href="javascript:void(0)" class="homework-next-btn homework-next-active"></a>
+					</div>
 			</div>
 			<div class="homework-bigImg-box">
 				<div class="homework-rightMeun pull-right">
 					<ul>
-						<li><i class="homework-audio"></i></li>
-						<li><i class="homework-leftRotate-btn"></i></li>
-						<li><i class="homework-rightRotate-btn"></i></li>
-						<li><i class="homework-zoom-btn"></i></li>
-						<li><i class="homework-zoomout-btn"></i></li>
+						<!-- <li><a href="javascript:void(0)" class="homework-audio"></a></li> -->
+						<li><a href="javascript:void(0)" class="homework-leftRotate-btn"></a></li>
+						<li><a href="javascript:void(0)" class="homework-rightRotate-btn"></a></li>
+						<li><a href="javascript:void(0)" class="homework-zoom-btn"></a></li>
+						<li><a href="javascript:void(0)" class="homework-zoomout-btn"></a></li>
 					</ul>
 				</div>
 				<div id="homework-ImageTransform-box-1" class="homework-ImageTransform">
@@ -92,7 +96,7 @@
 						<div class="homework-Feedback-cont">
 							<div class="homework-Feedback-header pull-left">
 								<div class="homework-dialog">
-									<p class="homework-tipsInfo">完成作业奖励<em>15</em>金币和<em>150</em>学力。</p>
+									<p class="homework-tipsInfo">完成作业奖励<em>150</em>学力。</p>
 									<p class="homework-tipsInfo">辅导老师额外奖励你<em>150</em>个金币！</p>
 								</div>
 								<div class="homework-scoreArea">
@@ -172,7 +176,9 @@
 	<div class="homework-image-box" id="homework-Image-box-2" data-zoom="false">
 		<div class="homework-image-area">
 			<div class="homework-Thumbnails-box pull-left">
-				<div class="homework-page-btn"><i class="homework-prev_btn homework-prev-active"></i></div>
+				<div class="homework-page-btn">
+					<a href="javascript:void(0)" class="homework-prev_btn homework-prev-active"></a>
+				</div>
 				<div class="homework-Thumbnails-img-list">
 					<ul>
 						<li>
@@ -209,16 +215,18 @@
 						<li><img src="img/small1.png" class="homework-Feedback-small-img"/><i></i></li>
 					</ul>
 			    </div>
-				<div class="homework-page-btn"><i class="homework-next-btn homework-next-active"></i></div>
+				<div class="homework-page-btn">
+					<a href="javascript:void(0)" class="homework-next-btn homework-next-active"></a>
+				</div>
 			</div>
 			<div class="homework-bigImg-box">
 				<div class="homework-rightMeun pull-right">
 					<ul>
-						<li><i class="homework-audio"></i></li>
-						<li><i class="homework-leftRotate-btn"></i></li>
-						<li><i class="homework-rightRotate-btn"></i></li>
-						<li><i class="homework-zoom-btn"></i></li>
-						<li><i class="homework-zoomout-btn"></i></li>
+						<!-- <li><a href="javascript:void(0)" class="homework-audio"></a></li> -->
+						<li><a href="javascript:void(0)" class="homework-leftRotate-btn"></a></li>
+						<li><a href="javascript:void(0)" class="homework-rightRotate-btn"></a></li>
+						<li><a href="javascript:void(0)" class="homework-zoom-btn"></a></li>
+						<li><a href="javascript:void(0)" class="homework-zoomout-btn"></a></li>
 					</ul>
 				</div>
 				<div id="homework-ImageTransform-box-2" class="homework-ImageTransform">
@@ -349,8 +357,8 @@
 					zoomout:".homework-zoomout-btn",//缩小按钮
 					leftRotate:".homework-leftRotate-btn",//向左旋转按钮
 					rightRotate:".homework-rightRotate-btn",//向右旋转按钮
-					min_picnum:4,//小图显示个数
-					isZoom:_homeZoom//是否存在旋转缩放
+					min_picnum:4,//小图默认显示个数
+					isZoom:_homeZoom//是否存在旋转缩放 false不存在，true存在
 				});
 
             })

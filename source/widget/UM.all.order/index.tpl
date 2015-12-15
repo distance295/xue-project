@@ -33,13 +33,42 @@
                 <li>
                     <div class="ao-subtitle-left">
                         <div class="order-teacher ot-first">
-                            <img src="img/order-teacher.png" alt="">
+                            <div class=" teacher-main teacher-main-border majar-items">
+                                <ul class="avatar-items">
+                                    <li>
+                                        <a class="avatar-photo">
+                                            <img src="img/order-teacher.png">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="avatar-photo">
+                                            <img src="img/order-teacher.png">
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="avatar-roll">
+                                    <a href="javascript:void(0);" class="prev none">
+                                        <em class="icon-chevron-left">左</em>
+                                    </a>
+                                    <a href="javascript:void(0);" class="next">
+                                        <em class="icon-chevron-right">右</em>
+                                    </a>
+                                </div>
+                            </div>
                             <em>语文</em>
                             <span>[课程升级] 2015学年五升六年级奥数年卡（竞赛班）</span>
                             <p>顾斐老师<br/>赠品：奥数思维训练汇编六年级</p>
                         </div>
                         <div class="order-teacher">
-                            <img src="img/order-teacher.png" alt="">
+                            <div class=" teacher-main teacher-main-border majar-items">
+                                <ul class="avatar-items">
+                                    <li>
+                                        <a class="avatar-photo">
+                                            <img src="img/order-teacher.png">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                             <em>语文</em>
                             <span>[课程升级] 2015学年五升六年级奥数年卡（竞赛班）</span>
                             <p>顾斐老师</p>
@@ -68,7 +97,15 @@
                 <li>
                     <div class="ao-subtitle-left">
                         <div class="order-teacher">
-                            <img src="img/order-teacher.png" alt="">
+                            <div class=" teacher-main teacher-main-border majar-items">
+                                <ul class="avatar-items">
+                                    <li>
+                                        <a class="avatar-photo">
+                                            <img src="img/order-teacher.png">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                             <em>语文</em>
                             <span>[课程升级] 2015学年五升六年级奥数年卡（竞赛班）</span>
                             <p>顾斐老师</p>
@@ -93,7 +130,15 @@
                 <li>
                     <div class="ao-subtitle-left">
                         <div class="order-teacher">
-                            <img src="img/order-teacher.png" alt="">
+                            <div class=" teacher-main teacher-main-border majar-items">
+                                <ul class="avatar-items">
+                                    <li>
+                                        <a class="avatar-photo">
+                                            <img src="img/order-teacher.png">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                             <em>语文</em>
                             <span>[课程升级] 2015学年五升六年级奥数年卡（竞赛班）</span>
                             <p>顾斐老师</p>
@@ -121,7 +166,15 @@
                 <li>
                     <div class="ao-subtitle-left">
                         <div class="order-teacher">
-                            <img src="img/order-teacher.png" alt="">
+                            <div class=" teacher-main teacher-main-border majar-items">
+                                <ul class="avatar-items">
+                                    <li>
+                                        <a class="avatar-photo">
+                                            <img src="img/order-teacher.png">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                             <em>语文</em>
                             <span>[课程升级] 2015学年五升六年级奥数年卡（竞赛班）</span>
                             <p>顾斐老师</p>
@@ -149,7 +202,15 @@
                 <li>
                     <div class="ao-subtitle-left">
                         <div class="order-teacher">
-                            <img src="img/order-teacher.png" alt="">
+                            <div class=" teacher-main teacher-main-border majar-items">
+                                <ul class="avatar-items">
+                                    <li>
+                                        <a class="avatar-photo">
+                                            <img src="img/order-teacher.png">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                             <em>语文</em>
                             <span>[课程升级] 2015学年五升六年级奥数年卡（竞赛班）</span>
                             <p>顾斐老师</p>
@@ -177,7 +238,15 @@
                 <li>
                     <div class="ao-subtitle-left">
                         <div class="order-teacher">
-                            <img src="img/order-teacher.png" alt="">
+                            <div class=" teacher-main teacher-main-border majar-items">
+                                <ul class="avatar-items">
+                                    <li>
+                                        <a class="avatar-photo">
+                                            <img src="img/order-teacher.png">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                             <em>语文</em>
                             <span>[课程升级] 2015学年五升六年级奥数年卡（竞赛班）</span>
                             <p>顾斐老师</p>
@@ -202,7 +271,15 @@
                 <li>
                     <div class="ao-subtitle-left">
                         <div class="order-teacher">
-                            <img src="img/order-teacher.png" alt="">
+                            <div class=" teacher-main teacher-main-border majar-items">
+                                <ul class="avatar-items">
+                                    <li>
+                                        <a class="avatar-photo">
+                                            <img src="img/order-teacher.png">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                             <em>语文</em>
                             <span>[课程升级] 2015学年五升六年级奥数年卡（竞赛班）</span>
                             <p>顾斐老师</p>

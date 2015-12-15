@@ -4,6 +4,7 @@
     @require xue.sidescroll.min.js
     @require study-course.js
 	@require study-course.less
+	@require ../Module.Modal/modal.js
 -->
 <h2 class="content-study-title ui-margin">
 	数学选修1-1同步强化班 <strong>(直播强化班)</strong>
@@ -57,7 +58,7 @@
 
 					<li class="last">
 						<p class="icon-live icon-tests">
-							<a onclick="chapterTestStart('9864-37284-13228','000526542478d1efe5355ae01880c472')" href="###">本讲测试</a>
+							<a onclick="study.chapterTestStart()" href="###">本讲测试</a>
 						</p>
 					</li>
 					<!--************************讲测试判断结束*****************************-->

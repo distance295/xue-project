@@ -613,6 +613,7 @@
                display: inline;
                padding-right: 4px;
                .fresh-v{
+                    float: left;
                     width: 18px;
                     height: 14px;
                     margin: 8px 4px 0 4px;
@@ -643,6 +644,12 @@
             overflow:hidden;
             line-height: 40px;
             text-align: right;
+            a{
+                color: @blue-color;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
         }
         .fresh-comment-line{
             height: 30px;
@@ -650,7 +657,6 @@
             margin: 8px 0;
             text-align: center;
             .fresh-line-tip {
-              background:#fff;
               color: #999;
               height: 60px;
               display: inline-block;
