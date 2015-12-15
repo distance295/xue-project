@@ -82,7 +82,7 @@ function headsSave(){
 function getFullPath(obj){
     if(obj){
         if (window.navigator.userAgent.indexOf("MSIE")>=1){
-            var imgs = $('#preview, #hp-small, #hp-middle,#hp-big');
+            var imgs = $('#preview, #hp-small, #hp-middle, #hp-big');
             try{
                 imgs.each(function(){
                     var that = this,
@@ -162,9 +162,9 @@ function getFullPath(obj){
         }
 
         function isIE(ver){
-                var b = document.createElement('b');
-                b.innerHTML = '<!--[if lte IE ' + ver + ']><i></i><![endif]-->';
-                return b.getElementsByTagName('i').length === 1;
-            }
+            var b = document.createElement('b');
+            b.innerHTML = '<!--[if lte IE ' + ver + ']><i></i><![endif]-->';
+            return b.getElementsByTagName('i').length === 1;
+        }
 }   
 
