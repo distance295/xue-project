@@ -23,6 +23,7 @@ function delAddress(id) {
         success: function(result) {
             if (result.sign == 1) {
                 $('.shipadd_list li#' + _data).remove();
+                $('#numberAddress').text(result.rows);
             } else {
                 alert(result.msg);
             }
@@ -104,10 +105,12 @@ function saveNewAddress(inputs) {
             tp = tp.replace(/\$country_text\$/g, data.country_text);
             var _addid = $('#addid_' + data.id).parent();
             if (result.type === 1) {
-                $('<li id="' + _id + '">' + tp + '</li>').prependTo('ul.shipadd_list');
+                $('<li id="' + _id + '">' + tp + '</li>').prependTo('ul#shopAdderTo');
+                $('#numberAddress').text(result.rows);
             }
             if (result.type === 2) {
                 _addid.html(tp);
+                $('#numberAddress').text(result.rows);
             }
             if (result.default == 1) {
                 _addid.html(tp);
