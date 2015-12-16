@@ -4,7 +4,7 @@
     @require birthday.js
 -->
 <div class="bi-content">
-    <form action="" name="information" method="post" onsubmit="return checkform()">
+    <form action="" name="information" method="post" onsubmit="return inforCheckform()">
         <div class="bi-left">
             <div class="message-error">
                 <span></span>

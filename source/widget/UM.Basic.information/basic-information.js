@@ -91,7 +91,13 @@ $.fn.nicknameajax = function(){
 }
 
 /* 日期验证 */
-
+$.fn.date = function () {
+    if ($YearSelector.val() == 0 && $MonthSelector.val() == 0 && $DaySelector.val() == 0) {
+        return true;
+    }else{
+       fCheck.setTips(".date-warning",'日期格式不正确'); 
+    };
+}
 /* 学校格式验证 */
 $.fn.school = function(){
     var box = $(boxs.school),
@@ -115,10 +121,11 @@ $('.school').on('blur',function(){
     $.fn.school();
 });
 /* 点击提交按钮验证 */
-function  checkform () {
-    $.fn.school();
+function inforCheckform () {
     $.fn.nickname();
-    if ($('.nickname-warning').is(":empty") && $('.school-warning').is(":empty")) {
+    $.fn.date;
+    $.fn.school();
+    if ($('.nickname-warning').is(":empty") && $('.school-warning').is(":empty") && $('.date-warning').is(":empty")) {
         return true;
     }else{
         return false;
