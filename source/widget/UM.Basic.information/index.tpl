@@ -1,7 +1,7 @@
 <!--
     @require basic-information.less
-    @require basic-information.js
     @require birthday.js
+    @require basic-information.js
 -->
 <div class="bi-content">
     <form action="" name="information" method="post" onsubmit="return inforCheckform()">
