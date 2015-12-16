@@ -5,7 +5,7 @@ var xue = xue || {};
 
 xue.ajaxCheck.html = function( str ){
     if(!str){ 
-        xue.alert('数据读取错误……');
+        //xue.alert('数据读取错误……');
         return false; 
     }
     var str = $.trim(str);
@@ -16,22 +16,19 @@ xue.ajaxCheck.html = function( str ){
         return false;
     }else{
         // if(str.substr(0,6) == 'error:'){
-            xue.alert(str);
             return false;
         // }
-        // xue.alert(str);
         // return str;
     }
 };
 
 xue.ajaxCheck.json = function( d ){
     if(!d){ 
-        xue.alert('数据读取错误……');
+        //xue.alert('数据读取错误……');
         return false; 
     }
     var tp = d.sign, msg = d.msg;
     if(tp === 0){
-        xue.alert(msg);
         return false;
     }
     if(tp === 2){
