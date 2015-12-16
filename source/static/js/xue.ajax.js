@@ -45,7 +45,7 @@ xue.ajaxCheck.json = function( d ){
 loadingHtml =  function(){document.write("<div id='loading' style=\"position:absolute;top:0;left:0;width:100%;height:100%;background:#000;opacity:0.1;filter:alpha(opacity=10);\"><div style=\"position:absolute;left:50%;top:50%;\"><i class='fa fa-spinner fa-spin'></i></div></div>");} 
 function beforeSendfn(){  
    $("body").append(loadingHtml);  
-},
+}
 function completefn(){  
    $("#loading").remove();
 }  
