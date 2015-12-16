@@ -3,6 +3,10 @@
     @require mobile.phone.js
 -->
 <div class="form-check" id="form-register" action="" method="POST">
+    <div class="message-error">
+        <span></span>
+    </div>
+    
     <div>
         <div class="phone-k">
             <p>手机号码：</p>

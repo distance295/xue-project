@@ -47,13 +47,10 @@ var boxs = {
     nickname: '.nickname',
     school:'.school'
 }
-var oldVal = "";
 
 $.fn.nickname = function(){
     var box = $(boxs.nickname),
     val = box.val();
-    var text = box.next('.nickname-warning'),
-    block = text.addClass('success');
     if (val == '') {
         fCheck.setTips(".nickname-warning",'请输入昵称');
     }else {
@@ -62,7 +59,6 @@ $.fn.nickname = function(){
             $.fn.nicknameajax();
         }else{
             fCheck.setTips(".nickname-warning",'只能输入数字、汉字和字母');
-            return false;
         }
     }
 };
@@ -82,21 +78,19 @@ $.fn.nicknameajax = function(){
             success  : function(result){
                 if(result.sign == false){
                     fCheck.setTips(".nickname-warning",'昵称与其他用户重复，请重新设置');
-                    return false;
                 } else {
                     fCheck.clearTips(".nickname-warning");
                     fCheck.bordercss('.nickname');
-                    return true;
+                    $(box).data('nickname',val);
                 }
-            },
-            error: function(){
-
             }
         });
     }else{
         return false;
     }
 }
+
+/* 日期验证 */
 
 /* 学校格式验证 */
 $.fn.school = function(){
@@ -114,7 +108,6 @@ $.fn.school = function(){
         }else{
             fCheck.setTips(".school-warning",'只能输入数字、汉字和字母');
             $('.school').css('border','1px solid #eaeaea');
-            return false;
         }
     }
 };
@@ -122,11 +115,15 @@ $('.school').on('blur',function(){
     $.fn.school();
 });
 /* 点击提交按钮验证 */
-$(function() {
-    $(".btn-submit").click(function() {
-       $.fn.nickname();
-    })
-})
+function  checkform () {
+    $.fn.school();
+    $.fn.nickname();
+    if ($('.nickname-warning').is(":empty") && $('.school-warning').is(":empty")) {
+        return true;
+    }else{
+        return false;
+    };
+}
 
 var messageError = $(".message-error span").is(":empty");
 if (messageError == '0') {
