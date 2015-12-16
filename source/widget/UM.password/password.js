@@ -8,6 +8,7 @@
         'display':'none'
       }).html(null);
     };
+
     /* 提示信息的css样式 */
     fCheck.setTips = function(select, tips){
       $(select).css({
@@ -110,17 +111,25 @@
     labelfn("#newPwd",".newPwd-tip",".newPwd-warning");
     labelfn("#confirmPwd",".confirmPwd-tip",".confirmPwd-warning");
 
+    //设置密码错误赋值
+    var cPassword = 0,
+        nPassword = 0,
+        conPassword = 0;
     /* 当前密码设置 */
     curPwdfn = function () {
       var curpasswd = $("#curPwd").val();
       if (curpasswd == '') {
           fCheck.setTips(".curPwd-warning",'请输入当前密码');
           $("#curPwd").css('border','1px solid #eaeaea');
+          cPassword = 0;
       }else{
           if (curpasswd.length > 0 && curpasswd.length < 6) {
               fCheck.setTips(".curPwd-warning",'密码不能少于6位字符');
               $("#curPwd").css('border','1px solid #eaeaea');
-          }   
+              cPassword = 0;
+          }else{
+            cPassword = 1;
+          }  
       }
     }
     $("#curPwd").on('focus', function() {
@@ -137,21 +146,23 @@
       if (newpasswd == '') {
           fCheck.setTips(".newPwd-warning",'请设置密码');
           $("#newPwd").css('border','1px solid #eaeaea');
-          return false;
+          nPassword = 0;
       }else{
           if (newpasswd.length < 6) {
               fCheck.setTips(".newPwd-warning",'密码不能少于6位字符');
               $("#newPwd").css('border','1px solid #eaeaea');
-              return false;
+              nPassword = 0;
           }else{
             if (newpasswd == curpasswd) {
                 $(".pass-strong").hide();
                 fCheck.setTips(".newPwd-warning",'新密码与当前密码相同');
                 $("#newPwd").css('border','1px solid #eaeaea');
-                return false;
+                nPassword = 0;
+            }else{
+              fCheck.bordercss('#newPwd');
+              nPassword = 1;
             }
           }
-          fCheck.bordercss('#newPwd');
       }
     }
     $("#newPwd").on('focus', function() {
@@ -168,14 +179,16 @@
       if (confirmpasswd == '') {
           fCheck.setTips(".confirmPwd-warning",'请输入确认密码');
           $("#confirmPwd").css('border','1px solid #eaeaea');
-          return false;
+          conPassword = 0;
       }else{
           if (newpasswd != confirmpasswd) {
               fCheck.setTips(".confirmPwd-warning",'新密码与确认密码不一致');
               $("#confirmPwd").css('border','1px solid #eaeaea');
-              return false;
+              conPassword = 0;
+          }else{
+            fCheck.bordercss('#confirmPwd');
+            conPassword = 1;
           }
-          fCheck.bordercss('#confirmPwd');
       }
     }
     $("#confirmPwd").on('focus', function() {
@@ -185,11 +198,16 @@
        confirmPwdfn(); 
     });
 
-    /* 点击button报错 */
+    /* 点击提交按钮检验错误信息 */
     passwordError = function () {
       curPwdfn();
       newpasswdfn();
       confirmPwdfn();
+      if( cPassword && nPassword && conPassword ){
+        return false;
+      }else{
+        return true;
+      }
     }
 
     /* 密码验证流程 */
@@ -198,8 +216,10 @@
           var curpasswd = $("#curPwd").val();
           var newpasswd = $("#newPwd").val();
           var confirmpasswd = $("#confirmPwd").val();
+          var Error = passwordError();
+          fCheck.clearTips(".confirmPwd-warning , .newPwd-warning , .curPwd-warning");
           passwordError();
-          if (!passwordError) {
+          if (!Error) {
             /* ajax发送请求 */
             $.ajax({
                 type: "POST",
