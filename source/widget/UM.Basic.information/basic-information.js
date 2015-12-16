@@ -116,7 +116,7 @@ $('.school').on('blur',function(){
 function inforCheckform () {
     $.fn.nickname();
     $.fn.school();
-    if ($('.nickname-warning').is(":empty") && $('.school-warning').is(":empty") && $('.date-warning').is(":empty")) {
+    if ($('.nickname-warning').is(":empty") && $('.school-warning').is(":empty")) {
         return true;
     }else{
         return false;

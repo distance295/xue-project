@@ -3,7 +3,7 @@
     @require mobile.phone.js
 -->
 <div class="form-check" id="form-register" action="" method="POST">
-    <div class="message-error">
+    <div class="phone-error">
         <span></span>
     </div>
     
