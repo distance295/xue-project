@@ -73,9 +73,9 @@ function headsSave(){
         return false;
     }
         confirm('确定要消耗3000金币兑换自定义头像吗？',function(){
-        $("#btn_submit").addClass('submit');
-        $(".hp-content").attr('action','/MyHeadImg/setHeadImage/');
-        $(".hp-content").submit(); 
+            $("#btn_submit").addClass('submit');
+            $(".hp-content").attr('action','/MyHeadImg/setHeadImage/');
+            $(".hp-content").submit(); 
         })
 }
 
