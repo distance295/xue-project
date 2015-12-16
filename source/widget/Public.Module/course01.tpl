@@ -12,7 +12,7 @@
         <div class="ui-avatar">
             <div class="avatar-photo">
              <ul class="avatar-items">
-                <li data-params="userId=292" class="ui-userinfo" data-id="292">
+                <li class="ui-userinfo" data-params="userId=292"  data-id="292">
                     <a target="_blank" class="userpic" href="http://www.xueersi.com/t/yangyajing/">
                         <img alt="" src="http://r03.xesimg.com/teacher/2014/02/28/13935689945281.jpg">
                     </a>
@@ -25,7 +25,7 @@
     </div>
     <div class="course-detail">
         <p class="course-teacher">
-            <a target="_blank"  href="###" class="ui-username">赵紫涵</a>
+            <a target="_blank"  href="###" class="ui-username ui-userinfo" data-params="userId=292"  data-id="292">赵紫涵</a>
             <i title="学而思网校认证老师" class="course-icon icon-yverify"></i>
             <span class="teacher-label">数学老师</span>
         </p>
