@@ -13,7 +13,7 @@
     <div class="que-point">
         <p class="que-point-know-form">
             <span class="que-tips">知识点：</span>
-            <span class="knowledge">写作类-高考高分作文赏析</span><span class="knowledge">代数法</span><span class="knowledge">三角函数</span>
+            <span class="knowledge  selected">写作类-高考高分作文赏析</span><span class="knowledge">代数法</span><span class="knowledge">三角函数</span>
         </p>
     </div>
     <div class="que-body clearfix">
@@ -79,7 +79,7 @@
     <div class="que-point">
         <p class="que-point-know-form">
             <span class="que-tips">知识点：</span>
-            <span class="knowledge">写作类-高考高分作文赏析</span><span class="knowledge">代数法</span><span class="knowledge">三角函数</span>
+            <span class="knowledge  selected">写作类-高考高分作文赏析</span><span class="knowledge">代数法</span><span class="knowledge">三角函数</span>
         </p>
     </div>
     <div class="que-body clearfix">

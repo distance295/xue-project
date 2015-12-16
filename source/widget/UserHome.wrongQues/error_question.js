@@ -16,7 +16,7 @@ select.opt = {
 };
 
 /*展现 知识点+年级+学科 选择框*/
-$(select.opt.selector).on('click', function () {
+$('body').on('click', select.opt.selector, function () {
     var that = this;
         /* 选择框已经打开处理分支 */
     if ($(that).hasClass('showSelect')) {
@@ -35,7 +35,7 @@ $(select.opt.selector).on('click', function () {
 
 
 /* 错题本答案交互 */
-$(select.opt.answerShow).on('click', function () {
+$('body').on('click', select.opt.answerShow, function () {
     var that   = this,
         answer = $(that).parent('.que-body').next('.que-answer');
         /* 答案未展开处理分支 */
@@ -54,7 +54,7 @@ $(select.opt.answerShow).on('click', function () {
 });
 
 /* 错题本图片答案交互 */
-$(select.opt.imgAnswer).on('click', function () {
+$('body').on('click', select.opt.imgAnswer, function () {
     var that= $(this),
         /* 图片路径 */
         urlSite = that.data('url')||that.attr('data-url'),
