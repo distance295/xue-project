@@ -84,7 +84,7 @@
 									height: 41px;line-height: 41px;border-bottom: 1px solid #e9e9e9;background: url(img/tingkeyebg.jpg) repeat-y;padding-left: 20px;padding-right: 10px; font-size: 14px;overflow: hidden;
 								}
 				                  li {
-				                  	 padding-left: 42px;background: url(img/scroll_li.jpg) 28px 20px no-repeat;
+				                  	 padding-left: 42px;background: url(img/scroll_li.jpg) 28px 20px no-repeat;position: relative;
 				                    p.icon-live {
 				                       height: 43px;line-height: 43px;background: url(img/icon2_03.png) 1px 14px no-repeat;padding-left: 20px;margin:0;
 				                  	 	a {
@@ -94,6 +94,9 @@
 				                  	 		}
 				                  	 		&:hover {color: #3bafda;}
 				                  	 	}
+                                        span.errorExplain{
+                                           display: block;width: 60px;color: red;cursor: pointer;position: absolute;left:120px;top:0;z-index: 1;
+                                        }
 				                  	 	&.icon-tests {
 				                  	 		background: url(img/copy.png) 1px 14px no-repeat;
 				                  	 	}
@@ -210,8 +213,34 @@
 		    }
 		}
 		// 看点end
-
-
+//浮边的签到和问老师
+.sideSingInItems {
+    width: 60px;
+    height: 121px;
+    overflow: hidden;
+    position: fixed;
+    right: 1px;
+    top: 50%;
+    ul {
+        overflow: hidden;
+        li {
+            overflow: hidden;
+            a {
+                display: block;
+                width: 60px;
+                height: 60px;
+            }
+            &.singIn {
+                height: 60px;
+                background: url(img/side_1.png) 0 0 no-repeat;
+            }
+            &.askTeacher {
+                height: 61px;
+                background: url(img/side_1.png) 0 -60px no-repeat;
+            }
+        }
+    }
+}
 
 
 /* 讲测评css start */
