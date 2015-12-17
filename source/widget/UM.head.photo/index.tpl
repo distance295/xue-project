@@ -17,7 +17,7 @@
             <span id="btn_submit" class="btn btn-info hpr-btn">保存</span>
         </div>
         <div class="hp-local">
-            <form action="" method="POST" enctype="multipart/form-data" id="headsImg">
+            <form action="" method="POST" enctype="multipart/form-data" id="headsImg" onsubmit="return headsSave();">
                 <div class="img-error">
                     <span>123</span>
                 </div>
@@ -32,7 +32,7 @@
                     <em>每次上传消耗3000金币</em>
                     <span>仅支持JPG、GIF、PNG且文件小于2M，照片尺寸请大于200×200</span>
                 </div>
-                <button id="btn_submit" class="btn btn-info hpl-btn" onclick="headsSave();">保存</button>
+                <button id="btn_submit" class="btn btn-info hpl-btn">保存</button>
             </form>
         </div>
     </div>
