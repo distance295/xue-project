@@ -20,14 +20,41 @@
 <script>
 $(function () {
   $('[data-toggle="popover"]').popover({
-        content: 1111
-  });
+    content: 1111
+});
 })
-    var PAGE_CONFIG = {
-        ID: 'Courses',
-        MODULE: 'UserHome',
-        TITLE: '随堂测-学习中心',
-    };
+var PAGE_CONFIG = {
+    ID: 'Courses',
+    MODULE: 'UserHome',
+    TITLE: '随堂测-学习中心',
+};
+$('.course-table .text-style a.btn-primary').on('click', function(){
+    var userID = $(this).data('url'),
+        courseID = $(this).data('courseid'),
+        stuID = $(this).data('stu'),
+        workID = $(this).data('workid'),
+        _url = $(this).data('url');
+
+    $.ajax({
+        type: "post",
+        url: _url,
+        dataType: 'json',
+        data: {
+            userID : userID,
+            courseID : courseID,
+            stuID : stuID,
+            workID : workID
+        },
+        success: function() {
+            if(sign == 1){
+                windows.location.href = _url;
+            }
+        },
+        error: function() {
+            alert('数据读取错误..');
+        }
+    });
+});
 
 </script>
 
