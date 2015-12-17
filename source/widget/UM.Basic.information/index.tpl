@@ -1,10 +1,10 @@
 <!--
     @require basic-information.less
-    @require basic-information.js
     @require birthday.js
+    @require basic-information.js
 -->
 <div class="bi-content">
-    <form action="" name="">
+    <form action="" name="information" method="post" onsubmit="return inforCheckform()">
         <div class="bi-left">
             <div class="message-error">
                 <span></span>
@@ -15,7 +15,7 @@
             </div>
             <div>
                 <label for="">昵称：</label>
-                <input class="nickname" type="text" maxlength="18" data-nickname="" autocomplete="off"/>
+                <input class="nickname" type="text" name="nickname" maxlength="18" data-nickname="" autocomplete="off"/>
                 <div class="error-box">
                     <span class="nickname-warning error"></span>
                 </div>
@@ -46,6 +46,9 @@
                     <select id="day" name="day" rel="24" >
                     </select>
                     <i>日</i>
+                </div>
+                <div class="error-box">
+                    <span class="date-warning error"></span>
                 </div>
             </div>
             <div>

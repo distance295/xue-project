@@ -47,7 +47,7 @@
                   <em>(<i>125</i>)</em>
               </span>
                <span class="fresh-right-btn">
-                  <a title="删除" href="javascript:void(0);" class="fresh-del-msg" data-params="urlStr=409227-9533&amp;url=http://www.xueersi.com/LearningCenter/" data-codetype="1" data-url="/Homes/ajaxDelDynamic" data-sign="1">删除</a>
+                  <a href="javascript:void(0);" class="fresh-del-msg" data-params="urlStr=409227-9533&amp;url=http://www.xueersi.com/LearningCenter/" data-codetype="1" data-url="/Homes/ajaxDelDynamic" data-sign="1">删除</a>
               </span>
           </div>
        </div>
