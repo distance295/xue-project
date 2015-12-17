@@ -133,7 +133,7 @@
 			</div>
 		</div>
 		<!--查看评论区域开始-->
-		<div class="homework-comment-box">
+		<!-- <div class="homework-comment-box">
 			<div class="homework-star pull-left">
 				<span class="pull-left">评价作业批改</span>
 				<div class="homework-star-area pull-left">
@@ -149,7 +149,7 @@
 			</div>
 			<p class="homework-comment">感谢老师的细心批改！感谢老师的细心批改！</p>
 			<p class="homework-date">2015-08-09</p>
-		</div>
+		</div> -->
 		<!--查看评论区域结束-->
 		<!--可以评论区域开始-->
 		<div class="homework-comment-box">
