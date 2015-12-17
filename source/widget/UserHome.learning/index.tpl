@@ -58,7 +58,7 @@
 
 					<li class="last">
 						<p class="icon-live icon-tests">
-							<a onclick="chapterTestStart()" href="###" class="icon-sign">本讲测试</a>
+                            <a onclick="chapterTestStart()" href="###" class="icon-sign">本讲测试</a>
 						</p>
 					</li>
 					<!--************************讲测试判断结束*****************************-->
