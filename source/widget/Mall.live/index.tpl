@@ -75,7 +75,7 @@
                         </div>
                     </div>
                     <div class="live-enter-box">
-                        <span class="live-enter live-blue">已结束,观看回放</span>
+                        <span class="live-enter live-grey">已结束,观看回放</span>
                     </div>
                 </div>
                 <div class="live-card">
