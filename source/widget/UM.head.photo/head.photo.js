@@ -69,14 +69,15 @@ function headsSave(){
         alert('请选择图片');
         return false;
     }
-    if($("#btn_submit").hasClass('submit')){
+
+    var conf = confirm("确定要消耗3000金币兑换自定义头像吗？");
+    if(conf == true) {
+        $("#btn_submit").addClass('submit');
+        $(".hp-content").attr('action','/MyHeadImg/setHeadImage/');
+        $(".hp-content").submit(); 
+    } else {
         return false;
     }
-        confirm('确定要消耗3000金币兑换自定义头像吗？',function(){
-            $("#btn_submit").addClass('submit');
-            $(".hp-content").attr('action','/MyHeadImg/setHeadImage/');
-            $(".hp-content").submit(); 
-        })
 }
 
 function getFullPath(obj){
