@@ -52,7 +52,7 @@
 					</li>
 					<li class="">
 						<p class="icon-live">
-							<a href="http://www.xueersi.com/MyCourses/courseStudy/9864-37284-78205/b958c65290547cc14ad5c92fe2e3d87c" title="水之乐园：说说我是谁第一段">第3节</a>
+							<a href="http://www.xueersi.com/MyCourses/courseStudy/9864-37284-78205/b958c65290547cc14ad5c92fe2e3d87c" title="水之乐园：说说我是谁第一段">第3节</a><span class="errorExplain">堪误说明</span>
 						</p>
 					</li>
 
@@ -199,6 +199,21 @@
 		<span class="look-right">10</span>
 	</div>
 </div>
+<!--浮边的签到和问老师 Start-->
+<div class="sideSingInItems">
+    <ul>
+        <li class="singIn">
+            <a href="javascript:void(0);"></a>
+        </li>
+        <li class="askTeacher">
+            <a href="11111.html"></a>
+        </li>
+    </ul>
+</div>
+<!--浮边的签到和问老师 End-->
+<!--堪误说明 Start-->
+<div class="errorExplainCon"></div>
+<!--堪误说明 Start-->
 <script>
 		$(function(){
 			$('#outline1').jScrollPane();
