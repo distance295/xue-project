@@ -19,8 +19,8 @@
         <p class="course-teacher">
             <a target="_blank"  href="###" class="ui-username">赵紫涵</a>
             <i title="学而思网校认证老师" class="course-icon icon-s-redverify"></i>
-            <span class="fresh-course-attention" data-url="/teachers/follow/" data-value="840" data-params="urlStr=840&urlKey=af0030c654f79b371438ebdf40d4bead" data-type="3">
-                <a class="fresh-attention-btn fresh-add-attention-btn" href="javascript:void(0)"><span class="fresh-add left">+</span><span class="left">关注</span></a>
+            <span class="free-course-attention" data-url="/teachers/follow/" data-value="840" data-params="urlStr=840&urlKey=af0030c654f79b371438ebdf40d4bead" data-type="3">
+                <a class="free-attention-btn free-add-attention-btn" href="javascript:void(0)"><span class="free-add left">+</span><span class="left">关注</span></a>
             </span>
         </p>
         <p class="course-title">

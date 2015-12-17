@@ -20,7 +20,9 @@
             </ul>
         </div>
         <div>
-            <a class="fresh-attention-btn add-attention-btn" href="javascript:void(0)"><span class="fresh-add left">已关注</span></a>
+            <span data-type="3" data-params="urlStr=840&amp;urlKey=af0030c654f79b371438ebdf40d4bead" data-value="840" data-url="/teachers/follow/" class="free-course-attention">
+                <a href="javascript:void(0)" class="free-attention-btn free-add-attention-btn"><span class="free-add left">+</span><span class="left">关注</span></a>
+            </span>
         </div>
     </div>
     <div class="course-detail">
