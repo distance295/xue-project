@@ -337,6 +337,13 @@
             window.location.href= '/MyInfos/phoneManager';
           }else{
             fCheck.setTips('.phone-error span',result.msg);
+            var phoneError = $(".phone-error span").is(":empty");
+            if (phoneError == 0) {
+                $('.phone-error').css({
+                    display: 'block'
+                });
+                setTimeout("$('.phone-error').css({display: 'none'});",6000); 
+            }
           }
         },
         error: function() {
@@ -347,17 +354,4 @@
     }
   });
   fCheck.changeVerificationImg("verificationImg");
-
-  var messageError = $(".phone-error span").is(":empty");
-  if (messageError == '0') {
-      $('.phone-error').css({
-          display: 'block'
-      });
-      setTimeout("fCheck.clearTips('.phone-error')",6000); 
-  }
 }();
-
-
-
-
-
