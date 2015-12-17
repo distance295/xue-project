@@ -45,11 +45,12 @@ $(function() {
             type: "POST",
             url: "/MyCards/courseCardActive",
             data: "bindcardNo=" + $(".bindcardNo").val() + "&bindcardPass=" + $(".bindcardPass").val(),
-            success: function(msg) {
-                if (msg == "True") {
+            dataType: "json",
+            success: function(d) {
+                if (d.sign == 1) {
                     location.href = "/RequestPassword/UpdatePasswordSecuess";
                 } else {
-                    fCheck.setTips('.bindcardPass-warning','课程绑定卡卡号、密码不匹配');
+                    fCheck.setTips('.bindcardPass-warning',d.msg);
                     $('.bindcardNo,.bindcardPass').css('border','1px solid #eaeaea');
                 }
             }
