@@ -29,7 +29,7 @@
             <p class="tip-for">适用于：想要培养化学学习兴趣的初三学员</p>
             <p class="avatar-name"><a target="_blank"  href="###" class="ui-username">赵紫涵</a></p>
             <p class="amount-show">
-                <a href="##" class="btn btn-default"><em class="button-icon icon-will"></em>立即听课</a>
+                <a href="##" class="btn btn-default"><em class="button-icon icon-test"></em>立即听课</a>
             </p>
         </div>
         <div class="course-num">
