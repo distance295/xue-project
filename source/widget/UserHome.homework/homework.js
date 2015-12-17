@@ -275,7 +275,7 @@ homeWork.url = '/data/homework/';
 		}
 
 		$.ajax({
-            url: hm.url + 'Comment.json',
+            url: hm.url,
             data:{
             	score: _score,//评论分数
             	cont: _cont,//评论内容
