@@ -144,7 +144,7 @@ study.json.stringify = function (obj) {
     }
 };
 
-study.getAnswers = function (wrap, tp) {
+function getAnswers (wrap, tp) {
     var box = $(wrap);
     if (box.length == 0) {
         return false;
@@ -224,13 +224,14 @@ $('body').off('click', '.answer a').on('click', '.answer a', function () {
 });
 
 /* 提交讲测评选项 */
-study.submitAnswers = function (wrap) {
-    var answers = study.getAnswers(wrap);
+ function submitAnswers (wrap) {
+    var answers = getAnswers(wrap);
     if (answers.isall) {
         /* 在这里调用ajax方法,将返回的html放入弹出层就好 */
         alert('调用后台接口，判断是否正确');
         
         var result =   '<div class="class_answer class_test"><div class="class_test_sum"><span>测试结果：答对0题 ， 答错6题。要继续努力啊！</span><ul class="test_more"><li><a href="http://www.xueersi.com/MyCourses/courseStudy/20508-55173-158357/8fcbe725a1c6413a7c66a83bfa76ea34">重学本讲</a></li><li><a href="/LearningCenter/wrongQuestion" target="_blank">去错题本</a></li></ul></div><div class="wrong_list_new"><p class="wrong_list_title">题号：1</p><p><img src="http://x02.xesimg.com/test/2014/04/01/PDF1396333751686/pdf_1.jpg"></p><div class="wrong_list_anwser"><p class="wrong_list_anwser"><span>学员答案：<strong>C</strong></span></p><p><span>正确答案：<strong class="red"> B </strong></span></p></div><p class="wrong_list_knowledge">词汇类-词汇</p><p class="wrong_list_analysis"><img src="http://x02.xesimg.com/test/2014/04/01/PDF1396333751686/pdf_2.jpg"></p></div><div class="wrong_list_new"><p class="wrong_list_title">题号：2</p><p><img src="http://r01.xesimg.com/test/2014/04/01/PDF1396333751686/pdf_3.jpg"></p><div class="wrong_list_anwser"><p class="wrong_list_anwser"><span>学员答案：<strong>C</strong></span></p><p><span>正确答案：<strong class="red">B </strong></span></p></div><p class="wrong_list_knowledge">词汇类-词汇</p><p class="wrong_list_analysis"><img src="http://r03.xesimg.com/test/2014/04/01/PDF1396333751686/pdf_4.jpg"></p></div><div class="wrong_list_new"><p class="wrong_list_title">题号：6</p><p><img src="http://x04.xesimg.com/test/2014/04/01/PDF1396333751686/pdf_11.jpg"></p><div class="wrong_list_anwser"><p class="wrong_list_anwser"><span>学员答案：<strong>C</strong></span></p><p><span>正确答案：<strong class="red"> B </strong> </span></p></div><p class="wrong_list_knowledge">词汇类-词汇</p><p class="wrong_list_analysis"> <img src="http://s02.xesimg.com/test/2014/04/01/PDF1396333751686/pdf_12.jpg"></p></div></div>'
+        $('#testOnCourse .modal-body').scrollTop(0);
         $('#testOnCourse .modal-body').html(result);
     } else {
         alert('你有未完成的试题');
@@ -239,7 +240,7 @@ study.submitAnswers = function (wrap) {
 }
 
 /* 弹出讲测评页面 */
-study.chapterTestStart = function () {
+ function chapterTestStart () {
     var con = '<div class="class_test">\
     <div class="testcon">\
       <p class="testcon_title">第1题(填空)</p>\
@@ -278,7 +279,7 @@ study.chapterTestStart = function () {
       </p>\
     </div>\
     <input type="hidden" id="type" value="0">\
-    <a href="###" class="btn btn_red btn_small" onclick="study\.submitAnswers(\'.class_test\')">提交答案</a>\
+    <a href="###" class="btn btn_red btn_small" onclick="submitAnswers(\'.class_test\')">提交答案</a>\
   </div>';
     createModal.show({
         id: "testOnCourse",
