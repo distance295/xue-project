@@ -263,12 +263,23 @@ homeWork.url = '/data/homework/';
 		}
 
 		var _score = $(dom).find('.homework-star-score-num').text();
-		var _cont = $(dom).find('.homework-comment').val();
+		var _cont = $.trim($(dom).find('.homework-comment').val());
+		var _commitId = $(dom).find('.homework_commit_id').val();
+
+		var _homeworkbox = $(dom).closest('.homework-image-box');
+
+		//判断评星不能为空
+		if( _score == 0 || !_score ){
+			 alert("评星不能为空！");
+			 return false;
+		}
+
 		$.ajax({
             url: hm.url + 'Comment.json',
             data:{
             	score: _score,//评论分数
-            	cont: _cont//评论内容
+            	cont: _cont,//评论内容
+            	commitId: _commitId//提交作业自增id
             },
             type : 'get',
             dataType:'json',
@@ -280,8 +291,50 @@ homeWork.url = '/data/homework/';
                      alert(data.msg);
                      return false;
                 }
+
+                //计算发布日期
+                var _d = new Date(),
+                    _year = _d.getFullYear(),
+                    _month = _d.getMonth() + 1,
+                    _day = _d.getDate();
+
+                //月份和天数小于10的前面加0    
+                if( _month<10 ){
+                    _month = "0" + _month;
+                }
+                if( _day<10 ){
+                    _day = "0" + _day;
+                }
+
+                //日期显示方式
+                var _date = _year + "-" + _month + "-" + _day;
+
                 //评论成功后删除可评论框
+                var _html = '';
+                _html += '<div class="homework-comment-box">\
+								<div class="homework-star pull-left">\
+									<span class="pull-left">评价作业批改</span>\
+									<div class="homework-star-area pull-left">\
+										<ul class="pull-left">'
+				//判断选择几颗星
+				for( var i =0; i<_score; i++ ){
+                    _html += '<li class="on"></li>'
+				}
+
+				//未被选择的星星的样式
+				for( var i =0; i<(5-_score); i++ ){
+                    _html += '<li></li>'
+				}
+							
+				_html +=				'</ul>\
+										<span class="homework-star-score-num">_score</span>\
+									</div>\
+								</div>\
+								<p class="homework-comment">'+_cont+'</p>\
+								<p class="homework-date">'+_date+'</p>\
+							</div>'
                 $(dom).remove();
+				_homeworkbox.append(_html);
             },
             complete: function() {
             	 $(dom).find('.homework-submit-btn').removeClass('homework-submit-btn-disabled');
