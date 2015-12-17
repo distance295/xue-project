@@ -17,11 +17,11 @@
         <div class="col-md-10 wrap-body wrap-mall">
 
             <!-- *********************** 内容区域开始 *********************** -->
-            <ul class="screen-rank">
-                <li class="popular-rank">全部</li>
-                <li>图文</li>
-                <li>题目</li>
-                <li>视频</li>
+            <ul class="screen-rank" id="fresh-DynamicFilter-nav">
+                <li class="popular-rank active" data-type="0"><a href="##">全部</a></li>
+                <li data-type="2"><a href="##">图文</a></li>
+                <li data-type="20"><a href="##">题目</a></li>
+                <li data-type="21"><a href="##">视频</a></li>
             </ul>
              
             <div class="panel panel-default ">
@@ -34,7 +34,7 @@
         </div>
         <div class="col-md-2 col-sm-2 wrap-side wrap-mall pull-right">
             <div class="panel panel-default ">
-                <div class="panel-body sideright-body">
+                <div class="panel-body sideright-body pd0">
                 	<div class="sideright-hotcourse">
                 		<h3>热门新鲜事</h3>
                 		<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
@@ -68,3 +68,36 @@
 
 <!-- 公共底部 -->
 <link rel="import" href="../Layer/layer.Mall.foot.tpl?__inline">
+
+
+<script type="text/javascript">
+    //tab切换
+    $(function(){
+
+        $('#fresh-DynamicFilter-nav li').click(function(){
+              //切换改变样式
+              $(this).addClass('active').siblings('li').removeClass('active');
+              var _type = $(this).data('type');
+              //ajax请求列表信息
+              $.ajax({
+                  url : '/data/Dynamic/ajaxDynamicList.html',
+                  data : {
+                     type:_type
+                  },
+                  type: "get",
+                  dataType: 'html',
+                  success: function(data){
+                      if(data){
+                          $('.fresh-main-wrapper').html(data);
+                      }else{
+                          $('.fresh-main-wrapper').html('');
+                      }
+                  }
+              })
+        })
+
+        //默认加载第一个标签
+        $('#fresh-DynamicFilter-nav li:first').click();
+       
+    })
+</script>
