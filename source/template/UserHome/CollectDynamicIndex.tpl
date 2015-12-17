@@ -23,14 +23,9 @@
                 </div>
                 <div class="col-md-10 wrap w930">
                     <div class="panel panel-default">
-                        <div class="panel-body">
+                        <div class="panel-body fresh-main-wrapper">
                             <link rel="import" href="../../widget/Public.Dynamic/dynAnswer.tpl?__inline">
-                            <link rel="import" href="../../widget/Public.Dynamic/dynAttention.tpl?__inline">
-                            <link rel="import" href="../../widget/Public.Dynamic/dynContact.tpl?__inline">
-                            <link rel="import" href="../../widget/Public.Dynamic/dynExpand.tpl?__inline">
                             <link rel="import" href="../../widget/Public.Dynamic/dynImg.tpl?__inline">
-                            <link rel="import" href="../../widget/Public.Dynamic/dynMyself.tpl?__inline">
-                            <link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
                             <link rel="import" href="../../widget/Public.Dynamic/dynVideo.tpl?__inline">
                         </div>
                     </div>

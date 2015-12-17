@@ -24,7 +24,7 @@
             </div>
             <div class="course-detail">
                 <p class="course-teacher">
-                    <a target="_blank"  href="###" class="ui-username">赵紫涵</a>
+                    <a target="_blank"  href="###" class="ui-username ui-userinfo" data-params="userId=292"  data-id="292">赵紫涵</a>
                     <i title="学而思网校认证老师" class="course-icon icon-yverify"></i>
                     <span class="teacher-label">数学老师</span>
                 </p>

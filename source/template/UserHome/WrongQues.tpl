@@ -12,6 +12,7 @@
             <ul class="nav nav-tabs">
                 <li role="presentation" class="active"><a href="#" class="broadZb">直播课</a></li>
                 <li role="presentation"><a href="#" class="broadLb">录播课</a></li>
+                <p class="wrongQuest-sum">共有<span>172</span>道错题</p>
             </ul>
             <!-- tab切换结束 -->
 

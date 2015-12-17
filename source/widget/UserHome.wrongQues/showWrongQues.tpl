@@ -13,7 +13,7 @@
     <div class="que-point">
         <p class="que-point-know-form">
             <span class="que-tips">知识点：</span>
-            <span class="knowledge">写作类-高考高分作文赏析</span><span class="knowledge">代数法</span><span class="knowledge">三角函数</span>
+            <span class="knowledge  selected">写作类-高考高分作文赏析</span><span class="knowledge">代数法</span><span class="knowledge">三角函数</span>
         </p>
     </div>
     <div class="que-body clearfix">
@@ -29,7 +29,8 @@
         <p class="que-body-show-text text-right pull-right">展开答案</p>
     </div>
     <div class="que-answer">
-        <p class="que-tips que-answer-head">你的答案：<span class="cusAns">A</span>正确答案：<span class="corAns">B</span></p>
+        <p class="que-tips que-answer-head">你的答案：<span class="cusAns">A</span><span class="cusAns">B</span><span class="cusAns">C</span></p>
+        <p class="que-tips que-answer-head">正确答案：<span class="corAns">B</span><span class="corAns">D</span></p>
         <p class="que-tips que-answer-head">解析：<span class="explanace">由题意知，5条鱼的进价为(3a+2b)元，售价为5(a+b)2，5(a+b)2−(3a+2b)=b−a2又∵b−a2<0，所以b&lta </span></p>
     </div>
 </div>
@@ -42,11 +43,15 @@
     <div class="que-point">
         <p class="que-point-know-form">
             <span class="que-tips">知识点：</span>
-            <span class="knowledge">写作类-高考高分作文赏析</span><span class="knowledge">代数法</span><span class="knowledge">三角函数</span>
+            <span class="knowledge selected">写作类-高考高分作文赏析</span><span class="knowledge">代数法</span><span class="knowledge">三角函数</span>
         </p>
     </div>
     <div class="que-body clearfix">
         <p class="que-tips que-tips-head">
+            <span class="que-body-intro">材料：</span>
+            <span class="que-body-content que-body-latex">(此处导入latex题干信息)甲从一个鱼摊上买了三条鱼，平均每条a元，又从另一个鱼摊上买了两条鱼，平均每条b元，后来他又以每条a+b2元的价格把鱼全部卖给了乙，结果发现赔了钱，原因是（ ）.</span>
+        </p>
+        <p class="que-tips que-tips-head"> 
             <span class="que-body-intro">题目：</span>
             <span class="que-body-content">甲从一个鱼摊上买了三条鱼，平均每条a元，又从另一个鱼摊上买了两条鱼，平均每条b元，后来他又以每条a+b2元的价格把鱼全部卖给了乙，结果发现赔了钱，原因是（ ）.</span>
         </p>
@@ -60,7 +65,8 @@
     </div>
     <div class="que-answer">
         <!--用户答案为字母或者数字的情况-->
-        <p class="que-tips que-answer-head">你的答案：<span class="cusAns">A</span>正确答案：<span class="corAns">B</span></p>
+        <p class="que-tips que-answer-head">你的答案：<span class="cusAns">A</span><span class="cusAns">B</span><span class="cusAns">C</span></p>
+        <p class="que-tips que-answer-head">正确答案：<span class="corAns">B</span><span class="corAns">D</span></p>
         <p class="que-tips que-answer-head">解析：<span class="explanace">由题意知，5条鱼的进价为(3a+2b)元，售价为5(a+b)2，5(a+b)2−(3a+2b)=b−a2又∵b−a2<0，所以b&lta</span></p>
     </div>
 </div>
@@ -73,7 +79,7 @@
     <div class="que-point">
         <p class="que-point-know-form">
             <span class="que-tips">知识点：</span>
-            <span class="knowledge">写作类-高考高分作文赏析</span><span class="knowledge">代数法</span><span class="knowledge">三角函数</span>
+            <span class="knowledge  selected">写作类-高考高分作文赏析</span><span class="knowledge">代数法</span><span class="knowledge">三角函数</span>
         </p>
     </div>
     <div class="que-body clearfix">

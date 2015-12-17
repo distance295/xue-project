@@ -7,14 +7,26 @@
     <div class="ui-avatar">
         <div class="avatar-photo">
             <ul class="avatar-items">
-                <li data-params="userId=292" class="ui-userinfo" data-id="292">
-                    <a target="_blank" class="userpic" href="http://www.xueersi.com/t/yangyajing/">
-                        <img alt="" src="http://r03.xesimg.com/teacher/2014/02/28/13935689945281.jpg">
+                <li data-id="292" class="ui-userinfo" data-params="userId=292">
+                    <a href="http://www.xueersi.com/t/yangyajing/" class="userpic" target="_blank">
+                        <img src="http://r03.xesimg.com/teacher/2014/02/28/13935689945281.jpg" alt="">
+                    </a>
+                </li>
+                <li data-id="292" class="ui-userinfo" data-params="userId=292">
+                    <a href="http://www.xueersi.com/t/yangyajing/" class="userpic" target="_blank">
+                        <img src="http://r03.xesimg.com/teacher/2014/02/28/13935689945281.jpg" alt="">
                     </a>
                 </li>
             </ul>
-        </div>
-    </div>
+            <div class="avatar-roll">
+                <a href="javascript:void(0);" class="prev none">
+                    <em class="icon-chevron-left">左</em>
+                </a>
+                <a href="javascript:void(0);" class="next ">
+                    <em class="icon-chevron-right">右</em>
+                </a>
+            </div>
+        </div>    </div>
     <div class="course-detail">
         <p class="course-title">
             <a target="_blank"  href="###" class="title-detail">【飞遍化学】炸开你的化学世界大门(第三季)——大揭秘 </a>
