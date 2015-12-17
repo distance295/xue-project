@@ -352,15 +352,31 @@ ul,li{list-style: none;}
 		}
 	}
 }
-.course-list .fresh-course-attention{
+.course-list .free-course-attention{
 	font-size: 12px;
 	height: 22px;
 	line-height: 22px;
 	em,i{
 		font-style: normal;
 	}
+	em{
+		background: #ccc none repeat scroll 0 0;
+		border-radius: 2px;
+		color: #fff;
+		display: inline-block;
+		line-height: 20px;
+		padding: 0 8px;
+	}
 }
-.course-list .fresh-attention-btn {
+.hot-course-list .free-course-attention{
+	em{
+		background:url();
+		padding: 0;
+		color: #333;
+		cursor: default;
+	}
+}
+.course-list .free-attention-btn {
 	background: #ffbc3c;
 	border-radius: 2px;
 	color: #fff;
@@ -375,12 +391,16 @@ ul,li{list-style: none;}
 .course-list .add-attention-btn{
 	background: #ccc;
 	color: #fff;
+	display: inline-block;
+	line-height: 20px;
+	padding: 0 8px;
+	border-radius: 2px;
 }
-.course-list .fresh-add {
+.course-list .free-add {
 	font-size: 14px;
 	padding-right: 2px;
 }
-.course-list .fresh-course-attention a.fresh-add-cancel-btn {
+.course-list .free-course-attention a.free-add-cancel-btn {
 	color: #3bafda;
 }
 .hot-course-list{
@@ -786,7 +806,7 @@ ul,li{list-style: none;}
 	}
 }
 .mt0{
-  margin-top: 0;
+	margin-top: 0;
 }
 .search_tips{
 	border-bottom: 1px solid #eaeaea;
