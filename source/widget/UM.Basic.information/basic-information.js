@@ -116,7 +116,7 @@ $('.school').on('blur',function(){
 function inforCheckform () {
     $.fn.nickname();
     $.fn.school();
-    if ($('.nickname-warning').is(":empty") && $('.school-warning').is(":empty") && $('.date-warning').is(":empty")) {
+    if ($('.nickname-warning').is(":empty") && $('.school-warning').is(":empty")) {
         return true;
     }else{
         return false;
@@ -128,5 +128,5 @@ if (messageError == '0') {
     $('.message-error').css({
         display: 'block'
     });
-    setTimeout("fCheck.clearTips('.message-error')",6000); 
+    setTimeout("$('.message-error').css({display: 'none'});",6000);
 }

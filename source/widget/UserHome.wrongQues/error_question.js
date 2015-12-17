@@ -16,26 +16,26 @@ select.opt = {
 };
 
 /*展现 知识点+年级+学科 选择框*/
-$(select.opt.selector).on('click', function () {
-    var that = this;
-        /* 选择框已经打开处理分支 */
-    if ($(that).hasClass('showSelect')) {
-    	$(that).children('a').html('显示筛选');
-        $(that).children('i').removeClass('fa-angle-up fa-chevron-up').addClass('fa-angle-down fa-chevron-down');
-        $(that).removeClass('showSelect');
-        $(select.opt.choiceHide).slideUp();
-    } else {
-        /* 选择框未打开处理分支 */
-    	$(that).children('a').html('收起筛选');
-        $(that).children('i').removeClass('fa-angle-down fa-chevron-down').addClass('fa-angle-up fa-chevron-up');
-        $(that).addClass('showSelect');
-        $(select.opt.choiceHide).slideDown();
-    }
-});
+//$('body').on('click', select.opt.selector, function () {
+//    var that = this;
+//        /* 选择框已经打开处理分支 */
+//    if ($(that).hasClass('showSelect')) {
+//    	$(that).children('a').html('显示筛选');
+//        $(that).children('i').removeClass('fa-angle-up fa-chevron-up').addClass('fa-angle-down fa-chevron-down');
+//        $(that).removeClass('showSelect');
+//        $(select.opt.choiceHide).slideUp();
+//    } else {
+//        /* 选择框未打开处理分支 */
+//    	$(that).children('a').html('收起筛选');
+//        $(that).children('i').removeClass('fa-angle-down fa-chevron-down').addClass('fa-angle-up fa-chevron-up');
+//        $(that).addClass('showSelect');
+//        $(select.opt.choiceHide).slideDown();
+//    }
+//});
 
 
 /* 错题本答案交互 */
-$(select.opt.answerShow).on('click', function () {
+$('body').on('click', select.opt.answerShow, function () {
     var that   = this,
         answer = $(that).parent('.que-body').next('.que-answer');
         /* 答案未展开处理分支 */
@@ -54,12 +54,11 @@ $(select.opt.answerShow).on('click', function () {
 });
 
 /* 错题本图片答案交互 */
-$(select.opt.imgAnswer).on('click', function () {
+$('body').on('click', select.opt.imgAnswer, function () {
     var that= $(this),
         /* 图片路径 */
         urlSite = that.data('url')||that.attr('data-url'),
-        imgUrl  = '/static/img/' + urlSite,
-        con     = '<img src="' + imgUrl + '" style="width:754px;"/>';
+        con     = '<img src="' + urlSite + '" style="width:754px;"/>';
         createModal.show({
             id      : "wrongQuestionFlow",
             width   : '784',
@@ -70,14 +69,4 @@ $(select.opt.imgAnswer).on('click', function () {
         $('#wrongQuestionFlow').modal('show');
         
 })
-
-
-/* 录播课交互 */
-$('.broadLb').on('click', function () {
-    window.location.href = '';//录播课页面地址
-});
-
-$('.broadZb').on('click', function () {
-    window.location.href = '';//直播课页面地址
-});
 

@@ -336,7 +336,14 @@
           if(result.sign == 1){
             window.location.href= '/MyInfos/phoneManager';
           }else{
-            fCheck.setTips('#tips-phonecode',result.msg);
+            fCheck.setTips('.phone-error span',result.msg);
+            var phoneError = $(".phone-error span").is(":empty");
+            if (phoneError == 0) {
+                $('.phone-error').css({
+                    display: 'block'
+                });
+                setTimeout("$('.phone-error').css({display: 'none'});",6000); 
+            }
           }
         },
         error: function() {
@@ -348,8 +355,3 @@
   });
   fCheck.changeVerificationImg("verificationImg");
 }();
-
-
-
-
-
