@@ -44,7 +44,7 @@
                   <em>(<i>33</i>)</em>
               </span>
               <span class="fresh-right-btn">
-                  <a title="收藏" href="javascript:void(0);" class="fresh-collect-add-btn" data-params="dynId=57362582&amp;type=1&amp;url=http://www.xueersi.com/LearningCenter/">收藏</a>
+                  <a href="javascript:void(0);" class="fresh-collect-add-btn" data-params="dynId=57362582&amp;type=1&amp;url=http://www.xueersi.com/LearningCenter/">收藏</a>
                   <em>(<i>125</i>)</em>
               </span>
           </div>

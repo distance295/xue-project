@@ -460,6 +460,9 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 		border-radius: 4px 4px 0 0;
 	}
 	.material{
+		.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn.focus:active, .btn.active.focus{
+			outline: none;
+		}
 		tr{
 			td{
 				padding:  9px 17px;
@@ -642,6 +645,7 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 				text-align: left;
 				.studied-end{
 					width: 57px;
+					float: none;
 				}
 			}
 			span.span-w3{
@@ -675,12 +679,19 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 				display: inline-block;
 				text-align: center;
 				height: 62px;
+				float: left;
+				em{
+					color: #999;
+					padding: 0;
+				}
 			}
 			.text-style{
 				text-align: center;
 				font-size: 12px;
 				span{
 					color: #999;
+					float: none;
+					width: 85px;
 				}
 				a.homework-wait-submit{
 					color: #ffbc3c;
@@ -689,12 +700,21 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 			}
 			.studied-end{
 				color: @red;
+				a{
+					color: @red;
+				}
 			}
 			.yellow-mark{
 				color: #ffbc3c;
+				a{
+					color: #ffbc3c;
+				}
 			}
 			.studied{
 				color: #37bc9b;
+				a{
+					color: #37bc9b;
+				}
 			}
 			.static-gray{
 				color: #999999;
@@ -704,18 +724,22 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 			}
 			.wait-look{
 				color: #3bafda;
+				a{
+
+					color: #3bafda;
+				}
 			}
 			span.yellow-mark{
 				em{
 					display: inline-block;
-					width: 18px;
-					height: 18px;
-					margin-left: 5px;
+					text-align: left;
+					color: #999;
 				}
 				.mark{
 					background: url("img/exclamation.png") no-repeat right center;
 					vertical-align: middle;
-
+					padding-right: 24px;
+					
 				}
 			}
 		}
