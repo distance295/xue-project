@@ -336,7 +336,7 @@
           if(result.sign == 1){
             window.location.href= '/MyInfos/phoneManager';
           }else{
-            fCheck.setTips('#tips-phonecode',result.msg);
+            fCheck.setTips('.phone-error span',result.msg);
           }
         },
         error: function() {
@@ -347,6 +347,14 @@
     }
   });
   fCheck.changeVerificationImg("verificationImg");
+
+  var messageError = $(".phone-error span").is(":empty");
+  if (messageError == '0') {
+      $('.phone-error').css({
+          display: 'block'
+      });
+      setTimeout("fCheck.clearTips('.phone-error')",6000); 
+  }
 }();
 
 
