@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-10 wrap-body">
             <!-- *********************** 内容区域开始 *********************** -->
-            <link rel="import" href="../../widget/UserHome.alert/index.tpl?__inline">
+            <!-- <link rel="import" href="../../widget/UserHome.alert/index.tpl?__inline"> -->
 
             <ul class="nav nav-tabs">
                 <li role="presentation" class="active"><a href="#">全部</a></li>
