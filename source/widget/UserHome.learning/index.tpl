@@ -202,7 +202,7 @@
 <!--浮边的签到和问老师 Start-->
 <div class="sideSingInItems">
     <ul>
-        <li class="singIn">
+        <li class="singIn singInFinish">
             <a href="javascript:void(0);"></a>
         </li>
         <li class="askTeacher">
