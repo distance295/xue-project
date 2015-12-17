@@ -46,7 +46,7 @@
                 <span>已购买：<strong>230</strong></span>
             </p>
             <p class="amount-show amount-test">
-                <a href="##" class="btn btn-default"><em class="button-icon icon-test"></em>视听直播</a>
+                <a href="##" class="btn btn-default"><em class="button-icon icon-will"></em>试听直播</a>
                 <strong class="test-price"><span>￥</span>13.44</strong>
             </p>
         </div>
