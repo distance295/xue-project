@@ -43,15 +43,17 @@ $(function() {
 
         $.ajax({
             type: "POST",
-            url: "/RequestPassword/UpdatePassword",
-            data: "serialNo=" + $(".serialNo").val() + "&serialPass=" + $("#serialPass").val(),
-            success: function(msg) {
-                if (msg == "True") {
-                    location.href = "/RequestPassword/UpdatePasswordSecuess";
-                } else {
-                    fCheck.setTips('.serialPass-warning','课程绑定卡卡号、密码不匹配');
-                    $('.serialNo,.serialPass').css('border','1px solid #eaeaea');
-                }
+            url: "/MyCards/classCardActive",
+            data: "card_num=" + $(".serialNo").val() + "&active_num=" + $(".serialPass").val(),
+            datatype: 'json',
+            success: function(d) {
+              if (d.sign == 1) {
+                  fCheck.setTips('.serialPass-warning',d.msg);
+                  location.href = "/MyCards/classCard";
+              } else {
+                  fCheck.setTips('.serialPass-warning',d.msg);
+                  $('.serialNo,.serialPass').css('border','1px solid #eaeaea');
+              }
             }
         });
     })
