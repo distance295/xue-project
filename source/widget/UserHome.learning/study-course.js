@@ -85,14 +85,29 @@ $(function () {
     $('body').on('click', '.look-Focus-Push .btn-submit', function (event) {
         study.lookFocusPush(this);
     });
-     //签到提示 
-    if($('.singInFinish').length !== 0){
-        $('.sideSingInItems .singInFinish').hover(function(){
-            $('#singInLayer').show();
-        },function(){
-            $('#singInLayer').hide();
-        });
-    }
+     //签到提示 start
+    $('body').on('mouseenter', '.singInFinish', function(){
+        var that = $(this);
+        var dom = $('#sign_in_data').data('value');
+        var _day = Number(dom.days),
+            _gold= Number(dom.gold),
+            _nextgold = Number(dom.nextGold),
+            _nextdays = Number(dom.nextDays),
+            _rewardGold= Number(dom.rewardGold);
+             // 成功后的提一条提示：奖励10金币
+            tpl = '<p class="tp">今日签到成功！获得<strong>'+ _gold +'</strong>金币</p>';
+            // 当额外奖励 > 0时出现下面的第二条信息
+            if(_nextgold > 0){
+                tpl += '<p>再连续签到<strong>'+ _nextdays +'</strong>天可额外获得<strong>'+_nextgold+'</strong>金币！</p>';
+            }else{
+                tpl += '<p>连续签到<strong>'+ _day +'</strong>天，额外获得<strong>'+_rewardGold+'</strong>金币！</p>';
+            }
+        $('<li id="singInLayer">' + tpl +'</li>').appendTo('.sideSingInItems ul');
+    });
+     $('body').on('mouseleave', '.singInFinish', function(){
+         $('#singInLayer').remove();
+     })
+     //签到提示 end
 });
 
 /**

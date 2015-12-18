@@ -241,7 +241,6 @@
                      background: url(img/side_2.png) 0 0 no-repeat;
             }
             &#singInLayer {
-                display: none;
                 width: 226px;
                 height: 60px;
                 position: absolute;
@@ -251,10 +250,12 @@
                 border: 1px solid #ccc;
                 background: #fff;
                 p {
-                    line-height: 180%;
-                    padding:8px 0 0px 10px;
                     font-size: 12px;
                     color: #666;
+                    padding-left: 10px;
+                    &.tp {
+                        padding-top:8px;
+                    }
                     strong {
                         color: #cc0000;
                         padding:0 5px;
