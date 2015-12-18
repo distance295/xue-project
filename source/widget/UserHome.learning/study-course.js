@@ -108,6 +108,37 @@ $(function () {
          $('#singInLayer').remove();
      })
      //签到提示 end
+     //发布看点提示等级和扣金币
+     $('body').on('mouseenter','#btn-submit-focus',function() {
+            var that = $(this),
+                _left = that.offset().left + (that.width() / 2),
+                _top = that.offset().top + that.height(),
+                _html = $('.content-txt').html();
+             xue.win({
+                    id : 'focusTips',
+                    title : false,
+                    arrow : 'bl',
+                    follow : that,
+                    content : _html,
+                    lock : false,
+                    close : false,
+                    submit : false,
+                    cancel : false
+                });
+              var _tips = $('#xuebox_focusTips');
+                _tips.css({
+                    'position': 'absolute'
+                });
+                // 设置弹窗定位
+                xue.win('focusTips').position(_left - (_tips.width() / 3), _top - 100);
+
+        });
+        $('body').on('mouseleave', '#btn-submit-focus', function(){
+            if($('#xuebox_focusTips').length > 0){
+                 xue.win('focusTips').close();
+            }
+        });
+    //发布看点提示等级和扣金币
 });
 
 /**
