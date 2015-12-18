@@ -96,21 +96,35 @@ ms_DatePicker: function (options) {
                     $(".date-warning").css({
                       'display': 'none',
                     }).html(null);
+
+                    $('#year,#month,#day').css({
+                        border: '1px solid #eaeaea'
+                    });
                     return true
                 }else{
                     if ($MonthSelector.val() == 0) {
                         $(".date-warning").css({
                           'display': 'block',
                         }).html("请输入月份");
+                        $('#year,#month,#day').css({
+                            border: '1px solid #eaeaea'
+                        });
                     }else{
                         if ($DaySelector.val() == 0) {
                             $(".date-warning").css({
                               'display': 'block',
                             }).html("请输入日");
+                            $('#year,#month,#day').css({
+                                border: '1px solid #eaeaea'
+                            });
                         }else{
                             $(".date-warning").css({
                               'display': 'none',
                             }).html(null);
+
+                            $('#year,#month,#day').css({
+                                border: '1px solid #68c04a'
+                            });
                             return true
                         }
                     }
@@ -121,22 +135,13 @@ ms_DatePicker: function (options) {
                 BuildMonth();
                 BuildDay();
                 dateFormat();
-                $('#year').css({
-                    border: '1px solid #68c04a'
-                });
             });
             $MonthSelector.change(function () {
                 BuildDay();
                 dateFormat();
-                $('#month').css({
-                    border: '1px solid #68c04a'
-                });
             });
             $DaySelector.change(function () {
                 dateFormat();
-                $('#day').css({
-                    border: '1px solid #68c04a'
-                });
             });
             if($DaySelector.attr("rel")!=""){
                 var daySel = $DaySelector.attr("rel");
