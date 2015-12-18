@@ -90,21 +90,50 @@ ms_DatePicker: function (options) {
                     }
                 }
             }
+            //格式验证
+            dateFormat = function () {
+                if ($YearSelector.val() == 0){
+                    $(".date-warning").css({
+                      'display': 'none',
+                    }).html(null);
+                    return true
+                }else{
+                    if ($MonthSelector.val() == 0) {
+                        $(".date-warning").css({
+                          'display': 'block',
+                        }).html("请输入月份");
+                    }else{
+                        if ($DaySelector.val() == 0) {
+                            $(".date-warning").css({
+                              'display': 'block',
+                            }).html("请输入日");
+                        }else{
+                            $(".date-warning").css({
+                              'display': 'none',
+                            }).html(null);
+                            return true
+                        }
+                    }
+                }
+            }
 
-            $MonthSelector.change(function () {
-                BuildDay();
-                $('#month').css({
-                    border: '1px solid #68c04a'
-                });
-            });
             $YearSelector.change(function () {
-                BuildMonth()
+                BuildMonth();
                 BuildDay();
+                dateFormat();
                 $('#year').css({
                     border: '1px solid #68c04a'
                 });
             });
+            $MonthSelector.change(function () {
+                BuildDay();
+                dateFormat();
+                $('#month').css({
+                    border: '1px solid #68c04a'
+                });
+            });
             $DaySelector.change(function () {
+                dateFormat();
                 $('#day').css({
                     border: '1px solid #68c04a'
                 });
