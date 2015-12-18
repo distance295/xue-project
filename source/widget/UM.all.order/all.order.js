@@ -11,7 +11,7 @@ $("#order_tab li").on('click', function(){
 });
 $('#order_tab li:first').click();
 
-function orderTab(){
+function orderTab(ordertype,page){
     $.ajax({
         type: "get",
         url: "/MyOrders/ajaxOrderList",

@@ -38,7 +38,7 @@
             type: "GET",
             url: "/MyPayCenters/ajaxGiftCardData",
             dataType: "html",
-            data: '&curpage=' + page,
+            data: '&curpage=1',
             //object是后台传过来的list数据集合  
             success:function(objects){                                           
               var box = $('#moneyTable');
