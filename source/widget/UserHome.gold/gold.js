@@ -138,6 +138,7 @@ $(function(){
     });
     function goldTabAJax(e, p) {//封装ajax方法
         var _url = $(e).data('url');
+        //console.log($(e));
         $.ajax({
             url: _url,
             type: 'post',

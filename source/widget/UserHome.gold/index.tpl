@@ -11,9 +11,9 @@
 
 <!-- 金币商城头部 -->
 <ul class="gold-detail-title nav nav-tabs">
-    <li class="active"><a href="#" data-target=".gold-detail-container">金币明细</a></li>
-    <li><a href="#" data-target=".gold-store-container">金币商城</a></li>
-    <li><a href="#" data-target=".gold-exchange-container">我兑换的</a></li>
+    <li class="active"><a href="###" data-target=".gold-detail-container">金币明细</a></li>
+    <li><a href="###" data-target=".gold-store-container">金币商城</a></li>
+    <li><a href="###" data-target=".gold-exchange-container">我兑换的</a></li>
 </ul>
 <!-- 金币明细 -->
 <div class="gold-detail-container gold-detail-block-change" style="display: block">
