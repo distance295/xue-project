@@ -208,6 +208,10 @@
         <li class="askTeacher">
             <a href="11111.html"></a>
         </li>
+        <li id="singInLayer">
+            <p>今日签到成功，获得<strong>10</strong>个金币<br/>
+            再连续<strong>10</strong>天可额外获得<strong>10</strong>个金币</p>
+        </li>
     </ul>
 </div>
 <!--浮边的签到和问老师 End-->

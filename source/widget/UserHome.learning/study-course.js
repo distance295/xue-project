@@ -85,7 +85,14 @@ $(function () {
     $('body').on('click', '.look-Focus-Push .btn-submit', function (event) {
         study.lookFocusPush(this);
     });
-
+     //签到提示 
+    if($('.singInFinish').length !== 0){
+        $('.sideSingInItems .singInFinish').hover(function(){
+            $('#singInLayer').show();
+        },function(){
+            $('#singInLayer').hide();
+        });
+    }
 });
 
 /**
