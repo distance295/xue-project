@@ -1,6 +1,6 @@
 var xue =xue || {};
 
-//头像tab切换
+/* <-----头像tab切换------> */
 $('#head_tab li').click(function(e){
     var box = $(".hp-box-left").children();
     e.preventDefault();
@@ -9,7 +9,7 @@ $('#head_tab li').click(function(e){
     box.eq(index).addClass("active").siblings().removeClass("active");
 });
 
-//推荐头像
+/* <-----推荐头像------> */
 $(".hpr-img").on("click",function(){
    var url = $(this).attr("src");
    $(this).addClass('imghover').siblings().removeClass("imghover");
@@ -34,19 +34,11 @@ $(".hpr-btn").on('click', function(){
     });
 });
 
-//自定义上传头像
-$("#loadFile").change(function(){
-    var img = $("#loadFile").val();
-    if(img == ''){
-      return true;
-    }else{
-        $(".hl-box em,.hl-box span").hide();
-        $("#upload_img").removeClass("btn_loadFile").addClass("btn-change");
-    }
-});
+/* <-----自定义上传头像------> */
 
-var imgError = $(".img-error span").is(":empty");
-if (imgError == '0') {
+/* 上传头像后端错误信息 */
+var headError = $(".img-error span").is(":empty");
+if (headError == 0) {
     $('.img-error').css({
         display: 'block'
     });
@@ -57,12 +49,7 @@ if (imgError == '0') {
         display: 'none'
     });
 }
-
-$("#upload_img").on('click', function(e) {
-    e.preventDefault();
-    $("#loadFile").click();
-});
-
+/* 上传头像表单绑定事件 */
 function headsSave(){
     var img = $("#loadFile").val();
     if(img == ''){
@@ -79,6 +66,21 @@ function headsSave(){
         return false;
     }
 }
+/* 上传头像input按钮绑定事件 */
+$("#upload_img").on('click', function(e) {
+    e.preventDefault();
+    $("#loadFile").click();
+});
+
+$("#loadFile").change(function(){
+    var img = $("#loadFile").val();
+    if(img == ''){
+      return true;
+    }else{
+        $(".hl-box em,.hl-box span").hide();
+        $("#upload_img").removeClass("btn_loadFile").addClass("btn-change");
+    }
+});
 
 function getFullPath(obj){
     if(obj){
