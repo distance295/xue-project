@@ -412,14 +412,14 @@ fresh.comment = fresh.comment || {};
         }else{
            return false;
         }
+
+        var _params = fc.param.commentBox.prev('.fresh-barinfo').find('.fresh-comment-expand-btn').data('params');
         //ajax获取评论信息
         $.ajax({
             url: fresh.path.url + "coment.html",
             type: 'get',
             dataType: 'html',
-            data: {
-                'dynId': fc.id
-            },
+            data: _params,
             beforeSend: function() {
                 fc.param.infoBox.html('<span class="fresh-commentInfo-loading">Loading...</span>');
             },
