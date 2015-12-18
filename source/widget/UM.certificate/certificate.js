@@ -26,7 +26,7 @@ fCheck.bordercss = function(argument) {
 $(function() {
     $(".btn-certificate").click(function() {
         if ($(".serialNo").val() == '') {
-              fCheck.setTips(".serialNo-warning",'请输入课程绑定卡卡号');
+              fCheck.setTips(".serialNo-warning",'请输入听课证卡号');
             $(".serialNo").focus(function() {
               fCheck.clearTips(".serialNo-warning");});
             return false;
@@ -34,7 +34,7 @@ $(function() {
         fCheck.bordercss('.serialNo');
 
         if ($(".serialPass").val() == '') {
-              fCheck.setTips(".serialPass-warning",'请输入课程绑定卡密码');
+              fCheck.setTips(".serialPass-warning",'请输入听课证密码');
             $(".serialPass").focus(function() {
               fCheck.clearTips(".serialPass-warning");});
             return false;
@@ -43,15 +43,17 @@ $(function() {
 
         $.ajax({
             type: "POST",
-            url: "/RequestPassword/UpdatePassword",
-            data: "serialNo=" + $(".serialNo").val() + "&serialPass=" + $("#serialPass").val(),
-            success: function(msg) {
-                if (msg == "True") {
-                    location.href = "/RequestPassword/UpdatePasswordSecuess";
-                } else {
-                    fCheck.setTips('.serialPass-warning','课程绑定卡卡号、密码不匹配');
-                    $('.serialNo,.serialPass').css('border','1px solid #eaeaea');
-                }
+            url: "/MyCards/classCardActive",
+            data: "card_num=" + $(".serialNo").val() + "&active_num=" + $(".serialPass").val(),
+            dataType: 'json',
+            success: function(d) {
+              if (d.sign == 1) {
+                  fCheck.setTips('.serialPass-warning',d.msg);
+                  location.href = "/MyCards/classCard";
+              } else {
+                  fCheck.setTips('.serialPass-warning',d.msg);
+                  $('.serialNo,.serialPass').css('border','1px solid #eaeaea');
+              }
             }
         });
     })

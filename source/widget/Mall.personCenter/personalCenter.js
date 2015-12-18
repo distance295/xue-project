@@ -12,16 +12,16 @@ personCenter.opt={
 }
 
 /*选项卡交互*/
-$(personCenter.opt.forGuyTab).on('click',function(){
-    var that = this;
-    if($(that).hasClass('current')){
-        $(that).siblings('li').removeClass('current');    
-    }else{
-        $(that).addClass('current').siblings('li').removeClass('current');    
-    }
-    var index = $(personCenter.opt.forGuyTab).index(that);
-    $(personCenter.opt.focusGuy).eq(index).removeClass('hide').siblings().addClass('hide');
-});
+// $(personCenter.opt.forGuyTab).on('click',function(){
+//     var that = this;
+//     if($(that).hasClass('current')){
+//         $(that).siblings('li').removeClass('current');
+//     }else{
+//         $(that).addClass('current').siblings('li').removeClass('current');
+//     }
+//     var index = $(personCenter.opt.forGuyTab).index(that);
+//     $(personCenter.opt.focusGuy).eq(index).removeClass('hide').siblings().addClass('hide');
+// });
 
 /* 关注会遇到ajax与后台进行交互 */
 $(personCenter.opt.notFocus).on('click',function(){
@@ -103,6 +103,6 @@ function videoPlay(videoUrl,flashplayerUrl){
                 cancel : false,
                 width  : 530,
                 height : 314,
-                title : "老师风采"            
+                title : "老师风采"
         });
 }

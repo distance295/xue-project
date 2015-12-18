@@ -13,6 +13,7 @@ var homeWork = homeWork || {};
 
 //分数图片路径
 homeWork.path = '/static/img';
+homeWork.url = '/data/homework/';
 
 (function(hm){
   
@@ -114,11 +115,37 @@ homeWork.path = '/static/img';
 		 }
 		 //可能存在多个的情况
 		  $(dom).each(function(){
-		  	  var that = this;
-	          var _ReviewsBox = $(this).find('.homework-Reviews');
-	          var _audioBg = $(this).find('.homework-audio-box');
-	          var _audioTime = parseFloat(_audioBg.find('em').text());
-	          var _defaultURL = $('body').find('#homework-audio-btn-box').attr('url');
+			  	var that = this,
+			  	    _audio = $(this).find('.homework-audio-btn-box')[0],
+				  	_ReviewsBox = $(this).find('.homework-Reviews'),
+			        _audioBg = $(this).find('.homework-audio-box'),
+				    _audioTime = '';
+
+			  	setTimeout(function(){
+			  	    var time = _audio.duration;
+			  	    //分钟
+			        var minute = time / 60;
+			        var minutes = parseInt(minute);
+			        if (minutes < 10) {
+			            minutes = "0" + minutes;
+			        }
+			        //秒
+			        var second = time % 60;
+			        var seconds = Math.round(second);
+			        if (seconds < 10) {
+			            seconds = "0" + seconds;
+			        }
+
+			        //总共时长的秒数
+			        var allTime = parseInt(minutes*60 + seconds);
+			      
+		            //给语音按钮赋值时长
+		            _audioBg.find('em').text(allTime + ' "');
+
+		            _audioTime = parseFloat(_audioBg.find('em').text());
+		         
+	           }, 1000)
+	          
 	          /**
 	           * 判断语音按钮的宽度
 	           * 1-5秒宽度100  5-10秒宽度150  >10S的200
@@ -134,20 +161,20 @@ homeWork.path = '/static/img';
 	          //判断语音的播放和停止
 	          $(this).off('click', '.homework-audio-box').on('click','.homework-audio-box', function(){
                     var  _Playing = _ReviewsBox.hasClass('homework-audio-playing');
-                    var _audioBtn = $('body').find('#homework-audio-btn-box');
-                    var _url = $(this).data('url');
-                    console.log(_Playing)
                     if( !_Playing){
                     	$('body').find('.homework-Reviews').removeClass('homework-audio-playing');
+                    	//播放时其他的音频都要重新加载停止
+                    	$('body').find('.homework-audio-btn-box').each(function(index){
+                    		$('body').find('.homework-audio-btn-box')[index].load();
+                    	})
                         _ReviewsBox.addClass('homework-audio-playing')
-			            _audioBtn.attr('src', _url);
+                        _audio.play();
                     }else{
-                        _ReviewsBox.removeClass('homework-audio-playing');
-			            _audioBtn.attr('src', _defaultURL);
+                    	_ReviewsBox.removeClass('homework-audio-playing');
+                    	_audio.load();//重新加载和暂停是不同的
                     }
                     setTimeout(function(){
 						_ReviewsBox.removeClass('homework-audio-playing');
-						_audioBtn.attr('src', _defaultURL);
 					}, _audioTime +'000');
 	          })
 		  })
@@ -228,6 +255,97 @@ homeWork.path = '/static/img';
 			}
         })
 	}
+
+	/**
+	 * 提交评论方法
+	 * @param  {Object} dom 任意子节点
+	 */
+	 
+	hm.submitComment =function(dom){
+		//判断dom元素是否存在
+		if( !dom ){
+           return false;
+		}
+
+		var _score = $(dom).find('.homework-star-score-num').text();
+		var _cont = $.trim($(dom).find('.homework-comment').val());
+		var _commitId = $(dom).find('.homework_commit_id').val();
+
+		var _homeworkbox = $(dom).closest('.homework-image-box');
+
+		//判断评星不能为空
+		if( _score == 0 || !_score ){
+			 alert("评星不能为空！");
+			 return false;
+		}
+
+		$.ajax({
+            url: hm.url,
+            data:{
+            	score: _score,//评论分数
+            	cont: _cont,//评论内容
+            	commitId: _commitId//提交作业自增id
+            },
+            type : 'get',
+            dataType:'json',
+            beforeSend: function() {
+                  $(dom).find('.homework-submit-btn').addClass('homework-submit-btn-disabled');
+            },
+            success:function(data){
+        	    if( data.sign != 1 ){
+                     alert(data.msg);
+                     return false;
+                }
+
+                //计算发布日期
+                var _d = new Date(),
+                    _year = _d.getFullYear(),
+                    _month = _d.getMonth() + 1,
+                    _day = _d.getDate();
+
+                //月份和天数小于10的前面加0    
+                if( _month<10 ){
+                    _month = "0" + _month;
+                }
+                if( _day<10 ){
+                    _day = "0" + _day;
+                }
+
+                //日期显示方式
+                var _date = _year + "-" + _month + "-" + _day;
+
+                //评论成功后删除可评论框
+                var _html = '';
+                _html += '<div class="homework-comment-box">\
+								<div class="homework-star pull-left">\
+									<span class="pull-left">评价作业批改</span>\
+									<div class="homework-star-area pull-left">\
+										<ul class="pull-left">'
+				//判断选择几颗星
+				for( var i =0; i<_score; i++ ){
+                    _html += '<li class="on"></li>'
+				}
+
+				//未被选择的星星的样式
+				for( var i =0; i<(5-_score); i++ ){
+                    _html += '<li></li>'
+				}
+							
+				_html +=				'</ul>\
+										<span class="homework-star-score-num">_score</span>\
+									</div>\
+								</div>\
+								<p class="homework-comment">'+_cont+'</p>\
+								<p class="homework-date">'+_date+'</p>\
+							</div>'
+                $(dom).remove();
+				_homeworkbox.append(_html);
+            },
+            complete: function() {
+            	 $(dom).find('.homework-submit-btn').removeClass('homework-submit-btn-disabled');
+            }
+        })   	
+    }
 
 
 

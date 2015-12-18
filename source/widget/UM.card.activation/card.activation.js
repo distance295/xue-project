@@ -25,7 +25,7 @@
     $(function() {
         $(".btn-active").click(function() {
             if ($(".cardNo").val() == '') {
-                  fCheck.setTips(".cardNo-warning",'请输入课程绑定卡卡号');
+                  fCheck.setTips(".cardNo-warning",'请输入代金卡卡号');
                 $(".cardNo").focus(function() {
                   fCheck.clearTips(".cardNo-warning");});
                 return false;
@@ -33,7 +33,7 @@
             fCheck.bordercss('.cardNo');
 
             if ($(".cardPass").val() == '') {
-                  fCheck.setTips(".cardPass-warning",'请输入课程绑定卡密码');
+                  fCheck.setTips(".cardPass-warning",'请输入代金卡密码');
                 $(".cardPass").focus(function() {
                   fCheck.clearTips(".cardPass-warning");});
                 return false;
@@ -42,13 +42,15 @@
 
             $.ajax({
                 type: "POST",
-                url: "/RequestPassword/UpdatePassword",
+                url: "/MyCards/ajaxActiveGift",
                 data: "cardNo=" + $(".cardNo").val() + "&cardPass=" + $("#cardPass").val(),
-                success: function(msg) {
-                    if (msg == "True") {
-                        location.href = "/RequestPassword/UpdatePasswordSecuess";
+                dataType: 'json',
+                success: function(d) {
+                    if (d.sign == 1) {
+                        fCheck.setTips('.cardPass-warning', d.msg);
+                        location.href = "/MyCards/giftCard";
                     } else {
-                        fCheck.setTips('.cardPass-warning','课程绑定卡卡号、密码不匹配');
+                        fCheck.setTips('.cardPass-warning',d.msg);
                         $('.cardNo,.cardPass').css('border','1px solid #eaeaea');
                     }
                 }

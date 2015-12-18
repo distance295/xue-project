@@ -4,7 +4,7 @@
 -->
 <div class="certificate-content">
     <div class="certificate-content-left">
-        <p>请刮开代金卡背面的涂层，在右侧输入编号和密码</p>
+        <p>请刮开开听课证正面的涂层，在右侧输入编号和密码</p>
         <img src="img/card.certificate.jpg" alt="">
     </div>
     <div class="certificate-content-right">
