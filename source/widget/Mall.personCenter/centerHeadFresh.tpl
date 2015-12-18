@@ -8,6 +8,7 @@
         <div class="centerHeader-img">
             <div class="centerHeader-img-head">
                 <!--title属性仅在学生主页进行设置-->
+                <img src="img/header-img.png" class="center-img-all">
                 <div class="centerHeader-office-img-level" title="学而思网校官方账号">
                     <img src="img/level.png" alt="" class="level-img" />
                 </div>
