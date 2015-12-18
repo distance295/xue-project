@@ -4,40 +4,42 @@
 -->
 <div class="gift-card-record">
      <span class="gcr-top-up btn btn-info">去激活</span>
-     <table id="moneyTable" class="table gcr-table">
-        <thead>
-            <tr>
-                <th>卡号</th>
-                <th>充值时间</th>
-                <th>有效时间</th>
-                <th>代金卡金额</th>
-                <th>使用状态</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>s201509190726</td>
-                <td>2015-09-21</td>
-                <td>2015-09-21</td>
-                <td>50</td>
-                <td>未使用</td>
-            </tr>
-            <tr>
-                <td>s201509190726</td>
-                <td>2015-09-21</td>
-                <td>2015-09-21</td>
-                <td>50</td>
-                <td class="gcr-red">使用中</td>
-            </tr>
-            <tr>
-                <td>s201509190726</td>
-                <td>2015-09-21</td>
-                <td>2015-09-21</td>
-                <td>50</td>
-                <td class="gcr-used">已使用</td>
-            </tr>
-        </tbody>
-      </table>
+     <div id="moneyTable">
+       <table class="table gcr-table">
+          <thead>
+              <tr>
+                  <th>卡号</th>
+                  <th>充值时间</th>
+                  <th>有效时间</th>
+                  <th>代金卡金额</th>
+                  <th>使用状态</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>s201509190726</td>
+                  <td>2015-09-21</td>
+                  <td>2015-09-21</td>
+                  <td>50</td>
+                  <td>未使用</td>
+              </tr>
+              <tr>
+                  <td>s201509190726</td>
+                  <td>2015-09-21</td>
+                  <td>2015-09-21</td>
+                  <td>50</td>
+                  <td class="gcr-red">使用中</td>
+              </tr>
+              <tr>
+                  <td>s201509190726</td>
+                  <td>2015-09-21</td>
+                  <td>2015-09-21</td>
+                  <td>50</td>
+                  <td class="gcr-used">已使用</td>
+              </tr>
+          </tbody>
+        </table>
+     </div>
       <img src="img/prompt.png">
       <div class="gcr-prompt-box">
           <h3>提示</h3>

@@ -85,7 +85,60 @@ $(function () {
     $('body').on('click', '.look-Focus-Push .btn-submit', function (event) {
         study.lookFocusPush(this);
     });
+     //签到提示 start
+    $('body').on('mouseenter', '.singInFinish', function(){
+        var that = $(this);
+        var dom = $('#sign_in_data').data('value');
+        var _day = Number(dom.days),
+            _gold= Number(dom.gold),
+            _nextgold = Number(dom.nextGold),
+            _nextdays = Number(dom.nextDays),
+            _rewardGold= Number(dom.rewardGold);
+             // 成功后的提一条提示：奖励10金币
+            tpl = '<p class="tp">今日签到成功！获得<strong>'+ _gold +'</strong>金币</p>';
+            // 当额外奖励 > 0时出现下面的第二条信息
+            if(_nextgold > 0){
+                tpl += '<p>再连续签到<strong>'+ _nextdays +'</strong>天可额外获得<strong>'+_nextgold+'</strong>金币！</p>';
+            }else{
+                tpl += '<p>连续签到<strong>'+ _day +'</strong>天，额外获得<strong>'+_rewardGold+'</strong>金币！</p>';
+            }
+        $('<li id="singInLayer">' + tpl +'</li>').appendTo('.sideSingInItems ul');
+    });
+     $('body').on('mouseleave', '.singInFinish', function(){
+         $('#singInLayer').remove();
+     })
+     //签到提示 end
+     //发布看点提示等级和扣金币
+     $('body').on('mouseenter','#btn-submit-focus',function() {
+            var that = $(this),
+                _left = that.offset().left + (that.width() / 2),
+                _top = that.offset().top + that.height(),
+                _html = $('.content-txt').html();
+             xue.win({
+                    id : 'focusTips',
+                    title : false,
+                    arrow : 'bl',
+                    follow : that,
+                    content : _html,
+                    lock : false,
+                    close : false,
+                    submit : false,
+                    cancel : false
+                });
+              var _tips = $('#xuebox_focusTips');
+                _tips.css({
+                    'position': 'absolute'
+                });
+                // 设置弹窗定位
+                xue.win('focusTips').position(_left - (_tips.width() / 3), _top - 100);
 
+        });
+        $('body').on('mouseleave', '#btn-submit-focus', function(){
+            if($('#xuebox_focusTips').length > 0){
+                 xue.win('focusTips').close();
+            }
+        });
+    //发布看点提示等级和扣金币
 });
 
 /**

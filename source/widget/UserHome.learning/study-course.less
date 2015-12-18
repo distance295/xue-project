@@ -212,19 +212,26 @@
 		    	span.look-right {color: #999;}
 		    }
 		}
+#xuebox_focusTips {
+    .dialog_content {
+        padding:10px;
+        strong {
+             color: #cc0000;font-size: 12px;font-weight: normal;
+        }
+    }   
+}
 		// 看点end
 //浮边的签到和问老师
 .sideSingInItems {
     width: 60px;
     height: 121px;
-    overflow: hidden;
     position: fixed;
     right: 1px;
     top: 50%;
     ul {
-        overflow: hidden;
+        position: relative;
         li {
-            overflow: hidden;
+            width: 60px; overflow: hidden;
             a {
                 display: block;
                 width: 60px;
@@ -240,6 +247,28 @@
             }
             &.singInFinish {
                      background: url(img/side_2.png) 0 0 no-repeat;
+            }
+            &#singInLayer {
+                width: 226px;
+                height: 60px;
+                position: absolute;
+                right:60px;
+                top:0;
+                z-index:1;
+                border: 1px solid #ccc;
+                background: #fff;
+                p {
+                    font-size: 12px;
+                    color: #666;
+                    padding-left: 10px;
+                    &.tp {
+                        padding-top:8px;
+                    }
+                    strong {
+                        color: #cc0000;
+                        padding:0 5px;
+                    }
+                }
             }
         }
     }
