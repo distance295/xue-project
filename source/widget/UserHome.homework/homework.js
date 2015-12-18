@@ -115,31 +115,36 @@ homeWork.url = '/data/homework/';
 		 }
 		 //可能存在多个的情况
 		  $(dom).each(function(){
-		  	  var that = this;
-		  	  var _audio = $(this).find('.homework-audio-btn-box')[0];
-		  	  var time = _audio.duration;
-		  	  //分钟
-		      var minute = time / 60;
-		      var minutes = parseInt(minute);
-		      if (minutes < 10) {
-		          minutes = "0" + minutes;
-		      }
-		      //秒
-		      var second = time % 60;
-		      var seconds = Math.round(second);
-		      if (seconds < 10) {
-		          seconds = "0" + seconds;
-		      }
+			  	var that = this,
+			  	    _audio = $(this).find('.homework-audio-btn-box')[0],
+				  	_ReviewsBox = $(this).find('.homework-Reviews'),
+			        _audioBg = $(this).find('.homework-audio-box'),
+				    _audioTime = '';
 
-		      //总共时长的秒数
-		      var allTime = parseInt(minutes*60 + seconds);
-		      var _ReviewsBox = $(this).find('.homework-Reviews');
-	          var _audioBg = $(this).find('.homework-audio-box');
+			  	setTimeout(function(){
+			  	    var time = _audio.duration;
+			  	    //分钟
+			        var minute = time / 60;
+			        var minutes = parseInt(minute);
+			        if (minutes < 10) {
+			            minutes = "0" + minutes;
+			        }
+			        //秒
+			        var second = time % 60;
+			        var seconds = Math.round(second);
+			        if (seconds < 10) {
+			            seconds = "0" + seconds;
+			        }
 
-	          //给语音按钮赋值时长
-	          _audioBg.find('em').text(allTime + ' "');
+			        //总共时长的秒数
+			        var allTime = parseInt(minutes*60 + seconds);
+			      
+		            //给语音按钮赋值时长
+		            _audioBg.find('em').text(allTime + ' "');
 
-	          var _audioTime = parseFloat(_audioBg.find('em').text());
+		            _audioTime = parseFloat(_audioBg.find('em').text());
+		         
+	           }, 1000)
 	          
 	          /**
 	           * 判断语音按钮的宽度
@@ -275,7 +280,7 @@ homeWork.url = '/data/homework/';
 		}
 
 		$.ajax({
-            url: hm.url + 'Comment.json',
+            url: hm.url,
             data:{
             	score: _score,//评论分数
             	cont: _cont,//评论内容
