@@ -225,3 +225,6 @@ source/conf/deploy-mall.bat
 source/conf/deploy-account.bat
 /source/conf/
 
+source/conf/deploy-home.bat
+source/conf/deploy-account.bat
+source/conf/deploy-account.bat

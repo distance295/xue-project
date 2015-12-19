@@ -1,10 +1,10 @@
 <!--
    录播听课页：
-    @require xue.mousewheel.js.js
+    @require xue.mousewheel.js
     @require xue.sidescroll.min.js
     @require study-course.js
-	@require study-course.less
 	@require ../Module.Modal/modal.js
+	@require study-course.less
 -->
 <h2 class="content-study-title ui-margin">
 	数学选修1-1同步强化班 <strong>(直播强化班)</strong>
@@ -29,7 +29,7 @@
 		<div class="ui-scrolls-boxs">
 			<div id="outline1" class="scrolls-item"  style="display:block;">
 				<ul class="select-list">
-					<li title="水之乐园：说说我是谁" class="scrolls_title">第1讲 水之乐园：说说我是谁</li>
+					<li title="水之乐园：说说我是谁" class="scrolls_title">第1讲 水之乐园：说说我是谁水之乐园：说说我是谁</li>
 					<li class="">
 						<p class="icon-live">
 							<a class="icon-sign" href="http://www.xueersi.com/MyCourses/courseStudy/9864-37284-78205/b958c65290547cc14ad5c92fe2e3d87c" title="水之乐园：说说我是谁第一段">第1节</a>
@@ -52,13 +52,13 @@
 					</li>
 					<li class="">
 						<p class="icon-live">
-							<a href="http://www.xueersi.com/MyCourses/courseStudy/9864-37284-78205/b958c65290547cc14ad5c92fe2e3d87c" title="水之乐园：说说我是谁第一段">第3节</a>
+							<a href="http://www.xueersi.com/MyCourses/courseStudy/9864-37284-78205/b958c65290547cc14ad5c92fe2e3d87c" title="水之乐园：说说我是谁第一段">第3节</a><span class="errorExplain">堪误说明</span>
 						</p>
 					</li>
 
 					<li class="last">
 						<p class="icon-live icon-tests">
-							<a onclick="study.chapterTestStart()" href="###">本讲测试</a>
+                            <a onclick="chapterTestStart()" href="###" class="icon-sign">本讲测试</a>
 						</p>
 					</li>
 					<!--************************讲测试判断结束*****************************-->
@@ -85,6 +85,69 @@
 						<p class="icon-corner">
 							<span>
 								<a href="http://www.xueersi.com/MyCourses/courseStudy/8704-37274-67176/359e751d0e0e42ea09384e7326918ed1" title="神奇峡谷欢迎你：轻轻松松学拼音（1）">第3讲 神奇峡谷欢迎你：轻轻松松学拼音（1）</a>
+							</span>
+						</p>
+					</li>
+					<li class="">
+						<p class="icon-corner">
+							<span>
+								<a href="http://www.xueersi.com/MyCourses/courseStudy/8704-37274-67176/359e751d0e0e42ea09384e7326918ed1" title="神奇峡谷欢迎你：轻轻松松学拼音（1）">第2讲 神奇峡谷欢迎你：轻轻松松学拼音（1）</a>
+							</span>
+						</p>
+					</li>
+					<li class="">
+						<p class="icon-corner">
+							<span>
+								<a href="http://www.xueersi.com/MyCourses/courseStudy/8704-37274-67176/359e751d0e0e42ea09384e7326918ed1" title="神奇峡谷欢迎你：轻轻松松学拼音（1）">第2讲 神奇峡谷欢迎你：轻轻松松学拼音（1）</a>
+							</span>
+						</p>
+					</li>
+					<li class="">
+						<p class="icon-corner">
+							<span>
+								<a href="http://www.xueersi.com/MyCourses/courseStudy/8704-37274-67176/359e751d0e0e42ea09384e7326918ed1" title="神奇峡谷欢迎你：轻轻松松学拼音（1）">第2讲 神奇峡谷欢迎你：轻轻松松学拼音（1）</a>
+							</span>
+						</p>
+					</li>
+					<li class="">
+						<p class="icon-corner">
+							<span>
+								<a href="http://www.xueersi.com/MyCourses/courseStudy/8704-37274-67176/359e751d0e0e42ea09384e7326918ed1" title="神奇峡谷欢迎你：轻轻松松学拼音（1）">第2讲 神奇峡谷欢迎你：轻轻松松学拼音（1）</a>
+							</span>
+						</p>
+					</li>
+					<li class="">
+						<p class="icon-corner">
+							<span>
+								<a href="http://www.xueersi.com/MyCourses/courseStudy/8704-37274-67176/359e751d0e0e42ea09384e7326918ed1" title="神奇峡谷欢迎你：轻轻松松学拼音（1）">第2讲 神奇峡谷欢迎你：轻轻松松学拼音（1）</a>
+							</span>
+						</p>
+					</li>
+					<li class="">
+						<p class="icon-corner">
+							<span>
+								<a href="http://www.xueersi.com/MyCourses/courseStudy/8704-37274-67176/359e751d0e0e42ea09384e7326918ed1" title="神奇峡谷欢迎你：轻轻松松学拼音（1）">第2讲 神奇峡谷欢迎你：轻轻松松学拼音（1）</a>
+							</span>
+						</p>
+					</li>
+					<li class="">
+						<p class="icon-corner">
+							<span>
+								<a href="http://www.xueersi.com/MyCourses/courseStudy/8704-37274-67176/359e751d0e0e42ea09384e7326918ed1" title="神奇峡谷欢迎你：轻轻松松学拼音（1）">第2讲 神奇峡谷欢迎你：轻轻松松学拼音（1）</a>
+							</span>
+						</p>
+					</li>
+					<li class="">
+						<p class="icon-corner">
+							<span>
+								<a href="http://www.xueersi.com/MyCourses/courseStudy/8704-37274-67176/359e751d0e0e42ea09384e7326918ed1" title="神奇峡谷欢迎你：轻轻松松学拼音（1）">第2讲 神奇峡谷欢迎你：轻轻松松学拼音（1）</a>
+							</span>
+						</p>
+					</li>
+					<li class="">
+						<p class="icon-corner">
+							<span>
+								<a href="http://www.xueersi.com/MyCourses/courseStudy/8704-37274-67176/359e751d0e0e42ea09384e7326918ed1" title="神奇峡谷欢迎你：轻轻松松学拼音（1）">第2讲 神奇峡谷欢迎你：轻轻松松学拼音（1）</a>
 							</span>
 						</p>
 					</li>
@@ -136,9 +199,34 @@
 		<span class="look-right">10</span>
 	</div>
 </div>
+<!--浮边的签到和问老师 Start-->
+<div class="sideSingInItems">
+    <ul>
+        <li class="singIn singInFinish">
+            <a href="javascript:void(0);"></a>
+        </li>
+        <li class="askTeacher">
+            <a href="11111.html"></a>
+        </li>
+<!--
+        <li id="singInLayer">
+            //<p>今日签到成功，获得<strong>10</strong>个金币<br/>
+            再连续<strong>10</strong>天可额外获得<strong>10</strong>个金币</p>
+        </li>
+-->
+    </ul>
+    <div id="sign_in_data" data-value='{"isSignIn":1,"days":"8","gold":10,"nextGold":0,"nextDays":7,"rewardGold":0}'></div>
+
+</div>
+<!--浮边的签到和问老师 End-->
+<!--堪误说明 Start-->
+<div class="errorExplainCon"></div>
+<!--堪误说明 Start-->
 <script>
-		$(function(){
-			$('#outline1').jScrollPane();
-    		$('#outline2').jScrollPane();
-		 });
-	</script>
+    $(function() {
+        $('#outline1').jScrollPane();
+        $('#outline2').jScrollPane();
+    });
+</script>
+
+

@@ -138,6 +138,7 @@ $(function(){
     });
     function goldTabAJax(e, p) {//封装ajax方法
         var _url = $(e).data('url');
+        //console.log($(e));
         $.ajax({
             url: _url,
             type: 'post',
@@ -336,7 +337,6 @@ $(function(){
 //魔法卡兑换
     $body.on('click','.red-card-exchange',function(){
         var redCardId = $(this).closest('.red-card-box').attr('id'),
-            $spam = '/static/img/Spam.png',
             $rct = $('.red-card-tip'),
             div = $rct.html();
         $.ajax({
@@ -357,7 +357,7 @@ $(function(){
                     if(div !== ''){
                         event.preventDefault();
                     }else{
-                        $rct.append('<div class="alert alert-danger fade in"><img src="'+ $spam +'" class="alertImg"><span>'+msg.msg+'</span></div>')
+                        $rct.append('<div class="alert alert-danger fade in"><span class="glyphicon glyphicon-exclamation-sign gold-tip-alert"></span><span>'+msg.msg+'</span></div>')
                     }
                 }
                 if(msg.sign == 1){

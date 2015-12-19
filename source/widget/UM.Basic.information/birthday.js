@@ -90,24 +90,58 @@ ms_DatePicker: function (options) {
                     }
                 }
             }
+            //格式验证
+            dateFormat = function () {
+                if ($YearSelector.val() == 0){
+                    $(".date-warning").css({
+                      'display': 'none',
+                    }).html(null);
 
+                    $('#year,#month,#day').css({
+                        border: '1px solid #eaeaea'
+                    });
+                    return true
+                }else{
+                    if ($MonthSelector.val() == 0) {
+                        $(".date-warning").css({
+                          'display': 'block',
+                        }).html("请输入月份");
+                        $('#year,#month,#day').css({
+                            border: '1px solid #eaeaea'
+                        });
+                    }else{
+                        if ($DaySelector.val() == 0) {
+                            $(".date-warning").css({
+                              'display': 'block',
+                            }).html("请输入日");
+                            $('#year,#month,#day').css({
+                                border: '1px solid #eaeaea'
+                            });
+                        }else{
+                            $(".date-warning").css({
+                              'display': 'none',
+                            }).html(null);
+
+                            $('#year,#month,#day').css({
+                                border: '1px solid #68c04a'
+                            });
+                            return true
+                        }
+                    }
+                }
+            }
+
+            $YearSelector.change(function () {
+                BuildMonth();
+                BuildDay();
+                dateFormat();
+            });
             $MonthSelector.change(function () {
                 BuildDay();
-                $('#month').css({
-                    border: '1px solid #68c04a'
-                });
-            });
-            $YearSelector.change(function () {
-                BuildMonth()
-                BuildDay();
-                $('#year').css({
-                    border: '1px solid #68c04a'
-                });
+                dateFormat();
             });
             $DaySelector.change(function () {
-                $('#day').css({
-                    border: '1px solid #68c04a'
-                });
+                dateFormat();
             });
             if($DaySelector.attr("rel")!=""){
                 var daySel = $DaySelector.attr("rel");

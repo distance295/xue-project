@@ -3,6 +3,9 @@
 var xue = xue || {};
     xue.ajaxCheck = xue.ajaxCheck || {};
 
+xue.alert = function(tips){
+    alert(tips);
+};
 xue.ajaxCheck.html = function( str ){
     if(!str){ 
         //xue.alert('数据读取错误……');
@@ -15,10 +18,10 @@ xue.ajaxCheck.html = function( str ){
         window.location.href = str;
         return false;
     }else{
-        // if(str.substr(0,6) == 'error:'){
-            return false;
-        // }
-        // return str;
+         if(str.substr(0,6) == 'error:'){
+             alert(str);
+             return false;
+         }
     }
 };
 
@@ -29,6 +32,7 @@ xue.ajaxCheck.json = function( d ){
     }
     var tp = d.sign, msg = d.msg;
     if(tp === 0){
+        xue.alert(msg);
         return false;
     }
     if(tp === 2){

@@ -5,6 +5,36 @@
  * @date    2015-10-21 14:22:33
  * @version $Id$
  */
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *模拟听课页---讲节列表过多时的滚动条
+ * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+ * may not operate correctly without them.
+ */
+.jspContainer{overflow: hidden;position: relative;}
+.jspPane{position: absolute;}
+.jspHorizontalBar{position: absolute;bottom: 0;left: 0;width: 100%;height: 16px;background: red;display: none;}
+.jspCap{display: none;}
+.jspHorizontalBar .jspCap{float: left;}
+.jspHorizontalBar .jspTrack{float: left;height: 100%;display: none;}
+.jspHorizontalBar .jspDrag{float: left;height: 100%;}
+
+.jspArrow{background: #50506d;text-indent: -20000px;display: block;cursor: pointer;padding: 0;margin: 0;}
+.jspArrow.jspDisabled{cursor: default;background: #80808d;}
+.jspCorner{background: #eeeef4;float: left;height: 100%;}
+
+.jspVerticalBar .jspArrow{height: 16px;}
+.jspHorizontalBar .jspArrow{width: 16px;float: left;height: 100%;}
+.jspVerticalBar .jspArrow:focus{outline: none;}
+.jspVerticalBar{position: absolute;top: 0;right: 0;width: 16px;height: 100%;background: none;}
+/*滚动整条背景色*/
+
+.jspTrack{position: relative;background: none;}
+
+/*滚轮条背景色*/
+.jspDrag{width:8px;border-radius:4px;position: relative;top: 0;left: 0;cursor: pointer;background:#cccccc repeat-y;margin:0 auto;}
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner{margin: 0 -3px 0 0;}
 
 //学习课程页样式
 		.ui-margin {width: 980px;margin: 0 auto;overflow: hidden;}
@@ -47,14 +77,14 @@
 						.scrolls-item {
 							display: none;overflow: hidden;height: 427px;
 							.jspPane {overflow: hidden;}
-							//讲列表
+							//节列表
 							ul.select-list{
 								width:230px;overflow: hidden;margin:0;padding:0;background: url(img/scroll_ul.jpg) 22px 0 repeat-y;
 								li.scrolls_title {
-									height: 41px;line-height: 41px;border-bottom: 1px solid #e9e9e9;background: url(img/tingkeyebg.jpg) repeat-y;padding-left: 20px;font-size: 14px;
+									height: 41px;line-height: 41px;border-bottom: 1px solid #e9e9e9;background: url(img/tingkeyebg.jpg) repeat-y;padding-left: 20px;padding-right: 10px; font-size: 14px;overflow: hidden;
 								}
 				                  li {
-				                  	 padding-left: 42px;background: url(img/scroll_li.jpg) 28px 20px no-repeat;
+				                  	 padding-left: 42px;background: url(img/scroll_li.jpg) 28px 20px no-repeat;position: relative;
 				                    p.icon-live {
 				                       height: 43px;line-height: 43px;background: url(img/icon2_03.png) 1px 14px no-repeat;padding-left: 20px;margin:0;
 				                  	 	a {
@@ -64,6 +94,9 @@
 				                  	 		}
 				                  	 		&:hover {color: #3bafda;}
 				                  	 	}
+                                        span.errorExplain{
+                                           display: block;width: 60px;color: red;cursor: pointer;position: absolute;left:120px;top:0;z-index: 1;
+                                        }
 				                  	 	&.icon-tests {
 				                  	 		background: url(img/copy.png) 1px 14px no-repeat;
 				                  	 	}
@@ -80,7 +113,7 @@
 				                    &.last {background: url(img/last.jpg) 22px 1px no-repeat;}
 				              }
 				            }
-				            //节列表
+				            //讲列表
 							ul.select-say-list {
 								overflow: hidden;margin:0;padding:0;
 								li {
@@ -88,12 +121,12 @@
 									 p.icon-corner {
 									 	 height:43px;line-height: 43px;margin:0;background: url(img/icon_03_white.gif) 10px 16px no-repeat;padding-left: 25px;
 									 	 span {
-									 	 	display: block;width: 190px;
+									 	 	display: block;width: 180px;
 									 	 	&.icon-sign {
 				                  	 			background: url(img/icon_07_white.gif) right 14px no-repeat;
 				                  	 		}
 					                  	 	a {
-										 	 	display: block;width: 145px;font-size: 12px;color: #666;
+										 	 	display: block;width: 160px;font-size: 12px;color: #666;
 										 	 	&:hover {color: #3bafda;}
 										 	 }
 									 	 }
@@ -179,40 +212,68 @@
 		    	span.look-right {color: #999;}
 		    }
 		}
+#xuebox_focusTips {
+    .dialog_content {
+        padding:10px;
+        strong {
+             color: #cc0000;font-size: 12px;font-weight: normal;
+        }
+    }   
+}
 		// 看点end
+//浮边的签到和问老师
+.sideSingInItems {
+    width: 60px;
+    height: 121px;
+    position: fixed;
+    right: 1px;
+    top: 50%;
+    ul {
+        position: relative;
+        li {
+            width: 60px; overflow: hidden;
+            a {
+                display: block;
+                width: 60px;
+                height: 60px;
+            }
+            &.singIn {
+                height: 60px;
+                background: url(img/side_1.png) 0 0 no-repeat;
+            }
+            &.askTeacher {
+                height: 61px;
+                background: url(img/side_1.png) 0 -60px no-repeat;
+            }
+            &.singInFinish {
+                     background: url(img/side_2.png) 0 0 no-repeat;
+            }
+            &#singInLayer {
+                width: 226px;
+                height: 60px;
+                position: absolute;
+                right:60px;
+                top:0;
+                z-index:1;
+                border: 1px solid #ccc;
+                background: #fff;
+                p {
+                    font-size: 12px;
+                    color: #666;
+                    padding-left: 10px;
+                    &.tp {
+                        padding-top:8px;
+                    }
+                    strong {
+                        color: #cc0000;
+                        padding:0 5px;
+                    }
+                }
+            }
+        }
+    }
+}
 
-
-
-/*
- * CSS Styles that are needed by jScrollPane for it to operate correctly.
- *模拟听课页---讲节列表过多时的滚动条
- * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
- * may not operate correctly without them.
- */
-.jspContainer{overflow: hidden;position: relative;}
-.jspPane{position: absolute;}
-.jspHorizontalBar{position: absolute;bottom: 0;left: 0;width: 100%;height: 16px;background: red;display: none;}
-.jspCap{display: none;}
-.jspHorizontalBar .jspCap{float: left;}
-.jspHorizontalBar .jspTrack{float: left;height: 100%;display: none;}
-.jspHorizontalBar .jspDrag{float: left;height: 100%;}
-
-.jspArrow{background: #50506d;text-indent: -20000px;display: block;cursor: pointer;padding: 0;margin: 0;}
-.jspArrow.jspDisabled{cursor: default;background: #80808d;}
-.jspCorner{background: #eeeef4;float: left;height: 100%;}
-
-.jspVerticalBar .jspArrow{height: 16px;}
-.jspHorizontalBar .jspArrow{width: 16px;float: left;height: 100%;}
-.jspVerticalBar .jspArrow:focus{outline: none;}
-.jspVerticalBar{position: absolute;top: 0;right: 0;width: 16px;height: 100%;background: none;}
-/*滚动整条背景色*/
-
-.jspTrack{position: relative;background: none;}
-
-/*滚轮条背景色*/
-.jspDrag{width:8px;border-radius:4px;position: relative;top: 0;left: 0;cursor: pointer;background:#cccccc repeat-y;margin:0 auto;}
-/* Yuk! CSS Hack for IE6 3 pixel bug :( */
-* html .jspCorner{margin: 0 -3px 0 0;}
 
 /* 讲测评css start */
 #chapterTestStart{

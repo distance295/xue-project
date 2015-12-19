@@ -425,6 +425,9 @@ fis.media('home')
     .match('/conf/deploy-home.bat',{
         release: '/deploy.bat'
     })
+    .match('/conf/deploy-home.sh',{
+        release: '/deploy.sh'
+    })
 ;
 
 // ----------------------------------------------------------------------------- mall

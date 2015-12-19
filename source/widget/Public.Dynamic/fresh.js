@@ -9,7 +9,8 @@
 
 var fresh = fresh || {};
 fresh.path = fresh.path || {};
-fresh.path.url = '/data/Dynamic/';
+//fresh.path.url = '/data/Dynamic/';
+fresh.path.url = '/Dynamic/';
 fresh.path.img = '/static/img/';
 fresh.emoteHmtl = null;
 
@@ -109,8 +110,10 @@ fresh.media = fresh.media || {};
             _stuAnswer = $.trim(that.text());
 
         $.ajax({
-              url: fresh.path.url + 'answer.json',
-              type : 'get',
+              //url: fresh.path.url + 'answer.json',
+              url: fresh.path.url + 'ajaxSaveDynQueLog',
+              //type : 'get',
+              type : 'post',
               dataType : 'json',
               data : {
                   url : _url,
@@ -412,14 +415,16 @@ fresh.comment = fresh.comment || {};
         }else{
            return false;
         }
+
+        var _params = fc.param.commentBox.prev('.fresh-barinfo').find('.fresh-comment-expand-btn').data('params');
         //ajax获取评论信息
         $.ajax({
-            url: fresh.path.url + "coment.html",
-            type: 'get',
+            //url: fresh.path.url + "coment.html",
+            //type: 'get',
+            url: fresh.path.url + "dynComList",
+            type: 'post',
             dataType: 'html',
-            data: {
-                'dynId': fc.id
-            },
+            data: _params,
             beforeSend: function() {
                 fc.param.infoBox.html('<span class="fresh-commentInfo-loading">Loading...</span>');
             },
@@ -537,9 +542,12 @@ fresh.comment = fresh.comment || {};
             'verificationCode': vd
         };
         $.ajax({
-            url: fresh.path.url + 'ajaxAddDynComment.json',//添加成功与否验证ajax
-            data: param + '&content=' + encodeURIComponent(val) + '&verificationCode=' + vd,
-            type: 'get',
+            //url: fresh.path.url + 'ajaxAddDynComment.json',//添加成功与否验证ajax
+            //data: param + '&content=' + encodeURIComponent(val) + '&verificationCode=' + vd,
+            //type: 'get',
+            url: fresh.path.url + 'ajaxAddDynComment',//添加成功与否验证ajax
+            data: param,
+            type: 'post',
             dataType: 'json',
             beforeSend: function() {
                 fc.param.form.before('<div class="fresh-comment-status"><span class="fresh-comment-loading">Loading...</span></div>');
@@ -648,8 +656,10 @@ fresh.comment = fresh.comment || {};
         var _par = _dataInfo.data('params');
         var _ty = _dataInfo.data('codetype');
         $.ajax({
-            url: fresh.path.url + 'ajaxCheckVerCode.json',
-            type: 'get',
+            //url: fresh.path.url + 'ajaxCheckVerCode.json',
+            //type: 'get',
+            url: fresh.path.url + 'ajaxCheckVerCode',
+            type: 'post',
             dataType: 'JSON',
             data: _par + '&codetype='+_ty,
             success: function(data) {
@@ -795,8 +805,10 @@ fresh.comment = fresh.comment || {};
         
         if( !fresh.emoteHmtl ){
             $.ajax({
-                  url: fresh.path.url + 'emote.html',
-                  type: 'get',
+                  //url: fresh.path.url + 'emote.html',
+                  //type: 'get',
+                  url: fresh.path.url + 'ajaxGetEmoList',
+                  type: 'post',
                   dataType: 'html',
                   success: function(data) {
                           fresh.emoteHmtl = data;
@@ -876,8 +888,10 @@ fresh.comment = fresh.comment || {};
         //点击确认按钮删除
         $('body').off('click', '.fresh-dialog-delete .fresh-sure-btn').on('click', '.fresh-dialog-delete .fresh-sure-btn', function(){
               $.ajax({
-                  url: fresh.path.url + "ajaxDelDynamic.json",
-                  type: 'get',
+                  //url: fresh.path.url + "ajaxDelDynamic.json",
+                  //type: 'get',
+                  url: fresh.path.url + _url,
+                  type: 'post',
                   dataType: 'json',
                   data: _data,
                   success: function(data) {
@@ -966,9 +980,11 @@ fresh.collect = fresh.collect || {};
         }
         that.removeClass('fresh-collect-add-btn');
         $.ajax({
-            url: fresh.path.url + 'ajaxAddCollect.json',
+            //url: fresh.path.url + 'ajaxAddCollect.json',
+            //type : 'get',
+            url: fresh.path.url + 'ajaxAddCollect',
+            type : 'post',
             data:params,
-            type : 'get',
             dataType:'json',
             success:function(data){
                 if(data){
@@ -1013,9 +1029,11 @@ fresh.collect = fresh.collect || {};
         }
         that.removeClass('fresh-collect-cancel-btn');
         $.ajax({
-            url: fresh.path.url + 'ajaxCancelCollect.json',
+            //url: fresh.path.url + 'ajaxCancelCollect.json',
+            //type : 'get',
+            url: fresh.path.url + 'ajaxCancelCollect',
+            type : 'post',
             data:params,
-            type : 'get',
             dataType:'json',
             success:function(data){
                 if(data){
@@ -1266,8 +1284,10 @@ fresh.attention = fresh.attention || {};
         var _type = $(dom).data().type;
         var _params = $(dom).data().params + '&type=' + _type;
         $.ajax({
-            url: fresh.path.url + 'ajaxFollow.json',
-            type: "get",
+            //url: fresh.path.url + 'ajaxFollow.json',
+            //type: "get",
+            url: fresh.path.url + 'ajaxFollow',
+            type: "post",
             timeout: 7000,
             dataType: 'json',
             data: _params,
