@@ -23,7 +23,7 @@
                 </div>
                 <div class="hl-box">
                     <div id="preview" style="display:inline-block;">
-                        <span><img id="imghead" src='img/headp.jpg'></span>
+                        <span id="preview-img"><img id="imghead" src='img/headp.jpg'></span>
                     </div>
                     <div class="btn_up">
                         <button id="upload_img" class="btn_loadFile btn btn-info">+ 上传头像</button>

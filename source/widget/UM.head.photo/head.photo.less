@@ -106,14 +106,13 @@
                         margin-left: auto;
                         margin-right: auto;
                         #imghead{
-                            position: static !important;
-                            position: relative;
-                            top: auto !important;
-                            top: -50%;
-                            left: auto !important;
-                            left: -50%;
-                            max-width: 400px;
-                            max-height: 340px;
+                           position: static !important;
+                           position: relative;
+                           top: auto !important;
+                           top: -50%;
+                           left: auto !important;
+                           left: -50%;
+                           filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
                         }
                     }
                 }
@@ -131,14 +130,34 @@
                         position: absolute;
                         top: 375px;
                         left: 300px;
-                        fontSize: 14px;
+                        font-size: 14px;
                         width: 100px;
                         height: 35px;
                     }
                 }
-                #loadFile{
+                .input_file{
                     position: absolute;
-                    visibility: hidden;
+                    width: 150px;
+                    height: 42px;
+                    top: 150px;
+                    left: 125px;
+                    font-size: 45px\9;
+                    filter:alpha(opacity=0); 
+                    -moz-opacity:0; 
+                    opacity:0;
+                    cursor: pointer;
+                }
+                .btnl-change{
+                    position: absolute;
+                    top: 375px;
+                    left: 300px;
+                    font-size: 45px\9;
+                    width: 100px;
+                    height: 35px;
+                    filter:alpha(opacity=0); 
+                    -moz-opacity:0; 
+                    opacity:0;
+                    cursor: pointer;
                 }
                 em{
                     position: absolute;
