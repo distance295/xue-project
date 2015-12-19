@@ -3,7 +3,7 @@
     @require card.learn.js
 -->
 
-<div class="gift-card-record">
+<div class="gift-card">
      <ul id="pay_tab">
          <li class="current">
              <a href="#">学习卡充值</a>

@@ -1,6 +1,6 @@
 var xue =xue || {};
 
-/* <-----头像tab切换------> */
+/* =====================头像tab切换===================== */
 $('#head_tab li').click(function(e){
     var box = $(".hp-box-left").children();
     e.preventDefault();
@@ -9,7 +9,7 @@ $('#head_tab li').click(function(e){
     box.eq(index).addClass("active").siblings().removeClass("active");
 });
 
-/* <-----推荐头像------> */
+/* =====================推荐头像===================== */
 $(".hpr-img").on("click",function(){
    var url = $(this).attr("src");
    $(this).addClass('imghover').siblings().removeClass("imghover");
@@ -34,7 +34,7 @@ $(".hpr-btn").on('click', function(){
     });
 });
 
-/* <-----自定义上传头像------> */
+/* =====================自定义上传头像===================== */
 
 /* 上传头像后端错误信息 */
 var headError = $(".img-error span").is(":empty");

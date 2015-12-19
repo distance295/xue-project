@@ -208,19 +208,25 @@
         <li class="askTeacher">
             <a href="11111.html"></a>
         </li>
+<!--
         <li id="singInLayer">
-            <p>今日签到成功，获得<strong>10</strong>个金币<br/>
+            //<p>今日签到成功，获得<strong>10</strong>个金币<br/>
             再连续<strong>10</strong>天可额外获得<strong>10</strong>个金币</p>
         </li>
+-->
     </ul>
+    <div id="sign_in_data" data-value='{"isSignIn":1,"days":"8","gold":10,"nextGold":0,"nextDays":7,"rewardGold":0}'></div>
+
 </div>
 <!--浮边的签到和问老师 End-->
 <!--堪误说明 Start-->
 <div class="errorExplainCon"></div>
 <!--堪误说明 Start-->
 <script>
-		$(function(){
-			$('#outline1').jScrollPane();
-    		$('#outline2').jScrollPane();
-		 });
-	</script>
+    $(function() {
+        $('#outline1').jScrollPane();
+        $('#outline2').jScrollPane();
+    });
+</script>
+
+
