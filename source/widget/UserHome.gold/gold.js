@@ -146,7 +146,6 @@ $(function(){
             data: p,
             success: function (result) {
                 if (result.substr(0, 4) == 'http' || result.substr(0, 1) == '/') {
-                    alert(result);
                     window.location.href = result;
                     return;
                 }
@@ -255,11 +254,13 @@ $(function(){
     $gsp.on({
         mouseenter:function(){
             $(this)
+                .stop()
                 .css({'box-shadow':'0 1px 5px 0px #666'},300)
                 .animate({'margin-top':5},300);
         },
         mouseleave:function(){
             $(this)
+                .stop()
                 .css({'box-shadow':'none'},300)
                 .animate({'margin-top':10},300)
         }
@@ -268,11 +269,13 @@ $(function(){
     $gsc.on({
         mouseenter:function(){
             $(this)
+                .stop()
                 .css({'box-shadow':'0 1px 5px 0px #666'},300)
                 .animate({'margin-top':5},300);
         },
         mouseleave:function(){
             $(this)
+                .stop()
                 .css({'box-shadow':'none'},300)
                 .animate({'margin-top':10},300)
         }
@@ -280,11 +283,13 @@ $(function(){
     $gep.on({
         mouseenter:function(){
             $(this)
+                .stop()
                 .css({'box-shadow':'0 1px 5px 0px #666'},300)
                 .animate({'margin-top':5},300);
         },
         mouseleave:function(){
             $(this)
+                .stop()
                 .css({'box-shadow':'none'},300)
                 .animate({'margin-top':10},300)
         }
@@ -294,14 +299,18 @@ $(function(){
         $body = $('body'),
         pabLabel = '.present-address-box form label',
         presentAdd = '.present-add',
-        presentDec = '.present-dec';
+        presentDec = '.present-dec',
+        redCardAdd = '.red-card-add',
+        redCardDec = '.red-card-dec';
 
     //魔法卡兑换模态框
     $body.on('click', '.gold-store-card-exchange', function () {
         var cardid = $(this).closest('.gold-store-card').attr('id');
         $.ajax({
             url: '/GoldShop/magicDetail',
+            //url: '/data/gold/gold-card-modal.html',
             type: 'post',
+            //type: 'get',
             dataType: 'html',
             data: {
                 id: cardid
@@ -332,6 +341,55 @@ $(function(){
 
         $('#cardModal').modal('show');
 
+        var
+            $rcig = $('.red-card-intro-gold em'),
+            $redCardPiece = $('.red-card-piece em'),
+            gold = parseInt($rcig.html()),
+            piece = parseInt($redCardPiece.html()),
+            $redCardNum = $('.red-card-num'),
+            exMax = $('#exchange_max').val();
+            //exMax = 19;
+        $body.on("click",redCardAdd,function(){
+            //console.log($pig.length);
+            var num = parseInt($redCardNum.html());
+            if(num == 0 || num < 0){
+                $redCardNum.html(0);
+                $rcig.html(gold);
+            }else if(num >= exMax){
+                $redCardNum.html(exMax);
+                $rcig.html(gold * exMax);
+            }else if(num >= piece - 1){
+                $redCardNum.html(piece);
+                $rcig.html(gold * piece);
+                $(redCardAdd).css({'background-color':'#b5b5b5'});
+            }
+            else{
+                $redCardNum.html(num + 1);
+                $rcig.html(gold * (num + 1));
+                //console.log($(redCardAdd))
+                $(redCardAdd).css({'background-color':'#3398cc'});
+                $(redCardDec).css({'background-color':'#3398cc'});
+            }
+        });
+        $body.on("click",redCardDec,function(){
+            var num = parseInt($redCardNum.html());
+            if(num == 1)
+            {
+                $redCardNum.html(num);
+                $rcig.html(gold);
+
+            }else if(num ==2){
+                $redCardNum.html(num - 1);
+                $rcig.html(gold * (num - 1));
+                $(redCardDec).css({'background-color':'#b5b5b5'});
+            }
+            else{
+                $redCardNum.html(num - 1);
+                $rcig.html(gold * (num - 1));
+                $(redCardDec).css({'background-color':'#3398cc'});
+                $(redCardAdd).css({'background-color':'#3398cc'});
+            }
+        });
     };
 
 //魔法卡兑换
@@ -377,8 +435,9 @@ $(function(){
                     });
                 }
             }
-        })
+        });
     });
+
 
 //实物兑换模态框
 
@@ -386,7 +445,9 @@ $(function(){
         var presentid = $(this).closest('.gold-store-present-card').attr('id');
         $.ajax({
             url: '/GoldShop/realAwardDetail',
+            //url:'/data/gold/gold-present-modal.html',
             type: 'post',
+            //type:'get',
             dataType: 'html',
             data: {
                 id: presentid
@@ -406,7 +467,7 @@ $(function(){
     goldPresentModal.showModal = function(con){
         var that = $(this), data = that.data();
         var con = con;
-        console.log(data);
+        //console.log(data);
         createModal.show({
             id : 'presentModal',
             width : '740',
@@ -456,13 +517,16 @@ $(function(){
             }else if(num >= exMax){
                 $presentNum.html(exMax);
                 $pig.html(gold * exMax);
-            }else if(num > piece - 1){
+            }else if(num >= piece - 1){
                 $presentNum.html(piece);
                 $pig.html(gold * piece);
+                $(presentAdd).css({'background-color':'#b5b5b5'});
             }
             else{
                 $presentNum.html(num + 1);
                 $pig.html(gold * (num + 1));
+                $(presentAdd).css({'background-color':'#3398cc'});
+                $(presentDec).css({'background-color':'#3398cc'});
             }
         });
         $body.on("click",presentDec,function(){
@@ -471,13 +535,17 @@ $(function(){
             {
                 $presentNum.html(num);
                 $pig.html(gold);
-            }else if(num == 0 || num < 0){
-                $presentNum.html(0);
-                $pig.html(gold);
+
+            }else if(num ==2){
+                $presentNum.html(num - 1);
+                $pig.html(gold * (num - 1));
+                $(presentDec).css({'background-color':'#b5b5b5'});
             }
             else{
                 $presentNum.html(num - 1);
                 $pig.html(gold * (num - 1));
+                $(presentDec).css({'background-color':'#3398cc'});
+                $(presentAdd).css({'background-color':'#3398cc'});
             }
         });
     };
