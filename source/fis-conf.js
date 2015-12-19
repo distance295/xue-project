@@ -204,6 +204,7 @@ var __ignore = {
         'Public.Footer',
         'Public.Header',
         'Public.MiniCart',
+        'Module.Paginator',
 //        'UserHome.gold',    // 临时屏蔽下
         'Public.Nav'
 //        'Public.Selector'        
