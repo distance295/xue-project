@@ -223,8 +223,10 @@
 <div class="errorExplainCon"></div>
 <!--堪误说明 Start-->
 <script>
-		$(function(){
-			$('#outline1').jScrollPane();
-    		$('#outline2').jScrollPane();
-		 });
-	</script>
+    $(function() {
+        $('#outline1').jScrollPane();
+        $('#outline2').jScrollPane();
+    });
+</script>
+
+
