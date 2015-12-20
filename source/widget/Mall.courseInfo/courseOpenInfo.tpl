@@ -68,17 +68,47 @@
 				</div>
 			</div>
 			<div class="open-course-button">
-				<div class="main-teacher f-left">
-					<div class="ui-avatar f-left">
-						<img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt=""></div>
-					<div class="teacher-avatar-infor f-left">
-						<p>朱韬老师</p>
-						<p>
-							教学满意度
-							<span>92.71</span>
-						</p>
-					</div>
-				</div>
+			<span class="c-teacher f-left">主讲老师：</span>
+			<!--多个老师头像左右切换-->
+                <div class="ui_avatar_con">
+                    <a href="javascript:void(0);" class="prev none"><em class="icon icon-chevron-left">左</em></a>
+                    <div class="ui_avatar">
+                        <ul class="avatar_items" style="margin-left: 0px;">
+                            <li>
+                                <a href="http://www.xueersi.com/t/zhutao/" class="userpic" target="_blank">
+                                    <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="">
+                                </a>
+                                <span>朱韬老师1</span>
+                            </li>
+                             <li>
+                                <a href="http://www.xueersi.com/t/zhutao/" class="userpic" target="_blank">
+                                    <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="">
+                                </a>
+                                <span>朱韬老师2</span>
+                            </li>
+                             <li>
+                                <a href="http://www.xueersi.com/t/zhutao/" class="userpic" target="_blank">
+                                    <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="">
+                                </a>
+                                <span>朱韬老师3</span>
+                            </li>
+                             <li>
+                                <a href="http://www.xueersi.com/t/zhutao/" class="userpic" target="_blank">
+                                    <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="">
+                                </a>
+                                <span>朱韬老师4</span>
+                            </li>
+                             <li>
+                                <a href="http://www.xueersi.com/t/zhutao/" class="userpic" target="_blank">
+                                    <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="">
+                                </a>
+                                <span>朱韬老师5</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="javascript:void(0);" class="next"><em class="icon icon-chevron-right">右</em></a>
+                </div>
+<!--多个老师头像左右切换-->
 				<div class="course-button-list f-right">
 					<span class="open-listen-num f-left">31060</span>
 					<span class="collect f-left">

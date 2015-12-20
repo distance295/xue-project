@@ -19,18 +19,7 @@
 			</div>
 			<div class="course-content-teacher">
 				<span class="f-left">主讲老师：</span>
-<!--
-				<div class="main-teacher">
-                    //<div class="ui-avatar f-left">
-                        <a href="#">
-                            <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="">
-                        </a>
-                    </div>
-					<div class="teacher-avatar-infor f-left">
-						<p>朱韬老师</p>
-					</div>
-				</div>
--->
+
 <!--多个老师头像左右切换-->
                 <div class="ui_avatar_con">
                     <a href="javascript:void(0);" class="prev none"><em class="icon icon-chevron-left">左</em></a>
@@ -40,7 +29,7 @@
                                 <a href="http://www.xueersi.com/t/zhutao/" class="userpic" target="_blank">
                                     <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="">
                                 </a>
-                                <span>朱韬老师1</span>
+                                <span>达务力江老师</span>
                             </li>
                              <li>
                                 <a href="http://www.xueersi.com/t/zhutao/" class="userpic" target="_blank">
