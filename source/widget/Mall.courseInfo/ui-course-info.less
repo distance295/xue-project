@@ -8,7 +8,8 @@
 //课程详情页---包含直播--录播--免费课
 
 .ui-course-infor-wrap {
-	overflow: hidden;margin-bottom:20px;
+	overflow: hidden;
+    margin-bottom:20px;
 	.red{
 		color: #e74c3c;
 	}
@@ -50,7 +51,7 @@
 	   	  	}
 	   	  }
 	   	  .time-list-tips {
-	   	  	   width: 100%;height: 30px;line-height: 20px; background: url(img/icon_tips.png) 1px 1px no-repeat;padding-left: 22px;margin-left: 75px;
+	   	  	   width: 100%;height: 30px;line-height: 20px; background: url(img/icon_tips.png) 1px 2px no-repeat;padding-left: 22px;margin-left: 75px;color: #999;
 	   	  	   a {
 	   	  	   	color: #1e89e0;
 	   	  	   }
@@ -78,7 +79,7 @@
 	   		}
 	   }
 	   .course-favorable-money {
-	   		height: 60px;background: #f9f9f9;margin-bottom: 20px;padding-top: 10px;
+	   		height: 80px;background: #f9f9f9;margin-bottom: 15px;padding-top: 10px;position: relative;
 	   		.favrble-money {
 	   			width: 300px;padding-left: 10px;
 	   			span {
@@ -98,6 +99,21 @@
 	   				&.line {border-left: 1px solid #dcdcdc;}
 	   			}
 	   		}
+           .time-list-tips {
+               width:100%;
+               height: 20px;
+               line-height: 20px;
+               background: url(img/icon_tips.png) 1px 2px no-repeat;
+               padding-left: 22px;
+               position: absolute;
+               left:10px;
+               bottom: 7px;
+               z-index: 1;
+               color: #999;
+           }
+           &.course-favorable {
+               height: 60px;
+           }
 	   }
 	   .course-button-list {
 	   	     overflow: hidden;
@@ -108,11 +124,11 @@
 	   			width: 160px;height: 40px;padding:0;margin:0;font-size: 18px;border-radius: 2px;margin-right: 10px;
 	   		}
 			.collect {
-				 display: inline-block;background: url(img/icon_star.png) 0 5px no-repeat;padding-left:16px;margin:10px 0 0 20px;
+				 display: inline-block;background: url(img/icon_star.png) 0 2px no-repeat;padding-left:16px;margin:10px 0 0 20px;
               a {
                font-size: 14px;color: #333;
               }
-               &.collect_current {background: url(img/icon_star.png) no-repeat;cursor: default;}
+               &.collect_current {background: url(img/icon_star_gray.png) 0 2px no-repeat;cursor: default;}
             }
             .open-listen-num {
             	width: 70px;font-size: 20px;color: #e74c3c;background: url(img/icon_eye.png) 0 10px no-repeat;padding-left: 20px;margin-top:10px;
@@ -122,24 +138,100 @@
 	   &.course-video-back {
 			.course-content-text {height: 60px;}
 			.course-content-teacher {
-				height: 80px; overflow: hidden;
+				height: 60px; overflow: hidden;
 				span.f-left {
-					 width: 75px;font-size: 12px;line-height: 25px; padding-left: 10px;padding-top:20px;
+					 width: 75px;font-size: 12px;line-height: 25px; padding-left: 10px;padding-top:10px;
 				}
-				.main-teacher {
-					overflow: hidden;
-					.ui-avatar {
-						width: 60px;height: 60px;overflow: hidden;border-radius: 50%;
-						img {width: 60px;height: 60px;}
-					}
-					.teacher-avatar-infor {
-						width: 240px;
-						p{
-							height: 20px;line-height: 20px;font-size: 14px;font-weight: normal;margin:5px 0 5px 10px;
-							span {display: inline-block;padding-left:10px;}
-						}
-					}
-				}
+                   .ui_avatar_con {
+                       float: left;
+                        overflow: hidden;
+                       //老师头像区域样式
+                        .ui_avatar {
+                          float: left;
+                          display:inline;
+                          overflow: hidden;
+                          width: 120px;
+                            height: 40px;
+                         .avatar_items {
+                              overflow: hidden;
+                             width:2000px;
+                            li {
+                               float: left;
+                                display: inline;
+                                width: 120px;
+                                a {
+                                    float: left;
+                                    display: block;
+                                    width: 40px;
+                                    height: 40px;
+                                    overflow: hidden;
+                                    border-radius: 50%;
+                                    img {width: 40px;height: 40px;}
+                                }
+                                span {
+                                    float: left;
+                                    display: inline;
+                                    line-height: 40px;
+                                    margin-left:5px;
+                                }
+                            }
+                          }
+                        }
+                        //多个头像左右切换样式
+                        a {
+                            &.prev {
+                              float:left;
+                                display:inline;
+                                margin:12px 10px 0 0;
+                            }
+                            &.next {
+                              float:left;
+                                display:inline;
+                                margin:12px  0 0 10px;
+                            }
+                             em.icon {
+                                 display: inline-block;
+                                 height: 17px;
+                                 line-height: 17px;
+                                 text-align: center;
+                                 text-indent: -9999em;
+                                 vertical-align: top;
+                                 width: 17px;
+                                 &.icon-chevron-left {
+                                     background: url('img/icon_chevron_left.png') no-repeat 0 0;
+                                 }
+                                 &.icon-chevron-right {
+                                     background: url('img/icon_chevron_right.png') no-repeat 0 0;
+                                 }
+                             }
+                             &.none {
+                                 em.icon{
+                                      &.icon-chevron-left {
+                                         background: url('img/icon_chevron_left_none.png') no-repeat 0 0;
+                                     }
+                                     &.icon-chevron-right {
+                                         background: url('img/icon_chevron_right_none.png') no-repeat 0 0;
+                                     }
+                                 }
+                             }
+                         }
+                  //多个头像左右切换样式
+                         
+                }
+//				.main-teacher {
+//					overflow: hidden;
+//					.ui-avatar {
+//						width: 40px;height: 40px;overflow: hidden;border-radius: 50%;
+//						img {width: 40px;height: 40px;}
+//					}
+//					.teacher-avatar-infor {
+//						width: 240px;
+//						p{
+//							height: 20px;line-height: 20px;font-size: 14px;font-weight: normal;margin:10px 0 5px 10px;
+//							span {display: inline-block;padding-left:10px;}
+//						}
+//					}
+//				}
 			}
 			//免费课样式
 			.open-course-list {
@@ -207,14 +299,17 @@
 				.teacher-avatar-infor {
 					width: 140px;
 					p{
-						height: 20px;line-height: 20px;font-size: 14px;font-weight: normal;margin:5px 0 5px 10px;
+						line-height: 20px;font-size: 14px;margin:5px 0 5px 10px;
 						span {display: inline-block;padding-left:10px;}
+                        &.info {
+                            font-size: 12px;
+                        }
 					}
 				}
 			}
-			.teacher-infor {
-				line-height:180%;font-size: 12px;color: #666;overflow: hidden;margin-top: 10px;
-			}
+//			.teacher-infor {
+//				line-height:180%;font-size: 12px;color: #666;overflow: hidden;margin-top: 10px;
+//			}
 			&.noBorder {
 						border:none;
 					}
@@ -399,19 +494,19 @@
  * 课程详情页----课程评论框
 
  */
-.ui-comment-info {
+.comment_form {
 	overflow:hidden;background: #f3f3f3 ;padding:20px;margin-bottom: 20px;
-		.comment-title {height:30px;line-height:30px;}
-		.comment-textarea {
+		.comment_title {height:30px;line-height:30px;}
+		.comment_textarea {
 			overflow:hidden;
 			textarea {width:100%;height:100px;padding:5px; border:1px solid #ccc;}
 		}
-		.comment-func {
+		.comment_func {
 			overflow:hidden;height:50px;
-			.comment-tips {float:left;color:#cc0000;line-height:30px;}
-			.comment-button {
+			.comment_tips {display: none;float:left;color:#cc0000;line-height:30px;}
+			.comment_button {
 					float:right;
-					.btn-submit {width:70px;height:30px;line-height:20px;margin-top:5px;}
+					.btn_submit {width:70px;height:30px;line-height:20px;margin-top:5px;}
 			}
 		}
 }
