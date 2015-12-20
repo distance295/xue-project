@@ -67,107 +67,100 @@ function headsSave(){
     }
 }
 /* 上传头像input按钮绑定事件 */
-$("#upload_img").on('click', function(e) {
-    e.preventDefault();
-    $("#loadFile").click();
-});
-
 $("#loadFile").change(function(){
     var img = $("#loadFile").val();
     if(img == ''){
-      return true;
+      return false;
     }else{
         $(".hl-box em,.hl-box span").hide();
         $("#upload_img").removeClass("btn_loadFile").addClass("btn-change");
+        $("#loadFile").removeClass("input_file").addClass("btnl-change");
     }
 });
 
-function getFullPath(obj){
-    if(obj){
-        if (window.navigator.userAgent.indexOf("MSIE")>=1){
-            var imgs = $('#preview, #hp-small, #hp-middle, #hp-big');
-            try{
-                imgs.each(function(){
-                    var that = this,
-                    id = that.id,
-                    width = $(that).width(),
-                    height= $(that).height();
-                    $(that).find('img').empty();
-                    var newPreview = document.getElementById(id);    
-                    var imgDiv = document.createElement("div");
-                    document.body.appendChild(imgDiv);
-                    imgDiv.style.width = width + "px";
-                    imgDiv.style.height = height + "px";
-                    imgDiv.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod = scale)";   
-                    //console.log(document.selection.text)
-                    imgDiv.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = obj.value;
-                    $(newPreview).find('img').append(imgDiv);    
-                });
-                $('.hp-box-right').show();
-            }catch(e){      // ie禁用本地路径时
-                $('.hp-box-right').hide();
-                var btn = $('#loadFile');
-                var filepath = $('.filespath');
-                if(filepath.length > 0){
-                    filepath.html(btn.val());
-                }else{
-                    btn.next('.btn_up').after('<span class="filespath">'+ btn.val() +'</span>');
-                }
-            }   
-        }
-        //firefox
-        else {
-            if(obj.files){
-                // 360下不支持window.URL
-                if(!window.URL){
-                    var btn = $('#loadFile');
-                    var filepath = $('.filespath');
-                    if(filepath.length > 0){
-                        filepath.html(btn.val());
-                    }else{
-                        btn.next('.btn_up').after('<span class="filespath">'+ btn.val() +'</span>');
-                    } 
-                }else{
-                    setImg(window.URL.createObjectURL(obj.files.item(0)));
-                    return window.URL.createObjectURL(obj.files.item(0));                       
-                }
-            }
-            setImg(obj.value);
-            return obj.value;
-        }
-        setImg(obj.value);
-        return obj.value;
+//图片等比例缩放
+function showImg(img,maxWidth,maxHeight){
+    var rate = (maxHeight/img.height>maxWidth/img.width?maxWidth/img.width:maxHeight/img.height);
+    img.width = img.width*rate;
+    img.height = img.height*rate;
+    return img;
+}
+
+/**
+ * 上传图片本地预览方法
+ * @param {Object} fileObj 上传文件file的id元素  fresh-fileToUpload 
+ * @param {Object} previewObj 预览图片的父层id元素  fresh-send-preview-imgvideo
+ * @param {Number} maxWidth 预览图最大宽  
+ * @param {Number} maxHeight 预览图最大高  
+ */
+function setImagePreview(fileObj, previewObj, maxWidth, maxHeight) {
+      var docObj = document.getElementById(fileObj);
+      var imgObjPreview = document.getElementById(previewObj);
+
+      if (docObj.files && docObj.files[0]) {
+          //火狐下，直接设img属性
+          //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
+          imgObjPreview.innerHTML ='<img id="imghead">';
+          var img = document.getElementById('imghead');
+          img.src = window.URL.createObjectURL(docObj.files[0]);
+          var _imgs = new Image();
+          _imgs.src = window.URL.createObjectURL(docObj.files[0]);
+          _imgs.onload = function(){
+              showImg(this, maxWidth, maxHeight);
+              $("#imghead").width(_imgs.width);
+              $("#imghead").height(_imgs.height);
+          }
+      } else {
+          //IE下，使用滤镜
+          try {
+              var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';  
+              docObj.select();
+              imgObjPreview.focus();//防止在ie9下拒绝访问，解决办法是让其他的div元素获取焦点
+              var imgSrc = document.selection.createRange().text; 
+              imgObjPreview.innerHTML ='<img id="imghead">'; 
+              var img = document.getElementById('imghead');                 
+              img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = imgSrc;                          
+              //等比例缩放图片的大小  
+              var rate = (maxHeight/img.offsetHeight>maxWidth/img.offsetWidth?maxWidth/img.offsetWidth:maxHeight/img.offsetHeight); 
+              imgObjPreview.innerHTML = "<div id='imghead' style='width:"+img.offsetWidth*rate+"px;height:"+img.offsetHeight*rate+"px;"+sFilter+imgSrc+"\"'></div>";
+          } catch (e) {
+              alert("您上传的图片格式不正确，请重新选择!");
+              return false;
+          }
+          //document.selection.empty();
       }
-    
-        function setImg(url){
-              var strSrc = $("#loadFile").val();
-              var pos = strSrc.lastIndexOf("."); 
-              var lastname = strSrc.substring(pos, strSrc.length);
+      //return true;
+}
 
-              var dom = document.getElementById('loadFile');
+function isIE(ver){
+    var b = document.createElement('b');
+    b.innerHTML = '<!--[if lte IE ' + ver + ']><i></i><![endif]-->';
+    return b.getElementsByTagName('i').length === 1;
+} 
 
-              if( !isIE(9) ) {
-                  var size = dom.files.item(0).size/1024;
-              }
-             
-              if (lastname.toLowerCase() != ".jpg" && lastname.toLowerCase() != ".gif" && lastname.toLowerCase() != ".png" && lastname.toLowerCase() != ".jpeg") {  
-                  $('#loadFile').val('');
-                  alert("您选择的文件类型为" + lastname + "，图片必须为 JPG,GIF,PNG 类型");
-                  return false;  
-              }else{
-                  if (!isIE(9) && size>2*1024) {
-                      alert('图片大小请不要大于2MB');
-                      return false;
-                  }else{
-                      $('#imghead, #hp-small img, #hp-middle img, #hp-big img').attr('src',url);
-                  };
-              }
-        }
+function getFullPath(){
+  var strSrc = $("#loadFile").val();
+  var pos = strSrc.lastIndexOf("."); 
+  var lastname = strSrc.substring(pos, strSrc.length);
 
-        function isIE(ver){
-            var b = document.createElement('b');
-            b.innerHTML = '<!--[if lte IE ' + ver + ']><i></i><![endif]-->';
-            return b.getElementsByTagName('i').length === 1;
-        }
-}   
+  var dom = document.getElementById('loadFile');
 
+  if( !isIE(9) ) {
+      var size = dom.files.item(0).size/1024;
+  }
+ 
+  if (lastname.toLowerCase() != ".jpg" && lastname.toLowerCase() != ".gif" && lastname.toLowerCase() != ".png" && lastname.toLowerCase() != ".jpeg") {  
+      $('#loadFile').val('');
+      alert("您选择的文件类型为" + lastname + "，图片必须为 JPG,GIF,PNG 类型");
+      return false;  
+  }else{
+      if (!isIE(9) && size>2*1024) {
+          alert('图片大小请不要大于2MB');
+          return false;
+      }else{
+        setImagePreview('loadFile', 'preview-img',400, 340);
+        var url = $('#imghead').attr("src");
+        $('#hp-small img, #hp-middle img, #hp-big img').attr('src',url);
+      };
+  }
+}
