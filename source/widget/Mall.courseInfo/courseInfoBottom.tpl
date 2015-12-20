@@ -176,18 +176,19 @@
 		</div>
 		<!-- 未登录状态下显示立即登录 end-->
 		<!-- 评论发表框 -->
-		<div class="ui-comment-info">
-			<div class="comment-title">评输入您对课课的评价</div>
-			<div class="comment-textarea">
-				<textarea rows="10" cols="30" id="comm_content" name=""></textarea>
-			</div>
-			<div class="comment-func">
-				<div id="course-comm-tips" class="comment-tips">请填写内容，长度在1~140之间</div>
-				<div class="comment-button">
-					<button name="comm-submit" type="submit" class="btn btn-info btn-submit ">评价</button>
-				</div>
-			</div>
-		</div>
+            <form action="javascript:void(0);" class="comment_form" id="course_comm_form">
+               <div class="comment_title">评输入您对课课的评价</div>
+                <div class="comment_textarea">
+                    <textarea name="" id="comm_content" cols="30" rows="10"></textarea>
+                </div>
+                <div class="comment_func">
+                    <div class="comment_tips" id="course_comm_tips">请填写内容，长度在1~140之间</div>
+                    <input id="course_comm_courseID" name="comm_courseid" type="hidden" value="6619">
+                    <div class="comment_button">
+                        <button style="width:50px;" class="btn btn-info btn_submit" type="submit" name="comm-submit">评价</button>
+                    </div>
+                </div>
+            </form>
 		<!-- 评论发表框 end-->
 		<!-- 评价列表 -->
 		<div class="comment-detail-wrap">

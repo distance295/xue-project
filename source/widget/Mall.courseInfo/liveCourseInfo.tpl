@@ -62,13 +62,16 @@
 					<em class="red">92.99</em>
 				</li>
 			</ul>
+			<div class="time-list-tips">
+				    本期已开课，您将从第二讲开始学习
+			</div>
 		</div>
 		<div class="course-button-list">
 			<span class="f-left">
 				<button class="btn btn-danger button_apply">立即报名</button>
 			</span>
-			<span class="collect f-left">
-				<a id="collectId" onclick="collect(11323)" href="javascript:void(0);">收藏课程</a>
+			<span class="collect collect_current f-left">
+				<a id="collectId" onclick="collect(11323)" href="javascript:void(0);">已收藏</a>
 			</span>
 		</div>
 	</div>
@@ -80,13 +83,9 @@
 					<img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt=""></div>
 				<div class="teacher-avatar-infor f-left">
 					<p>朱韬老师</p>
-					<p>
-						教学满意度
-						<span>92.71</span>
-					</p>
+					<p class="info">主讲老师将为您提供课程讲授</p>
 				</div>
 			</div>
-			<div class="teacher-infor">主讲老师将为您提供课程讲授／知识点强化服务</div>
 		</div>
 		<h5 class="main-teacher-title">辅导老师</h5>
 		<div class="main-teacher-list noBorder">
@@ -101,7 +100,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="teacher-infor">主讲老师将为您提供课程讲授／知识点强化服务</div>
+<!--			<div class="teacher-infor">主讲老师将为您提供课程讲授／知识点强化服务</div>-->
 		</div>
 	</div>
 </div>
