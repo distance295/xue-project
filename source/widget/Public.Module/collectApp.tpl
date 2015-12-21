@@ -1,6 +1,7 @@
 <!--
     @require collectApp.less
     @require collectApp.js
+    @require ../Module.Pagination/paginations.js 
 -->
 
 <div class="content-collect">

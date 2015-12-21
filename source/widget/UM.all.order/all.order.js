@@ -18,6 +18,9 @@ function orderTab(ordertype,page){
         dataType: "html",
         data:'type=' + ordertype + '&curpage=' + page, 
         success: function(list){
+            if(list.sign === 2){
+                window.location.href = list.msg;
+            }
             var box = $('#page_list');
             box.html(list);
         },

@@ -8,12 +8,12 @@
         <li class="active">三年级</li>
     </ol>
     <div class="row top ">
-<!--   12栏的用这个    -->
-       <div class="col-md-12">
+        <!--   12栏的用这个    -->
+        <div class="col-md-12">
           
-       </div>
-<!--   12栏结束    -->
-<!--   左右分栏的用这个    -->
+        </div>
+        <!--   12栏结束    -->
+        <!--   左右分栏的用这个    -->
         <div class="col-md-10 wrap-body wrap-mall">
 
             <!-- *********************** 内容区域开始 *********************** -->
@@ -30,7 +30,7 @@
                     <link rel="import" href="../../widget/Public.Module/course01.tpl?__inline">
                     <link rel="import" href="../../widget/Public.Module/course02.tpl?__inline">
                     <link rel="import" href="../../widget/Public.Module/course03.tpl?__inline">
-                	<link rel="import" href="../../widget/Public.Module/course04.tpl?__inline">
+                    <link rel="import" href="../../widget/Public.Module/course04.tpl?__inline">
                     <link rel="import" href="../../widget/Public.Module/course05.tpl?__inline">
                     <link rel="import" href="../../widget/Public.Dynamic/index.tpl?__inline">
                 </div>
@@ -51,25 +51,35 @@
                             <li><label>5</label><a href="##">数学花园密探</a></li>
                             <li><label>6</label><a href="##">数学花园密探</a></li>
                         </ul>
-                	</div>
+                    </div>
                 </div>
             </div>
         </div>
-<!--    左右分栏结束    -->
-   
+        <!--    左右分栏结束    -->
+        
     </div><!-- row end -->
+    
+    <div class="ui-pages text-center"></div>
 </div>
 <!-- 页面配置 -->
 <script>
-    var PAGE_CONFIG = {
-        ID: 'Index',
-        MODULE: 'Mall',
-        TITLE: '二级-课程搜索页',
+var PAGE_CONFIG = {
+    ID: 'Index',
+    MODULE: 'Mall',
+    TITLE: '二级-课程搜索页',
         NAV_FIXED: false // 如果想要头部分类展开的话，设为true，如果不想直接展开设为false
     };
+    $('.ui-pages').pages({
+            total : 29, // 总记录数
+            size: 10, // 每页显示记录数
+            index : 1, // 当前页
+            // 点击分页时的回调，返回被点击的页数
+            click : function(e){
+             
+            }
+        });
+    </script>
 
-</script>
 
-
-<!-- 公共底部 -->
-<link rel="import" href="../Layer/layer.Mall.foot.tpl?__inline">
+    <!-- 公共底部 -->
+    <link rel="import" href="../Layer/layer.Mall.foot.tpl?__inline">

@@ -119,10 +119,23 @@ function setImagePreview(fileObj, previewObj, maxWidth, maxHeight) {
               var imgSrc = document.selection.createRange().text; 
               imgObjPreview.innerHTML ='<img id="imghead">'; 
               var img = document.getElementById('imghead');                 
-              img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = imgSrc;                          
+              img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = imgSrc;
+                                  
               //等比例缩放图片的大小  
               var rate = (maxHeight/img.offsetHeight>maxWidth/img.offsetWidth?maxWidth/img.offsetWidth:maxHeight/img.offsetHeight); 
               imgObjPreview.innerHTML = "<div id='imghead' style='width:"+img.offsetWidth*rate+"px;height:"+img.offsetHeight*rate+"px;"+sFilter+imgSrc+"\"'></div>";
+              
+              //40*40
+              var hpsmall = document.getElementById('hp-small');
+              hpsmall.innerHTML = "<div id='img-small' style='width:40px;height:40px;margin: 30px auto 10px;"+sFilter+imgSrc+"\"'></div><span>40*40像素</span>";
+
+              //60*60
+              var hpmiddle = document.getElementById('hp-middle');
+              hpmiddle.innerHTML = "<div id='img-middle' style='width:60px;height:60px;margin: 30px auto 10px;"+sFilter+imgSrc+"\"'></div><span>60*60像素</span>";
+
+              //100*100
+              var hpbig = document.getElementById('hp-big');
+              hpbig.innerHTML = "<div id='img-big' style='width:100px;height:100px;margin: 30px auto 10px;"+sFilter+imgSrc+"\"'></div><span>100*100像素</span>";
           } catch (e) {
               alert("您上传的图片格式不正确，请重新选择!");
               return false;

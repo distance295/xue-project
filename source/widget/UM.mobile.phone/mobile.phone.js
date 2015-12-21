@@ -135,14 +135,17 @@
         success: function(result) {
           /* 填写的信息验证不通过 */
           if(result.sign != 1){
-          fCheck.changeVerificationImg("verificationImg");
-          fCheck.setTips('.veri-warning','网站验证码填写错误');
-          fCheck.param.cImg = 0;
-        }else{
-          fCheck.clearTips('.veri-warning');
-          fCheck.param.cImg = 1;
-          $('#verificationCode').css('border','1px solid #68c04a');
-        }
+            fCheck.changeVerificationImg("verificationImg");
+            fCheck.setTips('.veri-warning','网站验证码填写错误');
+            fCheck.param.cImg = 0;
+          }else{
+            fCheck.clearTips('.veri-warning');
+            fCheck.param.cImg = 1;
+            $('#verificationCode').css('border','1px solid #68c04a');
+          }
+          if(result.sign === 2){
+              window.location.href = result.msg;
+          } 
       },
       error: function() {
         alert('数据读取错误,请重试..');
@@ -179,6 +182,9 @@
       timeout: 7000,
       async: false,
       success: function (result) {
+        if(result.sign === 2){
+            window.location.href = result.msg;
+        } 
         if(!result.sign){
           fCheck.clearTips('#tips-phonecode');
           fCheck.setTips('#tips-phonecode',result.msg);
@@ -333,6 +339,9 @@
         timeout: 7000,
         success: function(result) {
           /* 填写的信息验证不通过 */
+          if(result.sign === 2){
+              window.location.href = result.msg;
+          } 
           if(result.sign == 1){
             window.location.href= '/MyInfos/phoneManager';
           }else{
