@@ -22,7 +22,7 @@
                     </div>
                 </div>
                 <div class="col-md-10 wrap w930">
-                    <div class="panel panel-default">
+                    <div class="panel panel-default CollectCourse-main-wrapper">
                         <div class="panel-body">
                             <link rel="import" href="../../widget/Public.Module/course06.tpl?__inline">
                         </div>
@@ -46,19 +46,33 @@
 
 <!-- 页面配置 -->
 <script>
-    var PAGE_CONFIG = {
-        ID: 'Notice',
-        SUBJECT:'System',
-        MODULE: 'UserHome',
-        TITLE: '网校通知-我的收藏-免费课程'
-    };
+var PAGE_CONFIG = {
+    ID: 'Notice',
+    SUBJECT:'System',
+    MODULE: 'UserHome',
+    TITLE: '网校通知-我的收藏-免费课程'
+};
 $('.ui-pages').pages({
     total : 29, // 总记录数
     size: 10, // 每页显示记录数
     index : 1, // 当前页
     // 点击分页时的回调，返回被点击的页数
-    click : function(e){
-
+    click : function(index){
+        $.ajax({
+            // url : '/data/Dynamic/ajaxDynamicList.html',
+            // data : '&type='+_type+'&curpage='+index,
+            type: "get",
+            dataType: 'html',
+            success: function(data){
+                alert(111)
+                if(data){
+                    $('.CollectCourse-main-wrapper').html(data);
+                }
+            },
+            error: function(){
+                alert(222)
+            }
+        });
     }
 });
 </script>

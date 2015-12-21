@@ -23,7 +23,7 @@
                 </div>
                 <div class="col-md-10 wrap w930">
                     <div class="panel panel-default">
-                        <div class="panel-body fresh-main-wrapper">
+                        <div class="panel-body CollectCourse-main-wrapper">
                             <link rel="import" href="../../widget/Public.Dynamic/dynAnswer.tpl?__inline">
                             <link rel="import" href="../../widget/Public.Dynamic/dynImg.tpl?__inline">
                             <link rel="import" href="../../widget/Public.Dynamic/dynVideo.tpl?__inline">
@@ -59,8 +59,22 @@ $('.ui-pages').pages({
     size: 10, // 每页显示记录数
     index : 1, // 当前页
     // 点击分页时的回调，返回被点击的页数
-    click : function(e){
-
+    click : function(index){
+        $.ajax({
+            // url : '/data/Dynamic/ajaxDynamicList.html',
+            // data : '&type='+_type+'&curpage='+index,
+            type: "get",
+            dataType: 'html',
+            success: function(data){
+                alert(111)
+                if(data){
+                    $('.CollectCourse-main-wrapper').html(data);
+                }
+            },
+            error: function(){
+                alert(222)
+            }
+        });
     }
 });
 </script>
