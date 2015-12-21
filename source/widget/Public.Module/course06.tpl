@@ -4,7 +4,7 @@
     @require courses_dialog.less           
     @require courses.js      
     @require courses_dialog.js   
-    @require xue.userinfo.min.js   
+    @require xue.userinfo.min.js   @require ../Module.Pagination/paginations.js
 -->
         <div class="course-list course-test">
             <div class="ui-avatar">
