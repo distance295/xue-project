@@ -26,8 +26,10 @@
 <!--   12栏结束    -->
 
 <div class="container top">
-    <link rel="import" href="../../widget/Public.Module/glory.tpl?__inline">
-
+    <div class="glory-main-wrap">
+        <link rel="import" href="../../widget/Public.Module/glory.tpl?__inline">
+    </div>
+    <div class="ui-pages text-center"></div>
 </div>
 <!-- 页面配置 -->
 <script>
@@ -37,6 +39,29 @@ var PAGE_CONFIG = {
     TITLE: '看学霸',
         NAV_FIXED: false // 如果想要头部分类展开的话，设为true，如果不想直接展开设为false
     };
+
+    $('.ui-pages').pages({
+    total : 29, // 总记录数
+    size: 10, // 每页显示记录数
+    index : 1, // 当前页
+    // 点击分页时的回调，返回被点击的页数
+    click : function(index){
+        $.ajax({
+            url : '',
+            // data : '&type='+_type+'&curpage='+index,
+            type: "get",
+            dataType: 'html',
+            success: function(data){
+                if(data){
+                    $('.glory-main-wrap').html(data);
+                }
+            },
+            error: function(){
+                alert(222)
+            }
+        });
+    }
+});
     </script>
 
 

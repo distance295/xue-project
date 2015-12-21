@@ -4,7 +4,8 @@
     @require cycle.js
     @require raphael.js
     @require ../Module.Modal/Modal.js
-    @require coursestudycenter.less       
+    @require coursestudycenter.less   
+    @require ../Module.Pagination/paginations.js    
 -->
 <div class="courseList-wrap courseList-label">
     <div class="courseList">

@@ -11,7 +11,9 @@
     <div class="col-md-9 top m20 fresh-main-wrapper">
 <!--新鲜事开始-->
         <div class="focusGuyTab">
-            <link rel="import" href="../../widget/Public.Dynamic/dynMy.tpl?__inline">
+            <div class="all-fresh-list">
+                <link rel="import" href="../../widget/Public.Dynamic/dynMy.tpl?__inline">
+            </div>
         </div>
 <!--新鲜事结束-->
    

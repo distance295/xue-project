@@ -2,6 +2,7 @@
    录播列表：
     @require coursestudycenter.js
     @require coursestudycenter.less
+    @require ../Module.Pagination/paginations.js  
 -->
 
 <div class="courselayout-list courseList-wrap">
@@ -74,4 +75,6 @@
             </ul>
         </div>
     </div>
+    
+    <div class="ui-pages text-center"></div>
 </div>
