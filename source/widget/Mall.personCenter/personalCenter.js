@@ -23,6 +23,15 @@ personCenter.opt={
 //     $(personCenter.opt.focusGuy).eq(index).removeClass('hide').siblings().addClass('hide');
 // });
 
+/* 老师主页在售课程以及新鲜事 */
+$('#fresh-filter-nav li').click(function(){
+    var that = this;
+    if(!$(that).hasClass('current')){
+        $(that).addClass('current');
+        $(that).siblings('li').removeClass('current');
+    }
+})
+
 /* 关注会遇到ajax与后台进行交互 */
 $(personCenter.opt.notFocus).on('click',function(){
 	/* 隐藏自己，显示其兄弟节点 */
