@@ -2,7 +2,8 @@
    课程列表：
     @require glory.less       
     @require courses.less       
-    @require glory.js       
+    @require glory.js      
+    @require ../Module.Pagination/paginations.js
 -->
 
 <ul class="screen-rank">
