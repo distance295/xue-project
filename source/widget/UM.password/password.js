@@ -128,12 +128,16 @@
               $("#curPwd").css('border','1px solid #eaeaea');
               cPassword = 0;
           }else{
-            cPassword = 1;
+            if($("#curPwd").data('lastVal') != $.trim($("#curPwd").val())){
+              cPassword = 1;
+            }else{
+              cPassword = 0;
+            }
           }  
       }
     }
     $("#curPwd").on('focus', function() {
-       fCheck.clearTips(".curPwd-warning");
+      fCheck.clearTips(".curPwd-warning");
     });
     $("#curPwd").on('blur', function() {
        curPwdfn(); 
@@ -169,7 +173,18 @@
        fCheck.clearTips(".newPwd-warning");
     });
     $("#newPwd").on('blur', function() {
-       newpasswdfn(); 
+       newpasswdfn();
+       var newpasswd = $("#newPwd").val();
+       var confirmpasswd = $("#confirmPwd").val();
+       if (newpasswd != confirmpasswd) {
+           fCheck.setTips(".confirmPwd-warning",'新密码与确认密码不一致');
+           $("#confirmPwd").css('border','1px solid #eaeaea');
+           conPassword = 0;
+       }else{
+         fCheck.clearTips(".confirmPwd-warning");
+         fCheck.bordercss('#confirmPwd');
+         conPassword = 1;
+       } 
     });
 
     /* 确认新密码 */
@@ -186,6 +201,7 @@
               $("#confirmPwd").css('border','1px solid #eaeaea');
               conPassword = 0;
           }else{
+            fCheck.clearTips(".confirmPwd-warning");
             fCheck.bordercss('#confirmPwd');
             conPassword = 1;
           }
@@ -234,8 +250,13 @@
                         location.href = "/MyInfos/passwordManager";
                         $("#curPwd").css('border','1px solid #68c04a');
                     } else {
+                        $("#curPwd").data('lastVal', $.trim($("#curPwd").val()));
                         fCheck.setTips('.curPwd-warning',d.msg);
                     }
+                },
+                error: function() {
+                  alert('数据读取错误,请重试..');
+                  return false;
                 }
             });
           };
