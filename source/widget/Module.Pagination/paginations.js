@@ -5,6 +5,7 @@
             total : 50, // 总记录数
             size: 2, // 每页显示记录数
             index : 26, // 当前页
+            url : '#!{page}', // 非ajax情况下分类的链接地址
             // 点击分页时的回调，返回被点击的页数
             click : function(e){
                 console.log(e);
@@ -25,51 +26,83 @@
     };
     var methods = {
         init : function(){},
-        data: function(len){ return new Array(len || 100); },
+        data: function(len){
+            if(len <= 0 ){
+                return [];
+            }
+            return new Array(len || 100);
+        },
         template: function(str){}
     };
+
     $.fn.pages = function(options){
-
-        var settings = $.extend({}, defaults, options);
-
-        settings.handle = this;
-        var _opt = {
-            dataSource: methods.data(settings.total),
-            totalNumber: settings.total,   // 条目总数，异步分页时必填，模拟分页时为数组的长度
-            pageNumber: settings.index,  // 指定初始化时加载哪一页的数据
-            pageSize: settings.size, // 每页的条目数
-            pageRange: settings.range, // 可见的页码范围，即当前页码两边的页码数量。比如当前是第 6 页，设置 pageRange 为 2，则页码条显示为 '1... 4 5 6 7 8'
-            ulClassName: 'pagination ' + settings.cls,
-            callback: function(data, pagination){
-                try{
-                    settings.callback(pagination);
-                }catch(e){}
-            }
-        };
-        if(typeof settings.click == 'function'){
-            _opt.afterPageOnClick = _opt.afterNextOnClick = _opt.afterPreviousOnClick = function(){
-                settings.click(settings.handle.pagination('getSelectedPageNum'));
+        if(options && options.total <= 0){
+            return this;
+        }
+        return this.each(function(){
+            var settings = $.extend({}, defaults, options);
+            var that = $(this);
+            settings.handle = that;
+            var _opt = {
+                dataSource: methods.data(settings.total),
+                totalNumber: settings.total,   // 条目总数，异步分页时必填，模拟分页时为数组的长度
+                pageNumber: settings.index,  // 指定初始化时加载哪一页的数据
+                pageSize: settings.size, // 每页的条目数
+                pageRange: settings.range, // 可见的页码范围，即当前页码两边的页码数量。比如当前是第 6 页，设置 pageRange 为 2，则页码条显示为 '1... 4 5 6 7 8'
+                ulClassName: 'pagination ' + settings.cls,
+                callback: function(data, pagination){
+                    try{
+                        settings.callback(pagination);
+                    }catch(e){}
+                }
             };
-        }
-        if(settings.url){
-            _opt.pageLink = settings.url;
-        }
+            if(typeof settings.click == 'function'){
+                _opt.afterPageOnClick = _opt.afterNextOnClick = _opt.afterPreviousOnClick = function(){
+                    settings.click(settings.handle.pagination('getSelectedPageNum'));
+                };
+            }
+            if(settings.url){
+                _opt.pageLink  = settings.url;
+            }
 
-        this.pagination(_opt);
-
-        return this;
+            that.pagination(_opt);
+            return that;
+        });
+//        var settings = $.extend({}, defaults, options);
+//
+//        settings.handle = this;
+//        var _opt = {
+//            dataSource: methods.data(settings.total),
+//            totalNumber: settings.total,   // 条目总数，异步分页时必填，模拟分页时为数组的长度
+//            pageNumber: settings.index,  // 指定初始化时加载哪一页的数据
+//            pageSize: settings.size, // 每页的条目数
+//            pageRange: settings.range, // 可见的页码范围，即当前页码两边的页码数量。比如当前是第 6 页，设置 pageRange 为 2，则页码条显示为 '1... 4 5 6 7 8'
+//            ulClassName: 'pagination ' + settings.cls,
+//            callback: function(data, pagination){
+//                try{
+//                    settings.callback(pagination);
+//                }catch(e){}
+//            }
+//        };
+//        if(typeof settings.click == 'function'){
+//            _opt.afterPageOnClick = _opt.afterNextOnClick = _opt.afterPreviousOnClick = function(){
+//                settings.click(settings.handle.pagination('getSelectedPageNum'));
+//            };
+//        }
+//        if(settings.url){
+//            _opt.pageLink  = settings.url;
+//        }
+//
+//        this.pagination(_opt);
+//
+//        return this;
     };
 
 })(jQuery);
 
 /*
  * pagination.js 2.0.7
- * A jQuery plugin to provide simple yet fully customisable pagination.
- * https://github.com/superRaytin/paginationjs
  *
- * Homepage: http://paginationjs.com
- *
- * Copyright 2014-2100, superRaytin
  * Released under the MIT license.
  */
 
@@ -253,7 +286,7 @@
                 var goInput = '<input type="text" class="J-paginationjs-go-pagenumber">';
                 var goButton = '<input type="button" class="J-paginationjs-go-button" value="'+ goButtonText +'">';
                 var formattedString;
-                var i;
+                var i, pageUrl;
 
                 if (header) {
 
@@ -277,7 +310,7 @@
                         html += '<ul>';
                     }
 
-                    // 下一页按钮
+                    // 上一页按钮
                     if (showPrevious) {
                         if (currentPage === 1) {
                             if (!autoHidePrevious) {
@@ -285,7 +318,8 @@
                             }
                         }
                         else{
-                            html += '<li class="'+ classPrefix +'-prev J-paginationjs-previous" data-num="'+ (currentPage - 1) +'" title="Previous page"><a href="'+ pageLink +'">'+ prevText +'<\/a><\/li>';
+                            pageUrl = pageLink.replace('{page}', (currentPage - 1));
+                            html += '<li class="'+ classPrefix +'-prev J-paginationjs-previous" data-num="'+ (currentPage - 1) +'" title="Previous page"><a href="'+ pageUrl +'">'+ prevText +'<\/a><\/li>';
                         }
                     }
 
@@ -297,13 +331,15 @@
                                     html += '<li class="'+ classPrefix +'-page J-paginationjs-page '+ activeClassName +'" data-num="'+ i +'"><a>'+ i +'<\/a><\/li>';
                                 }
                                 else{
-                                    html += '<li class="'+ classPrefix +'-page J-paginationjs-page" data-num="'+ i +'"><a href="'+ pageLink +'">'+ i +'<\/a><\/li>';
+                                    pageUrl = pageLink.replace('{page}', i);
+                                    html += '<li class="'+ classPrefix +'-page J-paginationjs-page" data-num="'+ i +'"><a href="'+ pageUrl +'">'+ i +'<\/a><\/li>';
                                 }
                             }
                         }
                         else{
                             if (attributes.showFirstOnEllipsisShow) {
-                                html += '<li class="'+ classPrefix +'-page '+ classPrefix +'-first J-paginationjs-page" data-num="1"><a href="'+ pageLink +'">1<\/a><\/li>';
+                                pageUrl = pageLink.replace('{page}', 1);
+                                html += '<li class="'+ classPrefix +'-page '+ classPrefix +'-first J-paginationjs-page" data-num="1"><a href="'+ pageUrl +'">1<\/a><\/li>';
                             }
 
                             html += '<li class="'+ classPrefix +'-ellipsis '+ disableClassName +'"><a>'+ ellipsisText +'<\/a><\/li>';
@@ -315,20 +351,23 @@
                                 html += '<li class="'+ classPrefix +'-page J-paginationjs-page '+ activeClassName +'" data-num="'+ i +'"><a>'+ i +'<\/a><\/li>';
                             }
                             else{
-                                html += '<li class="'+ classPrefix +'-page J-paginationjs-page" data-num="'+ i +'"><a href="'+ pageLink +'">'+ i +'<\/a><\/li>';
+                                pageUrl = pageLink.replace('{page}', i);
+                                html += '<li class="'+ classPrefix +'-page J-paginationjs-page" data-num="'+ i +'"><a href="'+ pageUrl +'">'+ i +'<\/a><\/li>';
                             }
                         }
 
                         if (rangeEnd >= totalPage - 2) {
                             for(i = rangeEnd + 1; i <= totalPage; i++) {
-                                html += '<li class="'+ classPrefix +'-page J-paginationjs-page" data-num="'+ i +'"><a href="'+ pageLink +'">'+ i +'<\/a><\/li>';
+                                pageUrl = pageLink.replace('{page}', i);
+                                html += '<li class="'+ classPrefix +'-page J-paginationjs-page" data-num="'+ i +'"><a href="'+ pageUrl +'">'+ i +'<\/a><\/li>';
                             }
                         }
                         else{
                             html += '<li class="'+ classPrefix +'-ellipsis '+ disableClassName +'"><a>'+ ellipsisText +'<\/a><\/li>';
 
                             if (attributes.showLastOnEllipsisShow) {
-                                html += '<li class="'+ classPrefix +'-page '+ classPrefix +'-last J-paginationjs-page" data-num="'+ totalPage +'"><a href="'+ pageLink +'">'+ totalPage +'<\/a><\/li>';
+                                pageUrl = pageLink.replace('{page}', totalPage);
+                                html += '<li class="'+ classPrefix +'-page '+ classPrefix +'-last J-paginationjs-page" data-num="'+ totalPage +'"><a href="'+ pageUrl +'">'+ totalPage +'<\/a><\/li>';
                             }
                         }
                     }
@@ -341,7 +380,8 @@
                             }
                         }
                         else{
-                            html += '<li class="'+ classPrefix +'-next J-paginationjs-next" data-num="'+ (currentPage + 1) +'" title="Next page"><a href="'+ pageLink +'">'+ nextText +'<\/a><\/li>';
+                            pageUrl = pageLink.replace('{page}', (currentPage + 1));
+                            html += '<li class="'+ classPrefix +'-next J-paginationjs-next" data-num="'+ (currentPage + 1) +'" title="Next page"><a href="'+ pageUrl +'">'+ nextText +'<\/a><\/li>';
                         }
                     }
 
@@ -604,6 +644,19 @@
                 for(var key in variables) {
                     var value = variables[key];
                     var regexp = new RegExp('<%=\\s*'+ key +'\\s*%>', 'img');
+
+                    formattedString = (formattedString || template).replace(regexp, value);
+                }
+
+                return formattedString;
+            },
+            // 替换pageLink中的页面
+            replacePageLink : function(template, variables){
+                var formattedString;
+
+                for(var key in variables) {
+                    var value = variables[key];
+                    var regexp = new RegExp('{'+ key +'}', 'img');
 
                     formattedString = (formattedString || template).replace(regexp, value);
                 }

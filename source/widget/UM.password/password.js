@@ -227,6 +227,9 @@
                 data: "curPwd=" + curpasswd + '&newPwd=' + newpasswd + '&confirmPwd=' + confirmpasswd,
                 dataType: 'json',
                 success: function(d) {
+                    if(d.sign === 2){
+                        window.location.href = d.msg;
+                    } 
                     if (d.sign == 1) {
                         location.href = "/MyInfos/passwordManager";
                         $("#curPwd").css('border','1px solid #68c04a');
