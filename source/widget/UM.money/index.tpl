@@ -1,6 +1,6 @@
 <!--
     @require money.less
-    @require money.js   
+    @require ../Module.Pagination/paginations.js    
 -->
 <div class="gift-card-record">
      <span class="gcr-top-up btn btn-info">去激活</span>
@@ -39,6 +39,7 @@
               </tr>
           </tbody>
         </table>
+        <div class="ui-pages text-right"></div>
      </div>
       <img src="img/prompt.png">
       <div class="gcr-prompt-box">
