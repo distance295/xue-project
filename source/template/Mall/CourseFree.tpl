@@ -50,6 +50,11 @@
 <!--    左右分栏结束    -->
    
     </div><!-- row end -->
+    <div id="wrapper" class="container row">
+    <section class="col-md-6 col-md-offset-3">
+        <div class="ui-pages"></div>
+    </section>
+</div>
 </div>
 <!-- 页面配置 -->
 <script>
@@ -59,7 +64,15 @@
         TITLE: '二级-免费课',
         NAV_FIXED: false // 如果想要头部分类展开的话，设为true，如果不想直接展开设为false
     };
-
+ $('.ui-pages').pages({
+            total : 29, // 总记录数
+            size: 10, // 每页显示记录数
+            index : 1, // 当前页
+            // 点击分页时的回调，返回被点击的页数
+            click : function(e){
+                alert(1111)
+            }
+        });
 </script>
 
 

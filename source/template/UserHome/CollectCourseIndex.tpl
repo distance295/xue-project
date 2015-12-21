@@ -65,7 +65,8 @@ function collectTabAjax(){
             dataType: 'html',
             success: function(d){
                 if(d){
-                 $('.panel-body').html(d)
+                $('.panel-body').html(d);
+                that.addClass('active').siblings('').removeClass('active');
             },
             error: function(){
                 
