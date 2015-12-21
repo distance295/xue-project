@@ -40,7 +40,10 @@
             dataType: "html",
             data: '&curpage=1',
             //object是后台传过来的list数据集合  
-            success:function(objects){                                           
+            success:function(objects){ 
+              if(objects.sign === 2){
+                  window.location.href = objects.msg;
+              }                                           
               var box = $('#moneyTable');
               box.html(objects); 
             },  
