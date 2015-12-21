@@ -66,7 +66,6 @@ $('.ui-pages').pages({
             type: "get",
             dataType: 'html',
             success: function(data){
-                alert(111)
                 if(data){
                     $('.CollectCourse-main-wrapper').html(data);
                 }
