@@ -28,7 +28,9 @@
                        </div>
                     </div>
                     <!--新鲜事筛选tab标签结束--> 
-                    <link rel="import" href="../../widget/Public.Dynamic/index.tpl?__inline">
+                    <div class="all-fresh-list">
+                        <link rel="import" href="../../widget/Public.Dynamic/index.tpl?__inline">
+                    </div>
                 </div>
                 <!--官方账号新鲜事结束--> 
                        

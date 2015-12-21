@@ -2,6 +2,7 @@
    直播频道页
     @require live.less
     @require live.js
+    @require ../Module.Pagination/paginations.js
 -->
     <!--今日直播标题 -->
     <div class="live-title">
