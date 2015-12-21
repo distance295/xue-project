@@ -48,9 +48,20 @@
                     </div>
                     <!--新鲜事筛选tab标签结束-->   
                     <div class="panel panel-default" style="min-height:576px;">
+                        <input type="hidden" value="100" id="pagesTotal">
                         <div class="panel-body fresh-main-wrapper" style="padding:0">
                             <link rel="import" href="../../widget/Public.Dynamic/index.tpl?__inline">
-                        </div>                     
+                        </div>
+
+                        <div id="wrapper" class="container row">
+                          <section class="col-md-6 col-md-offset-3">
+                              <div class="data-container"></div>
+                              <div id="pagination-demo1"></div>
+                              <div class="ui-wrap"></div>
+                              <div class="ui-pages"></div>
+                          </section>
+                        </div> 
+
                     </div>
                 </div>
             </div>
@@ -100,6 +111,27 @@
                       }else{
                           $('.fresh-main-wrapper').html('');
                       }
+                      var pageNun = parseInt($.trim($('#pagesTotal').val()));
+                      //分页的方法
+                      $('.ui-pages').pages({
+                          total : pageNun, // 总记录数
+                          size: 20, // 每页显示记录数
+                          index : 1, // 当前页
+                          click : function(index){
+                              $.ajax({
+                                  url : '/data/Dynamic/ajaxDynamicList.html',
+                                  data : '&category='+_type+'&curpage='+index,
+                                  type: "get",
+                                  dataType: 'html',
+                                  success: function(data){
+                                    if(data){
+                                       $('.fresh-main-wrapper').html(data);
+                                    }
+                                  }
+                              });
+                          }
+                      });
+
                   }
               })
         })
