@@ -26,10 +26,19 @@
     };
     var methods = {
         init : function(){},
-        data: function(len){ return new Array(len || 100); },
+        data: function(len){
+            if(len <= 0 ){
+                return [];
+            }
+            return new Array(len || 100);
+        },
         template: function(str){}
     };
+
     $.fn.pages = function(options){
+        if(options && options.total <= 0){
+            return this;
+        }
         return this.each(function(){
             var settings = $.extend({}, defaults, options);
             var that = $(this);
