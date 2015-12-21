@@ -38,7 +38,7 @@
 	</style>
 </head>
 <body>
-	<div id="welcome-infor" data-toggle="modal" data-target="#loginGuid"></div>
+	<!-- <div id="welcome-infor" data-toggle="modal" data-target="#loginGuid"></div> -->
 	<!-- 这是当前模块js文件 -->
 	<script src="../../lib/bootstrap/3.3.5-custom/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../Module.Modal/Modal.js"></script>	
@@ -54,7 +54,7 @@ function loginGuid(){
 		cls : 'login-Modal',
 		content : result
 	}); 
-	$('#loginGuid').modal({0: 'static', keyboard: false,show: true});
+	$('#loginGuid').modal('show');
 }
 $(function(){
 	loginGuid();
