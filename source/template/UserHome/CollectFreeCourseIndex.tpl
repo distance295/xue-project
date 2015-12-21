@@ -26,6 +26,9 @@
                         <div class="panel-body">
                             <link rel="import" href="../../widget/Public.Module/course06.tpl?__inline">
                         </div>
+
+                        
+                        <div class="ui-pages text-center"></div>
                     </div>
                 </div>
             </div>
@@ -49,6 +52,15 @@
         MODULE: 'UserHome',
         TITLE: '网校通知-我的收藏-免费课程'
     };
+$('.ui-pages').pages({
+    total : 29, // 总记录数
+    size: 10, // 每页显示记录数
+    index : 1, // 当前页
+    // 点击分页时的回调，返回被点击的页数
+    click : function(e){
+
+    }
+});
 </script>
 
 <!-- 公共底部 -->

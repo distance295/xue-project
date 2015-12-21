@@ -26,6 +26,8 @@
                         <div class="panel-body">
                             <link rel="import" href="../../widget/Public.Module/course06.tpl?__inline">
                         </div>
+                        
+                        <div class="ui-pages text-center"></div>
                     </div>
                 </div>
             </div>
@@ -49,34 +51,43 @@ var PAGE_CONFIG = {
     MODULE: 'UserHome',
     TITLE: '网校通知-我的收藏-课程'
 };
-$(function () {
-    collectTabAjax();
-})
-// 收藏ajax请求
-function collectTabAjax(){
-    $('#sub-nav a').on('click',function(){
-        var that = $(this);
-        var URL = that.data('url');
-        var param = that.data('param');
-        $.ajax({
-            url : url,
-            data : param,
-            type: "POST",
-            dataType: 'html',
-            success: function(d){
-                if(d){
-                $('.panel-body').html(d);
-                that.addClass('active').siblings('').removeClass('active');
-            },
-            error: function(){
-                
-            }
+// $(function () {
+//     collectTabAjax();
+// })
+// // 收藏ajax请求
+// function collectTabAjax(){
+//     $('#sub-nav a').on('click',function(){
+//         var that = $(this);
+//         var URL = that.data('url');
+//         var param = that.data('param');
+//         $.ajax({
+//             url : url,
+//             data : param,
+//             type: "POST",
+//             dataType: 'html',
+//             success: function(d){
+//                 if(d){
+//                     $('.panel-body').html(d);
+//                     that.addClass('active').siblings('').removeClass('active');
+//                 },
+//                 error: function(){
 
-         }
-     })
+//                 }
+
+//             }
+//         })
         
-    })
-}
+//     })
+// }
+$('.ui-pages').pages({
+    total : 29, // 总记录数
+    size: 10, // 每页显示记录数
+    index : 1, // 当前页
+    // 点击分页时的回调，返回被点击的页数
+    click : function(e){
+
+    }
+});
 </script>
 
 <!-- 公共底部 -->
