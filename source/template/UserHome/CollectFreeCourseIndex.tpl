@@ -22,8 +22,8 @@
                     </div>
                 </div>
                 <div class="col-md-10 wrap w930">
-                    <div class="panel panel-default CollectCourse-main-wrapper">
-                        <div class="panel-body">
+                    <div class="panel panel-default">
+                        <div class="panel-body CollectCourse-main-wrapper">
                             <link rel="import" href="../../widget/Public.Module/course06.tpl?__inline">
                         </div>
 
@@ -59,7 +59,7 @@ $('.ui-pages').pages({
     // 点击分页时的回调，返回被点击的页数
     click : function(index){
         $.ajax({
-            // url : '/data/Dynamic/ajaxDynamicList.html',
+            url : '/data/courses/course06.html',
             // data : '&type='+_type+'&curpage='+index,
             type: "get",
             dataType: 'html',
