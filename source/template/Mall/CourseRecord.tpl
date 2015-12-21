@@ -70,12 +70,13 @@ var PAGE_CONFIG = {
         NAV_FIXED: false // 如果想要头部分类展开的话，设为true，如果不想直接展开设为false
     };
  $('.ui-pages').pages({
-            total : 8, // 总记录数
+            total : 7, // 总记录数
             size: 10, // 每页显示记录数
             index : 1, // 当前页
+            // url : '/a/b/{page}',  // 非ajax情况下分类的链接地址
             // 点击分页时的回调，返回被点击的页数
             click : function(e){
-                alert(1111)
+               
             }
         });
     </script>
