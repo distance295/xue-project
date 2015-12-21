@@ -3,6 +3,7 @@
  */
 
 $(function(){
+    var $body = $('body');
     var addressInput = '#realname, #add_province, #add_city, #address, #zipcode, #phone';
 //提交生成收货地址列表
     function saveNewAddress(inputs){
@@ -160,24 +161,24 @@ $(function(){
         var arr = {};
         goldTabAJax(that, arr);
     });
-    $('body').on("click", ".gold-store-title-container li", function (e) {
+    $body.on("click", ".gold-store-title-container li", function (e) {
         var that = $(this);
         var arr = {};
         goldTabAJax(that, arr);
     });
-    $('body').on("click", ".gold-exchange-title-container li", function (e) {
+    $body.on("click", ".gold-exchange-title-container li", function (e) {
         var that = $(this);
         var arr = {};
         goldTabAJax(that, arr);
     });
-    $('body').on('click', ".gold-exchange-rank span", function (e) {
+    $body.on('click', ".gold-exchange-rank span", function (e) {
         var that = $(this);
         var is_used = $(this).data('id');
         var arr = {};
         arr['is_used'] = is_used;
         goldTabAJax(that, arr);
     });
-    $('body').on('click', ".gold-store-present-rank-by a", function (e) {
+    $body.on('click', ".gold-store-present-rank-by a", function (e) {
         var that = $(this);
         var sort_type = $(this).data('type');
         var arr = {};
@@ -187,7 +188,7 @@ $(function(){
         goldTabAJax(that, arr);
     });
 
-    $('body').on('click', ".gold-exchange-use span", function (e) {
+    $body.on('click', ".gold-exchange-use span", function (e) {
         var exchangeid = $(this).closest('.gold-exchange-show').attr('id')
         if (confirm('您确定使用这张卡片吗？')) {
             $.ajax({
@@ -223,7 +224,7 @@ $(function(){
         }
     });
 
-    $('body').on('click', ".gold-detail-check", function (e) {
+    $body.on('click', ".gold-detail-check", function (e) {
         dateStart = $('#dateStart').val();
         dateEnd =  $('#dateEnd').val();
         $.ajax({
@@ -247,11 +248,11 @@ $(function(){
 //鼠标移到目标卡片交互
 
     var
-        $gsp = $('.gold-store-present-card-box'),
+        //$gsp = $('.gold-store-present-card-box'),
         $gsc = $('.gold-store-card-box-over'),
         $gep = $('.gold-exchange-present-card-box');
 
-    $gsp.on({
+    $body.on({
         mouseenter:function(){
             $(this)
                 .stop()
@@ -266,7 +267,7 @@ $(function(){
         }
     },'.gold-store-present-card');
 
-    $gsc.on({
+    $body.on({
         mouseenter:function(){
             $(this)
                 .stop()
@@ -280,7 +281,7 @@ $(function(){
                 .animate({'margin-top':10},300)
         }
     },'.gold-store-card');
-    $gep.on({
+    $body.on({
         mouseenter:function(){
             $(this)
                 .stop()
@@ -296,7 +297,6 @@ $(function(){
     },'.gold-exchange-present-card');
 
     var
-        $body = $('body'),
         pabLabel = '.present-address-box form label',
         presentAdd = '.present-add',
         presentDec = '.present-dec',
@@ -358,6 +358,8 @@ $(function(){
             }else if(num >= exMax){
                 $redCardNum.html(exMax);
                 $rcig.html(gold * exMax);
+                $(redCardAdd).css({'background-color':'#b5b5b5'});
+                $(redCardDec).css({'background-color':'#3398cc'});
             }else if(num >= piece - 1){
                 $redCardNum.html(piece);
                 $rcig.html(gold * piece);
@@ -517,6 +519,8 @@ $(function(){
             }else if(num >= exMax){
                 $presentNum.html(exMax);
                 $pig.html(gold * exMax);
+                $(presentAdd).css({'background-color':'#b5b5b5'});
+                $(presentDec).css({'background-color':'#3398cc'});
             }else if(num >= piece - 1){
                 $presentNum.html(piece);
                 $pig.html(gold * piece);

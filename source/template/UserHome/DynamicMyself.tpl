@@ -35,11 +35,15 @@
                 </div>
                 <div class="col-md-10 wrap w930">
                     <div class="panel panel-default wrap h630">
+                        <input type="hidden" value="200" id="pagesTotal">
                         <div class="panel-body fresh-main-wrapper" style="padding:0">
                             <link rel="import" href="../../widget/Public.Dynamic/dynMyself.tpl?__inline">
                             <link rel="import" href="../../widget/Public.Dynamic/dynMyself.tpl?__inline">
                             <link rel="import" href="../../widget/Public.Dynamic/dynMyself.tpl?__inline">
-                        </div>                     
+                        </div>
+
+                        <div class="ui-pages text-center"></div>
+
                     </div>
                 </div>
             </div>
@@ -66,5 +70,29 @@
 
 <!-- 公共底部 -->
 <link rel="import" href="../Layer/layer.UserHome.foot.tpl?__inline">
+<script type="text/javascript">
+    $(function(){
+          var pageNun = parseInt($.trim($('#pagesTotal').val()));
+          //分页的方法
+          $('.ui-pages').pages({
+              total : pageNun, // 总记录数
+              size: 20, // 每页显示记录数
+              index : 1, // 当前页
+              click : function(index){
+                  $.ajax({
+                      url : '/data/Dynamic/ajaxDynamicList.html',
+                      data : '&curpage='+index,
+                      type: "get",
+                      dataType: 'html',
+                      success: function(data){
+                        if(data){
+                           $('.fresh-main-wrapper').html(data);
+                        }
+                      }
+                  });
+              }
+          });
+    })
+</script>
 
 
