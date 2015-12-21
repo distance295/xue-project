@@ -76,7 +76,7 @@ var PAGE_CONFIG = {
             index : 1, // 当前页
             // 点击分页时的回调，返回被点击的页数
             click : function(e){
-                alert(1111)
+                
             }
         });
     </script>
