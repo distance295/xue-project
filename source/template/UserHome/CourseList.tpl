@@ -18,9 +18,12 @@
                 <li><a href="#">录播</a></li>
                 <li><a href="#">已过期课程</a></li>
             </ul>
-            <link rel="import" href="../../widget/UserHome.courses/list.course.tpl?__inline">
-
+            <div class="course-main-wrap">
+                <link rel="import" href="../../widget/UserHome.courses/list.course.tpl?__inline">
+            </div>
             <!-- *********************** 内容区域结束 **************** -->
+
+            <div class="ui-pages text-center"></div>
         </div>
         <div class="col-md-2 col-sm-2 wrap-side">
             <link rel="import" href="../../widget/UserHome.sidebar/index.tpl?__inline">
@@ -102,16 +105,16 @@ function materialForm(){
         dataType: "html",
         success: function(result) {
             if(result){
-             createModal.show({
+               createModal.show({
                 id : 'materialForm',
                 title : '讲义资料',
                 cls : 'material-exam',
                 content : result
             });
-             $('#materialForm').modal('show');
-         }
-     },
- });
+               $('#materialForm').modal('show');
+           }
+       },
+   });
 }
 // 讲义资料弹框tab事件
 $('body').on('click','.material-wrap .material-tab li',function(){
@@ -127,17 +130,39 @@ function examTable(){
         dataType: "html",
         success: function(result) {
             if(result){
-             createModal.show({
+               createModal.show({
                 id : 'examTable',
                 title : '本课考试',
                 cls : 'material-exam',
                 content : result
             });
-             $('#examTable').modal('show')
-         }
-     },
- });
+               $('#examTable').modal('show')
+           }
+       },
+   });
 }
+$('.ui-pages').pages({
+    total : 29, // 总记录数
+    size: 10, // 每页显示记录数
+    index : 1, // 当前页
+    // 点击分页时的回调，返回被点击的页数
+    click : function(index){
+        $.ajax({
+            url : '/data/courses/course06.html',
+            // data : '&type='+_type+'&curpage='+index,
+            type: "get",
+            dataType: 'html',
+            success: function(data){
+                if(data){
+                    $('.course-main-wrap').html(data);
+                }
+            },
+            error: function(){
+                alert(222)
+            }
+        });
+    }
+});
 </script>
 
 <!-- 公共底部 -->
