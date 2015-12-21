@@ -25,8 +25,17 @@
             </ul>
              
             <div class="panel panel-default ">
+                <input type="hidden" value="200" id="pagesTotal">
                 <div class="panel-body pd0 fresh-main-wrapper">
                 	<link rel="import" href="../../widget/Public.Dynamic/index.tpl?__inline">
+                </div>
+                <div id="wrapper" class="container row">
+                  <section class="col-md-6 col-md-offset-3">
+                      <div class="data-container"></div>
+                      <div id="pagination-demo1"></div>
+                      <div class="ui-wrap"></div>
+                      <div class="ui-pages"></div>
+                  </section>
                 </div>
             </div>
 
@@ -92,6 +101,26 @@
                       }else{
                           $('.fresh-main-wrapper').html('');
                       }
+                      var pageNun = parseInt($.trim($('#pagesTotal').val()));
+                      //分页的方法
+                      $('.ui-pages').pages({
+                          total : pageNun, // 总记录数
+                          size: 20, // 每页显示记录数
+                          index : 1, // 当前页
+                          click : function(index){
+                              $.ajax({
+                                  url : '/data/Dynamic/ajaxDynamicList.html',
+                                  data : '&type='+_type+'&curpage='+index,
+                                  type: "get",
+                                  dataType: 'html',
+                                  success: function(data){
+                                    if(data){
+                                       $('.fresh-main-wrapper').html(data);
+                                    }
+                                  }
+                              });
+                          }
+                      });
                   }
               })
         })
