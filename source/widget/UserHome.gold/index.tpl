@@ -17,7 +17,7 @@
     <li><a href="###" data-target=".gold-exchange-container">我兑换的</a></li>
 </ul>
 <!-- 金币明细 -->
-<div class="gold-detail-container gold-detail-block-change" >
+<div class="gold-detail-container gold-detail-block-change" style="display: block">
     <!-- 金币总数 -->
     <div class="gold-detail-account">
         <span class="gold-detail-account-title">目前您的金币数:</span><em>9786</em>
@@ -67,7 +67,11 @@
     </div>
 </div>
 <!-- 金币商城 -->
-<div class="gold-store-container gold-detail-block-change" style="display: block">
+<div class="gold-store-container gold-detail-block-change" >
+    <ul class="gold-store-title-container">
+        <li class="gold-store-title-on" store-target=".gold-store-card-box">魔法卡</li>
+        <li store-target=".gold-store-present-box">实物礼品</li>
+    </ul>
 
     <!-- 魔法卡 -->
     <div class="gold-store-card-box gold-store-block-change" style="display: block">
@@ -252,12 +256,12 @@
         </div>
     </div>
 </div>
-<div class="gold-exchange-container gold-detail-block-change" style="display: block">
+<div class="gold-exchange-container gold-detail-block-change" >
     <ul class="gold-exchange-title-container">
         <li class="gold-exchange-title-on" exchange-target=".gold-exchange-card-box">魔法卡</li>
         <li exchange-target=".gold-exchange-present-box">实物礼品</li>
     </ul>
-    <div class="gold-exchange-card-box gold-exchange-block-change" >
+    <div class="gold-exchange-card-box gold-exchange-block-change" style="display: block">
         <div class="gold-exchange-rank">
             <span class="gold-exchange-rank-by gold-exchange-not-use gold-exchange-use-focus" use-target=".gold-exchange-use-box">未使用</span>
             <p></p>
