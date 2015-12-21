@@ -52,16 +52,7 @@
                         <div class="panel-body fresh-main-wrapper" style="padding:0">
                             <link rel="import" href="../../widget/Public.Dynamic/index.tpl?__inline">
                         </div>
-
-                        <div id="wrapper" class="container row">
-                          <section class="col-md-6 col-md-offset-3">
-                              <div class="data-container"></div>
-                              <div id="pagination-demo1"></div>
-                              <div class="ui-wrap"></div>
-                              <div class="ui-pages"></div>
-                          </section>
-                        </div> 
-
+                        <div class="ui-pages text-center"></div>
                     </div>
                 </div>
             </div>
