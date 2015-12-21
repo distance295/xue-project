@@ -53,6 +53,9 @@
                         fCheck.setTips('.cardPass-warning',d.msg);
                         $('.cardNo,.cardPass').css('border','1px solid #eaeaea');
                     }
+                    if(d.sign === 2){
+                        window.location.href = d.msg;
+                    } 
                 }
             });
         })

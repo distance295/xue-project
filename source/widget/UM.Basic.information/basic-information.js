@@ -83,6 +83,9 @@ $.fn.nicknameajax = function(){
                     fCheck.bordercss('.nickname');
                     $(box).data('nickname',val);
                 }
+                if(result.sign === 2){
+                    window.location.href = result.msg;
+                } 
             }
         });
     }else{
