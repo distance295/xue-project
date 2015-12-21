@@ -2,6 +2,7 @@
    找老师页面
     @require find-teacher.less
     @require find-teacher.js
+    @require ../Module.Pagination/paginations.js
 -->
 
 
