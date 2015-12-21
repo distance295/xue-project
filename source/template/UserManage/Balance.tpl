@@ -32,25 +32,29 @@
         MODULE: 'UserManage',
         TITLE: '我的余额-个人设置'
     };
-
-    $(function(){
-        $.ajax({
-            type: "GET",
-            url: "/MyPayCenters/ajaxRechargeData",
-            dataType: "html",
-            data: '&curpage=1',
-            //object是后台传过来的list数据集合  
-            success:function(objects){ 
-              if(objects.sign === 2){
-                  window.location.href = objects.msg;
-              }                                          
-              var box = $('#generatedTable');
-              box.html(objects); 
-            },    
-            error:function(){  
-                alert("异步失败");  
-            }  
-        });
+    $('.ui-pages').pages({
+        total : 29, // 总记录数
+        size: 5, // 每页显示记录数
+        index : 1, // 当前页
+        // 点击分页时的回调，返回被点击的页数
+        click : function(index){
+            $.ajax({
+                type: "GET",
+                url: "/MyPayCenters/ajaxRechargeData",
+                dataType: "html",
+                data: '&curpage=' + index,
+                success:function(objects){ 
+                  if(objects.sign === 2){
+                      window.location.href = objects.msg;
+                  }                                          
+                  var box = $('#generatedTable');
+                  box.html(objects); 
+                },    
+                error:function(){  
+                    alert("异步失败");  
+                }  
+            });
+        }
     });
 </script>
 
