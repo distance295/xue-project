@@ -9,18 +9,18 @@
 
 <!--新鲜事默认展开评论开始-->
 <div class="fresh-list">
-    <div class="fresh-avatar pull-left">
+    <!-- <div class="fresh-avatar pull-left">
         <a href ="###">
             <img src="img/fresh_avatar.png" />
         </a>
-    </div>
+    </div> -->
     <div class="fresh-detail" data-id="57286179">
        <!--新鲜事右侧头部文本消息显示开始-->
        <div class="fresh-text">
-          <div class="fresh-myname">
+          <!-- <div class="fresh-myname">
              <a href="###"  target="_blank" class="pull-left">顾斐</a>
              <i class="fresh-v fresh-v-yellow" class="pull-left"></i>
-          </div>
+          </div> -->
           <div class="fresh-info">
             亲爱的孩子们，昨天的小新电台——《五月的草场》有没有收听呢？那么今天出一个小题目——草原上的人用什么办法消灭蝗虫呢？随机奖励正确的<img title="挤眼" src="http://img04.xesimg.com/icon/emoji/em_4.png" alt="">五个答案~~加油哦！<img title="出拳" src="http://img04.xesimg.com/icon/emoji/em_46.png" alt="">收听地址： <a href="http://t.xueersi.com/7boW01nx" target="_blank">http://t.xueersi.com/7boW01nx</a>
           </div>

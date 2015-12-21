@@ -3,6 +3,7 @@
     @require order.modal.less
     @require all.order.js
     @require Modal.js
+    @require ../Module.Pagination/paginations.js
 -->
 
 <div class="ao-content">
@@ -292,5 +293,6 @@
                 </li>
             </ul>
         </div>
+        <div class="ui-pages text-center"></div>
     </div>
 </div>

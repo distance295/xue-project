@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>登录注册</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<!-- 这是CSS库文件 -->
+	<link rel="stylesheet" type="text/css" href="../../lib/bootstrap/3.3.5-custom/css/bootstrap.min.css">
+	<!-- 这是当前模块样式文件 -->
+	<link href="perfect-information.css" rel="stylesheet"></head>
+	<!-- 这是jquery库文件 -->
+	<script type="text/javascript" src="../../lib/jQuery/2.1.1/jquery.min.js"></script>
+	<style type="text/css">
+	.login-Modal .modal-content{
+		height: 597px;
+		width: 531px;
+	}
+	.login-Modal iframe{
+		border: none;
+	}
+	.login-Modal .modal-header{
+		overflow: hidden;
+	}
+	.login-Modal .modal-title{
+		float: left;
+	}
+	.login-Modal .modal-title-span{
+		float: right;
+		margin-right: 10px;
+	}
+	.login-Modal .modal-title-span a{
+		color: #3bafda;
+		margin-left: 5px;
+	}
+	</style>
+</head>
+<body>
+	<div id="welcome-infor" data-toggle="modal" data-target="#loginGuid"></div>
+	<!-- 这是当前模块js文件 -->
+	<script src="../../lib/bootstrap/3.3.5-custom/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../Module.Modal/Modal.js"></script>	
+	<script type="text/javascript">
+// 欢迎信息
+function loginGuid(){
+	var result = '<div><iframe src="setting.html" width="568" height="576"></iframe></div>';
+	var titlecon = '<h4 class="modal-title">注册</h4>\
+					<span class="modal-title-span">我已注册，现在就去<a href="">登录</a></span>'
+	createModal.show({
+		id : 'loginGuid',
+		title : titlecon,
+		cls : 'login-Modal',
+		content : result
+	}); 
+	$('#loginGuid').modal({0: 'static', keyboard: false,show: true});
+}
+$(function(){
+	loginGuid();
+})
+</script>
+</body>
+</html>
