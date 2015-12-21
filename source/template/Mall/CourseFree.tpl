@@ -8,12 +8,12 @@
         <li class="active">三年级</li>
     </ol>
     <div class="row top m20">
-<!--   12栏的用这个    -->
-       <div class="col-md-12">
+        <!--   12栏的用这个    -->
+        <div class="col-md-12">
             <link rel="import" href="../../widget/Public.Selector/index.tpl?__inline"> 
-       </div>
-<!--   12栏结束    -->
-<!--   左右分栏的用这个    -->
+        </div>
+        <!--   12栏结束    -->
+        <!--   左右分栏的用这个    -->
         <div class="col-md-10 wrap-body wrap-mall">
 
             <!-- *********************** 内容区域开始 *********************** -->
@@ -31,37 +31,47 @@
             <div class="panel panel-default ">
                 <div class="panel-body sideright-body pd0">
                 	<div class="sideright-ad">
-						<a href="###"><img src="http://x04.xesimg.com/web/2015/11/19/14479235823994.jpg" ></a>
-                	</div>
-                	<div class="sideright-ad">
-						<a href="###"><img src="http://x04.xesimg.com/web/2015/11/19/14479235823994.jpg" ></a>
-                	</div>
-                	<div class="sideright-hotcourse">
-                		<h3>热门专题课</h3>
-                		<link rel="import" href="../../widget/Public.Module/hot-course.tpl?__inline">
-                	</div>
-                	<div class="sideright-hotcourse">
-                		<h3>热门新鲜事</h3>
-                		<link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
-                	</div>
-                </div>
-            </div>
-        </div>
-<!--    左右分栏结束    -->
-   
-    </div><!-- row end -->
+                      <a href="###"><img src="http://x04.xesimg.com/web/2015/11/19/14479235823994.jpg" ></a>
+                  </div>
+                  <div class="sideright-ad">
+                      <a href="###"><img src="http://x04.xesimg.com/web/2015/11/19/14479235823994.jpg" ></a>
+                  </div>
+                  <div class="sideright-hotcourse">
+                      <h3>热门专题课</h3>
+                      <link rel="import" href="../../widget/Public.Module/hot-course.tpl?__inline">
+                  </div>
+                  <div class="sideright-hotcourse">
+                      <h3>热门新鲜事</h3>
+                      <link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!--    左右分栏结束    -->
+      
+  </div><!-- row end -->
+  
+  <div class="ui-pages text-center"></div>
 </div>
 <!-- 页面配置 -->
 <script>
-    var PAGE_CONFIG = {
-        ID: 'Index',
-        MODULE: 'Mall',
-        TITLE: '二级-免费课',
+var PAGE_CONFIG = {
+    ID: 'Index',
+    MODULE: 'Mall',
+    TITLE: '二级-免费课',
         NAV_FIXED: false // 如果想要头部分类展开的话，设为true，如果不想直接展开设为false
     };
+    $('.ui-pages').pages({
+            total : 29, // 总记录数
+            size: 10, // 每页显示记录数
+            index : 1, // 当前页
+            // 点击分页时的回调，返回被点击的页数
+            click : function(e){
+             
+            }
+        });
+    </script>
 
-</script>
 
-
-<!-- 公共底部 -->
-<link rel="import" href="../Layer/layer.Mall.foot.tpl?__inline">
+    <!-- 公共底部 -->
+    <link rel="import" href="../Layer/layer.Mall.foot.tpl?__inline">

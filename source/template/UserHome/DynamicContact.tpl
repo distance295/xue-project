@@ -37,11 +37,13 @@
                 </div>
                 <div class="col-md-10 wrap w930">
                     <div class="panel panel-default wrap h630">
+                        <input type="hidden" value="200" id="pagesTotal">
                         <div class="panel-body fresh-main-wrapper" style="padding:0">
                             <link rel="import" href="../../widget/Public.Dynamic/dynContact.tpl?__inline">
                             <link rel="import" href="../../widget/Public.Dynamic/dynContact.tpl?__inline">
                             <link rel="import" href="../../widget/Public.Dynamic/dynContact.tpl?__inline">
-                        </div>                     
+                        </div>
+                        <div class="ui-pages text-center"></div>
                     </div>
                 </div>
             </div>
@@ -90,6 +92,26 @@
                       }else{
                           $('.fresh-main-wrapper').html('');
                       }
+                      var pageNun = parseInt($.trim($('#pagesTotal').val()));
+                      //分页的方法
+                      $('.ui-pages').pages({
+                          total : pageNun, // 总记录数
+                          size: 20, // 每页显示记录数
+                          index : 1, // 当前页
+                          click : function(index){
+                              $.ajax({
+                                  url : '/data/Dynamic/ajaxDynamicList.html',
+                                  data : '&category='+_category+'&curpage='+index,
+                                  type: "get",
+                                  dataType: 'html',
+                                  success: function(data){
+                                    if(data){
+                                       $('.fresh-main-wrapper').html(data);
+                                    }
+                                  }
+                              });
+                          }
+                      });
                   }
               })
         })
