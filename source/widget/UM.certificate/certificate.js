@@ -54,6 +54,9 @@ $(function() {
                   fCheck.setTips('.serialPass-warning',d.msg);
                   $('.serialNo,.serialPass').css('border','1px solid #eaeaea');
               }
+              if(d.sign === 2){
+                  window.location.href = d.msg;
+              } 
             }
         });
     })

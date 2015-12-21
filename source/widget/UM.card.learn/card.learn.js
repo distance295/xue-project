@@ -58,6 +58,9 @@ $(function() {
                     fCheck.setTips('.studyCardPwd-warning','学习卡密码错误');
                     $('.studyCardPwd').css('border','1px solid #eaeaea');
                 }
+                if(msg.sign === 2){
+                    window.location.href = msg.msg;
+                } 
             }
         });
     })
