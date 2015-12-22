@@ -19,7 +19,10 @@
         <div class="hp-local">
             <form action="" method="POST" enctype="multipart/form-data" id="headsImg" onsubmit="return headsSave();">
                 <div class="img-error">
-                    <span>123</span>
+                    <span>后端返回上传失败提示</span>
+                </div>
+                <div class="img-success">
+                    <span>后端返回成功信息</span>
                 </div>
                 <div class="hl-box">
                     <div id="preview" style="display:inline-block;">

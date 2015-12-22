@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65a5177b-cc0d-4bfb-a852-a009f5ea707f" name="Default" comment="Merge remote-tracking branch 'XUEJS/master'&#10;&#10;Conflicts:&#10;&#9;source/widget/gold/gold.css&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/widget/UserHome.gold/gold.js" afterPath="$PROJECT_DIR$/source/widget/UserHome.gold/gold.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/widget/UserHome.gold/gold.less" afterPath="$PROJECT_DIR$/source/widget/UserHome.gold/gold.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/widget/UserHome.gold/index.tpl" afterPath="$PROJECT_DIR$/source/widget/UserHome.gold/index.tpl" />
     </list>
     <list id="65f74e84-b66d-4c76-8e30-ad6df2d3b00e" name="New changelist" comment="" />
     <ignored path="xue-project.iws" />
@@ -24,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="gold.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="gold.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.111111">
-              <caret line="263" column="48" selection-start-line="263" selection-start-column="48" selection-end-line="263" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.54472846">
+              <caret line="439" column="21" selection-start-line="439" selection-start-column="21" selection-end-line="439" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -38,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/index.tpl">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="411" column="37" selection-start-line="411" selection-start-column="37" selection-end-line="411" selection-end-column="68" />
+              <caret line="187" column="86" selection-start-line="187" selection-start-column="86" selection-end-line="187" selection-end-column="86" />
               <folding />
             </state>
           </provider>
@@ -59,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gold.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gold.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6013289">
-              <caret line="92" column="66" selection-start-line="92" selection-start-column="66" selection-end-line="92" selection-end-column="66" />
+            <state vertical-scroll-proportion="-6.8627453">
+              <caret line="70" column="56" selection-start-line="70" selection-start-column="56" selection-end-line="70" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -153,9 +156,9 @@
         <option value="$PROJECT_DIR$/source/widget/servers_home.sh" />
         <option value="$PROJECT_DIR$/source/widget/Mall.live/index.tpl" />
         <option value="$PROJECT_DIR$/source/widget/Mall.FindTeacher/index.tpl" />
-        <option value="$PROJECT_DIR$/source/widget/UserHome.gold/gold.js" />
-        <option value="$PROJECT_DIR$/source/widget/UserHome.gold/index.tpl" />
         <option value="$PROJECT_DIR$/source/widget/UserHome.gold/gold.less" />
+        <option value="$PROJECT_DIR$/source/widget/UserHome.gold/index.tpl" />
+        <option value="$PROJECT_DIR$/source/widget/UserHome.gold/gold.js" />
       </list>
     </option>
   </component>
@@ -990,10 +993,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.js">
+    <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.111111">
-          <caret line="263" column="48" selection-start-line="263" selection-start-column="48" selection-end-line="263" selection-end-column="48" />
+        <state vertical-scroll-proportion="-6.8627453">
+          <caret line="70" column="56" selection-start-line="70" selection-start-column="56" selection-end-line="70" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -1001,15 +1004,15 @@
     <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/index.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="411" column="37" selection-start-line="411" selection-start-column="37" selection-end-line="411" selection-end-column="68" />
+          <caret line="187" column="86" selection-start-line="187" selection-start-column="86" selection-end-line="187" selection-end-column="86" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.less">
+    <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6013289">
-          <caret line="92" column="66" selection-start-line="92" selection-start-column="66" selection-end-line="92" selection-end-column="66" />
+        <state vertical-scroll-proportion="0.54472846">
+          <caret line="439" column="21" selection-start-line="439" selection-start-column="21" selection-end-line="439" selection-end-column="25" />
           <folding />
         </state>
       </provider>

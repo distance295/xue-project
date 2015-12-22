@@ -246,12 +246,6 @@ $(function(){
     })
 
 //鼠标移到目标卡片交互
-
-    var
-        //$gsp = $('.gold-store-present-card-box'),
-        $gsc = $('.gold-store-card-box-over'),
-        $gep = $('.gold-exchange-present-card-box');
-
     $body.on({
         mouseenter:function(){
             $(this)

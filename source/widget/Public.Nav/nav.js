@@ -43,7 +43,7 @@ nav.get = function (url, callback) {
                 _tpl += '<li class="category-item item'+ v.id +'" data-id="' + v.id + '">' + '<h3>' + v.name + ' <i class="icon icon-arrow-right pull-right">&gt;</i></h3>' + '<p class="row">';
                 _sub += '<div class="category-subject" id="subject_' + v.id + '" data-id="' + v.id + '">';
                 $.each(v.items, function (i, c) {
-                    _tpl += '<a href="' + c.link + '" class="col-xs-4" data-id="' + c.id + '">' + c.name + '</a>';
+                    _tpl += '<a href="' + c.link + '" class="col-xs-3" data-id="' + c.id + '">' + c.name + '</a>';
                     _sub += '<dl class="subitem" data-id="' + c.id + '">' + '<dt>' + c.name + '</dt>' + '<dd class="row">' + c.content + '</dd>' + '</dl>';
                 });
                 _tpl += '</p></li>';
