@@ -17,7 +17,7 @@
     <li><a href="###" data-target=".gold-exchange-container">我兑换的</a></li>
 </ul>
 <!-- 金币明细 -->
-<div class="gold-detail-container gold-detail-block-change" >
+<div class="gold-detail-container gold-detail-block-change" style="display: block">
     <!-- 金币总数 -->
     <div class="gold-detail-account">
         <span class="gold-detail-account-title">目前您的金币数:</span><em>9786</em>
@@ -74,7 +74,7 @@
     </ul>
 
     <!-- 魔法卡 -->
-    <div class="gold-store-card-box gold-store-block-change" >
+    <div class="gold-store-card-box gold-store-block-change" style="display: block">
         <div class="gold-store-card-box-over">
             <div class="gold-store-card" id="11">
                 <div class="gold-store-card-img-box">
