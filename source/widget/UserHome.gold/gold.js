@@ -295,10 +295,10 @@ $(function(){
     $body.on('click', '.gold-store-card-exchange', function () {
         var cardid = $(this).closest('.gold-store-card').attr('id');
         $.ajax({
-            url: '/GoldShop/magicDetail',
-            //url: '/data/gold/gold-card-modal.html',
-            type: 'post',
-            //type: 'get',
+            //url: '/GoldShop/magicDetail',
+            url: '/data/gold/gold-card-modal.html',
+            //type: 'post',
+            type: 'get',
             dataType: 'html',
             data: {
                 id: cardid
@@ -327,7 +327,7 @@ $(function(){
             content : con
         });
 
-        $('#cardModal').modal('show');
+        $('#cardModal').modal({backdrop: 'static', keyboard: false});
 
         var
             $rcig = $('.red-card-intro-gold em'),
@@ -470,8 +470,7 @@ $(function(){
             content : con
         });
 
-        $('#presentModal').modal('show');
-
+        $('#presentModal').modal({backdrop: 'static', keyboard: false});
 
         $body.on("click",pabLabel, function(e){
             var
