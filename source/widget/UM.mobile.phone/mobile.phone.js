@@ -99,6 +99,8 @@
   fCheck.changeVerificationImg = function (imgId) {
     var newVerificationImg = '/Verifications/show?' + fCheck.generateMixed(12);
     $('img[id="' + imgId + '"]').attr('src', newVerificationImg);
+    $("input[name='verificationCode']").val("");
+    $(fCheck.param.veriTip).show(); 
   }
   // 生成随机字符串
   fCheck.generateMixed = function (n) {
@@ -295,8 +297,8 @@
 
   $("#verificationCode").on('blur',function(){
     var value = $("#verificationCode").val();
-    $('#verificationCode').css('border','1px solid #eaeaea');
     if(value == ''){
+      $('#verificationCode').css('border','1px solid #eaeaea');
       $(fCheck.param.veriTip).show();
       fCheck.setTips('.veri-warning','请输入右侧验证码');
     }else{
