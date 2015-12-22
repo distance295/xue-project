@@ -185,7 +185,7 @@
         </div>
     </div>
     <!-- 实物礼品 -->
-    <div class="gold-store-present-box gold-store-block-change" style="display: block">
+    <div class="gold-store-present-box gold-store-block-change" >
         <div class="gold-store-present-rank">
             <span class="gold-store-present-rank-by">排序 :
                 <a href="#" class="gold-store-present-rank-focus"><em class="gold-store-rank-by-gold gold-store-present-rank-gold">金币</em><i class="gold-store-gold-arrow glyphicon glyphicon-arrow-up"></i></a>
