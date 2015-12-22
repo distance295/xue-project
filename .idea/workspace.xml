@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65a5177b-cc0d-4bfb-a852-a009f5ea707f" name="Default" comment="Merge remote-tracking branch 'XUEJS/master'&#10;&#10;Conflicts:&#10;&#9;source/widget/gold/gold.css&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/widget/UserHome.gold/gold.less" afterPath="$PROJECT_DIR$/source/widget/UserHome.gold/gold.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/widget/UserHome.gold/gold.js" afterPath="$PROJECT_DIR$/source/widget/UserHome.gold/gold.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/widget/UserHome.gold/index.tpl" afterPath="$PROJECT_DIR$/source/widget/UserHome.gold/index.tpl" />
     </list>
     <list id="65f74e84-b66d-4c76-8e30-ad6df2d3b00e" name="New changelist" comment="" />
@@ -25,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="gold.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="gold.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="537" column="28" selection-start-line="537" selection-start-column="28" selection-end-line="537" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.7013782">
+              <caret line="300" column="22" selection-start-line="300" selection-start-column="22" selection-end-line="300" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -49,16 +49,16 @@
         <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/index.tpl">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="83" column="33" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="54" />
+              <caret line="19" column="82" selection-start-line="19" selection-start-column="82" selection-end-line="19" selection-end-column="82" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gold.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gold.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3820598">
+            <state vertical-scroll-proportion="-4.509804">
               <caret line="40" column="93" selection-start-line="40" selection-start-column="93" selection-end-line="40" selection-end-column="93" />
               <folding />
             </state>
@@ -159,9 +159,9 @@
         <option value="$PROJECT_DIR$/source/widget/Mall.FindTeacher/index.tpl" />
         <option value="$PROJECT_DIR$/source/widget/UserHome.gold/gold.html" />
         <option value="$PROJECT_DIR$/source/widget/UserHome.gold/gold-address.less" />
-        <option value="$PROJECT_DIR$/source/widget/UserHome.gold/gold.js" />
-        <option value="$PROJECT_DIR$/source/widget/UserHome.gold/index.tpl" />
         <option value="$PROJECT_DIR$/source/widget/UserHome.gold/gold.less" />
+        <option value="$PROJECT_DIR$/source/widget/UserHome.gold/index.tpl" />
+        <option value="$PROJECT_DIR$/source/widget/UserHome.gold/gold.js" />
       </list>
     </option>
   </component>
@@ -964,22 +964,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold-address.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.583333">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="537" column="28" selection-start-line="537" selection-start-column="28" selection-end-line="537" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/servers_home.bat">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1004,18 +988,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/index.tpl">
+    <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="83" column="33" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="54" />
+        <state vertical-scroll-proportion="-4.509804">
+          <caret line="40" column="93" selection-start-line="40" selection-start-column="93" selection-end-line="40" selection-end-column="93" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.less">
+    <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold-address.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3820598">
-          <caret line="40" column="93" selection-start-line="40" selection-start-column="93" selection-end-line="40" selection-end-column="93" />
+        <state vertical-scroll-proportion="-10.583333">
+          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="82" selection-start-line="19" selection-start-column="82" selection-end-line="19" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7013782">
+          <caret line="300" column="22" selection-start-line="300" selection-start-column="22" selection-end-line="300" selection-end-column="26" />
           <folding />
         </state>
       </provider>

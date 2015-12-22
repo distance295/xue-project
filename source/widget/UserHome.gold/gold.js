@@ -327,7 +327,7 @@ $(function(){
             content : con
         });
 
-        $('#cardModal').modal('show');
+        $('#cardModal').modal({backdrop: 'static', keyboard: false});
 
         var
             $rcig = $('.red-card-intro-gold em'),
@@ -470,8 +470,7 @@ $(function(){
             content : con
         });
 
-        $('#presentModal').modal('show');
-
+        $('#presentModal').modal({backdrop: 'static', keyboard: false});
 
         $body.on("click",pabLabel, function(e){
             var
