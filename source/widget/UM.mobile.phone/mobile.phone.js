@@ -348,6 +348,7 @@
           if(result.sign == 1){
             window.location.href= '/MyInfos/phoneManager';
           }else{
+            fCheck.changeVerificationImg("verificationImg");
             fCheck.setTips('.phone-error span',result.msg);
             var phoneError = $(".phone-error span").is(":empty");
             if (phoneError == 0) {
