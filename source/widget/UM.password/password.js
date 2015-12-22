@@ -172,10 +172,18 @@
        newpasswdfn();
        var newpasswd = $("#newPwd").val();
        var confirmpasswd = $("#confirmPwd").val();
-       if (newpasswd == confirmpasswd) {
-           fCheck.clearTips(".confirmPwd-warning");
-           fCheck.bordercss('#confirmPwd');
-           conPassword = 1;
+       if (confirmpasswd == '') {
+          return false;
+       }else{
+          if (newpasswd != confirmpasswd) {
+            fCheck.setTips(".confirmPwd-warning",'新密码与确认密码不一致');
+            $("#confirmPwd").css('border','1px solid #eaeaea');
+            conPassword = 0;
+          }else{
+            fCheck.clearTips(".confirmPwd-warning");
+            fCheck.bordercss('#confirmPwd');
+            conPassword = 1;
+          }
        }
     });
 
@@ -211,24 +219,26 @@
       curPwdfn();
       newpasswdfn();
       confirmPwdfn();
-      var pwdError = $(".password-error span").is(":empty");
-      if( cPassword && nPassword && conPassword && !pwdError ){
-        return false;
-      }else{
-        return true;
-      }
+        if( cPassword && nPassword && conPassword){
+          return false;
+        }else{
+          return true;
+        }
     }
 
     /* 密码验证流程 */
     $(function() {
         $("#form_submit").click(function() {
-          var curpasswd = $("#curPwd").val();
-          var newpasswd = $("#newPwd").val();
-          var confirmpasswd = $("#confirmPwd").val();
-          var Error = passwordError();
+          var curpasswd = $("#curPwd").val(),
+              newpasswd = $("#newPwd").val(),
+              confirmpasswd = $("#confirmPwd").val(),
+              pwdError = $(".password-error span").is(":empty"),
+              Error = passwordError();
+
           fCheck.clearTips(".confirmPwd-warning , .newPwd-warning , .curPwd-warning");
           passwordError();
-          if (!Error) {
+
+          if (!Error && pwdError) {
             /* ajax发送请求 */
             $.ajax({
                 type: "POST",
@@ -240,8 +250,8 @@
                         window.location.href = d.msg;
                     } 
                     if (d.sign == 1) {
-                        location.href = "/MyInfos/passwordManager";
-                        $("#curPwd").css('border','1px solid #68c04a');
+                      alert('密码修改成功');
+                      location.href = "/MyInfos/passwordManager";
                     }else{
                       fCheck.setTips('.password-error span',d.msg);
                       var pwdError = $(".password-error span").is(":empty");
@@ -249,7 +259,7 @@
                           $('.password-error').css({
                               display: 'block'
                           });
-                          setTimeout("$('.password-error').css({display: 'none'});",6000); 
+                          setTimeout("$('.password-error').css({display: 'none'});$('.password-error span').html(null)",6000); 
                       }
                     }
                 },

@@ -21,7 +21,7 @@
     <div>
         <div class="verification-k">
             <p>验证码：</p>
-            <input type="text" maxlength="4" id="verificationCode" class="verification" name="verificationCode" autocomplete="off"/>
+            <input type="text" verificationCode-data="" maxlength="4" id="verificationCode" class="verification" name="verificationCode" autocomplete="off"/>
             <label for="verificationCode" class="verification-tip">请输入右侧的验证码</label>
             <img height="35" width="120" id="verificationImg" alt="验证码" src="http://www.xueersi.com/verifications/show?6Inw5RD3cqVg"/>
         </div>

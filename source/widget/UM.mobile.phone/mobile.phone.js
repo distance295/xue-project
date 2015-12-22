@@ -121,7 +121,9 @@
     }else if(/^\w{4}$/.test(v)){
       /* 调用ajax取值 */
       fCheck.clearTips('.veri-warning');
-      fCheck.imgCodeAjax();     
+      if($('#verificationCode').data('lastVal') != $.trim($('#verificationCode').val())){
+        fCheck.imgCodeAjax();
+      }     
     }else{
       fCheck.setTips('.veri-warning','请输入正确的验证码');
       fCheck.param.cImg = 0;
@@ -140,11 +142,15 @@
           if(result.sign != 1){
             fCheck.changeVerificationImg("verificationImg");
             fCheck.setTips('.veri-warning','网站验证码填写错误');
+            $("input[name='verificationCode']").val("");
+            $(fCheck.param.veriTip).show(); 
+            $('#verificationCode').css('border','1px solid #eaeaea');
             fCheck.param.cImg = 0;
           }else{
             fCheck.clearTips('.veri-warning');
-            fCheck.param.cImg = 1;
             $('#verificationCode').css('border','1px solid #68c04a');
+            $('#verificationCode').data('lastVal', $.trim($('#verificationCode').val()));
+            fCheck.param.cImg = 1;
           }
           if(result.sign === 2){
               window.location.href = result.msg;
@@ -223,6 +229,7 @@
     fCheck.isError = function(e){
     fCheck.checkPhone(fCheck.param.phoneTip,fCheck.param.phoneWarn,$("#phone").val());
     fCheck.imgcode();
+    fCheck.phonecode('#phonecode');
     passwordfn();
     var param = fCheck.param;
       if( param.cPhone && param.cMessage && param.cImg && param.cPass ){
@@ -291,6 +298,7 @@
     $('#verificationCode').css('border','1px solid #eaeaea');
     if(value == ''){
       $(fCheck.param.veriTip).show();
+      fCheck.setTips('.veri-warning','请输入右侧验证码');
     }else{
       fCheck.imgcode();
     }
@@ -328,8 +336,9 @@
 
   /* 判断是否可以点击操作"完成"按钮 */
   $("#mpform_submit").on('click',function(e){
-    var isError = fCheck.isError(e);
-    if(isError){
+    var isError = fCheck.isError(e),
+        phoneError = $(".phone-error span").is(":empty");
+    if(isError || !phoneError){
       return false;
     }else{
       fCheck.phonecode('#phonecode');
@@ -355,7 +364,7 @@
                 $('.phone-error').css({
                     display: 'block'
                 });
-                setTimeout("$('.phone-error').css({display: 'none'});",6000); 
+                setTimeout("$('.phone-error').css({display: 'none'});$('.phone-error span').html(null)",6000); 
             }
           }
         },

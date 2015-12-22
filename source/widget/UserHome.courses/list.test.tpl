@@ -72,5 +72,5 @@
         </li>
     </ul>
     
-    <div class="ui-pages text-center"></div>
+    <!-- <div class="ui-pages text-center"></div> -->
 </div>

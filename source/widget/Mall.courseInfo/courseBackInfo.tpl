@@ -81,10 +81,10 @@
 			</div>
 			<div class="course-button-list">
 			<span class="f-left">
-				<button class="btn btn-info button_shop-cart">加入购物车</button>
+				<button class="btn btn-info button_shop-cart" data-id="110001">加入购物车</button>
 			</span>
 			<span class="f-left">
-				<button class="btn btn-danger button_apply">立即报名</button>
+				<a class="btn btn-danger button_apply" href="#">立即报名</a>
 			</span>
 				<span class="collect f-left">
 					<a id="collectId" onclick="collect(11323)" href="javascript:void(0);">收藏课程</a>
