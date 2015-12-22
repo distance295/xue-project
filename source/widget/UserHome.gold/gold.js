@@ -527,12 +527,15 @@ $(function(){
         });
         $body.on("click",presentDec,function(){
             var num = parseInt($presentNum.html());
-            if(num == 1)
+            if(num == 0 || num < 0) {
+                $presentNum.html(0);
+                $pig.html(gold);
+            }else if(num == 1)
             {
                 $presentNum.html(num);
                 $pig.html(gold);
 
-            }else if(num ==2){
+            }else if(num == 2){
                 $presentNum.html(num - 1);
                 $pig.html(gold * (num - 1));
                 $(presentDec).css({'background-color':'#b5b5b5'});

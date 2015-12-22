@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65a5177b-cc0d-4bfb-a852-a009f5ea707f" name="Default" comment="Merge remote-tracking branch 'XUEJS/master'&#10;&#10;Conflicts:&#10;&#9;source/widget/gold/gold.css&#10;">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/widget/UserHome.gold/gold.js" afterPath="$PROJECT_DIR$/source/widget/UserHome.gold/gold.js" />
     </list>
     <list id="65f74e84-b66d-4c76-8e30-ad6df2d3b00e" name="New changelist" comment="" />
@@ -27,8 +28,8 @@
       <file leaf-file-name="gold.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8851455">
-              <caret line="374" column="28" selection-start-line="374" selection-start-column="28" selection-end-line="374" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.54058194">
+              <caret line="537" column="28" selection-start-line="537" selection-start-column="28" selection-end-line="537" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -530,7 +531,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="773" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="773" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1003,8 +1004,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8851455">
-          <caret line="374" column="28" selection-start-line="374" selection-start-column="28" selection-end-line="374" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.54058194">
+          <caret line="537" column="28" selection-start-line="537" selection-start-column="28" selection-end-line="537" selection-end-column="28" />
           <folding />
         </state>
       </provider>
