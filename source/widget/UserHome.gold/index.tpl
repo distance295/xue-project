@@ -17,7 +17,7 @@
     <li><a href="###" data-target=".gold-exchange-container">我兑换的</a></li>
 </ul>
 <!-- 金币明细 -->
-<div class="gold-detail-container gold-detail-block-change" >
+<div class="gold-detail-container gold-detail-block-change" style="display: block">
     <!-- 金币总数 -->
     <div class="gold-detail-account">
         <span class="gold-detail-account-title">目前您的金币数:</span><em>9786</em>
@@ -74,7 +74,7 @@
     </ul>
 
     <!-- 魔法卡 -->
-    <div class="gold-store-card-box gold-store-block-change" >
+    <div class="gold-store-card-box gold-store-block-change" style="display: block">
         <div class="gold-store-card-box-over">
             <div class="gold-store-card" id="11">
                 <div class="gold-store-card-img-box">
@@ -179,13 +179,13 @@
                 </div>
                 <p>红名卡(月卡)，尊贵的红色昵称，让你与众不同。初期每周限售100张，每人限购2张</p>
                 <div class="gold-store-present-btn">
-                    <div class="gold-store-card-exchange">兑换</div>
+                    <div class="gold-store-card-exchange" >兑换</div>
                 </div>
             </div>
         </div>
     </div>
     <!-- 实物礼品 -->
-    <div class="gold-store-present-box gold-store-block-change" style="display: block">
+    <div class="gold-store-present-box gold-store-block-change" >
         <div class="gold-store-present-rank">
             <span class="gold-store-present-rank-by">排序 :
                 <a href="#" class="gold-store-present-rank-focus"><em class="gold-store-rank-by-gold gold-store-present-rank-gold">金币</em><i class="gold-store-gold-arrow glyphicon glyphicon-arrow-up"></i></a>

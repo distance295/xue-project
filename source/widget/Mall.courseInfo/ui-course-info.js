@@ -19,7 +19,7 @@ xue.avatar = xue.avatar || {};
         btn : null
     };
 
-    a.step = 120;
+    a.step = $(".avatar_items li").width();
     a.size = 0;
     a.max = 0;
 
@@ -53,13 +53,13 @@ xue.avatar = xue.avatar || {};
         }
     }
 
-    a.prev = function(){
+   a.prev = function(){
 
         if(a.left < 0){
             a.box.pic.animate({
-                marginLeft : '+=120px'
+                marginLeft : '+='+a.step+'px'
             }, 500, function(){
-                a.left += 120;
+                a.left += a.step;
                 a.setCls();
                 if(a.left >= 0){
                     $(this).clearQueue();
@@ -72,13 +72,13 @@ xue.avatar = xue.avatar || {};
 
     a.next = function(){
         var box = a.box.pic,
-            left = Number(box.css('margin-left').replace('px',''));
+        left = Number(box.css('margin-left').replace('px',''));
 
         if(a.left > -(a.max * a.step)){
             a.box.pic.animate({
-                marginLeft : '-=120px'
+                marginLeft : '-='+a.step+'px'
             }, 500, function(){
-                a.left -= 120;
+                a.left -= a.step;
                 a.setCls();
                 if(a.left <= -(a.max * a.step)){
                     $(this).clearQueue();
@@ -90,7 +90,7 @@ xue.avatar = xue.avatar || {};
     };
 
     a.setCls = function(){
-        var hasNext = Math.abs(a.left) < ((a.box.list.length - 1) * 120);
+        var hasNext = Math.abs(a.left) < ((a.box.list.length - 1) * a.step);
         var hasPrev = a.left < 0;
 
         if(hasNext){
@@ -135,14 +135,35 @@ $(function(){
     }
     courseInfor.lookTimeList();//直播课程详情页---查看直播时间列表
     // 绑定老师头像切换事件
-    $('body').on('click', '.ui_avatar_con .prev,.ui_avatar_con .next', function() {
+    $('body').on('click', '.ui_avatar_con .prev ,  .ui_avatar_con .next', function() {
         var that = $(this);
-        console.log(that);
         if (that.hasClass('none')) {
             return false;
         } else {
           xue.avatar.toggle(that)     
        }
+    });
+    //加入购物车效果
+    $('body').on('click','.button_shop-cart',function(){
+        var that = $(this),
+            _id = that.data('id'),
+            _url = '/ShoppingCart/makeCart/';
+        //alert(_id+','+_url);
+         $.ajax({
+	         	url: _url,
+	         	type: 'POST',
+	         	dataType: 'html',
+	         	data: {id:_id},
+	         	success:function (result) {
+	         		var res = xue.ajaxCheck.HTML(result);
+                    if(res){
+                       $(result).appendTo('.dropdown-body');
+                    }
+	         	},
+	         	error : function() {
+	         		alert('数据加载失败！');
+	         	}
+	         }); 
     });
 })
 

@@ -64,7 +64,6 @@
   margin-bottom: 0;
   padding: 0;
   background-color: transparent;
-  text-align: right;
 }
 #module-topbar .breadcrumb li {
   height: 30px;
@@ -102,6 +101,7 @@
 #module-topbar .ui-header-menu .topright-bar {
   width: 730px;
   height: 30px;
+  text-align: right;
 }
 #module-topbar .ui-header-menu .phone-400 {
   width: 210px;
