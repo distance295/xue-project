@@ -99,6 +99,8 @@
   fCheck.changeVerificationImg = function (imgId) {
     var newVerificationImg = '/Verifications/show?' + fCheck.generateMixed(12);
     $('img[id="' + imgId + '"]').attr('src', newVerificationImg);
+    $("input[name='verificationCode']").val("");
+    $(fCheck.param.veriTip).show(); 
   }
   // 生成随机字符串
   fCheck.generateMixed = function (n) {
@@ -114,14 +116,17 @@
   //验证校验码是否正确(模拟验证1234)
   fCheck.imgcode = function() {
     var input = $(fCheck.param.verifiCode),
-      v = input.val();
+        v = input.val();
+        $('#verificationCode').css('border','1px solid #eaeaea');
     if (v == '') {
       fCheck.setTips('.veri-warning','请输入右侧验证码');
       fCheck.param.cImg = 0;
     }else if(/^\w{4}$/.test(v)){
       /* 调用ajax取值 */
       fCheck.clearTips('.veri-warning');
-      fCheck.imgCodeAjax();     
+      if($('#verificationCode').data('lastVal') != $.trim($('#verificationCode').val())){
+        fCheck.imgCodeAjax();
+      }     
     }else{
       fCheck.setTips('.veri-warning','请输入正确的验证码');
       fCheck.param.cImg = 0;
@@ -140,12 +145,13 @@
           if(result.sign != 1){
             fCheck.changeVerificationImg("verificationImg");
             fCheck.setTips('.veri-warning','网站验证码填写错误');
-            $("input[name='verificationCode']").val("").focus(); 
-            $('#verificationCode').css('border','1px solid #eaeaea');
+            $("input[name='verificationCode']").val("");
+            $(fCheck.param.veriTip).show(); 
             fCheck.param.cImg = 0;
           }else{
             fCheck.clearTips('.veri-warning');
             $('#verificationCode').css('border','1px solid #68c04a');
+            $('#verificationCode').data('lastVal', $.trim($('#verificationCode').val()));
             fCheck.param.cImg = 1;
           }
           if(result.sign === 2){
@@ -283,7 +289,7 @@
   $("#verificationImg").on('click',function(){
     fCheck.changeVerificationImg("verificationImg");
   })
-
+  /* 图片验证码的操作 */
   $("#verificationCode").on('focus',function(){
     $(fCheck.param.veriTip).hide();
     fCheck.clearTips('.veri-warning');
@@ -291,8 +297,8 @@
 
   $("#verificationCode").on('blur',function(){
     var value = $("#verificationCode").val();
-    $('#verificationCode').css('border','1px solid #eaeaea');
     if(value == ''){
+      $('#verificationCode').css('border','1px solid #eaeaea');
       $(fCheck.param.veriTip).show();
       fCheck.setTips('.veri-warning','请输入右侧验证码');
     }else{

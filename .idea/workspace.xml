@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="65a5177b-cc0d-4bfb-a852-a009f5ea707f" name="Default" comment="Merge remote-tracking branch 'XUEJS/master'&#10;&#10;Conflicts:&#10;&#9;source/widget/gold/gold.css&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/widget/UserHome.gold/gold.js" afterPath="$PROJECT_DIR$/source/widget/UserHome.gold/gold.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/widget/UserHome.gold/gold.less" afterPath="$PROJECT_DIR$/source/widget/UserHome.gold/gold.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/widget/UserHome.gold/index.tpl" afterPath="$PROJECT_DIR$/source/widget/UserHome.gold/index.tpl" />
     </list>
     <list id="65f74e84-b66d-4c76-8e30-ad6df2d3b00e" name="New changelist" comment="" />
@@ -27,37 +25,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="gold.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gold.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54472846">
-              <caret line="439" column="21" selection-start-line="439" selection-start-column="21" selection-end-line="439" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="527" column="38" selection-start-line="527" selection-start-column="38" selection-end-line="527" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.tpl" pinned="false" current-in-tab="false">
+      <file leaf-file-name="gold-address.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold-address.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.583333">
+              <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.tpl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/index.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="187" column="86" selection-start-line="187" selection-start-column="86" selection-end-line="187" selection-end-column="86" />
+            <state vertical-scroll-proportion="0.45941806">
+              <caret line="308" column="18" selection-start-line="308" selection-start-column="18" selection-end-line="308" selection-end-column="18" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gold.old.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.old.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
-              <folding>
-                <marker date="1448811544000" expanded="true" signature="727:1259" placeholder="..." />
-                <marker date="1448811544000" expanded="true" signature="1311:1390" placeholder="..." />
-                <marker date="1448811544000" expanded="true" signature="1431:1748" placeholder="..." />
-                <marker date="1448811544000" expanded="true" signature="1787:2060" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -65,8 +58,8 @@
       <file leaf-file-name="gold.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.8627453">
-              <caret line="70" column="56" selection-start-line="70" selection-start-column="56" selection-end-line="70" selection-end-column="56" />
+            <state vertical-scroll-proportion="-0.88235295">
+              <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -132,10 +125,8 @@
         <option value="$PROJECT_DIR$/source/widget/Mall.FindTeacher/test.html" />
         <option value="$PROJECT_DIR$/source/widget/Mall.live/chooseGrade.tpl" />
         <option value="$PROJECT_DIR$/source/widget/Mall.live/live.js" />
-        <option value="$PROJECT_DIR$/source/widget/UserHome.gold/gold-address.less" />
         <option value="$PROJECT_DIR$/source/template/UserHome/GoldIndex.tpl" />
         <option value="$PROJECT_DIR$/source/widget/Mall.live/live-card.tpl" />
-        <option value="$PROJECT_DIR$/source/widget/UserHome.gold/gold.html" />
         <option value="$PROJECT_DIR$/source/data/gold/gold.html" />
         <option value="$PROJECT_DIR$/source/data/gold/gold-address.html" />
         <option value="$PROJECT_DIR$/source/widget/Mall.FindTeacher/find-teacher.html" />
@@ -156,9 +147,11 @@
         <option value="$PROJECT_DIR$/source/widget/servers_home.sh" />
         <option value="$PROJECT_DIR$/source/widget/Mall.live/index.tpl" />
         <option value="$PROJECT_DIR$/source/widget/Mall.FindTeacher/index.tpl" />
+        <option value="$PROJECT_DIR$/source/widget/UserHome.gold/gold.js" />
+        <option value="$PROJECT_DIR$/source/widget/UserHome.gold/gold.html" />
+        <option value="$PROJECT_DIR$/source/widget/UserHome.gold/gold-address.less" />
         <option value="$PROJECT_DIR$/source/widget/UserHome.gold/gold.less" />
         <option value="$PROJECT_DIR$/source/widget/UserHome.gold/index.tpl" />
-        <option value="$PROJECT_DIR$/source/widget/UserHome.gold/gold.js" />
       </list>
     </option>
   </component>
@@ -538,7 +531,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="773" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -764,14 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold-address.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/install.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.34185302">
@@ -873,48 +858,48 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
-            <marker date="1450689527000" expanded="true" signature="980:1094" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="6819:9620" placeholder="..." />
-            <marker date="1450689527000" expanded="false" signature="7014:7027" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="7028:9585" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="7160:9548" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="8259:9448" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="9016:9359" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="10243:11597" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="10300:10503" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="10563:10640" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="10696:11570" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="10797:11002" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="11061:11465" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="11253:11431" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="11701:12682" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="11761:11848" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="11904:12655" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="12005:12210" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="12269:12550" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="12338:12516" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="22656:23961" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="22720:23929" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="22785:23893" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="22859:22978" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="23051:23572" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="23297:23528" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="23724:23854" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="31037:31628" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="31113:31591" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="31278:31550" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="35323:35715" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="35398:35680" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="35469:35641" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="42512:42600" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="43132:45235" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="43322:43661" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="43431:43625" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="43720:45124" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="43824:44009" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="44075:44287" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="44523:44679" placeholder="..." />
-            <marker date="1450689527000" expanded="true" signature="44739:45006" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="980:1094" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="6819:9620" placeholder="..." />
+            <marker date="1450775852000" expanded="false" signature="7014:7027" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="7028:9585" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="7160:9548" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="8259:9448" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="9016:9359" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="10243:11597" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="10300:10503" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="10563:10640" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="10696:11570" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="10797:11002" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="11061:11465" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="11253:11431" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="11701:12682" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="11761:11848" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="11904:12655" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="12005:12210" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="12269:12550" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="12338:12516" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="22656:23961" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="22720:23929" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="22785:23893" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="22859:22978" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="23051:23572" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="23297:23528" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="23724:23854" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="31037:31628" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="31113:31591" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="31278:31550" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="35323:35715" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="35398:35680" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="35469:35641" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="42512:42600" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="43132:45235" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="43322:43661" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="43431:43625" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="43720:45124" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="43824:44009" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="44075:44287" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="44523:44679" placeholder="..." />
+            <marker date="1450775852000" expanded="true" signature="44739:45006" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -924,32 +909,11 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/data/gold/gold-card-modal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.375">
-          <caret line="7" column="135" selection-start-line="7" selection-start-column="135" selection-end-line="7" selection-end-column="135" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/servers_home.bat">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.old.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
-          <folding>
-            <marker date="1448811544000" expanded="true" signature="727:1259" placeholder="..." />
-            <marker date="1448811544000" expanded="true" signature="1311:1390" placeholder="..." />
-            <marker date="1448811544000" expanded="true" signature="1431:1748" placeholder="..." />
-            <marker date="1448811544000" expanded="true" signature="1787:2060" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -985,34 +949,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/source/data/gold/gold-card-modal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.375">
+          <caret line="7" column="135" selection-start-line="7" selection-start-column="135" selection-end-line="7" selection-end-column="135" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2877584">
-          <caret line="54" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.56120825">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.old.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.2940273">
+          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+          <folding>
+            <marker date="1448811544000" expanded="true" signature="727:1259" placeholder="..." />
+            <marker date="1448811544000" expanded="true" signature="1311:1390" placeholder="..." />
+            <marker date="1448811544000" expanded="true" signature="1431:1748" placeholder="..." />
+            <marker date="1448811544000" expanded="true" signature="1787:2060" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="527" column="38" selection-start-line="527" selection-start-column="38" selection-end-line="527" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.8627453">
-          <caret line="70" column="56" selection-start-line="70" selection-start-column="56" selection-end-line="70" selection-end-column="56" />
+        <state vertical-scroll-proportion="-0.88235295">
+          <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold-address.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.583333">
+          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/index.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="187" column="86" selection-start-line="187" selection-start-column="86" selection-end-line="187" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/widget/UserHome.gold/gold.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54472846">
-          <caret line="439" column="21" selection-start-line="439" selection-start-column="21" selection-end-line="439" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.45941806">
+          <caret line="308" column="18" selection-start-line="308" selection-start-column="18" selection-end-line="308" selection-end-column="18" />
           <folding />
         </state>
       </provider>
