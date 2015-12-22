@@ -3,7 +3,7 @@
     @require third.bind.js
 -->
 <div class="tb-content">
-    <p>绑定第三方账户后，就可以使用以下网站账户登录，并同步分享</p>
+    <p>绑定第三方账户后，就可以使用以下账号登录网校</p>
     <ul>
         <li class="app-qq unbounded">
             <h5>腾讯QQ</h5>
