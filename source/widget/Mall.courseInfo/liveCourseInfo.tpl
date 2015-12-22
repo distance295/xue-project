@@ -78,19 +78,67 @@
 	<div class="course-right-teacher f-right">
 		<h5 class="main-teacher-title red">主讲老师</h5>
 		<div class="main-teacher-list">
-			<div class="main-teacher">
-				<div class="ui-avatar f-left">
-					<img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt=""></div>
-				<div class="teacher-avatar-infor f-left">
-					<p>朱韬老师</p>
-					<p class="info">主讲老师将为您提供课程讲授</p>
-				</div>
-			</div>
+			<!--多个老师头像左右切换-->
+                <div class="ui_avatar_con main_teacher">
+                    <div class="ui_avatar">
+                        <ul class="avatar_items" style="margin-left: 0px;">
+                            <li>
+                                <div class="avatar_pic">
+                                    <a href="http://www.xueersi.com/t/zhutao/" class="userpic" target="_blank">
+                                    <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="teacher_avatar_infor">
+                                    <p>达务力江老师</p>
+                                    <p class="info">主讲老师将为您提供课程讲授您提供课程讲授您提供课程讲授</p>
+                                </div>
+                            </li>
+                             <li>
+                                <div class="avatar_pic">
+                                    <a href="http://www.xueersi.com/t/zhutao/" class="userpic" target="_blank">
+                                    <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="teacher_avatar_infor">
+                                    <p>达务力江老师2</p>
+                                    <p class="info">主讲老师将为您提供课程讲授您提供课程讲授您提供课程讲授</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                        <a href="javascript:void(0);" class="prev none">
+                            <em class="icon icon-chevron-left">左</em>
+                        </a>
+                        <a href="javascript:void(0);" class="next">
+                            <em class="icon icon-chevron-right">右</em>
+                        </a>
+                </div>
+<!--多个老师头像左右切换-->
 		</div>
 		<h5 class="main-teacher-title">辅导老师</h5>
 		<div class="main-teacher-list noBorder">
+		<!--多个老师头像左右切换-->
+                <div class="ui_avatar_con main_teacher">
+                    <div class="ui_avatar">
+                        <ul class="avatar_items" style="margin-left: 0px;">
+                            <li>
+                                <div class="avatar_pic">
+                                    <a href="http://www.xueersi.com/t/zhutao/" class="userpic" target="_blank">
+                                    <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="teacher_avatar_infor">
+                                    <p>达务力江老师</p>
+                                    <p class="info">主讲老师将为您提供课程讲授您提供课程讲授您提供课程讲授</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+<!--多个老师头像左右切换-->
+<!--
 			<div class="main-teacher">
-				<div class="ui-avatar f-left">
+				//<div class="ui-avatar f-left">
 					<img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt=""></div>
 				<div class="teacher-avatar-infor f-left">
 					<p>朱韬老师</p>
@@ -100,6 +148,7 @@
 					</p>
 				</div>
 			</div>
+-->
 <!--			<div class="teacher-infor">主讲老师将为您提供课程讲授／知识点强化服务</div>-->
 		</div>
 	</div>
