@@ -25,6 +25,7 @@
                     <div class="panel panel-default">
                         <div class="panel-body CollectCourse-main-wrapper">
                             <link rel="import" href="../../widget/Public.Module/course06.tpl?__inline">
+                            <link rel="import" href="../../widget/Public.Module/course07.tpl?__inline">
                         </div>
 
                         
@@ -52,6 +53,7 @@ var PAGE_CONFIG = {
     MODULE: 'UserHome',
     TITLE: '网校通知-我的收藏-免费课程'
 };
+// 分页
 $('.ui-pages').pages({
     total : 29, // 总记录数
     size: 10, // 每页显示记录数
@@ -74,6 +76,34 @@ $('.ui-pages').pages({
         });
     }
 });
+// 取消收藏
+$('.course-test .cancel-courseList').on('click',function(){
+    if($(this).hasClass('cancel-courseList-disabled')){
+       return false;
+    }
+    var dom = $(this);
+    $.ajax({
+        url: '/data/courses/course06.html',
+        type : 'get',
+        // data:params,
+        success: function(){
+            popoverTips.show({
+                dom: dom,
+                placement: 'top',
+                trigger: 'click', 
+                con: '取消收藏成功'
+            });
+            $(dom).addClass('cancel-courseList-disabled')
+            setTimeout(function(){
+                popoverTips.destroy($(dom));
+            },1000)
+        },
+        error: function(){
+             popoverTips.destroy($(dom));
+        }
+    })
+    
+})
 </script>
 
 <!-- 公共底部 -->
