@@ -19,11 +19,51 @@ nav.opt = {
     fixed : false
 
 };
+//nav.get = function (url, callback) {
+//    var _opt = this.opt;
+//    var _url = url || _opt.dataUrl;
+//    var _handle = $(_opt.handle),
+//        _body = $(_opt.body);
+//    if ($(nav.opt.item).length > 0) {
+//        return;
+//    }
+//    $.ajax({
+//        url: _url,
+//        type: 'GET',
+//        dataType: 'json',
+//        success: function (result) {
+//            if (result.content.length <= 0) {
+//                return;
+//            }
+//            var _item = [],
+//                _tpl = '<ul>',
+//                _sub = '',
+//                _con = result.content;
+//            $.each(_con, function (k, v) {
+//                _tpl += '<li class="category-item item'+ v.id +'" data-id="' + v.id + '">' + '<h3>' + v.name + ' <i class="icon icon-arrow-right pull-right">&gt;</i></h3>' + '<p class="row">';
+//                _sub += '<div class="category-subject" id="subject_' + v.id + '" data-id="' + v.id + '">';
+//                $.each(v.items, function (i, c) {
+//                    _tpl += '<a href="' + c.link + '" class="col-xs-3" data-id="' + c.id + '">' + c.name + '</a>';
+//                    _sub += '<dl class="subitem" data-id="' + c.id + '">' + '<dt>' + c.name + '</dt>' + '<dd class="row">' + c.content + '</dd>' + '</dl>';
+//                });
+//                _tpl += '</p></li>';
+//                _sub += '</div>';
+//            });
+//            _tpl += '</ul>';
+//            $(_opt.items).html(_tpl);
+//            $(_opt.layer).html(_sub);
+//        },
+//        error: function(a, b, c, d){
+////            console.log(arguments);
+//        }
+//    });
+//};
 nav.get = function (url, callback) {
     var _opt = this.opt;
     var _url = url || _opt.dataUrl;
     var _handle = $(_opt.handle),
         _body = $(_opt.body);
+    console.log($(nav.opt.item).length);
     if ($(nav.opt.item).length > 0) {
         return;
     }
@@ -32,29 +72,26 @@ nav.get = function (url, callback) {
         type: 'GET',
         dataType: 'json',
         success: function (result) {
-            if (result.content.length <= 0) {
+            console.log(result);
+            if (result.data.length <= 0) {
                 return;
             }
             var _item = [],
                 _tpl = '<ul>',
                 _sub = '',
-                _con = result.content;
+                _con = result.data;
             $.each(_con, function (k, v) {
-                _tpl += '<li class="category-item item'+ v.id +'" data-id="' + v.id + '">' + '<h3>' + v.name + ' <i class="icon icon-arrow-right pull-right">&gt;</i></h3>' + '<p class="row">';
-                _sub += '<div class="category-subject" id="subject_' + v.id + '" data-id="' + v.id + '">';
-                $.each(v.items, function (i, c) {
-                    _tpl += '<a href="' + c.link + '" class="col-xs-3" data-id="' + c.id + '">' + c.name + '</a>';
-                    _sub += '<dl class="subitem" data-id="' + c.id + '">' + '<dt>' + c.name + '</dt>' + '<dd class="row">' + c.content + '</dd>' + '</dl>';
-                });
-                _tpl += '</p></li>';
-                _sub += '</div>';
+                _tpl += '<li class="category-item item'+ v.id +'" data-id="' + v.id + '">' 
+                    + '<h3>' + v.name + ' <i class="icon icon-arrow-right pull-right">&gt;</i></h3>' 
+                    + '<p class="row">' + v.info + '</p></li>';
+                _sub += '<div class="category-subject" id="subject_' + v.id + '" data-id="' + v.id + '">' + v.content + '</div>';
             });
             _tpl += '</ul>';
             $(_opt.items).html(_tpl);
             $(_opt.layer).html(_sub);
         },
         error: function(a, b, c, d){
-//            console.log(arguments);
+            console.log(arguments);
         }
     });
 };
