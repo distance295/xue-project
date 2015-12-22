@@ -114,7 +114,8 @@
   //验证校验码是否正确(模拟验证1234)
   fCheck.imgcode = function() {
     var input = $(fCheck.param.verifiCode),
-      v = input.val();
+        v = input.val();
+        $('#verificationCode').css('border','1px solid #eaeaea');
     if (v == '') {
       fCheck.setTips('.veri-warning','请输入右侧验证码');
       fCheck.param.cImg = 0;
@@ -144,7 +145,6 @@
             fCheck.setTips('.veri-warning','网站验证码填写错误');
             $("input[name='verificationCode']").val("");
             $(fCheck.param.veriTip).show(); 
-            $('#verificationCode').css('border','1px solid #eaeaea');
             fCheck.param.cImg = 0;
           }else{
             fCheck.clearTips('.veri-warning');
@@ -287,7 +287,7 @@
   $("#verificationImg").on('click',function(){
     fCheck.changeVerificationImg("verificationImg");
   })
-
+  /* 图片验证码的操作 */
   $("#verificationCode").on('focus',function(){
     $(fCheck.param.veriTip).hide();
     fCheck.clearTips('.veri-warning');
