@@ -200,6 +200,7 @@ body {
   vertical-align: top;
   float: right;
   margin-right: 10px;
+  font-family: "SimSun";
 }
 .courseList .courseList-body .course-title .change-course {
   color: #e74c3c;
@@ -217,6 +218,7 @@ body {
 }
 .courseList .courseList-body .end-time span strong {
   color: #e74c3c;
+  font-weight: normal;
 }
 .courseList .courseList-body .amount-show .btn {
   margin-right: 10px;
@@ -239,7 +241,11 @@ body {
 }
 .courseList .courseList-body .amount-show .btn .live-label {
   border-radius: 3px;
-  right: -21px;
+  right: -15px;
+  width: 30px;
+  display: inline-block;
+  background: url('img/live-label.png') no-repeat 0 0;
+  text-indent: -99999px;
 }
 .courseList .courseList-body .amount-show .direct-btn {
   color: #e74c3c;
@@ -249,7 +255,7 @@ body {
 }
 .courseList .courseList-body .more-service {
   margin-right: 10px;
-  margin-top: 2px;
+  margin-top: 3px;
 }
 .courseList .courseList-body .more-service h4 {
   color: #333333;
@@ -344,7 +350,7 @@ body {
 }
 .courseList .courseList-teacher .majar-items .avatar-roll {
   position: absolute;
-  right: 36px;
+  right: 47px;
   bottom: 4px;
 }
 .courseList .courseList-teacher .majar-items .avatar-roll a {
@@ -443,6 +449,14 @@ table tr:nth-of-type(2n) {
   background: #3bafda;
   color: #fff;
   border-radius: 4px 4px 0 0;
+}
+.material-wrap .material .btn:focus,
+.material-wrap .material .btn:active:focus,
+.material-wrap .material .btn.active:focus,
+.material-wrap .material .btn.focus,
+.material-wrap .material .btn.focus:active,
+.material-wrap .material .btn.active.focus {
+  outline: none;
 }
 .material-wrap .material tr td {
   padding: 9px 17px;
@@ -579,73 +593,137 @@ table tr:nth-of-type(2n) {
 .courselayout-list .tab-record-content .active {
   display: block;
 }
-.courselayout-list .course-table td {
-  display: table-cell;
-  line-height: 42px;
-}
-.courselayout-list .course-table thead {
-  background: #fff;
-  line-height: 50px;
-  height: 50px;
+.courselayout-list .course-table-title {
+  background-color: #fff;
   border-radius: 5px;
-}
-.courselayout-list .course-table thead tr th {
+  color: #999;
   font-size: 16px;
-  border-bottom: none;
+  height: 52px;
+  width: 100%;
 }
-.courselayout-list .course-table tbody tr {
+.courselayout-list .course-table-title span {
+  width: 32%;
+  display: inline-block;
+  height: 52px;
+  line-height: 52px;
+  text-align: center;
+}
+.courselayout-list .course-table-live-title span {
+  width: 24%;
+}
+.courselayout-list .course-table-live-title span.span-w1 {
+  width: 30%;
+}
+.courselayout-list .course-table-live-title span.span-w2 {
+  width: 42%;
+}
+.courselayout-list .course-table-live-title span.span-w3 {
+  width: 10%;
+}
+.courselayout-list .course-table-live-title span.span-w4 {
+  width: 14%;
+}
+.courselayout-list .course-table.course-live-table li span.span-w1 {
+  width: 30%;
+  float: left;
+}
+.courselayout-list .course-table.course-live-table li span.span-w2 {
+  width: 42%;
+  float: left;
+  text-align: left;
+}
+.courselayout-list .course-table.course-live-table li span.span-w2 .studied-end {
+  width: 57px;
+  float: none;
+}
+.courselayout-list .course-table.course-live-table li span.span-w3 {
+  width: 10%;
+  float: left;
+}
+.courselayout-list .course-table.course-live-table li span.span-w4 {
+  width: 14%;
+  float: left;
+}
+.courselayout-list .course-table {
+  margin-top: 1px;
+  border-radius: 5px;
+  background: #fff;
+}
+.courselayout-list .course-table li:first-child {
+  border: none;
+}
+.courselayout-list .course-table li {
   border-right: none;
+  border-left: none;
   font-size: 14px;
   font-family: "SimSun";
-  background: #fff;
+  line-height: 62px;
+  height: 62px;
+  border-top: 1px solid #f5f5f5;
 }
-.courselayout-list .course-table tbody tr .text-style {
+.courselayout-list .course-table li span {
+  width: 32%;
+  display: inline-block;
+  text-align: center;
+  height: 62px;
+  float: left;
+}
+.courselayout-list .course-table li span em {
+  color: #999;
+  padding: 0;
+}
+.courselayout-list .course-table li .text-style {
   text-align: center;
   font-size: 12px;
 }
-.courselayout-list .course-table tbody tr .text-style span {
+.courselayout-list .course-table li .text-style span {
   color: #999;
+  float: none;
+  width: 85px;
 }
-.courselayout-list .course-table tbody tr .text-style a.homework-wait-submit {
+.courselayout-list .course-table li .text-style a.homework-wait-submit {
   color: #ffbc3c;
   cursor: pointer;
 }
-.courselayout-list .course-table tbody tr td {
-  border: none;
-}
-.courselayout-list .course-table tbody tr .studied-end {
+.courselayout-list .course-table li .studied-end {
   color: #e74c3c;
 }
-.courselayout-list .course-table tbody tr .yellow-mark {
+.courselayout-list .course-table li .studied-end a {
+  color: #e74c3c;
+}
+.courselayout-list .course-table li .yellow-mark {
   color: #ffbc3c;
 }
-.courselayout-list .course-table tbody tr .studied {
+.courselayout-list .course-table li .yellow-mark a {
+  color: #ffbc3c;
+}
+.courselayout-list .course-table li .studied {
   color: #37bc9b;
 }
-.courselayout-list .course-table tbody tr .static-gray {
+.courselayout-list .course-table li .studied a {
+  color: #37bc9b;
+}
+.courselayout-list .course-table li .static-gray {
   color: #999999;
 }
-.courselayout-list .course-table tbody tr .static-red {
+.courselayout-list .course-table li .static-red {
   color: #e74c3c;
 }
-.courselayout-list .course-table tbody tr .wait-look {
+.courselayout-list .course-table li .wait-look {
   color: #3bafda;
 }
-.courselayout-list .course-table tbody tr td.yellow-mark em {
+.courselayout-list .course-table li .wait-look a {
+  color: #3bafda;
+}
+.courselayout-list .course-table li span.yellow-mark em {
   display: inline-block;
-  width: 18px;
-  height: 18px;
-  margin-left: 5px;
+  text-align: left;
+  color: #999;
 }
-.courselayout-list .course-table tbody tr td.yellow-mark .mark {
-  background: url("img/spam.png") no-repeat right center;
+.courselayout-list .course-table li span.yellow-mark .mark {
+  background: url("img/exclamation.png") no-repeat right center;
   vertical-align: middle;
-}
-.courselayout-list .course-table tr:last-child {
-  border: none;
-}
-.courselayout-list .course-table tr:last-child td {
-  border: none;
+  padding-right: 24px;
 }
 .teacher-tab {
   border-bottom: 1px solid #3bafda;
