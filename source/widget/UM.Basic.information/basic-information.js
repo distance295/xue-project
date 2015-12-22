@@ -32,13 +32,19 @@ $(function(){
             color: '#999',
             display: 'block'
         });
-        fCheck.clearTips(".nickname-warning");
+        $(".nickname-warning").css({
+            display: 'none',
+        });
     });
     $(nickname).on('blur',function(){
         fCheck.clearTips(".prompt-empty");
         if(nickname.data('lastVal') != $.trim(nickname.val())) {
             $(".nickname").css('border','1px solid #eaeaea');
             $.fn.nickname();
+        }else{
+            $(".nickname-warning").css({
+                display: 'block',
+            });
         }
     });
 });
@@ -62,6 +68,7 @@ $.fn.nickname = function(){
         }
     }
 };
+
 $.fn.nicknameajax = function(){
     // 昵称与其他用户重复，请重新设置
     var box = $(boxs.nickname),
@@ -83,6 +90,9 @@ $.fn.nicknameajax = function(){
                     fCheck.bordercss('.nickname');
                     $(box).data('nickname',val);
                 }
+                if(result.sign === 2){
+                    window.location.href = result.msg;
+                } 
             }
         });
     }else{
@@ -99,7 +109,7 @@ $.fn.school = function(){
     if (val == '') {
         fCheck.clearTips(".school-warning");
     }else {
-        var reg = /^[0-9a-zA-Z\u4e00-\u9fa5]{1,18}$/;
+        var reg = /^[0-9a-zA-Z\u4e00-\u9fa5]{1,50}$/;
         if(reg.test(val)){
             fCheck.clearTips(".school-warning");
             fCheck.bordercss('.school');

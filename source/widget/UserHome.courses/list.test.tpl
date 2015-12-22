@@ -2,6 +2,7 @@
    随堂测试列表：
     @require coursestudycenter.less
     @require coursestudycenter.js
+    @require ../Module.Pagination/paginations.js  
 -->
 
 <div class="courselayout-list courseList-wrap">
@@ -70,4 +71,6 @@
             </span>
         </li>
     </ul>
+    
+    <!-- <div class="ui-pages text-center"></div> -->
 </div>

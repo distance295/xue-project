@@ -7,6 +7,7 @@
     @require gold.js
     @require ../Module.Modal/Modal.js
     @require gold-address.less
+    @require ../Module.Pagination/paginations.js
 -->
 
 <!-- 金币商城头部 -->
@@ -73,7 +74,7 @@
     </ul>
 
     <!-- 魔法卡 -->
-    <div class="gold-store-card-box gold-store-block-change" style="display: block">
+    <div class="gold-store-card-box gold-store-block-change" >
         <div class="gold-store-card-box-over">
             <div class="gold-store-card" id="11">
                 <div class="gold-store-card-img-box">
@@ -84,7 +85,9 @@
                     <span class="gold-store-card-level">需要等级:<em>16</em></span>
                 </div>
                 <p>红名卡(月卡)，尊贵的红色昵称，让你与众不同。初期每周限售100张，每人限购2张</p>
-                <div class="gold-store-card-exchange" data-toggle="modal" data-target="#cardModal">兑换</div>
+                <div class="gold-store-present-btn">
+                    <div class="gold-store-card-exchange" data-toggle="modal" data-target="#cardModal">兑换</div>
+                </div>
             </div>
             <div class="gold-store-card" id="12">
                 <div class="gold-store-card-img-box">
@@ -95,7 +98,9 @@
                     <span class="gold-store-card-level">需要等级:<em>16</em></span>
                 </div>
                 <p>红名卡(月卡)，尊贵的红色昵称，让你与众不同。初期每周限售100张，每人限购2张</p>
-                <div class="gold-store-card-exchange">兑换</div>
+                <div class="gold-store-present-btn">
+                    <div class="gold-store-card-exchange">兑换</div>
+                </div>
             </div>
             <div class="gold-store-card" id="13">
                 <div class="gold-store-card-img-box">
@@ -106,7 +111,9 @@
                     <span class="gold-store-card-level">需要等级:<em>16</em></span>
                 </div>
                 <p>红名卡(月卡)，尊贵的红色昵称，让你与众不同。初期每周限售100张，每人限购2张</p>
-                <div class="gold-store-card-exchange">兑换</div>
+                <div class="gold-store-present-btn">
+                    <div class="gold-store-card-exchange">兑换</div>
+                </div>
             </div>
             <div class="gold-store-card" id="14">
                 <div class="gold-store-card-img-box">
@@ -117,7 +124,9 @@
                     <span class="gold-store-card-level">需要等级:<em>16</em></span>
                 </div>
                 <p>红名卡(月卡)，尊贵的红色昵称，让你与众不同。初期每周限售100张，每人限购2张</p>
-                <div class="gold-store-card-exchange">兑换</div>
+                <div class="gold-store-present-btn">
+                    <div class="gold-store-card-exchange">兑换</div>
+                </div>
             </div>
         </div>
         <div class="gold-store-card-box-over">
@@ -130,7 +139,9 @@
                     <span class="gold-store-card-level">需要等级:<em>16</em></span>
                 </div>
                 <p>红名卡(月卡)，尊贵的红色昵称，让你与众不同。初期每周限售100张，每人限购2张</p>
-                <div class="gold-store-card-exchange">兑换</div>
+                <div class="gold-store-present-btn">
+                    <div class="gold-store-card-exchange">兑换</div>
+                </div>
             </div>
             <div class="gold-store-card" id="22">
                 <div class="gold-store-card-img-box">
@@ -141,7 +152,9 @@
                     <span class="gold-store-card-level">需要等级:<em>16</em></span>
                 </div>
                 <p>红名卡(月卡)，尊贵的红色昵称，让你与众不同。初期每周限售100张，每人限购2张</p>
-                <div class="gold-store-card-exchange">兑换</div>
+                <div class="gold-store-present-btn">
+                    <div class="gold-store-card-exchange">兑换</div>
+                </div>
             </div>
             <div class="gold-store-card" id="23">
                 <div class="gold-store-card-img-box">
@@ -152,7 +165,9 @@
                     <span class="gold-store-card-level">需要等级:<em>16</em></span>
                 </div>
                 <p>红名卡(月卡)，尊贵的红色昵称，让你与众不同。初期每周限售100张，每人限购2张</p>
-                <div class="gold-store-card-exchange">兑换</div>
+                <div class="gold-store-present-btn">
+                    <div class="gold-store-card-exchange">兑换</div>
+                </div>
             </div>
             <div class="gold-store-card" id="24">
                 <div class="gold-store-card-img-box">
@@ -163,12 +178,14 @@
                     <span class="gold-store-card-level">需要等级:<em>16</em></span>
                 </div>
                 <p>红名卡(月卡)，尊贵的红色昵称，让你与众不同。初期每周限售100张，每人限购2张</p>
-                <div class="gold-store-card-exchange">兑换</div>
+                <div class="gold-store-present-btn">
+                    <div class="gold-store-card-exchange">兑换</div>
+                </div>
             </div>
         </div>
     </div>
     <!-- 实物礼品 -->
-    <div class="gold-store-present-box gold-store-block-change" >
+    <div class="gold-store-present-box gold-store-block-change" style="display: block">
         <div class="gold-store-present-rank">
             <span class="gold-store-present-rank-by">排序 :
                 <a href="#" class="gold-store-present-rank-focus"><em class="gold-store-rank-by-gold gold-store-present-rank-gold">金币</em><i class="gold-store-gold-arrow glyphicon glyphicon-arrow-up"></i></a>
@@ -184,7 +201,9 @@
                     <span class="gold-store-present-card-name">清华大学扑克牌</span>
                     <span class="gold-store-present-card-stock">库存还剩347套</span>
                     <span class="gold-store-present-card-gold">260金币</span>
-                    <div class="gold-store-present-exchange" data-num="12" data-price="6300" data-toggle="modal" data-target="#presentModal">兑换</div>
+                    <div class="gold-store-present-btn">
+                        <div class="gold-store-present-exchange" data-num="12" data-price="6300" data-toggle="modal" data-target="#presentModal">兑换</div>
+                    </div>
                 </div>
                 <div class="gold-store-present-card gold-store-present-card-center" id="32">
                     <div class="gold-store-present-img-box">
@@ -193,7 +212,9 @@
                     <span class="gold-store-present-card-name">清华大学扑克牌</span>
                     <span class="gold-store-present-card-stock">库存还剩347套</span>
                     <span class="gold-store-present-card-gold">260金币</span>
-                    <div class="gold-store-present-exchange">兑换</div>
+                    <div class="gold-store-present-btn">
+                        <div class="gold-store-present-exchange">兑换</div>
+                    </div>
                 </div>
                 <div class="gold-store-present-card gold-store-present-card-center" id="33">
                     <div class="gold-store-present-img-box">
@@ -202,7 +223,9 @@
                     <span class="gold-store-present-card-name">清华大学扑克牌</span>
                     <span class="gold-store-present-card-stock">库存还剩347套</span>
                     <span class="gold-store-present-card-gold">260金币</span>
-                    <div class="gold-store-present-exchange">兑换</div>
+                    <div class="gold-store-present-btn">
+                        <div class="gold-store-present-exchange">兑换</div>
+                    </div>
                 </div>
                 <div class="gold-store-present-card gold-store-present-card-center" id="34">
                     <div class="gold-store-present-img-box">
@@ -211,7 +234,9 @@
                     <span class="gold-store-present-card-name">清华大学扑克牌</span>
                     <span class="gold-store-present-card-stock">库存还剩347套</span>
                     <span class="gold-store-present-card-gold">260金币</span>
-                    <div class="gold-store-present-exchange">兑换</div>
+                    <div class="gold-store-present-btn">
+                        <div class="gold-store-present-exchange">兑换</div>
+                    </div>
                 </div>
             </div>
             <div class="gold-store-present-card-box">
@@ -222,7 +247,9 @@
                     <span class="gold-store-present-card-name">清华大学扑克牌</span>
                     <span class="gold-store-present-card-stock">库存还剩347套</span>
                     <span class="gold-store-present-card-gold">260金币</span>
-                    <div class="gold-store-present-exchange">兑换</div>
+                    <div class="gold-store-present-btn">
+                        <div class="gold-store-present-exchange">兑换</div>
+                    </div>
                 </div>
                 <div class="gold-store-present-card gold-store-present-card-center" id="42">
                     <div class="gold-store-present-img-box">
@@ -231,7 +258,9 @@
                     <span class="gold-store-present-card-name">清华大学扑克牌</span>
                     <span class="gold-store-present-card-stock">库存还剩347套</span>
                     <span class="gold-store-present-card-gold">260金币</span>
-                    <div class="gold-store-present-exchange">兑换</div>
+                    <div class="gold-store-present-btn">
+                        <div class="gold-store-present-exchange">兑换</div>
+                    </div>
                 </div>
                 <div class="gold-store-present-card gold-store-present-card-center" id="43">
                     <div class="gold-store-present-img-box">
@@ -240,7 +269,9 @@
                     <span class="gold-store-present-card-name">清华大学扑克牌</span>
                     <span class="gold-store-present-card-stock">库存还剩347套</span>
                     <span class="gold-store-present-card-gold">260金币</span>
-                    <div class="gold-store-present-exchange">兑换</div>
+                    <div class="gold-store-present-btn">
+                        <div class="gold-store-present-exchange">兑换</div>
+                    </div>
                 </div>
                 <div class="gold-store-present-card gold-store-present-card-center" id="44">
                     <div class="gold-store-present-img-box">
@@ -249,13 +280,15 @@
                     <span class="gold-store-present-card-name">清华大学扑克牌</span>
                     <span class="gold-store-present-card-stock">库存还剩347套</span>
                     <span class="gold-store-present-card-gold">260金币</span>
-                    <div class="gold-store-present-exchange">兑换</div>
+                    <div class="gold-store-present-btn">
+                        <div class="gold-store-present-exchange">兑换</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="gold-exchange-container gold-detail-block-change">
+<div class="gold-exchange-container gold-detail-block-change" >
     <ul class="gold-exchange-title-container">
         <li class="gold-exchange-title-on" exchange-target=".gold-exchange-card-box">魔法卡</li>
         <li exchange-target=".gold-exchange-present-box">实物礼品</li>
@@ -331,7 +364,7 @@
             </div>
         </div>
     </div>
-    <div class="gold-exchange-present-box gold-exchange-block-change">
+    <div class="gold-exchange-present-box gold-exchange-block-change" >
         <div class="gold-exchange-present-card-container">
             <div class="gold-exchange-present-card-box">
                 <div class="gold-exchange-present-card">

@@ -128,12 +128,12 @@
               $("#curPwd").css('border','1px solid #eaeaea');
               cPassword = 0;
           }else{
-            cPassword = 1;
+              cPassword = 1;
           }  
       }
     }
     $("#curPwd").on('focus', function() {
-       fCheck.clearTips(".curPwd-warning");
+      fCheck.clearTips(".curPwd-warning");
     });
     $("#curPwd").on('blur', function() {
        curPwdfn(); 
@@ -169,7 +169,14 @@
        fCheck.clearTips(".newPwd-warning");
     });
     $("#newPwd").on('blur', function() {
-       newpasswdfn(); 
+       newpasswdfn();
+       var newpasswd = $("#newPwd").val();
+       var confirmpasswd = $("#confirmPwd").val();
+       if (newpasswd == confirmpasswd) {
+           fCheck.clearTips(".confirmPwd-warning");
+           fCheck.bordercss('#confirmPwd');
+           conPassword = 1;
+       }
     });
 
     /* 确认新密码 */
@@ -186,6 +193,7 @@
               $("#confirmPwd").css('border','1px solid #eaeaea');
               conPassword = 0;
           }else{
+            fCheck.clearTips(".confirmPwd-warning");
             fCheck.bordercss('#confirmPwd');
             conPassword = 1;
           }
@@ -203,7 +211,8 @@
       curPwdfn();
       newpasswdfn();
       confirmPwdfn();
-      if( cPassword && nPassword && conPassword ){
+      var pwdError = $(".password-error span").is(":empty");
+      if( cPassword && nPassword && conPassword && !pwdError ){
         return false;
       }else{
         return true;
@@ -227,12 +236,26 @@
                 data: "curPwd=" + curpasswd + '&newPwd=' + newpasswd + '&confirmPwd=' + confirmpasswd,
                 dataType: 'json',
                 success: function(d) {
+                    if(d.sign === 2){
+                        window.location.href = d.msg;
+                    } 
                     if (d.sign == 1) {
                         location.href = "/MyInfos/passwordManager";
                         $("#curPwd").css('border','1px solid #68c04a');
-                    } else {
-                        fCheck.setTips('.curPwd-warning',d.msg);
+                    }else{
+                      fCheck.setTips('.password-error span',d.msg);
+                      var pwdError = $(".password-error span").is(":empty");
+                      if (pwdError == 0) {
+                          $('.password-error').css({
+                              display: 'block'
+                          });
+                          setTimeout("$('.password-error').css({display: 'none'});",6000); 
+                      }
                     }
+                },
+                error: function() {
+                  alert('数据读取错误,请重试..');
+                  return false;
                 }
             });
           };

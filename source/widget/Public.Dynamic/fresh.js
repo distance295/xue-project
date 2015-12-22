@@ -535,18 +535,16 @@ fresh.comment = fresh.comment || {};
         //验证码的值
         var vd = $('#verificationCode').val() || '';
         var _tipCode = $('#fresh-dialog-tips-Code');
-        
-        var param = this.param.wraper.data('params') || {
-            'dynId': fc.id,
-            'content': val,
-            'verificationCode': vd
-        };
+
+        var _params = fc.param.commentBox.prev('.fresh-barinfo').find('.fresh-comment-expand-btn').data('params');
+
+       
         $.ajax({
             //url: fresh.path.url + 'ajaxAddDynComment.json',//添加成功与否验证ajax
             //data: param + '&content=' + encodeURIComponent(val) + '&verificationCode=' + vd,
             //type: 'get',
             url: fresh.path.url + 'ajaxAddDynComment',//添加成功与否验证ajax
-            data: param,
+            data: _params + "&content="+val+"&verificationCode="+vd,
             type: 'post',
             dataType: 'json',
             beforeSend: function() {

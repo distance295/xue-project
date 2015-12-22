@@ -1,6 +1,6 @@
 <!--
-    @require balance.less
-    @require balance.js    
+    @require balance.less 
+    @require ../Module.Pagination/paginations.js   
 -->
 <div class="balance-record">
      <span>我的账户余额<em>1000.0</em>元</span>
@@ -24,5 +24,6 @@
                 </tr>
             </tbody>
          </table>
+         <div class="ui-pages text-right"></div>
      </div>
 </div>

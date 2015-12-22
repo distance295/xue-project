@@ -73,6 +73,7 @@
       /* 未输入任何字符 */
       $(phoneTip).show();
       fCheck.setTips(phoneWarn,"请输入手机号");
+      $('#phone').css('border','1px solid #eaeaea');
     } else {
       /* 对手机号码进行验证 */
       var isPhone = (/^(13|15|18|14|17)[0-9]{9}$/.test(value) ? true : false);
@@ -81,12 +82,14 @@
       if(!is11){
         /* 非11位数字组成 */
         fCheck.setTips(phoneWarn,"手机号由11位数字组成");
+        $('#phone').css('border','1px solid #eaeaea');
         fCheck.param.cPhone = 0;
       }else if( isPhone ){
         $('#phone').css('border','1px solid #68c04a');
         fCheck.param.cPhone = 1;
       }else{
         fCheck.setTips(phoneWarn,'不支持该手机号号段');
+        $('#phone').css('border','1px solid #eaeaea');
         fCheck.param.cPhone = 0;
       }
     }
@@ -135,19 +138,22 @@
         success: function(result) {
           /* 填写的信息验证不通过 */
           if(result.sign != 1){
-          fCheck.changeVerificationImg("verificationImg");
-          fCheck.setTips('.veri-warning','网站验证码填写错误');
-          fCheck.param.cImg = 0;
-        }else{
-          fCheck.clearTips('.veri-warning');
-          fCheck.param.cImg = 1;
-          $('#verificationCode').css('border','1px solid #68c04a');
+            fCheck.changeVerificationImg("verificationImg");
+            fCheck.setTips('.veri-warning','网站验证码填写错误');
+            fCheck.param.cImg = 0;
+          }else{
+            fCheck.clearTips('.veri-warning');
+            fCheck.param.cImg = 1;
+            $('#verificationCode').css('border','1px solid #68c04a');
+          }
+          if(result.sign === 2){
+              window.location.href = result.msg;
+          } 
+        },
+        error: function() {
+          alert('数据读取错误,请重试..');
+          return false;
         }
-      },
-      error: function() {
-        alert('数据读取错误,请重试..');
-        return false;
-      }
      });
   };
 
@@ -179,6 +185,9 @@
       timeout: 7000,
       async: false,
       success: function (result) {
+        if(result.sign === 2){
+            window.location.href = result.msg;
+        } 
         if(!result.sign){
           fCheck.clearTips('#tips-phonecode');
           fCheck.setTips('#tips-phonecode',result.msg);
@@ -313,8 +322,8 @@
   $("#phonecode").on("blur",function(){
     var value = $('#phonecode').val();
     if(value.length == 0){
-          $('.phonecode-tip').show();
-        }
+      $('.phonecode-tip').show();
+    }
   })
 
   /* 判断是否可以点击操作"完成"按钮 */
@@ -333,9 +342,13 @@
         timeout: 7000,
         success: function(result) {
           /* 填写的信息验证不通过 */
+          if(result.sign === 2){
+              window.location.href = result.msg;
+          } 
           if(result.sign == 1){
             window.location.href= '/MyInfos/phoneManager';
           }else{
+            fCheck.changeVerificationImg("verificationImg");
             fCheck.setTips('.phone-error span',result.msg);
             var phoneError = $(".phone-error span").is(":empty");
             if (phoneError == 0) {

@@ -25,9 +25,11 @@
             </ul>
              
             <div class="panel panel-default ">
+                <input type="hidden" value="200" id="pagesTotal">
                 <div class="panel-body pd0 fresh-main-wrapper">
                 	<link rel="import" href="../../widget/Public.Dynamic/index.tpl?__inline">
                 </div>
+                <div class="ui-pages text-center"></div>
             </div>
 
             <!-- *********************** 内容区域结束 *********************** -->
@@ -92,6 +94,26 @@
                       }else{
                           $('.fresh-main-wrapper').html('');
                       }
+                      var pageNun = parseInt($.trim($('#pagesTotal').val()));
+                      //分页的方法
+                      $('.ui-pages').pages({
+                          total : pageNun, // 总记录数
+                          size: 20, // 每页显示记录数
+                          index : 1, // 当前页
+                          click : function(index){
+                              $.ajax({
+                                  url : '/data/Dynamic/ajaxDynamicList.html',
+                                  data : '&type='+_type+'&curpage='+index,
+                                  type: "get",
+                                  dataType: 'html',
+                                  success: function(data){
+                                    if(data){
+                                       $('.fresh-main-wrapper').html(data);
+                                    }
+                                  }
+                              });
+                          }
+                      });
                   }
               })
         })

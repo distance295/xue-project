@@ -33,22 +33,47 @@
         TITLE: '代金卡激活记录-个人设置'
     };
 
-    $(function(){
-        $.ajax({
+    $.ajax({
             type: "GET",
             url: "/MyPayCenters/ajaxGiftCardData",
             dataType: "html",
             data: '&curpage=1',
-            //object是后台传过来的list数据集合  
-            success:function(objects){                                           
-              var box = $('#moneyTable');
-              box.html(objects); 
+            success:function(objects){ 
+                if(objects.sign === 2){
+                    window.location.href = objects.msg;
+                }                                           
+                var box = $('#moneyTable');
+                box.html(objects); 
+                $('.ui-pages').pages({
+                    total : 29, // 总记录数
+                    size: 5, // 每页显示记录数
+                    index : 1, // 当前页
+                    // 点击分页时的回调，返回被点击的页数
+                    click : function(index){
+                        $.ajax({
+                            type: "GET",
+                            url: "/MyPayCenters/ajaxGiftCardData",
+                            dataType: "html",
+                            data: '&curpage=' + index,
+                            success:function(objects){ 
+                                if(objects.sign === 2){
+                                    window.location.href = objects.msg;
+                                }                                           
+                                var box = $('#moneyTable');
+                                box.html(objects); 
+                            },  
+                            error:function(){  
+                                alert("异步失败");  
+                            }  
+                        });
+                    }
+                });
             },  
             error:function(){  
-              alert("异步失败");  
+                alert("异步失败");  
             }  
         });
-    })
+    
 </script>
 
 <!-- 公共底部 -->

@@ -104,7 +104,7 @@ ms_DatePicker: function (options) {
                 }else{
                     if ($MonthSelector.val() == 0) {
                         $(".date-warning").css({
-                          'display': 'block',
+                          'display': 'none',
                         }).html("请输入月份");
                         $('#year,#month,#day').css({
                             border: '1px solid #eaeaea'
@@ -112,7 +112,7 @@ ms_DatePicker: function (options) {
                     }else{
                         if ($DaySelector.val() == 0) {
                             $(".date-warning").css({
-                              'display': 'block',
+                              'display': 'none',
                             }).html("请输入日");
                             $('#year,#month,#day').css({
                                 border: '1px solid #eaeaea'
@@ -129,6 +129,16 @@ ms_DatePicker: function (options) {
                         }
                     }
                 }
+                $('#date select').on('focus',function() {
+                    $('.date-warning').css({
+                        display: 'none',
+                    });
+                });
+                $('#date select').on('blur',function() {
+                    $('.date-warning').css({
+                        display: 'block',
+                    });
+                });
             }
 
             $YearSelector.change(function () {

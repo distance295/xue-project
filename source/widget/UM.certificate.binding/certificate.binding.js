@@ -47,6 +47,9 @@ $(function() {
             data: "bindcardNo=" + $(".bindcardNo").val() + "&bindcardPass=" + $(".bindcardPass").val(),
             dataType: "json",
             success: function(d) {
+                if(d.sign === 2){
+                    window.location.href = d.msg;
+                } 
                 if (d.sign == 1) {
                     location.href = "/RequestPassword/UpdatePasswordSecuess";
                 } else {

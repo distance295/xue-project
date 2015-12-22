@@ -4,6 +4,10 @@
 -->
 
 <div class="form-password" action="" method="POST">
+    <div class="password-error">
+        <span></span>
+    </div>
+    
     <div class="curPwd-box">
         <p>当前密码：</p>
         <input id="curPwd" name="curPwd" type="password" maxlength="18" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;"/>
