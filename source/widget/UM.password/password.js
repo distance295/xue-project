@@ -128,11 +128,7 @@
               $("#curPwd").css('border','1px solid #eaeaea');
               cPassword = 0;
           }else{
-            if($("#curPwd").data('lastVal') != $.trim($("#curPwd").val())){
               cPassword = 1;
-            }else{
-              cPassword = 0;
-            }
           }  
       }
     }
@@ -176,15 +172,11 @@
        newpasswdfn();
        var newpasswd = $("#newPwd").val();
        var confirmpasswd = $("#confirmPwd").val();
-       if (newpasswd != confirmpasswd) {
-           fCheck.setTips(".confirmPwd-warning",'新密码与确认密码不一致');
-           $("#confirmPwd").css('border','1px solid #eaeaea');
-           conPassword = 0;
-       }else{
-         fCheck.clearTips(".confirmPwd-warning");
-         fCheck.bordercss('#confirmPwd');
-         conPassword = 1;
-       } 
+       if (newpasswd == confirmpasswd) {
+           fCheck.clearTips(".confirmPwd-warning");
+           fCheck.bordercss('#confirmPwd');
+           conPassword = 1;
+       }
     });
 
     /* 确认新密码 */
@@ -219,7 +211,8 @@
       curPwdfn();
       newpasswdfn();
       confirmPwdfn();
-      if( cPassword && nPassword && conPassword ){
+      var pwdError = $(".password-error span").is(":empty");
+      if( cPassword && nPassword && conPassword && !pwdError ){
         return false;
       }else{
         return true;
@@ -249,9 +242,15 @@
                     if (d.sign == 1) {
                         location.href = "/MyInfos/passwordManager";
                         $("#curPwd").css('border','1px solid #68c04a');
-                    } else {
-                        $("#curPwd").data('lastVal', $.trim($("#curPwd").val()));
-                        fCheck.setTips('.curPwd-warning',d.msg);
+                    }else{
+                      fCheck.setTips('.password-error span',d.msg);
+                      var pwdError = $(".password-error span").is(":empty");
+                      if (pwdError == 0) {
+                          $('.password-error').css({
+                              display: 'block'
+                          });
+                          setTimeout("$('.password-error').css({display: 'none'});",6000); 
+                      }
                     }
                 },
                 error: function() {

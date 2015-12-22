@@ -4,9 +4,13 @@
 -->
 
 <div class="form-password" action="" method="POST">
+    <div class="password-error">
+        <span></span>
+    </div>
+    
     <div class="curPwd-box">
         <p>当前密码：</p>
-        <input id="curPwd" name="curPwd" type="password" maxlength="18" curPwd-data="" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;"/>
+        <input id="curPwd" name="curPwd" type="password" maxlength="18" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;"/>
         <label for="curPwd" class="curPwd-tip">请输入当前网站密码</label>
         <div class="error-box">
             <span class="curPwd-warning error"></span>
