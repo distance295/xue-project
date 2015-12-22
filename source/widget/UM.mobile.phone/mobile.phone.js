@@ -101,6 +101,7 @@
     $('img[id="' + imgId + '"]').attr('src', newVerificationImg);
     $("input[name='verificationCode']").val("");
     $(fCheck.param.veriTip).show(); 
+    $('#verificationCode').css('border','1px solid #eaeaea');
   }
   // 生成随机字符串
   fCheck.generateMixed = function (n) {
@@ -117,9 +118,9 @@
   fCheck.imgcode = function() {
     var input = $(fCheck.param.verifiCode),
         v = input.val();
-        $('#verificationCode').css('border','1px solid #eaeaea');
     if (v == '') {
       fCheck.setTips('.veri-warning','请输入右侧验证码');
+      $('#verificationCode').css('border','1px solid #eaeaea');
       fCheck.param.cImg = 0;
     }else if(/^\w{4}$/.test(v)){
       /* 调用ajax取值 */
@@ -129,6 +130,7 @@
       }     
     }else{
       fCheck.setTips('.veri-warning','请输入正确的验证码');
+      $('#verificationCode').css('border','1px solid #eaeaea');
       fCheck.param.cImg = 0;
     }
   };
@@ -147,6 +149,7 @@
             fCheck.setTips('.veri-warning','网站验证码填写错误');
             $("input[name='verificationCode']").val("");
             $(fCheck.param.veriTip).show(); 
+            $('#verificationCode').css('border','1px solid #eaeaea');
             fCheck.param.cImg = 0;
           }else{
             fCheck.clearTips('.veri-warning');
