@@ -40,21 +40,21 @@ $('ul.user-medal.list-inline li').on('mouseleave', function (e) {
         that = this,
         _dom = $(that).find('img').data('target'),
         boxId = 'stuBox_' + _dom;
-
+    //删除页卡的方法
     function removeDom(boxId) {
         $('div.dialog_arrow.arrow_tl').remove();
         $('#' + boxId).remove();
     }
+    //如果
     if(tar.attr('id') !== boxId && !tar.hasClass(_dom)){
         removeDom(boxId);    
     }else{
         $('#'+boxId).on('mouseleave', function(e){
-            //确定在展现的是哪一个页卡
+            //如果移动到勋章上面，则页卡不消失
             var tar = $(e.relatedTarget);
             if(!tar.hasClass(_dom)){
                 removeDom(boxId);
             }
-                    
         })
     }
     
