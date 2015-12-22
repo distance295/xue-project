@@ -38,6 +38,7 @@ $(".hpr-btn").on('click', function(){
 
 /* 上传头像后端错误信息 */
 var headError = $(".img-error span").is(":empty");
+var headSuccess = $(".img-success span").is(":empty");
 if (headError == 0) {
     $('.img-error').css({
         display: 'block'
@@ -49,6 +50,10 @@ if (headError == 0) {
         display: 'none'
     });
 }
+if (headSuccess == 0) {
+    $('.hp-local').addClass('active').siblings().removeClass("active");
+    $('.tab-local').addClass('current').siblings().removeClass("current");
+};
 /* 上传头像表单绑定事件 */
 function headsSave(){
     var img = $("#loadFile").val();

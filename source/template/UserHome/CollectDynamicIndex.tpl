@@ -23,7 +23,7 @@
                 </div>
                 <div class="col-md-10 wrap w930">
                     <div class="panel panel-default">
-                        <div class="panel-body CollectCourse-main-wrapper">
+                        <div class="panel-body fresh-main-wrapper">
                             <link rel="import" href="../../widget/Public.Dynamic/dynAnswer.tpl?__inline">
                             <link rel="import" href="../../widget/Public.Dynamic/dynImg.tpl?__inline">
                             <link rel="import" href="../../widget/Public.Dynamic/dynVideo.tpl?__inline">
