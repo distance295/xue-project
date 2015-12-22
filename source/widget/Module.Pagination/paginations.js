@@ -40,8 +40,13 @@
             return this;
         }
         return this.each(function(){
-            var settings = $.extend({}, defaults, options);
             var that = $(this);
+
+            if(typeof options == 'number'){
+                that.pagination(options);
+                return that;
+            }
+            var settings = $.extend({}, defaults, options);
             settings.handle = that;
             var _opt = {
                 dataSource: methods.data(settings.total),
@@ -65,7 +70,9 @@
                 _opt.pageLink  = settings.url;
             }
 
-            that.pagination(_opt);
+//            that.pagination('destroy').pagination(_opt);
+              that.pagination(_opt);
+
             return that;
         });
 //        var settings = $.extend({}, defaults, options);
