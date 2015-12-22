@@ -275,22 +275,40 @@
 		}
 		.main-teacher-list {
 			overflow: hidden;border-bottom: 1px dotted #eaeaea;padding:5px 0 15px 0;margin-bottom: 10px;
-			.main-teacher {
-				overflow: hidden;
-				.ui-avatar {
-					width: 60px;height: 60px;overflow: hidden;border-radius: 50%;
-					img {width: 60px;height: 60px;}
-				}
-				.teacher-avatar-infor {
-					width: 140px;
-					p{
-						line-height: 20px;font-size: 14px;margin:5px 0 5px 10px;
-						span {display: inline-block;padding-left:10px;}
-                        &.info {
-                            font-size: 12px;
+			.main_teacher {
+				overflow: hidden;position: relative;padding-bottom: 20px;
+                .ui_avatar {
+                    width: 220px;
+                    ul {
+                        li {
+                            width:220px;
+                           .avatar_pic {
+                                    float: left;width: 60px;
+                            }
+                            .teacher_avatar_infor {
+                                float:left;width: 140px;
+                                p{
+                                    font-size: 14px;margin:0 0 0 10px;
+                                    &.info {
+                                        line-height: 180%;font-size: 12px;
+                                    }
+                                }
+                            }
                         }
-					}
-				}
+                    }
+                }
+                a.prev {
+                    position: absolute;
+                    bottom:0px;
+                    left:10px;
+                    z-index: 1;
+                }
+                a.next {
+                    position: absolute;
+                    bottom:0px;
+                    left:25px;
+                    z-index: 1;
+                }
 			}
 			&.noBorder {
 						border:none;
