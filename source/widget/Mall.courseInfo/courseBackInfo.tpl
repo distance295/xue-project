@@ -68,7 +68,7 @@
 				<span>送练习册</span>
 				<span>实物礼品</span>
 			</div>
-			<div class="course-favorable-money course-favorable">
+			<div class="course-favorable-money">
 				<div class="favrble-money f-left">
 					<span>
 						课程优惠价: <em class="red">￥660</em>

@@ -149,11 +149,11 @@
           if(result.sign === 2){
               window.location.href = result.msg;
           } 
-      },
-      error: function() {
-        alert('数据读取错误,请重试..');
-        return false;
-      }
+        },
+        error: function() {
+          alert('数据读取错误,请重试..');
+          return false;
+        }
      });
   };
 
@@ -322,8 +322,8 @@
   $("#phonecode").on("blur",function(){
     var value = $('#phonecode').val();
     if(value.length == 0){
-          $('.phonecode-tip').show();
-        }
+      $('.phonecode-tip').show();
+    }
   })
 
   /* 判断是否可以点击操作"完成"按钮 */
@@ -348,6 +348,7 @@
           if(result.sign == 1){
             window.location.href= '/MyInfos/phoneManager';
           }else{
+            fCheck.changeVerificationImg("verificationImg");
             fCheck.setTips('.phone-error span',result.msg);
             var phoneError = $(".phone-error span").is(":empty");
             if (phoneError == 0) {
