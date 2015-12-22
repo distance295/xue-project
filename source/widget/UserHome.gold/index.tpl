@@ -179,7 +179,7 @@
                 </div>
                 <p>红名卡(月卡)，尊贵的红色昵称，让你与众不同。初期每周限售100张，每人限购2张</p>
                 <div class="gold-store-present-btn">
-                    <div class="gold-store-card-exchange">兑换</div>
+                    <div class="gold-store-card-exchange" >兑换</div>
                 </div>
             </div>
         </div>
