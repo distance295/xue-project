@@ -121,7 +121,9 @@
     }else if(/^\w{4}$/.test(v)){
       /* 调用ajax取值 */
       fCheck.clearTips('.veri-warning');
-      fCheck.imgCodeAjax();     
+      if($('#verificationCode').data('lastVal') != $.trim($('#verificationCode').val())){
+        fCheck.imgCodeAjax();
+      }     
     }else{
       fCheck.setTips('.veri-warning','请输入正确的验证码');
       fCheck.param.cImg = 0;
@@ -140,12 +142,14 @@
           if(result.sign != 1){
             fCheck.changeVerificationImg("verificationImg");
             fCheck.setTips('.veri-warning','网站验证码填写错误');
-            $("input[name='verificationCode']").val("").focus(); 
+            $("input[name='verificationCode']").val("");
+            $(fCheck.param.veriTip).show(); 
             $('#verificationCode').css('border','1px solid #eaeaea');
             fCheck.param.cImg = 0;
           }else{
             fCheck.clearTips('.veri-warning');
             $('#verificationCode').css('border','1px solid #68c04a');
+            $('#verificationCode').data('lastVal', $.trim($('#verificationCode').val()));
             fCheck.param.cImg = 1;
           }
           if(result.sign === 2){
