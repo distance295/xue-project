@@ -140,6 +140,7 @@
           if(result.sign != 1){
             fCheck.changeVerificationImg("verificationImg");
             fCheck.setTips('.veri-warning','网站验证码填写错误');
+            $("input[name='verificationCode']").val("").focus(); 
             $('#verificationCode').css('border','1px solid #eaeaea');
             fCheck.param.cImg = 0;
           }else{
@@ -293,6 +294,7 @@
     $('#verificationCode').css('border','1px solid #eaeaea');
     if(value == ''){
       $(fCheck.param.veriTip).show();
+      fCheck.setTips('.veri-warning','请输入右侧验证码');
     }else{
       fCheck.imgcode();
     }
@@ -332,7 +334,7 @@
   $("#mpform_submit").on('click',function(e){
     var isError = fCheck.isError(e),
         phoneError = $(".phone-error span").is(":empty");
-    if(isError && !phoneError){
+    if(isError || !phoneError){
       return false;
     }else{
       fCheck.phonecode('#phonecode');

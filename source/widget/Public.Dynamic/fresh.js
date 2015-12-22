@@ -161,12 +161,12 @@ fresh.media = fresh.media || {};
                     //作题结果提示
                     examRezult_html += '您的答案是：<em>'+ dataMsg.stu_answer +'</em>&nbsp;&nbsp;';
                     examRezult_html += '&nbsp;&nbsp;参考答案是：<span>'+ dataMsg.right_answer +'</span>&nbsp;&nbsp;&nbsp;&nbsp;';
-                    if(dataMsg.right_num <= 5){
+                    /*if(dataMsg.right_num <= 5){
                         examRezult_html += '<span class="fresh-sign-remove">每日五题已答对<em> '+ dataMsg.right_num +' </em>题</span>&nbsp;&nbsp;&nbsp;&nbsp;';
                     }else{
                         examRezult_html += '<span class="fresh-sign-remove">每日五题已完成</span>';
                     }
-                    examRezult_html += '<span class="fresh-sign-remove">你是第<em> '+ dataMsg.dyn_que_replynum +' </em>';
+                    examRezult_html += '<span class="fresh-sign-remove">你是第<em> '+ dataMsg.dyn_que_replynum +' </em>';*/
                     examRezult_html += '<span class="fresh-sign-remove">你是第<em> '+ dataMsg.dyn_que_replynum +' </em>个答题的学员，已有<em> '+ dataMsg.dyn_que_rightnum +' </em>人答对!</span>';
                     selectAnswer_Box.html(examRezult_html)
               }
