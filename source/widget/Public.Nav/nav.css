@@ -92,7 +92,7 @@
 }
 .ui-categorys .category-dd .category-item {
   height: 75px;
-  padding: 18px 10px 18px 20px;
+  padding: 18px 10px 18px 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .ui-categorys .category-dd .category-item h3 {
@@ -103,6 +103,7 @@
 .ui-categorys .category-dd .category-item p {
   margin: 0;
   line-height: 30px;
+  font-size: 12px;
 }
 .ui-categorys .category-dd .category-item p a {
   color: #FFF;
