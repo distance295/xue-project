@@ -121,12 +121,17 @@ fresh.media = fresh.media || {};
                   stuAnswer : _stuAnswer
               },
               success : function(data){
-                    if( data.sign != 1 ){
-                         alert(data.msg);
-                         return false;
-                    }
+                    var _sign = data.sign;
                     var dataMsg = data.msg;
 
+                    if( _sign == 0 ){
+                         alert(data.msg);
+                         return false;
+                    }else if( _sign == 2 ){
+                       window.location.href = dataMsg;
+                       return false;
+                    }
+                    
                     // 增加解析内容
                     if(dataMsg.analysisimg_path != ''){
                         analysis_html = analysis_html.replace('$analysis$', '<strong>解析</strong><img src="' + dataMsg.analysisimg_path + '">');
@@ -985,6 +990,14 @@ fresh.collect = fresh.collect || {};
             data:params,
             dataType:'json',
             success:function(data){
+                var _sign = data.sign;
+                if( _sign == 0){
+                    alert(data.msg);
+                    return false;
+                }else if( _sign == 2 ){
+                    window.location.href = data.msg;
+                    return false;
+                }
                 if(data){
                     popoverTips.show({
                         dom: that,
@@ -1034,6 +1047,14 @@ fresh.collect = fresh.collect || {};
             data:params,
             dataType:'json',
             success:function(data){
+                var _sign = data.sign;
+                if( _sign == 0){
+                    alert(data.msg);
+                    return false;
+                }else if( _sign == 2 ){
+                    window.location.href = data.msg;
+                    return false;
+                }
                 if(data){
                     //取消收藏成功弹出层显示
                      popoverTips.show({
@@ -1289,10 +1310,10 @@ fresh.attention = fresh.attention || {};
             timeout: 7000,
             dataType: 'json',
             data: _params,
-            success: function(msg) {
-                if (msg.sign == 2) {
-                    window.location.href='http://login.xueersi.com/user/login/aHR0cDovL3d3dy54dWVlcnNpLmNvbS9MZWFybmluZ0NlbnRlci9mb2xsb3c=';
-                }else if(msg.sign == 1) {
+            success: function(data) {
+                if (data.sign == 2) {
+                    window.location.href = data.msg;
+                }else if(data.sign == 1) {
                     switch(_type){
                         case 1:
                             $(e).html('<em>已关注</em>');
@@ -1307,7 +1328,7 @@ fresh.attention = fresh.attention || {};
                             break;
                     }
                 }else{
-                    alert(msg.msg);
+                    alert(data.msg);
                     return false;
                 }
             },
