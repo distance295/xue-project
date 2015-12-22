@@ -54,7 +54,13 @@
             </li>
             <li><a href="#">收藏夹</a></li>
             <li><a href="#">设置</a></li>
-            <li><a href="http://www.speiyou.com/" target="_blank">更多课程</a></li>
+            <li class="ui-dropdown">
+                    <span class="dropdown-handle">更多<i class="fa fa-angle-down dropdown-icon"></i></span>
+                    <ul class="dropdown-body">
+                            <li><a href="#">线下小班</a></li>
+                            <li><a href="#">线下1对1</a></li>
+                    </ul>
+            </li>
             <li class="phone-400 active">400-800-2211</li>
         </ul>
 
