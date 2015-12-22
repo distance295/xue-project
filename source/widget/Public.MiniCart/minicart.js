@@ -13,10 +13,23 @@ miniCart.shopCart = function(e){
     var _html = that.find('.dropdown-body').html();
     console.log(_html);
     if(_html == ''){
-         console.log(1);
         return false;
     }else{
-        console.log(2); 
+       $.ajax({
+	         	url: '/ShoppingCart/makeCart/',
+	         	type: 'POST',
+	         	dataType: 'html',
+	         	//data: {id:id},
+	         	success:function (result) {
+	         		var res = xue.ajaxCheck.HTML(result);
+                    if(res){
+                       $(res).appendTo('.dropdown-body');
+                    }
+	         	},
+	         	error : function() {
+	         		alert('数据加载失败！');
+	         	}
+	         }); 
     }
    //鼠标移出
 	$('.ui-dropdown-miniCart').on('mouseleave',function(event) {
