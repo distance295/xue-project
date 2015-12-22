@@ -250,7 +250,8 @@
                         window.location.href = d.msg;
                     } 
                     if (d.sign == 1) {
-                        location.href = "/MyInfos/passwordManager";
+                      alert('密码修改成功');
+                      location.href = "/MyInfos/passwordManager";
                     }else{
                       fCheck.setTips('.password-error span',d.msg);
                       var pwdError = $(".password-error span").is(":empty");
