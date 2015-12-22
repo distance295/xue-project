@@ -18,7 +18,7 @@
         <li class="nav-header"><span>账户管理</span></li>
         <li data-id="Prepaid"><a href="Prepaid.html">账户充值</a></li>
         <li data-id="Balance"><a href="Balance.html">我的余额</a></li>
-        <li data-id="CardActivation"><a href="CardActivation.html">代金卡使用</a></li>
+        <li data-id="CardActivation"><a href="CardActivation.html">代金卡激活</a></li>
         <li data-id="CardRecord"><a href="CardRecord.html">代金卡激活记录</a></li>
         <li data-id="Coupon"><a href="#">优惠券管理</a></li>
         <li class="nav-header"><span>订单/课程激活</span></li>

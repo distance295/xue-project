@@ -24,6 +24,6 @@
                 </tr>
             </tbody>
          </table>
-         <div class="ui-pages text-center"></div>
+         <div class="ui-pages text-right"></div>
      </div>
 </div>

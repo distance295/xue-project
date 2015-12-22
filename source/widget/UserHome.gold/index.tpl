@@ -256,12 +256,12 @@
         </div>
     </div>
 </div>
-<div class="gold-exchange-container gold-detail-block-change" style="display: block">
+<div class="gold-exchange-container gold-detail-block-change" >
     <ul class="gold-exchange-title-container">
         <li class="gold-exchange-title-on" exchange-target=".gold-exchange-card-box">魔法卡</li>
         <li exchange-target=".gold-exchange-present-box">实物礼品</li>
     </ul>
-    <div class="gold-exchange-card-box gold-exchange-block-change" >
+    <div class="gold-exchange-card-box gold-exchange-block-change" style="display: block">
         <div class="gold-exchange-rank">
             <span class="gold-exchange-rank-by gold-exchange-not-use gold-exchange-use-focus" use-target=".gold-exchange-use-box">未使用</span>
             <p></p>

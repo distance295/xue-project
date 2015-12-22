@@ -21,19 +21,9 @@
         </div>
         <div class="col-md-5 text-right">
             <ul class="user-medal list-inline">
-                <li class="medal-1">
-                    <a href="" title="网校学生证">
-                        <img src="http://img04.xesimg.com/icon/a/s_1.png" alt="">
-                    </a>
-                </li>
                 <li class="medal-2">
                     <a href="" title="学习课程超过10节即可激活勋章">
                         <img src="http://img04.xesimg.com/icon/b/s_0.png" alt="">
-                    </a>
-                </li>
-                <li class="medal-3">
-                    <a href="" title="做10道课程测试题即可激活勋章">
-                        <img src="http://img04.xesimg.com/icon/c/s_1.png" alt="">
                     </a>
                 </li>
                 <li class="medal-4">
@@ -41,6 +31,24 @@
                         <img src="http://img04.xesimg.com/icon/d/s_0.png" alt="">
                     </a>
                 </li>
+                <li class="medal-1">
+                    <a href="" title="网校学生证">
+                        <img src="http://img04.xesimg.com/icon/a/s_1.png" alt="">
+                    </a>
+                </li>
+                
+                <li class="medal-3">
+                    <a href="" title="做10道课程测试题即可激活勋章">
+                        <img src="http://img04.xesimg.com/icon/c/s_1.png" alt="">
+                    </a>
+                </li>
+                
+                <li class="medal-5">
+                    <a href="" title="做10道课程测试题即可激活勋章">
+                        <img src="img/25/0.png" alt="">
+                    </a>
+                </li>
+                
             </ul>
         </div>
     </div>

@@ -5,7 +5,7 @@
         <div class="focusGuyTab">
             <!--新鲜事筛选tab标签结束--> 
             <div class="all-fresh-list">
-                <link rel="import" href="../../widget/Public.Dynamic/index.tpl?__inline">
+                <link rel="import" href="../../widget/Public.Dynamic/dynExpand.tpl?__inline">
             </div>
         </div>
         <!--新鲜事结束-->
@@ -18,3 +18,9 @@
         </div>
     </div>
 </div>
+<script>
+    $(function(){
+        var dom = $('.fresh-list').find('.fresh-barinfo');
+        fresh.comment.getList(dom);
+    })
+</script>
