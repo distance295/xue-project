@@ -19,7 +19,7 @@ xue.avatar = xue.avatar || {};
         btn : null
     };
 
-   a.step = $(".avatar_items li").width();
+    a.step = $(".avatar_items li").width();
     a.size = 0;
     a.max = 0;
 
@@ -135,7 +135,7 @@ $(function(){
     }
     courseInfor.lookTimeList();//直播课程详情页---查看直播时间列表
     // 绑定老师头像切换事件
-    $('body').on('click', '.ui_avatar_con .prev,.ui_avatar_con .next', function() {
+    $('body').on('click', '.ui_avatar_con .prev ,  .ui_avatar_con .next', function() {
         var that = $(this);
         if (that.hasClass('none')) {
             return false;
