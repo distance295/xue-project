@@ -31,7 +31,7 @@ $(function(){
     try{
         sideNav.setActive(PAGE_CONFIG.ID);
     }catch(e){}
-    try{
-        subNav.setActive(PAGE_CONFIG.SUBJECT);
-    }catch(e){}
+//    try{
+//        subNav.setActive(PAGE_CONFIG.SUBJECT);
+//    }catch(e){}
 });

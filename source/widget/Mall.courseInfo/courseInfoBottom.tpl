@@ -1,5 +1,6 @@
 <!--
  	@require ui-course-info.js
+    @require ../Public.Video/vide.js
     @require ui-course-info.less
 -->
 <ul class="ui-nav-link">
