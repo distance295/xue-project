@@ -16,13 +16,6 @@ fCheck.clearTips = function(select){
   }).html(null);
 };
 
-/* 边框样式 */
-fCheck.bordercss = function(argument) {
-   if($(argument).val() !== ''){
-     $(argument).css('border','1px solid #68c04a');
-   }else{$(argument).css('border','1px solid #eaeaea');}
-}
-
 $(function() {
     $(".btn-bindcard").click(function() {
         if ($(".bindcardNo").val() == '') {
@@ -31,7 +24,6 @@ $(function() {
               fCheck.clearTips(".bindcardNo-warning");});
             return false;
         }
-        fCheck.bordercss('.bindcardNo');
 
         if ($(".bindcardPass").val() == '') {
               fCheck.setTips(".bindcardPass-warning",'请输入课程绑定卡密码');
@@ -39,7 +31,6 @@ $(function() {
               fCheck.clearTips(".bindcardPass-warning");});
             return false;
         }
-        fCheck.bordercss('.bindcardPass');
 
         $.ajax({
             type: "POST",
@@ -54,7 +45,6 @@ $(function() {
                     location.href = "/RequestPassword/UpdatePasswordSecuess";
                 } else {
                     fCheck.setTips('.bindcardPass-warning',d.msg);
-                    $('.bindcardNo,.bindcardPass').css('border','1px solid #eaeaea');
                 }
             }
         });

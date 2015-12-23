@@ -16,13 +16,6 @@ fCheck.clearTips = function(select){
   }).html(null);
 };
 
-/* 边框样式 */
-fCheck.bordercss = function(argument) {
-   if($(argument).val() !== ''){
-     $(argument).css('border','1px solid #68c04a');
-   }else{$(argument).css('border','1px solid #eaeaea');}
-}
-
 $(function() {
     $(".btn-certificate").click(function() {
         if ($(".serialNo").val() == '') {
@@ -31,7 +24,6 @@ $(function() {
               fCheck.clearTips(".serialNo-warning");});
             return false;
         }
-        fCheck.bordercss('.serialNo');
 
         if ($(".serialPass").val() == '') {
               fCheck.setTips(".serialPass-warning",'请输入听课证密码');
@@ -39,7 +31,6 @@ $(function() {
               fCheck.clearTips(".serialPass-warning");});
             return false;
         }
-        fCheck.bordercss('.serialPass');
 
         $.ajax({
             type: "POST",
@@ -52,7 +43,6 @@ $(function() {
                   location.href = "/MyCards/classCard";
               } else {
                   fCheck.setTips('.serialPass-warning',d.msg);
-                  $('.serialNo,.serialPass').css('border','1px solid #eaeaea');
               }
               if(d.sign === 2){
                   window.location.href = d.msg;
