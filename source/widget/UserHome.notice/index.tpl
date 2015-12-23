@@ -57,6 +57,4 @@
                 <span>11小时前</span>
             </div>
         </div>
-        <div class="notice-message nm-paging">
-        </div>
 </div>
