@@ -1,7 +1,7 @@
 <!--
    报名页面
-    @require apply.less
-    @require apply.js
+    @require LiveApply.less
+    @require LiveApply.js
 -->
 
 <div id="containerItem">

@@ -520,4 +520,7 @@ fis.media('mall')
     .match('/conf/deploy-mall.bat',{
         release: '/deploy.bat'
     })
+    .match('/conf/deploy-mall.sh',{
+        release: '/deploy.sh'
+    })
 ;
