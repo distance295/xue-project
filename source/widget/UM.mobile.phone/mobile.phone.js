@@ -127,6 +127,8 @@
       fCheck.clearTips('.veri-warning');
       if($('#verificationCode').data('lastVal') != $.trim($('#verificationCode').val())){
         fCheck.imgCodeAjax();
+      }else{
+        $('#verificationCode').css('border','1px solid #68c04a');
       }     
     }else{
       fCheck.setTips('.veri-warning','请输入正确的验证码');
