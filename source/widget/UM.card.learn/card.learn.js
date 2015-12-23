@@ -29,13 +29,6 @@ fCheck.clearTips = function(select){
   }).html(null);
 };
 
-/* 边框样式 */
-fCheck.bordercss = function(argument) {
-   if($(argument).val() !== ''){
-     $(argument).css('border','1px solid #68c04a');
-   }else{$(argument).css('border','1px solid #eaeaea');}
-}
-
 /* 学习卡充值 */
 $(function() {
     $(".btn-pay").click(function() {
@@ -45,18 +38,18 @@ $(function() {
               fCheck.clearTips(".studyCardPwd-warning");});
             return false;
         }
-        fCheck.bordercss('.studyCardPwd');
 
         $.ajax({
             type: "POST",
-            url: "/RequestPassword/UpdatePassword",
+            url: "/MyPayCenters/aStudyCardRechare",
             data: "studyCardPwd=" + $(".studyCardPwd").val(),
-            success: function(msg) {
-                if (msg == "True") {
-                    location.href = "/RequestPassword/UpdatePasswordSecuess";
+            dataType: 'json',
+            success: function(d) {
+                if (d.sign == 1) {
+                    //location.href = "/RequestPassword/UpdatePasswordSecuess";
+                    alert('学习卡充值成功');
                 } else {
-                    fCheck.setTips('.studyCardPwd-warning','学习卡密码错误');
-                    $('.studyCardPwd').css('border','1px solid #eaeaea');
+                    fCheck.setTips('.studyCardPwd-warning',d.msg);
                 }
                 if(msg.sign === 2){
                     window.location.href = msg.msg;

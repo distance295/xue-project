@@ -1,6 +1,6 @@
 <!--
    报名页面
-    @require apply.less
+    @require LiveApply.less
     @require LiveApply.js
 -->
 

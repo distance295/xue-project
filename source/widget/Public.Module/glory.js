@@ -237,8 +237,8 @@ glory.comment = glory.comment || {};
         }
         var val = $.trim(that.val());
         var len = val.length;
-        // var form = that.closest('.fresh-comment-form'),
-        // size = form.find('.fresh-comment-size .fresh-comment-text-num');
+        var form = that.closest('.fresh-comment-form'),
+        size = form.find('.fresh-comment-size .fresh-comment-text-num');
         if (len > 140) {
             that.val(val.substring(0, 140));
             size.text(0);
@@ -248,3 +248,11 @@ glory.comment = glory.comment || {};
         }
     };
 })(glory.comment);
+//限制文本域字数显示
+$('.glory_log_submit').off('input keyup paste focus', '.comment_textarea textarea').on('input keyup paste focus', '.comment_textarea textarea', function(){
+        // alert(111)
+        var that = this;
+        setTimeout(function(){
+            glory.comment.textareaNum(that);
+        }, 10);
+    });
