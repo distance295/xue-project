@@ -41,13 +41,15 @@ $(function() {
 
         $.ajax({
             type: "POST",
-            url: "/RequestPassword/UpdatePassword",
+            url: "/MyPayCenters/aStudyCardRechare",
             data: "studyCardPwd=" + $(".studyCardPwd").val(),
-            success: function(msg) {
-                if (msg == "True") {
-                    location.href = "/RequestPassword/UpdatePasswordSecuess";
+            dataType: 'json',
+            success: function(d) {
+                if (d.sign == 1) {
+                    //location.href = "/RequestPassword/UpdatePasswordSecuess";
+                    alert('学习卡充值成功');
                 } else {
-                    fCheck.setTips('.studyCardPwd-warning','学习卡密码错误');
+                    fCheck.setTips('.studyCardPwd-warning',d.msg);
                 }
                 if(msg.sign === 2){
                     window.location.href = msg.msg;

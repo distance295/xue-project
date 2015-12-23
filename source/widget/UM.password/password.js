@@ -164,7 +164,7 @@
             if (newpasswd == curpasswd) {
                 $(".pass-strong").hide();
                 fCheck.setTips(".newPwd-warning",'新密码与当前密码相同');
-                $("#newPwd").css('border','1px solid #eaeaea');
+                $("#newPwd,#confirmPwd").css('border','1px solid #eaeaea');
                 nPassword = 0;
             }else{
               fCheck.bordercss('#newPwd');
