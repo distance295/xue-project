@@ -4,7 +4,7 @@
 -->
 <div class="ui-course-infor-wrap">
 		<div class="course-left-player f-left">
-			<div class="video-player">
+			<div class="video-player" data-url="/data/Mall.courseInfo/video.html" data-params="a=1&b=2">
 				<img src="pic/lb-xiangqing_03.png" height="400" width="590" alt="">
 			</div>
 		</div>
