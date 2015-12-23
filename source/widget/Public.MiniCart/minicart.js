@@ -76,12 +76,8 @@ miniCart.shopCart = function(e){
 	         	url: 'http://cart.wx4.0.com/ShoppingCart/ajaxGetCartList/',
 	         	type: 'POST',
 	         	dataType: 'html',
-	         	//data: {id:id},
 	         	success:function (result) {
-	         		var res = xue.ajaxCheck.HTML(result);
-                    if(res){
-                       $(res).appendTo('.dropdown-body');
-                    }
+                       $(result).appendTo('.dropdown-body');
 	         	},
 	         	error : function() {
 	         		alert('数据加载失败！');
@@ -98,6 +94,29 @@ $(function(){
 	$('.ui-dropdown-miniCart').on('mouseenter',function() {
 		miniCart.shopCart(this);
 	});
+    //删除头部购物车里的课程
+    $('body').on('click','.course-function .delete',function(){
+        var that= $(this),
+            _id = that.data('id'),
+            _num = $('.minicart-footer .minicart-total').data('num');
+            $.ajax({
+	         	url: 'http://cart.wx4.0.com/ShoppingCart/ajaxGetCartList/',
+	         	type: 'POST',
+	         	dataType: 'json',
+	         	data: {id:_id},
+	         	success:function (result) {
+	         		var res = xue.ajaxCheck.JSON(result);
+                    if(res){
+                        that.parents('li').remove();
+                        $('small.minicart-total').text(_num);
+                    }
+	         	},
+	         	error : function() {
+	         		alert('数据加载失败！');
+	         	}
+	         }); 
+    });
+    
 });
 
 
