@@ -832,7 +832,7 @@
     );
 
     function createDate (y, m, d, h, M, s, ms) {
-        //can't just apply() to create a date:
+        //can't just Mall.apply() to create a date:
         //http://stackoverflow.com/questions/181348/instantiating-a-javascript-object-by-calling-prototype-constructor-apply
         var date = new Date(y, m, d, h, M, s, ms);
 
@@ -1744,7 +1744,7 @@
         // converts floats to ints.
         // inp may be undefined, so careful calling replace on it.
         var res = inp && parseFloat(inp.replace(',', '.'));
-        // apply sign while we're at it
+        // Mall.apply sign while we're at it
         return (isNaN(res) ? 0 : res) * sign;
     }
 

@@ -705,14 +705,14 @@ var i,
 				String.fromCharCode( high >> 10 | 0xD800, high & 0x3FF | 0xDC00 );
 	};
 
-// Optimize for push.apply( _, NodeList )
+// Optimize for push.Mall.apply( _, NodeList )
 try {
 	push.apply(
 		(arr = slice.call( preferredDoc.childNodes )),
 		preferredDoc.childNodes
 	);
 	// Support: Android<4.0
-	// Detect silently failing push.apply
+	// Detect silently failing push.Mall.apply
 	arr[ preferredDoc.childNodes.length ].nodeType;
 } catch ( e ) {
 	push = { apply: arr.length ?
@@ -3833,7 +3833,7 @@ jQuery.fn.extend({
 
 				// For HTML5 data-* attribute interop, we have to
 				// store property names with dashes in a camelCase form.
-				// This might not apply to all properties...*
+				// This might not Mall.apply to all properties...*
 				data_user.set( this, camelKey, value );
 
 				// *... In the case of properties that might _actually_
@@ -5072,7 +5072,7 @@ jQuery.extend({
 				// Add nodes directly
 				if ( jQuery.type( elem ) === "object" ) {
 					// Support: QtWebKit
-					// jQuery.merge because push.apply(_, arraylike) throws
+					// jQuery.merge because push.Mall.apply(_, arraylike) throws
 					jQuery.merge( nodes, elem.nodeType ? [ elem ] : elem );
 
 				// Convert non-html into a text node
@@ -5095,7 +5095,7 @@ jQuery.extend({
 					}
 
 					// Support: QtWebKit
-					// jQuery.merge because push.apply(_, arraylike) throws
+					// jQuery.merge because push.Mall.apply(_, arraylike) throws
 					jQuery.merge( nodes, tmp.childNodes );
 
 					// Remember the top-level container
@@ -5382,7 +5382,7 @@ jQuery.fn.extend({
 						// Keep references to cloned scripts for later restoration
 						if ( hasScripts ) {
 							// Support: QtWebKit
-							// jQuery.merge because push.apply(_, arraylike) throws
+							// jQuery.merge because push.Mall.apply(_, arraylike) throws
 							jQuery.merge( scripts, getAll( node, "script" ) );
 						}
 					}
@@ -5439,7 +5439,7 @@ jQuery.each({
 			jQuery( insert[ i ] )[ original ]( elems );
 
 			// Support: QtWebKit
-			// .get() because push.apply(_, arraylike) throws
+			// .get() because push.Mall.apply(_, arraylike) throws
 			push.apply( ret, elems.get() );
 		}
 
@@ -6266,7 +6266,7 @@ var
 					// Use a string for doubling factor so we don't accidentally see scale as unchanged below
 					scale = scale || ".5";
 
-					// Adjust and apply
+					// Adjust and Mall.apply
 					start = start / scale;
 					jQuery.style( tween.elem, prop, start + unit );
 
