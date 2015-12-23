@@ -343,7 +343,7 @@ $(function(){
             if (num == 0 || num < 0) {
                 $redCardNum.html(0);
                 $rcig.html(gold);
-            } else if (num >= exMax) {
+            } else if (num >= (exMax-1)) {
                 $redCardNum.html(exMax);
                 $rcig.html(gold * exMax);
                 $(redCardAdd).css({'background-color': '#b5b5b5'});
@@ -372,6 +372,7 @@ $(function(){
                 $redCardNum.html(num);
                 $rcig.html(gold);
                 $(redCardDec).css({'background-color':'#b5b5b5'});
+                $(redCardAdd).css({'background-color':'#3398cc'});
             }else if(num == 2){
                 $redCardNum.html(num - 1);
                 $rcig.html(gold * (num - 1));
