@@ -1,159 +1,42 @@
 {
     "name": "全部课程分类",
-    "content": [
+    "data": [
         {
-            "id": "1",
-            "name": "小低",
-            "link": "#1",
-            "items": [
-                {
-                    "id": "1000",
-                    "name": "幼升小",
-                    "link": "#xiao1",
-                    "content": "<a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a>"
-
-                },
-                {
-                    "id": "1001",
-                    "name": "一年级",
-                    "link": "#xiao1",
-                    "content": "<a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a>"
-
-                },
-                {
-                    "id": "1002",
-                    "name": "二年级",
-                    "link": "#xiao2",
-                    "content": "<a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a>"
-
-                },
-                {
-                    "id": "1003",
-                    "name": "三年级",
-                    "link": "#xiao3",
-                    "content": "<a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">英语</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a>"
-
-                }
-            ]
+            "id" : 1,
+            "name" : "小低",
+            "link" : "#1",
+            "info" : "<a href=\"#xiao1\" class=\"col-xs-3\" data-id=\"1000\">幼升小</a><a href=\"#xiao1\" class=\"col-xs-3\" data-id=\"1001\">一年级</a><a href=\"#xiao2\" class=\"col-xs-3\" data-id=\"1002\">二年级</a><a href=\"#xiao3\" class=\"col-xs-3\" data-id=\"1003\">三年级</a>",
+            "content" : "<dl class=\"subitem\" data-id=\"1000\"><dt>幼升小</dt><dd class=\"row\"><a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a></dd></dl><dl class=\"subitem\" data-id=\"1001\"><dt>一年级</dt><dd class=\"row\"><a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a></dd></dl><dl class=\"subitem\" data-id=\"1002\"><dt>二年级</dt><dd class=\"row\"><a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a></dd></dl><dl class=\"subitem\" data-id=\"1003\"><dt>三年级</dt><dd class=\"row\"><a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">英语</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a></dd></dl>"
         },
         {
-            "id": "2",
-            "name": "小高",
-            "link": "#2",
-            "items": [
-                {
-                    "id": "2001",
-                    "name": "四年级",
-                    "link": "#xiao4",
-                    "content": "<a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">英语</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a>"
-
-                },
-                {
-                    "id": "2002",
-                    "name": "五年级",
-                    "link": "#xiao5",
-                    "content": "<a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">英语</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a>"
-
-                },
-                {
-                    "id": "2003",
-                    "name": "六年级",
-                    "link": "#xiao6",
-                    "content": "<a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">英语</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a>"
-
-                }
-            ]
+            "id" : 2,
+            "name" : "小高",
+            "link" : "#2",
+            "info" : "<a href=\"#xiao4\" class=\"col-xs-3\" data-id=\"2001\">四年级</a><a href=\"#xiao5\" class=\"col-xs-3\" data-id=\"2002\">五年级</a><a href=\"#xiao6\" class=\"col-xs-3\" data-id=\"2003\">六年级</a>",
+            "content" : "<dl class=\"subitem\" data-id=\"2001\"><dt>四年级</dt><dd class=\"row\"><a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">英语</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a></dd></dl><dl class=\"subitem\" data-id=\"2002\"><dt>五年级</dt><dd class=\"row\"><a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">英语</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a></dd></dl><dl class=\"subitem\" data-id=\"2003\"><dt>六年级</dt><dd class=\"row\"><a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">英语</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a></dd></dl>"
         },
         {
-            "id": "3",
-            "name": "初中",
-            "link": "#3",
-            "items": [
-                {
-                    "id": "3001",
-                    "name": "初一",
-                    "link": "#chu1",
-                    "content": "<a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">英语</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a>"
-
-                },
-                {
-                    "id": "3002",
-                    "name": "初二",
-                    "link": "#chu2",
-                    "content": "<a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">英语</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a>"
-
-                },
-                {
-                    "id": "3003",
-                    "name": "初三",
-                    "link": "#chu3",
-                    "content": "<a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">英语</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a>"
-
-                }
-            ]
+            "id" : 3,
+            "name" : "初中",
+            "link" : "#3",
+            "info" : "<a href=\"#chu1\" class=\"col-xs-3\" data-id=\"3001\">初一</a><a href=\"#chu2\" class=\"col-xs-3\" data-id=\"3002\">初二</a><a href=\"#chu3\" class=\"col-xs-3\" data-id=\"3003\">初三</a>",
+            "content" : "<dl class=\"subitem\" data-id=\"3001\"><dt>初一</dt><dd class=\"row\"><a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">英语</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a></dd></dl><dl class=\"subitem\" data-id=\"3002\"><dt>初二</dt><dd class=\"row\"><a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">英语</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a></dd></dl><dl class=\"subitem\" data-id=\"3003\"><dt>初三</dt><dd class=\"row\"><a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">英语</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a></dd></dl>"
         },
         {
-            "id": "4",
-            "name": "高中",
-            "link": "#4",
-            "items": [
-                {
-                    "id": "4001",
-                    "name": "高一",
-                    "link": "#gao1",
-                    "content": "<a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">英语</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a>"
-
-                },
-                {
-                    "id": "4002",
-                    "name": "高二",
-                    "link": "#gao2",
-                    "content": "<a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">英语</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a>"
-
-                },
-                {
-                    "id": "4003",
-                    "name": "高三",
-                    "link": "#gao3",
-                    "content": "<a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">英语</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a>"
-
-                }
-            ]
+            "id" : 4,
+            "name" : "高中",
+            "link" : "#4",
+            "info" : "<a href=\"#gao1\" class=\"col-xs-3\" data-id=\"4001\">高一</a><a href=\"#gao2\" class=\"col-xs-3\" data-id=\"4002\">高二</a><a href=\"#gao3\" class=\"col-xs-3\" data-id=\"4003\">高三</a>",
+            "content" : "<dl class=\"subitem\" data-id=\"4001\"><dt>高一</dt><dd class=\"row\"><a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">英语</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a></dd></dl><dl class=\"subitem\" data-id=\"4002\"><dt>高二</dt><dd class=\"row\"><a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">英语</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a></dd></dl><dl class=\"subitem\" data-id=\"4003\"><dt>高三</dt><dd class=\"row\"><a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">英语</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a></dd></dl>"
         },
         {
-            "id": "5",
-            "name": "专题",
-            "link": "#5",
-            "items": [
-                 {
-                    "id": "5000",
-                    "name": "小低",
-                    "link": "#zt-xiao",
-                    "content": "<a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a>"
-
-                },
-                {
-                    "id": "5001",
-                    "name": "小高",
-                    "link": "#zt-xiao",
-                    "content": "<a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a>"
-
-                },
-                {
-                    "id": "5002",
-                    "name": "初中",
-                    "link": "#zt-chu",
-                    "content": "<a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a>"
-
-                },
-                {
-                    "id": "5003",
-                    "name": "高中",
-                    "link": "#zt-gao",
-                    "content": "<a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a>"
-
-                }
-            ]
+            "id" : 5,
+            "name" : "专题",
+            "link" : "#5",
+            "info" : "<a href=\"#zt-xiao\" class=\"col-xs-3\" data-id=\"5000\">小低</a><a href=\"#zt-xiao\" class=\"col-xs-3\" data-id=\"5001\">小高</a><a href=\"#zt-chu\" class=\"col-xs-3\" data-id=\"5002\">初中</a><a href=\"#zt-gao\" class=\"col-xs-3\" data-id=\"5003\">高中</a>",
+            "content" : "<dl class=\"subitem\" data-id=\"5000\"><dt>小低</dt><dd class=\"row\"><a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a></dd></dl><dl class=\"subitem\" data-id=\"5001\"><dt>小高</dt><dd class=\"row\"><a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a></dd></dl><dl class=\"subitem\" data-id=\"5002\"><dt>初中</dt><dd class=\"row\"><a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a></dd></dl><dl class=\"subitem\" data-id=\"5003\"><dt>高中</dt><dd class=\"row\"><a href=\"\" class=\"col-xs-4\">数学</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a><a href=\"\" class=\"col-xs-4\">语文</a><a href=\"\" class=\"col-xs-4\">暑期班</a><a href=\"\" class=\"col-xs-4\">秋季班</a></dd></dl>"
         }
     ]
 }
+
+
