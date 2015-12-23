@@ -777,7 +777,7 @@ ul,li{list-style: none;}
 		float: left;
 		font-size: 12px;
 		list-style: outside none none;
-		padding: 0 0px 0 27px;
+		padding: 0 13px;
 		a{
 			i{
 				color: #a1a2a1;
@@ -786,13 +786,18 @@ ul,li{list-style: none;}
 		}
 	}
 	li.popular-rank {
-		border-right: 1px solid #eaeaea;
+		border-left: none;
 		padding: 0 20px;
 	}
 	li.active{
+		border-right: 1px solid #eaeaea;
+		border-left: 1px solid #eaeaea;
+		background: #fff;
 		a{
 			color: #3bafda;
-			background: #fff;
+			&:focus{
+				outline: none;
+			}
 		}
 	}
 	.Onlylive-select {
@@ -811,7 +816,16 @@ ul,li{list-style: none;}
 		}
 	}
 	.screen-look-grades{
-		margin-right: 15px;
+		background: url('img/glory-grade.png') no-repeat;
+		height: 36px;
+		width: 150px;
+		padding: 0;
+		a{
+			display: inline-block;
+			width: 150px;
+			height: 36px;
+			text-indent: -99999px;
+		}
 	}
 }
 .mt0{
