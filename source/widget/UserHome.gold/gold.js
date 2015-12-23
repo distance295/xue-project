@@ -327,7 +327,7 @@ $(function(){
             content : con
         });
 
-        $('#cardModal').modal('show');
+        $('#cardModal').modal({backdrop: 'static', keyboard: false});
 
         var
             $rcig = $('.red-card-intro-gold em'),
@@ -340,25 +340,29 @@ $(function(){
         $body.on("click",redCardAdd,function(){
             //console.log($pig.length);
             var num = parseInt($redCardNum.html());
-            if(num == 0 || num < 0){
+            if (num == 0 || num < 0) {
                 $redCardNum.html(0);
                 $rcig.html(gold);
-            }else if(num >= exMax){
+            } else if (num >= exMax) {
                 $redCardNum.html(exMax);
                 $rcig.html(gold * exMax);
-                $(redCardAdd).css({'background-color':'#b5b5b5'});
-                $(redCardDec).css({'background-color':'#3398cc'});
-            }else if(num >= piece - 1){
+                $(redCardAdd).css({'background-color': '#b5b5b5'});
+                if (exMax > 1 || num > 1) {
+                    $(redCardDec).css({'background-color': '#3398cc'});
+                }
+            } else if (num >= piece - 1) {
                 $redCardNum.html(piece);
                 $rcig.html(gold * piece);
-                $(redCardAdd).css({'background-color':'#b5b5b5'});
+                $(redCardAdd).css({'background-color': '#b5b5b5'});
             }
-            else{
+            else {
                 $redCardNum.html(num + 1);
                 $rcig.html(gold * (num + 1));
                 //console.log($(redCardAdd))
-                $(redCardAdd).css({'background-color':'#3398cc'});
-                $(redCardDec).css({'background-color':'#3398cc'});
+                $(redCardAdd).css({'background-color': '#3398cc'});
+                if (exMax > 1 || num > 1) {
+                    $(redCardDec).css({'background-color': '#3398cc'});
+                }
             }
         });
         $body.on("click",redCardDec,function(){
@@ -368,7 +372,7 @@ $(function(){
                 $redCardNum.html(num);
                 $rcig.html(gold);
 
-            }else if(num ==2){
+            }else if(num == 2){
                 $redCardNum.html(num - 1);
                 $rcig.html(gold * (num - 1));
                 $(redCardDec).css({'background-color':'#b5b5b5'});
@@ -466,8 +470,7 @@ $(function(){
             content : con
         });
 
-        $('#presentModal').modal('show');
-
+        $('#presentModal').modal({backdrop: 'static', keyboard: false});
 
         $body.on("click",pabLabel, function(e){
             var
@@ -523,12 +526,15 @@ $(function(){
         });
         $body.on("click",presentDec,function(){
             var num = parseInt($presentNum.html());
-            if(num == 1)
+            if(num == 0 || num < 0) {
+                $presentNum.html(0);
+                $pig.html(gold);
+            }else if(num == 1)
             {
                 $presentNum.html(num);
                 $pig.html(gold);
 
-            }else if(num ==2){
+            }else if(num == 2){
                 $presentNum.html(num - 1);
                 $pig.html(gold * (num - 1));
                 $(presentDec).css({'background-color':'#b5b5b5'});

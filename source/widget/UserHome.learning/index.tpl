@@ -4,6 +4,7 @@
     @require xue.sidescroll.min.js
     @require study-course.js
 	@require ../Module.Modal/modal.js
+	@require ../Public.Video/vide.js
 	@require study-course.less
 -->
 <h2 class="content-study-title ui-margin">
@@ -11,7 +12,7 @@
 </h2>
 <div class="content-study-player ui-margin">
 	<!-- 课程视频 -->
-	<div class="player-live">
+	<div class="player-live video-player-wrap"  data-url="/data/Mall.courseInfo/video.html" data-params="a=1&b=2">
 		<div id="VideoPlay">
 			<img src="http://pic04.xesimg.com/pic_02.jpg"></div>
 	</div>
