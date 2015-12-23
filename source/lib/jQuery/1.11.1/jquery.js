@@ -741,14 +741,14 @@ var i,
 				String.fromCharCode( high >> 10 | 0xD800, high & 0x3FF | 0xDC00 );
 	};
 
-// Optimize for push.apply( _, NodeList )
+// Optimize for push.Mall.apply( _, NodeList )
 try {
 	push.apply(
 		(arr = slice.call( preferredDoc.childNodes )),
 		preferredDoc.childNodes
 	);
 	// Support: Android<4.0
-	// Detect silently failing push.apply
+	// Detect silently failing push.Mall.apply
 	arr[ preferredDoc.childNodes.length ].nodeType;
 } catch ( e ) {
 	push = { apply: arr.length ?
@@ -5986,7 +5986,7 @@ jQuery.each({
 			elems = i === last ? this : this.clone(true);
 			jQuery( insert[i] )[ original ]( elems );
 
-			// Modern browsers can apply jQuery collections as arrays, but oldIE needs a .get()
+			// Modern browsers can Mall.apply jQuery collections as arrays, but oldIE needs a .get()
 			push.apply( ret, elems.get() );
 		}
 
@@ -7034,7 +7034,7 @@ var
 					// Use a string for doubling factor so we don't accidentally see scale as unchanged below
 					scale = scale || ".5";
 
-					// Adjust and apply
+					// Adjust and Mall.apply
 					start = start / scale;
 					jQuery.style( tween.elem, prop, start + unit );
 
