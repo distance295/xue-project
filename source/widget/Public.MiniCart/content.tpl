@@ -48,7 +48,7 @@
                         <a class="delete" href="#">删除</a>
                     </div>
                 </li>
-                <li class="row">
+                <li class="row past-course">
                     <div class="course-info col-xs-8">
                         <h6 class="course-title">
                                    <em class="label label-warning">数学</em>

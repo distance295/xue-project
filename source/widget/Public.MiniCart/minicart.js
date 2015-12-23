@@ -66,7 +66,6 @@ var miniCart = miniCart || {};
 //头部购物车显示隐藏
 miniCart.shopCart = function(e){
     var that = $(e);
-    that.addClass('hover');
     var _html = that.find('.dropdown-body').html();
     if(_html !== ''){
         return false;
@@ -78,6 +77,7 @@ miniCart.shopCart = function(e){
 				xhrFields:{withCredentials:true},
 				crossDomain:true,
 	         	success:function (result) {
+                       that.addClass('hover');
                        $(result).appendTo('.dropdown-body');
 	         	},
 	         	error : function() {
@@ -85,24 +85,42 @@ miniCart.shopCart = function(e){
 	         	}
 	         }); 
     }
-    //删除头部购物车里的课程
+   //鼠标移出
+	$('.ui-dropdown-miniCart').on('mouseleave',function(event) {
+		$(this).removeClass('hover');
+	});
+};
+ //删除头部购物车里的课程
     miniCart.shopCartDel = function(e){
         var that= $(e),
                 _id = that.data('id'),
                 _num = $('.minicart-footer .minicart-total').data('num');
                 $.ajax({
                     url: 'http://cart.wx4.0.com/ShoppingCart/delCart/',
-                    type: 'POST',
+                    type: 'get',
                     dataType: 'jsonp',
                     data: {id:_id},
                     jsonp:'jsonpCallback',
-                    jsonpCallback:'jsonpCallback',
                     success:function (result) {
-                        var res = xue.ajaxCheck.JSON(result);
-                        if(res){
-                            that.parents('li').remove();
+						if(result.sign == 2){
+							 window.location.href = result.url;
+						}
+                        if(result.sign == 1){
                             $('small.minicart-total').text(_num - 1);
-                            $('.minicart-footer .minicart-total').text(_num - 1);
+							$('.dropdown-body').empty();
+							$.ajax({
+								url: 'http://cart.wx4.0.com/ShoppingCart/ajaxGetCartList/',
+								type: 'POST',
+								dataType: 'html',
+								xhrFields:{withCredentials:true},
+								crossDomain:true,
+								success:function (result) {
+									   $(result).appendTo('.dropdown-body');
+								},
+								error : function() {
+									alert('数据加载失败！');
+								}
+							 }); 
                         }
                     },
                     error : function() {
@@ -110,11 +128,6 @@ miniCart.shopCart = function(e){
                     }
                  });    
     }
-   //鼠标移出
-	$('.ui-dropdown-miniCart').on('mouseleave',function(event) {
-		$(this).removeClass('hover');
-	});
-};
 $(function(){
 	//头部购物车鼠标移入
 	$('.ui-dropdown-miniCart').on('mouseenter',function() {
