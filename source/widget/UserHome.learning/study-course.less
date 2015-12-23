@@ -81,7 +81,7 @@
 							ul.select-list{
 								width:230px;overflow: hidden;margin:0;padding:0;background: url(img/scroll_ul.jpg) 22px 0 repeat-y;
 								li.scrolls_title {
-									height: 41px;line-height: 41px;border-bottom: 1px solid #e9e9e9;background: url(img/tingkeyebg.jpg) repeat-y;padding-left: 20px;padding-right: 10px; font-size: 14px;overflow: hidden;
+									height: 41px;line-height: 41px;border-bottom: 1px solid #e9e9e9;background: url(img/tingkeyebg.jpg) repeat-y;padding-left: 20px;padding-right: 20px; font-size: 14px;overflow: hidden;
 								}
 				                  li {
 				                  	 padding-left: 42px;background: url(img/scroll_li.jpg) 28px 20px no-repeat;position: relative;
@@ -219,6 +219,70 @@
              color: #cc0000;font-size: 12px;font-weight: normal;
         }
     }   
+}
+        //看点例表
+        .lookFocusListCon {
+            overflow: hidden;width: 720px;margin:10px auto;
+            .ui_focus {
+                overflow: hidden;border-bottom: 1px dashed #ededed;margin-bottom: 10px;
+                .focus_avatar {
+                    float: left;display: inline; width:50px;overflow: hidden;margin-right: 10px;
+                    img{width: 50px;height: 50px;}
+                }
+                .focus_detail {
+                    overflow: hidden;float: left;display: inline;width: 650px;
+                    .focus_info {
+                        overflow: hidden;color: #333; height: 30px;
+                        em{font-size: 14px;color: #999;}
+                    }
+                    .focus_bar {
+                        overflow: hidden;height: 30px;line-height: 30px;
+                        .infoTime {
+                            float: left;display: inline; overflow: hidden;color: #999;font-size: 14px;background: url('img/icon_time.png') 0px 4px no-repeat;padding-left: 25px;
+                        }
+                        .infoDate {float: right;display: inline;overflow: hidden;color: #999;}
+                    }
+                }
+            }
+        }
+.lookFocus-content-item {
+     height: 700px;
+    .player-live {
+        height: 700px;
+    }
+    .player-list {
+        height: 700px;
+        .lookFocus_title {
+                height: 36px;
+                line-height: 36px;
+                overflow: hidden;
+                font-size: 14px;
+                color: #333;
+                padding-left: 20px;
+                background: url("http://img04.xesimg.com/scroll/tab_title_bg_03.jpg") no-repeat;
+        }
+        .ui-scrolls-boxs{
+            .scrolls-item{
+                height: 650px;
+                ul {
+                    li {
+                        a {
+                            width:50px;
+                        }
+                    }
+                }
+            }
+        }
+        .look-num{
+            float:right;
+            display: block;
+            width: 50px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: #999;
+        }
+    }
 }
 		// 看点end
 //浮边的签到和问老师
