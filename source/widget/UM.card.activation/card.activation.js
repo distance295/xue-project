@@ -16,12 +16,6 @@
       }).html(null);
     };
 
-    fCheck.bordercss = function(argument) {
-       if($(argument).val() !== ''){
-         $(argument).css('border','1px solid #68c04a');
-       }else{$(argument).css('border','1px solid #eaeaea');}
-    }
-
     $(function() {
         $(".btn-active").click(function() {
             if ($(".cardNo").val() == '') {
@@ -30,7 +24,6 @@
                   fCheck.clearTips(".cardNo-warning");});
                 return false;
             }
-            fCheck.bordercss('.cardNo');
 
             if ($(".cardPass").val() == '') {
                   fCheck.setTips(".cardPass-warning",'请输入代金卡密码');
@@ -38,7 +31,6 @@
                   fCheck.clearTips(".cardPass-warning");});
                 return false;
             }
-            fCheck.bordercss('.cardPass');
 
             $.ajax({
                 type: "POST",
@@ -51,7 +43,6 @@
                         location.href = "/MyCards/giftCard";
                     } else {
                         fCheck.setTips('.cardPass-warning',d.msg);
-                        $('.cardNo,.cardPass').css('border','1px solid #eaeaea');
                     }
                     if(d.sign === 2){
                         window.location.href = d.msg;
