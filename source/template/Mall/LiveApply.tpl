@@ -7,9 +7,11 @@
 
 <!--   12栏的用这个    -->
       <div class="col-md-12">
-          <link rel="import" href="../../widget/Mall.LiveApply/index.tpl?__inline">
+         <!-- <link rel="import" href="../../widget/Mall.LiveApply/index.tpl?__inline"> -->
       </div>
 <!--   12栏结束    -->
+
+
 
     </div><!-- row end -->
 </div>
