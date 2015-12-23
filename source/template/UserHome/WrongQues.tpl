@@ -1,4 +1,3 @@
-
 <!-- 公共头部 -->
 <link rel="import" href="../Layer/layer.UserHome.head.tpl?__inline">
 
@@ -8,7 +7,7 @@
         <div class="col-md-10 wrap-body">
             <!-- *********************** 内容区域开始 *********************** -->
 
-      		<!-- tab切换开始 -->
+            <!-- tab切换开始 -->
             <ul class="nav nav-tabs">
                 <li role="presentation" class="active"><a href="#" class="broadZb">直播课</a></li>
                 <li role="presentation"><a href="#" class="broadLb">录播课</a></li>
@@ -20,7 +19,9 @@
             <link rel="import" href="../../widget/UserHome.wrongQues/chooseShow.tpl?__inline">
 
             <!-- 错题本展示区域 -->
-			<link rel="import" href="../../widget/UserHome.wrongQues/showWrongQues.tpl?__inline">
+            <link rel="import" href="../../widget/UserHome.wrongQues/showWrongQues.tpl?__inline">
+
+            <div class="ui-pages text-center"></div>
 
             <!-- *********************** 内容区域结束 *********************** -->
         </div>
@@ -37,7 +38,29 @@
         MODULE: 'UserHome',
         TITLE: '错题本',
     };
-
+</script>
+<script>
+    var allPages = $('.que-num').data('num');
+    $(function () {
+        $('.wrap-body .ui-pages').pages({
+            total: 5,
+            size: 2,
+            index: 1,
+            click: function (index) {
+                $.ajax({
+                    url: '/data/Dynamic/ajaxDynamicList.html',
+                    //data: '&category=' + _category + '&curpage=' + index,
+                    type: "get",
+                    dataType: 'html',
+                    success: function (data) {
+                        if (data) {
+                            $('.que-num').html(data);
+                        }
+                    }
+                });
+            }
+        });
+    });
 </script>
 
 

@@ -19,9 +19,12 @@
                 font-family: "Microsoft YaHei";
                 font-size: 16px;
             }
+            .marTop{
+                margin-top: 25px;
+            }
             .gt-first{
+                float: left;
                 width: 60%;
-                text-align: center;
             }
             .gt-second{
                 width: 14%;
@@ -72,7 +75,8 @@
             display: inline-block;
             width: 100%;
             min-width: 800px;
-            height: 145px;
+            height: auto;
+            overflow: hidden;
             border: 1px solid #eaeaea;
             .goods-title{
                 padding: 15px 0 32px 0;
@@ -83,102 +87,125 @@
                 }
             }
             .goods-content{
-                height: 95px;
-                padding: 23px 0 0 0;
+                height: auto;
+                overflow: hidden;
                 background-color: #fcfcfc;
                 li{
-                    .order-teacher{
-                        float: left;
-                        width: 465px;
-                        height: 80px;
-                        margin: -25px 0 0 5px;
-                        .teacher-main{
-                            float: left;
-                            overflow: hidden;
-                            width: 60px;
-                            height: 90px;
-                            margin: 12px 15px 0 12px;
-                            .avatar-photo{
+                    float: left;
+                    .ao-subtitle-left{
+                        width: 575px;
+                        border-right: 1px solid #eaeaea; 
+                        .order-teacher{
+                            width: 100%;
+                            height: 115px;
+                            .teacher-main{
                                 float: left;
-                                margin-right: 10px;
-                                img{
-                                    width: 60px;
-                                    height: 60px;
-                                    border-radius: 50%;
-                                }
-                            }
-                        }
-                        .majar-items{
-                            position: relative;
-                            ul{
                                 overflow: hidden;
-                                width: 800px;
-                                height: 60px;
-                                li{
-                                    overflow: hidden;
+                                width: 60px;
+                                height: 90px;
+                                margin: 20px 15px 0 12px;
+                                .avatar-photo{
                                     float: left;
-                                    width: 158px;
-                                }
-                            }
-                            .avatar-roll{
-                                position: absolute;
-                                right: 6px;
-                                bottom: 8px;
-                                a{
-                                    outline: none;
-                                    em{
-                                        display: inline-block;
-                                        height: 17px;
-                                        line-height: 17px;
-                                        text-align: center;
-                                        text-indent: -9999em;
-                                        vertical-align: top;
-                                        width: 17px;
-                                    }
-                                    .icon-chevron-left{
-                                        background: url('img/icon_chevron_left.png') no-repeat 0 0;
-                                    }
-                                    .icon-chevron-right{
-                                        background: url('img/icon_chevron_right.png') no-repeat 0 0;
-                                    }
-                                }
-                                a.none{
-                                    .icon-chevron-left{
-                                        background: url('img/icon_chevron_left_none.png') no-repeat 0 0;
-                                    }
-                                    .icon-chevron-right{
-                                        background: url('img/icon_chevron_right_none.png') no-repeat 0 0;
+                                    margin-right: 10px;
+                                    img{
+                                        width: 60px;
+                                        height: 60px;
+                                        border-radius: 50%;
                                     }
                                 }
                             }
+                            .majar-items{
+                                position: relative;
+                                ul{
+                                    overflow: hidden;
+                                    width: 800px;
+                                    height: 60px;
+                                    li{
+                                        overflow: hidden;
+                                        float: left;
+                                        width: 158px;
+                                    }
+                                }
+                                .avatar-roll{
+                                    position: absolute;
+                                    right: 6px;
+                                    bottom: 4px;
+                                    a{
+                                        outline: none;
+                                        em{
+                                            display: inline-block;
+                                            height: 17px;
+                                            line-height: 17px;
+                                            text-align: center;
+                                            text-indent: -9999em;
+                                            vertical-align: top;
+                                            width: 17px;
+                                        }
+                                        .icon-chevron-left{
+                                            background: url('img/icon_chevron_left.png') no-repeat 0 0;
+                                        }
+                                        .icon-chevron-right{
+                                            background: url('img/icon_chevron_right.png') no-repeat 0 0;
+                                        }
+                                    }
+                                    a.none{
+                                        .icon-chevron-left{
+                                            background: url('img/icon_chevron_left_none.png') no-repeat 0 0;
+                                        }
+                                        .icon-chevron-right{
+                                            background: url('img/icon_chevron_right_none.png') no-repeat 0 0;
+                                        }
+                                    }
+                                }
+                            }
+                            em{
+                                float: left;
+                                margin: 28px 5px 0 0;
+                                padding: 1px 8px;
+                                border-radius: 3px;
+                                font-style: normal;
+                                color: #fff;
+                                background-color: #ffbc3c; 
+                            }
+                            span{
+                                float: left;
+                                width: 330px;
+                                height: 18px;
+                                margin-top: 27px;
+                                font-size: 14px;
+                                overflow: hidden;
+                            }
+                            p{
+                                float: left;
+                                width: 350px;
+                                height: 18px;
+                                line-height: 22px;
+                                font-size: 12px;
+                                margin: 10px 0 0 -43px;
+                            }
                         }
-                        em{
-                            float: left;
-                            margin: 25px 5px 0 0;
-                            padding: 1px 8px;
-                            border-radius: 3px;
-                            font-style: normal;
-                            font-size: 12px;
-                            color: #fff;
-                            background-color: #ffbc3c; 
-                        }
-                        span{
-                            float: left;
-                            width: 330px;
-                            height: 18px;
-                            margin-top: 24px;
-                            font-size: 14px;
-                            overflow: hidden;
-                        }
-                        p{
-                            float: left;
-                            width: 80px;
-                            height: 18px;
-                            font-size: 12px;
-                            margin: 10px 0 0 -60px;
+                        .ot-first{
+                            border-bottom: 1px solid #eaeaea; 
                         }
                     }
-                }
+                    .ao-operation{
+                        width: 100px;
+                        span{
+                            display: inline-block;
+                            width: 50px;
+                            a{
+                                font-size: 12px;
+                                font-family: "SimSun";
+                                color: #333;
+                            }
+                        }
+                        .btn{
+                           width: 100px;
+                           margin-bottom: 12px;
+                           font-size: 14px; 
+                        }
+                    }
+                } 
             }
         }
     }

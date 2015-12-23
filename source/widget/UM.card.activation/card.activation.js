@@ -43,7 +43,7 @@
             $.ajax({
                 type: "POST",
                 url: "/MyCards/ajaxActiveGift",
-                data: "cardNo=" + $(".cardNo").val() + "&cardPass=" + $("#cardPass").val(),
+                data: "cardNo=" + $(".cardNo").val() + "&cardPass=" + $(".cardPass").val(),
                 dataType: 'json',
                 success: function(d) {
                     if (d.sign == 1) {
