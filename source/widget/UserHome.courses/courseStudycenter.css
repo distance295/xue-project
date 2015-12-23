@@ -769,32 +769,6 @@ table tr:nth-of-type(2n) {
   color: #e74c3c;
   margin-right: 5px;
 }
-.none-content {
-  float: left;
-  position: relative;
-  left: 50%;
-}
-.none-content .nc-center {
-  position: relative;
-  left: -50%;
-}
-.none-content .nc-center img {
-  _float: left;
-  _margin-right: 240px;
-}
-.none-content .nc-center p {
-  float: right;
-  _float: none;
-  _width: 120px;
-  margin: 30px 0 0 20px;
-  line-height: 35px;
-  font-family: "Microsoft YaHei";
-  font-size: 16px;
-}
-.none-content .nc-center p em {
-  font-style: normal;
-  color: #e74c3c;
-}
 .processingbar {
   text-align: center;
   margin: 3px 0 0 20px;
