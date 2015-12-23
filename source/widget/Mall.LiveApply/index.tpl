@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="apply.css">
-    <script src="apply.js"></script>
-</head>
-<body>
+<!--
+   报名页面
+    @require apply.less
+    @require LiveApply.js
+-->
+
 <div id="containerItem">
     <div class="apply_container">
         <div class="overview">
@@ -52,6 +49,3 @@
         </div>
     </div>
 </div>
-
-</body>
-</html>
