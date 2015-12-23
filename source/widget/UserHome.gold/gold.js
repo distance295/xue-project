@@ -371,7 +371,7 @@ $(function(){
             {
                 $redCardNum.html(num);
                 $rcig.html(gold);
-
+                $(redCardDec).css({'background-color':'#b5b5b5'});
             }else if(num == 2){
                 $redCardNum.html(num - 1);
                 $rcig.html(gold * (num - 1));
