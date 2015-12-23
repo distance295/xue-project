@@ -177,6 +177,7 @@
 		</div>
 		<!-- 未登录状态下显示立即登录 end-->
 		<!-- 评论发表框 -->
+           <div class="ui-comment-items">
             <form action="javascript:void(0);" class="comment_form" id="course_comm_form">
                <div class="comment_title">评输入您对课课的评价</div>
                 <div class="comment_textarea">
@@ -190,6 +191,8 @@
                     </div>
                 </div>
             </form>
+            <div class="Extend_add_gold" style="opacity: 1; bottom: -7px; display: block;"><p><strong>1</strong></p></div>
+            </div>
 		<!-- 评论发表框 end-->
 		<!-- 评价列表 -->
 		<div class="comment-detail-wrap">
