@@ -4,6 +4,7 @@
  * @date    2015-10-27 18:15:14
  * @version $Id$
  */
+var xue = xue || {};
 var study = study || {};
 var briefTab = $('.list-title-tabs li');
 var briefBox = $('.scrolls-item');
@@ -16,74 +17,182 @@ study.briefToggle = function (index) {
         $('#outline1').jScrollPane();
         $('#outline2').jScrollPane();
     }
-    //发布看点
-study.box = {
-    btn: '#btn-submit-focus ',
-    duf: '.look-focus-show ',
-    push: '.look-Focus-Push '
-};
-//点击发布看点，显示发布看点文本输入框和时间
-study.focusPushItem = function () {
-        if ($(study.box.btn).hasClass('btn-disabled')) {
-            return false;
-        } else {
-            $(study.box.duf).hide();
-            $(study.box.push).show();
-            $(study.box.btn).hide();
-        }
-    }
-    //提交看点时验证文本框内容是否合格，合格则提交数据，不合格显示错误提示并返回false
-study.lookFocusPush = function (event) {
-    var that = $(event),
-        text = $.trim(that.prev('input.input-text').val()),
-        len = text.length,
-        err = $('.errorTips');
 
-    function tipsErr() {
-        setTimeout(function () {
-            err.hide();
+//发布看点
+var $btnSub = $('#btnSubmitFocus');
+var $one = $('.lookFocusShow');
+var $two = $('.lookFocusPush');
+function FocusPushItem(){
+    if ($btnSub.hasClass('btn_disabled')) {
+        return false;
+    }else{
+        $one.hide();
+        $two.show();  
+        $btnSub.hide(); 
+    }
+}
+//转换时间
+ function formatTime(s) {
+      var t;
+      if (s > -1) {
+        hour = Math.floor(s / 3600);
+        min = Math.floor(s / 60) % 60;
+        sec = s % 60;
+        day = parseInt(hour / 24);
+        if (day > 0) {
+          hour = hour - 24 * day;
+          t = day + "day " + hour + ":";
+        } else t = hour + ":";
+        if (min < 10) {
+          t += "0";
+        }
+        t += min + ":";
+        if (sec < 10) {
+          t += "0";
+        }
+        t += sec;
+      }
+      return t;
+    }
+//parameters:false/true关闭评论和显示评论接口
+function showLookFocus(parameters){
+  var that = $('.lookFocusItem');
+   if (parameters !== 'ture') {
+        that.hide();
+   };
+   if(parameters !== 'false'){
+       that.show();
+   };
+  
+}
+function showTimeSubTitle(content,time_point,create_name,id){
+  var $con =$('.focusCon'),
+      $name = $con.find('.name'),
+      $text = $con.find('.text'),
+      $reply = $con.find('a.js_reply');
+       $name.text(create_name);
+       $('<em>：</em>').appendTo($name)
+       $text.html(content);
+        setTimeout(function() {
+           $name.empty();
+           $text.empty();
+           $reply.hide();
+        }, 4600);
+    if ($('.focusCon .text').text().length > 0) {
+        $reply.show();
+    } else {
+        $reply.hide();
+    }
+  //回复
+  $('body').on('click', '.js_reply', function() {
+      FocusPushItem();
+      var c = formatTime(time_point);
+      $('.lookFocusPush').find('.timeEnd').text('0'+c).attr('alt',time_point);
+      $con.attr('alt',id);
+  });  
+}
+//发布评价
+$('body').on('click', '#btnSubmitFocus', function() {
+    FocusPushItem()
+    var a = $('#EncryptPlayer')[0];
+    var b = a.videoPlayingTime();
+    var c = formatTime(b);
+    $('.lookFocusPush').find('.timeEnd').text('0'+c).attr('alt',b);
+    $('.focusCon').removeAttr('alt');
+});
+$('body').on('mouseenter','#btnSubmitFocus',function() {
+    var that = $(this),
+        _left = that.offset().left + (that.width() / 2),
+        _top = that.offset().top + that.height(),
+        _html = $('.contentTxt').html();
+     xue.win({
+            id : 'focusTips',
+            title : false,
+            arrow : 'bl',
+            follow : that,
+            content : _html,
+            lock : false,
+            close : false,
+            submit : false,
+            cancel : false
+        });
+      var _tips = $('#xuebox_focusTips');
+        _tips.css({
+            'position': 'absolute'
+        });
+        // 设置弹窗定位
+        xue.win('focusTips').position(_left - (_tips.width() / 3), _top - 100);
+
+});
+$('body').on('mouseleave', '#btnSubmitFocus', function(){
+        if($('#xuebox_focusTips').length > 0){
+             xue.win('focusTips').close();
+        }
+    });
+
+//取消发布
+$('body').on('click', '.lookFocusPush .btn_cancel', function() {
+     $btnSub.show(); 
+     $one.show();
+     $two .hide();  
+});
+
+//提交 
+$('body').on('click', '.lookFocusPush .btn_submit', function(event) {
+    var that = $(this);
+    var _con = $.trim(that.prev('input.inputText').val());
+    var _len =_con.length;
+    var _err = $('.errorTips');
+    function tipsErr(){
+        setTimeout(function() {
+           _err.hide();
         }, 3000);
     }
-    if (len == 0) {
-        err.show().text('少年,什么也不写无法发布哦！');
-        tipsErr();
-        return false;
-    }
-    if (len <= 4 || len > 40) {
-        err.show().text('少年,请输入5-40个字哦！');
-        tipsErr();
-        return false;
-    }
-    //通过验证以后，使用ajax进行提交数据，成功后返回
-    if (text !== '请输入看点，(5-40个字)') {
-        alert(1);
-        //ajaxHighlight();
-    } else {
-        err.show().text('少年,什么也不写无法发布哦！');
-        tipsErr();
-        return false;
-    };
-}
+     if (_len == 0) {
+            _err.show().text('少年,什么也不写无法发布哦！');
+            tipsErr();
+            return false;
+      }
+      if (_len <= 4) {
+            _err.show().text('少年,请至少输入5个字哦！');
+            tipsErr();
+            return false;
+      }
+      if (_len > 40) {
+            _err.show().text('少年,请不要超过40个字哦！');
+            tipsErr();
+            return false;
+      }
+      var $mask = $('<div class="form_submiting"></div>');
+       $mask.css({
+              width : that.outerWidth(),
+              height: that.outerHeight(),
+              left  : that.offset().left,
+              top  : that.offset().top,
+              background : '#fcfcfc',
+              opacity : 0.3,
+              filter : 'alpha(opacity=30)',
+              zIndex:100000
+          });
+       if($('.form_submiting').length !== 0){
+            $mask.prependTo('body');
+        }
+        //通过验证以后，使用ajax进行提交数据，成功后返回
+        if (_con !== '请输入看点，(5-40个字)') {
+                  ajaxHighlight();
+        }else{
+           _err.show().text('少年,什么也不写无法发布哦！');
+            tipsErr();
+            return false;
+        };
+});
+
 $(function () {
     // 大纲头部绑定切换效果
     briefTab.off('click', 'a').on('click', 'a', function () {
         var _tab = $(this).parent('li'),
             _index = _tab.index();
         study.briefToggle(_index + 1);
-    });
-    //发布看点
-    $(study.box.btn).on('click', function () {
-        study.focusPushItem()
-    });
-    //取消看点
-    $('.btn-cancel').on('click', function () {
-        $(study.box.btn).show();
-        $(study.box.duf).show();
-        $(study.box.push).hide();
-    });
-    //提交看点内容 
-    $('body').on('click', '.look-Focus-Push .btn-submit', function (event) {
-        study.lookFocusPush(this);
     });
      //签到提示 start
     $('body').on('mouseenter', '.singInFinish', function(){
@@ -108,37 +217,6 @@ $(function () {
          $('#singInLayer').remove();
      })
      //签到提示 end
-     //发布看点提示等级和扣金币
-     $('body').on('mouseenter','#btn-submit-focus',function() {
-            var that = $(this),
-                _left = that.offset().left + (that.width() / 2),
-                _top = that.offset().top + that.height(),
-                _html = $('.content-txt').html();
-             xue.win({
-                    id : 'focusTips',
-                    title : false,
-                    arrow : 'bl',
-                    follow : that,
-                    content : _html,
-                    lock : false,
-                    close : false,
-                    submit : false,
-                    cancel : false
-                });
-              var _tips = $('#xuebox_focusTips');
-                _tips.css({
-                    'position': 'absolute'
-                });
-                // 设置弹窗定位
-                xue.win('focusTips').position(_left - (_tips.width() / 3), _top - 100);
-
-        });
-        $('body').on('mouseleave', '#btn-submit-focus', function(){
-            if($('#xuebox_focusTips').length > 0){
-                 xue.win('focusTips').close();
-            }
-        });
-    //发布看点提示等级和扣金币
 });
 
 /**
