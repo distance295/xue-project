@@ -177,51 +177,51 @@ function generateMixed(n) {
 };
 
 function winContorl(t,b,bl,h,that){
- var left=that.offset().left,
- top=that.offset().top,
- h=-5;
- t.children().each(function(){
-  var ch=$(this).innerHeight();
-  h+=ch;
-}).last().removeClass('hasborder_1');;
+   var left=that.offset().left,
+   top=that.offset().top,
+   h=-5;
+   t.children().each(function(){
+      var ch=$(this).innerHeight();
+      h+=ch;
+  }).last().removeClass('hasborder_1');;
 
- if($('.glory_window_come').length == 0){
-  $(document.body).append('<div class="glory_window_come"></div>');
-}
-var content=t.html(); 
-if(bl){
-  that.attr('id','window_sign');
-  $('.glory_window_come').html(content).offset({
-   left:left,
-   top:top-h-10
-}).height(h).fadeIn();
+   if($('.glory_window_come').length == 0){
+      $(document.body).append('<div class="glory_window_come"></div>');
+  }
+  var content=t.html(); 
+  if(bl){
+      that.attr('id','window_sign');
+      $('.glory_window_come').html(content).offset({
+         left:left,
+         top:top-h-10
+     }).height(h).fadeIn();
 
-}else if(typeof that.attr('id')=='undefined'){
-  $('#window_sign').removeAttr('id');
-  that.attr('id','window_sign');
-  $('.glory_window_come').html(content).height(h).offset({
-   left:left,
-   top:top-h-10
-});
+  }else if(typeof that.attr('id')=='undefined'){
+      $('#window_sign').removeAttr('id');
+      that.attr('id','window_sign');
+      $('.glory_window_come').html(content).height(h).offset({
+         left:left,
+         top:top-h-10
+     });
 
-}else{
-  $('.glory_window_come').html('').remove();
-  $('#window_sign').removeAttr('id');
+  }else{
+      $('.glory_window_come').html('').remove();
+      $('#window_sign').removeAttr('id');
 
-}
+  }
 }
 $(function(){
- $(document.body).on('click',function(event){
-  var a=$(event.target).hasClass('show-course'),
-  b=$(event.target).hasClass('glory_window_come');
-  if (!a && !b && $('.glory_window_come').length!==0){
+   $(document.body).on('click',function(event){
+      var a=$(event.target).hasClass('show-course'),
+      b=$(event.target).hasClass('glory_window_come');
+      if (!a && !b && $('.glory_window_come').length!==0){
 
-   $('.glory_window_come').remove();
-   $('#window_sign').removeAttr('id');
+         $('.glory_window_come').remove();
+         $('#window_sign').removeAttr('id');
 
-}
+     }
 
-})
+ })
 }); 
 
 glory.comment = glory.comment || {};
