@@ -74,21 +74,18 @@
 
 $(function(){
     // placeholder样式
-    var nickname = $('#nickname');
-    var realname = $('#realname');
-    
-    $(nickname).on('focus',function(){
-        $(nickname).siblings('.label-value').css('display','none');
+    $('body').on('focus','#nickname',function(){
+        $('#nickname').siblings('.label-value').css('display','none');
     });
-    nickname.on('blur',function(){
+    $('body').on('blur','#nickname',function(){
         $.fn.nickname();
     });
 
     // 姓名
-    $(realname).on('focus',function(){
-         $(realname).siblings('.label-value').css('display','none');
+    $('body').on('focus','#realname',function(){
+         $('#realname').siblings('.label-value').css('display','none');
     });
-    $(realname).on('blur',function(){
+    $('body').on('blur','#realname',function(){
         $.fn.realname();
     });
 });
