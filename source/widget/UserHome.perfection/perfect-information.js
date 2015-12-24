@@ -120,6 +120,7 @@ $.fn.nickname = function(){
         }
     }
 };
+// 请求昵称是否相同
 $.fn.nicknameajax = function(){
     var box = $(boxs.nickname),
     val = box.val();
@@ -131,11 +132,10 @@ $.fn.nicknameajax = function(){
     var d_val = Number($(box).data('nickname'));
     if(Number(val) != d_val){
         $.ajax({
-            url : '',
-            type : 'GET',
+            url : '/MyInfo/ajaxValidateNickname',
+            type : 'POST',
             dataType : 'json',
-            timeout: 7000,
-            async: false,
+            data: 'nickname=' + $('#nickname').val(),
             success  : function(result){
                 if(result.sign == false){
                     block.html('昵称与其他用户重复，请重新设置');
@@ -158,6 +158,7 @@ $.fn.nicknameajax = function(){
         return false;
     }
 }
+
 
 // 验证真实姓名
 $.fn.realname = function(){
