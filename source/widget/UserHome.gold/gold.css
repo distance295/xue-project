@@ -627,7 +627,7 @@ table tr td {
 .modal_align {
   display: table;
   height: 100%;
-  margin: 0px auto;
+  margin-left: 20%;
 }
 #cardModal .modal-dialog {
   display: table-cell;
