@@ -20,7 +20,7 @@ fCheck.clearTips = function(select){
 fCheck.bordercss = function(argument) {
    if($(argument).val() !== ''){
      $(argument).css('border','1px solid #68c04a');
-   }else{$(argument).css('border','1px solid #eaeaea');}
+   }else{$(argument).css('border','1px solid #d2d2d2');}
 }
 
 /* 验证昵称 */
@@ -39,7 +39,7 @@ $(function(){
     $(nickname).on('blur',function(){
         fCheck.clearTips(".prompt-empty");
         if(nickname.data('lastVal') != $.trim(nickname.val())) {
-            $(".nickname").css('border','1px solid #eaeaea');
+            $(".nickname").css('border','1px solid #d2d2d2');
             $.fn.nickname();
         }else{
             $(".nickname-warning").css({
@@ -115,7 +115,7 @@ $.fn.school = function(){
             fCheck.bordercss('.school');
         }else{
             fCheck.setTips(".school-warning",'只能输入数字、汉字和字母');
-            $('.school').css('border','1px solid #eaeaea');
+            $('.school').css('border','1px solid #d2d2d2');
         }
     }
 };

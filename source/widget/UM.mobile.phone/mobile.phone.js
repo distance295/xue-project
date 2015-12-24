@@ -4,8 +4,8 @@
  * @modify 2015-09-17 11:04
  * @version
  */
- var xue =xue || {};
-     xue.formCheck = xue.formCheck || {};
+var xue =xue || {};
+  xue.formCheck = xue.formCheck || {};
 
 !function(){
   var fCheck = xue.formCheck;
@@ -73,7 +73,7 @@
       /* 未输入任何字符 */
       $(phoneTip).show();
       fCheck.setTips(phoneWarn,"请输入手机号");
-      $('#phone').css('border','1px solid #eaeaea');
+      $('#phone').css('border','1px solid #d2d2d2');
     } else {
       /* 对手机号码进行验证 */
       var isPhone = (/^(13|15|18|14|17)[0-9]{9}$/.test(value) ? true : false);
@@ -82,14 +82,14 @@
       if(!is11){
         /* 非11位数字组成 */
         fCheck.setTips(phoneWarn,"手机号由11位数字组成");
-        $('#phone').css('border','1px solid #eaeaea');
+        $('#phone').css('border','1px solid #d2d2d2');
         fCheck.param.cPhone = 0;
       }else if( isPhone ){
         $('#phone').css('border','1px solid #68c04a');
         fCheck.param.cPhone = 1;
       }else{
         fCheck.setTips(phoneWarn,'不支持该手机号号段');
-        $('#phone').css('border','1px solid #eaeaea');
+        $('#phone').css('border','1px solid #d2d2d2');
         fCheck.param.cPhone = 0;
       }
     }
@@ -101,7 +101,7 @@
     $('img[id="' + imgId + '"]').attr('src', newVerificationImg);
     $("input[name='verificationCode']").val("");
     $(fCheck.param.veriTip).show(); 
-    $('#verificationCode').css('border','1px solid #eaeaea');
+    $('#verificationCode').css('border','1px solid #d2d2d2');
   }
   // 生成随机字符串
   fCheck.generateMixed = function (n) {
@@ -120,7 +120,7 @@
         v = input.val();
     if (v == '') {
       fCheck.setTips('.veri-warning','请输入右侧验证码');
-      $('#verificationCode').css('border','1px solid #eaeaea');
+      $('#verificationCode').css('border','1px solid #d2d2d2');
       fCheck.param.cImg = 0;
     }else if(/^\w{4}$/.test(v)){
       /* 调用ajax取值 */
@@ -132,7 +132,7 @@
       }     
     }else{
       fCheck.setTips('.veri-warning','请输入正确的验证码');
-      $('#verificationCode').css('border','1px solid #eaeaea');
+      $('#verificationCode').css('border','1px solid #d2d2d2');
       fCheck.param.cImg = 0;
     }
   };
@@ -151,7 +151,7 @@
             fCheck.setTips('.veri-warning','网站验证码填写错误');
             $("input[name='verificationCode']").val("");
             $(fCheck.param.veriTip).show(); 
-            $('#verificationCode').css('border','1px solid #eaeaea');
+            $('#verificationCode').css('border','1px solid #d2d2d2');
             fCheck.param.cImg = 0;
           }else{
             fCheck.clearTips('.veri-warning');
@@ -227,6 +227,7 @@
       },
       error: function () {
         alert('数据读取错误,请重试..');
+        fCheck.setTips('#tips-phonecode','数据读取错误,请重试..');
         return false;
       }
     });
@@ -255,7 +256,7 @@
     var value =  $("#phone").val();
     fCheck.checkPhone(fCheck.param.phoneTip,fCheck.param.phoneWarn,value);
     if(fCheck.param.cPhone !== 1){
-      $('#phone').css('border','1px solid #eaeaea');
+      $('#phone').css('border','1px solid #d2d2d2');
     }
   });
 
@@ -303,7 +304,7 @@
   $("#verificationCode").on('blur',function(){
     var value = $("#verificationCode").val();
     if(value == ''){
-      $('#verificationCode').css('border','1px solid #eaeaea');
+      $('#verificationCode').css('border','1px solid #d2d2d2');
       $(fCheck.param.veriTip).show();
       fCheck.setTips('.veri-warning','请输入右侧验证码');
     }else{
@@ -324,18 +325,14 @@
     }
   });
 
-  $('#phonecode').on('blur',function(){
-    fCheck.phonecode('#phonecode');
-  });
-
   /* 手机验证码输入框的操作 */
   $("#phonecode").on("focus",function(){
-    $('.phonecode-tip').hide();
-    fCheck.clearTips('#tips-phonecode');
+    $('.phonecode-tip,#tips-phonecode').hide();
   })
 
   $("#phonecode").on("blur",function(){
     var value = $('#phonecode').val();
+    fCheck.phonecode('#phonecode');
     if(value.length == 0){
       $('.phonecode-tip').show();
     }
