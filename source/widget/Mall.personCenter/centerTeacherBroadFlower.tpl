@@ -9,7 +9,7 @@
         </div>
         <div class="rank-name pull-left"><span>聆风发额无法然而我还覅1</span></div>
         <div class="send-flower pull-left">
-            已献花
+            <span class="send_flower">已献花</span>
             <span class="send-flower1">34</span>
             <span class="send-flower2">64</span>
             <span class="send-flower3">12</span>
@@ -26,7 +26,7 @@
         </div>
         <div class="rank-name pull-left"><span>聆风发额无法然而我还2</span></div>
         <div class="send-flower pull-left">
-            已献花
+            <span class="send_flower">已献花</span>
             <span class="send-flower1">34</span>
             <span class="send-flower2">64</span>
             <span class="send-flower3">12</span>
@@ -41,7 +41,7 @@
         </div>
         <div class="rank-name pull-left"><span>聆风发额无法然而我还3</span></div>
         <div class="send-flower pull-left">
-            已献花
+            <span class="send_flower">已献花</span>
             <span class="send-flower1">34</span>
             <span class="send-flower2">64</span>
             <span class="send-flower3">12</span>
@@ -57,7 +57,7 @@
         </div>
         <div class="rank-name pull-left"><span>聆风发额无法然而我还3</span></div>
         <div class="send-flower pull-left">
-            已献花
+            <span class="send_flower">已献花</span>
             <span class="send-flower1">34</span>
             <span class="send-flower2">64</span>
             <span class="send-flower3">12</span>
@@ -73,7 +73,7 @@
         </div>
         <div class="rank-name pull-left"><span>聆风发额无法然而我还3</span></div>
         <div class="send-flower pull-left">
-            已献花
+            <span class="send_flower">已献花</span>
             <span class="send-flower1">34</span>
             <span class="send-flower2">64</span>
             <span class="send-flower3">12</span>
@@ -89,7 +89,7 @@
         </div>
         <div class="rank-name pull-left"><span>聆风发额无法然而我还3</span></div>
         <div class="send-flower pull-left">
-            已献花
+            <span class="send_flower">已献花</span>
             <span class="send-flower1">34</span>
             <span class="send-flower2">64</span>
             <span class="send-flower3">12</span>
@@ -105,7 +105,7 @@
         </div>
         <div class="rank-name pull-left"><span>聆风发额无法然而我还3</span></div>
         <div class="send-flower pull-left">
-            已献花
+            <span class="send_flower">已献花</span>
             <span class="send-flower1">34</span>
             <span class="send-flower2">64</span>
             <span class="send-flower3">12</span>
@@ -121,7 +121,7 @@
         </div>
         <div class="rank-name pull-left"><span>聆风发额无法然而我还3</span></div>
         <div class="send-flower pull-left">
-            已献花
+            <span class="send_flower">已献花</span>
             <span class="send-flower1">34</span>
             <span class="send-flower2">64</span>
             <span class="send-flower3">12</span>
@@ -137,7 +137,7 @@
         </div>
         <div class="rank-name pull-left"><span>聆风发额无法然而我还3</span></div>
         <div class="send-flower pull-left">
-            已献花
+            <span class="send_flower">已献花</span>
             <span class="send-flower1">34</span>
             <span class="send-flower2">64</span>
             <span class="send-flower3">12</span>
