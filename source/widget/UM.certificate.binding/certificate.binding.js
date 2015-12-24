@@ -42,7 +42,7 @@ $(function() {
                     window.location.href = d.msg;
                 } 
                 if (d.sign == 1) {
-                    location.href = "/RequestPassword/UpdatePasswordSecuess";
+                    alert('课程绑定卡激活成功');
                 } else {
                     fCheck.setTips('.bindcardPass-warning',d.msg);
                 }
