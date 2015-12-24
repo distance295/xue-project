@@ -129,8 +129,8 @@ $.fn.nicknameajax = function(){
     // 昵称与其他用户重复，请重新设置
     var box = $(boxs.nickname),
     val = box.val();
-    var d_val = Number($(box).data('nickname'));
-    if(Number(val) != d_val){
+    var d_val = $.trim($(box).data('nickname'));
+    if($.trim(val) != d_val){
         $.ajax({
             url : '/MyInfo/ajaxValidateNickname',
             type : 'POST',
@@ -158,7 +158,6 @@ $.fn.nicknameajax = function(){
         return false;
     }
 }
-
 
 // 验证真实姓名
 $.fn.realname = function(){
