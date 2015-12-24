@@ -147,23 +147,38 @@ $(function(){
     $('body').on('click','.button_shop-cart',function(){
         var that = $(this),
             _id = that.data('id'),
-            _url = '/ShoppingCart/makeCart/';
-        //alert(_id+','+_url);
-         $.ajax({
-	         	url: _url,
-	         	type: 'POST',
-	         	dataType: 'html',
-	         	data: {id:_id},
-	         	success:function (result) {
-	         		var res = xue.ajaxCheck.HTML(result);
-                    if(res){
-                       $(result).appendTo('.dropdown-body');
+            _url = 'http://cart.wx4.0.com/ShoppingCart/addCart/';
+        var _html = $('.ui-dropdown-miniCart .dropdown-body').html();
+            if(_html !== ''){
+                return false;
+            }else{
+             $.ajax({
+                    url: _url,
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {id:_id},
+                    success:function (result) {
+                        if(result.sign == 1){
+                             $.ajax({
+                                url: 'http://cart.wx4.0.com/ShoppingCart/ajaxGetCartList/',
+                                type: 'POST',
+                                dataType: 'html',
+                                xhrFields:{withCredentials:true},
+                                crossDomain:true,
+                                success:function (result) {
+                                       $(result).appendTo('.dropdown-body');
+                                },
+                                error : function() {
+                                    alert('数据加载失败！');
+                                }
+                             }); 
+                        }
+                    },
+                    error : function() {
+                        alert('数据加载失败！');
                     }
-	         	},
-	         	error : function() {
-	         		alert('数据加载失败！');
-	         	}
-	         }); 
+                 }); 
+            }
     });
 })
 

@@ -295,10 +295,10 @@ $(function(){
     $body.on('click', '.gold-store-card-exchange', function () {
         var cardid = $(this).closest('.gold-store-card').attr('id');
         $.ajax({
-            //url: '/GoldShop/magicDetail',
-            url: '/data/gold/gold-card-modal.html',
-            //type: 'post',
-            type: 'get',
+            url: '/GoldShop/magicDetail',
+            //url: '/data/gold/gold-card-modal.html',
+            type: 'post',
+            //type: 'get',
             dataType: 'html',
             data: {
                 id: cardid
@@ -323,7 +323,7 @@ $(function(){
             id : 'cardModal',
             width : '740',
             title : '魔法卡兑换',
-            cls : 'cardModal modal_align',
+            cls : 'cardModal bbb',
             content : con
         });
 
