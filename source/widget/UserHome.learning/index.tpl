@@ -160,7 +160,42 @@
 	</div>
 </div>
 <!-- 看点 -->
-<div class="look-focus-item ui-margin">
+<div class="lookFocusItem ui-margin" style="display: block;">
+    <div class="lookFocusLeft">
+        <div class="lookFocusShow">
+            <div class="focusCon">
+               <span class="name"></span>
+				<span class="text">少年，老师讲的怎么样？来一发看点吧！</span>
+				<input type="hidden" value="" id="parentId" autocomplete="off">
+				<input type="hidden" value="" id="timePoint" autocomplete="off">
+				<a class="js_reply" href="javascript:void(0);">回复</a>
+            </div>
+        </div>
+
+        <div class="lookFocusPush">
+            <span class="timeEnd"></span>
+            <input value="" type="text" class="inputText" placeholder="请输入看点，(5-40个字)" autocomplete="off">
+            <button class="btn_submit">发布</button>
+            <a href="javascript:void(0);" class="btn_cancel">取消</a>
+            <span class="errorTips" style="display:none;"></span>
+        </div>
+
+        <div class="pushSucceed">
+            <em>我</em>
+            <span id="succeedText">11111111</span>
+            <span class="btnSucceed">发布成功，-2金币</span>
+        </div>
+    </div>
+
+    <div class="lookFocusRight">
+        <span class="button_left">
+							<button class="" id="btnSubmitFocus">发布看点</button>
+							<div id="btnTipFocus" class="contentTxt" style="display:none;"> 等级 <strong>16级 </strong>以上才可以发布和回复看点，<br> 每次消耗 <strong>2金币 </strong>哦！</div>
+						</span>
+        <a class="look_right" href="/highlights/view/16347-77700-187342/535aa4e870dc45bffd8e0620a63fd0bc/1" target="_blank">7</a>
+    </div>
+</div>
+<!--<div class="look-focus-item ui-margin">
 	<div class="look-focus-left">
 		<div class="look-focus-show">
 			<div class="focus-content">
@@ -199,7 +234,7 @@
 		</span>
 		<span class="look-right">10</span>
 	</div>
-</div>
+</div>-->
 <!--浮边的签到和问老师 Start-->
 <div class="sideSingInItems">
     <ul>
