@@ -68,6 +68,7 @@ miniCart.shopCart = function(e){
     var that = $(e);
     var _html = that.find('.dropdown-body').html();
     if(_html !== ''){
+        that.addClass('hover');
         return false;
     }else{
        $.ajax({
