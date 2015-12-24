@@ -16,6 +16,9 @@ xue.video = xue.video || {};
             url : _url,
             type : 'GET',
             dataType : 'html',
+            xhrFields: {
+                withCredentials: true
+            },
             success : function(result){
                 $(v.opt.dom).html(result);
             }
