@@ -130,19 +130,20 @@ $('body').off('click', '.avatar-roll a, .majar-items .prev, .majar-items .next')
      * @param  {string} dom 任意子节点
      */
      fa.addCancel = function(dom){
-        var _url = "/data/follow/ajaxFollow.json"//$(dom).data().url;
         var _type = $(dom).data().type;
         var _params = $(dom).data().params + '&type=' + _type;
         $.ajax({
-            type: "get",
-            url: _url,
+            //url: fresh.path.url + 'ajaxFollow.json',
+            //type: "get",
+            url: fresh.path.url + 'ajaxFollow',
+            type: "post",
             timeout: 7000,
             dataType: 'json',
             data: _params,
-            success: function(msg) {
-                if (msg.sign == 2) {
-                    window.location.href='http://login.xueersi.com/user/login/aHR0cDovL3d3dy54dWVlcnNpLmNvbS9MZWFybmluZ0NlbnRlci9mb2xsb3c=';
-                }else if(msg.sign == 1) {
+            success: function(data) {
+                if (data.sign == 2) {
+                   window.location.href = data.msg;
+                }else if(data.sign == 1) {
                     switch(_type){
                         case 1:
                         $(e).html('<em>已关注</em>');
@@ -157,7 +158,7 @@ $('body').off('click', '.avatar-roll a, .majar-items .prev, .majar-items .next')
                         break;
                     }
                 }else{
-                    alert(msg.msg);
+                    alert(data.msg);
                     return false;
                 }
             },
