@@ -128,12 +128,12 @@ $.fn.nicknameajax = function(){
     block = text.addClass('success');
     // 昵称与其他用户重复，请重新设置
     var box = $(boxs.nickname),
-    val = box.val();
-    var d_val = Number($(box).data('nickname'));
-    if(Number(val) != d_val){
+        val = $.trim(box.val()),
+        d_val = $.trim($(box).data('nickname'));
+    if($.trim(val) != d_val){
         $.ajax({
             url : '/MyInfo/ajaxValidateNickname',
-            type : 'POST',
+            type : 'post',
             dataType : 'json',
             data: 'nickname=' + $('#nickname').val(),
             success  : function(result){
@@ -149,7 +149,6 @@ $.fn.nicknameajax = function(){
                 }
             },
             error: function(){
-
             }
         });
     }else{
@@ -158,7 +157,6 @@ $.fn.nicknameajax = function(){
         return false;
     }
 }
-
 
 // 验证真实姓名
 $.fn.realname = function(){
@@ -223,7 +221,8 @@ $.fn.areacity = function() {
 };
 $.fn.areacountry = function() {
     var box = $(boxs.addcountry),
-    val = box.val();
+        boxAddcity = $(boxs.addcity),
+        val = box.val();
     var text = box.siblings('.area-tips').children('.errTips');
     if (val == '') {
         text.html('请选择所在地');
@@ -231,6 +230,7 @@ $.fn.areacountry = function() {
     } else {
         text.html('');
         box.removeClass('has-error').addClass('has-success');
+        boxAddcity.removeClass('has-error').addClass('has-success');
     }
     return this;
 };
