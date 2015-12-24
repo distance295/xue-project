@@ -343,16 +343,16 @@ $(function(){
             if (num == 0 || num < 0) {
                 $redCardNum.html(0);
                 $rcig.html(gold);
-            } else if (num > (exMax-1)) {
+            } else if (num >= (exMax-1)) {
                 $redCardNum.html(exMax);
                 $rcig.html(gold * exMax);
                 $(redCardAdd).css({'background-color': '#b5b5b5'});
-                if (exMax > 1 || num > 1) {
+                if(num == 1){
+                    $(redCardAdd).css({'background-color': '#3398cc'});
+                }else if (exMax > 1 || num > 1) {
                     $(redCardDec).css({'background-color': '#3398cc'});
                 }
-            } else if(num == exMax-1){
-                $(redCardAdd).css({'background-color': '#3398cc'});
-            }else if (num >= piece - 1) {
+            } else if (num >= piece - 1) {
                 $redCardNum.html(piece);
                 $rcig.html(gold * piece);
                 $(redCardAdd).css({'background-color': '#b5b5b5'});
