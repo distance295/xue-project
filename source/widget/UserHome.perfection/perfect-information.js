@@ -15,19 +15,20 @@
      * @param  {string} dom 任意子节点
      */
      fa.addCancel = function(dom){
-        var _url = "ajaxFollow.json"//$(dom).data().url;
         var _type = $(dom).data().type;
         var _params = $(dom).data().params + '&type=' + _type;
         $.ajax({
+            //url: fresh.path.url + 'ajaxFollow.json',
+            //type: "get",
+            url: fresh.path.url + 'ajaxFollow',
             type: "post",
-            url: _url,
             timeout: 7000,
             dataType: 'json',
             data: _params,
-            success: function(msg) {
-                if (msg.sign == 2) {
-                    window.location.href='http://login.xueersi.com/user/login/aHR0cDovL3d3dy54dWVlcnNpLmNvbS9MZWFybmluZ0NlbnRlci9mb2xsb3c=';
-                }else if(msg.sign == 1) {
+            success: function(data) {
+                if (data.sign == 2) {
+                    window.location.href = data.msg;
+                }else if(data.sign == 1) {
                     switch(_type){
                         case 1:
                         $(e).html('<em>已关注</em>');
@@ -41,8 +42,8 @@
                         $(dom).data({type:2});
                         break;
                     }
-                }else{
-                    alert(msg.msg);
+                 }else{
+                    alert(data.msg);
                     return false;
                 }
             },
@@ -57,13 +58,13 @@
 /* ================= 关注相关 ============= */
 
     //点击添加关注按钮
-    $('.follow-list').off('click', '.fresh-course-attention .fresh-add-attention-btn').on('click', '.fresh-course-attention .fresh-add-attention-btn', function(){
+    $('body').off('click', '.fresh-course-attention .fresh-add-attention-btn').on('click', '.fresh-course-attention .fresh-add-attention-btn', function(){
         var that = $(this).closest('.fresh-course-attention');
         courses.attention.addCancel(that);
     })
 
     //点击添加取消关注按钮
-    $('.follow-list').off('click', '.fresh-course-attention .fresh-add-cancel-btn').on('click', '.fresh-course-attention .fresh-add-cancel-btn', function(){
+    $('body').off('click', '.fresh-course-attention .fresh-add-cancel-btn').on('click', '.fresh-course-attention .fresh-add-cancel-btn', function(){
         var that = $(this).closest('.fresh-course-attention');
         courses.attention.addCancel(that);
     });
@@ -242,45 +243,45 @@ $('body').on('blur', boxs.addcountry, function() {
     $.fn.areacountry();
 });
 // 完善信息提交
-$('.setting-infor').off('click', '#inforSubmit').on('click', '#inforSubmit', function() {
-    var error = $('.setting-infor').find('.has-error');
-    $.fn.nickname();
-    $.fn.realname();
-    $.fn.sex();
-    $.fn.areaprovince();
-    $.fn.areacity();
-    $.fn.areacountry();
-    if (error.length > 0) {
-        return false;
-    } else {
-        $.ajax({
-            url : '',
-            type: 'POST',
-            dataType: "json",
-            data: 'nickname=' + $('#nickname').val() + 'realname=' + $('#realname').val(),
-            timeout: 7000,
-            beforeSend: function(){
+// $('.setting-infor').off('click', '#inforSubmit').on('click', '#inforSubmit', function() {
+//     var error = $('.setting-infor').find('.has-error');
+//     $.fn.nickname();
+//     $.fn.realname();
+//     $.fn.sex();
+//     $.fn.areaprovince();
+//     $.fn.areacity();
+//     $.fn.areacountry();
+//     if (error.length > 0) {
+//         return false;
+//     } else {
+//         $.ajax({
+//             url : '',
+//             type: 'POST',
+//             dataType: "json",
+//             data: 'nickname=' + $('#nickname').val() + 'realname=' + $('#realname').val(),
+//             timeout: 7000,
+//             beforeSend: function(){
 
-            },
-            success:function(d){
-                var tp = d.sign,
-                msg = d.msg;
-                if (tp == 0) {
+//             },
+//             success:function(d){
+//                 var tp = d.sign,
+//                 msg = d.msg;
+//                 if (tp == 0) {
 
-                    return false;
-                } else if (tp == -1) {
+//                     return false;
+//                 } else if (tp == -1) {
 
-                    return false;
-                } else {
-                    window.location.href = '/Reg/regSuccess';
-                }
-            },
-            complete: function () {
+//                     return false;
+//                 } else {
+//                     window.location.href = '/Reg/regSuccess';
+//                 }
+//             },
+//             complete: function () {
 
-            },
-            error: function(){
+//             },
+//             error: function(){
 
-            }
-        });
-    }
-});
+//             }
+//         });
+//     }
+// });
