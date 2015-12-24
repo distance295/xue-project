@@ -18,6 +18,7 @@ fis.set('project.ignore', [
     '*.bat',
     '*.sh',
     '*.log',
+    '/template/Mall/LiveApply.tpl',
     '**/*.map'    
 ]);
 fis.match('::packager', {
@@ -156,6 +157,7 @@ var __ignore = {
         'Mall.indexGrade',
         'Mall.indexTrends',
         'Mall.live',
+        'Mall.LiveApply',
         'Mall.personCenter',
         'Public.Dynamic',
         'Public.FocusPic',
@@ -182,6 +184,7 @@ var __ignore = {
         'Mall.indexGrade',
         'Mall.indexTrends',
         'Mall.live',
+        'Mall.LiveApply',
         'Mall.personCenter',
         'UM.address',
         'UM.balance',
