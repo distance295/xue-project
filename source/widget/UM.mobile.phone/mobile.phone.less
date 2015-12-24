@@ -67,13 +67,6 @@
     .phone-k{
             position:relative;
             width: 380px;
-            .phone-tip{
-                position: absolute;
-                font-weight: normal;
-                color:rgb(160,160,160);
-                top: 9px;
-                left: 87px;
-            }
             .phone-warning{
                 clear: both;
             }
@@ -81,13 +74,6 @@
     .pass-eye{
         position:relative;
         width: 380px;
-        .pass-tip{
-            position:absolute;
-            font-weight: normal;
-            color:rgb(160,160,160);
-            top: 9px;
-            left: 87px;
-        }
     }
     .pass-strength{
         width: 115px;
@@ -100,13 +86,6 @@
         display: inline-block;
         position:relative;
         width: 380px;
-        .verification-tip{
-            position:absolute;
-            font-weight: normal;
-            color:rgb(160,160,160);
-            top: 9px;
-            left: 87px;
-        }
         #verificationCode{
             width: 150px;
         }
@@ -116,18 +95,10 @@
             margin-left: 12px;
             cursor:pointer;
         }
-    }
-    
+    }    
     .phonecode-k{
         display: inline-block;
         position: relative;
-        .phonecode-tip{
-            position: absolute;
-            top: 9px;
-            left: 87px;
-            font-weight: normal;
-            color:rgb(160,160,160);
-        }
         #phonecode{
             width: 150px;
         }
@@ -139,6 +110,13 @@
                 outline: none;
             }
         }
+    }
+    .phone-tip,.phonecode-tip,.verification-tip,.pass-tip{
+        position: absolute;
+        top: 9px;
+        left: 87px;
+        font-weight: normal;
+        color:rgb(160,160,160);
     }
     #mpform_submit{
         width: 100px;
