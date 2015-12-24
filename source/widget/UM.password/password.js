@@ -134,7 +134,7 @@
       fCheck.clearTips(".curPwd-warning");
     });
     $("#curPwd").on('blur', function() {
-       curPwdfn(); 
+       curPwdfn();
     });
     /* 新密码设置 */
     newpasswdfn = function () {
@@ -147,13 +147,13 @@
       }else{
           if (newpasswd.length < 6) {
               fCheck.setTips(".newPwd-warning",'密码不能少于6位字符');
-              $("#newPwd").css('border','1px solid #eaeaea');
+              $("#newPwd,#confirmPwd").css('border','1px solid #eaeaea');
               nPassword = 0;
           }else{
             if (newpasswd == curpasswd) {
                 $(".pass-strong").hide();
                 fCheck.setTips(".newPwd-warning",'新密码与当前密码相同');
-                $("#newPwd").css('border','1px solid #eaeaea');
+                $("#newPwd,#confirmPwd").css('border','1px solid #eaeaea');
                 nPassword = 0;
             }else{
               fCheck.bordercss('#newPwd');
@@ -184,6 +184,8 @@
                conPassword = 1;
              }
          }
+       }else{
+        $("#newPwd,#confirmPwd").css('border','1px solid #eaeaea');
        }
     });
 
