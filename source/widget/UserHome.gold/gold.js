@@ -347,9 +347,7 @@ $(function(){
                 $redCardNum.html(exMax);
                 $rcig.html(gold * exMax);
                 $(redCardAdd).css({'background-color': '#b5b5b5'});
-                if(num == 1){
-                    $(redCardAdd).css({'background-color': '#3398cc'});
-                }else if (exMax > 1 || num > 1) {
+                if (exMax > 1 || num > 1) {
                     $(redCardDec).css({'background-color': '#3398cc'});
                 }
             } else if (num >= piece - 1) {
