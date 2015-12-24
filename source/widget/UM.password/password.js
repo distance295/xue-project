@@ -135,17 +135,6 @@
     });
     $("#curPwd").on('blur', function() {
        curPwdfn();
-       var curpasswd = $("#curPwd").val();
-       var newpasswd = $("#newPwd").val();
-       if (newpasswd == curpasswd) {
-           $(".pass-strong").hide();
-           fCheck.setTips(".newPwd-warning",'新密码与当前密码相同');
-           $("#newPwd").css('border','1px solid #eaeaea');
-           nPassword = 0;
-       }else{
-         fCheck.bordercss('#newPwd');
-         nPassword = 1;
-       } 
     });
     /* 新密码设置 */
     newpasswdfn = function () {
@@ -195,6 +184,8 @@
                conPassword = 1;
              }
          }
+       }else{
+        $("#newPwd,#confirmPwd").css('border','1px solid #eaeaea');
        }
     });
 
