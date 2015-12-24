@@ -323,7 +323,7 @@ $(function(){
             id : 'cardModal',
             width : '740',
             title : '魔法卡兑换',
-            cls : 'cardModal bbb',
+            cls : 'cardModal modal_align',
             content : con
         });
 

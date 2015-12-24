@@ -624,3 +624,12 @@ table tr td {
   max-width: 240px;
   max-height: 208px;
 }
+.modal_align {
+  display: table;
+  height: 100%;
+  margin: 0px auto;
+}
+#cardModal .modal-dialog {
+  display: table-cell;
+  vertical-align: middle;
+}
