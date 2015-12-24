@@ -102,6 +102,7 @@
             <a href="javascript:void(0);" id="address_submit_btn" class="btn btn_red">保存收货人信息</a>
         </p>
         <p class="error_tips_address"></p>
+        <span class="close_address"></span>
     </div>
 </div>
 <script>

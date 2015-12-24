@@ -10,25 +10,35 @@ $('#ui-setAddress').on('mouseleave', '.shipadd_list li', function(event) {
     var that = $(this);
     that.removeClass('current');
 });
+//关闭收货地址
+     $(".close_address").on('click',function(){
+            var that = $(this);
+         that.parents('#details_form').hide();
+     });
 //删除收货人地址
 function delAddress(id) {
     var _data = id;
-    $.ajax({
-        url: '/MyInfos/delAddress',
-        type: 'POST',
-        dataType: 'json',
-        data: {
-            id: _data
-        },
-        success: function(result) {
-            if (result.sign == 1) {
-                $('.shipadd_list li#' + _data).remove();
-                $('#numberAddress').text(result.rows);
-            } else {
-                alert(result.msg);
-            }
-        }
-    })
+    if (window.confirm("确定删除该收货地址!")){
+                $.ajax({
+                    url: '/MyInfos/delAddress',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {
+                        id: _data
+                    },
+                    success: function(result) {
+                        if (result.sign == 1) {
+                            $('.shipadd_list li#' + _data).remove();
+                            $('#numberAddress').text(result.rows);
+                        } else {
+                            alert(result.msg);
+                        }
+                    }
+                });
+			}else{
+	       		return false;
+			}
+    
 }
  //提交生成收货地址列表
 function saveNewAddress(inputs) {
