@@ -64,7 +64,7 @@
 .new_consignee_items {
 	overflow: hidden;margin-top: 10px;
 	.info_from {
-		overflow: hidden;background: #fcfcfc;padding:20px 20px 0;display: none;
+		overflow: hidden;background: #fcfcfc;padding:20px 20px 0;display: none;position: relative;
 		p {
 			overflow: hidden;height:50px;
 			label {float:left;display: inline;width: 70px;line-height:30px;margin-bottom: 10px;}
@@ -91,3 +91,14 @@
 		}
 	}
 }	
+/* 关闭收货地址样式*/
+.close_address {
+    width: 15px;
+    height: 15px;
+    background: url('img/close_address.png') no-repeat;
+    position: absolute;
+    right:10px;
+    top:10px;
+    z-index: 1;
+    cursor: pointer;
+}
