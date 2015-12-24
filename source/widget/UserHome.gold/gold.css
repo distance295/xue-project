@@ -12,6 +12,10 @@ table tr td {
   padding: 0;
   text-align: center;
 }
+.none-tip {
+  margin-top: 100px;
+  text-align: center;
+}
 /* 金币明细 */
 .gold-detail-title {
   padding: 0;
@@ -189,7 +193,7 @@ table tr td {
   left: 140px;
   margin-top: 12px;
 }
-.gold-exchange-card-box p {
+.gold-exchange-card-box-p {
   height: 18px;
   width: 1px;
   background-color: #eaeaea;
@@ -207,12 +211,14 @@ table tr td {
 .gold-store-card,
 .gold-store-present-card,
 .gold-exchange-present-card {
+  position: relative;
   width: 217px;
+  height: 344px;
   background-color: #fff;
   border-radius: 5px;
   overflow: hidden;
   float: left;
-  margin: 10px 7px 0 5px;
+  margin: 10px 7px 3px;
 }
 .gold-store-card-img-box,
 .gold-store-present-img-box,
@@ -220,6 +226,12 @@ table tr td {
   height: 164px;
   line-height: 164px;
   text-align: center;
+}
+.gold-store-card-img-box img,
+.gold-store-present-img-box img,
+.gold-exchange-present-img-box img {
+  max-width: 200px;
+  max-height: 140px;
 }
 .gold-store-card-price-box {
   width: 200px;
@@ -235,6 +247,7 @@ table tr td {
   margin-left: 10px;
   font-size: 16px;
   color: #e74c3c;
+  font-weight: bold;
 }
 .gold-store-card-level {
   float: right;
@@ -293,8 +306,7 @@ table tr td {
 }
 .gold-store-present-rank-new {
   width: 52px;
-  position: absolute;
-  left: 100px;
+  margin-left: 5px;
 }
 .gold-store-new-arrow {
   position: absolute;
@@ -329,7 +341,6 @@ table tr td {
 }
 .gold-exchange-present-card-name span {
   color: #333;
-  margin-left: 10px;
 }
 .gold-store-present-card-stock {
   color: #999999;
@@ -413,16 +424,17 @@ table tr td {
   margin: 0 22px 48px;
   font-size: 12px;
 }
+.gold-store-present-btn {
+  width: 217px;
+  position: absolute;
+  bottom: 0;
+}
 /* 兑换遮罩 */
 .red-card-box,
 .present-box {
   overflow: hidden;
   margin: 42px 0;
   position: relative;
-}
-.red-card-box img,
-.present-box img {
-  float: left;
 }
 .red-card-intro,
 .present-intro {
@@ -449,6 +461,7 @@ table tr td {
 .red-card-intro-name span em,
 .present-intro-name span em {
   color: #e74c3c;
+  font-weight: bold;
 }
 .red-card-intro-title,
 .present-intro-title {
@@ -558,10 +571,11 @@ table tr td {
   background-color: #ebf7fb;
   color: #333;
 }
-.modal-title {
+#presentModal .modal-title，#cardModal .modal-title {
   color: #666;
 }
-.modal-body {
+#presentModal .modal-body,
+#cardModal .modal-body {
   overflow: hidden;
 }
 .red-card-tip div,
@@ -580,4 +594,33 @@ table tr td {
 .alertImg {
   margin-right: 10px;
   margin-bottom: 3px;
+}
+.gold-store-card-empty,
+.gold-store-present-empty {
+  width: 100px;
+  height: 34px;
+  background-color: #999999;
+  margin: 28px auto;
+  text-align: center;
+  font-size: 14px;
+  line-height: 34px;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.gold-tip-alert {
+  color: #e74c3c !important;
+  margin-right: 5px;
+}
+.gold-modal-img {
+  float: left;
+  width: 330px;
+  height: 198px;
+  display: inline-block;
+  line-height: 198px;
+  text-align: center;
+}
+.gold-modal-img img {
+  max-width: 240px;
+  max-height: 208px;
 }
