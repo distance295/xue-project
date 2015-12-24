@@ -39,7 +39,7 @@ $(function() {
             dataType: 'json',
             success: function(d) {
               if (d.sign == 1) {
-                  fCheck.setTips('.serialPass-warning',d.msg);
+                  alert('听课证激活成功');
                   location.href = "/MyCards/classCard";
               } else {
                   fCheck.setTips('.serialPass-warning',d.msg);

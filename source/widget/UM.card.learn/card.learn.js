@@ -46,7 +46,6 @@ $(function() {
             dataType: 'json',
             success: function(d) {
                 if (d.sign == 1) {
-                    //location.href = "/RequestPassword/UpdatePasswordSecuess";
                     alert('学习卡充值成功');
                 } else {
                     fCheck.setTips('.studyCardPwd-warning',d.msg);

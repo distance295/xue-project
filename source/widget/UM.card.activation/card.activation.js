@@ -39,7 +39,7 @@
                 dataType: 'json',
                 success: function(d) {
                     if (d.sign == 1) {
-                        fCheck.setTips('.cardPass-warning', d.msg);
+                        alert('代金卡激活成功');
                         location.href = "/MyCards/giftCard";
                     } else {
                         fCheck.setTips('.cardPass-warning',d.msg);
