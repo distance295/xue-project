@@ -8,7 +8,7 @@
    </div>
 <!--个人主页tab标签结束-->
 <div class="row bottom m20">
-    <div class="col-md-9 top m20 fresh-main-wrapper">
+    <div class="center-left-w top m20 fresh-main-wrapper">
 <!--新鲜事开始-->
         <div class="focusGuyTab">
             <div class="all-fresh-list">
@@ -49,11 +49,11 @@
        </div>
 <!--关注的人结束-->
     </div>
-    <div class="col-md-3 top m20">
-        <div class="center-left-m">
+    <div class="center-right top m20">
+        
             <link rel="import" href="center-stu-info.tpl?__inline">
             <link rel="import" href="stuVerify.tpl?__inline">
             <link rel="import" href="center-visit.tpl?__inline">
-        </div>
+        
     </div>
 </div>
