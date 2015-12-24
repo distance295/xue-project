@@ -228,3 +228,5 @@ source/conf/deploy-account.bat
 source/conf/deploy-home.bat
 source/conf/deploy-account.bat
 source/conf/deploy-account.bat
+/source/widget/Module.Pagination/backup/
+/source/widget/Module.Paginator/
