@@ -63,6 +63,7 @@ $.ajaxSetup({
 }); 
 
 var miniCart = miniCart || {};
+var miniUrl = $('#myCartUrl').attr('href');
 //头部购物车显示隐藏
 miniCart.shopCart = function(e){
     var that = $(e);
@@ -71,8 +72,9 @@ miniCart.shopCart = function(e){
         that.addClass('hover');
         return false;
     }else{
+       var url = miniUrl + '/ShoppingCart/ajaxGetCartList/';
        $.ajax({
-	         	url: 'http://cart.wx4.0.com/ShoppingCart/ajaxGetCartList/',
+	         	url: url,
 	         	type: 'POST',
 	         	dataType: 'html',
 				xhrFields:{withCredentials:true},
@@ -96,8 +98,9 @@ miniCart.shopCart = function(e){
         var that= $(e),
                 _id = that.data('id'),
                 _num = $('.minicart-footer .minicart-total').data('num');
+        var url = miniUrl + '/ShoppingCart/delCart/';
                 $.ajax({
-                    url: 'http://cart.wx4.0.com/ShoppingCart/delCart/',
+                    url: url,
                     type: 'get',
                     dataType: 'jsonp',
                     data: {id:_id},
@@ -110,7 +113,7 @@ miniCart.shopCart = function(e){
                             $('small.minicart-total').text(_num - 1);
 							$('.dropdown-body').empty();
 							$.ajax({
-								url: 'http://cart.wx4.0.com/ShoppingCart/ajaxGetCartList/',
+								url: miniUrl + '/ShoppingCart/ajaxGetCartList/',
 								type: 'POST',
 								dataType: 'html',
 								xhrFields:{withCredentials:true},
