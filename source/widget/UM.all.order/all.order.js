@@ -18,11 +18,16 @@ function orderTab(ordertype,page){
         dataType: "html",
         data:'type=' + ordertype + '&curpage=' + page, 
         success: function(list){
-            if(list.sign === 2){
-                window.location.href = list.msg;
-            }
-            var box = $('#page_list');
-            box.html(list);
+            var list = $.trim(list);
+            if(list.substr(0,1)=='<'){
+                var box = $('#page_list');
+                box.html(list);
+            }else{
+                if(list.substr(0,4)=='http' || list.substr(0,1)=='/'){
+                    window.location.href = list;
+                    return false;
+                }
+            } 
         },
         error:function(){  
             alert("异步失败");  
