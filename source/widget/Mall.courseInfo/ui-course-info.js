@@ -147,23 +147,40 @@ $(function(){
     $('body').on('click','.button_shop-cart',function(){
         var that = $(this),
             _id = that.data('id'),
-            _url = '/ShoppingCart/makeCart/';
-        //alert(_id+','+_url);
-         $.ajax({
-	         	url: _url,
-	         	type: 'POST',
-	         	dataType: 'html',
-	         	data: {id:_id},
-	         	success:function (result) {
-	         		var res = xue.ajaxCheck.HTML(result);
-                    if(res){
-                       $(result).appendTo('.dropdown-body');
+            _url = miniUrl +'/ShoppingCart/addCart/'+ _id;
+        var _html = $('.ui-dropdown-miniCart .dropdown-body').html();
+            if(_html !== ''){
+                return false;
+            }else{
+             $.ajax({
+                    url: _url,
+                    type: 'GET',
+                    dataType: 'jsonp',                
+                    jsonp:'jsonpCallback',                   
+                    success:function (result) {
+                        if(result.sign == 1){
+                             $.ajax({
+                                url: miniUrl +'/ShoppingCart/ajaxGetCartList/',
+                                type: 'POST',
+                                dataType: 'html',
+                                xhrFields:{withCredentials:true},
+                                crossDomain:true,
+                                success:function (result) {
+                                     var _num = $('.minicart-footer .minicart-total').data('num');
+                                       $('small.minicart-total').text(_num - 1);
+                                       $(result).appendTo('.dropdown-body');
+                                },
+                                error : function() {
+                                    alert('数据加载失败！');
+                                }
+                             }); 
+                        }
+                    },
+                    error : function() {
+                        alert('数据加载失败！');
                     }
-	         	},
-	         	error : function() {
-	         		alert('数据加载失败！');
-	         	}
-	         }); 
+                 }); 
+            }
     });
 })
 

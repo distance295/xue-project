@@ -47,6 +47,7 @@
                         <em class="label label-danger">续报9折</em>
                         <a class="delete" href="#">删除</a>
                     </div>
+                    
                 </li>
                 <li class="row past-course">
                     <div class="course-info col-xs-8">
