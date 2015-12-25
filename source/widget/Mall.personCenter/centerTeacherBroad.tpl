@@ -34,26 +34,24 @@
     </div>
     <link rel="import" href="tab-teacher-broad.tpl?__inline">
     <div class="row bottom m20">
-        <div class="col-md-9 top m20 fresh-main-wrapper clo-xs-8">
+        <div class="center-left-w top m20 fresh-main-wrapper ">
             <!--新鲜事筛选tab标签开始-->
-            <div class="center-rank-flower clearfix">老师最近30天在直播辅导中已收到献花：
+            <div class="center-rank-flower">
                 <span class="flower1">234</span>
                 <span class="flower2">2324</span>
                 <span class="flower3">123456</span>
-                <span class="rank-info right">最近30天直播辅导献花排名</span>
-                <span style="clear:both"></span>
+                <span class="rank-info">最近30天直播辅导献花排名</span>
+                <span class="rank-info-right">老师最近30天在直播辅导中已收到献花：</span>
             </div>
             <!--新鲜事筛选tab标签结束--> 
             <div class="center-teacher-report clearfix">
               <link rel="import" href="centerTeacherBroadFlower.tpl?__inline">
             </div>
         </div>
-        <div class="col-md-3 top m20 col-xs-4">
-            <div class="center-left-m">
-                <link rel="import" href="center-teacher-info.tpl?__inline">
-                <link rel="import" href="teacherVerify.tpl?__inline">
-                <link rel="import" href="center-visit.tpl?__inline">
-            </div>
+        <div class="center-right top m20 ">    
+            <link rel="import" href="center-teacher-info.tpl?__inline">
+            <link rel="import" href="teacherVerify.tpl?__inline">
+            <link rel="import" href="center-visit.tpl?__inline">
         </div>
     </div>
 </div>

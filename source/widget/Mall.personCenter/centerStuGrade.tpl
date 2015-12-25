@@ -31,7 +31,7 @@
     </div>
     <link rel="import" href="tab-stu-grade.tpl?__inline">
     <div class="row bottom m20">
-        <div class="col-md-9 top m20">
+        <div class="center-left-w top m20">
             <div class="center-teacher-report clearfix">
               <link rel="import" href="../../widget/Public.Module/glory-modal.tpl?__inline">
               <link rel="import" href="../../widget/Public.Module/glory-modal.tpl?__inline">
@@ -56,12 +56,10 @@
               <link rel="import" href="../../widget/Public.Module/glory-modal.tpl?__inline">
             </div>
         </div>
-        <div class="col-md-3 top m20">
-            <div class="center-left-m">
-                <link rel="import" href="center-stu-info.tpl?__inline">
-                <link rel="import" href="stuVerify.tpl?__inline">
-                <link rel="import" href="center-visit.tpl?__inline">
-            </div>
+        <div class="center-right top m20">
+            <link rel="import" href="center-stu-info.tpl?__inline">
+            <link rel="import" href="stuVerify.tpl?__inline">
+            <link rel="import" href="center-visit.tpl?__inline">
         </div>
     </div>
 </div>
