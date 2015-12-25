@@ -1,91 +1,92 @@
+// 报名
 #containerItem {
     background: #f5f5f5;
     padding: 25px 0;
-}
-#containerItem .apply_container {
-    overflow: hidden;
-    background: #f5f5f5;
-    width: 980px;
-    margin: 0 auto;
-    border: 1px solid #dddbd8;
-}
-#containerItem .apply_container .overview {
-    width: 956px;
-    margin: 12px auto;
-    background: #fff;
-    border-left: 1px solid #e0e0e0;
-    border-bottom: 1px solid #b5b5b5;
-    border-right: 1px solid #e0e0e0;
-}
-#containerItem .apply_container .overview .settime {
-    color: #BBB;
-    font-size: 20px;
-    height: 30px;
-    line-height: 30px;
-    padding-left: 40px;
-    font-family: "Microsoft YaHei";
-    background: url("http://img04.xesimg.com/clock.jpg") no-repeat 325px 0;
-    text-align: center;
-    font-weight: 700;
-    margin: 30px 0;
-}
-#containerItem .apply_container .overview .overview_con {
-    width: 936px;
-    overflow: hidden;
-    margin: 0 auto;
-    font-size: 14px;
-    border-bottom: 1px dashed #cbcbcb;
-    padding: 20px 0;
-}
-#containerItem .apply_container .overview .overview_con p {
-    margin-top: 5px;
-}
-#containerItem .apply_container .overview .overview_con .con_content {
-    margin: 30px 0 30px 15px;
-}
-#containerItem .apply_container .overview .overview_con .con_content .content_title {
-    font-weight: 700;
-}
-#containerItem .apply_container .overview .overview_con .con_content li {
-    margin-top: 10px;
-}
-#containerItem .apply_container .overview .applyinfo {
-    width: 936px;
-    margin: 0 auto;
-    line-height: 30px;
-    font-weight: normal;
-    text-align: center;
-    background: #fff;
-    position: relative;
-}
-#containerItem .apply_container .overview .applyinfo p.settime span {
-    margin: 0 3px;
-    color: #cc0000;
-}
-#containerItem .apply_container .overview .applyinfo p span {
-    margin: 0 15px;
-}
-#containerItem .apply_container .overview .applyinfo p span b {
-    color: #cc0000;
-}
-#containerItem .apply_container .overview .applyinfo .baoming_times {
-    width: 192px;
-    height: 152px;
-    background: url('http://img04.xesimg.com/button/baoming_times.png') no-repeat;
-    overflow: hidden;
-    position: absolute;
-    right: 100px;
-    top: -79px;
-    z-index: 100;
-}
-#containerItem .apply_container .overview .applyinfo .baoming_times span {
-    display: inline-block;
-    height: 30px;
-    font-size: 22px;
-    color: #333;
-    margin-top: 64px;
-    text-align: center;
-    font-weight: bold;
+    .apply_container {
+        overflow: hidden;
+        background: #f5f5f5;
+        width: 980px;
+        margin: 0 auto;
+        border: 1px solid #dddbd8;
+        .overview {
+            width: 956px;
+            margin: 12px auto;
+            background: #fff;
+            border-left: 1px solid #e0e0e0;
+            border-bottom: 1px solid #b5b5b5;
+            border-right: 1px solid #e0e0e0;
+            .settime {
+                color: #BBB;
+                font-size: 20px;
+                height: 30px;
+                line-height: 30px;
+                padding-left: 40px;
+                font-family: "Microsoft YaHei";
+                background: url("http://img04.xesimg.com/clock.jpg") no-repeat 325px 0;
+                text-align: center;
+                font-weight: 700;
+                margin: 30px 0;
+            }
+            .overview_con {
+                width: 936px;
+                overflow: hidden;
+                margin: 0 auto;
+                font-size: 14px;
+                border-bottom: 1px dashed #cbcbcb;
+                padding: 20px 0;
+                p {
+                    margin-top: 5px;
+                }
+                .con_content {
+                    margin: 30px 0 30px 15px;
+                    .content_title {
+                        font-weight: 700;
+                    }
+                    li {
+                        margin-top: 10px;
+                    }
+                }
+            }
+            .applyinfo {
+                width: 936px;
+                margin: 0 auto;
+                line-height: 30px;
+                font-weight: normal;
+                text-align: center;
+                background: #fff;
+                position: relative;
+                p.settime span {
+                    margin: 0 3px;
+                    color: #cc0000;
+                }
+                p span {
+                    margin: 0 15px;
+                }
+                p span b {
+                    color: #cc0000;
+                }
+                .baoming_times {
+                    width: 192px;
+                    height: 152px;
+                    background: url('http://img04.xesimg.com/button/baoming_times.png') no-repeat;
+                    overflow: hidden;
+                    position: absolute;
+                    right: 100px;
+                    top: -79px;
+                    z-index: 100;
+                    span {
+                        display: inline-block;
+                        height: 30px;
+                        font-size: 22px;
+                        color: #333;
+                        margin-top: 64px;
+                        text-align: center;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
 }
 #containerItem .apply_container .overview .applyinfo {
     padding: 35px 0 35px 0;
@@ -120,7 +121,7 @@
 }
 #containerItem .apply_container .overview .usersinfo {
     padding: 30px 58px 10px 220px;
-    width: 600px;
+    width: 878px;
     background: #fff;
 }
 #containerItem .apply_container .overview .usersinfo p span {
@@ -155,14 +156,15 @@
     color: #333;
     text-align: right;
     font-size: 14px;
+    font-weight: normal;
 }
 #containerItem .apply_container .overview .usersinfo p input {
     float: left;
-    width: 221px;
+    width: 226px;
     padding: 4px 0 3px 5px;
     vertical-align: middle;
     font-size: 14px;
-    height: 25px;
+    height: 32px;
     line-height: 25px;
 }
 #containerItem .apply_container .overview .usersinfo p input.error {
@@ -194,4 +196,5 @@
     cursor: pointer;
     margin-left: 60px;
     background: url("http://img04.xesimg.com/ensurebtn.gif") no-repeat left 0;
+    border: none;
 }

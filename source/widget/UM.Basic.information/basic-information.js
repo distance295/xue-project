@@ -73,31 +73,25 @@ $.fn.nicknameajax = function(){
     // 昵称与其他用户重复，请重新设置
     var box = $(boxs.nickname),
     val = box.val();
-    var d_val = Number($(box).data('nickname'));
-    if(Number(val) != d_val){
-        $.ajax({
-            url : '/MyInfos/getNicknameUseful',
-            type : 'GET',
-            dataType : 'json',
-            data : 'nickname=' + $('.nickname').val(),
-            timeout: 7000,
-            async: true,
-            success  : function(result){
-                if(result.sign == false){
-                    fCheck.setTips(".nickname-warning",'昵称与其他用户重复，请重新设置');
-                } else {
-                    fCheck.clearTips(".nickname-warning");
-                    fCheck.bordercss('.nickname');
-                    $(box).data('nickname',val);
-                }
-                if(result.sign === 2){
-                    window.location.href = result.msg;
-                } 
+    $.ajax({
+        url : '/MyInfos/getNicknameUseful',
+        type : 'GET',
+        dataType : 'json',
+        data : 'nickname=' + $('.nickname').val(),
+        timeout: 7000,
+        async: true,
+        success  : function(result){
+            if(result.sign == false){
+                fCheck.setTips(".nickname-warning",'昵称与其他用户重复，请重新设置');
+            } else {
+                fCheck.clearTips(".nickname-warning");
+                fCheck.bordercss('.nickname');
             }
-        });
-    }else{
-        return false;
-    }
+            if(result.sign === 2){
+                window.location.href = result.msg;
+            } 
+        }
+    });
 }
 
 /* 学校格式验证 */

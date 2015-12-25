@@ -43,6 +43,7 @@ $(function() {
                 } 
                 if (d.sign == 1) {
                     alert('课程绑定卡激活成功');
+                    location.href = "/MyCards/courseCard";
                 } else {
                     fCheck.setTips('.bindcardPass-warning',d.msg);
                 }
