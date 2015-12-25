@@ -89,7 +89,7 @@ miniCart.shopCart = function(e){
 	         }); 
     }
    //鼠标移出
-	$('.ui-dropdown-miniCart').on('mouseleave',function(event) {
+	$('body').on('mouseleave','.ui-dropdown-miniCart',function(event) {
 		$(this).removeClass('hover');
 	});
 };

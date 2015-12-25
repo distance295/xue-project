@@ -148,10 +148,6 @@ $(function(){
         var that = $(this),
             _id = that.data('id'),
             _url = miniUrl +'/ShoppingCart/addCart/'+ _id;
-        var _html = $('.ui-dropdown-miniCart .dropdown-body').html();
-            if(_html !== ''){
-                return false;
-            }else{
              $.ajax({
                     url: _url,
                     type: 'GET',
@@ -159,6 +155,9 @@ $(function(){
                     jsonp:'jsonpCallback',                   
                     success:function (result) {
                         if(result.sign == 1){
+                             var num = Number($('small.minicart-total').text());
+                             $('small.minicart-total').text(num + 1 );
+                             $('#miniCart-body').empty();
                              $.ajax({
                                 url: miniUrl +'/ShoppingCart/ajaxGetCartList/',
                                 type: 'POST',
@@ -167,20 +166,21 @@ $(function(){
                                 crossDomain:true,
                                 success:function (result) {
                                        $(result).appendTo('#miniCart-body');
-                                     var _num = $('.minicart-footer .minicart-total').data('num');
-                                       $('small.minicart-total').text(_num - 1);
+                                    
                                 },
                                 error : function() {
                                     alert('数据加载失败！');
                                 }
                              }); 
                         }
+                        if(result.sign == 2){
+                           window.location.href = result.url;
+                        }
                     },
                     error : function() {
                         alert('数据加载失败！');
                     }
                  }); 
-            }
     });
 })
 
