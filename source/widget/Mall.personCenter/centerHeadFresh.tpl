@@ -28,7 +28,7 @@
     </div>
     <link rel="import" href="../../widget/Mall.personCenter/tab-office2.tpl?__inline">
     <div class="row bottom m20">
-        <div class="col-md-9 top m20 fresh-main-wrapper">
+        <div class="center-left-w top m20 fresh-main-wrapper">
             <!--新鲜事筛选tab标签开始-->
             <div class="filter-public-tab">
                <span class="filter-text-style">筛选：</span>
@@ -44,12 +44,10 @@
             <!--新鲜事筛选tab标签结束--> 
             <link rel="import" href="../../widget/Public.Dynamic/index.tpl?__inline">
         </div>
-        <div class="col-md-3 top m20">
-            <div class="center-left-m">
-                <link rel="import" href="center-info.tpl?__inline">
-                <link rel="import" href="officeVerify.tpl?__inline">
-                <link rel="import" href="center-visit.tpl?__inline">
-            </div>
+        <div class="center-right top m20">
+            <link rel="import" href="center-info.tpl?__inline">
+            <link rel="import" href="officeVerify.tpl?__inline">
+            <link rel="import" href="center-visit.tpl?__inline">
         </div>
     </div>
 </div>

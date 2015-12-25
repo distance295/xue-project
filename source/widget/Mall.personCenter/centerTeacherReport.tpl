@@ -34,7 +34,7 @@
     </div>
     <link rel="import" href="../../widget/Mall.personCenter/tab-teacher-report.tpl?__inline">
     <div class="row bottom m20">
-        <div class="col-md-9 top m20 fresh-main-wrapper">
+        <div class="center-left-w top m20 fresh-main-wrapper">
             <!--新鲜事筛选tab标签开始-->
             <div class="filter-public-tab">
                <span class="filter-text-style">筛选：</span>
@@ -82,12 +82,10 @@
               <link rel="import" href="../../widget/Public.Module/glory-modal.tpl?__inline">
             </div>
         </div>
-        <div class="col-md-3 top m20">
-            <div class="center-left-m">
-                <link rel="import" href="center-teacher-info.tpl?__inline">
-                <link rel="import" href="teacherVerify.tpl?__inline">
-                <link rel="import" href="center-visit.tpl?__inline">
-            </div>
+        <div class="center-right top m20">
+            <link rel="import" href="center-teacher-info.tpl?__inline">
+            <link rel="import" href="teacherVerify.tpl?__inline">
+            <link rel="import" href="center-visit.tpl?__inline">
         </div>
     </div>
 </div>
