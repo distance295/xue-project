@@ -188,8 +188,8 @@ var xue =xue || {};
       }      
   };
     
-    fCheck.phonecodeAjax = function(btn){
-      var that = btn;
+  fCheck.phonecodeAjax = function(btn){
+    var that = btn;
     $.ajax({
       type: "POST",
       url: "/MyInfos/getPassCode",
@@ -206,7 +206,8 @@ var xue =xue || {};
           fCheck.setTips('#tips-phonecode',result.msg);
         }else{
           /* 短信发送成功提醒 */
-          $('#tips-phonecode').text('由于运营商原因，手机短信可能会有延迟，请您耐心等待');
+          //$('#tips-phonecode').css({'padding-left': '0', 'width': '300px', 'background': 'none', 'color':'#828282'});
+          //$('#tips-phonecode').text('由于运营商原因，手机短信可能会有延迟，请您耐心等待');
           /* 操作按钮文本显示 */
           $(that).text("60秒后重新获取");
           var time = 60;
@@ -219,6 +220,7 @@ var xue =xue || {};
                   clearInterval(that.timer);
                   that.timer = null;
                   $(that).removeClass('btn_in_use');
+                  $(that).css({'background': '#3bafda'});
                 }
               }, 1000);
 
@@ -226,26 +228,25 @@ var xue =xue || {};
         }
       },
       error: function () {
-        alert('数据读取错误,请重试..');
-        fCheck.setTips('#tips-phonecode','数据读取错误,请重试..');
+        $(that).removeClass('btn_in_use');
+        $(that).css({'background': '#3bafda'}); 
         return false;
       }
     });
-    };
-
-    /* 点击"保存"按钮时检查错误信息 */
-    fCheck.isError = function(e){
+  };
+  /* 点击"保存"按钮时检查错误信息 */
+  fCheck.isError = function(e){
     fCheck.checkPhone(fCheck.param.phoneTip,fCheck.param.phoneWarn,$("#phone").val());
     fCheck.imgcode();
     fCheck.phonecode('#phonecode');
     passwordfn();
     var param = fCheck.param;
-      if( param.cPhone && param.cMessage && param.cImg && param.cPass ){
-        return false;
-      }else{
-        return true;
-      }
+    if( param.cPhone && param.cMessage && param.cImg && param.cPass ){
+      return false;
+    }else{
+      return true;
     }
+  }
   /* 手机号码输入框的操作 */
   $(fCheck.param.phone).focus(function(){
     $(fCheck.param.phoneTip).hide();
@@ -264,16 +265,16 @@ var xue =xue || {};
   passwordfn = function () {
     var value = $(fCheck.param.curPwd).val();
     if(value.length == 0){
-           fCheck.setTips(fCheck.param.curPwdWarn,'请输入密码');
+       fCheck.setTips(fCheck.param.curPwdWarn,'请输入密码');
+       fCheck.param.cPass = 0;
+    }else{
+       if (value.length > 0 && value.length < 6) {
+           fCheck.setTips(fCheck.param.curPwdWarn,'密码不能少于6位字符');
            fCheck.param.cPass = 0;
        }else{
-           if (value.length > 0 && value.length < 6) {
-               fCheck.setTips(fCheck.param.curPwdWarn,'密码不能少于6位字符');
-               fCheck.param.cPass = 0;
-           }else{
-            fCheck.param.cPass = 1;
-           }
-    };
+        fCheck.param.cPass = 1;
+       }
+    }
   }
 
   $(fCheck.param.curPwd).on('focus',function(){
@@ -319,6 +320,7 @@ var xue =xue || {};
       fCheck.imgcode();
       var that = this;
       if(fCheck.param.cImg && fCheck.param.cPhone){
+        $(that).css({'background': '#ccc'});
         $(that).addClass('btn_in_use');
         fCheck.phonecodeAjax(that); 
       }
