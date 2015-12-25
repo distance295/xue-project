@@ -34,7 +34,7 @@
                         $(e).html('<em>已关注</em>');
                         break;
                         case 2:
-                        $(dom).html('<a href="javascript:void(0)" class="fresh-attention-btn fresh-add-attention-btn"><span class="fresh-add left">+</span><span class="left">关注</span></a>');
+                        $(dom).html('<a href="javascript:void(0)" class="fresh-attention-btn freshCourse-add-attention-btn"><span class="fresh-add left">+</span><span class="left">关注</span></a>');
                         $(dom).data({type:3});
                         break;
                         case 3:
@@ -58,13 +58,13 @@
 /* ================= 关注相关 ============= */
 
     //点击添加关注按钮
-    $('body').off('click', '.fresh-course-attention .fresh-add-attention-btn').on('click', '.fresh-course-attention .fresh-add-attention-btn', function(){
+    $('body').off('click', '.fresh-course-attention .freshCourse-add-attention-btn').on('click', '.fresh-course-attention .freshCourse-add-attention-btn', function(){
         var that = $(this).closest('.fresh-course-attention');
         courses.attention.addCancel(that);
     })
 
     //点击添加取消关注按钮
-    $('body').off('click', '.fresh-course-attention .fresh-add-cancel-btn').on('click', '.fresh-course-attention .fresh-add-cancel-btn', function(){
+    $('body').off('click', '.fresh-course-attention .freshCourse-add-cancel-btn').on('click', '.fresh-course-attention .freshCourse-add-cancel-btn', function(){
         var that = $(this).closest('.fresh-course-attention');
         courses.attention.addCancel(that);
     });
