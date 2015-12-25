@@ -75,6 +75,10 @@
   position: relative;
   display: inline-block;
 }
+.live-course-box img {
+  width: 271px;
+  height: 198px;
+}
 .live-teacher-photo {
   margin-top: 11px;
 }
@@ -143,6 +147,9 @@
 }
 .live-blue {
   background-color: #3bafda;
+}
+.live-grey {
+  background-color: #bfbfbf;
 }
 .liveBreadCrumb {
   margin-top: 17px;
