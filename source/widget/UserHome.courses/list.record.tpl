@@ -29,28 +29,28 @@
             </div>
             <ul class="table course-table">
                 <li>
-                    <span>第1讲 初一数学目标满分班人教版 第一场直播</span>
+                    <span class="outlines_chapter_name">第1讲 初一数学目标满分班人教版 第一场直播</span>
                     <span class="text-style studied">已学习</span>
                     <span class="text-style">
                         <a class="btn btn-primary" href="##"><em class="button-icon icon-will-red"></em>立即学习</a>
                     </span>
                 </li>
                 <li>
-                    <span>第1讲 初一数学目标满分班人教版 第一场直播</span>
+                    <span class="outlines_chapter_name">第1讲 初一数学目标满分班人教版 第一场直播</span>
                     <span class="text-style studied-end">上次学到</span>
                     <span class="text-style">
                         <a class="btn-danger btn" href="##"><em class="button-icon icon-will-red"></em>继续学习</a>
                     </span>
                 </li>
                 <li>
-                    <span>第1讲 初一数学目标满分班人教版 第一场直播</span>
+                    <span class="outlines_chapter_name">第1讲 初一数学目标满分班人教版 第一场直播</span>
                     <span class="text-style">未学习</span>
                     <span class="text-style">
                         <a class="btn btn-primary" href="##"><em class="button-icon icon-will-red"></em>立即学习</a>
                     </span>
                 </li>
                 <li>
-                    <span>第1讲 初一数学目标满分班人教版 第一场直播</span>
+                    <span class="outlines_chapter_name">第1讲 初一数学目标满分班人教版 第一场直播</span>
                     <span class="text-style yellow-mark">未学完<em class="mark"></em></span>
                     <span class="text-style">
                         <a class="btn btn-primary" href="##"><em class="button-icon icon-will-red"></em>继续学习</a>
@@ -66,7 +66,7 @@
             </div>
             <ul class="table course-table">
                 <li>
-                    <span>第1讲 初一数学目标满分班人教版 第一场直播</span>
+                    <span class="outlines_chapter_name">第1讲 初一数学目标满分班人教版 第一场直播</span>
                     <span class="text-style studied">已学习</span>
                     <span class="text-style">
                         <a class="btn btn-primary" href="##"><em class="button-icon icon-just-white"></em>立即学习</a>
