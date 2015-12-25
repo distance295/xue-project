@@ -67,7 +67,7 @@ var miniUrl = $('#myCartUrl').attr('href');
 //头部购物车显示隐藏
 miniCart.shopCart = function(e){
     var that = $(e);
-    var _html = that.find('.dropdown-body').html();
+    var _html = that.find('#miniCart-body').html();
     if(_html !== ''){
         that.addClass('hover');
         return false;
@@ -81,7 +81,7 @@ miniCart.shopCart = function(e){
 				crossDomain:true,
 	         	success:function (result) {
                        that.addClass('hover');
-                       $(result).appendTo('.dropdown-body');
+                       $(result).appendTo('#miniCart-body');
 	         	},
 	         	error : function() {
 	         		alert('数据加载失败！');
@@ -119,7 +119,7 @@ miniCart.shopCart = function(e){
 								xhrFields:{withCredentials:true},
 								crossDomain:true,
 								success:function (result) {
-									   $(result).appendTo('.dropdown-body');
+									   $(result).appendTo('#miniCart-body');
 								},
 								error : function() {
 									alert('数据加载失败！');
