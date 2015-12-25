@@ -132,6 +132,19 @@ function testLive(){
         }
     });
 }
+// 直播辅导弹框
+function liveHelp(){
+    $('.liveHelp-btn').popover({
+        placement: 'top',
+        html: true,
+        trigger: 'hover',
+        title: '',
+        content: function() {
+            var listTest_html = $(this).parents('.amount-show').siblings('.list-help-pop').html();
+            return listTest_html;
+        }
+    });
+}
 // 讲义资料弹框tab事件
 $('body').on('click','.material-wrap .material-tab li',function(){
     var index = $(this).index();
