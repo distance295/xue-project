@@ -91,7 +91,7 @@ $(function(){
         }
     })
 
-    updateEndTime();
+   // updateEndTime();
 });
 
 function updateEndTime(){
