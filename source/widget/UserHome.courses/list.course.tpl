@@ -37,9 +37,10 @@
                 </p>
                 <p class="amount-show">
                     <a class="btn-danger btn " href="##"><em class="button-icon icon-just-white"></em>立即听课</a>
-                    <a class="btn btn-default " href="##" >课程大纲<label class="newLabel">5</label></a>
+                    <a class="btn btn-default liveHelp-btn" href="##" >课程大纲<label class="newLabel">5</label></a>
                     <a class="btn btn-default last listTest-btn" href="##">随堂测<label class="newLabel homeworkLabel">10</label></a>
                 </p>
+                <div class="list-help-pop hide"><p>你有<span>N</span>场直播未完成，赶紧去看回放吧</p></div>
                 <ul class="listTest-pop hide">
                     <li><span>5</span>份作业已批改完成</li>
                     <li><span>2</span>份作业已驳回</li>
@@ -302,7 +303,7 @@
     </div>
 </div>
 <div class="courseList-wrap courseList-label">
-    <div class="courseList">
+    <div class="courseList courseList-record">
         <div class="study-report">
             <div class="progress-show">
                 <div class="processingbar"><font>80%</font></div>    
@@ -331,7 +332,7 @@
                 <p class="amount-show">
                     <a class="btn-danger btn " href="##"><em class="button-icon icon-will-red"></em>立即学习</a>
                     <a class="btn btn-default " href="##">课程大纲</a>
-                    <a class="btn btn-default last" href="##"><label class="newLabel live-label">live</label>直播辅导</a>
+                    <a class="btn btn-default last " href="##"><label class="newLabel live-label">live</label>直播辅导</a>
                 </p>
             </div>
 

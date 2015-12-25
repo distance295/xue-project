@@ -97,7 +97,7 @@ function progressBar(){
 						w: 100,
 						R: 46,
 						sW: 3,
-						color: ["#3bafda", "#3bafda", "#3bafda"],
+						color: ["#5abdeb", "#5abdeb", "#5abdeb"],
 						perent: [100, a],
 						speed: 150,
 						delay: 400
@@ -131,7 +131,7 @@ var pie = {
 			var d = a.onBefore || c;
 			var e = a.onAfter || c;
 			d(ctx);
-			ctx.fillStyle = a.color || '#3bafda';
+			ctx.fillStyle = a.color || '#5abdeb';
 			var f = a.step || 1;
 			var g = a.delay || 10;
 			var i = 0,

@@ -94,7 +94,7 @@
            <tbody>
                <tr>
                    <td>订单金额</td>
-                   <td id="ot-bold">商品金额：187.90元 - 使用余额：0.00元  - 代金卡金额：0.02元 + 运费：0.6元 = <em>1924.00元</em></td>
+                   <td id="ot-bold"><em>1924.00</em>元</td>
                </tr>
            </tbody>
         </table>

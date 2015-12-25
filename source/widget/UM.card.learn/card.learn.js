@@ -47,6 +47,7 @@ $(function() {
             success: function(d) {
                 if (d.sign == 1) {
                     alert('学习卡充值成功');
+                    location.href = "/MyPayCenters/recharge";
                 } else {
                     fCheck.setTips('.studyCardPwd-warning',d.msg);
                 }

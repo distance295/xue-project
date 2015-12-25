@@ -147,26 +147,28 @@ $(function(){
     $('body').on('click','.button_shop-cart',function(){
         var that = $(this),
             _id = that.data('id'),
-            _url = 'http://cart.wx4.0.com/ShoppingCart/addCart/';
+            _url = miniUrl +'/ShoppingCart/addCart/'+ _id;
         var _html = $('.ui-dropdown-miniCart .dropdown-body').html();
             if(_html !== ''){
                 return false;
             }else{
              $.ajax({
                     url: _url,
-                    type: 'POST',
-                    dataType: 'json',
-                    data: {id:_id},
+                    type: 'GET',
+                    dataType: 'jsonp',                
+                    jsonp:'jsonpCallback',                   
                     success:function (result) {
                         if(result.sign == 1){
                              $.ajax({
-                                url: 'http://cart.wx4.0.com/ShoppingCart/ajaxGetCartList/',
+                                url: miniUrl +'/ShoppingCart/ajaxGetCartList/',
                                 type: 'POST',
                                 dataType: 'html',
                                 xhrFields:{withCredentials:true},
                                 crossDomain:true,
                                 success:function (result) {
-                                       $(result).appendTo('.dropdown-body');
+                                     var _num = $('.minicart-footer .minicart-total').data('num');
+                                       $('small.minicart-total').text(_num - 1);
+                                       $(result).appendTo('#miniCart-body');
                                 },
                                 error : function() {
                                     alert('数据加载失败！');
