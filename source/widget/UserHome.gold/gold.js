@@ -224,26 +224,26 @@ $(function(){
         }
     });
 
-    $body.on('click', ".gold-detail-check", function (e) {
-        dateStart = $('#dateStart').val();
-        dateEnd =  $('#dateEnd').val();
-        $.ajax({
-            url: '/GoldShop/ajaxGetGoldLogs',
-            type: 'post',
-            dataType: 'html',
-            data: {
-                sTime: dateStart,
-                eTime: dateEnd
-            },
-            success : function(result){
-                if (result.substr(0, 4) == 'http' || result.substr(0, 1) == '/') {
-                    window.location.href = result;
-                    return;
-                }
-                $('.gold-detail-block-change').html(result);
-            }
-        })
-    })
+    //$body.on('click', ".gold-detail-check", function (e) {
+    //    dateStart = $('#dateStart').val();
+    //    dateEnd =  $('#dateEnd').val();
+    //    $.ajax({
+    //        url: '/GoldShop/ajaxGetGoldLogs',
+    //        type: 'post',
+    //        dataType: 'html',
+    //        data: {
+    //            sTime: dateStart,
+    //            eTime: dateEnd
+    //        },
+    //        success : function(result){
+    //            if (result.substr(0, 4) == 'http' || result.substr(0, 1) == '/') {
+    //                window.location.href = result;
+    //                return;
+    //            }
+    //            $('.gold-detail-block-change').html(result);
+    //        }
+    //    })
+    //})
 
 //鼠标移到目标卡片交互
     $body.on({
