@@ -76,6 +76,7 @@ $(function  () {
         examTable();
     });
     testLive();
+    liveHelp();
 })
 // 更多服务
 function moreService (){
