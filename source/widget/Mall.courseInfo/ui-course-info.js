@@ -166,9 +166,9 @@ $(function(){
                                 xhrFields:{withCredentials:true},
                                 crossDomain:true,
                                 success:function (result) {
+                                       $(result).appendTo('#miniCart-body');
                                      var _num = $('.minicart-footer .minicart-total').data('num');
                                        $('small.minicart-total').text(_num - 1);
-                                       $(result).appendTo('#miniCart-body');
                                 },
                                 error : function() {
                                     alert('数据加载失败！');
