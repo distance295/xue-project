@@ -157,8 +157,7 @@ $(function(){
                         if(result.sign == 1){
                              var num = Number($('small.minicart-total').text());
                              $('small.minicart-total').text(num + 1 );
-                            console.log(typeof(num));
-                            console.log(num);
+                             $('#miniCart-body').empty();
                              $.ajax({
                                 url: miniUrl +'/ShoppingCart/ajaxGetCartList/',
                                 type: 'POST',
@@ -173,6 +172,9 @@ $(function(){
                                     alert('数据加载失败！');
                                 }
                              }); 
+                        }
+                        if(result.sign == 2){
+                           window.location.href = result.url;
                         }
                     },
                     error : function() {
