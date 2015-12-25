@@ -232,8 +232,15 @@
 @wordColor: rgb(191,
 191,
 191);
-.center-left-m {
-    margin-left: 30px;
+.center-left-w {
+    float: left;
+    width: 930px;
+    margin-right: 10px;
+}
+
+.center-right {
+    width: 250px;
+    float: left;
 }
 
 .teacher-self-intro {
@@ -295,7 +302,7 @@
     .center-info-fans-office {
         display: inline-block;
         margin: 8px 0 8px 8px;
-        width: 120px;
+        width: 115px;
         border-right: 1px solid rgb(217, 217, 217);
         text-align: center;
         .center-info-fans-office-num {
@@ -308,7 +315,7 @@
     .center-info-newThing-office {
         display: inline-block;
         margin: 8px 8px 8px 0;
-        width: 120px;
+        width: 115px;
         text-align: center;
         .center-info-newThing-office-num {
             width: 115px;
@@ -335,7 +342,7 @@
 }
 
 .verify-up-right {
-    width: 135px;
+    width: 130px;
     height: 27px;
     line-height: 27px;
     text-align: center;
@@ -424,6 +431,13 @@
 
 /* 个人中心 最近访问 center-visit start */
 
+.centerHeader-office-background {
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
 .center-visit {
     margin-top: 20px;
     .center-left;
@@ -439,7 +453,7 @@
         display: inline-block;
         padding: 15px 0 10px;
         height: 110px;
-        width: 84px;
+        width: 79px;
         cursor: pointer;
         .center-visit-header {
             width: 40px;
@@ -502,14 +516,20 @@
         font-size: 14px;
     }
     .flower1 {
+        width: 80px;
+        overflow: hidden;
         padding-left: 25px;
         background: url("img/flower1.png") no-repeat 0 10px;
     }
     .flower2 {
+        width: 80px;
+        overflow: hidden;
         padding-left: 20px;
         background: url("img/flower2.png") no-repeat 0 10px;
     }
     .flower3 {
+        width: 80px;
+        overflow: hidden;
         padding-left: 20px;
         background: url("img/flower3.png") no-repeat 0 15px;
     }
@@ -517,6 +537,12 @@
         float: left;
         color: #ff3333;
         font-size: 12px;
+    }
+    .rank-info-right {
+        color: #999999;
+        float: left;
+        height: 50px;
+        overflow: hidden;
     }
 }
 
@@ -580,32 +606,41 @@
             display: inline-block;
             font-size: 12px;
             color: rgb(166, 163, 163);
+            .send_flower {
+                height: 65px;
+                line-height: 65px;
+                float: left;
+                overflow: hidden;
+            }
             .send-flower1 {
                 margin-left: 18px;
                 font-size: 14px;
-                //width: 100px;
+                width: 110px;
                 padding-right: 50px;
                 color: rgb(51, 51, 51);
                 display: inline-block;
                 padding-left: 25px;
+                overflow: hidden;
                 background: url("img/flower1.png") no-repeat 0 18px;
             }
             .send-flower2 {
                 font-size: 14px;
-                //width: 100px;
+                width: 110px;
                 padding-right: 50px;
                 display: inline-block;
                 color: rgb(51, 51, 51);
                 padding-left: 20px;
+                overflow: hidden;
                 background: url("img/flower2.png") no-repeat 0 18px;
             }
             .send-flower3 {
                 font-size: 14px;
-                //width: 100px;
+                width: 110px;
                 padding-right: 50px;
                 display: inline-block;
                 color: rgb(51, 51, 51);
                 padding-left: 20px;
+                overflow: hidden;
                 background: url("img/flower3.png") no-repeat 0 22px;
             }
         }
@@ -613,9 +648,10 @@
             font-size: 12px;
             color: #666;
             float: right;
-            //width: 130px;
-            padding-right: 40px;
+            width: 140px;
+            padding-right: 30px;
             height: 65px;
+            overflow: hidden;
         }
     }
 }
@@ -665,7 +701,7 @@
             }
             &.current {
                 a {
-                    border-bottom: 2px solid #e74c3c;
+                    border-bottom: 2px solid #1e89e0;
                 }
             }
         }
@@ -766,7 +802,7 @@
 .center-teacher-report {
     background-color: white;
     .border-radius(2px);
-    .glory-content:nth-child(3n+1) {
-        margin-right: 0;
+    .glory-content {
+        margin: 15px 10px 0;
     }
 }
