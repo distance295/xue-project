@@ -120,15 +120,9 @@ miniCart.shopCart = function(e){
 								crossDomain:true,
 								success:function (result) {
 									   $(result).appendTo('#miniCart-body');
-								},
-								error : function() {
-									alert('数据加载失败！');
 								}
 							 }); 
                         }
-                    },
-                    error : function() {
-                        alert('数据加载失败！');
                     }
                  });    
     }
