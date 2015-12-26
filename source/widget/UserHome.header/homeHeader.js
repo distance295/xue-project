@@ -27,7 +27,7 @@ function showStudPrize(dom) {
 }
 
 /* 鼠标移入，勋章展现 */
-$('ul.user-medal.list-inline li img[data-target$="hidediv_"]').on('mouseenter', function () {
+$('ul.user-medal.list-inline li img[data-target*="hidediv_"]').on('mouseenter', function () {
     var that = this;
     var dom = $(that);
     showStudPrize(dom);
