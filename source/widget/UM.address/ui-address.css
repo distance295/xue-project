@@ -58,8 +58,20 @@
   line-height: 40px;
 }
 .ui_ship_addr ul.shipadd_list li .addr_detail span {
-  display: inline-block;
+  float: left;
+  display: inline;
+  height: 40px;
   padding-left: 20px;
+  overflow: hidden;
+}
+.ui_ship_addr ul.shipadd_list li .addr_detail span.addr_name {
+  width: 100px;
+}
+.ui_ship_addr ul.shipadd_list li .addr_detail span.addr_info {
+  width: 300px;
+}
+.ui_ship_addr ul.shipadd_list li .addr_detail span.default_addr {
+  margin-top: 8px;
 }
 .ui_ship_addr ul.shipadd_list li .addr_detail .default_addr {
   display: inline-block;
