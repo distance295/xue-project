@@ -24,17 +24,17 @@
             <ul class="user-medal list-inline">
                 <li class="medal-1">
                     <a href="" title="网校学生证">
-                        <img src="http://img04.xesimg.com/icon/a/s_1.png" alt=""  data-target="hidediv_1">
+                        <img src="img/a/as_1.png" alt=""  data-target="hidediv_1">
                     </a>
                 </li>
                 <li class="medal-2">
                     <a href="" title="学习课程超过10节即可激活勋章">
-                        <img src="http://img04.xesimg.com/icon/b/s_0.png" alt=""  data-target="hidediv_2">
+                        <img src="img/b/bs_0.png" alt=""  data-target="hidediv_2">
                     </a>
                 </li>
                 <li class="medal-3">
                     <a href="" title="做10道课程测试题即可激活勋章">
-                        <img src="http://img04.xesimg.com/icon/d/s_0.png" alt="" data-target="hidediv_3">
+                        <img src="img/d/ds_0.png" alt="" data-target="hidediv_3">
                     </a>
                 </li>
 
@@ -65,7 +65,7 @@
         <div class="pop_student_medal">
             <div class="student_medal_con">
                 <div class="ui_medal_pic">
-                    <img src="http://img04.xesimg.com/icon/a/l_3.png">
+                    <img src="img/a/al_3.png">
                 </div>
                 <div class="medal_con">
                     <p class="name">网校学生证</p>
@@ -83,7 +83,7 @@
         <div class="pop_student_medal">
             <div class="student_medal_con">
                 <div class="ui_medal_pic">
-                    <img src="http://img04.xesimg.com/icon/b/l_7.png">
+                    <img src="img/b/bl_7.png">
                 </div>
                 <div class="medal_con">
                     <p class="name">学习达人（<strong>7级</strong>）</p>
@@ -109,7 +109,7 @@
         <div class="pop_student_medal">
             <div class="student_medal_con">
                 <div class="ui_medal_pic">
-                    <img src="http://img04.xesimg.com/icon/d/l_4.png">
+                    <img src="img/d/dl_4.png">
                 </div>
                 <div class="medal_con">
                     <p class="name">做题达人（<strong>4级</strong>）</p>
