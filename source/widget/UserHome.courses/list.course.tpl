@@ -11,7 +11,7 @@
     <div class="courseList">
         <div class="study-report">
             <div class="progress-show">
-                <div class="processingbar"><font>10%</font></div>    
+                <div class="processingbar"><font>10%</font><div class="processingbar_bg"></div></div>    
             </div>
             <p>本课程共<span>50</span>次直播</p>
             <p>你已参加<span>10</span>次</p>
@@ -91,7 +91,7 @@
     <div class="courseList">
         <div class="study-report">
             <div class="progress-show">
-                <div class="processingbar"><font>30%</font></div>    
+                <div class="processingbar"><font>30%</font><div class="processingbar_bg"></div></div>    
             </div>
             <p>本课程共<span>50</span>次直播</p>
             <p>你已参加<span>10</span>次</p>
@@ -169,7 +169,7 @@
     <div class="courseList">
         <div class="study-report">
             <div class="progress-show">
-                <div class="processingbar"><font>60%</font></div>    
+                <div class="processingbar"><font>60%</font><div class="processingbar_bg"></div></div>    
             </div>
             <p>本课程共<span>50</span>次直播</p>
             <p>你已参加<span>10</span>次</p>
@@ -239,7 +239,7 @@
     <div class="courseList">
         <div class="study-report">
             <div class="progress-show">
-                <div class="processingbar"><font>10%</font></div>    
+                <div class="processingbar"><font>10%</font><div class="processingbar_bg"></div></div>    
             </div>
             <p>本课程共<span>50</span>次直播</p>
             <p>你已参加<span>10</span>次</p>
@@ -308,7 +308,7 @@
     <div class="courseList courseList-record">
         <div class="study-report">
             <div class="progress-show">
-                <div class="processingbar"><font>80%</font></div>    
+                <div class="processingbar"><font>80%</font><div class="processingbar_bg"></div></div>    
             </div>
             <p>本课程共<span>50</span>节</p>
             <p>你已学习<span>10</span>节</p>
