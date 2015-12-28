@@ -50,6 +50,7 @@ function delayDate(){
                     id : 'delayDate',
                     title : '延期课程',
                     cls : 'delayDate',
+                    width: 530,
                     content : result
                 });
                 $('#delayDate').modal('show')
