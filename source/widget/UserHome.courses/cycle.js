@@ -8,7 +8,7 @@
 			R: 30,
 			sW: 20,
 			color: ["#000", "#000"],
-			perent: [100, 100],
+			perent: [113, 113],
 			speed: 0,
 			delay: 1000
 		}, i);
@@ -53,7 +53,7 @@
 				stroke: "#eeeeee",
 				"stroke-width": i.sW
 			}).attr({
-				arc: [100, 100, R]
+				arc: [113, 113, R]
 			});
 			var g = r.path().attr({
 				stroke: "#f36767",
@@ -66,7 +66,7 @@
 				setTimeout(function() {
 					g.animate({
 						stroke: i.color[1],
-						arc: [i.perent[1], 100, R]
+						arc: [i.perent[1], 113, R]
 					}, 900, ">")
 				}, i.delay)
 			} else {
@@ -94,11 +94,11 @@ function progressBar(){
 				if ($(this).find("font").text() !== "0%") {
 					$(this).svgCircle({
 						parent: $(this)[0],
-						w: 100,
+						w: 113,
 						R: 46,
 						sW: 3,
 						color: ["#5abdeb", "#5abdeb", "#5abdeb"],
-						perent: [100, a],
+						perent: [113, a],
 						speed: 150,
 						delay: 400
 					})
@@ -107,11 +107,11 @@ function progressBar(){
 					$(this).find("font").css("color", "#a9a9a9");
 					$(this).svgCircle({
 						parent: $(this)[0],
-						w: 100,
+						w: 113,
 						R: 46,
 						sW: 3,
 						color: ["#d1d1d1", "#d1d1d1", "#d1d1d1"],
-						perent: [100, a],
+						perent: [113, a],
 						speed: 150,
 						delay: 400
 					})
@@ -141,8 +141,8 @@ var pie = {
 					i = i + f;
 					if (i <= rage) {
 						ctx.beginPath();
-						ctx.moveTo(100, 100);
-						ctx.arc(100, 100, 100, h, Math.PI * 2 * (i / 360) + h);
+						ctx.moveTo(113, 113);
+						ctx.arc(113, 113, 113, h, Math.PI * 2 * (i / 360) + h);
 						ctx.fill();
 						setTimeout(j, g)
 					} else {
