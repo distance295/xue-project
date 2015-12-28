@@ -114,7 +114,7 @@ $.fn.nickname = function(){
         if(reg.test(val)){
             $.fn.nicknameajax();
         }else{
-            block.html('只能输入汉字和字母');
+            block.html('请输入汉字、数字、字母');
             box.parents('.f1').removeClass('has-success').addClass('has-error');
             return false;
         }
@@ -184,12 +184,15 @@ $.fn.sex = function(){
     var n = $(".sex-tip input:checked").length;
     // alert(n)
     if(n == 0){
+        $('.sex-tip').parents('.f1').addClass('has-error');
         $('.sex-tip .errTips').html('请选择性别');
     }else{
         $('.sex-tip .errTips').html('')
+        $('.sex-tip').parents('.f1').addClass('has-success').removeClass('has-error');
     }
     $('.sex-tip input').on('click', function(){
        $('.sex-tip .errTips').html('');
+       $('.sex-tip').parents('.f1').addClass('has-success').removeClass('has-error');
    });
 };
 //验证地区是否选中
@@ -199,10 +202,10 @@ $.fn.areaprovince = function() {
     var text = box.siblings('.area-tips').children('.errTips');
     if (val == '') {
         text.html('请选择所在地');
-        box.addClass('has-error').removeClass('has-success');
+        box.parents('.f1').addClass('has-error').removeClass('has-success');
     } else {
         text.html('');
-        box.removeClass('has-error').addClass('has-success');
+        box.parents('.f1').removeClass('has-error').addClass('has-success');
     }
     return this;
 };
@@ -212,10 +215,10 @@ $.fn.areacity = function() {
     var text = box.siblings('.area-tips').children('.errTips');
     if (val == '') {
         text.html('请选择所在地');
-        box.addClass('has-error').removeClass('has-success');
+        box.parents('.f1').addClass('has-error').removeClass('has-success');
     } else {
         text.html('');
-        box.removeClass('has-error').addClass('has-success');
+        box.parents('.f1').removeClass('has-error').addClass('has-success');
     }
     return this;
 };
@@ -226,10 +229,10 @@ $.fn.areacountry = function() {
     var text = box.siblings('.area-tips').children('.errTips');
     if (val == '') {
         text.html('请选择所在地');
-        box.addClass('has-error').removeClass('has-success');
+        box.parents('.f1').addClass('has-error').removeClass('has-success');
     } else {
         text.html('');
-        box.removeClass('has-error').addClass('has-success');
+        box.parents('.f1').removeClass('has-error').addClass('has-success');
         boxAddcity.removeClass('has-error').addClass('has-success');
     }
     return this;
@@ -244,45 +247,46 @@ $('body').on('blur', boxs.addcountry, function() {
     $.fn.areacountry();
 });
 // 完善信息提交
-// $('.setting-infor').off('click', '#inforSubmit').on('click', '#inforSubmit', function() {
-//     var error = $('.setting-infor').find('.has-error');
-//     $.fn.nickname();
-//     $.fn.realname();
-//     $.fn.sex();
-//     $.fn.areaprovince();
-//     $.fn.areacity();
-//     $.fn.areacountry();
-//     if (error.length > 0) {
-//         return false;
-//     } else {
-//         $.ajax({
-//             url : '',
-//             type: 'POST',
-//             dataType: "json",
-//             data: 'nickname=' + $('#nickname').val() + 'realname=' + $('#realname').val(),
-//             timeout: 7000,
-//             beforeSend: function(){
+$('.setting-infor').off('click', '#inforSubmit').on('click', '#inforSubmit', function() {
 
-//             },
-//             success:function(d){
-//                 var tp = d.sign,
-//                 msg = d.msg;
-//                 if (tp == 0) {
+    $.fn.nickname();
+    $.fn.realname();
+    $.fn.sex();
+    $.fn.areaprovince();
+    $.fn.areacity();
+    $.fn.areacountry();
+    var error = $('.has-error');
+    if (error.length > 0) {
+        return false;
+    } else {
+        $.ajax({
+            url : '',
+            type: 'POST',
+            dataType: "json",
+            data: 'nickname=' + $('#nickname').val() + 'realname=' + $('#realname').val(),
+            timeout: 7000,
+            beforeSend: function(){
 
-//                     return false;
-//                 } else if (tp == -1) {
+            },
+            success:function(d){
+                var tp = d.sign,
+                msg = d.msg;
+                if (tp == 0) {
 
-//                     return false;
-//                 } else {
-//                     window.location.href = '/Reg/regSuccess';
-//                 }
-//             },
-//             complete: function () {
+                    return false;
+                } else if (tp == -1) {
 
-//             },
-//             error: function(){
+                    return false;
+                } else {
+                    window.location.href = '/Reg/regSuccess';
+                }
+            },
+            complete: function () {
 
-//             }
-//         });
-//     }
-// });
+            },
+            error: function(){
+
+            }
+        });
+    }
+});
