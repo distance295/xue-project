@@ -96,7 +96,13 @@
   margin: 0 auto;
 }
 #module-topbar .ui-header-menu .topleft-bar {
-  width: 350px;
+  width: 450px;
+}
+#module-topbar .ui-header-menu .topleft-bar li:nth-child(1) em.text-danger {
+  max-width: 270px;
+  height: 30px;
+  overflow: hidden;
+  float: left;
 }
 #module-topbar .ui-header-menu .topright-bar {
   width: 730px;

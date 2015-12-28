@@ -2,6 +2,7 @@
    错题本展示：
     @require error_question.less
     @require ../Module.Modal/modal.js
+    @require ../Module.Modal/modal.less
     @require ../Module.Pagination/paginations.js
 -->
 <div class="que-num" data-num="15">
