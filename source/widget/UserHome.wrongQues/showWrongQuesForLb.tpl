@@ -3,6 +3,7 @@
     @require error_question.less
     @require error_question.js
     @require ../Module.Modal/modal.js
+    @require ../Module.Modal/modal.less
 -->
 <div class="que">
     <div class="que-head clearfix">
