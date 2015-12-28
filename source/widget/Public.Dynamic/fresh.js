@@ -721,8 +721,8 @@ fresh.comment = fresh.comment || {};
      */
     fc.changeVerificationImg = function(imgId){
         $.ajax({
-            url: fresh.path.url + 'ajaxGetVerCode.json',
-            type: 'get',
+            url: fresh.path.url + 'ajaxGetVerCode',
+            type: 'post',
             dataType: 'json',
             success  : function(data){
                 if(data.sign == 1){
