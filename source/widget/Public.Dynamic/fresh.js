@@ -1227,6 +1227,7 @@ fresh.send = fresh.send || {};
                id:'fresh-sendInfo-box',
                cls:'fresh-send-box-modal-dialog',
                title:'发新鲜事',
+               width:800,
                content:_sendBox
         });
 
