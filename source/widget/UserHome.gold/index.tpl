@@ -5,7 +5,6 @@
     @require ../../static/css/ui.calendar.css
     @require ../../static/js/xue.ui.calendar.js
     @require gold.js
-    @require ../Module.Modal/Modal.less
     @require ../Module.Modal/Modal.js
     @require gold-address.less
     @require ../Module.Pagination/paginations.js
