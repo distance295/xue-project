@@ -1,29 +1,27 @@
 
 $(function(){
-    var success_arr = [
-        'baoming_success',
-        'number_full',
-        'yuyue_success'
-    ];
-
-    var hide_arr = [
-        'baoming_nostart',
-        'baoming_over',
-        'yuyue_nostart',
-        'yuyue_over'
-    ];
-    var pattern = /button\/(.*?)\.png/g;
-    var imgSrc = $('.applyinfo a img').attr('src');
-    var imgName = pattern.exec(imgSrc)[1];
-    //alert(imgName);
-
-    if ($.inArray(imgName, hide_arr) != -1) {
-        $('.settime .baoming_detail').remove();
-    }
-    if ($.inArray(imgName, hide_arr) != -1 || $.inArray(imgName, success_arr) != -1) {
-        $('.applyinfo a').addClass('failapply');
-    }
     $('.applyinfo a').on('click', function() {
+         var success_arr = [
+            'baoming_success',
+            'number_full',
+            'yuyue_success'
+        ];
+
+        var hide_arr = [
+            'baoming_nostart',
+            'baoming_over',
+            'yuyue_nostart',
+            'yuyue_over'
+        ];
+        var pattern = /button\/(.*?)\.png/g;
+        var imgSrc = $('.applyinfo a img').attr('src');
+        var imgName = pattern.exec(imgSrc)[1];
+        if ($.inArray(imgName, hide_arr) != -1) {
+            $('.settime .baoming_detail').remove();
+        }
+        if ($.inArray(imgName, hide_arr) != -1 || $.inArray(imgName, success_arr) != -1) {
+            $('.applyinfo a').addClass('failapply');
+        }
         if ($.inArray(imgName, hide_arr) != -1 || $.inArray(imgName, success_arr) != -1) {
             return false;
         }
@@ -93,7 +91,7 @@ $(function(){
         }
     })
 
-    updateEndTime();
+   // updateEndTime();
 });
 
 function updateEndTime(){

@@ -63,23 +63,25 @@ $.ajaxSetup({
 }); 
 
 var miniCart = miniCart || {};
+var miniUrl = $('#myCartUrl').attr('href');
 //头部购物车显示隐藏
 miniCart.shopCart = function(e){
     var that = $(e);
-    var _html = that.find('.dropdown-body').html();
+    var _html = that.find('#miniCart-body').html();
     if(_html !== ''){
         that.addClass('hover');
         return false;
     }else{
+       var url = miniUrl + '/ShoppingCart/ajaxGetCartList/';
        $.ajax({
-	         	url: 'http://cart.wx4.0.com/ShoppingCart/ajaxGetCartList/',
+	         	url: url,
 	         	type: 'POST',
 	         	dataType: 'html',
 				xhrFields:{withCredentials:true},
 				crossDomain:true,
 	         	success:function (result) {
                        that.addClass('hover');
-                       $(result).appendTo('.dropdown-body');
+                       $(result).appendTo('#miniCart-body');
 	         	},
 	         	error : function() {
 	         		alert('数据加载失败！');
@@ -87,7 +89,7 @@ miniCart.shopCart = function(e){
 	         }); 
     }
    //鼠标移出
-	$('.ui-dropdown-miniCart').on('mouseleave',function(event) {
+	$('body').on('mouseleave','.ui-dropdown-miniCart',function(event) {
 		$(this).removeClass('hover');
 	});
 };
@@ -96,8 +98,9 @@ miniCart.shopCart = function(e){
         var that= $(e),
                 _id = that.data('id'),
                 _num = $('.minicart-footer .minicart-total').data('num');
+        var url = miniUrl + '/ShoppingCart/delCart/';
                 $.ajax({
-                    url: 'http://cart.wx4.0.com/ShoppingCart/delCart/',
+                    url: url,
                     type: 'get',
                     dataType: 'jsonp',
                     data: {id:_id},
@@ -110,22 +113,16 @@ miniCart.shopCart = function(e){
                             $('small.minicart-total').text(_num - 1);
 							$('.dropdown-body').empty();
 							$.ajax({
-								url: 'http://cart.wx4.0.com/ShoppingCart/ajaxGetCartList/',
+								url: miniUrl + '/ShoppingCart/ajaxGetCartList/',
 								type: 'POST',
 								dataType: 'html',
 								xhrFields:{withCredentials:true},
 								crossDomain:true,
 								success:function (result) {
-									   $(result).appendTo('.dropdown-body');
-								},
-								error : function() {
-									alert('数据加载失败！');
+									   $(result).appendTo('#miniCart-body');
 								}
 							 }); 
                         }
-                    },
-                    error : function() {
-                        alert('数据加载失败！');
                     }
                  });    
     }

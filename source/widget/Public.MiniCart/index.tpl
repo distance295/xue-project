@@ -7,7 +7,7 @@
 <div id="module-minicart" class="pull-right ui-dropdown-miniCart">
     <div class="dropdown-handle btn btn-default">
         <i class="fa fa-shopping-cart pull-left"></i>
-        <a href="#" target="_blank">我的购物车</a>
+        <a href="http://cart.wx4.0.com" target="_blank" id="myCartUrl">我的购物车</a>
         <i class="fa fa-angle-right pull-right"></i>
         <small class="minicart-total badge small">2</small>
     </div>

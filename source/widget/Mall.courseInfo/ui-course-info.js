@@ -147,38 +147,34 @@ $(function(){
     $('body').on('click','.button_shop-cart',function(){
         var that = $(this),
             _id = that.data('id'),
-            _url = 'http://cart.wx4.0.com/ShoppingCart/addCart/';
-        var _html = $('.ui-dropdown-miniCart .dropdown-body').html();
-            if(_html !== ''){
-                return false;
-            }else{
+            _url = miniUrl +'/ShoppingCart/addCart/'+ _id;
              $.ajax({
                     url: _url,
-                    type: 'POST',
-                    dataType: 'json',
-                    data: {id:_id},
+                    type: 'GET',
+                    dataType: 'jsonp',                
+                    jsonp:'jsonpCallback',                   
                     success:function (result) {
                         if(result.sign == 1){
+                             var num = Number($('small.minicart-total').text());
+                             $('small.minicart-total').text(num + 1 );
+                             $('#miniCart-body').empty();
                              $.ajax({
-                                url: 'http://cart.wx4.0.com/ShoppingCart/ajaxGetCartList/',
+                                url: miniUrl +'/ShoppingCart/ajaxGetCartList/',
                                 type: 'POST',
                                 dataType: 'html',
                                 xhrFields:{withCredentials:true},
                                 crossDomain:true,
                                 success:function (result) {
-                                       $(result).appendTo('.dropdown-body');
-                                },
-                                error : function() {
-                                    alert('数据加载失败！');
+                                       $(result).appendTo('#miniCart-body');
+                                    
                                 }
                              }); 
                         }
-                    },
-                    error : function() {
-                        alert('数据加载失败！');
+                        if(result.sign == 2){
+                           window.location.href = result.url;
+                        }
                     }
                  }); 
-            }
     });
 })
 

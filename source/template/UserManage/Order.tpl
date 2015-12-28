@@ -38,16 +38,13 @@
         size: 5, // 每页显示记录数
         index : 1, // 当前页
         // 点击分页时的回调，返回被点击的页数
-        click : function orderTab(ordertype,index){
+        click : function(ordertype,index){
             $.ajax({
                 type: "get",
                 url: "/MyOrders/ajaxOrderList",
                 dataType: "html",
                 data:'type=' + ordertype + '&curpage=' + index, 
                 success: function(list){
-                    if(list.sign === 2){
-                        window.location.href = list.msg;
-                    }
                     var box = $('#page_list');
                     box.html(list);
                 },

@@ -2,6 +2,7 @@
   @require personalCenter.less
   @require personalCenter.js
   @require ../Module.Modal/Modal.js
+  @require ../Module.Pagination/pagination.js
 -->
 
 <div class="centerHeader-teacher-background">
