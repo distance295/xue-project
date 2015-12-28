@@ -3,7 +3,6 @@
     @require coursestudycenter.js
     @require cycle.js
     @require raphael.js
-    @require ../Module.Modal/Modal.less
     @require ../Module.Modal/Modal.js
     @require coursestudycenter.less   
     @require ../Module.Pagination/paginations.js    
