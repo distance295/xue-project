@@ -427,4 +427,6 @@ $('body').on('click', '.answer a', function () {
 //        cls: 'testAnswer'
 //    });
 //    $('#chapterTestStart').modal('show');
+//     
+//
 //}
