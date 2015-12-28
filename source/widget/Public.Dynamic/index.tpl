@@ -1,5 +1,6 @@
 <!--
     @require fresh.less
+    @require ../Module.Modal/modal.less
     @require ../Module.popover/xue.popover.js
     @require ../Module.Modal/Modal.js
     @require ../Module.Pagination/paginations.js
@@ -19,7 +20,7 @@
        <div class="fresh-text">
           <div class="fresh-myname">
              <a href="###"  target="_blank" class="pull-left">顾斐</a>
-             <i class="fresh-v fresh-v-yellow" class="pull-left"></i>
+             <i class="fresh-v fresh-v-yellow"></i>
           </div>
           <div class="fresh-info">
             亲爱的孩子们，昨天的小新电台——《五月的草场》有没有收听呢？那么今天出一个小题目——草原上的人用什么办法消灭蝗虫呢？随机奖励正确的<img title="挤眼" src="http://img04.xesimg.com/icon/emoji/em_4.png" alt="">五个答案~~加油哦！<img title="出拳" src="http://img04.xesimg.com/icon/emoji/em_46.png" alt="">收听地址： <a href="http://t.xueersi.com/7boW01nx" target="_blank">http://t.xueersi.com/7boW01nx</a>
