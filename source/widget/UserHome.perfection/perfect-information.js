@@ -138,7 +138,7 @@ $.fn.nicknameajax = function(){
             data: 'nickname=' + $('#nickname').val(),
             success  : function(result){
                 if(result.sign == false){
-                    block.html('昵称与其他用户重复，请重新设置');
+                    block.html(result.msg);
                     box.parents('.f1').removeClass('has-success').addClass('has-error');
                     return false;
                 } else {
