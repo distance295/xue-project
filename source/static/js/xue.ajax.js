@@ -13,6 +13,7 @@ xue.ajaxCheck.html = function( str ){
     }
     var str = $.trim(str);
     if(str.substr(0,1)=='<'){
+//        alert(str);
         return str;
     }else if(str.substr(0,4)=='http' || str.substr(0,1)=='/'){
         window.location.href = str;

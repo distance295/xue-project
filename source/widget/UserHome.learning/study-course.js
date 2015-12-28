@@ -355,76 +355,78 @@ $('body').on('click', '.answer a', function () {
 });
 
 /* 提交讲测评选项 */
-study.submitAnswers = function  (wrap) {
-    var answers = study.getAnswers(wrap);
-    if (answers.isall) {
-        /* 在这里调用ajax方法,将返回的html放入弹出层就好 */
-        alert('调用后台接口，判断是否正确');
-        
-        var result =   '<div class="class_answer class_test"><div class="class_test_sum"><span>测试结果：答对0题 ， 答错6题。要继续努力啊！</span><ul class="test_more"><li><a href="http://www.xueersi.com/MyCourses/courseStudy/20508-55173-158357/8fcbe725a1c6413a7c66a83bfa76ea34">重学本讲</a></li><li><a href="/LearningCenter/wrongQuestion" target="_blank">去错题本</a></li></ul></div><div class="wrong_list_new"><p class="wrong_list_title">题号：1</p><p><img src="http://x02.xesimg.com/test/2014/04/01/PDF1396333751686/pdf_1.jpg"></p><div class="wrong_list_anwser"><p class="wrong_list_anwser"><span>学员答案：<strong>C</strong></span></p><p><span>正确答案：<strong class="red"> B </strong></span></p></div><p class="wrong_list_knowledge">词汇类-词汇</p><p class="wrong_list_analysis"><img src="http://x02.xesimg.com/test/2014/04/01/PDF1396333751686/pdf_2.jpg"></p></div><div class="wrong_list_new"><p class="wrong_list_title">题号：2</p><p><img src="http://r01.xesimg.com/test/2014/04/01/PDF1396333751686/pdf_3.jpg"></p><div class="wrong_list_anwser"><p class="wrong_list_anwser"><span>学员答案：<strong>C</strong></span></p><p><span>正确答案：<strong class="red">B </strong></span></p></div><p class="wrong_list_knowledge">词汇类-词汇</p><p class="wrong_list_analysis"><img src="http://r03.xesimg.com/test/2014/04/01/PDF1396333751686/pdf_4.jpg"></p></div><div class="wrong_list_new"><p class="wrong_list_title">题号：6</p><p><img src="http://x04.xesimg.com/test/2014/04/01/PDF1396333751686/pdf_11.jpg"></p><div class="wrong_list_anwser"><p class="wrong_list_anwser"><span>学员答案：<strong>C</strong></span></p><p><span>正确答案：<strong class="red"> B </strong> </span></p></div><p class="wrong_list_knowledge">词汇类-词汇</p><p class="wrong_list_analysis"> <img src="http://s02.xesimg.com/test/2014/04/01/PDF1396333751686/pdf_12.jpg"></p></div></div>';
-        $('#chapterTestStart').modal('hide');
-        createModal.show({
-            id: "chapterTestResult",
-            width: "848",
-            title: "本讲测试题",
-            content: result,
-            cls: 'testresult'
-        });
-        $('#chapterTestResult').modal('show');
-    } else {
-        alert('你有未完成的试题');
-    }
-
-}
-
-/* 弹出讲测评页面 */
- study.chapterTestStart = function () {
-    var con = '<div class="class_test">\
-    <div class="testcon">\
-      <p class="testcon_title">第1题(填空)</p>\
-      <img src="http://s01.xesimg.com/test/2015/03/02/PDF1425279224614/pdf_1.jpg" alt="">\
-      <p class="answer" data-id="147850" data-type="input">\
-        <span>\
-          <em>填写答案：</em>\
-          <input type="text" data-type="input">\
-        </span>\
-      </p>\
-    </div>\
-    <div class="testcon">\
-      <p class="testcon_title">第2题(单选)</p>\
-      <img src="http://r04.xesimg.com/test/2015/03/02/PDF1425279224614/pdf_3.jpg" alt="">\
-      <p class="answer" data-type="radio" data-id="147851">\
-        <span>\
-          <em>选择答案：</em>\
-          <a data-type="radio" data-value="1" href="###">A</a>\
-          <a data-type="radio" data-value="2" href="###">B</a>\
-          <a data-type="radio" data-value="4" href="###">C</a>\
-          <a data-type="radio" data-value="8" href="###">D</a>\
-        </span>\
-      </p>\
-    </div>\
-    <div class="testcon">\
-      <p class="testcon_title">第5题(多选)</p>\
-      <img src="http://r04.xesimg.com/test/2015/03/02/PDF1425279224614/pdf_9.jpg" alt="">\
-      <p class="answer" data-type="radio" data-id="147854">\
-        <span>\
-          <em>选择答案：</em>\
-          <a data-type="checkbox" data-value="1" href="###">A</a>\
-          <a data-type="checkbox" data-value="2" href="###">B</a>\
-          <a data-type="checkbox" data-value="4" href="###">C</a>\
-          <a data-type="checkbox" data-value="8" href="###">D</a>\
-        </span>\
-      </p>\
-    </div>\
-    <input type="hidden" id="type" value="0">\
-    <a href="###" class="btn btn_red btn_small" onclick="study.submitAnswers(\'.class_test\')">提交答案</a>\
-  </div>';
-    createModal.show({
-        id: "chapterTestStart",
-        width: "848",
-        title: "本讲测试题",
-        content: con,
-        cls: 'testAnswer'
-    });
-    $('#chapterTestStart').modal('show');
-}
+//study.submitAnswers = function  (wrap) {
+//    var answers = study.getAnswers(wrap);
+//    if (answers.isall) {
+//        /* 在这里调用ajax方法,将返回的html放入弹出层就好 */
+//        alert('调用后台接口，判断是否正确');
+//        
+//        var result =   '<div class="class_answer class_test"><div class="class_test_sum"><span>测试结果：答对0题 ， 答错6题。要继续努力啊！</span><ul class="test_more"><li><a href="http://www.xueersi.com/MyCourses/courseStudy/20508-55173-158357/8fcbe725a1c6413a7c66a83bfa76ea34">重学本讲</a></li><li><a href="/LearningCenter/wrongQuestion" target="_blank">去错题本</a></li></ul></div><div class="wrong_list_new"><p class="wrong_list_title">题号：1</p><p><img src="http://x02.xesimg.com/test/2014/04/01/PDF1396333751686/pdf_1.jpg"></p><div class="wrong_list_anwser"><p class="wrong_list_anwser"><span>学员答案：<strong>C</strong></span></p><p><span>正确答案：<strong class="red"> B </strong></span></p></div><p class="wrong_list_knowledge">词汇类-词汇</p><p class="wrong_list_analysis"><img src="http://x02.xesimg.com/test/2014/04/01/PDF1396333751686/pdf_2.jpg"></p></div><div class="wrong_list_new"><p class="wrong_list_title">题号：2</p><p><img src="http://r01.xesimg.com/test/2014/04/01/PDF1396333751686/pdf_3.jpg"></p><div class="wrong_list_anwser"><p class="wrong_list_anwser"><span>学员答案：<strong>C</strong></span></p><p><span>正确答案：<strong class="red">B </strong></span></p></div><p class="wrong_list_knowledge">词汇类-词汇</p><p class="wrong_list_analysis"><img src="http://r03.xesimg.com/test/2014/04/01/PDF1396333751686/pdf_4.jpg"></p></div><div class="wrong_list_new"><p class="wrong_list_title">题号：6</p><p><img src="http://x04.xesimg.com/test/2014/04/01/PDF1396333751686/pdf_11.jpg"></p><div class="wrong_list_anwser"><p class="wrong_list_anwser"><span>学员答案：<strong>C</strong></span></p><p><span>正确答案：<strong class="red"> B </strong> </span></p></div><p class="wrong_list_knowledge">词汇类-词汇</p><p class="wrong_list_analysis"> <img src="http://s02.xesimg.com/test/2014/04/01/PDF1396333751686/pdf_12.jpg"></p></div></div>';
+//        $('#chapterTestStart').modal('hide');
+//        createModal.show({
+//            id: "chapterTestResult",
+//            width: "848",
+//            title: "本讲测试题",
+//            content: result,
+//            cls: 'testresult'
+//        });
+//        $('#chapterTestResult').modal('show');
+//    } else {
+//        alert('你有未完成的试题');
+//    }
+//
+//}
+//
+///* 弹出讲测评页面 */
+// study.chapterTestStart = function () {
+//    var con = '<div class="class_test">\
+//    <div class="testcon">\
+//      <p class="testcon_title">第1题(填空)</p>\
+//      <img src="http://s01.xesimg.com/test/2015/03/02/PDF1425279224614/pdf_1.jpg" alt="">\
+//      <p class="answer" data-id="147850" data-type="input">\
+//        <span>\
+//          <em>填写答案：</em>\
+//          <input type="text" data-type="input">\
+//        </span>\
+//      </p>\
+//    </div>\
+//    <div class="testcon">\
+//      <p class="testcon_title">第2题(单选)</p>\
+//      <img src="http://r04.xesimg.com/test/2015/03/02/PDF1425279224614/pdf_3.jpg" alt="">\
+//      <p class="answer" data-type="radio" data-id="147851">\
+//        <span>\
+//          <em>选择答案：</em>\
+//          <a data-type="radio" data-value="1" href="###">A</a>\
+//          <a data-type="radio" data-value="2" href="###">B</a>\
+//          <a data-type="radio" data-value="4" href="###">C</a>\
+//          <a data-type="radio" data-value="8" href="###">D</a>\
+//        </span>\
+//      </p>\
+//    </div>\
+//    <div class="testcon">\
+//      <p class="testcon_title">第5题(多选)</p>\
+//      <img src="http://r04.xesimg.com/test/2015/03/02/PDF1425279224614/pdf_9.jpg" alt="">\
+//      <p class="answer" data-type="radio" data-id="147854">\
+//        <span>\
+//          <em>选择答案：</em>\
+//          <a data-type="checkbox" data-value="1" href="###">A</a>\
+//          <a data-type="checkbox" data-value="2" href="###">B</a>\
+//          <a data-type="checkbox" data-value="4" href="###">C</a>\
+//          <a data-type="checkbox" data-value="8" href="###">D</a>\
+//        </span>\
+//      </p>\
+//    </div>\
+//    <input type="hidden" id="type" value="0">\
+//    <a href="###" class="btn btn_red btn_small" onclick="study.submitAnswers(\'.class_test\')">提交答案</a>\
+//  </div>';
+//    createModal.show({
+//        id: "chapterTestStart",
+//        width: "848",
+//        title: "本讲测试题",
+//        content: con,
+//        cls: 'testAnswer'
+//    });
+//    $('#chapterTestStart').modal('show');
+//     
+//
+//}

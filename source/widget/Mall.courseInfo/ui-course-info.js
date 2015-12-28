@@ -167,18 +167,12 @@ $(function(){
                                 success:function (result) {
                                        $(result).appendTo('#miniCart-body');
                                     
-                                },
-                                error : function() {
-                                    alert('数据加载失败！');
                                 }
                              }); 
                         }
                         if(result.sign == 2){
                            window.location.href = result.url;
                         }
-                    },
-                    error : function() {
-                        alert('数据加载失败！');
                     }
                  }); 
     });
