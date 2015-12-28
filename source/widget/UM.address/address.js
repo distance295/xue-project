@@ -1,5 +1,5 @@
 //收货地址全部交互
-var addressInput = '#realname, #add_province, #add_city, #add_country, #address, #zipcode, #recipient_phone';
+var addressInput = '#realname, #add_province, #add_city, #add_country, #address, #zipcode, #recipientphone';
 //鼠标进入时增加样式
 $('#ui-setAddress').on('mouseenter', '.shipadd_list li', function(event) {
     var that = $(this);
@@ -57,7 +57,7 @@ function saveNewAddress(inputs) {
     data['city_text'] = $('#add_city option:checked').text();
     data['country_text'] = $('#add_country option:checked').text();
     var _tpl = '  <input type="hidden" ' 
-            + '      data-recipient_phone="$phone$" ' 
+            + '      data-recipientphone="$phone$" ' 
             + '      data-zipcode="$zipcode$" ' 
             + '      data-address="$address$" ' 
             + '      data-area="$province_text$ $city_text$ $country_text$" ' 
@@ -87,7 +87,7 @@ function saveNewAddress(inputs) {
         county: data.country,
         address: data.address,
         zipcode: data.zipcode,
-        phone: data.recipient_phone
+        phone: data.recipientphone
 
     };
     $.ajax({
@@ -103,7 +103,7 @@ function saveNewAddress(inputs) {
             var _id = result.addId;
             var tp = _tpl;
             tp = tp.replace(/\$id\$/g, _id);
-            tp = tp.replace(/\$phone\$/g, data.recipient_phone);
+            tp = tp.replace(/\$phone\$/g, data.recipientphone);
             tp = tp.replace(/\$zipcode\$/g, data.zipcode);
             tp = tp.replace(/\$address\$/g, data.address);
             tp = tp.replace(/\$country\$/g, data.country);
@@ -170,13 +170,13 @@ $('body').on('click', '#address_submit_btn', function() {
         country: '地区',
         address: '详细地址',
         zipcode: '邮政编码',
-        recipient_phone: '手机号码',
+        recipientphone: '手机号码',
         add_province: '省份',
         add_city: '城市',
         add_country: '地区'
     };
     var _reg = {
-        recipient_phone: (/^(13|15|18)[0-9]{9}$/.test($('#recipient_phone').val()) ? true : false),
+        recipientphone: (/^(13|15|18)[0-9]{9}$/.test($('#recipientphone').val()) ? true : false),
         zipcode: (/^[0-9][0-9]{5}$/.test($('#zipcode').val()) ? true : false)
     };
     //邮编
@@ -192,7 +192,7 @@ $('body').on('click', '#address_submit_btn', function() {
             $(this).addClass('error');
         } else {
             // 判断手机号与邮编格式
-            if (id == 'recipient_phone' || id == 'zipcode') {
+            if (id == 'recipientphone' || id == 'zipcode') {
                 if (!_reg[id]) {
                     error_reg.push(ids[id]);
                     reg_text += ids[id];
@@ -231,8 +231,9 @@ $('body').on('click', '#address_submit_btn', function() {
 // 新增收货人地址显示或隐藏 
 $('.newCreateAddress').on('click', function() {
     var newAddress = $('#details_form');
+    var number = Number($('#numberAddress').text());
     $(addressInput).val('');
-    if (newAddress.is(':hidden')) {
+    if (newAddress.is(':hidden') && number < 10) {
         newAddress.show();
     }
 });

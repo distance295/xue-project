@@ -8,8 +8,8 @@
     <div class="setAddress-title">
         <span class="btn btn-info newCreateAddress">新增收货地址</span>
         <span>
-            你已创建 <strong>5</strong>
-            个收货地址,最多可以创建 <strong>1000000</strong>
+            你已创建 <strong id="numberAddress">10</strong>
+            个收货地址,最多可以创建 <strong>10</strong>
             个
         </span>
     </div>
@@ -17,7 +17,7 @@
     <div class="ui_ship_addr">
         <ul class="shipadd_list">
             <li id="28126" class="">
-                <input type="hidden" autocomplete="off" id="addid_28126" name="data[addid]" value="28126" data-realname="崔俊叶" data-province="2" data-city="4" data-country="0" data-address="132" data-zipcode="100010" data-recipient_phone="13200000000" checked="">
+                <input type="hidden" autocomplete="off" id="addid_28126" name="data[addid]" value="28126" data-realname="崔俊叶" data-province="2" data-city="4" data-country="0" data-address="132" data-zipcode="100010" data-recipientphone="13200000000" checked="">
                 <div class="addr_detail">
                     <span title="崔俊叶" class="addr_name">崔俊叶</span>
                     <span title="北京 朝阳区 三环到四环之间 霞光里15号霄云中心B座10层1008" class="addr_info">北京 朝阳区 三环到四环之间 霞光里15号霄云中心B座10层10...</span>
@@ -30,7 +30,7 @@
                 </div>
             </li>
             <li class="" id="28127">
-                <input type="hidden" autocomplete="off" id="addid_28127" name="data[addid]" value="28127" data-realname="刘艳宾" data-province="2" data-city="4" data-country="0" data-address="132" data-zipcode="100010" data-recipient_phone="13200000000" checked="">
+                <input type="hidden" autocomplete="off" id="addid_28127" name="data[addid]" value="28127" data-realname="刘艳宾" data-province="2" data-city="4" data-country="0" data-address="132" data-zipcode="100010" data-recipientphone="13200000000" checked="">
                 <div class="addr_detail">
                     <span title="崔俊叶" class="addr_name">崔俊叶</span>
                     <span title="北京 朝阳区 三环到四环之间 霞光里15号霄云中心B座10层1008" class="addr_info">北京 朝阳区 三环到四环之间 霞光里15号霄云中心B座10层10...</span>
@@ -87,7 +87,7 @@
         <p>
             <label for="">手机号码</label>
             <span class="add-opt">
-                <input type="text" autocomplete="off" id="recipient_phone" name="recipient_phone" value=""></span>
+                <input type="text" autocomplete="off" id="recipientphone" name="recipientphone" value=""></span>
             <span class="text">用于接收发货通知短信和送货前通知</span>
         </p>
         <p>
