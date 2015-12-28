@@ -20,7 +20,7 @@
        <div class="fresh-text">
           <div class="fresh-myname">
              <a href="###"  target="_blank" class="pull-left">我</a>
-              <i class="fresh-v fresh-v-red" class="pull-left"></i>
+              <i class="fresh-v fresh-v-red"></i>
           </div>
           <span class="fresh-my-do">发布了新鲜事</span>
           <div class="fresh-info">

@@ -19,7 +19,7 @@
        <div class="fresh-text">
           <div class="fresh-myname">
              <a href="###"  target="_blank" class="pull-left">产品经理之殇</a>
-             <i class="fresh-v fresh-v-red" class="pull-left"></i>
+             <i class="fresh-v fresh-v-red"></i>
           </div>
           <div class="fresh-info">
             住校生和走读生。。 // @《游戏王》 就是走读生。。。 //<img title="出拳" src="http://img04.xesimg.com/icon/emoji/em_12.png" alt="">收听地址： <a href="###" target="_blank">@产品经理之殇</a>住校生和走读生。。 // @《游戏王》 就是走读生？

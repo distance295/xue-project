@@ -19,7 +19,7 @@
        <div class="fresh-text">
           <div class="fresh-myname">
              <a href="###"  target="_blank" class="pull-left">顾斐</a>
-             <i class="fresh-v fresh-v-blue" class="pull-left"></i>
+             <i class="fresh-v fresh-v-blue"></i>
           </div>
           <div class="fresh-course-fans">
              <span class="pull-left">
