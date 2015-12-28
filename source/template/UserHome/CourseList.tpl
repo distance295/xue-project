@@ -50,6 +50,7 @@ function delayDate(){
                     id : 'delayDate',
                     title : '延期课程',
                     cls : 'delayDate',
+                    width: 530,
                     content : result
                 });
                 $('#delayDate').modal('show')
@@ -110,6 +111,7 @@ function materialForm(){
                 id : 'materialForm',
                 title : '讲义资料',
                 cls : 'material-exam',
+                width: 770,
                 content : result
             });
                $('#materialForm').modal('show');
@@ -135,6 +137,7 @@ function examTable(){
                 id : 'examTable',
                 title : '本课考试',
                 cls : 'material-exam',
+                width: 770,
                 content : result
             });
                $('#examTable').modal('show')

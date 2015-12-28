@@ -176,6 +176,7 @@ var xue =xue || {};
       var val = box.val();
       if(val == ''){
           fCheck.setTips('#tips-phonecode', '短信验证码不能为空');
+          fCheck.param.cMessage = 0;
       }else{
           if(val.length == 6 && /^[1-9]\d*|0$/.test(Number(val))){
               /* 验证手机短信验证码 */    
@@ -206,25 +207,23 @@ var xue =xue || {};
           fCheck.setTips('#tips-phonecode',result.msg);
         }else{
           /* 短信发送成功提醒 */
-          //$('#tips-phonecode').css({'padding-left': '0', 'width': '300px', 'background': 'none', 'color':'#828282'});
-          //$('#tips-phonecode').text('由于运营商原因，手机短信可能会有延迟，请您耐心等待');
+          $('#tips-phonecode').removeClass('error').addClass('phonetext');
+          $('.phonetext').text('由于运营商原因，手机短信可能会有延迟，请您耐心等待');
           /* 操作按钮文本显示 */
           $(that).text("60秒后重新获取");
           var time = 60;
           that.timer = setInterval(function(){
-                if(time > 0){
-                  time--;
-                  $(that).text(time + '秒后重新获取');
-                }else{
-                  $(that).text('获取短信验证码');
-                  clearInterval(that.timer);
-                  that.timer = null;
-                  $(that).removeClass('btn_in_use');
-                  $(that).css({'background': '#3bafda'});
-                }
-              }, 1000);
-
-          $('#phonecode').focus().val('');
+            if(time > 0){
+              time--;
+              $(that).text(time + '秒后重新获取');
+            }else{
+              $(that).text('获取短信验证码');
+              clearInterval(that.timer);
+              that.timer = null;
+              $(that).removeClass('btn_in_use');
+              $(that).css({'background': '#3bafda'});
+            }
+          }, 1000);
         }
       },
       error: function () {
@@ -329,6 +328,7 @@ var xue =xue || {};
 
   /* 手机验证码输入框的操作 */
   $("#phonecode").on("focus",function(){
+    $('#tips-phonecode').removeClass('phonetext').addClass('error');
     $('.phonecode-tip,#tips-phonecode').hide();
   })
 
@@ -344,6 +344,7 @@ var xue =xue || {};
   $("#mpform_submit").on('click',function(e){
     var isError = fCheck.isError(e),
         phoneError = $(".phone-error span").is(":empty");
+    $('#tips-phonecode').removeClass('phonetext').addClass('error');
     if(isError || !phoneError){
       return false;
     }else{

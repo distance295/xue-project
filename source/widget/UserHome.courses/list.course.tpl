@@ -20,8 +20,10 @@
         <div class="courseList-body">
             <div class="left course-center">
                 <p class="course-title">
-                    <label class="course-label course-blue-label">直播</label>
-                    <a class="title-detail" href="##">【飞遍化学】炸开你的化学世界大门(第三季)&mdash;&mdash;大揭秘 </a>
+                    <span class="course-title-inner">
+                        <label class="course-label course-blue-label">直播</label>
+                        <a class="title-detail" href="##">【飞遍化学】炸开你的化学世界大门(第三季)&mdash;&mdash;大揭秘 </a>
+                    </span>
                     <a href="##" class="course_estimate">评论</a>
                 </p>
                 <p class="end-time">

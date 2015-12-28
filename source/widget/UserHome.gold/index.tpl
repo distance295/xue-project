@@ -74,7 +74,7 @@
     </ul>
 
     <!-- 魔法卡 -->
-    <div class="gold-store-card-box gold-store-block-change" style="display: block">
+    <div class="gold-store-card-box gold-store-block-change" style="display: block" >
         <div class="gold-store-card-box-over">
             <div class="gold-store-card" id="11">
                 <div class="gold-store-card-img-box">
