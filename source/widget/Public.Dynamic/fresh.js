@@ -569,6 +569,7 @@ fresh.comment = fresh.comment || {};
                     return false;
                 } else if( tp === 1 ) {
                     //关闭验证弹出层
+                    $('#fresh-dialog-verificationCode').modal('hide');
                     fc.param.form.val('');
                     fc.param.status.html('<span class="fresh-comment-success">发布成功</span>');
                     //获取信息列表
@@ -704,7 +705,7 @@ fresh.comment = fresh.comment || {};
                               return false;
                         }else{
                             fc.post(dom);
-                             $('#fresh-dialog-verificationCode').modal('hide');
+                            //$('#fresh-dialog-verificationCode').modal('hide');
                         }
 
                     })
@@ -721,8 +722,8 @@ fresh.comment = fresh.comment || {};
      */
     fc.changeVerificationImg = function(imgId){
         $.ajax({
-            url: fresh.path.url + 'ajaxGetVerCode.json',
-            type: 'get',
+            url: fresh.path.url + 'ajaxGetVerCode',
+            type: 'post',
             dataType: 'json',
             success  : function(data){
                 if(data.sign == 1){

@@ -65,11 +65,15 @@
                         float: left;
                         display: inline;
                         margin: 22px 10px 0 0;
+                        overflow: hidden;
+                        outline: none;
                     }
                     &.next {
                         float: left;
                         display: inline;
                         margin: 22px 0 0 10px;
+                        overflow: hidden;
+                        outline: none;
                     }
                     em.icon {
                         display: inline-block;
@@ -113,7 +117,7 @@
 		// 课程信息汇总----中间
 
 	.course-center-list {
-	   width: 590px;overflow: hidden;height: 400px;margin-left: 10px;
+	   width: 590px;overflow: hidden;margin-left: 10px;
 	   h2.coures-name-title {
 	   		line-height: 180%;font-size: 16px;overflow: hidden;padding-left: 10px;margin:10px 0;
 	   }
@@ -211,7 +215,7 @@
               }
                &.collect_current {background: url(img/icon_star_gray.png) 0 2px no-repeat;cursor: default;}
             }
-            .open-listen-num {
+            span.open-listen-num {
             	width: 70px;font-size: 18px;color: #e74c3c;background: url(img/icon_eye.png) 0 8px no-repeat;padding-left: 20px;margin-top:8px;
             }
 	   }
@@ -223,16 +227,18 @@
 				span.f-left {
 					 width: 75px;font-size: 12px;line-height: 25px; padding-left: 10px;padding-top:20px;
 				}
-                  
+                span.open-listen-num {
+                    width: 70px;font-size: 18px;padding-left: 20px;padding-top:0;
+                }
 			}
 			//免费课样式
 			.open-course-list {
-				height: 280px;background: #fcfcfc;margin-bottom: 20px;overflow: hidden;padding-left: 10px;
+				height: 260px;background: #fcfcfc;margin-bottom: 20px;overflow: hidden;padding-left: 10px;
 				.open-course-title {
 					height: 40px;line-height: 40px;font-size: 12px;padding-top: 10px;
 				}
 				#open-outline {
-					height: 240px;overflow: auto;
+					height: 200px;overflow: auto;
 					.coures-label-info {
 						height: 50px;line-height: 50px;font-size: 14px;
 						span {
