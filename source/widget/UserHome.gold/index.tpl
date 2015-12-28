@@ -5,7 +5,6 @@
     @require ../../static/css/ui.calendar.css
     @require ../../static/js/xue.ui.calendar.js
     @require gold.js
-    @require ../Module.Modal/Modal.less
     @require ../Module.Modal/Modal.js
     @require gold-address.less
     @require ../Module.Pagination/paginations.js
@@ -75,7 +74,7 @@
     </ul>
 
     <!-- 魔法卡 -->
-    <div class="gold-store-card-box gold-store-block-change" style="display: block">
+    <div class="gold-store-card-box gold-store-block-change" style="display: block" >
         <div class="gold-store-card-box-over">
             <div class="gold-store-card" id="11">
                 <div class="gold-store-card-img-box">
