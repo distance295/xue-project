@@ -94,8 +94,8 @@ function progressBar(){
 				if ($(this).find("font").text() !== "0%") {
 					$(this).svgCircle({
 						parent: $(this)[0],
-						w: 100,
-						R: 46,
+						w: 112,
+						R: 54,
 						sW: 3,
 						color: ["#5abdeb", "#5abdeb", "#5abdeb"],
 						perent: [100, a],
@@ -107,8 +107,8 @@ function progressBar(){
 					$(this).find("font").css("color", "#a9a9a9");
 					$(this).svgCircle({
 						parent: $(this)[0],
-						w: 100,
-						R: 46,
+						w: 112,
+						R: 54,
 						sW: 3,
 						color: ["#d1d1d1", "#d1d1d1", "#d1d1d1"],
 						perent: [100, a],
