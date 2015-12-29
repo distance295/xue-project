@@ -82,7 +82,7 @@ $.fn.nicknameajax = function(){
         async: true,
         success  : function(result){
             if(result.sign == false){
-                fCheck.setTips(".nickname-warning",'昵称与其他用户重复，请重新设置');
+                fCheck.setTips(".nickname-warning",result.msg);
             } else {
                 fCheck.clearTips(".nickname-warning");
                 fCheck.bordercss('.nickname');
