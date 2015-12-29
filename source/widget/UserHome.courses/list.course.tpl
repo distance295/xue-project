@@ -239,7 +239,7 @@
     <div class="courseList">
         <div class="study-report">
             <div class="progress-show">
-                <div class="processingbar"><font>10%</font><div class="processingbar_bg"></div></div>    
+                <div class="processingbar"><font>100%</font><div class="processingbar_bg"></div></div>    
             </div>
             <p>本课程共<span>50</span>次直播</p>
             <p>你已参加<span>10</span>次</p>
