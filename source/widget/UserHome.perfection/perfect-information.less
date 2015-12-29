@@ -70,11 +70,7 @@
 		font-weight: normal;
 	}
 	select {
-		-moz-appearance: none !important;
 		background-color: #fafafa;
-		background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+");
-		background-position: 100% center;
-		background-repeat: no-repeat;
 		border-color: #cccccc;
 		border-radius: 0;
 		border-style: solid;
@@ -388,5 +384,28 @@
 				}
 			}
 		}
+	}
+}
+// 登录注册弹框
+.login-Modal .modal-content{
+	height: 597px;
+	width: 530px;
+	overflow: hidden;
+	iframe{
+		border: none;
+	}
+	.modal-header{
+		overflow: hidden;
+	}
+	.modal-title{
+		float: left;
+	}
+	.modal-title-span{
+		float: right;
+		margin-right: 10px;
+	}
+	.modal-title-span a{
+		color: #3bafda;
+		margin-left: 5px;
 	}
 }
