@@ -34,6 +34,7 @@
                     <input id="loadFile" type="file" name="img" class="input_file" onchange="getFullPath(this);" />
                     <em>每次上传消耗3000金币</em>
                     <span>仅支持JPG、GIF、PNG且文件小于2M，照片尺寸请大于200×200</span>
+                    <p>学力等级达到16级，可以免费上传本地头像</p>
                 </div>
                 <button id="btn_submit" class="btn btn-info hpl-btn">保存</button>
             </form>
