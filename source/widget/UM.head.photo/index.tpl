@@ -42,18 +42,18 @@
     </div>
     <div class="hp-box-right">
         <h4>预览</h4>
-        <p>您选定的头像会生成3种尺寸，请注意大小尺寸的头像是否清晰</p>
+        <p>您选定的头像会生成3种尺寸，请注意各尺寸的头像是否清晰</p>
         <div id="hp-small">
             <img src="img/head.photo.png" id="img-small">
-            <span>40*40像素</span>
+            <span>40×40像素</span>
         </div>
         <div id="hp-middle">
             <img src="img/head.photo.png" id="img-middle">
-            <span>60*60像素</span>
+            <span>60×60像素</span>
         </div>
         <div id="hp-big">
             <img src="img/head.photo.png" id="img-big">
-            <span>100*100像素</span>
+            <span>100×100像素</span>
         </div>
     </div>
 </div>
