@@ -37,13 +37,13 @@
             <div>
                 <div id="date">
                     <label for="">生日：</label>
-                    <select id="year" name="year" rel="2014" >
+                    <select id="year" name="year">
                     </select>
                     <i>年</i>
-                    <select id="month" name="month"  rel="04" >
+                    <select id="month" name="month">
                     </select>
                     <i>月</i>
-                    <select id="day" name="day" rel="24" >
+                    <select id="day" name="day">
                     </select>
                     <i>日</i>
                 </div>
