@@ -147,6 +147,7 @@ function isIE(ver){
     return b.getElementsByTagName('i').length === 1;
 } 
 
+/* 点击上传头像按钮触发事件 */
 function getFullPath(){
   var strSrc = $("#loadFile").val();
   var pos = strSrc.lastIndexOf("."); 
@@ -169,7 +170,7 @@ function getFullPath(){
             return false;
         }else{
           //上传头像按钮位置更改
-          $(".hl-box em,.hl-box span").hide();
+          $(".hl-box em,.hl-box span,.hl-box p").hide();
           $("#upload_img").removeClass("btn_loadFile").addClass("btn-change");
           $("#loadFile").removeClass("input_file").addClass("btnl-change");
           //图片预览
