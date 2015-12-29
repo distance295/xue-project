@@ -98,7 +98,7 @@ ms_DatePicker: function (options) {
                     }).html(null);
 
                     $('#year,#month,#day').css({
-                        border: '1px solid #eaeaea'
+                        border: '1px solid #d2d2d2'
                     });
                     return true
                 }else{
@@ -107,7 +107,7 @@ ms_DatePicker: function (options) {
                           'display': 'none',
                         }).html("请输入月份");
                         $('#year,#month,#day').css({
-                            border: '1px solid #eaeaea'
+                            border: '1px solid #d2d2d2'
                         });
                     }else{
                         if ($DaySelector.val() == 0) {
@@ -115,7 +115,7 @@ ms_DatePicker: function (options) {
                               'display': 'none',
                             }).html("请输入日");
                             $('#year,#month,#day').css({
-                                border: '1px solid #eaeaea'
+                                border: '1px solid #d2d2d2'
                             });
                         }else{
                             $(".date-warning").css({
@@ -145,13 +145,16 @@ ms_DatePicker: function (options) {
                 BuildMonth();
                 BuildDay();
                 dateFormat();
+                $('#year').css({color:'#333'})
             });
             $MonthSelector.change(function () {
                 BuildDay();
                 dateFormat();
+                $('#month').css({color:'#333'})
             });
             $DaySelector.change(function () {
                 dateFormat();
+                $('#day').css({color:'#333'})
             });
             if($DaySelector.attr("rel")!=""){
                 var daySel = $DaySelector.attr("rel");
