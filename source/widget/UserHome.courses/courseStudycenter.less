@@ -19,6 +19,7 @@ body{
 	line-height: 18px;
 	color: #fff;
 	.border-radius(2px);
+	margin-bottom: 0;
 }
 .course-blue-label{
 	background: #5abdeb;
@@ -49,6 +50,7 @@ body{
 	font-weight: normal;
 	padding: 0 2px;
 	line-height: 17px;
+	z-index: 1;
 }
 .label-delay{
 	background: #3bafda;
@@ -76,7 +78,7 @@ body{
 	padding: 15px 0px 15px 15px;
 	margin-bottom: 20px;
 	background: #fff;
-	height: 215px;
+	// height: 215px;
 	border-radius: 4px;
 }
 .courselayout-list{
@@ -146,7 +148,6 @@ body{
 	.study-report {
 		float: left;
 		width: 160px;
-		border-right: 1px solid @borderColor;
 		padding-right: 17px;
 		.progress-show{
 			text-align: center;
@@ -163,6 +164,7 @@ body{
 		}
 	}
 	.courseList-body{
+		border-left: 1px solid @borderColor;
 		display: block;
 		overflow: hidden;
 		padding: 0 0px 0 17px;
@@ -179,8 +181,8 @@ body{
 				color: #999;
 			}
 			.title-detail{
-				margin-left: 5px;
-				line-height: 21px;
+				margin-left: 10px;
+				line-height: 22px;
 			}
 			.course-title-inner{
 				width: 92%;
@@ -188,9 +190,9 @@ body{
 				.course-label{
 					float: left;
 				}
-				.title-detail{
-					line-height: 21px;
-				}
+				// .title-detail{
+				// 	line-height: 21px;
+				// }
 			}
 			.title-detail-gray{
 				color: #999;
@@ -213,7 +215,7 @@ body{
 			}
 		}
 		.title-more{
-			margin-top: 39px;
+			margin-top: 44px;
 			font-size: 14px;
 		}
 		.end-time{
@@ -403,7 +405,7 @@ body{
 
 .courseList.courseList-record{
 	.courseList-body .title-more{
-		margin-top: 64px;
+		margin-top: 65px;
 	}
 }
 // 弹框

@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
-@Nfont-size:1.4rem;
-@Sfont-size:1rem;
-@LRpadding:0.8rem;
+@Nfont-size:14px;
+@Sfont-size:12px;
+@LRpadding:15px;
 
 #wrongQuestionFlow{
     .modal-title{
@@ -40,7 +40,7 @@
     }
 
 .choiceHide{
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
   display: none;
 }
 
@@ -54,16 +54,16 @@
   float:left;
   background-color: rgb(255,255,255);
   padding: 0;
-  font-size: 1.4rem;
+  font-size: 14px;
   width: 100%;
-  margin-bottom: 2rem;  
+  margin-bottom: 20px;  
   
   &:last-child{
   	margin-bottom: 40px;
   }
   .que-tips{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
     color:rgb(153,153,153);
   }
 }
@@ -72,14 +72,14 @@
   .que-head-source{
     margin-top:0;
     margin-bottom: 0;
-    padding-top: 1.3rem;
-    padding-bottom:1.3rem;
+    padding-top: 15px;
+    padding-bottom:15px;
     color:rgb(59,175,218);
   }
 
   .que-head-time-form{
     font-size: @Sfont-size;
-    margin: 1.4rem 0 1.2rem 0;
+    margin: 14px 0 12px 0;
     color:rgb(153,153,153);
   }
   .que-head-href{
@@ -88,18 +88,25 @@
       text-decoration: underline;
     }
   }
+    .que-head-href-lb{
+        color:#333;
+        &:hover{
+            color:#333;    
+        }
+        cursor:text;
+    }
 }
 
 .que-point{
   .queSet;
-  padding-top: 1.3rem;
-  padding-bottom: 1.3rem;
+  padding-top: 15px;
+  padding-bottom: 15px;
   .que-point-know-form{
     line-height: 1;
     margin-bottom: 0;
   }
   .knowledge{
-    padding-right: 1.375rem;
+    padding-right: 15px;
   }
   .selected{
       color:#e74c3c;
@@ -112,7 +119,7 @@
     font-weight: bold;
   }
   .que-body-choice{
-    margin: 1.2rem 0;
+    margin: 12px 0;
   }
   .que-body-intro{
     font-weight: bold;
@@ -124,7 +131,7 @@
     line-height: 1.8;
   }
   .que-body-arrow{
-    margin-right: 2rem;
+    margin-right: 20px;
       margin-top:4px;
   }
   .que-body-show-text{
@@ -147,7 +154,7 @@
   .que-answer-head{
     font-weight: bold;
   }
-  @RPadding:2rem;
+  @RPadding:20px;
   .cusAns{
     padding-right:15px;
     color:rgb(204,0,0);
@@ -174,7 +181,7 @@
 }
 
 .que-img{
-  padding: 0.9rem @LRpadding;
+  padding: 10px @LRpadding;
   .stuAns{
     width: 100px;
     height: 70px;
@@ -185,12 +192,12 @@
     position: relative;
     margin: 0;
     padding: 0;
-    width: 7.7rem;
-    height: 2.7rem;
+    width: 80px;
+    height: 30px;
     vertical-align: middle;
     background-color:rgb(55,188,155);
     border:rgb(56,188,156);
-    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+    border-radius: 15px 15px 15px 15px;
     .que-voice-play{
       position: absolute;
       top: 30%;
