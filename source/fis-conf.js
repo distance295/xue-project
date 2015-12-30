@@ -161,7 +161,7 @@ var __ignore = {
         'Mall.personCenter',
         'Public.Dynamic',
         'Public.FocusPic',
-        'Public.Footer',
+        //'Public.Footer',
         'Public.Header',
         'Public.MiniCart',
         'Public.Module',
