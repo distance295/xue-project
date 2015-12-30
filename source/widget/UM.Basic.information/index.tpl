@@ -15,7 +15,7 @@
             </div>
             <div>
                 <label for="">昵称：</label>
-                <input class="nickname" type="text" name="nickname" maxlength="18" data-nickname="" autocomplete="off"/>
+                <input class="nickname" type="text" name="nickname" maxlength="10" data-nickname="" autocomplete="off"/>
                 <div class="error-box">
                     <span class="nickname-warning error"></span>
                 </div>
@@ -37,13 +37,13 @@
             <div>
                 <div id="date">
                     <label for="">生日：</label>
-                    <select id="year" name="year">
+                    <select id="year" name="year" rel="2014" >
                     </select>
                     <i>年</i>
-                    <select id="month" name="month">
+                    <select id="month" name="month"  rel="04" >
                     </select>
                     <i>月</i>
-                    <select id="day" name="day">
+                    <select id="day" name="day" rel="24" >
                     </select>
                     <i>日</i>
                 </div>
