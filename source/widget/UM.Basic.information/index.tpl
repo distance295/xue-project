@@ -15,7 +15,7 @@
             </div>
             <div>
                 <label for="">昵称：</label>
-                <input class="nickname" type="text" name="nickname" maxlength="18" data-nickname="" autocomplete="off"/>
+                <input class="nickname" type="text" name="nickname" maxlength="10" data-nickname="" autocomplete="off"/>
                 <div class="error-box">
                     <span class="nickname-warning error"></span>
                 </div>
