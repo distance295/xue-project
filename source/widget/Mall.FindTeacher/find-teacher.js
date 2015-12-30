@@ -35,16 +35,5 @@ $(function(){
             }
         })
     });
-    var
-        $fteacherrt = $('.find-teacher-rank-title div'),
-        $fteacherrn = $('.find-teacher-rank-num');
-    $fteacherrn.on('click',function(){
-        $fteacherrt.css({'background-color':'#fcfcfc'});
-        $(this).css({'background-color':'#fff','border-right':'1px solid #eaeaea'});
-    });
-    $fteacherrt.on('click',function(){
-        $fteacherrn.css({'background-color':'#fcfcfc','border-right':'none'});
-        $(this).css({'background-color':'#fff'});
-    })
 });
 
