@@ -24,18 +24,17 @@
   float: left;
   width: 65px;
   height: 36px;
-  background-color: #fff;
   text-align: center;
   line-height: 36px;
-  margin-right: 3px;
-  border-right: 1px solid #eaeaea;
 }
 .find-teacher-rank-num {
   display: inline-block;
   width: 65px;
   height: 36px;
+  margin-left: -1px;
   text-align: center;
   line-height: 36px;
+  border-left: 1px solid #eaeaea;
 }
 .find-teacher-rank-title span img {
   margin-left: 5px;
@@ -182,4 +181,11 @@
   overflow: hidden;
   border: 1px solid #eaeaea;
   margin-top: -1px;
+}
+.find-teacher-rank-by {
+  background-color: #fff;
+  border-right: 1px solid #eaeaea;
+}
+.find-teacher-rank-by .find-teacher-rank-by:nth-child(1) {
+  border-right: 0;
 }
