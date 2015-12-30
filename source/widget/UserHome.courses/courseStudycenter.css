@@ -814,6 +814,9 @@ table tr:nth-of-type(2n) {
 .amount-show .popover p span {
   color: #e74c3c;
 }
+.amount-show .popover.top {
+  margin-top: -13px;
+}
 .processingbar {
   text-align: center;
   margin: 3px 0 0 5px;
