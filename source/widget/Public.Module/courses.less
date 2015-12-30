@@ -148,6 +148,7 @@ ul,li{list-style: none;}
 	.course-detail{
 		display: block;
 		overflow: hidden;
+		margin-bottom: 0;
 		p{
 			line-height: 30px;
 			overflow: hidden;
@@ -163,6 +164,7 @@ ul,li{list-style: none;}
 				float: left;
 				strong{
 					color: #e74c3c;
+					font-weight: normal;
 				}
 			}
 			span:first-child{
@@ -575,12 +577,11 @@ ul,li{list-style: none;}
 }
 // 老师头像页卡
 .teacher-bomb {
-	height: 266px;
 	width: 375px;
 	border: none;
 	padding: 0;
 	ul{
-		padding-left: 0;
+		padding-left: 0 0 10px 0;
 	}
 	.dialog-second {
 		height: 155px;
@@ -664,9 +665,9 @@ ul,li{list-style: none;}
 				.level-l {
 					float: left;
 					overflow: hidden;
-					text-align: right;
-					width: 160px;
+					text-align: center;
 					margin: 0;
+					width: 100%;
 					li {
 						display: inline-block;
 						img {
@@ -726,7 +727,7 @@ ul,li{list-style: none;}
 		text-align: center;
 		.for-center {
 			display: inline-block;
-			padding-top: 10px;
+			padding-top: 15px;
 			.fresh-course-attention{
 				float: left;
 				line-height: 20px;
@@ -787,8 +788,8 @@ ul,li{list-style: none;}
 			}
 		}
 	}
-	li.popular-rank {
-		border-left: none;
+	li.popular-rank.active {
+		border-left: 1px solid #fcfcfc
 	}
 	li.active{
 		border-right: 1px solid #eaeaea;

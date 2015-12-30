@@ -1,5 +1,6 @@
 <!--
     @require fresh.less
+    @require ../Module.Modal/modal.less
     @require ../Module.popover/xue.popover.js
     @require ../Module.Modal/Modal.js
     @require fresh.js
@@ -18,7 +19,7 @@
        <div class="fresh-text">
           <div class="fresh-myname">
              <a target="_blank" data-params="userId=979168" href="http://www.xueersi.com/s/979168" class="pull-left">顾斐</a>
-             <i class="fresh-v fresh-v-yellow" class="pull-left"></i>
+             <i class="fresh-v fresh-v-yellow"></i>
           </div>
           <div class="fresh-info">
             快来看看认真的韬哥和小帆老师在为来访的学员题词~！ 信韬哥！得满分！ 新小帆！<a target="_blank" href="http://t.xueersi.com/7boW01nx">http://t.xueersi.com/7boW01nx</a>

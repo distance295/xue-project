@@ -18,11 +18,12 @@ $(".hpr-img").on("click",function(){
 
 $(".hpr-btn").on('click', function(){
     var headId = $(".imghover").data('id');
+    var hprSrc = $(".imghover").attr("src");
     $.ajax({
         type: "POST",
         url: "/MyInfos/changeImg",
         dataType: "JSON",
-        data:'headId=' + headId,
+        data:'headId=' + headId + '&hprSrc=' + hprSrc,
         success: function(msg){
             if(msg.sign == 1){
                 window.location.reload();
@@ -36,7 +37,7 @@ $(".hpr-btn").on('click', function(){
 
 /* =====================自定义上传头像===================== */
 
-/* 上传头像后端错误信息 */
+/* 上传头像后端返回信息 定位tab页面 */
 var headError = $(".img-error span").is(":empty");
 var headSuccess = $(".img-success span").is(":empty");
 if (headError == 0) {
@@ -54,6 +55,7 @@ if (headSuccess == 0) {
     $('.hp-local').addClass('active').siblings().removeClass("active");
     $('.tab-local').addClass('current').siblings().removeClass("current");
 };
+
 /* 上传头像表单绑定事件 */
 function headsSave(){
     var img = $("#loadFile").val();
@@ -71,17 +73,6 @@ function headsSave(){
         return false;
     }
 }
-/* 上传头像input按钮绑定事件 */
-$("#loadFile").change(function(){
-    var img = $("#loadFile").val();
-    if(img == ''){
-      return false;
-    }else{
-        $(".hl-box em,.hl-box span").hide();
-        $("#upload_img").removeClass("btn_loadFile").addClass("btn-change");
-        $("#loadFile").removeClass("input_file").addClass("btnl-change");
-    }
-});
 
 //图片等比例缩放
 function showImg(img,maxWidth,maxHeight){
@@ -156,29 +147,37 @@ function isIE(ver){
     return b.getElementsByTagName('i').length === 1;
 } 
 
+/* 点击上传头像按钮触发事件 */
 function getFullPath(){
   var strSrc = $("#loadFile").val();
   var pos = strSrc.lastIndexOf("."); 
   var lastname = strSrc.substring(pos, strSrc.length);
 
   var dom = document.getElementById('loadFile');
-
-  if( !isIE(9) ) {
-      var size = dom.files.item(0).size/1024;
-  }
- 
-  if (lastname.toLowerCase() != ".jpg" && lastname.toLowerCase() != ".gif" && lastname.toLowerCase() != ".png" && lastname.toLowerCase() != ".jpeg") {  
-      $('#loadFile').val('');
-      alert("您选择的文件类型为" + lastname + "，图片必须为 JPG,GIF,PNG 类型");
-      return false;  
-  }else{
-      if (!isIE(9) && size>2*1024) {
-          alert('图片大小请不要大于2MB');
-          return false;
-      }else{
-        setImagePreview('loadFile', 'preview-img',400, 340);
-        var url = $('#imghead').attr("src");
-        $('#hp-small img, #hp-middle img, #hp-big img').attr('src',url);
-      };
+  if(strSrc == ''){
+      return false;
+  }else{    
+    if (lastname.toLowerCase() != ".jpg" && lastname.toLowerCase() != ".gif" && lastname.toLowerCase() != ".png" && lastname.toLowerCase() != ".jpeg") {  
+        $('#loadFile').val('');
+        alert("您选择的文件类型为" + lastname + "，图片必须为 JPG,GIF,PNG 类型");
+        return false;  
+    }else{
+        if( !isIE(9) ) {
+            var size = dom.files.item(0).size/1024;
+        }
+        if (!isIE(9) && size>2*1024) {
+            alert('图片大小请不要大于2MB');
+            return false;
+        }else{
+          //上传头像按钮位置更改
+          $(".hl-box em,.hl-box span,.hl-box p").hide();
+          $("#upload_img").removeClass("btn_loadFile").addClass("btn-change");
+          $("#loadFile").removeClass("input_file").addClass("btnl-change");
+          //图片预览
+          setImagePreview('loadFile', 'preview-img',400, 340);
+          var url = $('#imghead').attr("src");
+          $('#hp-small img, #hp-middle img, #hp-big img').attr('src',url);
+        };
+    }
   }
 }

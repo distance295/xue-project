@@ -19,6 +19,7 @@ body{
 	line-height: 18px;
 	color: #fff;
 	.border-radius(2px);
+	margin-bottom: 0;
 }
 .course-blue-label{
 	background: #5abdeb;
@@ -41,7 +42,7 @@ body{
 	text-align: center;
 	display: inline-block;
 	position: absolute;
-	right: 0px;
+	right: -25px;
 	color: #fff;
 	font-size: 14px;
 	font-style: normal;
@@ -49,6 +50,7 @@ body{
 	font-weight: normal;
 	padding: 0 2px;
 	line-height: 17px;
+	z-index: 1;
 }
 .label-delay{
 	background: #3bafda;
@@ -57,22 +59,27 @@ body{
 }
 .label-delayed{
 	background: #ccd1d9;
-	top: 9px;
+	top: 18px;
 	padding-top: 5px;
 	cursor: default;
 }
 .label-continun{
 	background: #37bc9b;
-	top: 71px;
+	top: 79px;
 	padding-top: 12px;
 }
 .label-sheng{
-	top: 132px;
+	top: 140px;
 	padding-top: 12px;
 	background: #ffaa09;
 }
 .courseList-label{
 	padding-right: 25px;
+	padding: 15px 0px 15px 15px;
+	margin-bottom: 20px;
+	background: #fff;
+	// height: 215px;
+	border-radius: 4px;
 }
 .courselayout-list{
 
@@ -98,7 +105,6 @@ body{
 }
 .courseList-wrap{
 	clear: both;
-	overflow: hidden;
 	position: relative;
 	.course-btn-gray,.course-btn-gray[disabled]{
 		background: #ccd1d9;
@@ -133,22 +139,15 @@ body{
 	}
 }
 .courseList {
-	background: #fff;
-	border-radius: 4px;
 	display: block;
 	font-family: "SimSun";
 	height: auto;
-	margin-bottom: 20px;
-	overflow: hidden;
-	padding: 15px 0px 15px 15px;
 	table,tr,th,thead{margin: 0;padding: 0;}
 	ul,li,p{margin: 0;list-style: none;padding: 0}
 	.left{float: left;}
 	.study-report {
 		float: left;
 		width: 160px;
-		height: 170px;
-		border-right: 1px solid @borderColor;
 		padding-right: 17px;
 		.progress-show{
 			text-align: center;
@@ -165,9 +164,10 @@ body{
 		}
 	}
 	.courseList-body{
+		border-left: 1px solid @borderColor;
 		display: block;
 		overflow: hidden;
-		padding: 0 0px 0 10px;
+		padding: 0 0px 0 17px;
 		.course-center{
 			width: 69%;
 		}
@@ -180,9 +180,19 @@ body{
 			span{
 				color: #999;
 			}
+			.title-detail{
+				margin-left: 10px;
+				line-height: 22px;
+			}
 			.course-title-inner{
 				width: 92%;
 				float: left;
+				.course-label{
+					float: left;
+				}
+				// .title-detail{
+				// 	line-height: 21px;
+				// }
 			}
 			.title-detail-gray{
 				color: #999;
@@ -196,6 +206,7 @@ body{
 				float: right;
 				margin-right: 10px;
 				font-family: "SimSun";
+				line-height: 21px;
 			}
 			.change-course{
 				color: #e74c3c;
@@ -204,7 +215,7 @@ body{
 			}
 		}
 		.title-more{
-			margin-top: 30px;
+			margin-top: 44px;
 			font-size: 14px;
 		}
 		.end-time{
@@ -259,7 +270,7 @@ body{
 		}
 		.more-service{
 			margin-right: 10px;
-			margin-top: 3px;
+			margin-top: 4px;
 			h4{
 				color: #333333;
 				font-size: 12px;
@@ -294,14 +305,14 @@ body{
 		}
 	}
 	.courseList-teacher{
-		height: 170px;
+		height: 188px;
 		border-left: 1px solid @borderColor;
 		width: 181px;
 		float: left;
 		padding: 5px 5px;
 		position: relative;
 		.teacher-main{
-			padding: 12px;
+			padding: 16px 12px;
 			overflow: hidden;
 			float: left;
 			width: 170px;
@@ -327,6 +338,9 @@ body{
 				p.teacher-coach{
 					font-size: 14px;
 					font-family: "Microsoft YaHei";
+					height: 20px;
+					overflow: hidden;
+					width: 76px;
 				}
 				p.teacher-majar{
 					color: #999;
@@ -391,7 +405,7 @@ body{
 
 .courseList.courseList-record{
 	.courseList-body .title-more{
-		margin-top: 55px;
+		margin-top: 65px;
 	}
 }
 // 弹框
@@ -655,7 +669,7 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 			span.span-w2{
 				width: 42%;
 				float: left;
-				text-align: left;
+				// text-align: left;
 				.studied-end{
 					width: 57px;
 					float: none;
@@ -833,21 +847,34 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 // 进度条
 .processingbar {
 	text-align: center;
-	margin: 3px 0 0 20px;
+	margin: 3px 0 0 5px;
 	position: relative;
-	width: 100px;
 }
 .processingbar font {
 	color: #999;
 	display: block;
-	width: 100px;
-	height: 100px;
-	line-height: 100px;
+	width: 112px;
+	height: 112px;
+	line-height: 112px;
 	font-size: 24px;
 	text-align: center;
 	position: absolute;
-	font-weight: bold;
-	left: 0;
-	top: 0;
-	margin: 0px 0 0 0px;
+	left: 50%;
+	top: 50%;
+	margin: 0px;
+	z-index: 1;
+	font-family: "Microsoft Yahei";
+	margin-left: -56px;
+	margin-top: -56px;
+}
+.processingbar_bg{
+	background: #f5f5f5;
+	border-radius: 50%;
+	height: 91px;
+	left: 50%;
+	margin-left: -46px;
+	margin-top: -48px;
+	position: absolute;
+	top: 50%;
+	width: 91px;
 }

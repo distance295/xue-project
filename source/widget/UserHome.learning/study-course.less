@@ -90,7 +90,7 @@
 				                  	 	a {
 				                  	 		display: block;width: 140px;font-size: 14px;color: #666;
 				                  	 		&.icon-sign {
-				                  	 			background: url(img/icon_07_white.gif) right 14px no-repeat;
+				                  	 			background: url(img/icon_07_white.png) right 14px no-repeat;
 				                  	 		}
 				                  	 		&:hover {color: #3bafda;}
 				                  	 	}
@@ -123,7 +123,7 @@
 									 	 span {
 									 	 	display: block;width: 180px;
 									 	 	&.icon-sign {
-				                  	 			background: url(img/icon_07_white.gif) right 14px no-repeat;
+				                  	 			background: url(img/icon_07_white.png) right 14px no-repeat;
 				                  	 		}
 					                  	 	a {
 										 	 	display: block;width: 160px;font-size: 12px;color: #666;
@@ -259,7 +259,7 @@
                 font-size: 14px;
                 color: #333;
                 padding-left: 20px;
-                background: url("http://img04.xesimg.com/scroll/tab_title_bg_03.jpg") no-repeat;
+                background: url("img/tab_title_bg_03.jpg") no-repeat;
         }
         .ui-scrolls-boxs{
             .scrolls-item{
@@ -550,7 +550,7 @@
   margin: 5px 20px;
 }
 .wrong_list_new .wrong_list_anwser p {
-  padding-left: 30px;
+  padding-left: 0;
 }
 .wrong_list_new .wrong_list_anwser strong {
   color: #000;
@@ -604,6 +604,11 @@
   width: 780px;
 }
 .class_answer .wrong_list_new span {
-  margin: 0 20px;
+  margin: 0;
   font-size: 14px;
+}
+
+//考试弹窗的高度设置(直接写死，建议换一种方法)
+div#stuCourseExam{
+    top:20%;
 }

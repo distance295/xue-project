@@ -36,7 +36,7 @@
     };
 
     $.fn.pages = function(options){
-        if(options && options.total <= 0){
+        if(options && options.total <= 1){
             return this;
         }
         return this.each(function(){

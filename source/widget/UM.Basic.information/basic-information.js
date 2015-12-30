@@ -28,7 +28,7 @@ $(function(){
     var nickname = $('.nickname');
     $(nickname).on('focus',function(){
         nickname.data('lastVal', $.trim(nickname.val()));
-        $('.prompt-empty').html('请输入不多于18个字，昵称为“数字”“字母”“中文”的任意组合').css({
+        $('.prompt-empty').html('请输入不多于10个字，昵称为“数字”“字母”“中文”的任意组合').css({
             color: '#999',
             display: 'block'
         });
@@ -60,7 +60,7 @@ $.fn.nickname = function(){
     if (val == '') {
         fCheck.setTips(".nickname-warning",'请输入昵称');
     }else {
-        var reg = /^[0-9a-zA-Z\u4e00-\u9fa5]{1,18}$/;
+        var reg = /^[0-9a-zA-Z\u4e00-\u9fa5]{1,10}$/;
         if(reg.test(val)){
             $.fn.nicknameajax();
         }else{
@@ -70,28 +70,33 @@ $.fn.nickname = function(){
 };
 
 $.fn.nicknameajax = function(){
-    // 昵称与其他用户重复，请重新设置
     var box = $(boxs.nickname),
-    val = box.val();
-    $.ajax({
-        url : '/MyInfos/getNicknameUseful',
-        type : 'GET',
-        dataType : 'json',
-        data : 'nickname=' + $('.nickname').val(),
-        timeout: 7000,
-        async: true,
-        success  : function(result){
-            if(result.sign == false){
-                fCheck.setTips(".nickname-warning",'昵称与其他用户重复，请重新设置');
-            } else {
-                fCheck.clearTips(".nickname-warning");
-                fCheck.bordercss('.nickname');
+        val = box.val(),
+        d_val = $.trim(box.data('lastVal'));
+    if($.trim(val) != d_val){
+        $.ajax({
+            url : '/MyInfos/getNicknameUseful',
+            type : 'GET',
+            dataType : 'json',
+            data : 'nickname=' + $('.nickname').val(),
+            timeout: 7000,
+            async: true,
+            success  : function(result){
+                if(result.sign == false){
+                    fCheck.setTips(".nickname-warning",result.msg);
+                    return false;
+                } else {
+                    fCheck.clearTips(".nickname-warning");
+                    fCheck.bordercss('.nickname');
+                    $(box).data('lastVal',val);
+                    return true;
+                }
+                if(result.sign === 2){
+                    window.location.href = result.msg;
+                } 
             }
-            if(result.sign === 2){
-                window.location.href = result.msg;
-            } 
-        }
-    });
+        });
+    }
 }
 
 /* 学校格式验证 */
@@ -110,6 +115,7 @@ $.fn.school = function(){
         }else{
             fCheck.setTips(".school-warning",'只能输入数字、汉字和字母');
             $('.school').css('border','1px solid #d2d2d2');
+            return false;
         }
     }
 };
