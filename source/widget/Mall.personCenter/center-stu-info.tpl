@@ -8,9 +8,5 @@
         <div class="center-info-newThing-num">1308</div>
         <div class="center-info-newThing-name">新鲜事</div>
     </div>
-    <div class="center-info-stud">
-        <div class="center-info-stud-num">63308</div>
-        <div class="center-info-stud-name">消费的金币</div>
-    </div>
 </div>
 <!--学生个人中心end-->
