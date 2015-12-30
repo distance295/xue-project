@@ -12,6 +12,7 @@
   font-size: 12px;
   border: 1px solid #eaeaea;
   background-color: #fcfcfc;
+  margin-top: 20px;
 }
 .find-teacher-rank-focus {
   color: #1e89e0;
@@ -25,14 +26,16 @@
   height: 36px;
   background-color: #fff;
   text-align: center;
-  padding-top: 11px;
+  line-height: 36px;
   margin-right: 3px;
   border-right: 1px solid #eaeaea;
 }
-.find-teacher-rank-title span {
-  padding-left: 27px;
-  padding-top: 11px;
+.find-teacher-rank-num {
   display: inline-block;
+  width: 65px;
+  height: 36px;
+  text-align: center;
+  line-height: 36px;
 }
 .find-teacher-rank-title span img {
   margin-left: 5px;
@@ -42,6 +45,9 @@
   font-size: 0;
 }
 .find-teacher-account {
+  padding-left: 27px;
+  padding-top: 11px;
+  display: inline-block;
   float: right;
   color: #999999;
   margin-right: 15px;
