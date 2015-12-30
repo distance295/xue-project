@@ -185,6 +185,6 @@
   background-color: #fff;
   border-right: 1px solid #eaeaea;
 }
-.find-teacher-rank-by:nth-child(1) {
+.find-teacher-rank-by:nth-child(0) {
   border-right: 0;
 }
