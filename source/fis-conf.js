@@ -204,7 +204,7 @@ var __ignore = {
         'UM.mobile.phone',
         'UM.third.bind',
         'Public.FocusPic',
-        'Public.Footer',
+//        'Public.Footer',
         'Public.Header',
         'Public.MiniCart',
         'Module.Paginator',
