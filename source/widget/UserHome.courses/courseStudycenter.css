@@ -850,6 +850,7 @@ table tr:nth-of-type(2n) {
 /*新用户引导*/
 .shade_scroll {
   overflow-y: hidden;
+  background: #f1f2f6 ;
 }
 .guidance_wrap {
   width: 100%;
