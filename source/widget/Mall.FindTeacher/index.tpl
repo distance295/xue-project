@@ -18,7 +18,7 @@
                     </div>
                 </div>
                 <div class="find-teacher-information">
-                    <a href="#"><span class="find-teacher-name">顾斐顾斐</span></a>
+                    <a href="#"><span class="find-teacher-name">顾斐顾斐秀</span></a>
                     <img src="../../widget/Mall.FindTeacher/img/v.png" class="find-teacher-v"/>
                     <span class="find-teacher-sort">数学老师</span>
                 </div>
