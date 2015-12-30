@@ -12,6 +12,7 @@ body {
   -webkit-border-radius: 2px;
   -ms-border-radius: 2px;
   border-radius: 2px;
+  margin-bottom: 0;
 }
 .course-blue-label {
   background: #5abdeb;
@@ -33,7 +34,7 @@ body {
   text-align: center;
   display: inline-block;
   position: absolute;
-  right: 0px;
+  right: -25px;
   color: #fff;
   font-size: 14px;
   font-style: normal;
@@ -41,6 +42,7 @@ body {
   font-weight: normal;
   padding: 0 2px;
   line-height: 17px;
+  z-index: 1;
 }
 .label-delay {
   background: #3bafda;
@@ -49,22 +51,26 @@ body {
 }
 .label-delayed {
   background: #ccd1d9;
-  top: 9px;
+  top: 18px;
   padding-top: 5px;
   cursor: default;
 }
 .label-continun {
   background: #37bc9b;
-  top: 71px;
+  top: 79px;
   padding-top: 12px;
 }
 .label-sheng {
-  top: 132px;
+  top: 140px;
   padding-top: 12px;
   background: #ffaa09;
 }
 .courseList-label {
   padding-right: 25px;
+  padding: 15px 0px 15px 15px;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 4px;
 }
 .courselayout-list .popover {
   background-color: #f9f9f9;
@@ -88,7 +94,6 @@ body {
 }
 .courseList-wrap {
   clear: both;
-  overflow: hidden;
   position: relative;
 }
 .courseList-wrap .course-btn-gray,
@@ -126,14 +131,9 @@ body {
   width: 13px;
 }
 .courseList {
-  background: #fff;
-  border-radius: 4px;
   display: block;
   font-family: "SimSun";
   height: auto;
-  margin-bottom: 20px;
-  overflow: hidden;
-  padding: 15px 0px 15px 15px;
 }
 .courseList table,
 .courseList tr,
@@ -155,8 +155,6 @@ body {
 .courseList .study-report {
   float: left;
   width: 160px;
-  height: 170px;
-  border-right: 1px solid #eaeaea;
   padding-right: 17px;
 }
 .courseList .study-report .progress-show {
@@ -173,21 +171,34 @@ body {
   color: #e74c3c;
 }
 .courseList .courseList-body {
+  border-left: 1px solid #eaeaea;
   display: block;
   overflow: hidden;
-  padding: 0 0px 0 10px;
+  padding: 0 0px 0 17px;
 }
 .courseList .courseList-body .course-center {
-  min-width: 587px;
+  width: 69%;
 }
 .courseList .courseList-body .course-title {
   font-size: 16px;
   line-height: 18px;
   margin-bottom: 8px;
   font-family: 'Microsoft YaHei';
+  overflow: hidden;
 }
 .courseList .courseList-body .course-title span {
   color: #999;
+}
+.courseList .courseList-body .course-title .title-detail {
+  margin-left: 10px;
+  line-height: 22px;
+}
+.courseList .courseList-body .course-title .course-title-inner {
+  width: 92%;
+  float: left;
+}
+.courseList .courseList-body .course-title .course-title-inner .course-label {
+  float: left;
 }
 .courseList .courseList-body .course-title .title-detail-gray {
   color: #999;
@@ -201,6 +212,7 @@ body {
   float: right;
   margin-right: 10px;
   font-family: "SimSun";
+  line-height: 21px;
 }
 .courseList .courseList-body .course-title .change-course {
   color: #e74c3c;
@@ -208,7 +220,7 @@ body {
   margin-left: 10px;
 }
 .courseList .courseList-body .title-more {
-  margin-top: 38px;
+  margin-top: 44px;
   font-size: 14px;
 }
 .courseList .courseList-body .end-time {
@@ -219,6 +231,9 @@ body {
 .courseList .courseList-body .end-time span strong {
   color: #e74c3c;
   font-weight: normal;
+}
+.courseList .courseList-body .amount-show {
+  margin-top: 15px;
 }
 .courseList .courseList-body .amount-show .btn {
   margin-right: 10px;
@@ -255,7 +270,7 @@ body {
 }
 .courseList .courseList-body .more-service {
   margin-right: 10px;
-  margin-top: 3px;
+  margin-top: 4px;
 }
 .courseList .courseList-body .more-service h4 {
   color: #333333;
@@ -287,7 +302,7 @@ body {
   display: block;
 }
 .courseList .courseList-teacher {
-  height: 170px;
+  height: 188px;
   border-left: 1px solid #eaeaea;
   width: 181px;
   float: left;
@@ -295,7 +310,7 @@ body {
   position: relative;
 }
 .courseList .courseList-teacher .teacher-main {
-  padding: 12px;
+  padding: 16px 12px;
   overflow: hidden;
   float: left;
   width: 170px;
@@ -323,6 +338,9 @@ body {
 .courseList .courseList-teacher .teacher-main .coach-con p.teacher-coach {
   font-size: 14px;
   font-family: "Microsoft YaHei";
+  height: 20px;
+  overflow: hidden;
+  width: 76px;
 }
 .courseList .courseList-teacher .teacher-main .coach-con p.teacher-majar {
   color: #999;
@@ -376,6 +394,9 @@ body {
 }
 .courseList .courseList-teacher .majar-items .avatar-roll a.none .icon-chevron-right {
   background: url('img/icon_chevron_right_none.png') no-repeat 0 0;
+}
+.courseList.courseList-record .courseList-body .title-more {
+  margin-top: 65px;
 }
 .material-exam .modal-dialog,
 .courseInformation .modal-dialog {
@@ -607,6 +628,7 @@ table tr:nth-of-type(2n) {
   height: 52px;
   line-height: 52px;
   text-align: center;
+  float: left;
 }
 .courselayout-list .course-table-live-title span {
   width: 24%;
@@ -630,7 +652,6 @@ table tr:nth-of-type(2n) {
 .courselayout-list .course-table.course-live-table li span.span-w2 {
   width: 42%;
   float: left;
-  text-align: left;
 }
 .courselayout-list .course-table.course-live-table li span.span-w2 .studied-end {
   width: 57px;
@@ -661,6 +682,13 @@ table tr:nth-of-type(2n) {
   height: 62px;
   border-top: 1px solid #f5f5f5;
 }
+.courselayout-list .course-table li .outlines_chapter_name {
+  text-align: left;
+  padding-left: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .courselayout-list .course-table li span {
   width: 32%;
   display: inline-block;
@@ -675,6 +703,7 @@ table tr:nth-of-type(2n) {
 .courselayout-list .course-table li .text-style {
   text-align: center;
   font-size: 12px;
+  color: #999;
 }
 .courselayout-list .course-table li .text-style span {
   color: #999;
@@ -725,6 +754,14 @@ table tr:nth-of-type(2n) {
   vertical-align: middle;
   padding-right: 24px;
 }
+.courselayout-list .course-table li span.yellow-mark em.mark {
+  background: url("img/exclamation.png") no-repeat right center;
+  vertical-align: middle;
+  padding-right: 24px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+}
 .teacher-tab {
   border-bottom: 1px solid #3bafda;
   overflow: hidden;
@@ -769,23 +806,184 @@ table tr:nth-of-type(2n) {
   color: #e74c3c;
   margin-right: 5px;
 }
+.amount-show .popover p {
+  font-size: 14px;
+  color: #666;
+  line-height: 22px;
+}
+.amount-show .popover p span {
+  color: #e74c3c;
+}
 .processingbar {
   text-align: center;
-  margin: 3px 0 0 20px;
+  margin: 3px 0 0 5px;
   position: relative;
-  width: 100px;
 }
 .processingbar font {
   color: #999;
   display: block;
-  width: 100px;
-  height: 100px;
-  line-height: 100px;
-  font-size: 22px;
+  width: 112px;
+  height: 112px;
+  line-height: 112px;
+  font-size: 24px;
   text-align: center;
   position: absolute;
-  font-weight: bold;
+  left: 50%;
+  top: 50%;
+  margin: 0px;
+  z-index: 1;
+  font-family: "Microsoft Yahei";
+  margin-left: -56px;
+  margin-top: -56px;
+}
+.processingbar_bg {
+  background: #f5f5f5;
+  border-radius: 50%;
+  height: 91px;
+  left: 50%;
+  margin-left: -46px;
+  margin-top: -48px;
+  position: absolute;
+  top: 50%;
+  width: 91px;
+}
+/*新用户引导*/
+.shade_scroll {
+  overflow-y: hidden;
+}
+.guidance_wrap {
+  width: 100%;
+  height: 1979px;
+  overflow: hidden;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 200;
+}
+.guidance_wrap .guidance_bg {
+  width: 1190px;
+  height: 1979px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: url("img/guide_bg.jpg") no-repeat;
+}
+.guidance_wrap .guidance_mask {
+  width: 100%;
+  height: 1979px;
+  background: #000;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  position: absolute;
+  left: 0;
+  top: -1px;
+  z-index: 250;
+}
+.guidance_wrap .guidance_step {
+  width: 100%;
+  height: 1979px;
+  position: absolute;
   left: 0;
   top: 0;
-  margin: 0px 0 0 0px;
+  z-index: 300;
+}
+.guidance_wrap .guidance_step .step_con {
+  width: 1190px;
+  margin: 0 auto;
+  position: relative;
+}
+.guidance_wrap .guidance_step .step_con .step_item {
+  overflow: hidden;
+  position: absolute;
+  display: none;
+}
+.guidance_wrap .guidance_step .step_con .step_item .btns_next {
+  display: block;
+  width: 62px;
+  height: 23px;
+  position: absolute;
+  background: #3bafda;
+  right: 20px;
+  bottom: 22px;
+  border-radius: 2px;
+  line-height: 23px;
+  text-align: center;
+  color: #fff;
+}
+.guidance_wrap .guidance_step .step_con .step_item .btns_next:focus {
+  outline: none;
+}
+.guidance_wrap .guidance_step .step_con .step_item .btns_finish {
+  display: block;
+  width: 63px;
+  height: 23px;
+  position: absolute;
+  background: #e74c3c;
+  right: 83px;
+  bottom: 14px;
+  border-radius: 2px;
+  line-height: 23px;
+  text-align: center;
+  color: #fff;
+}
+.guidance_wrap .guidance_step .step_con .step_item .btns_finish:focus {
+  outline: none;
+}
+.guidance_wrap .guidance_step .step_con .step_item_1 {
+  width: 388px;
+  height: 151px;
+  left: 50%;
+  margin-left: -194px;
+  top: 144px;
+  background: url("img/step_1.png") no-repeat;
+}
+.guidance_wrap .guidance_step .step_con .step_item_2 {
+  width: 557px;
+  height: 264px;
+  left: 212px;
+  top: 371px;
+  background: url("img/step_2.png") no-repeat;
+}
+.guidance_wrap .guidance_step .step_con .step_item_2 .btns_next {
+  right: 20px;
+  bottom: 72px;
+}
+.guidance_wrap .guidance_step .step_con .step_item_3 {
+  width: 548px;
+  height: 202px;
+  left: 328px;
+  top: 371px;
+  background: url("img/step_3.png") no-repeat;
+}
+.guidance_wrap .guidance_step .step_con .step_item_3 .btns_next {
+  right: 20px;
+  bottom: 12px;
+}
+.guidance_wrap .guidance_step .step_con .step_item_4 {
+  width: 544px;
+  height: 201px;
+  left: 447px;
+  top: 371px;
+  background: url("img/step_4.png") no-repeat;
+}
+.guidance_wrap .guidance_step .step_con .step_item_4 .btns_next {
+  right: 20px;
+  bottom: 12px;
+}
+.guidance_wrap .guidance_step .step_con .step_item_5 {
+  width: 560px;
+  height: 152px;
+  right: 151px;
+  top: 171px;
+  background: url("img/step_5.png") no-repeat;
+}
+.guidance_wrap .guidance_step .step_con .step_item_5 .btns_next {
+  right: 187px;
+  bottom: 12px;
+}
+.guidance_wrap .guidance_step .step_con .step_item_6 {
+  width: 506px;
+  height: 631px;
+  right: -4px;
+  top: 126px;
+  background: url("img/step_6.png") no-repeat;
 }
