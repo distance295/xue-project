@@ -6,7 +6,7 @@
     <div class="container">
         <div class="col-md-6 row">
             <div class="user-avatar pull-left col-xs-2">
-                <a href=""><img src="pic/avatar.png" alt=""></a>
+                <a href=""><img src="pic/avatar.png" alt="" class="userHome-header"></a>
             </div>
             <div class="user-info col-xs-8">
                 <h3 href="" class="user-name pull-left">快乐的小鸟</h3>
