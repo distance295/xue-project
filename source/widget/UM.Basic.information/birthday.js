@@ -37,18 +37,20 @@ ms_DatePicker: function (options) {
                 var monthStr = "<option value=\"" + i + "\" "+sed+">" + i + "</option>";
                 $MonthSelector.append(monthStr);
             }
-            function BuildMonth() {  
+            if ($YearSelector.val() == 0) {
+                $MonthSelector.html(str);
+            }
+            function BuildMonth() {
                 if ($YearSelector.val() == 0) {
                     $MonthSelector.html(str);
                 }else{
                     $MonthSelector.html(str);
-                   for (var i = 1; i <= 12; i++) {
-                       var monthStr = "<option value=\"" + i + "\" "+i+">" + i + "</option>";
-                       $MonthSelector.append(monthStr);
-                   } 
-                }
+                    for (var i = 1; i <= 12; i++) {
+                        var monthStr = "<option value=\"" + i + "\" "+i+">" + i + "</option>";
+                        $MonthSelector.append(monthStr);
+                    } 
+                }  
             }
-
             // 日列表(仅当选择了年月)
             function BuildDay() {
                 if ($YearSelector.val() == 0 || $MonthSelector.val() == 0) {
@@ -157,12 +159,47 @@ ms_DatePicker: function (options) {
                 $('#day').css({color:'#333'})
             });
             if($DaySelector.attr("rel")!=""){
-                var daySel = $DaySelector.attr("rel");
-                for (var i = 1; i <= 31; i++) {
-                    var sed = daySel==i?"selected":"";
-                    var dayStr = "<option value=\"" + i + "\" "+sed+">" + i + "</option>";
-                    $DaySelector.append(dayStr);
-                }
+                if ($YearSelector.val() == 0 || $MonthSelector.val() == 0) { 
+                    // 未选择年份或者月份 
+                    $DaySelector.html(str); 
+                } else { 
+                    $DaySelector.html(str); 
+                    var year = parseInt($YearSelector.val()); 
+                    var month = parseInt($MonthSelector.val()); 
+                    var dayCount = 0; 
+                    switch (month) { 
+                        case 1: 
+                        case 3: 
+                        case 5: 
+                        case 7: 
+                        case 8: 
+                        case 10: 
+                        case 12: 
+                            dayCount = 31; 
+                            break; 
+                        case 4: 
+                        case 6: 
+                        case 9: 
+                        case 11: 
+                            dayCount = 30; 
+                            break; 
+                        case 2: 
+                            dayCount = 28; 
+                            if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) { 
+                                dayCount = 29; 
+                            } 
+                            break; 
+                        default: 
+                            break; 
+                    } 
+                             
+                    var daySel = $DaySelector.attr("rel"); 
+                    for (var i = 1; i <= dayCount; i++) { 
+                        var sed = daySel==i?"selected":""; 
+                        var dayStr = "<option value=\"" + i + "\" "+sed+">" + i + "</option>"; 
+                        $DaySelector.append(dayStr); 
+                    } 
+                 } 
             }
         } // End ms_DatePicker
 });

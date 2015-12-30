@@ -28,7 +28,7 @@ $(function(){
     var nickname = $('.nickname');
     $(nickname).on('focus',function(){
         nickname.data('lastVal', $.trim(nickname.val()));
-        $('.prompt-empty').html('请输入不多于18个字，昵称为“数字”“字母”“中文”的任意组合').css({
+        $('.prompt-empty').html('请输入不多于10个字，昵称为“数字”“字母”“中文”的任意组合').css({
             color: '#999',
             display: 'block'
         });
@@ -60,7 +60,7 @@ $.fn.nickname = function(){
     if (val == '') {
         fCheck.setTips(".nickname-warning",'请输入昵称');
     }else {
-        var reg = /^[0-9a-zA-Z\u4e00-\u9fa5]{1,18}$/;
+        var reg = /^[0-9a-zA-Z\u4e00-\u9fa5]{1,10}$/;
         if(reg.test(val)){
             $.fn.nicknameajax();
         }else{
