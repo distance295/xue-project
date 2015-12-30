@@ -6,7 +6,7 @@
 
 /* 年级以及知识点选择css(start) */
 .choiceSet{
-  border: 1px solid rgb(241,242,246);
+  
   padding: 0 @LRpadding;
 }
 @grey:rgb(102,102,102);
@@ -46,10 +46,14 @@
     .row{
         margin-left: 0;
         margin-right: 0;
+        &:first-child .choice-dl{
+            border-top: none;
+        }
     }
     /* 覆盖bootstrap默认设置end */
     
     background-color: rgb(255,255,255);
+    border: 1px solid rgb(241,242,246);
     dl{
         margin-bottom: 0;
       }
@@ -57,6 +61,8 @@
         margin-top: 2px;
     }
     .choice-dl{//每一横条
+        border-top: 1px dashed rgb(241,242,246);
+        
         .choiceSet;
         line-height: 1;
         .choice-title{//左侧标题
