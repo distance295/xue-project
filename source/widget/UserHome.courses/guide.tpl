@@ -18,11 +18,11 @@
 					<!-- <a href="javascript:void(0);" class="btns_exit">退出引导</a> -->
 				</div>
 				<div class="step_item step_item_4">
-					<a href="javascript:void(0);" class="btns_next">继续</a>
+					<a href="javascript:void(0);" class="btns_next">下一条</a>
 					<!-- <a href="javascript:void(0);" class="btns_exit">退出引导</a> -->
 				</div>
 				<div class="step_item step_item_5">
-					<a href="javascript:void(0);" class="btns_next">继续</a>
+					<a href="javascript:void(0);" class="btns_next">下一条</a>
 					<!-- <a href="javascript:void(0);" class="btns_exit">退出引导</a> -->
 				</div>
 				<div class="step_item step_item_6">

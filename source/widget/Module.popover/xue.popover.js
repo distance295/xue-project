@@ -46,7 +46,6 @@ popoverTips.show = function (params) {
     var _domW = $(params.dom).outerWidth();
     var _domH = $(params.dom).outerHeight();
     if( $(params.dom).nextAll('.popover-mask-box').length == 0 ){
-      console.log(12345666666)
          $(params.dom).after('<span class="popover-mask-box"></span>');
          $(params.dom).nextAll('.popover-mask-box').css({
               width:_domW,

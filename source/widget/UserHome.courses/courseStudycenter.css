@@ -28,13 +28,18 @@ body {
   background: url("img/white-arrow.png") no-repeat scroll left center;
   height: 10px;
 }
+.label-study-wrap {
+  position: absolute;
+  right: -25px;
+  width: 25px;
+  top: 19px;
+  z-index: 1;
+}
 .label-study {
   width: 25px;
   height: 60px;
   text-align: center;
   display: inline-block;
-  position: absolute;
-  right: -25px;
   color: #fff;
   font-size: 14px;
   font-style: normal;
@@ -42,26 +47,22 @@ body {
   font-weight: normal;
   padding: 0 2px;
   line-height: 17px;
-  z-index: 1;
+  margin-bottom: 1px;
 }
 .label-delay {
   background: #3bafda;
   padding-top: 12px;
-  top: 9px;
 }
 .label-delayed {
   background: #ccd1d9;
-  top: 18px;
   padding-top: 5px;
   cursor: default;
 }
 .label-continun {
   background: #37bc9b;
-  top: 79px;
   padding-top: 12px;
 }
 .label-sheng {
-  top: 140px;
   padding-top: 12px;
   background: #ffaa09;
 }
@@ -813,6 +814,9 @@ table tr:nth-of-type(2n) {
 }
 .amount-show .popover p span {
   color: #e74c3c;
+}
+.amount-show .popover.top {
+  margin-top: -13px;
 }
 .processingbar {
   text-align: center;
