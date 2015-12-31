@@ -691,7 +691,7 @@ fresh.comment = fresh.comment || {};
                     //点击验证码事件效果
                     $('body').off('click').on('click' , '.fresh-dialog-verificationCode #verificationImg' , function(){
                           fc.changeVerificationImg('verificationImg');
-                    }
+                    })
                     //点击验证码弹出层中的确定按钮
                     $('body').off('click').on('click' , '.fresh-dialog-sure-btn a' , function(){
                         if( $(this).hasClass('fresh-dialog-btn-disabled') ){
