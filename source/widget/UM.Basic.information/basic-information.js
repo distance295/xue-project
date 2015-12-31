@@ -38,13 +38,20 @@ $(function(){
     });
     $(nickname).on('blur',function(){
         fCheck.clearTips(".prompt-empty");
-        if(nickname.data('lastVal') != $.trim(nickname.val())) {
-            $(".nickname").css('border','1px solid #d2d2d2');
-            $.fn.nickname();
-        }else{
-            $(".nickname-warning").css({
+        if (nickname.val() == '') {            
+            $(".nickname-warning").html('请输入昵称').css({
                 display: 'block',
             });
+        }else{
+            if(nickname.data('lastVal') != $.trim(nickname.val())) {
+                $(".nickname").css('border','1px solid #d2d2d2');
+                fCheck.clearTips(".nickname-warning");
+                $.fn.nickname();
+            }else{
+                $(".nickname-warning").css({
+                    display: 'block',
+                });
+            }
         }
     });
 });

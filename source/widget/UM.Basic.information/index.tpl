@@ -4,7 +4,7 @@
     @require basic-information.js
 -->
 <div class="bi-content">
-    <form action="" name="information" method="post" onsubmit="return inforCheckform()">
+    <form action="" name="information" method="post" onsubmit="return inforCheckform()" onkeydown="if(event.keyCode==13){return false;}">
         <div class="bi-left">
             <div class="message-error">
                 <span></span>
