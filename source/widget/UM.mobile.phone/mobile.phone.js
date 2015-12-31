@@ -86,7 +86,7 @@ var xue =xue || {};
         fCheck.param.cPhone = 0;
       }else if( isPhone ){
         if (value == $("#tel_input").val()) {
-          fCheck.setTips(phoneWarn,'该手机号已绑定');
+          fCheck.setTips(phoneWarn,'手机号与账户当前绑定手机号相同，请更换手机号完成绑定');
           $('#phone').css('border','1px solid #d2d2d2');
           fCheck.param.cPhone = 0;
         }else{
