@@ -37,9 +37,29 @@ $(function(){
     });
     var $ftname = $('.find-teacher-name');
     $ftname.each(function(){
-        if($(this).text().length == 5){
-            $(this).css({'font-size':'22px'});
+        var
+            str = $(this).text(),
+            str_char = /[a-zA-Z]/g,
+            str_chin = /[\u4e00-\u9fa5]/g;
+
+        var
+            str_char_num = str.match(str_char),
+            str_chin_num = str.match(str_chin);
+        if(str_char_num){
+            var char_maxwidth = 8;
+            if(str_char_num.length>char_maxwidth){
+                $(this).text(str.substring(0, char_maxwidth));
+                $(this).html($(this).html() + '...');
+            }
+            //console.log(str_char_num.length)
+        }else if(str_chin_num){
+            var chin_maxwidth = 5;
+            if(str_chin_num.length>chin_maxwidth){
+                $(this).text(str.substring(0,chin_maxwidth));
+                $(this).html($(this).html()+'...');
+            }
         }
     })
+
 });
 
