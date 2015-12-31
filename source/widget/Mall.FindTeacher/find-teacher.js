@@ -53,7 +53,7 @@ $(function(){
             }
             //console.log(str_char_num.length)
         }else if(str_chin_num){
-            var chin_maxwidth = 5;
+            var chin_maxwidth = 4;
             if(str_chin_num.length>chin_maxwidth){
                 $(this).text(str.substring(0,chin_maxwidth));
                 $(this).html($(this).html()+'...');
