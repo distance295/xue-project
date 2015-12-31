@@ -203,9 +203,11 @@ $.fn.areaprovince = function() {
     if (val == '') {
         text.html('请选择所在地');
         box.parents('.f1').addClass('has-error').removeClass('has-success');
+        box.addClass('has-error').removeClass('has-success');
     } else {
         text.html('');
         box.parents('.f1').removeClass('has-error').addClass('has-success');
+        box.removeClass('has-error').addClass('has-success');
     }
     return this;
 };
@@ -216,24 +218,26 @@ $.fn.areacity = function() {
     if (val == '') {
         text.html('请选择所在地');
         box.parents('.f1').addClass('has-error').removeClass('has-success');
+        box.addClass('has-error').removeClass('has-success');
     } else {
         text.html('');
         box.parents('.f1').removeClass('has-error').addClass('has-success');
+        box.removeClass('has-error').addClass('has-success');
     }
     return this;
 };
 $.fn.areacountry = function() {
     var box = $(boxs.addcountry),
-        boxAddcity = $(boxs.addcity),
         val = box.val();
     var text = box.siblings('.area-tips').children('.errTips');
     if (val == '') {
         text.html('请选择所在地');
         box.parents('.f1').addClass('has-error').removeClass('has-success');
+        box.addClass('has-error').removeClass('has-success');
     } else {
         text.html('');
         box.parents('.f1').removeClass('has-error').addClass('has-success');
-        boxAddcity.removeClass('has-error').addClass('has-success');
+        box.removeClass('has-error').addClass('has-success');
     }
     return this;
 };

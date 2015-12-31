@@ -44,8 +44,11 @@ em {
 .breadcrumb{
     margin-bottom: 5px;
 }
-button{
-  outline: none;
+a,button{
+    outline:none;
+    &:focus,&:active,&.active{
+        outline: none;
+    }
 }
 .label {
     font-weight: 500;
@@ -205,65 +208,65 @@ button{
     height: 55px;
     overflow: hidden;
     div {
-       height: 35px;
-        line-height: 35px;
-        border-bottom: 1px solid #3bafda;
-        margin-bottom: 20px;  
+     height: 35px;
+     line-height: 35px;
+     border-bottom: 1px solid #3bafda;
+     margin-bottom: 20px;  
+ }
+ h6 {
+    position: relative;
+    float: left;
+    width: 90px;
+    height: 35px;
+    background:#fff;
+    top:9px;
+    z-index: 1;
+    font-size: 18px;
+    color: #999;
+    &.live-title {
+        width: 110px;
     }
-    h6 {
-        position: relative;
+}
+a.more {
+    float: right;
+    font-size: 14px;
+}
+ul.live-list-tabs {
+    float: right;
+    margin-right: 5px;
+    overflow: hidden;
+    li {
         float: left;
-        width: 90px;
-        height: 35px;
-        background:#fff;
-        top:9px;
-        z-index: 1;
-        font-size: 18px;
-        color: #999;
-        &.live-title {
-            width: 110px;
-        }
-    }
-    a.more {
-        float: right;
-        font-size: 14px;
-    }
-    ul.live-list-tabs {
-        float: right;
+        display: inline;
         margin-right: 5px;
-         overflow: hidden;
-        li {
-            float: left;
-            display: inline;
-            margin-right: 5px;
-            i.fa {
-                cursor: pointer;
-                color: #999;
-            }
-             &.active {
-                i.fa {
-                    color: #3bafda;
-                 }
-            }
-        }
-    }
-    ul.grade-list {
-        overflow: hidden;padding-left: 161px;
-        li {
-            float: left;
-            display: inline;
-            width: 50px;
-            height: 34px;
-            text-align: center;
-            font-size: 14px;
-            margin-right:15px;
+        i.fa {
             cursor: pointer;
-            &.active {
-             border-bottom:2px solid #3bafda;
-             color: #3bafda;
+            color: #999;
+        }
+        &.active {
+            i.fa {
+                color: #3bafda;
             }
         }
     }
+}
+ul.grade-list {
+    overflow: hidden;padding-left: 161px;
+    li {
+        float: left;
+        display: inline;
+        width: 50px;
+        height: 34px;
+        text-align: center;
+        font-size: 14px;
+        margin-right:15px;
+        cursor: pointer;
+        &.active {
+           border-bottom:2px solid #3bafda;
+           color: #3bafda;
+       }
+   }
+}
 }
 .wrap-side-right {
     .fresh-list {
@@ -281,43 +284,43 @@ button{
     padding: 0;
     .panel-body {
 //        width: 110%;
-    }
-    .course-small-list {
-        float: left;
-        display: inline;
-        margin:0 34px 20px 0;
-    }
+}
+.course-small-list {
+    float: left;
+    display: inline;
+    margin:0 34px 20px 0;
+}
 }
 .row-page-turn {
 //    padding:0 5px;
-    margin-bottom: 20px;
+margin-bottom: 20px;
+overflow: hidden;
+.live-content-action {
+    width: 110%;
     overflow: hidden;
-    .live-content-action {
-        width: 110%;
-        overflow: hidden;
-        .live-teacher-photo {
-            margin-top:0;
-        }
+    .live-teacher-photo {
+        margin-top:0;
     }
-   .page-turn {
-        width: 45px;
-        height: 115px;
-        cursor: pointer;
-        text-indent: -9999em;
-        &.page-up {
-            background: url(../../static/img/page-up-default.png?__inline) 0 no-repeat;
-        }
-        &.page-down {
-            background: url(../../static/img/page-down-default.png?__inline) 0 no-repeat;
-        }
+}
+.page-turn {
+    width: 45px;
+    height: 115px;
+    cursor: pointer;
+    text-indent: -9999em;
+    &.page-up {
+        background: url(../../static/img/page-up-default.png?__inline) 0 no-repeat;
+    }
+    &.page-down {
+        background: url(../../static/img/page-down-default.png?__inline) 0 no-repeat;
+    }
         // &.page-up-disable {切到头以后的禁用按钮
         //         background: url(../../widget/Public.Module/img/page-up-disable.png) 0 no-repeat;
         // }
         // &.page-down-disable {
         //         background: url(../../widget/Public.Module/img/page-down-disable.png) 0 no-repeat;
         // }
-   }
-   .page-turn-box {
+    }
+    .page-turn-box {
         float: left;
         width: 1100px;
         overflow: hidden;
@@ -326,7 +329,7 @@ button{
             display: inline;
             margin:0 36px 0 15px;
         }
-   }
+    }
 }
 /*首页公用标题样式和一些重构样式 结束位置*/ 
 

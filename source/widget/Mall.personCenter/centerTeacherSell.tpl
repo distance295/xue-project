@@ -28,10 +28,10 @@
         <div class="centerHeader-selfintro">专注于初一，初二，初三教学</div>
 
         <!--1、未关注时-->
-        <div class="centerHeader-notFoucs"><span class="centerHeader-notFoucs-btn">+关注</span></div>
+        <div class="centerHeader-notFoucs"><span class="centerHeader-notFoucs-btn btn btn-warning follow_add">+关注</span></div>
 
         <!--2、已经关注-->
-        <div class="centerHeader-alFocus hide"><span class="centerHeader-alFocus-btn">已关注</span><a href="###" class="centerHeader-willFocus-btn">取消关注</a></div>
+        <div class="centerHeader-alFocus hide ui_follow"><span class="centerHeader-alFocus-btn btn btn-default">已关注</span><a href="###" class="centerHeader-willFocus-btn btn follow_cancel">取消关注</a></div>
     </div>
     <link rel="import" href="../../widget/Mall.personCenter/tab-teacher-sell.tpl?__inline">
     <div class="row bottom m20">
