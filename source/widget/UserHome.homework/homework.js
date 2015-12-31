@@ -120,6 +120,10 @@ homeWork.url = '/data/homework/';
 				  	_ReviewsBox = $(this).find('.homework-Reviews'),
 			        _audioBg = $(this).find('.homework-audio-box'),
 				    _audioTime = '';
+				//判断是否有音频元素存在
+				if( !_audio ){
+                  return false;
+				}
 
 			  	setTimeout(function(){
 			  	    var time = _audio.duration;
