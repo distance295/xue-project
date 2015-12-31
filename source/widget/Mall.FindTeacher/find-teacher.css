@@ -138,6 +138,10 @@
   position: relative;
   margin: 17px auto 14px;
 }
+.find-teacher-photo {
+  width: 200px;
+  height: 200px;
+}
 .find-teacher-hover {
   position: absolute;
   width: 200px;
