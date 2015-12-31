@@ -23,7 +23,7 @@
 	<script type="text/javascript" src="../Module.Modal/Modal.js"></script>	
 	<script type="text/javascript">
 // 欢迎信息
-function informationGuid(){
+function welcomeFormList(){
 	$.ajax({
 		type: "get",
 		url: "setting.html",
@@ -42,7 +42,7 @@ function informationGuid(){
 	});
 }
 // 完善信息
-function welcomeFormList(){
+function informationGuid(){
 	$.ajax({
 		type: "get",
 		url: "welcomeForm.html",
@@ -81,7 +81,7 @@ function showFollowList(cur_grade){
 	});
 }
 $(function(){
-	welcomeFormList();
+	informationGuid();
 })
 </script>
 </body>
