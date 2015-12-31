@@ -4,7 +4,7 @@
 
 $(function(){
     var $body = $('body');
-    var addressInput = '#realname, #add_province, #add_city, #address, #zipcode, #phone';
+    var addressInput = '#realname, #add_province, #add_city,#add_country #address, #zipcode, #phone';
 //提交生成收货地址列表
     function saveNewAddress(inputs){
         var input = inputs || $(addressInput);
