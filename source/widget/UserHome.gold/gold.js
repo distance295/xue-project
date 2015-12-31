@@ -497,6 +497,7 @@ $(function(){
                 $presentNum.html(piece);
                 $pig.html(gold * piece);
                 $(presentAdd).css({'background-color':'#b5b5b5'});
+                $(presentDec).css({'background-color':'#3398cc'});
             }
             else{
                 $presentNum.html(num + 1);
