@@ -9,8 +9,7 @@ $(function(){
         $liveScrollBtn.removeClass('live-scroll-btn-on').eq(index).addClass('live-scroll-btn-on');
         $('.live-scroll-box-container').animate({top:(-1*291*index) + 'px'},300)
     });
-    var $liveCourseHover = $('.live-course-hover');
-    $liveCourseHover.on({
+    $('body').on({
         mouseenter:function(){
             $(this).find('.live-course-title').stop().animate({"height":80},300);
             $(this).find('.live-course-show-title').stop().fadeOut(300);
@@ -21,7 +20,7 @@ $(function(){
             $(this).find('.live-course-show-title').stop().fadeIn(300);
             $(this).find('.live-course-content').stop().fadeOut(300);
         }
-    });
+    },'.live-course-hover');
     var $liveCourseContent = $('.live-course-content');
     $liveCourseContent.each(function(){
         var maxwidth=47;
