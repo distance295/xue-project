@@ -37,9 +37,12 @@ $(function(){
     });
     var $ftname = $('.find-teacher-name');
     $ftname.each(function(){
-        if($(this).text().length == 5){
-            $(this).css({'font-size':'22px'});
+        var maxwidth=4;
+        if($(this).text().length>maxwidth){
+            $(this).text($(this).text().substring(0,maxwidth));
+            $(this).html($(this).html()+'...');
         }
     })
+
 });
 
