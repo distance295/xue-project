@@ -689,7 +689,7 @@ fresh.comment = fresh.comment || {};
                     $('#fresh-dialog-verificationCode').modal('show');
                     fc.changeVerificationImg('verificationImg');
                     //点击验证码弹出层中的确定按钮
-                    $('body').on('click' , '.fresh-dialog-sure-btn a' , function(){
+                    $('body').off('click').on('click' , '.fresh-dialog-sure-btn a' , function(){
                         if( $(this).hasClass('fresh-dialog-btn-disabled') ){
                             return false;
                         }
