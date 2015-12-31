@@ -10,7 +10,7 @@
     <div class="phone-user">
         <p>当前手机号：</p>
         <strong id="tel">182****2367</strong>
-        <input id="tel_input" name="tel" type="text" style="display:none" value=""/>
+        <input id="tel_input" name="tel" type="text" style="display:none" value="18245108643"/>
     </div>
 
     <div>
