@@ -60,6 +60,7 @@ $(function(){
                 if(result.type === 1){
                     $(tp).prependTo('.gold_new_address');
                     $(".present-address-new").removeClass('present-address-focus');
+                    $('.add-opt input').attr('value','');
                 }else if(result.type === 2){
                     $('#addid_'+data.id).parent().html(tp);
                 }
