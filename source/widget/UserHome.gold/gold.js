@@ -4,7 +4,7 @@
 
 $(function(){
     var $body = $('body');
-    var addressInput = '#realname, #add_province, #add_city, #address, #zipcode, #phone';
+    var addressInput = '#realname, #add_province, #add_city,#add_country #address, #zipcode, #phone';
 //提交生成收货地址列表
     function saveNewAddress(inputs){
         var input = inputs || $(addressInput);
@@ -60,6 +60,7 @@ $(function(){
                 if(result.type === 1){
                     $(tp).prependTo('.gold_new_address');
                     $(".present-address-new").removeClass('present-address-focus');
+                    $(addressInput).val('');
                 }else if(result.type === 2){
                     $('#addid_'+data.id).parent().html(tp);
                 }
@@ -497,6 +498,7 @@ $(function(){
                 $presentNum.html(piece);
                 $pig.html(gold * piece);
                 $(presentAdd).css({'background-color':'#b5b5b5'});
+                $(presentDec).css({'background-color':'#3398cc'});
             }
             else{
                 $presentNum.html(num + 1);
@@ -514,11 +516,13 @@ $(function(){
             {
                 $presentNum.html(num);
                 $pig.html(gold);
-
+                $(presentDec).css({'background-color':'#b5b5b5'});
+                $(presentAdd).css({'background-color':'#3398cc'});
             }else if(num == 2){
                 $presentNum.html(num - 1);
                 $pig.html(gold * (num - 1));
                 $(presentDec).css({'background-color':'#b5b5b5'});
+                $(presentAdd).css({'background-color':'#3398cc'});
             }
             else{
                 $presentNum.html(num - 1);
