@@ -36,24 +36,30 @@ function orderTab(ordertype,page){
 }
 
 //点击取消订单
-$(".del").click(function() {
+function orderDel() {
     var $p = $(this).parents('.ao-details');
     var $this = $(this);
-    $.ajax({
-        type: "post",
-        url: "/MyOrders/ajaxCancelOrder/",
-        data: "orderHref" + $this.attr("href"),
-        dataType: "json",
-        success: function() {
-            $p.slideUp(300, function() {
-                $p.remove();
-            });
-        },
-        error:function() {
-            alert("请求失败");
-        }
-    });
-});
+    var href = $this.attr("href");
+    if (confirm("确认删除该订单吗？")) {
+        $.ajax({
+            type: "post",
+            url: "/MyOrders/ajaxCancelOrder/",
+            data: "orderHref" + href,
+            dataType: "json",
+            success: function(result) {
+                if (result.sign == 1) {
+                    $p.slideUp(300, function() {
+                        $p.remove();
+                    });
+                } else {
+                    alert(result.msg);
+                }
+            }
+        });
+    }else{
+        return false;
+    }
+}
 
 //调用模态框js
 function orderModal(){

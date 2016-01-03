@@ -83,7 +83,7 @@
                         <a class="btn btn-danger" href="#">立即支付</a>
                         <span>
                             <a href="#">查看详情</a>
-                            <a class="del" href="#">取消订单</a>
+                            <a class="del" onclick="orderDel()" href="#">取消订单</a>
                         </span>
                     </div>
                 </li>
@@ -188,7 +188,7 @@
                     <div class="ao-operation">
                         <a class="btn btn-info" href="#">查看详情</a>
                         <span>
-                            <a href="#">取消订单</a>
+                            <a class="del" href="#">取消订单</a>
                         </span>
                     </div>
                 </li>
