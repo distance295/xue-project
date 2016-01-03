@@ -166,3 +166,173 @@
     };
 
 })(jQuery);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//var xue = xue || {};
+//xue.follow = xue.follow || function(e){
+//    var _url = $(e).data().url;
+//	var _type = $(e).data().type;
+//	var _params = $(e).data().params + '&type=' + _type;
+//    this.opt = {
+//        url : _url,
+//        type : _type,
+//        params : _params,
+//        goto : 'http://login.xueersi.com/user/login/aHR0cDovL3d3dy54dWVlcnNpLmNvbS8='
+//    };
+//};
+//(function(){
+//    var follow = xue.follow;
+//    follow.get = function(){
+//        var that = this;
+//        $.ajax({
+//			type: "post",
+//            url: that.opt.url,
+//            timeout: 7000,
+//            dataType: 'json',
+//            data: that.opt.params,
+//            success: function(msg) {
+//                if (msg.sign == 2) {
+//                    window.location.href= that.opt.goto;
+//                }else if(msg.sign == 1) {
+//                    switch(that.opt.type){
+//                        case 1:
+//                            $(e).removeClass('add');
+//                            $(e).addClass('follow_hidden');
+//                            $(e).html('已关注');
+//                            break;
+//                        case 2:
+//                            $(e).html('<em>+</em>关注');
+//                            $(e).removeClass('follow_cancel');
+//                            $(e).addClass('add');
+//                            $(e).data({type:3});
+//                            break;
+//                        case 3:
+//                            $(e).html('<em class="addsucess"></em> 已关注');
+//                            $(e).removeClass('add');
+//                            $(e).addClass('follow_cancel');
+//                            $(e).data({type:2});
+//                            break;
+//                    }
+//                }else{
+//                    alert(msg.msg);
+//                }
+//            },
+//            error: function() {
+//                alert('数据读取错误..');
+//            }
+//		});
+//    };
+//})();
+//
+//$(function(){
+//    $('body').off('click', '.ui_follow').on('click', '.ui_follow', function(){
+//	    if($(this).hasClass('add')){
+//			follow(this);
+//		}
+//	});
+//	$('body').off('click', '.ui_follow.follow_cancel a').on('click', '.ui_follow.follow_cancel a', function(){
+//	    var that = $(this).parent();
+//		follow(that);		
+//	});
+//});
+//
+//
+//	function follow(e){
+//		var _url = $(e).data().url;
+//		var _type = $(e).data().type;
+//		var _params = $(e).data().params + '&type=' + _type;
+//
+//	}
+//
+//
+
+
+
+
+
+
+
+
+
+
+/*
+
+<div class="ui_follow follow_cancel" data-url="/teachers/follow/" data-value="337" data-params="urlStr=337&amp;urlKey=f72b3c4ddfdf5d17524b206819efdcc2" data-type="2"> 
+							<em class="addsucess"></em>
+							已关注 <i class="line">|</i>
+							<a href="javascript:void(0)" class="">取消</a>
+						</div>
+
+*/
+
+
+//
+//$('body').off('click', '.ui_follow').on('click', '.ui_follow', function(){
+//			    if($(this).hasClass('add')){
+//					follow(this);
+//				}
+//			});
+//			$('body').off('click', '.ui_follow.follow_cancel a').on('click', '.ui_follow.follow_cancel a', function(){
+//			    var that = $(this).parent();
+//				follow(that);		
+//			});
+//			function follow(e){
+//				var _url = $(e).data().url;
+//				var _type = $(e).data().type;
+//				var _params = $(e).data().params + '&type=' + _type;
+//				$.ajax({
+//					type: "post",
+//						url: _url,
+//						timeout: 7000,
+//						dataType: 'json',
+//						data: _params,
+//						success: function(msg) {
+//							if (msg.sign == 2) {
+//								window.location.href='http://login.xueersi.com/user/login/aHR0cDovL3d3dy54dWVlcnNpLmNvbS90ZWFjaGVyLw==';
+//							}else if(msg.sign == 1) {
+//								switch(_type){
+//									case 1:
+//										$(e).removeClass('add');
+//										$(e).addClass('follow_hidden');
+//										$(e).html('已关注');
+//										break;
+//									case 2:
+//										$(e).html('<em>+</em>关注');
+//										$(e).removeClass('follow_cancel');
+//										$(e).addClass('add');
+//										$(e).data({type:3});
+//										break;
+//									case 3:
+//										$(e).html('<em class="addsucess"></em> 已关注 <i class="line">|</i> <a class="" href="javascript:void(0);">取消</a>');
+//										$(e).removeClass('add');
+//										$(e).addClass('follow_cancel');
+//										$(e).data({type:2});
+//										break;
+//								}
+//							}else{
+//								alert(msg.msg);
+//							}
+//						},
+//						error: function() {
+//							alert('数据读取错误..');
+//						}
+//				});
+//			}
