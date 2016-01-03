@@ -33,9 +33,10 @@ fCheck.clearTips = function(select){
 $(function() {
     $(".btn-pay").click(function() {
         if ($(".studyCardPwd").val() == '') {
-              fCheck.setTips(".studyCardPwd-warning",'请输入学习卡密码');
+            fCheck.setTips(".studyCardPwd-warning",'请输入学习卡密码');
             $(".studyCardPwd").focus(function() {
-              fCheck.clearTips(".studyCardPwd-warning");});
+              fCheck.clearTips(".studyCardPwd-warning");
+            });
             return false;
         }
 
@@ -46,6 +47,7 @@ $(function() {
             dataType: 'json',
             success: function(d) {
                 if (d.sign == 1) {
+                    fCheck.clearTips(".studyCardPwd-warning");
                     alert('学习卡充值成功');
                     location.href = "/MyPayCenters/recharge";
                 } else {
