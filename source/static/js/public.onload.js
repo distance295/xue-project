@@ -31,6 +31,8 @@ $(function(){
     try{
         sideNav.setActive(PAGE_CONFIG.ID);
     }catch(e){}
+    
+    $('.ui_follow').follow();
 //    try{
 //        subNav.setActive(PAGE_CONFIG.SUBJECT);
 //    }catch(e){}
