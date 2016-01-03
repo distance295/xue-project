@@ -36,7 +36,7 @@ function orderTab(ordertype,page){
 }
 
 //点击取消订单
-function orderDel() {
+$("body").on("click",'.del', function(){
     var $p = $(this).parents('.ao-details');
     var id = $(this).data('id');
     var number = $(this).data('num');
@@ -44,7 +44,7 @@ function orderDel() {
         $.ajax({
             type: "post",
             url: "/MyOrders/ajaxCancelOrder/",
-            data: 'orderId=' + id + 'orderNumber=' + number,
+            data: 'id=' + id + '&number=' + number,
             dataType: "json",
             success: function(result) {
                 if (result.sign == 1) {
@@ -52,6 +52,9 @@ function orderDel() {
                         $p.remove();
                     });
                 } else {
+                    if(result.sign == 2){
+                        window.location.href = result.msg;
+                    }
                     alert(result.msg);
                 }
             }
@@ -59,7 +62,7 @@ function orderDel() {
     }else{
         return false;
     }
-}
+})
 
 //调用模态框js
 function orderModal(){

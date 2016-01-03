@@ -19,16 +19,18 @@ fCheck.clearTips = function(select){
 $(function() {
     $(".btn-certificate").click(function() {
         if ($(".serialNo").val() == '') {
-              fCheck.setTips(".serialNo-warning",'请输入听课证卡号');
+            fCheck.setTips(".serialNo-warning",'请输入听课证卡号');
             $(".serialNo").focus(function() {
-              fCheck.clearTips(".serialNo-warning");});
+              fCheck.clearTips(".serialNo-warning");
+            });
             return false;
         }
 
         if ($(".serialPass").val() == '') {
-              fCheck.setTips(".serialPass-warning",'请输入听课证密码');
+            fCheck.setTips(".serialPass-warning",'请输入听课证密码');
             $(".serialPass").focus(function() {
-              fCheck.clearTips(".serialPass-warning");});
+              fCheck.clearTips(".serialPass-warning");
+            });
             return false;
         }
 
@@ -39,6 +41,7 @@ $(function() {
             dataType: 'json',
             success: function(d) {
               if (d.sign == 1) {
+                  fCheck.clearTips(".serialNo-warning,.serialPass-warning");
                   alert('听课证激活成功');
                   location.href = "/MyCards/classCard";
               } else {

@@ -19,16 +19,18 @@ fCheck.clearTips = function(select){
 $(function() {
     $(".btn-bindcard").click(function() {
         if ($(".bindcardNo").val() == '') {
-              fCheck.setTips(".bindcardNo-warning",'请输入课程绑定卡卡号');
+            fCheck.setTips(".bindcardNo-warning",'请输入课程绑定卡卡号');
             $(".bindcardNo").focus(function() {
-              fCheck.clearTips(".bindcardNo-warning");});
+              fCheck.clearTips(".bindcardNo-warning");
+            });
             return false;
         }
 
         if ($(".bindcardPass").val() == '') {
-              fCheck.setTips(".bindcardPass-warning",'请输入课程绑定卡密码');
+            fCheck.setTips(".bindcardPass-warning",'请输入课程绑定卡密码');
             $(".bindcardPass").focus(function() {
-              fCheck.clearTips(".bindcardPass-warning");});
+              fCheck.clearTips(".bindcardPass-warning");
+            });
             return false;
         }
 
@@ -42,6 +44,7 @@ $(function() {
                     window.location.href = d.msg;
                 } 
                 if (d.sign == 1) {
+                    fCheck.clearTips(".bindcardNo-warning,.bindcardPass-warning");
                     alert('课程绑定卡激活成功');
                     location.href = "/MyCards/courseCard";
                 } else {
