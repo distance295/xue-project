@@ -8,6 +8,7 @@ fis.set('project.ignore', [
     'widget/**/*.md',
     'widget/Module.Follow/follow_old.js',
     'widget/Module.Follow/follow_back.js',
+    'widget/Module.Paginator/*',
     '/config/**',
     '/pages/**',
     '/components/**',
