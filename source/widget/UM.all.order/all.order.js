@@ -35,6 +35,26 @@ function orderTab(ordertype,page){
     });
 }
 
+//点击取消订单
+$(".del").click(function() {
+    var $p = $(this).parents('.ao-details');
+    var $this = $(this);
+    $.ajax({
+        type: "post",
+        url: "/MyOrders/ajaxCancelOrder/",
+        data: "orderHref" + $this.attr("href"),
+        dataType: "json",
+        success: function() {
+            $p.slideUp(300, function() {
+                $p.remove();
+            });
+        },
+        error:function() {
+            alert("请求失败");
+        }
+    });
+});
+
 //调用模态框js
 function orderModal(){
     $.ajax({
