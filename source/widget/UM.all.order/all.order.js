@@ -40,6 +40,7 @@ $("body").on("click",'.del', function(){
     var $p = $(this).parents('.ao-details');
     var id = $(this).data('id');
     var number = $(this).data('num');
+    //var itemNum = Number($('.current .order-num').text());
     if (confirm("确认删除该订单吗？")) {
         $.ajax({
             type: "post",
@@ -51,6 +52,8 @@ $("body").on("click",'.del', function(){
                     $p.slideUp(300, function() {
                         $p.remove();
                     });
+                    //itemNum -= 1;
+                    //$('.current .order-num').html(itemNum);
                 } else {
                     if(result.sign == 2){
                         window.location.href = result.msg;
