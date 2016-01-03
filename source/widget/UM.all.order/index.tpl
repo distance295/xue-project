@@ -8,8 +8,8 @@
 
 <div class="ao-content">
     <ul id="order_tab" class="ao-list">
-        <li class="current" data-pages="" data-params="1"><a href="#">全部订单 32</a></li>
-        <li data-pages="" data-params="2"><a href="#">已完成 19</a></li>
+        <li class="current" data-pages="" data-params="1"><a href="#">全部订单<em class="order-num">19</em></a></li>
+        <li data-pages="" data-params="2"><a href="#">已完成<em>19</em></a></li>
         <li data-pages="" data-params="3"><a href="#">待支付 22</a></li>
         <li data-pages="" data-params="4"><a href="#">已取消 11</a></li>
         <li data-pages="" data-params="5"><a href="#">待审核 10</a></li>
