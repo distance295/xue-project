@@ -54,24 +54,24 @@ personCenter.opt={
 //    $(this).attr('title','最近3个月消耗了'+num+'金币');
 //});
 
-$(personCenter.opt.visitGuy).on('mouseover', function(){
-        //鼠标划过显示用户页卡，蓝V和红V用户可点击，点击后跳转到客人页
-        var that = this;
-        if($(that).hasClass('blueRed-v')) {
-            var nickname = $(that).find(personCenter.opt.visitName);
-            nickname.css({
-                'color': '#1e89e0'
-            });
-            $(that).on('click', function () {
-                window.location.href = '###';
-            });
-        }
-    });
-$(personCenter.opt.visitGuy).on('mouseout', function(){
-    var that = this;
-    var nickname = $(that).find(personCenter.opt.visitName);
-    nickname.css({'color': '#222'});
-});
+//$(personCenter.opt.visitGuy).on('mouseover', function(){
+//        //鼠标划过显示用户页卡，蓝V和红V用户可点击，点击后跳转到客人页
+//        var that = this;
+//        if($(that).hasClass('blueRed-v')) {
+//            var nickname = $(that).find(personCenter.opt.visitName);
+//            nickname.css({
+//                'color': '#1e89e0'
+//            });
+//            $(that).on('click', function () {
+//                window.location.href = '###';
+//            });
+//        }
+//    });
+//$(personCenter.opt.visitGuy).on('mouseout', function(){
+//    var that = this;
+//    var nickname = $(that).find(personCenter.opt.visitName);
+//    nickname.css({'color': '#222'});
+//});
 
 /* 点击"老师介绍"弹出视频 */
 
