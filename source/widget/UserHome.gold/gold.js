@@ -316,10 +316,6 @@ $(function(){
             piece = parseInt($redCardPiece.html()),
             $redCardNum = $('.red-card-num'),
             exMax = $('#exchange_max').val();
-        console.log($redCardPiece.length)
-        console.log(piece)
-        console.log($('body').find('.red-card-piece em').length);
-        console.log($('body').find('.red-card-piece em').html());
             //exMax = 19;
         $body.on("click",redCardAdd,function(){
             //console.log($pig.length);
