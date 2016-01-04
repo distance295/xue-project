@@ -338,7 +338,6 @@ $(function(){
             else {
                 $redCardNum.html(num + 1);
                 $rcig.html(gold * (num + 1));
-                //console.log($(redCardAdd))
                 $(redCardAdd).css({'background-color': '#3398cc'});
                 if (exMax > 1 || num > 1) {
                     $(redCardDec).css({'background-color': '#3398cc'});
@@ -353,10 +352,9 @@ $(function(){
                 $rcig.html(gold);
                 $(redCardDec).css({'background-color':'#b5b5b5'});
                 $(redCardAdd).css({'background-color':'#3398cc'});
-            }else if (num >= piece - 1) {
-                $redCardNum.html(piece);
-                $rcig.html(gold * piece);
-                $(redCardAdd).css({'background-color': '#b5b5b5'});
+                if(piece == 1){
+                    $(redCardAdd).css({'background-color':'#b5b5b5'});
+                }
             }else if(num == 2){
                 $redCardNum.html(num - 1);
                 $rcig.html(gold * (num - 1));
