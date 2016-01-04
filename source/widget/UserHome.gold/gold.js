@@ -318,6 +318,7 @@ $(function(){
             exMax = $('#exchange_max').val();
             //exMax = 19;
         $body.on("click",redCardAdd,function(){
+            console.log(piece)
             //console.log($pig.length);
             var num = parseInt($redCardNum.html());
             if (num == 0 || num < 0) {
@@ -346,6 +347,8 @@ $(function(){
             }
         });
         $body.on("click",redCardDec,function(){
+            console.log(piece);
+            console.log($('.red-card-piece em').html())
             var num = parseInt($redCardNum.html());
             if(num == 1)
             {
