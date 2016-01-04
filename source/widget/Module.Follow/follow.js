@@ -50,11 +50,11 @@
             return false;
         }
         $.ajax({
-            type: "get",
+            type: "post",
             url: settings.url,
             timeout: 7000,
             dataType: 'json',
-            data: settings.params,
+            data: settings.params  + '&type=' + settings.type,
             success: function(msg) {
                 if (msg.sign == 2) {
                     window.location.href = msg.msg;
