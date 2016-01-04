@@ -317,12 +317,11 @@ $(function(){
             $redCardNum = $('.red-card-num'),
             exMax = $('#exchange_max').val();
         console.log($redCardPiece.length)
+        console.log(piece)
+        console.log($('body').find('.red-card-piece em').length);
+        console.log($('body').find('.red-card-piece em').html());
             //exMax = 19;
         $body.on("click",redCardAdd,function(){
-            var
-                $redCardPiece = $('.red-card-piece em'),
-                piece = parseInt($redCardPiece.html()),
-            console.log(piece)
             //console.log($pig.length);
             var num = parseInt($redCardNum.html());
             if (num == 0 || num < 0) {
