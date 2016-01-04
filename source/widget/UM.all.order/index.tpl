@@ -83,7 +83,7 @@
                         <a class="btn btn-danger" href="#">立即支付</a>
                         <span>
                             <a href="#">查看详情</a>
-                            <a class="del" data-num="123" href="javascript:void(0)">取消订单</a>
+                            <a class="del" data-num="123" href="#">取消订单</a>
                         </span>
                     </div>
                 </li>
