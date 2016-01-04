@@ -6,6 +6,10 @@
     <meta name="keywords" content="">
     <!-- 这是CSS库文件 -->
     <link href="../lib/bootstrap/3.3.5-custom/css/bootstrap.min.css" rel="stylesheet"><!--ignore-->
+    <!--[if lt IE 9]>
+      <script src="../../lib/bootstrap/3.3.5-custom/js/html5shiv.min.js"></script>
+      <script src="../../lib/bootstrap/3.3.5-custom/js/respond.min.js"></script>
+    <![endif]-->
     <link rel="stylesheet" href="../lib/Font-Awesome/4.4.0/css/font-awesome.css"><!--ignore-->
     <link rel="stylesheet" href="../static/css/default.css"><!--ignore-->
     <!-- 这是当前模块样式文件 -->
