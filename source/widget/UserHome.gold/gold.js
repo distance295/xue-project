@@ -346,6 +346,8 @@ $(function(){
             }
         });
         $body.on("click",redCardDec,function(){
+            console.log(piece);
+            console.log($('.red-card-piece em').html());
             var num = parseInt($redCardNum.html());
             if(num == 1)
             {
