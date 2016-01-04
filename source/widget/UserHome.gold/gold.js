@@ -351,17 +351,17 @@ $(function(){
             {
                 $redCardNum.html(num);
                 $rcig.html(gold);
-                $(redCardDec).css({'background-color':'#b5b5b5'});
-                $(redCardAdd).css({'background-color':'#3398cc'});
-            }else if(num == 2){
-                $redCardNum.html(num - 1);
-                $rcig.html(gold * (num - 1));
+                console.log(1);
                 $(redCardDec).css({'background-color':'#b5b5b5'});
                 if(piece == 1){
                     $(redCardAdd).css({'background-color':'#b5b5b5'});
                 }else {
                     $(redCardAdd).css({'background-color':'#3398cc'});
                 }
+            }else if(num == 2){
+                $redCardNum.html(num - 1);
+                $rcig.html(gold * (num - 1));
+                $(redCardDec).css({'background-color':'#b5b5b5'});
             }
             else{
                 $redCardNum.html(num - 1);
