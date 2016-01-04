@@ -353,6 +353,10 @@ $(function(){
                 $rcig.html(gold);
                 $(redCardDec).css({'background-color':'#b5b5b5'});
                 $(redCardAdd).css({'background-color':'#3398cc'});
+            }else if (num >= piece - 1) {
+                $redCardNum.html(piece);
+                $rcig.html(gold * piece);
+                $(redCardAdd).css({'background-color': '#b5b5b5'});
             }else if(num == 2){
                 $redCardNum.html(num - 1);
                 $rcig.html(gold * (num - 1));
