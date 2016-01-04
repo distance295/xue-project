@@ -1,6 +1,8 @@
 <!--
     @require topbar.less
     @require ../Module.Dropdown/dropdown.js
+    @require ../Module.Follow/follow.less
+    @require ../Module.Follow/follow.js    
 -->
 
 <!-- 登录后 -->
@@ -8,7 +10,7 @@
     <div class="ui-header-menu">
         <ul class="topleft-bar pull-left list-unstyled breadcrumb">
             <li class="">
-                <em class="text-danger">你好，圣诞老人</em>
+                <em class="text-danger">你好，圣诞老人圣诞老人圣诞老人圣诞老人圣诞老人圣诞老人</em>
                 <a href="#">退出</a>
             </li>
             <li class="ui-dropdown">
@@ -42,6 +44,7 @@
         <ul class="topright-bar pull-right pull-right breadcrumb">
             <li><a href="#">网校首页</a></li>
             <li><a href="#">个人中心</a></li>
+            <li><a href="#">我的主页</a></li>
             <li><a href="#">购物车 <em class="text-danger">2</em></a></li>
             <li><a href="#">订单</a></li>
             <li class="ui-dropdown">

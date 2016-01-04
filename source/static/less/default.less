@@ -44,11 +44,19 @@ em {
 .breadcrumb{
     margin-bottom: 5px;
 }
-a,button{
+a,button,.btn{
     outline:none;
+    outline-offset:0;
     &:focus,&:active,&.active{
         outline: none;
+        outline-offset:0;
     }
+}
+.list-group-item:first-child,.list-group-item:last-child{
+    border-radius: 0 !important;
+}
+.list-group-item{
+    padding: 10px 19px !important;
 }
 .label {
     font-weight: 500;
