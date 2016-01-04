@@ -75,7 +75,7 @@ function saveNewAddress(inputs) {
             + '  <span class="addr_tel">$phone$</span>' 
             + '</div>' 
             + '<div class="ship_btns">' 
-            + '  <a class="setdefault_consignee" href="#none">设为默认地址</a>' 
+            + '  <a class="setdefault_consignee" href="/MyInfos/setDefaultAddress/$addId$">设为默认地址</a>' 
             + '  <a class="edit_consignee" href="javascript:updateAddress($id$);">编辑</a>'
             + '  <a class="del_consignee" href="#none" onclick="delAddress($id$)">删除</a>' 
             + '</div>';
@@ -113,6 +113,7 @@ function saveNewAddress(inputs) {
             tp = tp.replace(/\$province_text\$/g, data.province_text);
             tp = tp.replace(/\$city_text\$/g, data.city_text)
             tp = tp.replace(/\$country_text\$/g, data.country_text);
+            tp = tp.replace(/\$addId\$/g, _id);
             var _addid = $('#addid_' + data.id).parent();
             if (result.type === 1) {
                 $('<li id="' + _id + '">' + tp + '</li>').prependTo('ul#shopAdderTo');
