@@ -353,7 +353,9 @@ $(function(){
                 $rcig.html(gold);
                 $(redCardDec).css({'background-color':'#b5b5b5'});
                 if(piece == 1){
+                    console.log(1);
                     $(redCardAdd).css({'background-color':'#b5b5b5'});
+
                 }else {
                     $(redCardAdd).css({'background-color':'#3398cc'});
                 }
