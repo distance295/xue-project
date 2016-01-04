@@ -45,7 +45,7 @@
         var data = that.data();
         var settings = $.extend({}, defaults, data);
         settings.tp = (that.find('a.follow_add').length > 0) ? 'add' : 'cancel';
-        
+//        console.log('data-type: ' + settings.type);
         if(!settings.url){
             return false;
         }
@@ -66,7 +66,7 @@
                         btn.removeClass('follow_add btn-warning').addClass('btn-default');
                         var cls = btn.attr('class');
                         var tpl = '<span class="' + cls + '">已关注</span> ';
-                        if(settings.state == 1){
+                        if(settings.state == 2){
                             tpl += '<a href="###" class="' + btnCls + ' btn-link text-primary follow_cancel">取消</a>';
                         }
                         that.html(tpl);
@@ -80,6 +80,11 @@
                         that.html(tpl);
                         follows.unbind.call(that.find('.follow_cancel'));
                     }
+                    var _type = data.type == 1 ? 2 : 1;
+//                    console.log('data: ' + data.type);
+//                    console.log('type: ' + _type);
+                    that.data('type', _type);
+                    
                     return;
                 }else{
                     alert(msg.msg);
@@ -93,7 +98,7 @@
     var follows = {
         // 初始化
         init : function(options){
-            console.log('init:');
+//            console.log('init:');
         },
         bind : function(options){
             var that = $(this);
