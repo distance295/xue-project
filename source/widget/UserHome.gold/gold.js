@@ -351,7 +351,7 @@ $(function(){
             {
                 $redCardNum.html(num);
                 $rcig.html(gold);
-                console.log(1);
+                console.log(piece);
                 $(redCardDec).css({'background-color':'#b5b5b5'});
                 if(piece == 1){
                     $(redCardAdd).css({'background-color':'#b5b5b5'});
