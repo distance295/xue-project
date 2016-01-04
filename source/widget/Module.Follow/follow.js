@@ -57,7 +57,7 @@
             data: settings.params,
             success: function(msg) {
                 if (msg.sign == 2) {
-                    window.location.href = settings.goto;
+                    window.location.href = msg.msg;
                 }else if(msg.sign == 1) {
                     var btnCls = that.find('.follow_add').hasClass('btn') ? 'btn' : 'btn-sm';
                     var btn = that.find('a');
