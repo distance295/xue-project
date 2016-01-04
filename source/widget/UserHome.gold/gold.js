@@ -316,6 +316,10 @@ $(function(){
             piece = parseInt($redCardPiece.html()),
             $redCardNum = $('.red-card-num'),
             exMax = $('#exchange_max').val();
+        console.log($redCardPiece.length)
+        console.log(piece)
+        console.log($('body').find('.red-card-piece em').length);
+        console.log($('body').find('.red-card-piece em').html());
             //exMax = 19;
         $body.on("click",redCardAdd,function(){
             //console.log($pig.length);
@@ -334,6 +338,7 @@ $(function(){
                 $redCardNum.html(piece);
                 $rcig.html(gold * piece);
                 $(redCardAdd).css({'background-color': '#b5b5b5'});
+                $(redCardDec).css({'background-color':'#b5b5b5'});
             }
             else {
                 $redCardNum.html(num + 1);
@@ -345,11 +350,14 @@ $(function(){
             }
         });
         $body.on("click",redCardDec,function(){
+            console.log(piece);
+            console.log($('.red-card-piece em').html());
             var num = parseInt($redCardNum.html());
             if(num == 1)
             {
                 $redCardNum.html(num);
                 $rcig.html(gold);
+                console.log(piece);
                 $(redCardDec).css({'background-color':'#b5b5b5'});
                 if(piece == 1){
                     $(redCardAdd).css({'background-color':'#b5b5b5'});
@@ -360,7 +368,6 @@ $(function(){
                 $redCardNum.html(num - 1);
                 $rcig.html(gold * (num - 1));
                 $(redCardDec).css({'background-color':'#b5b5b5'});
-                $(redCardAdd).css({'background-color':'#3398cc'});
             }
             else{
                 $redCardNum.html(num - 1);
