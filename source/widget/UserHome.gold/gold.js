@@ -316,8 +316,12 @@ $(function(){
             piece = parseInt($redCardPiece.html()),
             $redCardNum = $('.red-card-num'),
             exMax = $('#exchange_max').val();
+        console.log($redCardPiece.length)
             //exMax = 19;
         $body.on("click",redCardAdd,function(){
+            var
+                $redCardPiece = $('.red-card-piece em'),
+                piece = parseInt($redCardPiece.html()),
             console.log(piece)
             //console.log($pig.length);
             var num = parseInt($redCardNum.html());
