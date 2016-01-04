@@ -346,14 +346,11 @@ $(function(){
             }
         });
         $body.on("click",redCardDec,function(){
-            console.log(piece);
-            console.log($('.red-card-piece em').html());
             var num = parseInt($redCardNum.html());
             if(num == 1)
             {
                 $redCardNum.html(num);
                 $rcig.html(gold);
-                console.log(piece);
                 $(redCardDec).css({'background-color':'#b5b5b5'});
                 if(piece == 1){
                     $(redCardAdd).css({'background-color':'#b5b5b5'});
