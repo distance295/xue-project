@@ -360,6 +360,9 @@ $(function(){
                 $redCardNum.html(num - 1);
                 $rcig.html(gold * (num - 1));
                 $(redCardDec).css({'background-color':'#b5b5b5'});
+                if(piece == 1){
+                    $(redCardAdd).css({'background-color':'#b5b5b5'});
+                }
                 $(redCardAdd).css({'background-color':'#3398cc'});
             }
             else{
