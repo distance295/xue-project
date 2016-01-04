@@ -89,6 +89,7 @@
   bottom: 0;
   background-color: #000;
   opacity: 0.5;
+  filter:alpha(opacity=50);
 }
 .live-course-show-title {
   height: 30px;
