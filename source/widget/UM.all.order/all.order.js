@@ -37,12 +37,13 @@ function orderTab(ordertype,page){
 
 //点击取消订单
 $("body").on("click",'.del', function(){
-    var $p = $(this).parents('.ao-details');
-    var id = $(this).data('id');
-    var number = $(this).data('num');
+    //var $p = $(this).parents('.ao-details');
+    //var id = $(this).data('id');
+    //var number = $(this).data('num');
     //var itemNum = Number($('.current .order-num').text());
     if (confirm("确认删除该订单吗？")) {
-        $.ajax({
+        return true;
+/*        $.ajax({
             type: "post",
             url: "/MyOrders/ajaxCancelOrder/",
             data: 'id=' + id + '&number=' + number,
@@ -61,7 +62,7 @@ $("body").on("click",'.del', function(){
                     alert(result.msg);
                 }
             }
-        });
+        });*/
     }else{
         return false;
     }
