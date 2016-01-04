@@ -8,8 +8,8 @@
 
 <div class="ao-content">
     <ul id="order_tab" class="ao-list">
-        <li class="current" data-pages="" data-params="1"><a href="#">全部订单 32</a></li>
-        <li data-pages="" data-params="2"><a href="#">已完成 19</a></li>
+        <li class="current" data-pages="" data-params="1"><a href="#">全部订单<em class="order-num">19</em></a></li>
+        <li data-pages="" data-params="2"><a href="#">已完成<em>19</em></a></li>
         <li data-pages="" data-params="3"><a href="#">待支付 22</a></li>
         <li data-pages="" data-params="4"><a href="#">已取消 11</a></li>
         <li data-pages="" data-params="5"><a href="#">待审核 10</a></li>
@@ -83,7 +83,7 @@
                         <a class="btn btn-danger" href="#">立即支付</a>
                         <span>
                             <a href="#">查看详情</a>
-                            <a href="#">取消订单</a>
+                            <a class="del" data-num="123" href="javascript:void(0)">取消订单</a>
                         </span>
                     </div>
                 </li>
@@ -188,7 +188,7 @@
                     <div class="ao-operation">
                         <a class="btn btn-info" href="#">查看详情</a>
                         <span>
-                            <a href="#">取消订单</a>
+                            <a class="del" data-num="23">取消订单</a>
                         </span>
                     </div>
                 </li>

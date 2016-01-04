@@ -19,20 +19,29 @@ $(".hpr-img").on("click",function(){
 $(".hpr-btn").on('click', function(){
     var headId = $(".imghover").data('id');
     var hprSrc = $(".imghover").attr("src");
-    $.ajax({
-        type: "POST",
-        url: "/MyInfos/changeImg",
-        dataType: "JSON",
-        data:'headId=' + headId + '&hprSrc=' + hprSrc,
-        success: function(msg){
-            if(msg.sign == 1){
-                window.location.reload();
-            }
-        },
-        error:function(){  
-            alert("异步失败");  
-        }  
-    });
+    if ($('.hpr-img').hasClass('imghover')) {
+      if(confirm("你是否确定更换推荐头像，若你当前使用的是用3000金币更换的本地头像，更换推荐头像后该头像将无法再次使用？")) {
+          $.ajax({
+              type: "POST",
+              url: "/MyInfos/changeImg",
+              dataType: "JSON",
+              data:'headId=' + headId + '&hprSrc=' + hprSrc,
+              success: function(msg){
+                  if(msg.sign == 1){
+                      window.location.reload();
+                  }
+              },
+              error:function(){  
+                  alert("异步失败");  
+              }  
+          });
+          return true;
+      } else {
+          return false;
+      }
+    }else{
+      return false;
+    }
 });
 
 /* =====================自定义上传头像===================== */

@@ -20,10 +20,9 @@
                 </li>
             </ul>
         </div>
-        <div>
-            <span data-type="3" data-params="urlStr=840&amp;urlKey=af0030c654f79b371438ebdf40d4bead" data-value="840" data-url="/teachers/follow/" class="free-course-attention">
-                <a href="javascript:void(0)" class="btn-sm btn-warning ui_follow "><span class="free-add left">+</span><span class="left">关注</span></a>
-            </span>
+        <div data-type="2" data-state="1" data-params="urlStr=840&amp;urlKey=af0030c654f79b371438ebdf40d4bead" data-value="840" data-url="/data/Module.Follow/follow1.json" class="ui_follow free-course-attention">
+<!--                <a href="javascript:void(0)" class="btn-sm btn-warning follow_add "><span class="free-add left">+</span><span class="left">关注</span></a>-->
+                <span class="btn-sm btn-default">已关注</span> <a href="###" class="btn-sm btn-link text-primary follow_cancel">取消</a>
         </div>
     </div>
     <div class="course-detail">

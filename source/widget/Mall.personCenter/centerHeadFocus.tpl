@@ -21,7 +21,7 @@
         <div class="centerHeader-selfintro">发布网校最新产品上线信息，吐槽在线学习最新热点</div>
 
         <!--1、未关注时-->
-        <div class="centerHeader-notFoucs"><span class="centerHeader-notFoucs-btn btn btn-warning follow_add">+关注</span></div>
+        <div class="centerHeader-notFoucs ui_follow" data-url="/data/Module.Follow/follow1.json" state="1"><a class="centerHeader-notFoucs-btn btn btn-warning follow_add">+关注</a></div>
 
         <!--2、已经关注-->
         <div class="centerHeader-alFocus hide ui_follow"><span class="centerHeader-alFocus-btn btn btn-default">已关注</span><a href="###" class="centerHeader-willFocus-btn btn follow_cancel">取消关注</a></div>

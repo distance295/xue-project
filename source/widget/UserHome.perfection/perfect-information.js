@@ -169,7 +169,8 @@ $.fn.realname = function(){
         $(realname).siblings('.label-value').css('display','block');
         box.parents('.f1').addClass('has-error');
     }else {
-        var reg=/[^\x00-\x80]/;
+        // var reg=/[^\x00-\x80]/;
+        var reg=/^[\u4e00-\u9fa5]+$/;
         if(!reg.test(val)){
             block.html('姓名格式有误');
             box.parents('.f1').addClass('has-error').removeClass('has-success');
