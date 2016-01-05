@@ -68,7 +68,7 @@ $(function(){
                 }
                 $('.info_from').hide();
                 $('.present-exchange').show();
-                if(result.sign === 0){
+                if(result.sign == 0){
                     alert(result.msg);
                 }
             }
