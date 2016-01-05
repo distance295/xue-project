@@ -114,14 +114,14 @@ $(function(){
         if (that.hasClass('none')) {
             return false;
         } else {
-         courses.avatar.toggle(that)     
-     }
- });
+           courses.avatar.toggle(that)     
+       }
+   });
 })
 
 // 随堂测试弹框
-function testLive(){
-    $('.listTest-btn').popover({
+function testLive(dom){
+    $(dom).popover({
         placement: 'top',
         html: true,
         trigger: 'hover',
@@ -130,11 +130,11 @@ function testLive(){
             var listTest_html = $(this).parents('.amount-show').siblings('.listTest-pop').html();
             return listTest_html;
         }
-    });
+    }); 
 }
 // 直播辅导弹框
-function liveHelp(){
-    $('.liveHelp-btn').popover({
+function liveHelp(dom){
+    $(dom).popover({
         placement: 'top',
         html: true,
         trigger: 'hover',
@@ -143,8 +143,9 @@ function liveHelp(){
             var listTest_html = $(this).parents('.amount-show').siblings('.list-help-pop').html();
             return listTest_html;
         }
-    });
+    }); 
 }
+
 // 讲义资料弹框tab事件
 $('body').on('click','.material-wrap .material-tab li',function(){
     var index = $(this).index();
