@@ -13,7 +13,20 @@ $('#head_tab li').click(function(e){
 $(".hpr-img").on("click",function(){
    var url = $(this).attr("src");
    $(this).addClass('imghover').siblings().removeClass("imghover");
-   $("#hp-small img, #hp-middle img, #hp-big img").attr("src",url)
+
+   //40*40
+   var hpsmall = document.getElementById('hp-small');
+   hpsmall.innerHTML = "<img id='img-small' style='width:40px;height:40px;margin: 30px auto 10px;'><span>40*40像素</span>";
+
+   //60*60
+   var hpmiddle = document.getElementById('hp-middle');
+   hpmiddle.innerHTML = "<img id='img-middle' style='width:60px;height:60px;margin: 30px auto 10px;'><span>60*60像素</span>";
+
+   //100*100
+   var hpbig = document.getElementById('hp-big');
+   hpbig.innerHTML = "<img id='img-big' style='width:100px;height:100px;margin: 30px auto 10px;'><span>100*100像素</span>";
+   
+   $("#hp-small img, #hp-middle img, #hp-big img").attr("src",url);
 })
 
 $(".hpr-btn").on('click', function(){
