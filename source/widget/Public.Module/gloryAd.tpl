@@ -2,6 +2,7 @@
     @require glory.less
 -->
 <div class="glory-grades-wrap">
+    <div class="glory-grades-trends-bg"></div>
 	<div class="glory-grades-trends">
 		<div class="trends-title">
             <h3>2015年成绩秀</h3>
