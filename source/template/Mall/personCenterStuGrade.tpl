@@ -3,7 +3,7 @@
 
 <!-- 官方主页展示区 -->
 <div class="centerHeader-stu">	
-	<div class="container bottom m20">
+	<div class="container">
 		<link rel="import" href="../../widget/Mall.personCenter/centerStuGrade.tpl?__inline">
 	</div>
 </div>
