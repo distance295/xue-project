@@ -508,7 +508,12 @@ $(function(){
                 if (exMax > 1 || num > 1) {
                     $(presentDec).css({'background-color': '#3398cc'});
                 }
-            } else if (num >= piece - 1) {
+            }else if(num == 1 || piece == 1){
+                $presentNum.html(num);
+                $pig.html(gold);
+                $(presentAdd).css({'background-color': '#b5b5b5'});
+                $(presentDec).css({'background-color':'#b5b5b5'});
+            }else if (num >= piece - 1) {
                 $presentNum.html(piece);
                 $pig.html(gold * piece);
                 $(presentAdd).css({'background-color': '#b5b5b5'});
