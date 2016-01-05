@@ -287,7 +287,7 @@ homeWork.url = '/data/homework/';
             url: hm.url,
             data:{
             	score: _score,//评论分数
-            	cont: _cont,//评论内容
+            	cont: encodeURIComponent(_cont),//评论内容
             	commitId: _commitId//提交作业自增id
             },
             type : 'get',

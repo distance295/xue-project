@@ -29,7 +29,7 @@
   border-radius: 10px;
 }
 .live-scroll-btn-on {
-  background-color: #3bafda;
+  background-color: #1e89e0;
 }
 .live-scroll-box,
 .live-list-container {
@@ -89,7 +89,7 @@
   bottom: 0;
   background-color: #000;
   opacity: 0.5;
-  filter:alpha(opacity=50);
+  filter: alpha(opacity=50);
 }
 .live-course-show-title {
   height: 30px;
@@ -147,7 +147,7 @@
   line-height: 50px;
 }
 .live-blue {
-  background-color: #3bafda;
+  background-color: #1e89e0;
 }
 .live-grey {
   background-color: #bfbfbf;
