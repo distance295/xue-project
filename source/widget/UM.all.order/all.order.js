@@ -35,6 +35,39 @@ function orderTab(ordertype,page){
     });
 }
 
+//点击取消订单
+$("body").on("click",'.del', function(){
+    //var $p = $(this).parents('.ao-details');
+    //var id = $(this).data('id');
+    //var number = $(this).data('num');
+    //var itemNum = Number($('.current .order-num').text());
+    if (confirm("确认删除该订单吗？")) {
+        return true;
+/*        $.ajax({
+            type: "post",
+            url: "/MyOrders/ajaxCancelOrder/",
+            data: 'id=' + id + '&number=' + number,
+            dataType: "json",
+            success: function(result) {
+                if (result.sign == 1) {
+                    $p.slideUp(300, function() {
+                        $p.remove();
+                    });
+                    //itemNum -= 1;
+                    //$('.current .order-num').html(itemNum);
+                } else {
+                    if(result.sign == 2){
+                        window.location.href = result.msg;
+                    }
+                    alert(result.msg);
+                }
+            }
+        });*/
+    }else{
+        return false;
+    }
+})
+
 //调用模态框js
 function orderModal(){
     $.ajax({

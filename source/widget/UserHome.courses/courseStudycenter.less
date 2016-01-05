@@ -537,6 +537,17 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 			td{
 				line-height: 43px;
 			}
+			td.examTable-firsttd{
+				width: 160px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				word-warp:break-word; 
+				word-break:break-all;
+				text-align: left;
+				padding-left: 15px;
+				padding-right: 0;
+				text-overflow: ellipsis;
+			}
 			td.static{
 				a{
 					color: #1e89e0;
@@ -649,13 +660,13 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 			width: 24%;
 		}
 		span.span-w1{
-			width: 30%;
+			width: 18%;
 		}
 		span.span-w2{
 			width: 42%;
 		}
 		span.span-w3{
-			width: 10%;
+			width: 25%;
 		}
 		span.span-w4{
 			width: 14%;
@@ -664,12 +675,18 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 	.course-table.course-live-table{
 		li{
 			span.span-w1{
-				width: 30%;
+				width: 18%;
 				float: left;
+				text-align: left;
+				padding-left: 20px;
 			}
 			span.span-w2{
 				width: 42%;
 				float: left;
+				height: 62px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
 				// text-align: left;
 				.studied-end{
 					width: 57px;
@@ -677,7 +694,7 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 				}
 			}
 			span.span-w3{
-				width: 10%;
+				width: 25%;
 				float: left;
 			}
 			span.span-w4{
@@ -872,7 +889,8 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 	margin-top: -56px;
 }
 .processingbar_bg{
-	background: #f5f5f5;
+	// background: #f5f5f5;
+	background: url("img/circle_bg.png") no-repeat;
 	border-radius: 50%;
 	height: 91px;
 	left: 50%;

@@ -19,16 +19,18 @@
     $(function() {
         $(".btn-active").click(function() {
             if ($(".cardNo").val() == '') {
-                  fCheck.setTips(".cardNo-warning",'请输入代金卡卡号');
+                fCheck.setTips(".cardNo-warning",'请输入代金卡卡号');
                 $(".cardNo").focus(function() {
-                  fCheck.clearTips(".cardNo-warning");});
+                  fCheck.clearTips(".cardNo-warning");
+                });
                 return false;
             }
 
             if ($(".cardPass").val() == '') {
-                  fCheck.setTips(".cardPass-warning",'请输入代金卡密码');
+                fCheck.setTips(".cardPass-warning",'请输入代金卡密码');
                 $(".cardPass").focus(function() {
-                  fCheck.clearTips(".cardPass-warning");});
+                  fCheck.clearTips(".cardPass-warning");
+                });
                 return false;
             }
 
@@ -39,6 +41,7 @@
                 dataType: 'json',
                 success: function(d) {
                     if (d.sign == 1) {
+                        fCheck.clearTips(".cardNo-warning,.cardPass-warning");
                         alert('代金卡激活成功');
                         location.href = "/MyCards/giftCard";
                     } else {

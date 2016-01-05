@@ -37,18 +37,28 @@ ol {
     padding-left: 0;
     list-style: none;
 }
+a{
+    &:hover,&:focus{
+        color: #1e89e0;
+    }
+}
 em {
     font-style: normal;
     padding: 0 .2rem;
 }
-.breadcrumb{
-    margin-bottom: 5px;
-}
-a,button{
+a,button,.btn{
     outline:none;
+    outline-offset:0;
     &:focus,&:active,&.active{
         outline: none;
+        outline-offset:0;
     }
+}
+.list-group-item:first-child,.list-group-item:last-child{
+    border-radius: 0 !important;
+}
+.list-group-item{
+    padding: 10px 19px !important;
 }
 .label {
     font-weight: 500;
@@ -180,7 +190,7 @@ a,button{
 #module-breadcrumb {
     background-color: transparent;
     >.active {
-        color: #333;
+        color: #1e89e0;
     }
     >li+li:before{
         content:">";

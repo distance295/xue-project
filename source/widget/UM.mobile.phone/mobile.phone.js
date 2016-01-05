@@ -85,8 +85,14 @@ var xue =xue || {};
         $('#phone').css('border','1px solid #d2d2d2');
         fCheck.param.cPhone = 0;
       }else if( isPhone ){
-        $('#phone').css('border','1px solid #68c04a');
-        fCheck.param.cPhone = 1;
+        if (value == $("#tel_input").val()) {
+          fCheck.setTips(phoneWarn,'手机号与账户当前绑定手机号相同，请更换手机号完成绑定');
+          $('#phone').css('border','1px solid #d2d2d2');
+          fCheck.param.cPhone = 0;
+        }else{
+          $('#phone').css('border','1px solid #68c04a');
+          fCheck.param.cPhone = 1;
+        }
       }else{
         fCheck.setTips(phoneWarn,'不支持该手机号号段');
         $('#phone').css('border','1px solid #d2d2d2');
