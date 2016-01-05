@@ -334,7 +334,7 @@ $(function(){
                 $redCardNum.html(piece);
                 $rcig.html(gold * piece);
                 $(redCardAdd).css({'background-color': '#b5b5b5'});
-                $(redCardDec).css({'background-color':'#b5b5b5'});
+                $(redCardDec).css({'background-color':'#3398cc'});
             }
             else {
                 $redCardNum.html(num + 1);
@@ -507,7 +507,7 @@ $(function(){
                 $presentNum.html(piece);
                 $pig.html(gold * piece);
                 $(presentAdd).css({'background-color': '#b5b5b5'});
-                $(presentDec).css({'background-color':'#b5b5b5'});
+                $(presentDec).css({'background-color':'#3398cc'});
             }
             else {
                 $presentNum.html(num + 1);
