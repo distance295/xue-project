@@ -42,8 +42,6 @@ $(function(){
             success:function(result){
                 if(!result.sign){
                     return;
-                }else if(result.sign == 0){
-                    alert(result.msg);
                 }
                 var _id = result.addId;
                 var tp = _tpl;
@@ -63,6 +61,9 @@ $(function(){
                     $(tp).prependTo('.gold_new_address');
                     $(".present-address-new").removeClass('present-address-focus');
                     $(addressInput).val('');
+                    if(result.sign == 0){
+                        alert(result.msg);
+                    }
                 }else if(result.type === 2){
                     $('#addid_'+data.id).parent().html(tp);
                 }
