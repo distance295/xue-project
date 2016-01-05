@@ -4,7 +4,7 @@
 
 $(function(){
     var $body = $('body');
-    var addressInput = '#realname, #add_province, #add_city,#add_country #address, #zipcode, #phone';
+    var addressInput = '#realname, #add_province, #add_city,#add_country, #address, #zipcode, #phone';
 //提交生成收货地址列表
     function saveNewAddress(inputs){
         var input = inputs || $(addressInput);
@@ -61,10 +61,8 @@ $(function(){
                     $(tp).prependTo('.gold_new_address');
                     $(".present-address-new").removeClass('present-address-focus');
                     $(addressInput).val('');
-                    console.log(1)
                 }else if(result.type === 2){
                     $('#addid_'+data.id).parent().html(tp);
-                    console.log(2)
                 }
                 $('.info_from').hide();
                 $('.present-exchange').show();
