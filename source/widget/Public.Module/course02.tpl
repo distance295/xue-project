@@ -18,7 +18,7 @@
                 </li>
             </ul>
         </div>
-        <div data-type="3" data-state="2" data-params="urlStr=840&amp;urlKey=af0030c654f79b371438ebdf40d4bead" data-value="840" data-url="/data/Module.Follow/follow2.json" class="ui_follow free-course-attention">
+        <div data-type="1" data-state="2" data-params="urlStr=840&amp;urlKey=af0030c654f79b371438ebdf40d4bead" data-value="840" data-url="/data/Module.Follow/follow2.json" class="ui_follow free-course-attention">
             <a href="###" class="btn-sm btn-warning follow_add">+ 关注</a>
         </div>
     </div>
