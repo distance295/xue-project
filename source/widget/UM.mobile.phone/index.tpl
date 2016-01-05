@@ -41,7 +41,7 @@
             <p>短信验证码：</p>
             <input id="phonecode" name="code" type="text" autocomplete="off"/>
             <label for="phonecode" class="phonecode-tip">请输入短信验证码</label>
-            <sapn class="vcode btn btn-info" id="vcode">获取短信验证码</sapn>
+            <button class="vcode btn btn-info" id="vcode">获取短信验证码</button>
         </div>
         <div class="error-box">
             <span id="tips-phonecode" class="tips error"></span>
