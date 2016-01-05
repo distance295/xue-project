@@ -61,8 +61,10 @@ $(function(){
                     $(tp).prependTo('.gold_new_address');
                     $(".present-address-new").removeClass('present-address-focus');
                     $(addressInput).val('');
+                    console.log(1)
                 }else if(result.type === 2){
                     $('#addid_'+data.id).parent().html(tp);
+                    console.log(2)
                 }
                 $('.info_from').hide();
                 $('.present-exchange').show();
