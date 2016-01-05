@@ -42,8 +42,9 @@ $(function(){
             success:function(result){
                 console.log(result);
                 console.log(result.sign);
-                if(!result.sign){
-                    return;
+                if(result.sign == 0){
+                    alert(result.msg);
+                    return false;
                 }
                 var _id = result.addId;
                 var tp = _tpl;
@@ -68,9 +69,6 @@ $(function(){
                 }
                 $('.info_from').hide();
                 $('.present-exchange').show();
-                if(result.sign == 0){
-                    alert(result.msg);
-                }
             }
         });
     }
