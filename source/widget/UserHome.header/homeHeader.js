@@ -27,18 +27,22 @@ function showStudPrize(dom) {
 }
 
 /* 鼠标移入，勋章展现 */
-$('ul.user-medal.list-inline li img[data-target*="hidediv_"]').off('mouseenter').on('mouseenter', function () {
+$('ul.user-medal.list-inline li img[data-target*="hidediv_"]').on('mouseenter', function () {
     var that = this;
     var dom = $(that);
-    showStudPrize(dom);
+    //通过判断箭头（唯一标识）来区别页面是否有勋章页卡，如果有就不创建
+    if(!$('div.dialog_arrow').length){
+        showStudPrize(dom);    
+    }
+    
     return false;
 });
 
 /* 鼠标移出，页卡消失 */
-$('ul.user-medal.list-inline li').on('mouseleave', function (e) {
+$('ul.user-medal.list-inline li img[data-target*="hidediv_"]').on('mouseleave', function (e) {
     var tar = $(e.relatedTarget),
         that = this,
-        _dom = $(that).find('img').data('target'),
+        _dom = $(that).data('target'),
         boxId = 'stuBox_' + _dom;
     //删除页卡的方法
     function removeDom(boxId) {
