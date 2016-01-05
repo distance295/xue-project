@@ -350,7 +350,7 @@ table tr td {
   font-size: 16px;
   color: #e74c3c;
   display: block;
-  margin: 25px 0;
+  margin: 20px 0;
 }
 .gold-exchange-show-container {
   margin-top: 1px;
@@ -595,6 +595,12 @@ table tr td {
   margin-right: 10px;
   margin-bottom: 3px;
 }
+.info_ness {
+  color: #e74c3c !important;
+}
+.info_from {
+  display: none;
+}
 .gold-store-card-empty,
 .gold-store-present-empty {
   width: 100px;
@@ -606,7 +612,6 @@ table tr td {
   line-height: 34px;
   color: #fff;
   border-radius: 3px;
-  cursor: pointer;
 }
 .gold-tip-alert {
   color: #e74c3c !important;
