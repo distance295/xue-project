@@ -63,7 +63,7 @@ nav.get = function (url, callback) {
     var _url = url || _opt.dataUrl;
     var _handle = $(_opt.handle),
         _body = $(_opt.body);
-    console.log($(nav.opt.item).length);
+    // console.log($(nav.opt.item).length);
     if ($(nav.opt.item).length > 0) {
         return;
     }
