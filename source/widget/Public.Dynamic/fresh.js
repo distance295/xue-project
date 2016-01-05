@@ -1370,11 +1370,22 @@ fresh.emote = fresh.emote || {};
               con: fresh.emoteHmtl
         })
 
+        //表情按钮距离左边框的距离
+        var _emoteLeft = $('.fresh-dialog-emote').closest('.popover[role="tooltip"]').prevAll('.fresh-emote-current').offset().left;
+        //表情弹出层宽度的一半
+        var dialog_emoteW = $('.fresh-dialog-emote').closest('.popover[role="tooltip"]').outerWidth()/2;
+        var _popoverW = 0;
+
+        if( _emoteLeft < dialog_emoteW ){
+            _popoverW = _emoteLeft;
+        }else{
+            _popoverW = dialog_emoteW - 25;
+        }
+
         //箭头靠左显示
-        var _popoverW = $('.fresh-dialog-emote').closest('.popover[role="tooltip"]').outerWidth()/2 -25;
         $('.fresh-dialog-emote').closest('.popover[role="tooltip"]').css('marginLeft',_popoverW);
         $('.fresh-dialog-emote').closest('.popover[role="tooltip"]').find('.arrow').css('left','25px');
-        
+
         //点击表情插入文本框
         $('.fresh-dialog-emote').off('click', '.fresh-jsSmilies li').on('click', '.fresh-jsSmilies li', function(){
               var _val = $(this).data('action');
