@@ -4,7 +4,7 @@
 -->
 <div id="module-myheader" class="bg-primary">
     <div class="container">
-       <div class="col-md-10  wrap-body col-sm-10 col-xs-10">
+<!--       <div class="col-md-10  wrap-body col-sm-10 col-xs-10">-->
             <div class="col-md-6 row col-sm-6 col-xs-6">
                 <div class="user-avatar pull-left ">
                     <a href=""><img src="pic/avatar.png" alt="" class="userHome-header"></a>
@@ -21,7 +21,7 @@
                     <a href="" class="user-level label label-warning">Lv.20</a>
                 </div>
             </div>
-            <div class="col-md-6 text-right col-sm-6 col-xs-6">
+            <div class="col-md-5 text-right col-sm-5 col-xs-5">
                 <ul class="user-medal list-inline">
                     <li class="medal-1">
                         <a href="" title="网校学生证">
@@ -45,7 +45,7 @@
                     </li>
                 </ul>
             </div>
-        </div>
+<!--        </div>-->
     </div>
 </div>
 <div class="user_student">
