@@ -42,6 +42,8 @@ $(function(){
             success:function(result){
                 if(!result.sign){
                     return;
+                }else if(result.sign == 0){
+                    alert(result.msg);
                 }
                 var _id = result.addId;
                 var tp = _tpl;
