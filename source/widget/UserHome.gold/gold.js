@@ -186,7 +186,11 @@ $(function(){
         var that = $(this);
         var sort_type = $(this).data('type');
         var arr = {};
-        var gold_sort = $('#dataCla').val();
+        var gold = $(this).data('gold');
+        var gold_sort = 1;
+        if(gold == 1){
+            gold_sort = 2;
+        }
         arr['sort_type'] = sort_type;
         arr['gold_sort'] = gold_sort;
         goldTabAJax(that, arr);
