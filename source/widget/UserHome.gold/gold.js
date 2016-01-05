@@ -334,7 +334,7 @@ $(function(){
                 $redCardNum.html(piece);
                 $rcig.html(gold * piece);
                 $(redCardAdd).css({'background-color': '#b5b5b5'});
-                $(redCardDec).css({'background-color':'#b5b5b5'});
+                $(redCardDec).css({'background-color':'#3398cc'});
             }
             else {
                 $redCardNum.html(num + 1);
@@ -379,7 +379,9 @@ $(function(){
     $body.on('click','.red-card-exchange',function(){
         var redCardId = $(this).closest('.red-card-box').attr('id'),
             $rct = $('.red-card-tip'),
-            div = $rct.html();
+            div = $rct.html(),
+            redCardNum = $('.red-card-num'),
+            num = parseInt(redCardNum.html());
         $.ajax({
             url : '/GoldShop/ajaxExchange',
             type : 'post',
@@ -387,7 +389,7 @@ $(function(){
             data : {
                 id : redCardId,
                 award_type:2,
-                num:1
+                num:num
             },
             success : function(msg,event){
                 if(msg.sign == 2){
@@ -493,38 +495,46 @@ $(function(){
         $body.on("click",presentAdd,function(){
             //console.log($pig.length);
             var num = parseInt($presentNum.html());
-            if(num == 0 || num < 0){
+            if (num == 0 || num < 0) {
                 $presentNum.html(0);
                 $pig.html(gold);
-            }else if(num >= exMax){
+            } else if (num >= (exMax-1)) {
                 $presentNum.html(exMax);
                 $pig.html(gold * exMax);
-                $(presentAdd).css({'background-color':'#b5b5b5'});
-                $(presentDec).css({'background-color':'#3398cc'});
-            }else if(num >= piece - 1){
+                $(presentAdd).css({'background-color': '#b5b5b5'});
+                if (exMax > 1 || num > 1) {
+                    $(presentDec).css({'background-color': '#3398cc'});
+                }
+            } else if (num >= piece - 1) {
                 $presentNum.html(piece);
                 $pig.html(gold * piece);
-                $(presentAdd).css({'background-color':'#b5b5b5'});
+                $(presentAdd).css({'background-color': '#b5b5b5'});
                 $(presentDec).css({'background-color':'#3398cc'});
             }
-            else{
+            else {
                 $presentNum.html(num + 1);
                 $pig.html(gold * (num + 1));
-                $(presentAdd).css({'background-color':'#3398cc'});
-                $(presentDec).css({'background-color':'#3398cc'});
+                $(presentAdd).css({'background-color': '#3398cc'});
+                if (exMax > 1 || num > 1) {
+                    $(presentDec).css({'background-color': '#3398cc'});
+                }
             }
         });
         $body.on("click",presentDec,function(){
             var num = parseInt($presentNum.html());
-            if(num == 0 || num < 0) {
-                $presentNum.html(0);
-                $pig.html(gold);
-            }else if(num == 1)
+            if(num == 1)
             {
                 $presentNum.html(num);
                 $pig.html(gold);
                 $(presentDec).css({'background-color':'#b5b5b5'});
-                $(presentAdd).css({'background-color':'#3398cc'});
+                if(!piece){
+                    $(presentAdd).css({'background-color':'#3398cc'});
+                }else{
+                    $(presentAdd).css({'background-color':'#3398cc'});
+                    if(piece == 1){
+                        $(presentAdd).css({'background-color':'#b5b5b5'});
+                    }
+                }
             }else if(num == 2){
                 $presentNum.html(num - 1);
                 $pig.html(gold * (num - 1));
@@ -538,6 +548,54 @@ $(function(){
                 $(presentAdd).css({'background-color':'#3398cc'});
             }
         });
+        //$body.on("click",presentAdd,function(){
+        //    //console.log($pig.length);
+        //    var num = parseInt($presentNum.html());
+        //    if(num == 0 || num < 0){
+        //        $presentNum.html(0);
+        //        $pig.html(gold);
+        //    }else if(num >= exMax){
+        //        $presentNum.html(exMax);
+        //        $pig.html(gold * exMax);
+        //        $(presentAdd).css({'background-color':'#b5b5b5'});
+        //        $(presentDec).css({'background-color':'#3398cc'});
+        //    }else if(num >= piece - 1){
+        //        $presentNum.html(piece);
+        //        $pig.html(gold * piece);
+        //        $(presentAdd).css({'background-color':'#b5b5b5'});
+        //        $(presentDec).css({'background-color':'#3398cc'});
+        //    }
+        //    else{
+        //        $presentNum.html(num + 1);
+        //        $pig.html(gold * (num + 1));
+        //        $(presentAdd).css({'background-color':'#3398cc'});
+        //        $(presentDec).css({'background-color':'#3398cc'});
+        //    }
+        //});
+        //$body.on("click",presentDec,function(){
+        //    var num = parseInt($presentNum.html());
+        //    if(num == 0 || num < 0) {
+        //        $presentNum.html(0);
+        //        $pig.html(gold);
+        //    }else if(num == 1)
+        //    {
+        //        $presentNum.html(num);
+        //        $pig.html(gold);
+        //        $(presentDec).css({'background-color':'#b5b5b5'});
+        //        $(presentAdd).css({'background-color':'#3398cc'});
+        //    }else if(num == 2){
+        //        $presentNum.html(num - 1);
+        //        $pig.html(gold * (num - 1));
+        //        $(presentDec).css({'background-color':'#b5b5b5'});
+        //        $(presentAdd).css({'background-color':'#3398cc'});
+        //    }
+        //    else{
+        //        $presentNum.html(num - 1);
+        //        $pig.html(gold * (num - 1));
+        //        $(presentDec).css({'background-color':'#3398cc'});
+        //        $(presentAdd).css({'background-color':'#3398cc'});
+        //    }
+        //});
     };
 //实物礼品兑换
     $body.on('click','.present-exchange',function(){

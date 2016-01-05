@@ -16,25 +16,25 @@ $(function(){
                 }},'.find-teacher-hover-container'
         );
     });
-    $body.on("click",'.find-teacher-follow',function(){
-        var followId = $(this).closest('.find-teacher-card').attr('id');
-        //console.log(followId);
-        $.ajax({
-            url : '/teacher/follow',
-            type : 'post',
-            dataType : 'json',
-            data : {
-                followId : followId
-            },
-            success : function(msg){
-                if(msg.sign == 2){
-                    window.location.href = '';
-                }else if(msg.sign == 1){
-                    $(this).addClass("find-teacher-have-followed").html("已关注");
-                }
-            }
-        })
-    });
+    //$body.on("click",'.find-teacher-follow',function(){
+    //    var followId = $(this).closest('.find-teacher-card').attr('id');
+    //    //console.log(followId);
+    //    $.ajax({
+    //        url : '/teacher/follow',
+    //        type : 'post',
+    //        dataType : 'json',
+    //        data : {
+    //            followId : followId
+    //        },
+    //        success : function(msg){
+    //            if(msg.sign == 2){
+    //                window.location.href = '';
+    //            }else if(msg.sign == 1){
+    //                $(this).addClass("find-teacher-have-followed").html("已关注");
+    //            }
+    //        }
+    //    })
+    //});
     var $ftname = $('.find-teacher-name');
     $ftname.each(function(){
         var
