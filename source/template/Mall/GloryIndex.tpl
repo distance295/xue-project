@@ -3,7 +3,7 @@
 
 <!-- 学习中心区域 -->
 <!--   12栏的用这个    -->
-<div class="col-md-12 gloryConPicId">
+<div class="gloryConPicId">
   <!-- <div class="gloryConPicId" style='background:  url("/static/img/glory-banner.jpg") no-repeat scroll center top'>
     <div class="gloryConPicId-inner">
         <a href="/vips/apply">立即申请</a>
