@@ -549,7 +549,7 @@ fresh.comment = fresh.comment || {};
             //data: param + '&content=' + encodeURIComponent(val) + '&verificationCode=' + vd,
             //type: 'get',
             url: fresh.path.url + 'ajaxAddDynComment',//添加成功与否验证ajax
-            data: _params + "&content="+val+"&verificationCode="+vd,
+            data: _params + "&content="+encodeURIComponent(val)+"&verificationCode="+vd,
             type: 'post',
             dataType: 'json',
             beforeSend: function() {
