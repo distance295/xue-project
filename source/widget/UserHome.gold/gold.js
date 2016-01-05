@@ -379,7 +379,9 @@ $(function(){
     $body.on('click','.red-card-exchange',function(){
         var redCardId = $(this).closest('.red-card-box').attr('id'),
             $rct = $('.red-card-tip'),
-            div = $rct.html();
+            div = $rct.html(),
+            redCardNum = $('.red-card-num'),
+            num = parseInt(redCardNum.html());
         $.ajax({
             url : '/GoldShop/ajaxExchange',
             type : 'post',
@@ -387,7 +389,7 @@ $(function(){
             data : {
                 id : redCardId,
                 award_type:2,
-                num:1
+                num:num
             },
             success : function(msg,event){
                 if(msg.sign == 2){
