@@ -22,7 +22,7 @@ table tr td {
   margin: 0;
   overflow: hidden;
   font-size: 14px;
-  border-bottom: 1px solid #3bafda;
+  border-bottom: 1px solid #1e89e0;
 }
 .gold-detail-title a {
   float: left;
@@ -33,7 +33,7 @@ table tr td {
   cursor: pointer;
 }
 .gold-detail-title-on {
-  background-color: #3bafda;
+  background-color: #1e89e0;
   color: #ffffff;
   border-radius: 5px 5px 0 0;
 }
@@ -60,7 +60,7 @@ table tr td {
   float: right;
   margin-right: 20px;
   font-size: 14px;
-  color: #3bafda;
+  color: #1e89e0;
   display: inline-block;
   cursor: pointer;
 }
@@ -94,7 +94,7 @@ table tr td {
   color: #fff;
   text-align: center;
   line-height: 30px;
-  background-color: #3bafda;
+  background-color: #1e89e0;
 }
 .gold-detail-show-title {
   width: 100%;
@@ -140,7 +140,7 @@ table tr td {
   color: #e74c3c;
 }
 .gold-detail-show-dec {
-  color: #3bafda;
+  color: #1e89e0;
 }
 .gold-detail-block-change,
 .gold-store-block-change,
@@ -176,7 +176,7 @@ table tr td {
 }
 .gold-store-title-on,
 .gold-exchange-title-on {
-  background-color: #3bafda;
+  background-color: #1e89e0;
   color: #fff;
 }
 .gold-store-container,
@@ -299,7 +299,7 @@ table tr td {
   position: relative;
 }
 .gold-store-present-rank-by a:hover {
-  color: #3bafda;
+  color: #1e89e0;
 }
 .gold-store-present-rank-by .glyphicon {
   top: 2px;
@@ -313,7 +313,7 @@ table tr td {
   left: 133px;
 }
 .gold-store-present-rank-focus {
-  color: #3bafda;
+  color: #1e89e0;
 }
 .gold-store-present-card-container {
   overflow: hidden;
@@ -350,7 +350,7 @@ table tr td {
   font-size: 16px;
   color: #e74c3c;
   display: block;
-  margin: 25px 0;
+  margin: 20px 0;
 }
 .gold-exchange-show-container {
   margin-top: 1px;
@@ -595,6 +595,12 @@ table tr td {
   margin-right: 10px;
   margin-bottom: 3px;
 }
+.info_ness {
+  color: #e74c3c !important;
+}
+.info_from {
+  display: none;
+}
 .gold-store-card-empty,
 .gold-store-present-empty {
   width: 100px;
@@ -606,7 +612,6 @@ table tr td {
   line-height: 34px;
   color: #fff;
   border-radius: 3px;
-  cursor: pointer;
 }
 .gold-tip-alert {
   color: #e74c3c !important;
