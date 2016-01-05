@@ -4,7 +4,7 @@
 
 $(function(){
     var $body = $('body');
-    var addressInput = '#realname, #add_province, #add_city,#add_country #address, #zipcode, #phone';
+    var addressInput = '#realname, #add_province, #add_city,#add_country, #address, #zipcode, #phone';
 //提交生成收货地址列表
     function saveNewAddress(inputs){
         var input = inputs || $(addressInput);
@@ -40,8 +40,12 @@ $(function(){
             dataType:'json',
             data : o,
             success:function(result){
+                console.log(result);
+                console.log(result.sign);
                 if(!result.sign){
                     return;
+                }else if(result.sign == 0){
+                    alert(result.msg);
                 }
                 var _id = result.addId;
                 var tp = _tpl;
