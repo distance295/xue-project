@@ -549,7 +549,7 @@ fresh.comment = fresh.comment || {};
             //data: param + '&content=' + encodeURIComponent(val) + '&verificationCode=' + vd,
             //type: 'get',
             url: fresh.path.url + 'ajaxAddDynComment',//添加成功与否验证ajax
-            data: _params + "&content="+val+"&verificationCode="+vd,
+            data: _params + "&content="+encodeURIComponent(val)+"&verificationCode="+vd,
             type: 'post',
             dataType: 'json',
             beforeSend: function() {
@@ -688,10 +688,12 @@ fresh.comment = fresh.comment || {};
                     });
                     $('#fresh-dialog-verificationCode').modal('show');
                     fc.changeVerificationImg('verificationImg');
-                    //点击验证码事件效果
-                    $('body').off('click').on('click' , '.fresh-dialog-verificationCode #verificationImg' , function(){
+                    
+                    //切换验证码
+                    $('#verificationImg').off('click').on('click', function(){
                           fc.changeVerificationImg('verificationImg');
                     })
+                    
                     //点击验证码弹出层中的确定按钮
                     $('body').off('click').on('click' , '.fresh-dialog-sure-btn a' , function(){
                         if( $(this).hasClass('fresh-dialog-btn-disabled') ){

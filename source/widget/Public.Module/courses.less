@@ -3,6 +3,7 @@
 @gray: #ccc;
 @gray999: #999;
 @dark333: #333;
+@blueColor: #1e89e0;
 ul,li{list-style: none;}
 .border-radius(@amount: 5px){
 	-moz-border-radius: @amount;
@@ -292,7 +293,7 @@ ul,li{list-style: none;}
 		font-size: 12px;
 		padding-right: 14px;
 		a{
-			color: #3bafda;
+			color: @blueColor;
 		}
 		em{
 			font-style: normal;
@@ -414,7 +415,7 @@ ul,li{list-style: none;}
 	padding-right: 2px;
 }
 .course-list .free-course-attention a.free-add-cancel-btn {
-	color: #3bafda;
+	color: @blueColor;
 }
 .hot-course-list{
 	padding: 12px;
@@ -808,7 +809,7 @@ ul,li{list-style: none;}
 		border-left: 1px solid #eaeaea;
 		background: #fff;
 		a{
-			color: #3bafda;
+			color: @blueColor;
 			&:focus{
 				outline: none;
 			}
