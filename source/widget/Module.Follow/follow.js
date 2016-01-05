@@ -67,7 +67,7 @@
                         var cls = btn.attr('class');
                         var tpl = '<span class="' + cls + '">已关注</span> ';
                         if(settings.state == 2){
-                            tpl += '<a href="###" class="' + btnCls + ' btn-link text-primary follow_cancel">取消</a>';
+                            tpl += '<a href="###" class="' + btnCls + ' btn-link text-primary follow_cancel">取消关注</a>';
                         }
                         that.html(tpl);
                         follows.unbind.call(that.find('.follow_add'));
