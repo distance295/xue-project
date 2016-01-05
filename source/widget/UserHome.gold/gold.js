@@ -45,9 +45,6 @@ $(function(){
                 if(!result.sign){
                     return;
                 }
-                if(result.sign == 0){
-                    alert(result.msg);
-                }
                 var _id = result.addId;
                 var tp = _tpl;
                 tp = tp.replace(/\$id\$/g, _id);
@@ -71,6 +68,9 @@ $(function(){
                 }
                 $('.info_from').hide();
                 $('.present-exchange').show();
+                if(result.sign === 0){
+                    alert(result.msg);
+                }
             }
         });
     }
