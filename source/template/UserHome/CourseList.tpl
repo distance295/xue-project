@@ -76,8 +76,8 @@ $(function  () {
     $('.more-list li.courseList-exam').on('click',function(){
         examTable();
     });
-    testLive();
-    liveHelp();
+    testLive('.listTest-btn');
+    liveHelp('.liveHelp-btn');
 })
 // 更多服务
 function moreService (){
