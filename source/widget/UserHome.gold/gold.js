@@ -44,7 +44,8 @@ $(function(){
                 console.log(result.sign);
                 if(!result.sign){
                     return;
-                }else if(result.sign == 0){
+                }
+                if(result.sign == 0){
                     alert(result.msg);
                 }
                 var _id = result.addId;
