@@ -151,6 +151,7 @@
 }
 .find-teacher-follow {
   position: absolute;
+  padding: 0;
   bottom: 10px;
   width: 50px;
   height: 20px;
