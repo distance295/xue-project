@@ -324,7 +324,7 @@ $(function(){
             $redCardNum = $('.red-card-num'),
             exMax = $('#exchange_max').val();
             //exMax = 19;
-        $body.on("click",redCardAdd,function(){
+        $body.off('click',redCardAdd).on("click",redCardAdd,function(){
             //console.log($pig.length);
             var num = parseInt($redCardNum.html());
             if (num == 0 || num < 0) {
@@ -360,7 +360,7 @@ $(function(){
                 }
             }
         });
-        $body.on("click",redCardDec,function(){
+        $body.off('click',redCardDec).on("click",redCardDec,function(){
             var num = parseInt($redCardNum.html());
             if(num == 1)
             {
@@ -507,7 +507,7 @@ $(function(){
             piece = parseInt($presentPiece.html()),
             $presentNum = $('.present-num'),
             exMax = $('#exchange_max').val();
-        $body.on("click",presentAdd,function(){
+        $body.off('click',presentAdd).on("click",presentAdd,function(){
             //console.log($pig.length);
             console.log(piece);
             var num = parseInt($presentNum.html());
@@ -544,7 +544,7 @@ $(function(){
                 }
             }
         });
-        $body.on("click",presentDec,function(){
+        $body.off('click',presentDec).on("click",presentDec,function(){
             var num = parseInt($presentNum.html());
             if(num == 1)
             {
