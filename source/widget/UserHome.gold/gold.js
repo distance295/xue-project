@@ -509,6 +509,7 @@ $(function(){
             exMax = $('#exchange_max').val();
         $body.on("click",presentAdd,function(){
             //console.log($pig.length);
+            console.log(piece);
             var num = parseInt($presentNum.html());
             if (num == 0 || num < 0) {
                 $presentNum.html(0);
