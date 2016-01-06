@@ -181,7 +181,7 @@
 	$(function(){
 
 		    //缩略图等比例缩放
-            homeWork.imageRate('.homework-image-box');
+            //homeWork.imageRate('.homework-image-box');
             //语音存在的情况下
             homeWork.audio('.homework-image-box');
             //点击提醒按钮

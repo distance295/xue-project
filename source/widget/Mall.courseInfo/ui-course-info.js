@@ -108,6 +108,20 @@ xue.avatar = xue.avatar || {};
 
 })(xue.avatar);
 var courseInfor = courseInfor || {};
+//视频弹层方法封装
+ courseInfor.videoPlaySwitch = function(u,w,h,t){
+         xue.win({
+             id : 'videoPlayWrap',
+             title : t,
+             content : '<iframe style="overflow:hidden; border:0;" src="'+ u +'" width="'+w+'px" height="'+h+'px"> </iframe>',
+             width: w,
+             height: h,
+             lock : true,
+             close : true,
+             submit : false,
+             cancel : false
+         });
+}
 //课程大纲切换方法
 courseInfor.courseTab = function (tabTit,on,tabCon){
    var items = $(tabTit).children();

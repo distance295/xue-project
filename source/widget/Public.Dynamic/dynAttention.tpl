@@ -4,6 +4,7 @@
     @require ../Module.popover/xue.popover.js
     @require ../Module.Pagination/paginations.js
     @require ../Module.Modal/Modal.js
+    @require ../Module.Follow/follow.js
     @require fresh.js
     @require fresh.load.min.js
 -->
@@ -25,8 +26,14 @@
              <span class="pull-left">
                 <strong>321322</strong>粉丝
              </span>
-             <div class="fresh-course-attention pull-right"  data-type="3" data-params="urlStr=840&amp;urlKey=af0030c654f79b371438ebdf40d4bead" data-value="840" data-url="/teachers/follow/">
-                <a href="javascript:void(0)" class="fresh-attention-btn fresh-add-attention-btn"><span class="fresh-add pull-left">+</span><span class="pull-left">关注</span></a>
+             <div class="fresh-news-attention ui_follow pull-right"  data-params="url=/t/duchunyu&amp;urlStr=301&amp;urlKey=791fc69220e9d97c53cc94890e0f81d4" data-state="2" data-type="1" data-url="/Dynamic/ajaxFollow">
+              
+               <a href="###" class="btn btn-warning follow_add fresh-attention-add">+关注</a>
+               <span class="fresh-attention-add btn-sm btn-default">已关注</span>
+               <a href="###" class="btn-sm btn-link follow_cancel">取消</a>
+
+                <!-- <a href="javascript:void(0)
+                " class="fresh-attention-btn fresh-add-attention-btn"><span class="fresh-add pull-left">+</span><span class="pull-left">关注</span></a> 
 
               <!--  <em>已关注</em>
               <i class="fresh-course-line">|</i>

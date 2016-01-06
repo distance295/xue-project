@@ -155,6 +155,14 @@ $(function(){
                     return;
                 }
                 $('.gold-detail-block-change').html(result);
+                //截字处理
+                $('.gold-store-present-card-name').each(function(){
+                    var maxwidth=13;
+                    if($(this).text().length>maxwidth){
+                        $(this).text($(this).text().substring(0,maxwidth));
+                        $(this).html($(this).html()+'...');
+                    }
+                });
             }
         });
     }
@@ -186,7 +194,11 @@ $(function(){
         var that = $(this);
         var sort_type = $(this).data('type');
         var arr = {};
-        var gold_sort = $('#dataCla').val();
+        var gold = $(this).data('gold');
+        var gold_sort = 1;
+        if(gold == 1){
+            gold_sort = 2;
+        }
         arr['sort_type'] = sort_type;
         arr['gold_sort'] = gold_sort;
         goldTabAJax(that, arr);
@@ -320,7 +332,7 @@ $(function(){
             $redCardNum = $('.red-card-num'),
             exMax = $('#exchange_max').val();
             //exMax = 19;
-        $body.on("click",redCardAdd,function(){
+        $body.off('click',redCardAdd).on("click",redCardAdd,function(){
             //console.log($pig.length);
             var num = parseInt($redCardNum.html());
             if (num == 0 || num < 0) {
@@ -333,11 +345,19 @@ $(function(){
                 if (exMax > 1 || num > 1) {
                     $(redCardDec).css({'background-color': '#3398cc'});
                 }
-            } else if (num >= piece - 1) {
+            }else if (num >= piece - 1) {
                 $redCardNum.html(piece);
                 $rcig.html(gold * piece);
-                $(redCardAdd).css({'background-color': '#b5b5b5'});
-                $(redCardDec).css({'background-color':'#3398cc'});
+                console.log(piece);
+                if(piece == 1){
+                    $(redCardAdd).css({'background-color': '#b5b5b5'});
+                    $(redCardDec).css({'background-color': '#b5b5b5'});
+                    console.log(piece);
+                }else{
+                    $(redCardAdd).css({'background-color': '#3398cc'});
+                }
+                //$(redCardAdd).css({'background-color': '#b5b5b5'});
+                //$(redCardDec).css({'background-color':'#3398cc'});
             }
             else {
                 $redCardNum.html(num + 1);
@@ -348,7 +368,7 @@ $(function(){
                 }
             }
         });
-        $body.on("click",redCardDec,function(){
+        $body.off('click',redCardDec).on("click",redCardDec,function(){
             var num = parseInt($redCardNum.html());
             if(num == 1)
             {
@@ -495,13 +515,14 @@ $(function(){
             piece = parseInt($presentPiece.html()),
             $presentNum = $('.present-num'),
             exMax = $('#exchange_max').val();
-        $body.on("click",presentAdd,function(){
+        $body.off('click',presentAdd).on("click",presentAdd,function(){
             //console.log($pig.length);
+            console.log(piece);
             var num = parseInt($presentNum.html());
             if (num == 0 || num < 0) {
                 $presentNum.html(0);
                 $pig.html(gold);
-            } else if (num >= (exMax-1)) {
+            }else if (num >= (exMax-1)) {
                 $presentNum.html(exMax);
                 $pig.html(gold * exMax);
                 $(presentAdd).css({'background-color': '#b5b5b5'});
@@ -511,8 +532,16 @@ $(function(){
             }else if (num >= piece - 1) {
                 $presentNum.html(piece);
                 $pig.html(gold * piece);
-                $(presentAdd).css({'background-color': '#b5b5b5'});
-                $(presentDec).css({'background-color':'#3398cc'});
+                console.log(piece);
+                if(piece == 1){
+                    $(presentAdd).css({'background-color': '#b5b5b5'});
+                    $(presentDec).css({'background-color': '#b5b5b5'});
+                    console.log(piece);
+                }else{
+                    $(presentAdd).css({'background-color': '#3398cc'});
+                }
+                //$(redCardAdd).css({'background-color': '#b5b5b5'});
+                //$(redCardDec).css({'background-color':'#3398cc'});
             }
             else {
                 $presentNum.html(num + 1);
@@ -523,7 +552,7 @@ $(function(){
                 }
             }
         });
-        $body.on("click",presentDec,function(){
+        $body.off('click',presentDec).on("click",presentDec,function(){
             var num = parseInt($presentNum.html());
             if(num == 1)
             {
