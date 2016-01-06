@@ -337,7 +337,7 @@ $(function(){
                 if (exMax > 1 || num > 1) {
                     $(redCardDec).css({'background-color': '#3398cc'});
                 }
-            }else if (num > piece - 1) {
+            }else if (num >= piece - 1) {
                 $redCardNum.html(piece);
                 $rcig.html(gold * piece);
                 console.log(piece);
@@ -509,6 +509,7 @@ $(function(){
             exMax = $('#exchange_max').val();
         $body.on("click",presentAdd,function(){
             //console.log($pig.length);
+            console.log(piece);
             var num = parseInt($presentNum.html());
             if (num == 0 || num < 0) {
                 $presentNum.html(0);
@@ -520,20 +521,19 @@ $(function(){
                 if (exMax > 1 || num > 1) {
                     $(presentDec).css({'background-color': '#3398cc'});
                 }
-            }else if(num == 1){
-                $presentNum.html(num + 1);
-                $pig.html(gold * (num + 1));
-                $(presentDec).css({'background-color':'#b5b5b5'});
+            }else if (num >= piece - 1) {
+                $presentNum.html(piece);
+                $pig.html(gold * piece);
+                console.log(piece);
                 if(piece == 1){
                     $(presentAdd).css({'background-color': '#b5b5b5'});
+                    $(presentDec).css({'background-color': '#b5b5b5'});
+                    console.log(piece);
                 }else{
                     $(presentAdd).css({'background-color': '#3398cc'});
                 }
-            }else if (num > piece - 1) {
-                $presentNum.html(piece);
-                $pig.html(gold * piece);
-                $(presentAdd).css({'background-color': '#b5b5b5'});
-                $(presentDec).css({'background-color':'#3398cc'});
+                //$(redCardAdd).css({'background-color': '#b5b5b5'});
+                //$(redCardDec).css({'background-color':'#3398cc'});
             }
             else {
                 $presentNum.html(num + 1);
