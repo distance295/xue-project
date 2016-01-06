@@ -337,7 +337,12 @@ $(function(){
                 if (exMax > 1 || num > 1) {
                     $(redCardDec).css({'background-color': '#3398cc'});
                 }
-            } else if (num >= piece - 1) {
+            }else if(piece == 1){
+                $redCardNum.html(piece);
+                $rcig.html(gold * piece);
+                $(redCardAdd).css({'background-color': '#b5b5b5'});
+                $(redCardDec).css({'background-color':'#b5b5b5'});
+            }else if (num >= piece - 1) {
                 $redCardNum.html(piece);
                 $rcig.html(gold * piece);
                 $(redCardAdd).css({'background-color': '#b5b5b5'});
@@ -505,13 +510,18 @@ $(function(){
             if (num == 0 || num < 0) {
                 $presentNum.html(0);
                 $pig.html(gold);
-            } else if (num >= (exMax-1)) {
+            }else if (num >= (exMax-1)) {
                 $presentNum.html(exMax);
                 $pig.html(gold * exMax);
                 $(presentAdd).css({'background-color': '#b5b5b5'});
                 if (exMax > 1 || num > 1) {
                     $(presentDec).css({'background-color': '#3398cc'});
                 }
+            }else if(piece == 1){
+                $presentNum.html(piece);
+                $pig.html(gold * piece);
+                $(presentAdd).css({'background-color': '#b5b5b5'});
+                $(presentDec).css({'background-color':'#b5b5b5'});
             }else if (num >= piece - 1) {
                 $presentNum.html(piece);
                 $pig.html(gold * piece);
