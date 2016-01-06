@@ -522,8 +522,8 @@ $(function(){
                     $(presentDec).css({'background-color': '#3398cc'});
                 }
             }else if(num == 1){
-                $presentNum.html(piece);
-                $pig.html(gold * piece);
+                $presentNum.html(num);
+                $pig.html(gold);
                 $(presentDec).css({'background-color':'#b5b5b5'});
                 if(piece == 1){
                     $(presentAdd).css({'background-color': '#b5b5b5'});
