@@ -117,6 +117,34 @@
              color: #e74c3c;
              padding-right: 10px;
           }
+
+          .fresh-news-attention{
+              .font-size(12px);
+              a{
+                 &.fresh-attention-add{
+                     color: #fff;
+                     padding: 0 10px;
+                     line-height: 20px;
+                     &:hover{
+                         text-decoration: none;
+                     }
+                     &:focus{
+                        outline: none;
+                     }
+                 }
+              }
+              .fresh-attention-default{
+                     padding: 4px 10px;
+                     .font-size(12px);
+                     .border-radius(4px);
+              }
+              .fresh-attention-cancel{
+                     color: @blue-color;
+                     .font-size(12px);
+              }
+          }
+
+
           .fresh-course-attention{
              .font-size(12px);
              .fresh-attention-btn{
