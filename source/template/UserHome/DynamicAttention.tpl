@@ -121,7 +121,7 @@
         })
 
         //默认加载第一个标签
-        //$('.fresh-DynamicAttention-tab a:first').click();
+        $('.fresh-DynamicAttention-tab a:first').click();
        
     })
 </script>

@@ -119,26 +119,23 @@
           }
 
           .fresh-news-attention{
-              .font-size(12px);
-              a{
-                 &.fresh-attention-add{
-                     color: #fff;
-                     padding: 0 10px;
-                     line-height: 20px;
-                     &:hover{
-                         text-decoration: none;
-                     }
-                     &:focus{
-                        outline: none;
-                     }
-                 }
-              }
-              .fresh-attention-default{
-                     padding: 4px 10px;
-                     .font-size(12px);
-                     .border-radius(4px);
-              }
-              .fresh-attention-cancel{
+              .fresh-attention-add{
+                    padding: 4px 10px;
+                   .border-radius(4px);
+                   .font-size(12px);
+                   &:hover{
+                       text-decoration: none;
+                   }
+                   &:focus{
+                      outline: none;
+                   }
+                   &.follow_add{
+                      color: #fff;
+                      padding: 0 10px;
+                      line-height: 20px;
+                   }
+               }
+              .follow_cancel{
                      color: @blue-color;
                      .font-size(12px);
               }

@@ -626,8 +626,7 @@ $(function(){
         });
     });
 //截字处理
-    var $goldstorepcn = $('.gold-store-present-card-name');
-    $goldstorepcn.each(function(){
+    $('.gold-store-present-card-name').each(function(){
         var maxwidth=13;
         if($(this).text().length>maxwidth){
             $(this).text($(this).text().substring(0,maxwidth));
