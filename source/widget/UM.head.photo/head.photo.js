@@ -80,7 +80,7 @@ if (headSuccess == 0) {
 
 /* 上传头像表单绑定事件 */
 function headsSave(){
-    var img = $("#loadFile").val();
+    var img = $('#temp').val();
     if(img == ''){
         alert('请选择图片');
         return false;
