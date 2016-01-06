@@ -29,8 +29,8 @@
              <div class="fresh-news-attention ui_follow pull-right"  data-params="url=/t/duchunyu&amp;urlStr=301&amp;urlKey=791fc69220e9d97c53cc94890e0f81d4" data-state="2" data-type="1" data-url="/Dynamic/ajaxFollow">
               
                <a href="###" class="btn btn-warning follow_add fresh-attention-add">+关注</a>
-               <span class="fresh-attention-default btn-sm btn-default">已关注</span>
-               <a href="###" class="fresh-attention-cancel btn-sm btn-link follow_cancel">取消</a>
+               <span class="fresh-attention-add btn-sm btn-default">已关注</span>
+               <a href="###" class="btn-sm btn-link follow_cancel">取消</a>
 
                 <!-- <a href="javascript:void(0)
                 " class="fresh-attention-btn fresh-add-attention-btn"><span class="fresh-add pull-left">+</span><span class="pull-left">关注</span></a> 

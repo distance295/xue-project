@@ -47,7 +47,7 @@
 				<div class="media-body">
 					<!-- 已登录 -->
 					<div class="user-name">
-						<h4 class="media-heading pull-left">快乐的小鸟</h4>
+						<h4 class="media-heading pull-left">快乐的小鸟六七八九</h4>
 						<a class="user-v pull-left" href="">
 							<img src="img/v1.png" alt=""></a>
 					</div>
