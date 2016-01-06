@@ -303,8 +303,6 @@ $(function(){
     var goldCardModal = goldCardModal || {};
 
     goldCardModal.showModal = function(con){
-        setTimeout(Modal(),200);
-        function Modal(){
         var that = $(this), data = that.data();
         var con = con;
 
@@ -342,12 +340,6 @@ $(function(){
             }else if (num > piece - 1) {
                 $redCardNum.html(piece);
                 $rcig.html(gold * piece);
-                $(redCardAdd).css({'background-color': '#b5b5b5'});
-                $(redCardDec).css({'background-color':'#3398cc'});
-            }
-            else {
-                $redCardNum.html(num + 1);
-                $rcig.html(gold * (num + 1));
                 console.log(piece);
                 if(piece == 1){
                     $(redCardAdd).css({'background-color': '#b5b5b5'});
@@ -356,6 +348,13 @@ $(function(){
                 }else{
                     $(redCardAdd).css({'background-color': '#3398cc'});
                 }
+                //$(redCardAdd).css({'background-color': '#b5b5b5'});
+                //$(redCardDec).css({'background-color':'#3398cc'});
+            }
+            else {
+                $redCardNum.html(num + 1);
+                $rcig.html(gold * (num + 1));
+                $(redCardAdd).css({'background-color': '#3398cc'});
                 if (exMax > 1 || num > 1) {
                     $(redCardDec).css({'background-color': '#3398cc'});
                 }
@@ -388,7 +387,7 @@ $(function(){
                 $(redCardDec).css({'background-color':'#3398cc'});
                 $(redCardAdd).css({'background-color':'#3398cc'});
             }
-        });}
+        });
     };
 
 //魔法卡兑换
@@ -521,6 +520,15 @@ $(function(){
                 if (exMax > 1 || num > 1) {
                     $(presentDec).css({'background-color': '#3398cc'});
                 }
+            }else if(num == 1){
+                $presentNum.html(num + 1);
+                $pig.html(gold * (num + 1));
+                $(presentDec).css({'background-color':'#b5b5b5'});
+                if(piece == 1){
+                    $(presentAdd).css({'background-color': '#b5b5b5'});
+                }else{
+                    $(presentAdd).css({'background-color': '#3398cc'});
+                }
             }else if (num > piece - 1) {
                 $presentNum.html(piece);
                 $pig.html(gold * piece);
@@ -530,12 +538,7 @@ $(function(){
             else {
                 $presentNum.html(num + 1);
                 $pig.html(gold * (num + 1));
-                if(piece == 1){
-                    $(presentAdd).css({'background-color': '#b5b5b5'});
-                    $(presentDec).css({'background-color': '#b5b5b5'});
-                }else{
-                    $(presentAdd).css({'background-color': '#3398cc'});
-                }
+                $(presentAdd).css({'background-color': '#3398cc'});
                 if (exMax > 1 || num > 1) {
                     $(presentDec).css({'background-color': '#3398cc'});
                 }
