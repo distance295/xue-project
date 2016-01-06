@@ -170,8 +170,11 @@ function isIE(ver){
 } 
 
 /* 点击上传头像按钮触发事件 */
-function getFullPath(){
+function getFullPath(d){
   var strSrc = $("#loadFile").val();
+  if(strSrc){
+    $('#temp').val(strSrc);
+  }
   var pos = strSrc.lastIndexOf("."); 
   var lastname = strSrc.substring(pos, strSrc.length);
 
