@@ -234,6 +234,7 @@ $('.newCreateAddress').on('click', function() {
     var newAddress = $('#details_form');
     var number = Number($('#numberAddress').text());
     $(addressInput).val('');
+    $('#add_id').val('');
     if (newAddress.is(':hidden') && number < 10) {
         newAddress.show();
     }
