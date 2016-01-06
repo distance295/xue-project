@@ -59,7 +59,14 @@ $(function(){
                 $(this).html($(this).html()+'...');
             }
         }
-    })
+    });
+    $('.find-teacher-course a').each(function(){
+        var maxwidth=20;
+        if($(this).text().length>maxwidth){
+            $(this).text($(this).text().substring(0,maxwidth));
+            $(this).html($(this).html()+'...');
+        }
+    });
 
 });
 
