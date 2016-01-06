@@ -155,6 +155,7 @@ $(function(){
                     return;
                 }
                 $('.gold-detail-block-change').html(result);
+                //截字处理
             }
         });
     }
@@ -169,6 +170,14 @@ $(function(){
         var that = $(this);
         var arr = {};
         goldTabAJax(that, arr);
+        $('.gold-store-present-card-name').each(function(){
+            console.log($(this));
+            var maxwidth=13;
+            if($(this).text().length>maxwidth){
+                $(this).text($(this).text().substring(0,maxwidth));
+                $(this).html($(this).html()+'...');
+            }
+        });
     });
     $body.on("click", ".gold-exchange-title-container li", function (e) {
         var that = $(this);
@@ -624,14 +633,5 @@ $(function(){
                 }
             }
         });
-    });
-//截字处理
-    $('.gold-store-present-card-name').each(function(){
-        console.log($(this));
-        var maxwidth=13;
-        if($(this).text().length>maxwidth){
-            $(this).text($(this).text().substring(0,maxwidth));
-            $(this).html($(this).html()+'...');
-        }
     });
 });
