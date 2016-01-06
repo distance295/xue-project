@@ -113,7 +113,7 @@ var courseInfor = courseInfor || {};
          xue.win({
              id : 'videoPlayWrap',
              title : t,
-             content : '<iframe style="overflow:hidden; border:0;" src="'+ u +'" width="'+w+'px" height="'+h+'px"> </iframe>',
+             content : '<iframe frameborder="0" scrolling="no" src="'+ u +'" width="100%" height="100%"> </iframe>',
              width: w,
              height: h,
              lock : true,
