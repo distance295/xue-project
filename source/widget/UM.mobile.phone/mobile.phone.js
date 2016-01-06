@@ -214,7 +214,7 @@ var xue =xue || {};
         }else{
           /* 短信发送成功提醒 */
           $('#tips-phonecode').removeClass('error').addClass('phonetext');
-          $('.phonetext').text('由于运营商原因，手机短信可能会有延迟，请您耐心等待');
+          $('.phonetext').text('由于运营商原因，手机短信可能会有延迟，请您耐心等待').show();
           /* 操作按钮文本显示 */
           $(that).text("60秒后重新获取");
           var time = 60;

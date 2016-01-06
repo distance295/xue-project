@@ -337,7 +337,7 @@ $(function(){
                 if (exMax > 1 || num > 1) {
                     $(redCardDec).css({'background-color': '#3398cc'});
                 }
-            } else if (num >= piece - 1) {
+            }else if (num > piece - 1) {
                 $redCardNum.html(piece);
                 $rcig.html(gold * piece);
                 $(redCardAdd).css({'background-color': '#b5b5b5'});
@@ -346,7 +346,12 @@ $(function(){
             else {
                 $redCardNum.html(num + 1);
                 $rcig.html(gold * (num + 1));
-                $(redCardAdd).css({'background-color': '#3398cc'});
+                if(piece == 1){
+                    $(redCardAdd).css({'background-color': '#b5b5b5'});
+                    $(redCardDec).css({'background-color': '#b5b5b5'});
+                }else{
+                    $(redCardAdd).css({'background-color': '#3398cc'});
+                }
                 if (exMax > 1 || num > 1) {
                     $(redCardDec).css({'background-color': '#3398cc'});
                 }
@@ -505,14 +510,14 @@ $(function(){
             if (num == 0 || num < 0) {
                 $presentNum.html(0);
                 $pig.html(gold);
-            } else if (num >= (exMax-1)) {
+            }else if (num >= (exMax-1)) {
                 $presentNum.html(exMax);
                 $pig.html(gold * exMax);
                 $(presentAdd).css({'background-color': '#b5b5b5'});
                 if (exMax > 1 || num > 1) {
                     $(presentDec).css({'background-color': '#3398cc'});
                 }
-            }else if (num >= piece - 1) {
+            }else if (num > piece - 1) {
                 $presentNum.html(piece);
                 $pig.html(gold * piece);
                 $(presentAdd).css({'background-color': '#b5b5b5'});
@@ -521,7 +526,12 @@ $(function(){
             else {
                 $presentNum.html(num + 1);
                 $pig.html(gold * (num + 1));
-                $(presentAdd).css({'background-color': '#3398cc'});
+                if(piece == 1){
+                    $(presentAdd).css({'background-color': '#b5b5b5'});
+                    $(presentDec).css({'background-color': '#b5b5b5'});
+                }else{
+                    $(presentAdd).css({'background-color': '#3398cc'});
+                }
                 if (exMax > 1 || num > 1) {
                     $(presentDec).css({'background-color': '#3398cc'});
                 }
