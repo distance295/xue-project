@@ -131,6 +131,20 @@
                     </div>
                 </div>
             </div>
+               <div class="ui_focus">
+                <div class="focus_avatar">
+                    <img src="http://img04.xesimg.com/avatar/user_0.png">
+                </div>
+                <div class="focus_detail">
+                    <div class="focus_info">
+                        <em>01：</em>ddddddddd </div>
+                    <div class="focus_bar">
+                        <span class="infoTime">00:00:00</span>
+                        <span class="infoDate">12月18日</span>
+                    </div>
+                </div>
+            </div>
+            
             <!--repeat-->
         </div>
     </div>
