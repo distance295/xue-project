@@ -303,8 +303,6 @@ $(function(){
     var goldCardModal = goldCardModal || {};
 
     goldCardModal.showModal = function(con){
-        setTimeout(Modal(),200);
-        function Modal(){
         var that = $(this), data = that.data();
         var con = con;
 
@@ -388,7 +386,7 @@ $(function(){
                 $(redCardDec).css({'background-color':'#3398cc'});
                 $(redCardAdd).css({'background-color':'#3398cc'});
             }
-        });}
+        })
     };
 
 //魔法卡兑换
