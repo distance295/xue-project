@@ -502,7 +502,7 @@ $(function(){
         var
         //pig = '.present-intro-gold em',
             $pig = $('.present-intro-gold em'),
-            $presentPiece = $('.present-piece em'),
+            $presentPiece = $(this).find(".present-piece em"),
             gold = parseInt($pig.html()),
             piece = parseInt($presentPiece.html()),
             $presentNum = $('.present-num'),
