@@ -290,7 +290,7 @@ homeWork.url = '/data/homework/';
             	cont: encodeURIComponent(_cont),//评论内容
             	commitId: _commitId//提交作业自增id
             },
-            type : 'get',
+            type : 'post',
             dataType:'json',
             beforeSend: function() {
                   $(dom).find('.homework-submit-btn').addClass('homework-submit-btn-disabled');

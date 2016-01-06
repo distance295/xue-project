@@ -155,6 +155,14 @@ $(function(){
                     return;
                 }
                 $('.gold-detail-block-change').html(result);
+                //截字处理
+                $('.gold-store-present-card-name').each(function(){
+                    var maxwidth=13;
+                    if($(this).text().length>maxwidth){
+                        $(this).text($(this).text().substring(0,maxwidth));
+                        $(this).html($(this).html()+'...');
+                    }
+                });
             }
         });
     }
@@ -624,13 +632,5 @@ $(function(){
                 }
             }
         });
-    });
-//截字处理
-    $('.gold-store-present-card-name').each(function(){
-        var maxwidth=13;
-        if($(this).text().length>maxwidth){
-            $(this).text($(this).text().substring(0,maxwidth));
-            $(this).html($(this).html()+'...');
-        }
     });
 });
