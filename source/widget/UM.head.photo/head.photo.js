@@ -86,7 +86,7 @@ function headsSave(){
         return false;
     }
 
-    var conf = confirm("确定要消耗3000金币兑换自定义头像吗？");
+    var conf = confirm("如果你的学力未达到16级，本地上传将会消耗3000金币，是否确定上传头像？");
     if(conf == true) {
         $("#btn_submit").addClass('submit');
         $(".hp-content").attr('action','/MyHeadImg/setHeadImage/');
