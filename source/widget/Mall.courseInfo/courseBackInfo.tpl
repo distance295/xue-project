@@ -14,7 +14,7 @@
 				<span class="f-left">课程内容：</span>
 				<ul class="f-left">
 					<li>20场直播课程+作业反馈<a href="#" target="_blank">立即试听</a></li>
-					<li>20讲视频课程<a href="#" target="_blank">立即试听</a></li>
+					<li>20讲视频课程<a href="javascript:void(0);" onclick="courseInfor.videoPlaySwitch('MallHelp.html','800','450','课程标题');">立即试听</a></li>
 				</ul>
 			</div>
 			<div class="course-content-teacher">
