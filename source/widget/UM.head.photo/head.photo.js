@@ -145,15 +145,15 @@ function setImagePreview(fileObj, previewObj, maxWidth, maxHeight) {
               
               //40*40
               var hpsmall = document.getElementById('hp-small');
-              hpsmall.innerHTML = "<div id='img-small' style='width:40px;height:40px;margin: 30px auto 10px;border-radius: 50%;padding: 4px;border: 1px solid #dedede;"+sFilter+imgSrc+"\"'></div><span>40*40像素</span>";
+              hpsmall.innerHTML = "<div id='img-small' style='width:40px;height:40px;margin: 30px auto 10px;padding: 4px;border: 1px solid #dedede;"+sFilter+imgSrc+"\"'></div><span>40*40像素</span>";
 
               //60*60
               var hpmiddle = document.getElementById('hp-middle');
-              hpmiddle.innerHTML = "<div id='img-middle' style='width:60px;height:60px;margin: 30px auto 10px;border-radius: 50%;padding: 4px;border: 1px solid #dedede;"+sFilter+imgSrc+"\"'></div><span>60*60像素</span>";
+              hpmiddle.innerHTML = "<div id='img-middle' style='width:60px;height:60px;margin: 30px auto 10px;padding: 4px;border: 1px solid #dedede;"+sFilter+imgSrc+"\"'></div><span>60*60像素</span>";
 
               //100*100
               var hpbig = document.getElementById('hp-big');
-              hpbig.innerHTML = "<div id='img-big' style='width:100px;height:100px;margin: 30px auto 10px;border-radius: 50%;padding: 4px;border: 1px solid #dedede;"+sFilter+imgSrc+"\"'></div><span>100*100像素</span>";
+              hpbig.innerHTML = "<div id='img-big' style='width:100px;height:100px;margin: 30px auto 10px;padding: 4px;border: 1px solid #dedede;"+sFilter+imgSrc+"\"'></div><span>100*100像素</span>";
           } catch (e) {
               alert("您上传的图片格式不正确，请重新选择!");
               return false;
