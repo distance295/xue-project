@@ -6,7 +6,7 @@
     padding-top: 16px;
     padding-bottom: 20px;
     height: 100%;
-    background: url('img/background.png') top center no-repeat;
+    background-color: #bed0fc;
 }
 
 .centerHeader-teacher {
@@ -14,7 +14,7 @@
     padding-top: 16px;
     padding-bottom: 20px;
     height: 100%;
-    background: url('img/teacher-back.jpg') top center no-repeat;
+    background-color: #5279b4;
 }
 
 .centerHeader-stu {
@@ -23,6 +23,11 @@
     padding-bottom: 20px;
     height: 100%;
     background: url('img/stuBack.jpg') top center no-repeat;
+    background-color: #a2cfe4;
+    .row{
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 .center-img-all {
@@ -54,6 +59,9 @@
     //width: 1190px;
     height: 300px;
     margin: 0 auto;
+    background-image: url('img/office-header.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 
 .centerHeader-ib {
@@ -94,8 +102,8 @@
             position: absolute;
             width: 22px;
             height: 22px;
-            top: 80%;
-            left: 80%;
+            top: 75%;
+            left: 75%;
             border-radius: 50%;
             border: 2px solid rgba(255, 255, 255, 0.8);
             background-color: #ffbc3c;
@@ -110,8 +118,8 @@
             position: absolute;
             width: 22px;
             height: 22px;
-            top: 80%;
-            left: 80%;
+            top: 75%;
+            left: 75%;
             border-radius: 50%;
             border: 2px solid rgba(255, 255, 255, 0.8);
             background-color: #e74c3c;
@@ -127,43 +135,33 @@
 
 .intro {
     font-size: 18px;
-    text-align: center;
+    
     margin-top: 8px;
     color: #fff;
 }
 
 .centerHeader-intro-office {
     .intro;
+    text-align: center;
 }
 
 .centerHeader-intro-teacher {
     .intro;
     position: relative;
+    left: 46%;
+    
     .centerHeader-intro-teacher-more {
         font-size: 12px;
         margin-left: 12px;
     }
-    .teacher-prize-size {
-        position: absolute;
-        width: 23px;
-        height: 23px;
-    }
-    .teacher-prize1 {
-        .teacher-prize-size;
-        left: 55%;
-    }
-    .teacher-prize2 {
-        .teacher-prize-size;
-        left: 58%;
-    }
-    .teacher-prize3 {
-        .teacher-prize-size;
-        left: 61%;
+    .teacher-prize{
+        margin-right: 5px;
     }
 }
 
 .centerHeader-intro-stu {
     .intro;
+    text-align: center;
 }
 
 .centerHeader-selfintro {
@@ -202,6 +200,8 @@
         font-size: 16px;
         padding: 3px 12px;
         border-radius:2px;
+        color:#fff;
+        border: none;
     }
     .centerHeader-willFocus-btn {
         color: #fff;
@@ -758,10 +758,13 @@
             width: 18%;
             text-align: center;
             .font-size(16px);
+            
             a {
                 color: #000;
                 display: inline-block;
-                ;
+                &:hover{
+                    color:#1e89e0;
+                }
                 border-bottom: 2px solid #fff;
             }
             &.current {
@@ -803,52 +806,60 @@
     }
 }
 
-.filter-public-tab {
-    display: block;
-    overflow: hidden;
-    background: #fff;
-    line-height: 30px;
-    padding: 12px 15px;
-    margin-bottom: 1px;
-    .font-size;
-    .font-family;
-    color: @font-color;
-    .border-radius(4px);
-    border-bottom: 1px solid #eaeaea;
-    a {
-        outline: none;
-        &:focus {
-            outline: none;
-        }
-    }
-    .filter-text-style {
-        float: left;
-        color: @font-color*3;
-        margin-right: 3px;
-    }
-    .filter-nav-list {
+.centerHeader-teacher{
+    .filter-public-tab {
         display: block;
         overflow: hidden;
-        ul {
-            margin: 0;
-            padding: 0;
-            line-height: 30px;
-            .font-size;
-            li {
-                float: left;
-                margin-right: 20px;
-                list-style: none;
-                a {
-                    .font-size;
-                    .font-family;
-                    color: @font-color;
-                    &:hover {
-                        color: #1e89e0;
-                    }
+        background: #fff;
+        line-height: 30px;
+        padding: 12px 15px;
+        margin-bottom: 1px;
+        .font-size;
+        .font-family;
+        color: @font-color;
+        .border-radius(4px);
+        a {
+            outline: none;
+            &:focus {
+                outline: none;
+            }
+        }
+        .personCenterFresh{
+            a{
+                &:hover{
+                    color:#1e89e0
                 }
-                &.current {
+            }
+        }
+        .filter-text-style {
+            float: left;
+            color: @font-color*3;
+            margin-right: 3px;
+        }
+        .filter-nav-list {
+            display: block;
+            overflow: hidden;
+            ul {
+                margin: 0;
+                padding: 0;
+                line-height: 30px;
+                .font-size;
+                li {
+                    float: left;
+                    margin-right: 20px;
+                    list-style: none;
                     a {
-                        color: #2599c4;
+                        .font-size;
+                        .font-family;
+                        color: @font-color;
+                        &:hover {
+                            color: #1e89e0;
+                        }
+                    }
+                    &.current {
+                        a {
+                            color: #1e89e0;
+                        }
                     }
                 }
             }
