@@ -1,5 +1,3 @@
-var xue =xue || {};
-
 /* =====================头像tab切换===================== */
 $('#head_tab li').click(function(e){
     var box = $(".hp-box-left").children();
