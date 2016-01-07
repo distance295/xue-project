@@ -1100,7 +1100,6 @@ $(function() {
 
                     var url = window.location.hostname == 'v04.xesui.com' ? '../json/pop_userinfo.php' : '/UserPages/ajaxUserPage';
                     var par = udom.data().params;
-                    var url = '/data/courses/teacher-bomb.html';
                     $.ajax(url,{
                         type: 'get',
                         dataType: 'html',
