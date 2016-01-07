@@ -336,16 +336,13 @@
                 <p class="amount-show">
                     <a class="btn-danger btn " href="##"><em class="button-icon icon-will-red"></em>立即学习</a>
                     <a class="btn btn-default " href="##">课程大纲</a>
+                    <a class="btn btn-default " href="##">讲义/资料</a>
                     <a class="btn btn-default last " href="##"><label class="newLabel live-label">live</label>直播辅导</a>
                 </p>
             </div>
 
             <div class="more-service left">
-                <h4 class="gray-arrow">更多服务</h4>
-                <ul class="more-list">
-                    <li class="courseList-material"><a href="###">资料</a></li>
-                    <li class="courseList-exam"><a href="###">考试</a></li>
-                </ul>
+                <a href="###">考试</a>
             </div>
             <div class="courseList-teacher ">
                 <div class=" teacher-main teacher-main-border majar-items">
