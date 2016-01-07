@@ -5,7 +5,9 @@
     @require raphael.js
     @require ../Module.Modal/Modal.js
     @require coursestudycenter.less   
-    @require ../Module.Pagination/paginations.js    
+    @require ../Module.Pagination/paginations.js 
+    @require ../Public.Module/courses_dialog.js   
+    @require ../Public.Module/xue.userinfo.min.js    
 -->
 <div class="courseList-wrap courseList-label">
     <div class="courseList">

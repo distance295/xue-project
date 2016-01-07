@@ -8,7 +8,7 @@
 
             <ul class="nav nav-tabs">  
                 <li role="presentation" class="active"><a href="DynamicIndex.html">新鲜事</a></li>
-                <li><a href="DynamicContact.html">@我的</a></li>
+                <li><a href="DynamicContact.html"><span class="pull-left">@我的</span><span class="pull-left fresh-red-circle"></span></a></li>
                 <li><a href="DynamicAttention.html">关注的人</a></li>
                 <li class="pull-right">
                     <a href="javascript:void(0)" class="btn btn-danger" id="freshPost" data-toggle="modal" data-target="#fresh-sendInfo-box" >

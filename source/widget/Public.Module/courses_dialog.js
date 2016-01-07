@@ -1098,25 +1098,27 @@ $(function() {
             } else {
                 if (!udom.hasClass('info_open')) {
 
-                    // var url = window.location.hostname == 'v04.xesui.com' ? '../json/pop_userinfo.php' : '/Dynamics/ajaxTeacherInfo';
-                    // var par = udom.data().params;
-                    var url = '/data/courses/teacher-bomb.html';
+                    var url = window.location.hostname == 'v04.xesui.com' ? '../json/pop_userinfo.php' : '/UserPages/ajaxUserPage';
+                    var par = udom.data().params;
+                    // var url = '/data/courses/teacher-bomb.html';
                     $.ajax(url,{
                         type: 'get',
                         dataType: 'html',
-                        // data: par,
+                        data: par,
                         success: function(result) {
                             // alert(result)
                             // var msg = xue.ajaxCheck.HTML(result);
-                            if (result.substr(0, 1) == '<') {
+                            // if (result.substr(0, 1) == '<') {
                                 // if(result.sign == 1){
                                 xue.use('userinfo', function() {
                                     if (xue.userinfo) {
 
                                         xue.userinfo.show(udom, result);
+                                        $('.ui_follow').follow();
+
                                     }
                                 });
-                            }
+                            // }
                         },
                         error: function(){
                             alert(22)
@@ -1159,19 +1161,19 @@ $(function() {
         userinfo_temp = true;
     });
 
-    $('body').off('mouseout', '.dialog_userinfo').on('mouseout', '.dialog_userinfo', function(a) {
-        var re = a.relatedTarget;
-        var c = $(this).find(re);
-        if (c.length === 0) {
-            userinfo_temp = false;
-            setTimeout(function() {
-                if (!userinfo_temp) {
-                    xue.win('userinfo').close();
-                    $('.ui-userinfo').removeClass('info_open');
-                }
-            }, 500);
-        }
-    });
+    // $('body').off('mouseout', '.dialog_userinfo').on('mouseout', '.dialog_userinfo', function(a) {
+    //     var re = a.relatedTarget;
+    //     var c = $(this).find(re);
+    //     if (c.length === 0) {
+    //         userinfo_temp = false;
+    //         setTimeout(function() {
+    //             if (!userinfo_temp) {
+    //                 xue.win('userinfo').close();
+    //                 $('.ui-userinfo').removeClass('info_open');
+    //             }
+    //         }, 500);
+    //     }
+    // });
 
 
 // 结束
