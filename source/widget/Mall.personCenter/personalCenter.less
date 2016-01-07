@@ -758,10 +758,13 @@
             width: 18%;
             text-align: center;
             .font-size(16px);
+            
             a {
                 color: #000;
                 display: inline-block;
-                ;
+                &:hover{
+                    color:#1e89e0;
+                }
                 border-bottom: 2px solid #fff;
             }
             &.current {
@@ -819,6 +822,13 @@
         outline: none;
         &:focus {
             outline: none;
+        }
+    }
+    .personCenterFresh{
+        a{
+            &:hover{
+                color:#1e89e0
+            }
         }
     }
     .filter-text-style {
