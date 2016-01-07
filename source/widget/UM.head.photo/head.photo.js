@@ -80,7 +80,7 @@ if (headSuccess == 0) {
 
 /* 上传头像表单绑定事件 */
 function headsSave(){
-    var img = $('#temp').val();
+    var img = $("#loadFile").val();
     if(img == ''){
         alert('请选择图片');
         return false;
@@ -172,9 +172,6 @@ function isIE(ver){
 /* 点击上传头像按钮触发事件 */
 function getFullPath(d){
   var strSrc = $("#loadFile").val();
-  if(strSrc){
-    $('#temp').val(strSrc);
-  }
   var pos = strSrc.lastIndexOf("."); 
   var lastname = strSrc.substring(pos, strSrc.length);
 
