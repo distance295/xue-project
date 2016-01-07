@@ -179,7 +179,7 @@ fresh.media = fresh.media || {};
      * 新鲜事点击视频缩略图展开播放视频方法
      * @param  {Object} dom 任意子节点
      */
-    fm.video.videoPlay = function(dom){
+   /* fm.video.videoPlay = function(dom){
         var videoBox = $(dom).closest('.fresh-type-video');
         //视频div层显示
         videoBox.next().show();
@@ -222,6 +222,23 @@ fresh.media = fresh.media || {};
                           + '</div>'
                         + '</div>'; 
         videoBox.next().html(video_html);  
+    }*/
+
+    fm.video.videoPlay = function(dom){
+        var videoBox = $(dom).closest('.fresh-type-video');
+        //视频div层显示
+        videoBox.next().show();
+        //视频缩略图隐藏
+        videoBox.hide();//图隐藏
+        var url = videoBox.next().data('url');
+        var video_html ='<div class="fresh-media-big-video">'
+                            + '<p class="fresh-media-packUp"><a href="javascript:void(0);" class="fresh-packUp-video">收起</a></p>'
+                            + '<div id="flashcontent" style ="height:408px;">'
+                            +'<iframe src="'+url+'" frameborder="no" border="0" scrolling="no" width="100%" height="100%">iframe>'
+                            +'</div>'
+                         +'</div>'; 
+      videoBox.next().html(video_html);
+         
     }
     
     /**

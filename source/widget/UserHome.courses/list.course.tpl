@@ -336,6 +336,7 @@
                 <p class="amount-show">
                     <a class="btn-danger btn " href="##"><em class="button-icon icon-will-red"></em>立即学习</a>
                     <a class="btn btn-default " href="##">课程大纲</a>
+                    <a class="btn btn-default " href="##">讲义/资料</a>
                     <a class="btn btn-default last " href="##"><label class="newLabel live-label">live</label>直播辅导</a>
                 </p>
             </div>
