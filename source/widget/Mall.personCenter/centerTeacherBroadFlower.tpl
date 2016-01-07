@@ -1,11 +1,11 @@
 
-<div class="center-rank-alive">
+   <div class="center-rank-alive">
     <div class="center-rank-stud clearfix">
         <div class="rank-number pull-left">
             <span class="number1">1</span>
         </div>
         <div class="rank-photo pull-left">
-            <img src="img/visit-head.png" alt="" class="photo"/>
+            <img src="img/visit-head.png" alt="" class="photo ui-userinfo" data-params="userId=292" data-id="292"/>
         </div>
         <div class="rank-name pull-left"><span>聆风发额无法然而我还覅1</span></div>
         <div class="send-flower pull-left">
