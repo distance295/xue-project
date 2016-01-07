@@ -342,7 +342,11 @@
             </div>
 
             <div class="more-service left">
-                <a href="###">考试</a>
+                <h4 class="gray-arrow">更多服务</h4>
+                <ul class="more-list">
+                    <li class="courseList-material"><a href="###">资料</a></li>
+                    <li class="courseList-exam"><a href="###">考试</a></li>
+                </ul>
             </div>
             <div class="courseList-teacher ">
                 <div class=" teacher-main teacher-main-border majar-items">
