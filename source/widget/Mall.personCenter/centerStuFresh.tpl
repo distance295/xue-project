@@ -4,7 +4,7 @@
   @require ../Module.Pagination/pagination.js
 -->
 
-<div class="centerHeader-office-background">
+<div class="centerHeader-stu-background">
     <div class="centerHeader-ib">
         <div class="centerHeader-img">
             <div class="centerHeader-img-head">
