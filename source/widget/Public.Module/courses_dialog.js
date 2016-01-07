@@ -1161,19 +1161,19 @@ $(function() {
         userinfo_temp = true;
     });
 
-    // $('body').off('mouseout', '.dialog_userinfo').on('mouseout', '.dialog_userinfo', function(a) {
-    //     var re = a.relatedTarget;
-    //     var c = $(this).find(re);
-    //     if (c.length === 0) {
-    //         userinfo_temp = false;
-    //         setTimeout(function() {
-    //             if (!userinfo_temp) {
-    //                 xue.win('userinfo').close();
-    //                 $('.ui-userinfo').removeClass('info_open');
-    //             }
-    //         }, 500);
-    //     }
-    // });
+    $('body').off('mouseout', '.dialog_userinfo').on('mouseout', '.dialog_userinfo', function(a) {
+        var re = a.relatedTarget;
+        var c = $(this).find(re);
+        if (c.length === 0) {
+            userinfo_temp = false;
+            setTimeout(function() {
+                if (!userinfo_temp) {
+                    xue.win('userinfo').close();
+                    $('.ui-userinfo').removeClass('info_open');
+                }
+            }, 500);
+        }
+    });
 
 
 // 结束
