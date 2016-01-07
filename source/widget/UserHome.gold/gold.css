@@ -87,7 +87,7 @@ table tr td {
   float: left;
   margin-left: 12px;
   cursor: pointer;
-  border-radius: 1px;
+  border-radius: 4px;
   width: 60px;
   height: 30px;
   display: inline-block;
@@ -135,12 +135,14 @@ table tr td {
 .gold-detail-show-time {
   color: #666;
 }
-.gold-detail-show-add,
+.gold-detail-show-add {
+  color: #3abb9d;
+}
 .gold-detail-show-number {
   color: #e74c3c;
 }
 .gold-detail-show-dec {
-  color: #1e89e0;
+  color: #666;
 }
 .gold-detail-block-change,
 .gold-store-block-change,
