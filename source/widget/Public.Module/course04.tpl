@@ -35,6 +35,7 @@
     <div class="course-detail-wrap">
         <div class="course-detail pull-left">
             <p class="course-title">
+                <label class="course-label course-red-label">荐</label>
                 <label class="course-label course-yellow-label">化学</label>
                 <label class="course-label course-blue-label">直播</label>
                 <a href="##" class="title-detail">【飞遍化学】炸开你的化学世界大门(第三季)——大揭秘 </a>
