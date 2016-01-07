@@ -1098,13 +1098,12 @@ $(function() {
             } else {
                 if (!udom.hasClass('info_open')) {
 
-                    // var url = window.location.hostname == 'v04.xesui.com' ? '../json/pop_userinfo.php' : '/Dynamics/ajaxTeacherInfo';
-                    // var par = udom.data().params;
-                    var url = '/data/courses/teacher-bomb.html';
+                    var url = window.location.hostname == 'v04.xesui.com' ? '../json/pop_userinfo.php' : '/UserPages/ajaxUserPage';
+                    var par = udom.data().params;
                     $.ajax(url,{
                         type: 'get',
                         dataType: 'html',
-                        // data: par,
+                        data: par,
                         success: function(result) {
                             // alert(result)
                             // var msg = xue.ajaxCheck.HTML(result);
@@ -1114,6 +1113,8 @@ $(function() {
                                     if (xue.userinfo) {
 
                                         xue.userinfo.show(udom, result);
+                                        $('.ui_follow').follow();
+
                                     }
                                 });
                             }
