@@ -28,7 +28,13 @@
             <a id="boundedBtn" href="#" onclick="return sure();">解除绑定</a>
         </li>
     </ul>
-
+    <div id="bind_defeat" style="display:none">
+        <h4 style="color:#e74c3c;margin-left:25px;">此XX号已被其他网校账号绑定（XX＝QQ、微博、家长帮）</h4>
+        <p style="margin:13px 0 20px 25px;">您可以用该账号登录与其他网校账号进行解绑后，在与该网校账号进行绑定。</p>
+        <div class="om-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">确定</button>
+        </div>
+    </div>
     <div class="prompt-box">
         <img class="prompt" src="img/prompt.png">
         <div class="cb-prompt-box">
