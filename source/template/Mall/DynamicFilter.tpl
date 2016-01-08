@@ -7,14 +7,14 @@
         <li><a href="#">课程分类</a></li>
         <li class="active">三年级</li>
     </ol>
-    <div class="row top m20">
+    <div class="row">
 <!--   12栏的用这个    -->
        <div class="col-md-12">
          <link rel="import" href="../../widget/Public.Selector/index.tpl?__inline">
        </div>
 <!--   12栏结束    -->
 <!--   左右分栏的用这个    -->
-        <div class="col-md-10 wrap-body wrap-mall">
+        <div class="col-md-10 top m20 wrap-body wrap-mall">
 
             <!-- *********************** 内容区域开始 *********************** -->
             <ul class="screen-rank" id="fresh-DynamicFilter-nav">
