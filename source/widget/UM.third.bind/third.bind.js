@@ -8,3 +8,15 @@ function sure() {
         return false;
     }
 }
+
+//调用模态框js
+function bindModal(){
+    var con = $('#bind_defeat').html();
+    createModal.show({
+        id : 'bindDefeat',
+        title : '第三方绑定',
+        cls : 'infor-Modal',
+        content : con
+    }); 
+    $('#bindDefeat').modal({backdrop: 'static', keyboard: false});
+} 
