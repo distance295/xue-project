@@ -11,8 +11,8 @@
  * @links http://xesui.com
  */
 
-var X, xue;
-xue = xue || function(expr, fn) {
+ var X, xue;
+ xue = xue || function(expr, fn) {
     return xue.dom ? xue.dom(expr, fn) : {};
 };
 X = xue;
@@ -55,11 +55,11 @@ xue.use = xue.use || function(moduleName, callback, isQuequ, timeout) {
      *
      * @type {[type]}
      */
-    var n = null,
-        f = false,
-        q = false,
-        t = false,
-        tp = null;
+     var n = null,
+     f = false,
+     q = false,
+     t = false,
+     tp = null;
 
     /**
      * 循环参数对象
@@ -67,7 +67,7 @@ xue.use = xue.use || function(moduleName, callback, isQuequ, timeout) {
      * 根据参数的类型存入相应的变量中
      * 如果类型不匹配则返回变量的原始值，防止变量被重复赋值
      */
-    $.each(arguments, function(k, v) {
+     $.each(arguments, function(k, v) {
         tp = typeof v;
         n = (tp === 'string') ? v : n;
         f = (tp === 'function') ? v : f;
@@ -85,7 +85,7 @@ xue.use = xue.use || function(moduleName, callback, isQuequ, timeout) {
      * 回调函数
      * @return {object}   xue[n]  返回模块对象
      */
-    var _callback = function() {
+     var _callback = function() {
         if (f) {
             return f(xue[n]);
         }
@@ -98,7 +98,7 @@ xue.use = xue.use || function(moduleName, callback, isQuequ, timeout) {
      * 如果不存在，则通过异步加载模块文件，
      * 文件加载成功之后根据传入的timeout情况来确定是否延时触发回调函数
      */
-    if (xue[n]) {
+     if (xue[n]) {
         _callback();
     } else {
         // 调用异步加载方法，默认线上JS模块文件放到 sript/下面，文件名：xue.[模块名].min.js
@@ -135,7 +135,7 @@ xue.dialog = xue.dialog || function(opt) {
      *
      * @type {[type]} 返回xue.dailog对象
      */
-    if (opt && typeof opt === 'object' && opt.length === undefined) {
+     if (opt && typeof opt === 'object' && opt.length === undefined) {
 
         $.extend(o, xue.dialog._default, opt);
         xue.dialog._init(o);
@@ -168,12 +168,12 @@ xue.dialog = xue.dialog || function(opt) {
          * 弹窗外围容器
          * @type {String}
          */
-        wrap: '<div id="$id$" class="dialog">$dialog_box$ $dialog_close$ $dialog_arrow$</div>',
+         wrap: '<div id="$id$" class="dialog">$dialog_box$ $dialog_close$ $dialog_arrow$</div>',
         /**
          * 关闭按钮
          * @type {String}
          */
-        close: '<a href="javascript:void(0);" class="dialog_close">关闭</a>',
+         close: '<a href="javascript:void(0);" class="dialog_close">关闭</a>',
         /**
          * 指示箭头模板
          * $arrow_type$ : 按钮位置
@@ -183,7 +183,7 @@ xue.dialog = xue.dialog || function(opt) {
          * - br : 下右
          * @type {String}
          */
-        arrow: '<div class="dialog_arrow arrow_$arrow_type$"></div>',
+         arrow: '<div class="dialog_arrow arrow_$arrow_type$"></div>',
         /**
          * 按钮模版
          * $btn_id$   :
@@ -192,7 +192,7 @@ xue.dialog = xue.dialog || function(opt) {
          * $btn_text$ :
          * @type {String}
          */
-        button: '<button type="button" data-type="$btn_type$" id="$id$_btn_$btn_id$" class="btn $btn_cls$ $btn_type$" href="javascript:void(0);">$btn_text$</button>',
+         button: '<button type="button" data-type="$btn_type$" id="$id$_btn_$btn_id$" class="btn $btn_cls$ $btn_type$" href="javascript:void(0);">$btn_text$</button>',
         /**
          * 弹窗容器table
          * $id$ :
@@ -205,18 +205,18 @@ xue.dialog = xue.dialog || function(opt) {
          * $height$ :
          * @type {[type]}
          */
-        box: '<table class="dialog_box">\n' + '    <thead><tr class="t"><td class="tl"></td><td class="tc"></td><td class="tr"></td></tr></thead>\n' + '   <tbody class="dialog_head $is_title$">\n' + '       <tr class="ct">\n' + '          <td class="cl"></td>\n' + '         <td class="dialog_handle">\n' + '               <p class="dialog_title" id="$id$_title">$title$</p>\n' + '          </td>\n' + '            <td class="cr"></td>\n' + '     </tr>\n' + '    </tbody>\n' + ' <tbody class="dialog_body">\n' + '      <tr class="cc">\n' + '          <td class="cl"></td>\n' + '         <td id="$id$_content" class="dialog_content_wrap"><div class="dialog_content">$content$</div></td>\n' + '           <td class="cr"></td>\n' + '     </tr>\n' + '    </tbody>\n' + ' <tbody class="dialog_foot $is_buttons$">\n' + '     <tr class="cb">\n' + '          <td class="cl"></td>\n' + '         <td class="dialog_buttons" id="$id$_buttons">$buttons$</td>\n' + '          <td class="cr"></td>\n' + '     </tr>\n' + '    </tbody>\n' + ' <tfoot><tr class="b"><td class="bl"></td><td class="bc"></td><td class="br"></td></tr></tfoot>\n' + '</table>\n',
+         box: '<table class="dialog_box">\n' + '    <thead><tr class="t"><td class="tl"></td><td class="tc"></td><td class="tr"></td></tr></thead>\n' + '   <tbody class="dialog_head $is_title$">\n' + '       <tr class="ct">\n' + '          <td class="cl"></td>\n' + '         <td class="dialog_handle">\n' + '               <p class="dialog_title" id="$id$_title">$title$</p>\n' + '          </td>\n' + '            <td class="cr"></td>\n' + '     </tr>\n' + '    </tbody>\n' + ' <tbody class="dialog_body">\n' + '      <tr class="cc">\n' + '          <td class="cl"></td>\n' + '         <td id="$id$_content" class="dialog_content_wrap"><div class="dialog_content">$content$</div></td>\n' + '           <td class="cr"></td>\n' + '     </tr>\n' + '    </tbody>\n' + ' <tbody class="dialog_foot $is_buttons$">\n' + '     <tr class="cb">\n' + '          <td class="cl"></td>\n' + '         <td class="dialog_buttons" id="$id$_buttons">$buttons$</td>\n' + '          <td class="cr"></td>\n' + '     </tr>\n' + '    </tbody>\n' + ' <tfoot><tr class="b"><td class="bl"></td><td class="bc"></td><td class="br"></td></tr></tfoot>\n' + '</table>\n',
         /**
          * 背景遮罩
          */
-        mask: '<div class="dialog_mask"></div>'
-    };
+         mask: '<div class="dialog_mask"></div>'
+     };
 
     /**
      * 默认配置
      * @type {Object}
      */
-    win._default = {
+     win._default = {
         content: '<div class="aui_loading"><span>loading..</span></div>',
         title: '\u6d88\u606f', // 标题. 默认'消息'
         handle: null,
@@ -257,30 +257,30 @@ xue.dialog = xue.dialog || function(opt) {
     };
 
     // 设置队列
-    win.queue = { /* 'id' : {} */ };
+win.queue = { /* 'id' : {} */ };
 
 
-    win._init = function(opt) {
+win._init = function(opt) {
 
-        this.id = opt.id ? 'xuebox_' + opt.id : 'xuebox';
+    this.id = opt.id ? 'xuebox_' + opt.id : 'xuebox';
 
-        this.queue[this.id] = opt;
-        /* --------------- 获取HTML结构 ------------- */
+    this.queue[this.id] = opt;
+    /* --------------- 获取HTML结构 ------------- */
 
-        var _dom = this.tpl.wrap;
+    var _dom = this.tpl.wrap;
 
-        _dom = _dom.replace('$id$', this.id);
+    _dom = _dom.replace('$id$', this.id);
 
-        _dom = _dom.replace('$dialog_close$', this._getClose());
+    _dom = _dom.replace('$dialog_close$', this._getClose());
 
-        _dom = _dom.replace('$dialog_box$', this._getDOM());
+    _dom = _dom.replace('$dialog_box$', this._getDOM());
 
-        _dom = _dom.replace(/\$dialog_arrow\$/, this._getArrow());
+    _dom = _dom.replace(/\$dialog_arrow\$/, this._getArrow());
 
-        /* --------------- 页面中插入 ------------- */
-        if ($('#xuebox_' + opt.id).length > 0) {
-            $('#xuebox_' + opt.id).remove();
-        }
+    /* --------------- 页面中插入 ------------- */
+    if ($('#xuebox_' + opt.id).length > 0) {
+        $('#xuebox_' + opt.id).remove();
+    }
         // var _top_temp = Number(-2000);
         $(_dom).appendTo('body');
         // $(_dom).css('top', Number(-2000)).appendTo('body');
@@ -424,10 +424,10 @@ xue.dialog = xue.dialog || function(opt) {
             return;
         }
         var w = $('body').width(),
-            h = $('body').height();
+        h = $('body').height();
         var iframe_tpl = '<iframe id="dialog_iframe" style="position:fixed;width:100%;height:100%;top:0;left:0;_position:absolute;_width:' + w + ';_height:' + h + ';_filter:alpha(opacity=0);opacity=0;border-style:none;z-index:998;"></iframe>';
         // if(!this.iframe){
-        $('body').append(iframe_tpl);
+            $('body').append(iframe_tpl);
         // }
         // this.iframe = $('#dialog_iframe');
     };
@@ -472,11 +472,11 @@ xue.dialog = xue.dialog || function(opt) {
          * [{id:'', text:'', tp:'', cls:'', fn}]
          * @type {[type]}
          */
-        var btn = opt.button;
-        var tpl = this.tpl.button;
+         var btn = opt.button;
+         var tpl = this.tpl.button;
 
-        var btns = '';
-        var re = {
+         var btns = '';
+         var re = {
             id: /\$id\$/g,
             btn: /\$btn_id\$/,
             type: /\$btn_type\$/g,
@@ -535,13 +535,13 @@ xue.dialog = xue.dialog || function(opt) {
          * $width$ :
          * $height$ :
          */
-        var id = this.id || xue.getTime();
-        box = box.replace(/\$id\$/g, id);
+         var id = this.id || xue.getTime();
+         box = box.replace(/\$id\$/g, id);
 
         /**
          * title
          */
-        if (opt.title) {
+         if (opt.title) {
             box = box.replace(/\$is_title\$/, '');
             box = box.replace(/\$title\$/, opt.title);
         } else {
@@ -552,18 +552,18 @@ xue.dialog = xue.dialog || function(opt) {
         /**
          * 按钮组
          */
-        var _btn = this._getButton(),
-            isbtn = _btn ? '' : 'hidden';
-        box = box.replace('$buttons$', _btn);
-        box = box.replace('$is_buttons$', isbtn);
+         var _btn = this._getButton(),
+         isbtn = _btn ? '' : 'hidden';
+         box = box.replace('$buttons$', _btn);
+         box = box.replace('$is_buttons$', isbtn);
 
         /**
          * 内容区域
          */
-        box = box.replace('$content$', opt.content);
+         box = box.replace('$content$', opt.content);
 
-        return box;
-    };
+         return box;
+     };
 
     // 向队列中添加属性
     win._setOption = function(key, val, id) {
@@ -581,13 +581,13 @@ xue.dialog = xue.dialog || function(opt) {
      * @param  {Function} fn   要绑定的事件
      * @return {[type]}        [description]
      */
-    win._addClick = function(expr, fn) {
+     win._addClick = function(expr, fn) {
         var box = $(expr).parents('.dialog'),
-            id = (box.length > 0) ? box.attr('di') : this.id;
+        id = (box.length > 0) ? box.attr('di') : this.id;
 
         var _fn = (fn && typeof fn === 'function') ? fn : function() {
-                win.close();
-            };
+            win.close();
+        };
         var that = this;
         $(expr).off('click').on('click', function() {
             that.box = $(this).parents('.dialog');
@@ -605,7 +605,7 @@ xue.dialog = xue.dialog || function(opt) {
      *
      * 返回值： w = width, h = height, l = left, t = top, s = scrollTop, c = center, m = middle
      */
-    win._size = {
+     win._size = {
         wins: function() {
             var _win = $(window);
             // 窗体尺寸
@@ -694,7 +694,7 @@ xue.dialog = xue.dialog || function(opt) {
     win.position = function(left, top) {
 
         var box = [],
-            opt = this.queue[this.id];
+        opt = this.queue[this.id];
 
         if ((left && typeof left === 'number') || (top && typeof top === 'number')) {
             if (!opt) {
@@ -778,21 +778,21 @@ xue.dialog = xue.dialog || function(opt) {
      *
      * @return {[type]} [description]
      */
-    win.focus = function() {};
+     win.focus = function() {};
 
     /**
      * 获取弹窗内容区域
      * @param  {string} tp 获取类型：html / text / dom
      * @return {[type]}    根据类型返回：html(HTML内容) / text(文本) / dom(jQuery对象)
      */
-    win.getContent = function(tp) {
+     win.getContent = function(tp) {
         var opt = this.queue[this.id];
         if (!opt) {
             return;
         }
 
         var DOM = opt.DOM_CONTENT.find('.dialog_content'),
-            con = '';
+        con = '';
 
         if (tp === 'html') {
             con = DOM.html();
@@ -810,7 +810,7 @@ xue.dialog = xue.dialog || function(opt) {
      * @param  {boolen} lockbg 是否显示背景图片（斜线）
      * @return {[type]}        [description]
      */
-    win.lock = function(lockbg) {
+     win.lock = function(lockbg) {
         var mask = $('body').find('.dialog_mask');
         if (mask.length > 0) {
             mask.show();
@@ -843,7 +843,7 @@ xue.dialog = xue.dialog || function(opt) {
      *
      * @return {[type]} [description]
      */
-    win.unlock = function(id) {
+     win.unlock = function(id) {
         $('.dialog_mask').remove();
     };
 
@@ -900,7 +900,7 @@ xue.dialog = xue.dialog || function(opt) {
 
         var box = opt.DOM_BOX;
         var width = box.outerWidth(),
-            height = box.outerHeight();
+        height = box.outerHeight();
         return {
             width: width,
             height: height
@@ -959,7 +959,7 @@ xue.dialog = xue.dialog || function(opt) {
      *
      *    ...... 未完成 .......
      */
-    win.arrow = function(handle) {
+     win.arrow = function(handle) {
         var _dom = $(handle);
         if (_dom.length === 0) {
             return;
@@ -983,12 +983,12 @@ xue.dialog = xue.dialog || function(opt) {
         // 设置箭头类别
         var c = (s.c < w.c) ? 'l' : 'r', // 垂直区域
             m = ((s.t - d.h) < w.s) ? 't' : 'b'; // 水平区域
-        var tp = m + c;
-        var arrow = box.find('.dialog_arrow');
+            var tp = m + c;
+            var arrow = box.find('.dialog_arrow');
 
-        arrow.removeClass().addClass('dialog_arrow').addClass('arrow_' + tp);
+            arrow.removeClass().addClass('dialog_arrow').addClass('arrow_' + tp);
 
-        var aLeft = Math.floor((c == 'l') ? d.w * 0.2 : d.w * 0.8);
+            var aLeft = Math.floor((c == 'l') ? d.w * 0.2 : d.w * 0.8);
         // console.log(s);
         arrow.css({
             'background-position': aLeft + 'px 0'
@@ -1062,10 +1062,10 @@ $(function() {
 
 
 // 开始
-    var userinfo_temp = false,
-        userinfo_dom = null,
-        userinfo_show = null,
-        userinfo_interval = false;
+var userinfo_temp = false,
+userinfo_dom = null,
+userinfo_show = null,
+userinfo_interval = false;
 
     // 绑定所有V用户的鼠标滑过事件：弹出用户信息
     $('body').off('mouseover', '.ui-userinfo').on('mouseover', '.ui-userinfo', function(ev) {
@@ -1107,82 +1107,85 @@ $(function() {
                         type: 'get',
                         dataType: 'html',
                         data: par,
+                        xhrFields: {
+                            withCredentials: true
+                        },
                         success: function(result) {
                             // alert(result)
                             // var msg = xue.ajaxCheck.HTML(result);
                             if (result != '0'){
                                 // if(result.sign == 1){
-                                xue.use('userinfo', function() {
-                                    if (xue.userinfo) {
+                                    xue.use('userinfo', function() {
+                                        if (xue.userinfo) {
 
-                                        xue.userinfo.show(udom, result);
-                                        $('.ui_follow').follow();
+                                            xue.userinfo.show(udom, result);
+                                            $('.ui_follow').follow();
 
-                                    }
-                                });
+                                        }
+                                    });
+                                }
+                            },
+                            error: function(){
+                                alert('数据请求失败')
                             }
-                        },
-                        error: function(){
-                            alert('数据请求失败')
-                        }
-                    });
-                }
-            }
+                        });
+}
+}
 
-            udom.addClass('info_open');
+udom.addClass('info_open');
 
-            userinfo_temp = true;
-        };
+userinfo_temp = true;
+};
 
 
 
-        that.off('mouseout').on('mouseout', function(a, b, c, d) {
-            userinfo_temp = false;
-            userinfo_show = false;
-            userinfo_dom = null;
+that.off('mouseout').on('mouseout', function(a, b, c, d) {
+    userinfo_temp = false;
+    userinfo_show = false;
+    userinfo_dom = null;
 
-            var re = $(a.relatedTarget);
-            var _c = $('.dialog_userinfo').find(re);
+    var re = $(a.relatedTarget);
+    var _c = $('.dialog_userinfo').find(re);
 
-            if (_c.length > 0) {
-                userinfo_temp = true;
-            }
-            setTimeout(function() {
-                if (!userinfo_temp) {
+    if (_c.length > 0) {
+        userinfo_temp = true;
+    }
+    setTimeout(function() {
+        if (!userinfo_temp) {
                     // 关闭窗口的时候传入要关闭窗口的ID，防止关闭正在激活的窗口（非用户信息窗口）
                     xue.win('userinfo').close('userinfo');
                     that.removeClass('info_open');
                 }
                 that = null;
             }, 500);
-        });
+});
 
-    });
+});
 
-    $('body').off('mouseover', '.dialog_userinfo').on('mouseover', '.dialog_userinfo', function(a) {
-        userinfo_temp = true;
-    });
+$('body').off('mouseover', '.dialog_userinfo').on('mouseover', '.dialog_userinfo', function(a) {
+    userinfo_temp = true;
+});
 
-    $('body').off('mouseout', '.dialog_userinfo').on('mouseout', '.dialog_userinfo', function(a) {
-        var re = a.relatedTarget;
-        var c = $(this).find(re);
-        if (c.length === 0) {
-            userinfo_temp = false;
-            setTimeout(function() {
-                if (!userinfo_temp) {
-                    xue.win('userinfo').close();
-                    $('.ui-userinfo').removeClass('info_open');
-                }
-            }, 500);
-        }
-    });
+$('body').off('mouseout', '.dialog_userinfo').on('mouseout', '.dialog_userinfo', function(a) {
+    var re = a.relatedTarget;
+    var c = $(this).find(re);
+    if (c.length === 0) {
+        userinfo_temp = false;
+        setTimeout(function() {
+            if (!userinfo_temp) {
+                xue.win('userinfo').close();
+                $('.ui-userinfo').removeClass('info_open');
+            }
+        }, 500);
+    }
+});
 
 
 // 结束
 
 
 
-  
+
 });
 
 
