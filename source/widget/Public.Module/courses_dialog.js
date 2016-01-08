@@ -1108,7 +1108,7 @@ $(function() {
                         success: function(result) {
                             // alert(result)
                             // var msg = xue.ajaxCheck.HTML(result);
-                            // if (result.substr(0, 1) == '<') {
+                            if (result != '0'){
                                 // if(result.sign == 1){
                                 xue.use('userinfo', function() {
                                     if (xue.userinfo) {
@@ -1118,10 +1118,10 @@ $(function() {
 
                                     }
                                 });
-                            // }
+                            }
                         },
                         error: function(){
-                            alert(22)
+                            alert('数据请求失败')
                         }
                     });
                 }

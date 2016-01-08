@@ -36,8 +36,6 @@
  /* 左右垂直边框 */
  @dialog_line_v : '@{dialog_path}/dialog_vline.png';
 
- @dialog_arrow_b : '@{dialog_path}/dialog_arrow_b.png';
- @dialog_arrow_t : '@{dialog_path}/dialog_arrow_t.png';
 
  .dialog {
     width:auto; /*overflow:hidden;*/
@@ -61,9 +59,9 @@
         background-repeat: no-repeat;
 
         /* 底部：左中右 */
-        &.arrow_bl, &.arrow_bc, &.arrow_br { bottom:-7px; background-image:url("@{dialog_arrow_b}");}
+        &.arrow_bl, &.arrow_bc, &.arrow_br { bottom:-9px; background-image:url("img/dialog_arrow_b.png");}
         /* 顶部：左中右 */
-        &.arrow_tl, &.arrow_tc, &.arrow_tr { top:-7px; background-image:url("@{dialog_arrow_t}");}
+        &.arrow_tl, &.arrow_tc, &.arrow_tr { top:-5px; background-image:url("img/dialog_arrow_t.png");}
         
         &.arrow_bl, &.arrow_tl { background-position: 30% 0;}
         &.arrow_br, &.arrow_tr { background-position: 70% 0;}
@@ -104,18 +102,10 @@
      */
      .dialog_box {
 
-        .tl, .tc, .tr, .bl, .bc, .br { height : @dialog_br_size; }
-        .tl, .tr, .cl, .cr, .bl, .br { width: @dialog_br_size; }
-        .tl { background:url("@{dialog_path}/dialog_tl.png") no-repeat left 0; }
-        .tr { background:url("@{dialog_path}/dialog_tr.png") no-repeat right 0; }
-        .bl { background:url("@{dialog_br_path}") no-repeat left bottom; }
-        .br { background:url("@{dialog_br_path}") no-repeat right bottom; }
-        .tc { background:url("@{dialog_line_h}") repeat-x left 0; }
-        .bc { background:url("@{dialog_line_h}") repeat-x left bottom; }
-        .cl { background:url("@{dialog_line_v}") repeat-y left 0; }
-        .cr { background:url("@{dialog_line_v}") repeat-y right 0; }
+        
         .dialog_handle, .dialog_content_wrap {
             background-color:#FFF;
+            border: 1px solid #e5e5e5
         }
     }
     
