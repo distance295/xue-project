@@ -806,58 +806,60 @@
     }
 }
 
-.filter-public-tab {
-    display: block;
-    overflow: hidden;
-    background: #fff;
-    line-height: 30px;
-    padding: 12px 15px;
-    margin-bottom: 1px;
-    .font-size;
-    .font-family;
-    color: @font-color;
-    .border-radius(4px);
-    a {
-        outline: none;
-        &:focus {
-            outline: none;
-        }
-    }
-    .personCenterFresh{
-        a{
-            &:hover{
-                color:#1e89e0
-            }
-        }
-    }
-    .filter-text-style {
-        float: left;
-        color: @font-color*3;
-        margin-right: 3px;
-    }
-    .filter-nav-list {
+.centerHeader-teacher{
+    .filter-public-tab {
         display: block;
         overflow: hidden;
-        ul {
-            margin: 0;
-            padding: 0;
-            line-height: 30px;
-            .font-size;
-            li {
-                float: left;
-                margin-right: 20px;
-                list-style: none;
-                a {
-                    .font-size;
-                    .font-family;
-                    color: @font-color;
-                    &:hover {
-                        color: #1e89e0;
-                    }
+        background: #fff;
+        line-height: 30px;
+        padding: 12px 15px;
+        margin-bottom: 1px;
+        .font-size;
+        .font-family;
+        color: @font-color;
+        .border-radius(4px);
+        a {
+            outline: none;
+            &:focus {
+                outline: none;
+            }
+        }
+        .personCenterFresh{
+            a{
+                &:hover{
+                    color:#1e89e0
                 }
-                &.current {
+            }
+        }
+        .filter-text-style {
+            float: left;
+            color: @font-color*3;
+            margin-right: 3px;
+        }
+        .filter-nav-list {
+            display: block;
+            overflow: hidden;
+            ul {
+                margin: 0;
+                padding: 0;
+                line-height: 30px;
+                .font-size;
+                li {
+                    float: left;
+                    margin-right: 20px;
+                    list-style: none;
                     a {
-                        color: #1e89e0;
+                        .font-size;
+                        .font-family;
+                        color: @font-color;
+                        &:hover {
+                            color: #1e89e0;
+                        }
+                    }
+                    &.current {
+                        a {
+                            color: #1e89e0;
+                        }
                     }
                 }
             }
