@@ -41,14 +41,14 @@ function delAddress(id) {
     
 }
  //提交生成收货地址列表
-function saveNewAddress(inputs) {
-    var input = inputs || $(addressInput);
+function saveNewAddress(addInput) {
+    var input = $(addInput);
     var data = {
         id: 0
     };
     data.id = $('#add_id').val();
     var id;
-    inputs.each(function() {
+    input.each(function() {
         id = this.id;
         id = id.replace('add_', '');
         data[id] = $(this).val();
@@ -161,8 +161,10 @@ function updateAddress(id) {
 }
 // 保存收货地址
 $('body').on('click', '#address_submit_btn', function() {
-    var inputs = $(addressInput),
-        errorbox = $('.error_tips_address');
+    var saveAddress ='#realname, #add_province, #address, #zipcode, #recipientphone';
+    var addInput = '#realname, #add_province, #add_city, #add_country, #address, #zipcode, #recipientphone';
+    var errorbox = $('.error_tips_address');
+    var inputs = $(saveAddress);
 
     var ids = {
         realname: '收货人姓名',
@@ -226,7 +228,7 @@ $('body').on('click', '#address_submit_btn', function() {
         return;
     }
     errorbox.empty();
-    saveNewAddress(inputs);
+    saveNewAddress(addInput);
 
 });
 // 新增收货人地址显示或隐藏 
