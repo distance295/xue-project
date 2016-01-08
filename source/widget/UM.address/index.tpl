@@ -8,7 +8,7 @@
     <div class="setAddress-title">
         <span class="btn btn-info newCreateAddress">新增收货地址</span>
         <span>
-            你已创建 <strong id="numberAddress">10</strong>
+            你已创建 <strong id="numberAddress">1</strong>
             个收货地址,最多可以创建 <strong>10</strong>
             个
         </span>
