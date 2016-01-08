@@ -24,13 +24,13 @@
         <div class="course-detail pull-left">
             <p class="course-title">
                 <label class="course-label course-yellow-label">化学</label>
-                <label class="course-label course-blue-label">直播</label>
+                <label class="course-label course-green-label">录播</label>
                 <a href="##" class="title-detail">【飞遍化学】炸开你的化学世界大门(第三季)——大揭秘 </a>
             </p>
             <p class="tip-for">适用于：想要培养化学学习兴趣的初三学员</p>
             <p class="avatar-name"><a target="_blank"  href="###" class="ui-username">赵紫涵</a></p>
             <p class="amount-show">
-                <a href="##" class="btn btn-default"><em class="button-icon icon-test"></em>立即听课</a>
+                <a href="##" class="btn btn-default"><em class="button-icon icon-record"></em>立即听课</a>
             </p>
         </div>
         <div class="course-num">
