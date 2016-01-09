@@ -607,7 +607,7 @@ $(function(){
                     if(div !== ''){
                         event.preventDefault();
                     }else{
-                        $pct.append('<div class="alert alert-danger fade in"><img src="../../static/img/UserHome.gold/Spam.png" class="alertImg"><span>'+msg.msg+'</span></div>')
+                        $pct.append('<div class="alert alert-danger fade in"><span class="glyphicon glyphicon-exclamation-sign gold-tip-alert"></span><span>'+msg.msg+'</span></div>')
                     }
                 }
                 if(msg.sign == 1){
