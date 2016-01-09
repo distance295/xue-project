@@ -22,7 +22,7 @@ $(function(){
         }
     },'.live-course-hover');
     var $liveCourseContent = $('.live-course-content'),
-        $livetimetcp = $('.live-time-tip-container p');
+        $livecourseshowtitle = $('.live-course-show-title');
     $liveCourseContent.each(function(){
         var maxwidth=47;
         if($(this).text().length>maxwidth){
@@ -30,8 +30,8 @@ $(function(){
             $(this).html($(this).html()+'...');
         }
     });
-    $livetimetcp.each(function(){
-        var maxwidth=47;
+    $livecourseshowtitle.each(function(){
+        var maxwidth=16;
         if($(this).text().length>maxwidth){
             $(this).text($(this).text().substring(0,maxwidth));
             $(this).html($(this).html()+'...');

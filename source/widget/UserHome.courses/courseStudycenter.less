@@ -108,6 +108,10 @@ body{
 .courseList-wrap{
 	clear: both;
 	position: relative;
+	.mark{
+		background: url();
+		padding: 0;
+	}
 	.course-btn-gray,.course-btn-gray[disabled]{
 		background: #ccd1d9;
 		border: 1px solid #ccd1d9;
@@ -759,15 +763,27 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 				color: @red;
 				a{
 					color: @red;
+					cursor: default;
 				}
 			}
 			.yellow-mark{
 				color: #ffbc3c;
 				a{
 					color: #ffbc3c;
+					cursor: default;
+				}
+				a.cursor_pointor{
+					cursor: pointer;
 				}
 			}
 			.studied{
+				color: #37bc9b;
+				a{
+					color: #37bc9b;
+					cursor: default;
+				}
+			}
+			.canceled{
 				color: #37bc9b;
 				a{
 					color: #37bc9b;
@@ -784,6 +800,7 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 				a{
 
 					color: @blueColor;
+					cursor: default;
 				}
 			}
 			span.yellow-mark{
