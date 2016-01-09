@@ -590,6 +590,7 @@ table tr td {
   line-height: 30px;
   color: #333;
   font-weight: bold;
+  vertical-align: bottom;
 }
 .alertImg {
   margin-right: 10px;
@@ -616,6 +617,7 @@ table tr td {
 .gold-tip-alert {
   color: #e74c3c !important;
   margin-right: 5px;
+  font-size: 15px;
 }
 .gold-modal-img {
   float: left;
@@ -628,4 +630,8 @@ table tr td {
 .gold-modal-img img {
   max-width: 240px;
   max-height: 208px;
+}
+.red-card-tip .glyphicon,
+.present-card-tip .glyphicon {
+  top: 0;
 }
