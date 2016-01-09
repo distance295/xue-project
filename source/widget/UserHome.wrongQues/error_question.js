@@ -54,19 +54,20 @@ $('body').on('click', select.opt.answerShow, function () {
 });
 
 /* 错题本图片答案交互 */
-//$('body').on('click', select.opt.imgAnswer, function () {
-//    var that= $(this),
-//        /* 图片路径 */
-//        urlSite = that.data('url')||that.attr('data-url'),
-//        con     = '<img src="' + urlSite + '" style="width:754px;"/>';
-//        createModal.show({
-//            id      : "wrongQuestionFlow",
-//            width   : '784',
-//            title   : '错题本',
-//            cls     : 'wrongQueShow',
-//            content : con
-//        })
-//        $('#wrongQuestionFlow').modal('show');
-//        
-//})
+$('body').on('click', select.opt.imgAnswer, function () {
+    var that= $(this),
+        /* 图片路径 */
+        urlSite = that.data('url')||that.attr('data-url'),
+        con     = '<img src="' + urlSite + '" style="max-width:754px;"/>';
+        createModal.show({
+            id      : "wrongQuestionFlow",
+            width   : '784',
+            title   : '错题本',
+            cls     : 'wrongQueShow',
+            content : con
+        })
+        $('#wrongQuestionFlow').modal({backdrop: 'static', keyboard: false, show: true});
+        
+});
+
 
