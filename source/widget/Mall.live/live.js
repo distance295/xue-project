@@ -32,7 +32,7 @@ $(function(){
     });
     $livecourseshowtitle.each(function(){
         var maxwidth=16;
-        if($(this).text().length>maxwidth){
+        if($(this).text().toString().length>maxwidth){
             $(this).text($(this).text().substring(0,maxwidth));
             $(this).html($(this).html()+'...');
         }
