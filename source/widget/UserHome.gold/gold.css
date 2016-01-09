@@ -457,13 +457,15 @@ table tr td {
 }
 .red-card-intro-name span,
 .present-intro-name span {
-  vertical-align: bottom;
+  vertical-align: middle;
   line-height: 18px;
+  display: inline-block;
 }
 .red-card-intro-name span em,
 .present-intro-name span em {
   color: #e74c3c;
   font-weight: bold;
+  vertical-align: bottom;
 }
 .red-card-intro-title,
 .present-intro-title {
