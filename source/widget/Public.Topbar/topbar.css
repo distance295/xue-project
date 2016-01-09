@@ -41,6 +41,7 @@
   width: 100%;
   line-height: 30px;
   padding-left: 12px;
+  color: #666;
 }
 #module-topbar .ui-dropdown.hover {
   position: relative;
@@ -64,6 +65,7 @@
   margin-bottom: 0;
   padding: 0;
   background-color: transparent;
+  color: #666;
 }
 #module-topbar .breadcrumb li {
   height: 30px;
@@ -96,16 +98,16 @@
   margin: 0 auto;
 }
 #module-topbar .ui-header-menu .topleft-bar {
-  width: 450px;
+  width: 410px;
 }
-#module-topbar .ui-header-menu .topleft-bar li:nth-child(1) em.text-danger {
-  max-width: 270px;
+#module-topbar .ui-header-menu .topleft-bar > li:first-child em.text-danger {
+  max-width: 230px;
   height: 30px;
   overflow: hidden;
   float: left;
 }
 #module-topbar .ui-header-menu .topright-bar {
-  width: 730px;
+  width: 770px;
   height: 30px;
   text-align: right;
 }

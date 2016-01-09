@@ -21,7 +21,7 @@
 }
 #module-minicart .dropdown-handle a {
   float: left;
-  padding-left: 15px;
+  padding-left: 10px;
   color: #666;
 }
 #module-minicart .dropdown-handle .fa.fa-angle-right {
@@ -103,9 +103,6 @@
 #module-minicart .dropdown-body .minicart-items ul li:nth-last-child(1) {
   border-bottom: 0 none;
 }
-#module-minicart .dropdown-body .minicart-items ul li em {
-  padding: .2em 1em .3em;
-}
 #module-minicart .dropdown-body .minicart-items ul li .course-info .course-title {
   line-height: 24px;
   max-height: 48px;
@@ -128,7 +125,7 @@
 #module-minicart .dropdown-body .minicart-footer {
   background: #fcfcfc;
   overflow: hidden;
-  padding: .5em 1em;
+  padding: .5em 1.5em .5em 1em;
 }
 #module-minicart .dropdown-body .minicart-footer .minicart-total {
   line-height: 2.4em;
