@@ -195,8 +195,7 @@ $(function () {
         study.briefToggle(_index + 1);
     });
      //签到提示 start
-    $('body').on('mouseenter', '.singInFinish', function(){
-        var that = $(this);
+    function showAlert(){
         var dom = $('#sign_in_data').data('value');
         var _day = Number(dom.days),
             _gold= Number(dom.gold),
@@ -212,6 +211,14 @@ $(function () {
                 tpl += '<p>连续签到<strong>'+ _day +'</strong>天，额外获得<strong>'+_rewardGold+'</strong>金币！</p>';
             }
         $('<li id="singInLayer">' + tpl +'</li>').appendTo('.sideSingInItems ul');
+    }
+     $('body').on('click', '.sideSingInItems ul li.singIn', function(){
+        var that = $(this);
+        showAlert()
+    });
+    $('body').on('mouseenter', '.singInFinish', function(){
+        var that = $(this);
+        showAlert()
     });
      $('body').on('mouseleave', '.singInFinish', function(){
          $('#singInLayer').remove();

@@ -162,7 +162,7 @@ $(function(){
         var that = $(this),
             _id = that.data('id'),
             _url = miniUrl +'/ShoppingCart/addCart/'+ _id;
-             $.ajax({
+            $.ajax({
                     url: _url,
                     type: 'GET',
                     dataType: 'jsonp',                
@@ -172,6 +172,7 @@ $(function(){
                              var num = Number($('small.minicart-total').text());
                              $('small.minicart-total').text(num + 1 );
                              $('#miniCart-body').empty();
+                             $('.button_shop-cart').button('loading');    
                              $.ajax({
                                 url: miniUrl +'/ShoppingCart/ajaxGetCartList/',
                                 type: 'POST',
