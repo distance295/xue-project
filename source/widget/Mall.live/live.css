@@ -107,12 +107,11 @@
   color: #ed5565;
 }
 .live-time-tip-container {
-  text-align: center;
   line-height: 30px;
 }
 .live-time-tip-container span {
   font-size: 16px;
-  margin-right: 26px;
+  margin-left: 10px;
 }
 .live-time-tip-container img {
   margin-right: 9px;
@@ -121,7 +120,8 @@
   display: inline-block;
   font-size: 12px;
   color: #666;
-  margin: 0;
+  margin-right: 5px;
+  float: right;
 }
 .live-time-tip-container p .fa {
   margin-right: 5px;
