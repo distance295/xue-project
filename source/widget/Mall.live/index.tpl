@@ -24,13 +24,13 @@
                         <img src="img/live-teacher-photo1.png" class="live-teacher-photo"/>
                         <div class="live-course-hover">
                             <div class="live-course-title"></div>
-                            <span class="live-course-show-title">韬哥认为你一定 会的小学知识点</span>
+                            <span class="live-course-show-title">韬哥认为你一定 会的小学知识点啊啊啊啊啊啊</span>
                             <span class="live-course-content" style="display: none">啊啊啊啊啊啊啊啊啊啊啊啊啊</span>
                         </div>
                     </div>
                     <div class="live-time-tip">
                         <div class="live-time-tip-container">
-                            <span>08-23 15:30-16:30</span>
+                            <span>1月1日 15:30-16:30</span>
 <!--                            -->
                             <p><i class="fa fa-eye"></i>4612453</p>
                         </div>

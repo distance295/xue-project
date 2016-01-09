@@ -1,7 +1,7 @@
 <!--学生认证账号start-->
 <div class="center-verify-stud top m20">
         <div class="center-stud-outer clearfix">
-            <div class="center-stud-verify pull-left"></div>
+            <a class="center-stud-verify pull-left"></a>
             <div class="center-stud-desc pull-left">学而思网校认证学员</div>
         </div>
         <div class="center-stud-prize">
