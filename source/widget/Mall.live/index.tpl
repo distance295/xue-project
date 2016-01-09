@@ -30,7 +30,7 @@
                     </div>
                     <div class="live-time-tip">
                         <div class="live-time-tip-container">
-                            <span>08-23 15:30-16:30</span>
+                            <span>1月1日 15:30-16:30</span>
 <!--                            -->
                             <p><i class="fa fa-eye"></i>4612453</p>
                         </div>
