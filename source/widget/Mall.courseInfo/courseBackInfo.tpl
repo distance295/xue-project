@@ -81,7 +81,7 @@
 			</div>
 			<div class="course-button-list">
 			<span class="f-left">
-				<button class="btn btn-info button_shop-cart" data-id="110001" id="myButton" data-loading-text="已加入购物车" type="button" autocomplete="off">加入购物车</button>
+				<button class="btn btn-info button_shop-cart" data-id="110001" data-loading-text="已加入购物车" autocomplete="off">加入购物车</button>
 			</span>
 			<span class="f-left">
 				<a class="btn btn-danger button_apply" href="#">立即报名</a>
@@ -94,7 +94,7 @@
 	</div>
 
 <script>
-  $('#myButton').on('click', function () {
+  $('.button_shop-cart').on('click', function () {
     var $btn = $(this).button('loading')
     // business logic...
    // $btn.button('reset')
