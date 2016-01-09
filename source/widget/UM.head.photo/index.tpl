@@ -17,11 +17,13 @@
         </div>
         <div class="hp-local">
             <form action="" method="POST" enctype="multipart/form-data" id="headsImg" onsubmit="return headsSave();">
+                <!-- 后端返回上传失败提示 -->
                 <div class="img-error">
-                    <span>后端返回上传失败提示</span>
+                    <span></span>
                 </div>
+                <!-- 后端返回成功信息 -->
                 <div class="img-success">
-                    <span>后端返回成功信息</span>
+                    <span></span>
                 </div>
                 <div class="hl-box">
                     <div id="preview" style="display:inline-block;">
