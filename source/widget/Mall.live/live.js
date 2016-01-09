@@ -21,20 +21,4 @@ $(function(){
             $(this).find('.live-course-content').stop().fadeOut(300);
         }
     },'.live-course-hover');
-    var $liveCourseContent = $('.live-course-content'),
-        $livecourseshowtitle = $('.live-course-show-title');
-    $liveCourseContent.each(function(){
-        var maxwidth=47;
-        if($(this).text().length>maxwidth){
-            $(this).text($(this).text().substring(0,maxwidth));
-            $(this).html($(this).html()+'...');
-        }
-    });
-    $livecourseshowtitle.each(function(){
-        var maxwidth=16;
-        if($(this).text().toString().length>maxwidth){
-            $(this).text($(this).text().substring(0,maxwidth));
-            $(this).html($(this).html()+'...');
-        }
-    });
 });

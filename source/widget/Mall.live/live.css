@@ -142,6 +142,7 @@
   cursor: pointer;
 }
 .live-enter-box {
+  display: inline-block;
   width: 245px;
   height: 50px;
   text-align: center;
