@@ -2,6 +2,13 @@
   padding: 0;
   margin: 0;
 }
+.breadcrumb {
+  margin-bottom: 0;
+  padding: 10px 15px;
+}
+#module-breadcrumb {
+  margin-bottom: 0;
+}
 .find-teacher-container {
   width: 100%;
   border: 1px solid #eaeaea;

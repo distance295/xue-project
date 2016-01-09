@@ -32,10 +32,10 @@
   list-style: none;
 }
 .ui-head-nav .container ul.head-nav li a:hover {
-  color: #3bafda;
+  color: #1e89e0;
 }
 .ui-head-nav .container ul.head-nav li.current a {
-  color: #3bafda;
+  color: #1e89e0;
 }
 .ui-categorys {
   width: 200px;
@@ -66,7 +66,7 @@
   display: block;
   font: 400 15px/44px "microsoft yahei";
   height: 45px;
-  padding: 0 20px;
+  padding: 0 10px;
   margin: 0;
   background: #1e89e0;
 }
