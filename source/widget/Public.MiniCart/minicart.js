@@ -59,7 +59,7 @@ function completefn(){
 
 $.ajaxSetup({
   type: 'post',
-  dataType: 'json',
+  dataType: 'json'
 }); 
 
 var miniCart = miniCart || {};
