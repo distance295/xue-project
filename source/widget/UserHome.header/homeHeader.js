@@ -17,12 +17,14 @@ function showStudPrize(dom) {
     //目前所测试的距离可能在不同的浏览器中会有偏差；设置页卡的定位
     $('.' + _dom).css({
         'top': heightDis-5,
-        'left': leftDis + 5
+        'left': leftDis + 5,
+        'z-index':10
     })
     $('#stuBox_' + _dom).css({
         'position': 'absolute',
         'top': heightDis-5,
-        'left': leftDis - 160
+        'left': leftDis - 160,
+        'z-index':10
     })
 }
 
