@@ -145,6 +145,11 @@
   position: relative;
   margin: 17px auto 14px;
 }
+.find-teacher-hover-a {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+}
 .find-teacher-photo {
   width: 200px;
   height: 200px;
