@@ -155,6 +155,32 @@ $(function(){
                     return;
                 }
                 $('.gold-detail-block-change').html(result);
+                var
+                    $dateStart = $('#dateStart'),
+                    $dateEnd = $('#dateEnd');
+                var dateStart, dateEnd;
+                if($('#dateStartCalendar').length == 0){
+                    $dateStart.calendar({
+                        controlId: "dateStartCalendar",
+                        controlClass: "calendar",
+                        speed: 200,
+                        complement: true,
+                        readonly: true,
+                        upperLimit: new Date(),
+                        lowerLimit: new Date("2010/01/01")
+                    });
+                }
+                if($('#dateEndCalendar').length == 0){
+                    $dateEnd.calendar({
+                        controlId: "dateEndCalendar",
+                        controlClass: "calendar",
+                        speed: 200,
+                        complement: true,
+                        readonly: true,
+                        upperLimit: new Date(),
+                        lowerLimit: new Date("2010/01/01")
+                    });
+                }
                 //截字处理
                 $('.gold-store-present-card-name').each(function(){
                     var maxwidth=13;
