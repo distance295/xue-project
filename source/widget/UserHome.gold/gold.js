@@ -171,7 +171,9 @@ $(function(){
         var that = $(this);
         that.addClass('active').siblings().removeClass('active gold-detail-title-on');
         var arr = {};
+        $('.calendar').remove();
         goldTabAJax(that, arr);
+
     });
     $body.on("click", ".gold-store-title-container li", function (e) {
         var that = $(this);
