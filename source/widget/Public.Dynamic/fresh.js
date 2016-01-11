@@ -688,7 +688,7 @@ fresh.comment = fresh.comment || {};
                     msg = data.msg;
                 if( tp === 0 ){//错误提醒   
                     alert(msg);
-                    fc.param.form.val(val);
+                    // fc.param.form.val(val);
                     fc.param.textSzie.text(140);
                     return false;
                 } else if( tp === 1 ) {//不需要验证码验证直接提交
