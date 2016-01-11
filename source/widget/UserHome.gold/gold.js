@@ -90,7 +90,7 @@ $(function(){
             add_country: '地区'
         };
         var _reg = {
-            phone: (/^(13|15|18)[0-9]{9}$/.test($('#phone').val()) ? true : false),
+            phone: (/^(13|15|18|14|17)[0-9]{9}$/.test($('#phone').val()) ? true : false),
             zipcode: (/^[0-9][0-9]{5}$/.test($('#zipcode').val()) ? true : false)
         };
         //邮编
