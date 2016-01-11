@@ -135,12 +135,6 @@
   margin-right: 10px;
 }
 .find-teacher-hover-a {
-  float: left;
-  width: 200px;
-  height: 200px;
-  display: inline-block;
-}
-.find-teacher-photo-hover {
   position: absolute;
   width: 200px;
   height: 200px;
