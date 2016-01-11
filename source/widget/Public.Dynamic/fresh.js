@@ -581,8 +581,8 @@ fresh.comment = fresh.comment || {};
                     msg = data.msg;
                 if( tp === 0 ){
                     alert(msg);
-                    fc.param.form.val('');
-                    fc.param.textSzie.text(140);
+                    //fc.param.form.val('');
+                    //fc.param.textSzie.text(140);
                     return false;
                 } else if( tp === 1 ) {
                     //关闭验证弹出层

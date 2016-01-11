@@ -123,7 +123,7 @@ function saveNewAddress(addInput) {
                 _addid.html(tp);
                 $('#numberAddress').text(result.rows);
             }
-            if (result.default == 1) {
+            if (result.isDefault == 1) {
                 _addid.html(tp);
                 _addid.find('.addr_detail').append('<span class="default_addr">默认地址</span>');
                 _addid.find('.setdefault_consignee').remove();
