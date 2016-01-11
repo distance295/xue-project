@@ -688,7 +688,7 @@ fresh.comment = fresh.comment || {};
                     msg = data.msg;
                 if( tp === 0 ){//错误提醒   
                     alert(msg);
-                    fc.param.form.val('');
+                    fc.param.form.val(val);
                     fc.param.textSzie.text(140);
                     return false;
                 } else if( tp === 1 ) {//不需要验证码验证直接提交
@@ -703,7 +703,8 @@ fresh.comment = fresh.comment || {};
                            title:'提示',
                            content:fc.VerificationBox()
                     });
-                    $('#fresh-dialog-verificationCode').modal('show');
+                    // $('#fresh-dialog-verificationCode').modal('show');
+                    $('#fresh-dialog-verificationCode').modal({backdrop: 'static', keyboard: false,show: true})
                     fc.changeVerificationImg('verificationImg');
                     
                     //切换验证码
