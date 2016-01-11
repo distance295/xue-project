@@ -97,32 +97,36 @@
                   type: "get",
                   dataType: 'html',
                   success: function(data){
-                      if(data){
-                          $('.fresh-main-wrapper').html(data);
-                      }else{
-                          $('.fresh-main-wrapper').html('');
-                      }
-                      var pageNun = parseInt($.trim($('#pagesTotal').val()));
-                      //分页的方法
-                      $('.ui-pages').pages({
-                          total : pageNun, // 总记录数
-                          size: 20, // 每页显示记录数
-                          index : 1, // 当前页
-                          click : function(index){
-                              $.ajax({
-                                  url : '/data/Dynamic/ajaxDynamicList.html',
-                                  data : '&category='+_type+'&curpage='+index,
-                                  type: "get",
-                                  dataType: 'html',
-                                  success: function(data){
-                                    if(data){
-                                       $('.fresh-main-wrapper').html(data);
-                                    }
-                                  }
-                              });
-                          }
-                      });
+                     if(xue.ajaxCheck.html(data)){
+                         if(data){
+                           $('.fresh-main-wrapper').html(data);
+                        }else{
+                            $('.fresh-main-wrapper').html('');
+                        }
+                        var pageNun = parseInt($.trim($('#pagesTotal').val()));
+                        //分页的方法
+                        $('.ui-pages').pages({
+                            total : pageNun, // 总记录数
+                            size: 20, // 每页显示记录数
+                            index : 1, // 当前页
+                            click : function(index){
+                                $.ajax({
+                                    url : '/data/Dynamic/ajaxDynamicList.html',
+                                    data : '&category='+_type+'&curpage='+index,
+                                    type: "get",
+                                    dataType: 'html',
+                                    success: function(data){
+                                      if(data){
+                                        if(xue.ajaxCheck.html){
 
+                                        }
+                                         $('.fresh-main-wrapper').html(data);
+                                      }
+                                    }
+                                });
+                            }
+                        });
+                     }
                   }
               })
         })

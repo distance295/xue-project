@@ -5,6 +5,7 @@
     @require ../Module.Pagination/paginations.js
     @require ../Module.Modal/Modal.js
     @require ../Module.Follow/follow.js
+    @require ../../static/js/xue.ajax.js
     @require fresh.js
     @require fresh.load.min.js
 -->
