@@ -19,11 +19,11 @@
             <form action="" method="POST" enctype="multipart/form-data" id="headsImg" onsubmit="return headsSave();">
                 <!-- 后端返回上传失败提示 -->
                 <div class="img-error">
-                    <span></span>
+                    <span>123</span>
                 </div>
                 <!-- 后端返回成功信息 -->
                 <div class="img-success">
-                    <span></span>
+                    <span>123</span>
                 </div>
                 <div class="hl-box">
                     <div id="preview" style="display:inline-block;">
