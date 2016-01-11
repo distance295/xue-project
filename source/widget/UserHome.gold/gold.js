@@ -90,7 +90,7 @@ $(function(){
             add_country: '地区'
         };
         var _reg = {
-            phone: (/^(13|15|18)[0-9]{9}$/.test($('#phone').val()) ? true : false),
+            phone: (/^(13|15|18|14|17)[0-9]{9}$/.test($('#phone').val()) ? true : false),
             zipcode: (/^[0-9][0-9]{5}$/.test($('#zipcode').val()) ? true : false)
         };
         //邮编
@@ -155,6 +155,32 @@ $(function(){
                     return;
                 }
                 $('.gold-detail-block-change').html(result);
+                var
+                    $dateStart = $('#dateStart'),
+                    $dateEnd = $('#dateEnd');
+                var dateStart, dateEnd;
+                if($('#dateStartCalendar').length == 0){
+                    $dateStart.calendar({
+                        controlId: "dateStartCalendar",
+                        controlClass: "calendar",
+                        speed: 200,
+                        complement: true,
+                        readonly: true,
+                        upperLimit: new Date(),
+                        lowerLimit: new Date("2010/01/01")
+                    });
+                }
+                if($('#dateEndCalendar').length == 0){
+                    $dateEnd.calendar({
+                        controlId: "dateEndCalendar",
+                        controlClass: "calendar",
+                        speed: 200,
+                        complement: true,
+                        readonly: true,
+                        upperLimit: new Date(),
+                        lowerLimit: new Date("2010/01/01")
+                    });
+                }
                 //截字处理
                 $('.gold-store-present-card-name').each(function(){
                     var maxwidth=13;
@@ -171,7 +197,9 @@ $(function(){
         var that = $(this);
         that.addClass('active').siblings().removeClass('active gold-detail-title-on');
         var arr = {};
+        $('.calendar').remove();
         goldTabAJax(that, arr);
+
     });
     $body.on("click", ".gold-store-title-container li", function (e) {
         var that = $(this);
