@@ -18,7 +18,7 @@ $('#ui-setAddress').on('mouseleave', '.shipadd_list li', function(event) {
 //删除收货人地址
 function delAddress(id) {
     var _data = id;
-    if (window.confirm("确定删除该收货地址!")){
+    if (window.confirm("确定删除该收货地址?")){
                 $.ajax({
                     url: '/MyInfos/delAddress',
                     type: 'POST',
@@ -123,7 +123,7 @@ function saveNewAddress(addInput) {
                 _addid.html(tp);
                 $('#numberAddress').text(result.rows);
             }
-            if (result.default == 1) {
+            if (result.isDefault == 1) {
                 _addid.html(tp);
                 _addid.find('.addr_detail').append('<span class="default_addr">默认地址</span>');
                 _addid.find('.setdefault_consignee').remove();
@@ -179,7 +179,7 @@ $('body').on('click', '#address_submit_btn', function() {
         add_country: '地区'
     };
     var _reg = {
-        recipientphone: (/^(13|15|18)[0-9]{9}$/.test($('#recipientphone').val()) ? true : false),
+        recipientphone: (/^(13|14|15|17|18)[0-9]{9}$/.test($('#recipientphone').val()) ? true : false),
         zipcode: (/^[0-9][0-9]{5}$/.test($('#zipcode').val()) ? true : false)
     };
     //邮编
