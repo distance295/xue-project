@@ -134,9 +134,14 @@
 .find-teacher-data-statistics img {
   margin-right: 10px;
 }
-.find-teacher-hover-a {
+.find-teacher-photo-a {
   position: absolute;
-  bottom: 0;
+  width: 200px;
+  height: 200px;
+  background: -webkit-gradient(linear, 0% 65%, 0% 100%, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.85)));
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.85) 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.85) 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.85) 100%);
 }
 .find-teacher-hover-container {
   width: 200px;
