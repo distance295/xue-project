@@ -72,21 +72,16 @@ miniCart.shopCart = function(e){
         that.addClass('hover');
         return false;
     }else{
-       var url = miniUrl + '/ShoppingCart/ajaxGetCartList/';
-       $.ajax({
+            var url = '/ShoppingCart/ajaxGetCartList/';
+            $.ajax({
 	         	url: url,
 	         	type: 'POST',
 	         	dataType: 'html',
-				xhrFields:{withCredentials:true},
-				crossDomain:true,
 	         	success:function (result) {
                        that.addClass('hover');
                        $(result).appendTo('#miniCart-body');
-	         	},
-	         	error : function() {
-	         		alert('数据加载失败！');
 	         	}
-	         }); 
+	         });
     }
    //鼠标移出
 	$('body').on('mouseleave','.ui-dropdown-miniCart',function(event) {
@@ -113,11 +108,9 @@ miniCart.shopCart = function(e){
                             $('small.minicart-total').text(_num - 1);
 							$('.dropdown-body').empty();
 							$.ajax({
-								url: miniUrl + '/ShoppingCart/ajaxGetCartList/',
+								url:'/ShoppingCart/ajaxGetCartList/',
 								type: 'POST',
 								dataType: 'html',
-								xhrFields:{withCredentials:true},
-								crossDomain:true,
 								success:function (result) {
 									   $(result).appendTo('#miniCart-body');
 								}
@@ -129,7 +122,8 @@ miniCart.shopCart = function(e){
 $(function(){
 	//头部购物车鼠标移入
 	$('.ui-dropdown-miniCart').on('mouseenter',function() {
-		miniCart.shopCart(this);
+         miniCart.shopCart(this);
+      
 	});
     //删除头部购物车里的课程
     $('body').on('click','.course-function .delete',function(){
