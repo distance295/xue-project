@@ -22,19 +22,25 @@ $(function(){
         }
     },'.live-course-hover');
     var $livecourseshowtitle = $('.live-course-show-title');
+    console.log($livecourseshowtitle)
     $livecourseshowtitle.each(function(){
+        console.log(1);
         var maxwidth=16;
         if($(this).text().length>maxwidth){
             $(this).text($(this).text().substring(0,maxwidth));
             $(this).html($(this).html()+'…');
+            console.log(2);
         }
     });
     var $liveCourseContent = $('.live-course-content');
     $liveCourseContent.each(function(){
+        console.log(3);
         var maxwidth=47;
         if($(this).text().length>maxwidth){
             $(this).text($(this).text().substring(0,maxwidth));
             $(this).html($(this).html()+'…');
+            console.log(4);
         }
+
     });
 });
