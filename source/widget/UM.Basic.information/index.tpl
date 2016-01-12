@@ -15,7 +15,7 @@
             </div>
             <div>
                 <label for="">昵称：</label>
-                <input class="nickname" type="text" name="nickname" maxlength="18" data-nickname="" autocomplete="off"/>
+                <input class="nickname" type="text" name="nickname" maxlength="18" data-nickname="123" value="123" autocomplete="off"/>
                 <div class="error-box">
                     <span class="nickname-warning error"></span>
                 </div>
@@ -40,7 +40,7 @@
                     <select id="year" name="year" rel="2014" >
                     </select>
                     <i>年</i>
-                    <select id="month" name="month"  rel="04" >
+                    <select id="month" name="month"  rel="4" >
                     </select>
                     <i>月</i>
                     <select id="day" name="day" rel="24" >
@@ -57,7 +57,7 @@
             </div>
             <div>
                 <label for="school">学校：</label>
-                <input class="school" type="text" maxlength="50" autocomplete="off"/>
+                <input class="school" type="text" maxlength="50" autocomplete="off" data-school="123" value="123"/>
                 <div class="error-box">
                     <span class="school-warning error"></span>
                 </div>
