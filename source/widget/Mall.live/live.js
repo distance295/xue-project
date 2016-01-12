@@ -21,4 +21,21 @@ $(function(){
             $(this).find('.live-course-content').stop().fadeOut(300);
         }
     },'.live-course-hover');
+    var $livecourseshowtitle = $('.live-course-show-title');
+    $livecourseshowtitle.each(function(){
+        var maxwidth=16;
+        if($(this).text().length>maxwidth){
+            $(this).text($(this).text().substring(0,maxwidth));
+            $(this).html($(this).html()+'…');
+        }
+    });
+    var $liveCourseContent = $('.live-course-content');
+    $liveCourseContent.each(function(){
+        var maxwidth=47;
+        if($(this).text().length>maxwidth){
+            $(this).text($(this).text().substring(0,maxwidth));
+            $(this).html($(this).html()+'…');
+        }
+
+    });
 });

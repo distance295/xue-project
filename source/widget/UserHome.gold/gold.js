@@ -101,7 +101,7 @@ $(function(){
             reg_text = '';
         inputs.each(function() {
             id = this.id;
-            if ($(this).val() === '') {
+            if ($(this).val().trim() === '') {
                 error.push(ids[id]);
                 $(this).addClass('error');
             } else {
