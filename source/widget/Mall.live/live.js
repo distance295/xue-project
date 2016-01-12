@@ -36,5 +36,6 @@ $(function(){
             $(this).text($(this).text().substring(0,maxwidth));
             $(this).html($(this).html()+'…');
         }
+
     });
 });
