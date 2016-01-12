@@ -120,6 +120,9 @@ fresh.media = fresh.media || {};
                   dynId : _dynId,
                   stuAnswer : _stuAnswer
               },
+              beforeSend: function() {
+                  $(dom).addClass('fresh-Answer-disabled');
+              },
               success : function(data){
                     var _sign = data.sign;
                     var dataMsg = data.msg;
@@ -169,6 +172,9 @@ fresh.media = fresh.media || {};
                     examRezult_html += '<span class="fresh-sign-remove">你是第<em> '+ dataMsg.dyn_que_replynum +' </em>';*/
                     examRezult_html += '<span class="fresh-sign-remove">你是第<em> '+ dataMsg.dyn_que_replynum +' </em>个答题的学员，已有<em> '+ dataMsg.dyn_que_rightnum +' </em>人答对!</span>';
                     selectAnswer_Box.html(examRezult_html)
+              },
+              complete: function() {
+                  $(dom).removeClass('fresh-Answer-disabled');
               }
         });
     };
