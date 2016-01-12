@@ -16,9 +16,13 @@ xue.video = xue.video || {};
         if(window.XDomainRequest){
             xdr = new XDomainRequest();
             if (xdr) {
-//                    xdr.onerror = err;
+                xdr.onerror = function(){
+                    alert('error！');
+                };
 //                    xdr.ontimeout = 10000;
-//                    xdr.onprogress = progres;
+                xdr.onprogress = function(){
+                    alert('progress……');
+                };
                 xdr.onload = function(){
                     $(v.opt.dom).html(xdr.responseText);
                 };
