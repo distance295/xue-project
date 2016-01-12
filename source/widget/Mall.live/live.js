@@ -27,7 +27,6 @@ $(function(){
         if($(this).text().length>maxwidth){
             $(this).text($(this).text().substring(0,maxwidth));
             $(this).html($(this).html()+'…');
-            console.log(2);
         }
     });
     var $liveCourseContent = $('.live-course-content');
