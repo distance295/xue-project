@@ -150,7 +150,7 @@ table tr td {
   display: none;
 }
 .gold-exchange-use-block-change {
-  width: 905px;
+  width: 912px;
   margin-left: 5px;
   display: none;
 }
@@ -192,7 +192,7 @@ table tr td {
   overflow: hidden;
   width: 934px;
   position: absolute;
-  left: 140px;
+  left: 133px;
   margin-top: 12px;
 }
 .gold-exchange-card-box-p {
@@ -283,7 +283,7 @@ table tr td {
 }
 .gold-store-present-rank,
 .gold-exchange-rank {
-  width: 905px;
+  width: 912px;
   height: 52px;
   margin-top: 10px;
   margin-left: 5px;
