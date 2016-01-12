@@ -10,13 +10,13 @@
 var xue = xue || {};
 xue.avatar = xue.avatar || {};
 
-(function(){
+(function () {
     var a = xue.avatar;
 
     a.box = {
-        pic : null,
+        pic: null,
         list: null,
-        btn : null
+        btn: null
     };
 
     a.step = $(".avatar_items li").width();
@@ -25,12 +25,16 @@ xue.avatar = xue.avatar || {};
 
     a.len = 0;
 
-    a.toggle = function( expr ){
+    a.toggle = function (expr) {
         var btn = $(expr);
-        if(btn.length == 0){ return; }
+        if (btn.length == 0) {
+            return;
+        }
         var wrap = btn.parent();
         var pic = wrap.hasClass('avatar_roll') ? wrap.siblings('.avatar_items') : wrap.find('.avatar_items');
-        if(pic.length == 0){ return; }
+        if (pic.length == 0) {
+            return;
+        }
 
 
         this.box.pic = pic;
@@ -44,64 +48,64 @@ xue.avatar = xue.avatar || {};
         var list = pic.find('li');
         var left = pic.css('margin-left');
 
-        this.left = Number(left.replace('px',''));
+        this.left = Number(left.replace('px', ''));
 
-        if(btn.hasClass('prev')){
+        if (btn.hasClass('prev')) {
             a.prev();
-        }else{
+        } else {
             a.next();
         }
     }
 
-   a.prev = function(){
+    a.prev = function () {
 
-        if(a.left < 0){
+        if (a.left < 0) {
             a.box.pic.animate({
-                marginLeft : '+='+a.step+'px'
-            }, 500, function(){
+                marginLeft: '+=' + a.step + 'px'
+            }, 500, function () {
                 a.left += a.step;
                 a.setCls();
-                if(a.left >= 0){
+                if (a.left >= 0) {
                     $(this).clearQueue();
                 }
             });
-        }else{
+        } else {
             a.box.pic.clearQueue();
         }
     };
 
-    a.next = function(){
+    a.next = function () {
         var box = a.box.pic,
-        left = Number(box.css('margin-left').replace('px',''));
+            left = Number(box.css('margin-left').replace('px', ''));
 
-        if(a.left > -(a.max * a.step)){
+        if (a.left > -(a.max * a.step)) {
             a.box.pic.animate({
-                marginLeft : '-='+a.step+'px'
-            }, 500, function(){
+                marginLeft: '-=' + a.step + 'px'
+            }, 500, function () {
                 a.left -= a.step;
                 a.setCls();
-                if(a.left <= -(a.max * a.step)){
+                if (a.left <= -(a.max * a.step)) {
                     $(this).clearQueue();
                 }
             });
-        }else{
+        } else {
             a.box.pic.clearQueue();
         }
     };
 
-    a.setCls = function(){
+    a.setCls = function () {
         var hasNext = Math.abs(a.left) < ((a.box.list.length - 1) * a.step);
         var hasPrev = a.left < 0;
 
-        if(hasNext){
+        if (hasNext) {
             a.box.next.removeClass('none');
-        }else{
+        } else {
             a.box.next.addClass('none');
         }
 
-        if(hasPrev){
+        if (hasPrev) {
             a.box.prev.removeClass('none');
-        }else{
+        } else {
             a.box.prev.addClass('none');
         }
     };
@@ -109,89 +113,170 @@ xue.avatar = xue.avatar || {};
 })(xue.avatar);
 var courseInfor = courseInfor || {};
 //视频弹层方法封装
- courseInfor.videoPlaySwitch = function(u,w,h,t){
-         xue.win({
-             id : 'videoPlayWrap',
-             title : t,
-             content : '<iframe frameborder="0" scrolling="no" src="'+ u +'" width="100%" height="100%"> </iframe>',
-             width: w,
-             height: h,
-             lock : true,
-             close : true,
-             submit : false,
-             cancel : false
-         });
-}
-//课程大纲切换方法
-courseInfor.courseTab = function (tabTit,on,tabCon){
-   var items = $(tabTit).children();
-       items.click(function(){
-        var that = $(this),
-             con = $(tabCon).children(),
-           index = items.index(this);
-           that.addClass(on).siblings().removeClass(on);
-           con.eq(index).show().siblings().hide();
-      });
-}
-//直播课程详情页---查看直播时间列表
- courseInfor.lookTimeList = function() {
-    var that = $('#lookTimeList');
-        that.on('click', function(event) {
-            $('.ui-nav-link li:eq(0)').addClass('current').siblings().removeClass('current');
-            $('.course-info-box .course-detail:eq(0)').show().siblings().hide();
+courseInfor.videoPlaySwitch = function (u, w, h, t) {
+        xue.win({
+            id: 'videoPlayWrap',
+            title: t,
+            content: '<iframe frameborder="0" scrolling="no" src="' + u + '" width="100%" height="100%"> </iframe>',
+            width: w,
+            height: h,
+            lock: true,
+            close: true,
+            submit: false,
+            cancel: false
         });
-}
-$(function(){
-    courseInfor.courseTab('.ui-nav-link','current','.course-info-box');//课程详情页--课程大纲切换
-    var ouline = $('#open-outline');//免费试听详情页------试听节超过规定节数出现滚动条
-    if(ouline.length != 0){//当id:ouline的值不等于零的时候执行
-         ouline.jScrollPane();
     }
-    courseInfor.lookTimeList();//直播课程详情页---查看直播时间列表
+    //课程大纲切换方法
+courseInfor.courseTab = function (tabTit, on, tabCon) {
+        var items = $(tabTit).children();
+        items.click(function () {
+            var that = $(this),
+                con = $(tabCon).children(),
+                index = items.index(this);
+            that.addClass(on).siblings().removeClass(on);
+            con.eq(index).show().siblings().hide();
+        });
+    }
+    //直播课程详情页---查看直播时间列表
+courseInfor.lookTimeList = function () {
+    var that = $('#lookTimeList');
+    that.on('click', function (event) {
+        $('.ui-nav-link li:eq(0)').addClass('current').siblings().removeClass('current');
+        $('.course-info-box .course-detail:eq(0)').show().siblings().hide();
+    });
+}
+
+//返回顶部
+//2016-01-11-18：00
+xue.feedback = xue.feedback || {};
+
+(function () {
+    var f = xue.feedback;
+            f._tpl='<div class="rightResearch" id="FeedBack">'
+					+'		<ul>'
+					+'			<li><a xes_id="side_QQ" id="r_copyright" href="http://bbs.xueersi.com/thread-280270-1-1.html" target="_blank"></a></li>'
+					+'			<li><a xes_id="side_feedback" id="r_feedBack" target="_blank" href="http://bbs.xueersi.com/thread-362132-1-1.html"></a></li>'
+					+'			<li><a id="r_toTop" href="javascript:scroll(0,0);" style="display:none;"></a></li>'
+					+'			<li id="copy_notice" style="width:170px;">'
+					+'			</li>'
+					+'		</ul>'
+					+'	</div>';
+
+    f.append = function () {
+        if ($('#FeedBack').length == 0) {
+            $('body').append(f._tpl);
+        } else {
+            $('#FeedBack').show();
+        }
+
+        f.listener();
+
+        return this;
+    };
+
+    f.listener = function () {
+        $('#r_copyright').on('mouseenter', function () {
+            f.hover(this);
+        });
+        $(window).scroll(function () {
+            f.gotop();
+        });
+    };
+
+    f.gotop = function () {
+        var _scrollTop = $(window).scrollTop();
+
+        if (_scrollTop > $(window).height()) {
+            $('#r_toTop').show();
+        } else {
+            $('#r_toTop').hide();
+        }
+    };
+
+    f.hover = function (d) {
+        var that = $(d);
+        $.ajax('/index/ajaxGetQqGroupInfo', {
+            type: 'post',
+            dataType: 'json',
+            success: function (v) {
+                if (v.sign > 0) {
+                    var tpl = '<div style="height:72px;overflow:hidden;">' + '<p class="group_name">' + v.msg.group_name + '</p>' + '<p class="group_num copy_notice_num">' + v.msg.group_num + '</p>' + '</div>' + '<p style="font-size:12px;color:#999; font-weight:normal;font-family: 宋体;"><span style="color:#cc0000;">提示：</span>复制上面群号，打开QQ，在找群中查找并加入网校官方群</p>';
+                    $('#copy_notice').html(tpl);
+                    $('#copy_notice').show();
+                }
+            }
+        })
+        that.on('mouseleave', function (e) {
+            var tar = $(e.relatedTarget);
+            if (tar.attr('id') == 'copy_notice' || $(tar).parents('#copy_notice').length > 0) {
+                that.addClass('current');
+                $('#copy_notice').on('mouseleave', function () {
+                    var that = $(this);
+                    setTimeout(function () {
+                        that.hide();
+                        $('#r_copyright').removeClass('current');
+                    }, 5000);
+                });
+            } else {
+                $('#copy_notice').hide();
+                that.removeClass('current');
+            }
+        });
+    };
+
+})();
+
+$(function () {
+    xue.feedback.append();
+    courseInfor.courseTab('.ui-nav-link', 'current', '.course-info-box'); //课程详情页--课程大纲切换
+    var ouline = $('#open-outline'); //免费试听详情页------试听节超过规定节数出现滚动条
+    if (ouline.length != 0) { //当id:ouline的值不等于零的时候执行
+        ouline.jScrollPane();
+    }
+    courseInfor.lookTimeList(); //直播课程详情页---查看直播时间列表
     // 绑定老师头像切换事件
-    $('body').on('click', '.ui_avatar_con .prev ,  .ui_avatar_con .next', function() {
+    $('body').on('click', '.ui_avatar_con .prev ,  .ui_avatar_con .next', function () {
         var that = $(this);
         if (that.hasClass('none')) {
             return false;
         } else {
-          xue.avatar.toggle(that)     
-       }
+            xue.avatar.toggle(that)
+        }
     });
     //加入购物车效果
-    $('body').on('click','.button_shop-cart',function(){
+    $('body').on('click', '.button_shop-cart', function () {
         var that = $(this),
             _id = that.data('id'),
-            _url = miniUrl +'/ShoppingCart/addCart/'+ _id;
-            $.ajax({
-                    url: _url,
-                    type: 'GET',
-                    dataType: 'jsonp',                
-                    jsonp:'jsonpCallback',                   
-                    success:function (result) {
-                        if(result.sign == 1){
-                             var num = Number($('small.minicart-total').text());
-                             $('small.minicart-total').text(num + 1 );
-                             $('#miniCart-body').empty();
-                             $('.button_shop-cart').button('loading');    
-                             $.ajax({
-                                url: miniUrl +'/ShoppingCart/ajaxGetCartList/',
-                                type: 'POST',
-                                dataType: 'html',
-                                xhrFields:{withCredentials:true},
-                                crossDomain:true,
-                                success:function (result) {
-                                       $(result).appendTo('#miniCart-body');
-                                    
-                                }
-                             }); 
+            _url = miniUrl + '/ShoppingCart/addCart/' + _id;
+        $.ajax({
+            url: _url,
+            type: 'GET',
+            dataType: 'jsonp',
+            jsonp: 'jsonpCallback',
+            success: function (result) {
+                if (result.sign == 1) {
+                    var num = Number($('small.minicart-total').text());
+                    $('small.minicart-total').text(num + 1);
+                    $('#miniCart-body').empty();
+                    $('.button_shop-cart').button('loading');
+                    $.ajax({
+                        url: miniUrl + '/ShoppingCart/ajaxGetCartList/',
+                        type: 'POST',
+                        dataType: 'html',
+                        xhrFields: {
+                            withCredentials: true
+                        },
+                        crossDomain: true,
+                        success: function (result) {
+                            $(result).appendTo('#miniCart-body');
+
                         }
-                        if(result.sign == 2){
-                           window.location.href = result.url;
-                        }
-                    }
-                 }); 
+                    });
+                }
+                if (result.sign == 2) {
+                    window.location.href = result.url;
+                }
+            }
+        });
     });
-})
-
-
-
+});

@@ -4,6 +4,7 @@
     @require ../Module.popover/xue.popover.js
     @require ../Module.Pagination/paginations.js
     @require ../Module.Modal/Modal.js
+    @require ../../static/js/xue.ajax.js
     @require fresh.js
     @require fresh.load.min.js
 -->

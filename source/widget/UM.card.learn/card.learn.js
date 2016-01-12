@@ -53,8 +53,8 @@ $(function() {
                 } else {
                     fCheck.setTips('.studyCardPwd-warning',d.msg);
                 }
-                if(msg.sign === 2){
-                    window.location.href = msg.msg;
+                if(d.sign === 2){
+                    window.location.href = d.msg;
                 } 
             }
         });

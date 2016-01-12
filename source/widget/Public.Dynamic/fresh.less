@@ -327,6 +327,11 @@
                &:hover{
                    background: @blue-color;
                }
+               &.fresh-Answer-disabled{
+                  &:hover{
+                       background: #ccd1d9;
+                  }
+               }
             }
          }
        }
@@ -997,6 +1002,7 @@
 .fresh-dialog--modal-verification{
     .modal-dialog{
        width: 395px;
+       overflow: hidden;
     }
 }
 .fresh-dialog-verificationCode{

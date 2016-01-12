@@ -42,6 +42,11 @@ function delAddress(id) {
 }
  //提交生成收货地址列表
 function saveNewAddress(addInput) {
+     if($('#address_submit_btn').hasClass('submit_in_use')){//提交时，检测是否有标识的类名
+        return false;
+      }
+     $('#address_submit_btn').addClass('submit_in_use');//增加类名，用来防止ajax提交过程中用户重复点击
+    return false;
     var input = $(addInput);
     var data = {
         id: 0
@@ -129,6 +134,11 @@ function saveNewAddress(addInput) {
                 _addid.find('.setdefault_consignee').remove();
             }
             $('.info_from').hide();
+            $('#address_submit_btn').removeClass('submit_in_use');
+
+        },
+        error:function(){
+            $('#address_submit_btn').removeClass('submit_in_use');
         }
     });
 }
