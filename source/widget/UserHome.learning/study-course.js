@@ -211,6 +211,9 @@ $(function () {
                 tpl += '<p>连续签到<strong>'+ _day +'</strong>天，额外获得<strong>'+_rewardGold+'</strong>金币！</p>';
             }
         $('<li id="singInLayer">' + tpl +'</li>').appendTo('.sideSingInItems ul');
+         setTimeout(function(){
+                $('#singInLayer').remove();
+            }, 3000);
     }
      $('body').on('click', '.sideSingInItems ul li.singIn', function(){
         var that = $(this);
