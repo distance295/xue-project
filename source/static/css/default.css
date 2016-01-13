@@ -3,6 +3,9 @@ html,
 body {
   font-family: "微软雅黑", Helvetica, 'Source Sans Pro', sans-serif;
 }
+body {
+  overflow-y: scroll;
+}
 ul,
 ol {
   margin: 0;
@@ -248,7 +251,7 @@ button.active,
 }
 .wrap-side-right .fresh-list .fresh-detail .fresh-text .fresh-info {
   height: 60px;
-  line-height: 180%;
+  line-height: 175%;
   overflow: hidden;
 }
 .wrap-center {
