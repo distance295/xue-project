@@ -56,7 +56,19 @@ function completefn() {
     $("#loading").remove();
 }
 
+xue.ajaxState = 0;
+
 $.ajaxSetup({
     type: 'post',
     dataType: 'json',
+    beforesend:function(){
+        if (xue.ajaxState == 1) {
+            return false;
+        }else{
+            xue.ajaxState = 1;
+        }
+    },
+    complete:function(){
+        xue.ajaxState = 0;
+    }
 });

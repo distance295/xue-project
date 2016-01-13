@@ -13,27 +13,27 @@ xue.video = xue.video || {};
         if(_url == '' || !_url){
             return this;
         }
-        if(window.XDomainRequest){
-            xdr = new XDomainRequest();
-            if (xdr) {
-                xdr.onerror = function(){
-                    alert('error！');
-                };
-//                    xdr.ontimeout = 10000;
-                xdr.onprogress = function(){
-                    alert('progress……');
-                };
-                xdr.onload = function(){
-                    $(v.opt.dom).html(xdr.responseText);
-                };
-                xdr.timeout = 10000;
-                xdr.open("get", _url);
-                xdr.withCredentials = true;
-                xdr.send();
-            } else {
-                alert("Failed to create");
-            }
-        }else{
+//        if(window.XDomainRequest){
+//            xdr = new XDomainRequest();
+//            if (xdr) {
+//                xdr.onerror = function(){
+//                    alert('error！');
+//                };
+////                    xdr.ontimeout = 10000;
+//                xdr.onprogress = function(){
+//                    alert('progress……');
+//                };
+//                xdr.onload = function(){
+//                    $(v.opt.dom).html(xdr.responseText);
+//                };
+//                xdr.timeout = 10000;
+//                xdr.open("get", _url);
+//                xdr.withCredentials = true;
+//                xdr.send();
+//            } else {
+//                alert("Failed to create");
+//            }
+//        }else{
             $.ajax({
                 url : _url,
                 type : 'GET',
@@ -45,7 +45,7 @@ xue.video = xue.video || {};
                     $(v.opt.dom).html(result);
                 }
             });
-        }
+//        }
         return this;
 //        $(v.opt.dom).get(_url, _params);
     };
