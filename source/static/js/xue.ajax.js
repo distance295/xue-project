@@ -56,7 +56,19 @@ function completefn() {
     $("#loading").remove();
 }
 
+var xueajaxSteup = 0;
+
 $.ajaxSetup({
     type: 'post',
     dataType: 'json',
+    beforesend:function(){
+        if (xueajaxSteup == 1) {
+            return false;
+        }else{
+            xueajaxSteup = 1;
+        }
+    },
+    complete:function(){
+        xueajaxSteup = 0;
+    }
 });
