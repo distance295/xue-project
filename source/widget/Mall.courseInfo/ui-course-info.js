@@ -260,13 +260,13 @@ $(function () {
                     $('#miniCart-body').empty();
                     $('.button_shop-cart').button('loading');
                     $.ajax({
-                        url: miniUrl + '/ShoppingCart/ajaxGetCartList/',
+                        url: '/ShoppingCart/ajaxGetCartList/',
                         type: 'POST',
                         dataType: 'html',
-                        xhrFields: {
-                            withCredentials: true
-                        },
-                        crossDomain: true,
+//                        xhrFields: {
+//                            withCredentials: true
+//                        },
+//                        crossDomain: true,
                         success: function (result) {
                             $(result).appendTo('#miniCart-body');
 

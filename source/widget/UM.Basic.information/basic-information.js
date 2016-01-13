@@ -131,10 +131,14 @@ $('.school').on('blur',function(){
 });
 /* 点击提交按钮验证 */
 function inforCheckform () {
-    $.fn.nickname();
-    $.fn.school();
+    if ($(".nickname").val() == $(".nickname").data("nickname") && $(".school").val() == $(".school").data("school") && $("#year").find("option:selected").text() == $("#year").attr("rel") && $("#month").find("option:selected").text() == $("#month").attr("rel") && $("#day").find("option:selected").text() == $("#day").attr("rel")) {
+        alert('您没有修改或新增任何资料');
+        return false;
+    }else{
+        $.fn.nickname();
+        $.fn.school();
+    }
     if ($('.nickname-warning').is(":empty") && $('.school-warning').is(":empty") && $('.date-warning').is(":empty")) {
-        return true;
     }else{
         return false;
     };
