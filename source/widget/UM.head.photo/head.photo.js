@@ -31,7 +31,7 @@ $(".hpr-btn").on('click', function(){
     var headId = $(".imghover").data('id');
     var hprSrc = $(".imghover").attr("src");
     if ($('.hpr-img').hasClass('imghover')) {
-      if(confirm("你是否确定更换推荐头像，若你当前使用的是用3000金币更换的本地头像，更换推荐头像后该头像将无法再次使用？")) {
+      if(confirm("若你当前使用的是“用3000金币更换的本地上传头像”，换成推荐头像后本地上传头像将无法再次使用。你是否确定更换推荐头像？")) {
           $.ajax({
               type: "POST",
               url: "/MyInfos/changeImg",
