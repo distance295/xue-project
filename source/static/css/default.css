@@ -250,9 +250,12 @@ button.active,
   padding: 12px 0;
 }
 .wrap-side-right .fresh-list .fresh-detail .fresh-text .fresh-info {
-  height: 60px;
+  height: 65px;
   line-height: 175%;
   overflow: hidden;
+}
+.wrap-side-right .fresh-list .fresh-detail .fresh-barinfo {
+  padding-top: 3px;
 }
 .wrap-center {
   width: 700px;
