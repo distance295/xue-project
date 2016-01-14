@@ -1098,8 +1098,8 @@ userinfo_interval = false;
             } else {
                 if (!udom.hasClass('info_open')) {
                     var _url = '/UserPages/ajaxUserPage';
-                    var _a = $('.ui-userinfo').data('url');
-                    var url = (_a) ? _a + _url : _url;
+                    //var _a = $('.ui-userinfo').data('url');
+                    var url = _url;
                     // var url = window.location.hostname == 'v04.xesui.com' ? '../json/pop_userinfo.php' : '/UserPages/ajaxUserPage';
                     var par = udom.data().params;
                     // var url = '/data/courses/teacher-bomb.html';
