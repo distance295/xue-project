@@ -17,6 +17,9 @@ html,
 body {
     font-family: "微软雅黑", Helvetica, 'Source Sans Pro', sans-serif;
 }
+body{
+    overflow-y: scroll;
+}
 @fa: "Arial";
 @fg: "Georgia";
 @ft: "Tahoma";
@@ -283,9 +286,12 @@ ul.grade-list {
     .fresh-list {
         padding:12px 0;
         .fresh-detail .fresh-text .fresh-info {
-            height: 58px;
-            line-height: 180%;
+            height: 65px;
+            line-height: 175%;
             overflow: hidden;
+        }
+        .fresh-detail .fresh-barinfo{
+            padding-top:3px;
         }
     }
 }

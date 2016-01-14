@@ -10,15 +10,15 @@ function showStudPrize(dom) {
     //取出勋章页卡的结构
     var tpl = $('#' + _dom).html();
     //定义向上箭头的结构
-    var arrow = '<div class="dialog_arrow arrow_tl ' + _dom + '"></div>';
+    var arrow = '<div class="dialog_arrow_c arrow_tl ' + _dom + '"></div>';
     var box = '<div id="stuBox_' + _dom + '">' + tpl + '</div>';
     $('body').append(arrow);
     $('body').append(box);
     //目前所测试的距离可能在不同的浏览器中会有偏差；设置页卡的定位
     $('.' + _dom).css({
-        'top': heightDis-5,
+        'top': heightDis-4,
         'left': leftDis + 5,
-        'z-index':10
+        'z-index':11
     })
     $('#stuBox_' + _dom).css({
         'position': 'absolute',
@@ -48,7 +48,7 @@ $('ul.user-medal.list-inline li img[data-target*="hidediv_"]').on('mouseleave', 
         boxId = 'stuBox_' + _dom;
     //删除页卡的方法
     function removeDom(boxId) {
-        $('div.dialog_arrow.arrow_tl').remove();
+        $('div.dialog_arrow_c.arrow_tl').remove();
         $('#' + boxId).remove();
     }
     //如果
