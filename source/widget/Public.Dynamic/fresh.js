@@ -490,9 +490,10 @@ fresh.comment = fresh.comment || {};
 
         var _closeBtn = this.param.commentBox.find('.fresh-comment-close-btn');
         this.param.commentBox.find('.fresh-comment-form:eq(0) textarea').focus();
+        var bar_type = this.param.commentBox.prev('.fresh-barinfo').find('.fresh-comment-expand-btn').data('type');
 
         //判断关闭按钮显示与否
-        if ( this.param.bar.data('type') && this.param.bar.data('type') == 2) {
+        if ( bar_type && bar_type == 2) {
             _closeBtn.hide();
         } else {
             _closeBtn.show();
