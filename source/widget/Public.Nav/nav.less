@@ -83,7 +83,7 @@
             color: #fff;
             display: block;
             font: 400 15px/44px "microsoft yahei";
-            height: 45px;
+            height: 44px;
             padding: 0 10px;
             margin: 0;
             background: #1e89e0;
@@ -106,11 +106,11 @@
     }
     .category-dd {
         display: none;
-        height: 380px;
+        height: 381px;
         background-color: #1E89E0;
         background-color: rgba(30, 137, 224, .9) !important;
         .category-item {
-            height: 75px;
+            height: 76px;
             padding: 18px 10px 18px 10px;
             border-top: 1px solid #3A98E4;
             border-top: 1px solid rgba(255, 255, 255, .2) !important;
@@ -129,7 +129,8 @@
                 }
             }
             &.hover {
-                background-color: rgba(0, 0, 0, .2);
+                background-color: #2F6FA2;
+                background-color: rgba(0, 0, 0, .2) !important;
             }
             &:nth-last-child(1){
                 border-bottom:0 none;
@@ -143,11 +144,12 @@
             top: 45px;
             height: 380px;
             border: 1px solid #1E89E0;
-            border: 1px rgba(30, 137, 224, .9) solid !important;
+//            border: 1px rgba(30, 137, 224, .9) solid ;
+            border-color: rgba(30, 137, 224, .9) !important;
             border-left: 0;
             background-color: #f5f5f5;
             color: #333;
-            padding: 10px 20px;
+            padding: 10px 15px;
             font-size: 12px;
             line-height: 30px;
             &.hover {
@@ -157,6 +159,9 @@
                 zoom: 1;
                 overflow: hidden;
                 display: none;
+                .subitem {
+                    margin-bottom: 12px;
+                }
                 &.hover {
                     display: block;
                 }

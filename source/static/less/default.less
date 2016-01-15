@@ -139,13 +139,15 @@ a,button,.btn{
     border-color: transparent;
     background: #ffdd87;
     color: #333;
+    padding: 10px 15px;
     font-size: 14px;
     border-radius: 5px;
     i {
-        color: #FFF;
-        font-size: 20px;
-        padding-right: 10px;
-        float: left;
+        display: none;
+//        color: #FFF;
+//        font-size: 20px;
+//        padding-right: 10px;
+//        float: left;
     }
 }
 .nav-tabs {
@@ -365,4 +367,30 @@ overflow: hidden;
 .paginationjs-pages .pagination >.disabled>a:hover, 
 .paginationjs-pages .pagination >.disabled>a:focus{
     cursor: auto;
+}
+
+
+/* ====================== */
+@media (min-width: 320px){
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+        float: left;
+    }
+}
+    html {
+        min-width: 1280px;
+    }
+
+//#carousel-example-generic,
+.grade-course-title,
+.row-page-turn,
+//#module-footer,
+.container{
+    width: 1190px !important;
+}
+.tab-content {
+    &.tab-xiao,
+    &.tab-chu,
+    &.tab-gao{
+        width: 1190px;
+    }
 }
