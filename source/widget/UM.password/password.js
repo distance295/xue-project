@@ -247,7 +247,7 @@
             $.ajax({
                 type: "POST",
                 url: "/MyInfos/changeStuPwd",
-                data: "curPwd=" + curpasswd + '&newPwd=' + newpasswd + '&confirmPwd=' + confirmpasswd,
+                data: "curPwd=" + encodeURIComponent(curpasswd) + '&newPwd=' + encodeURIComponent(newpasswd) + '&confirmPwd=' + encodeURIComponent(confirmpasswd),
                 dataType: 'json',
                 success: function(d) {
                     if(d.sign === 2){
