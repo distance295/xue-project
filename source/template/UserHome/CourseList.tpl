@@ -7,7 +7,7 @@
             <!-- *********************** 内容区域开始 *********************** -->
             
             <div class="alert alert-warning alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
                 <i class="fa fa-exclamation-circle"></i>
                 <strong>[通知]：</strong>今晚7点，辅导老师 李丽 将定语从句的关键考点为大家举办一次复习直播，请报名学员参加
             </div>
