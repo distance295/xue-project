@@ -19,3 +19,31 @@ sidebar.setActive = function(id){
         }
     });
 };
+
+//定位右侧边栏
+function ctrlRight(){
+    var _bodyW;
+    if(document.documentElement && document.documentElement.clientWidth){
+       _bodyW = document.documentElement.clientWidth;
+    }else{
+       _bodyW = document.body.clientWidth;
+    }
+    if( $('#module-sidebar') ){
+       if( _bodyW < 1190 ){
+           $('#module-sidebar').addClass('module-sidebar-right');
+        }else{
+           $('#module-sidebar').removeClass('module-sidebar-right');
+        }
+    }
+}
+
+$(function(){
+    ctrlRight();
+    //根据分辨率重新计算图片
+    $(window).resize(function(){
+        ctrlRight();
+    })
+})
+
+
+
