@@ -139,13 +139,15 @@ a,button,.btn{
     border-color: transparent;
     background: #ffdd87;
     color: #333;
+    padding: 10px 15px;
     font-size: 14px;
     border-radius: 5px;
     i {
-        color: #FFF;
-        font-size: 20px;
-        padding-right: 10px;
-        float: left;
+        display: none;
+//        color: #FFF;
+//        font-size: 20px;
+//        padding-right: 10px;
+//        float: left;
     }
 }
 .nav-tabs {
@@ -238,7 +240,7 @@ a,button,.btn{
     font-size: 18px;
     color: #999;
     &.live-title {
-        width: 110px;
+        width: 90px;
     }
 }
 a.more {
@@ -265,7 +267,7 @@ ul.live-list-tabs {
     }
 }
 ul.grade-list {
-    overflow: hidden;padding-left: 161px;
+    overflow: hidden;padding-left: 155px;
     li {
         float: left;
         display: inline;
@@ -307,10 +309,16 @@ ul.grade-list {
     display: inline;
     margin:0 34px 20px 0;
 }
+.tab-xiao,.tab-chu,.tab-gao{
+    .row{
+        margin-left: 0;
+    }
+}
 }
 .row-page-turn {
 //    padding:0 5px;
 margin-bottom: 20px;
+margin-left: 0;
 overflow: hidden;
 .live-content-action {
     width: 110%;
@@ -359,4 +367,30 @@ overflow: hidden;
 .paginationjs-pages .pagination >.disabled>a:hover, 
 .paginationjs-pages .pagination >.disabled>a:focus{
     cursor: auto;
+}
+
+
+/* ====================== */
+@media (min-width: 320px){
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+        float: left;
+    }
+}
+    html {
+        min-width: 1280px;
+    }
+
+//#carousel-example-generic,
+.grade-course-title,
+.row-page-turn,
+//#module-footer,
+.container{
+    width: 1190px !important;
+}
+.tab-content {
+    &.tab-xiao,
+    &.tab-chu,
+    &.tab-gao{
+        width: 1190px;
+    }
 }

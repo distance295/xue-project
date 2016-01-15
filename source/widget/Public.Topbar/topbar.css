@@ -100,6 +100,9 @@
 #module-topbar .ui-header-menu .topleft-bar {
   width: 410px;
 }
+#module-topbar .ui-header-menu .topleft-bar > li:first-child {
+  float: left;
+}
 #module-topbar .ui-header-menu .topleft-bar > li:first-child em.text-danger {
   max-width: 230px;
   height: 30px;
@@ -107,7 +110,7 @@
   float: left;
 }
 #module-topbar .ui-header-menu .topright-bar {
-  width: 770px;
+  width: 780px;
   height: 30px;
   text-align: right;
 }
@@ -116,4 +119,7 @@
   height: 30px;
   color: transparent;
   background: url(img/phone-400.jpg?__inline) no-repeat;
+}
+#module-topbar .ui-header-menu .phone-400.active:before {
+  color: #f1f1f1;
 }
