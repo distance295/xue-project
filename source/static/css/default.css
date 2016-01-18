@@ -112,14 +112,12 @@ button.active,
   border-color: transparent;
   background: #ffdd87;
   color: #333;
+  padding: 10px 15px;
   font-size: 14px;
   border-radius: 5px;
 }
 .alert-warning i {
-  color: #FFF;
-  font-size: 20px;
-  padding-right: 10px;
-  float: left;
+  display: none;
 }
 .nav-tabs {
   border-bottom: 1px solid #3bafda;
@@ -267,8 +265,14 @@ button.active,
   display: inline;
   margin: 0 34px 20px 0;
 }
+.wrap-center .tab-xiao .row,
+.wrap-center .tab-chu .row,
+.wrap-center .tab-gao .row {
+  margin-left: 0;
+}
 .row-page-turn {
   margin-bottom: 20px;
+  margin-left: 0;
   overflow: hidden;
 }
 .row-page-turn .live-content-action {
@@ -308,4 +312,34 @@ button.active,
 .paginationjs-pages .pagination > .disabled > a:hover,
 .paginationjs-pages .pagination > .disabled > a:focus {
   cursor: auto;
+}
+/* ====================== */
+@media (min-width: 320px) {
+  .col-md-1,
+  .col-md-2,
+  .col-md-3,
+  .col-md-4,
+  .col-md-5,
+  .col-md-6,
+  .col-md-7,
+  .col-md-8,
+  .col-md-9,
+  .col-md-10,
+  .col-md-11,
+  .col-md-12 {
+    float: left;
+  }
+}
+html {
+  min-width: 1280px;
+}
+.grade-course-title,
+.row-page-turn,
+.container {
+  width: 1190px !important;
+}
+.tab-content.tab-xiao,
+.tab-content.tab-chu,
+.tab-content.tab-gao {
+  width: 1190px;
 }
