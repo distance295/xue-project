@@ -18,12 +18,17 @@
                 <li><a href="#">录播</a></li>
                 <li><a href="#">已过期课程</a></li>
             </ul>
-            <ul class="screen-rank" id="UserHome-nav">
-                <li class="popular-rank active" data-type="0"><a href="http://www.xueersi.com/dynamic/0-0-1-0-1/">全部</a></li>
-                <li data-type="2"><a href="http://www.xueersi.com/dynamic/0-0-1-2-1/">语文</a></li>
-                <li data-type="20"><a href="http://www.xueersi.com/dynamic/0-0-1-20-1/">数学</a></li>
-                <li data-type="21"><a href="http://www.xueersi.com/dynamic/0-0-1-21-1/">英语</a></li>
-            </ul>
+            <div class="filter-public-tab">
+                <span class="filter-text-style">筛选：</span>
+                <div class="filter-nav-list">
+                    <ul id="fresh-filter-nav">
+                        <li data-type="0" class="current"><a href="javascript:void(0)">全部</a></li>
+                        <li data-type="20" class=""><a href="javascript:void(0)">题目</a></li>
+                        <li data-type="2"><a href="javascript:void(0)">图文</a></li>
+                        <li data-type="21"><a href="javascript:void(0)">视频</a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="course-main-wrap">
                 <link rel="import" href="../../widget/UserHome.courses/list.course.tpl?__inline">
             </div>
@@ -113,17 +118,17 @@ function materialForm(){
         dataType: "html",
         success: function(result) {
             if(result){
-               createModal.show({
+             createModal.show({
                 id : 'materialForm',
                 title : '讲义资料',
                 cls : 'material-exam',
                 width: 770,
                 content : result
             });
-               $('#materialForm').modal('show');
-           }
-       },
-   });
+             $('#materialForm').modal('show');
+         }
+     },
+ });
 }
 // 讲义资料弹框tab事件
 $('body').on('click','.material-wrap .material-tab li',function(){
@@ -139,17 +144,17 @@ function examTable(){
         dataType: "html",
         success: function(result) {
             if(result){
-               createModal.show({
+             createModal.show({
                 id : 'examTable',
                 title : '本课考试',
                 cls : 'material-exam',
                 width: 770,
                 content : result
             });
-               $('#examTable').modal('show')
-           }
-       },
-   });
+             $('#examTable').modal('show')
+         }
+     },
+ });
 }
 $('.ui-pages').pages({
     total : 29, // 总记录数
