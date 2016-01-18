@@ -65,6 +65,7 @@
                 _opt.afterPageOnClick = _opt.afterNextOnClick = _opt.afterPreviousOnClick = function(){
                     settings.click(settings.handle.pagination('getSelectedPageNum'));
                 };
+                _opt.pageLink  = '#';
             }
             if(settings.url){
                 _opt.pageLink  = settings.url;
