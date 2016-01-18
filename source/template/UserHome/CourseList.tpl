@@ -18,6 +18,12 @@
                 <li><a href="#">录播</a></li>
                 <li><a href="#">已过期课程</a></li>
             </ul>
+            <ul class="screen-rank" id="UserHome-nav">
+                <li class="popular-rank active" data-type="0"><a href="http://www.xueersi.com/dynamic/0-0-1-0-1/">全部</a></li>
+                <li data-type="2"><a href="http://www.xueersi.com/dynamic/0-0-1-2-1/">语文</a></li>
+                <li data-type="20"><a href="http://www.xueersi.com/dynamic/0-0-1-20-1/">数学</a></li>
+                <li data-type="21"><a href="http://www.xueersi.com/dynamic/0-0-1-21-1/">英语</a></li>
+            </ul>
             <div class="course-main-wrap">
                 <link rel="import" href="../../widget/UserHome.courses/list.course.tpl?__inline">
             </div>
