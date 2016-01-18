@@ -7,7 +7,7 @@
             <!-- *********************** 内容区域开始 *********************** -->
             
             <div class="alert alert-warning alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
                 <i class="fa fa-exclamation-circle"></i>
                 <strong>[通知]：</strong>今晚7点，辅导老师 李丽 将定语从句的关键考点为大家举办一次复习直播，请报名学员参加
             </div>
@@ -18,6 +18,17 @@
                 <li><a href="#">录播</a></li>
                 <li><a href="#">已过期课程</a></li>
             </ul>
+            <div class="filter-public-tab">
+                <span class="filter-text-style">筛选：</span>
+                <div class="filter-nav-list">
+                    <ul id="fresh-filter-nav">
+                        <li data-type="0" class="current"><a href="javascript:void(0)">全部</a></li>
+                        <li data-type="20" class=""><a href="javascript:void(0)">题目</a></li>
+                        <li data-type="2"><a href="javascript:void(0)">图文</a></li>
+                        <li data-type="21"><a href="javascript:void(0)">视频</a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="course-main-wrap">
                 <link rel="import" href="../../widget/UserHome.courses/list.course.tpl?__inline">
             </div>
@@ -107,17 +118,17 @@ function materialForm(){
         dataType: "html",
         success: function(result) {
             if(result){
-               createModal.show({
+             createModal.show({
                 id : 'materialForm',
                 title : '讲义资料',
                 cls : 'material-exam',
                 width: 770,
                 content : result
             });
-               $('#materialForm').modal('show');
-           }
-       },
-   });
+             $('#materialForm').modal('show');
+         }
+     },
+ });
 }
 // 讲义资料弹框tab事件
 $('body').on('click','.material-wrap .material-tab li',function(){
@@ -133,17 +144,17 @@ function examTable(){
         dataType: "html",
         success: function(result) {
             if(result){
-               createModal.show({
+             createModal.show({
                 id : 'examTable',
                 title : '本课考试',
                 cls : 'material-exam',
                 width: 770,
                 content : result
             });
-               $('#examTable').modal('show')
-           }
-       },
-   });
+             $('#examTable').modal('show')
+         }
+     },
+ });
 }
 $('.ui-pages').pages({
     total : 29, // 总记录数
