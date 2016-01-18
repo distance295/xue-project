@@ -4,6 +4,7 @@
     @require cycle.js
     @require raphael.js
     @require ../Module.Modal/Modal.js
+    @require ../Public.Dynamic/fresh.less
     @require coursestudycenter.less   
     @require ../Module.Pagination/paginations.js 
     @require ../Public.Module/courses_dialog.js   
