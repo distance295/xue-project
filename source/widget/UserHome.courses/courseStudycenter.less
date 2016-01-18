@@ -114,6 +114,7 @@ body{
 	}
 }
 .courseList-wrap{
+	margin-top: 20px;
 	clear: both;
 	position: relative;
 	.mark{
@@ -985,4 +986,74 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 		}
 	}
 
+}
+@blueColor: #1e89e0;
+.screen-rank {
+	border: 1px solid #eaeaea;
+	height: 38px;
+	line-height: 38px;
+	margin: 0;
+	overflow: hidden;
+	padding-left: 0;
+	background: #fcfcfc;
+	li {
+		cursor: pointer;
+		float: left;
+		font-size: 12px;
+		list-style: outside none none;
+		padding: 0 13px;
+		border-right: 1px solid #fcfcfc;
+		border-left: 1px solid #fcfcfc;
+		a{
+			i{
+				color: #a1a2a1;
+				margin-left: 5px;
+			}
+		}
+	}
+	li.popular-rank.active {
+		border-left: 1px solid #fcfcfc
+	}
+	li.active{
+		border-right: 1px solid #eaeaea;
+		border-left: 1px solid #eaeaea;
+		background: #fff;
+		a{
+			color: @blueColor;
+			&:focus{
+				outline: none;
+			}
+		}
+	}
+	.Onlylive-select {
+		color: #999999;
+		float: right;
+		margin-right: 15px;
+		input{
+			float: left;
+			margin-top: 12px;
+			margin-right: 5px;
+		}
+		b{
+			font-style: normal;
+			float: left;
+			font-weight: normal;
+		}
+	}
+	.screen-look-grades{
+		background: url('img/glory-grade.png') no-repeat;
+		height: 36px;
+		width: 150px;
+		margin-right: -1px;
+		padding: 0;
+		a{
+			display: inline-block;
+			width: 150px;
+			height: 36px;
+			text-indent: -99999px;
+			&:focus{
+				outline: none;
+			}
+		}
+	}
 }
