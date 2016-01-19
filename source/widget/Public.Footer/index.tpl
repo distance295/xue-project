@@ -4,22 +4,22 @@
    <!-- 这是页脚部分代码  -->
     <div id="module-footer">
         <div class="foot-service">
-            <a target="_blank" class="service-share" href="http://www.xueersi.com/article/detail/1825">
+            <div class="service-share" href="http://www.xueersi.com/article/detail/1825">
                 <span>名师</span>
                 <p>38%清华毕业平均教龄5.1年100%面授S级老师</p>
-            </a>
-            <a target="_blank" class="service-system" href="http://www.xueersi.com/article/detail/1824">
+            </div>
+            <div class="service-system" href="http://www.xueersi.com/article/detail/1824">
                 <span>陪伴</span>
                 <p>直播授课,QQ群,APP随时答疑名师就在你身边</p>
-            </a>
-            <a target="_blank" class="service-live" href="http://www.xueersi.com/article/detail/1814">
+            </div>
+            <div class="service-live" href="http://www.xueersi.com/article/detail/1814">
                 <span>方便</span>
                 <p>足不出户，免去路途奔波随时随地反复看</p>
-            </a>
-            <a target="_blank" class="service-interaction" href="http://www.xueersi.com/app">
+            </div>
+            <div class="service-interaction" href="http://www.xueersi.com/app">
                 <span>有效</span>
                 <p>在线练习及时反馈已累计培养39名中高考状元</p>
-            </a>
+            </div>
         </div>
 
         <div class="foot-area">
