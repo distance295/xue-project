@@ -846,7 +846,6 @@ ul,li{list-style: none;}
 	height: 38px;
 	line-height: 38px;
 	margin: 0;
-	overflow: hidden;
 	padding-left: 0;
 	background: #fcfcfc;
 	li {
@@ -857,6 +856,8 @@ ul,li{list-style: none;}
 		padding: 0 13px;
 		border-right: 1px solid #fcfcfc;
 		border-left: 1px solid #fcfcfc;
+		height: 36px;
+		line-height: 36px;
 		a{
 			i{
 				color: #a1a2a1;
@@ -875,6 +876,35 @@ ul,li{list-style: none;}
 			color: @blueColor;
 			&:focus{
 				outline: none;
+			}
+		}
+	}
+	.stu-term-select{
+		position: absolute;
+		background: red;
+		width: 75px;
+		top: 0;
+		right: 105px;
+		border: 1px solid #eaeaea;
+		border-top: none;
+		background: #fff;
+		text-align: center;
+		padding: 0;
+		.stu-term-select-title{
+			display: inline-block;
+			height: 38px;
+			line-height: 38px;
+			width: 100%;
+			i.fa{
+				color: #666;
+			}
+
+		}
+		.stu-term-select-content{
+			display: none;
+			a{
+				display: block;
+				text-align: center;
 			}
 		}
 	}
@@ -910,6 +940,9 @@ ul,li{list-style: none;}
 		}
 	}
 }
+.preletive{
+	position: relative;
+}
 .mt0{
 	margin-top: 0;
 }
@@ -940,7 +973,7 @@ ul,li{list-style: none;}
 	font-family: "SimSun";
 	font-size: 14px;
 	color: #333;
-    overflow: hidden;
+	overflow: hidden;
 	li{
 		overflow: hidden;
 		line-height: 22px;
