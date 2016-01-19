@@ -100,6 +100,7 @@ function saveNewAddress(addInput) {
         dataType: 'json',
         data: o,
         success: function(result) {
+            $('#address_submit_btn').removeClass('submit_in_use');
             if (!result.sign) {
                 alert(result.msg);
                 return false;
@@ -133,7 +134,6 @@ function saveNewAddress(addInput) {
                 _addid.find('.setdefault_consignee').remove();
             }
             $('.info_from').hide();
-            $('#address_submit_btn').removeClass('submit_in_use');
         },
         error:function(){
             alert('数据加载失败！');
