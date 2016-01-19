@@ -18,11 +18,15 @@
     <div class="col-md-10 wrap-body wrap-mall">
 
       <!-- *********************** 内容区域开始 ********************** -->
-      <ul class="screen-rank">
+      <ul class="screen-rank preletive">
         <li class="popular-rank active"><a href="##">综合</a></li>
         <li><a href="##">学员数</a></li>
         <li><a href="##">价格<i class="glyphicon glyphicon-arrow-down"></i><!-- <i class="glyphicon glyphicon-arrow-up"></i> --></a></li>
         <li class="Onlylive-select"><a href="https://www.baidu.com/" onclick="javascript:location.href='https://www.baidu.com/'"><input type="checkbox"/><b>只看直播</b></a></li>
+        <li class="stu-term-select">
+          <a href="###" class="stu-term-select-title">全部学期<i class="fa fa-angle-down"></i></a>
+          <div class="stu-term-select-content"></div>
+        </li>
       </ul>
       <div class="panel panel-default ">
         <div class="panel-body pd0">
@@ -73,7 +77,7 @@ var PAGE_CONFIG = {
             index : 1, // 当前页
             // 点击分页时的回调，返回被点击的页数
             click : function(e){
-              
+
             }
           });
       </script>

@@ -112,8 +112,8 @@ $('body').off('click', '.avatar-roll a, .majar-items .prev, .majar-items .next')
     if (that.hasClass('none')) {
         return false;
     } else {
-       courses.avatar.toggle(that)     
-   }
+     courses.avatar.toggle(that)     
+ }
 });
 
 //热门专题课区域增加链接
@@ -162,4 +162,41 @@ bLink.find('.course-detail').off('click').on('click', function(event){
  * @constructor 
  * @static 
  */
+// 课程列表增加筛选功能
+function showStuterm(){
+    $('.stu-term-select').css('height','auto').find('.stu-term-select-content').css('display','block');
+    $('.stu-term-select-title i').removeClass('fa-angle-down').addClass('fa-angle-up');
+};
+function hideStuterm(){
+    $('.stu-term-select').css('height','36px').find('.stu-term-select-content').css('display','none');
+    $('.stu-term-select-title i').removeClass('fa-angle-up').addClass('fa-angle-down');
+}
+$('body').on('mouseenter','.stu-term-select', function(){
+    var _html = $('.stu-term-select-content').html();
+    if (_html) {
+        $('.stu-term-select-content').html(_html);
+        showStuterm();
+        return false;
+    }
+    var url = '/data/courses/Stuterm.html';
+        // var params = 'urlStr=' + urlStr + '&urlKey=' + urlKey;
+        $.ajax({
+            url: url,
+            // data: params,
+            type: "get",
+            dataType: 'html',
+            success: function(d) {
+                var resData = xue.ajaxCheck.html(d);
+                if (resData) {
+                    $('.stu-term-select-content').html(d);
+                    showStuterm();
+                }
 
+            },
+            error: function() {
+                //alert('数据读取错误..');
+            }
+        });
+    }).on('mouseleave','.stu-term-select',function(){
+        hideStuterm()
+    });
