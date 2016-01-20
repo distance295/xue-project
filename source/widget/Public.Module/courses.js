@@ -178,11 +178,11 @@ $('body').on('mouseenter','.stu-term-select', function(){
         showStuterm();
         return false;
     }
-    var url = '/data/courses/Stuterm.html';
-        // var params = 'urlStr=' + urlStr + '&urlKey=' + urlKey;
+      var url = '/CourseSearch/ajaxGetTerm';
+        var params = $('.stu-term-select-title').data('url');
         $.ajax({
             url: url,
-            // data: params,
+            data: params,
             type: "get",
             dataType: 'html',
             success: function(d) {
