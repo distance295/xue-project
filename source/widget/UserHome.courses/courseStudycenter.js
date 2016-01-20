@@ -5,6 +5,7 @@
  * @version $Id$
  */
 
+
 // 头像切换封装函数
 var courses = courses || {};
 
@@ -158,6 +159,15 @@ function tabRecord(){
     $('.teacher-tab li').on('click',function(){ 
         index = $(this).index();
         $(this).addClass('current').siblings().removeClass('current');
-        $('.tab-record-content .tab-pane').eq(index).addClass('active').siblings().removeClass('active');
+        $(this).parents('.teacher-tab').siblings('.tab-record-content').find('.tab-pane').eq(index).addClass('active').siblings().removeClass('active');
+    });
+};
+// 大纲tab切换
+function tabProgram(){
+
+    $('.program-tab li').on('click',function(){ 
+        index = $(this).index();
+        $(this).addClass('current').siblings().removeClass('current');
+        $('.tab-program-content .tab-program-content-general').eq(index).addClass('active').siblings().removeClass('active');
     });
 };

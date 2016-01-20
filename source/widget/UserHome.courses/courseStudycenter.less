@@ -1,3 +1,9 @@
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-10-29 10:40:12
+ * @version $Id$
+ */
 @red: #e74c3c;
 @borderColor: #eaeaea;
 @fontSize: 12px;
@@ -645,6 +651,14 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 			}
 		}
 	}
+	.tab-program-content{
+		.tab-program-content-general{
+			display: none;
+		}
+		.active{
+			display: block;
+		}
+	}
 	.tab-record-content{
 		border-radius: 5px;
 		display: block;
@@ -841,8 +855,8 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 	}
 }
 // 直播课程列表	
-.teacher-tab{
-	border-bottom: 1px solid @blueColor;
+.program-tab{
+	border-bottom: 1px solid #3bafda;
 	overflow: hidden;
 	margin-bottom: 22px;
 	margin-left: 0;
@@ -859,14 +873,53 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 		}
 	}
 	li.current{
-		background: #3bafda;
 		color: #fff;
+		background: #3bafda;
 		border-radius: 4px 4px 0 0;
 		a{
 			outline: none;
 			color: #fff;
 			&:hover{
 				color: #fff;
+			}
+		}
+	}
+}
+.teacher-tab{
+	background: #fcfcfc none repeat scroll 0 0;
+	border: 1px solid #eaeaea;
+	height: 38px;
+	line-height: 38px;
+	margin: 0;
+	overflow: hidden;
+	padding-left: 0;
+	margin-bottom: 20px;
+	li{
+		border-left: 1px solid #fcfcfc;
+		border-right: 1px solid #fcfcfc;
+		cursor: pointer;
+		float: left;
+		font-size: 12px;
+		list-style: outside none none;
+		padding: 0 13px;
+		color: #333;
+		a{
+			outline: none;
+		}
+	}
+	li:first-child.current{
+		border-left: 1px solid #fcfcfc;
+	}
+	li.current{
+		color: #3bafda;
+		background: #fff;
+		border-left: 1px solid #eaeaea;
+		border-right: 1px solid #eaeaea;
+		a{
+			outline: none;
+			color: #3bafda;
+			&:hover{
+				color: #3bafda;
 			}
 		}
 	}
@@ -898,11 +951,13 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 		margin-top: -13px;
 	}
 }
-// 进度条
+// 学习中心进度条
 .processingbar {
 	text-align: center;
 	margin: 3px 0 0 5px;
 	position: relative;
+	width: 138px;
+	height: 117px;
 }
 .processingbar font {
 	color: #999;
