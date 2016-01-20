@@ -75,6 +75,7 @@
 					</span> <del>原价:<em>￥825</em></del>
 				</div>
 				<ul class="f-right">
+                    <li class="line"><em class="red">限额购物</em><br/><em class="red">92.99</em></li>
 					<li class="line">已购买<br/><em class="red">23000</em></li>
 					<li>课程满意度<br/><em class="red">92.99</em></li>
 				</ul>
