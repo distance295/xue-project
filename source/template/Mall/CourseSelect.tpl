@@ -25,37 +25,41 @@
         <li class="Onlylive-select"><a href="https://www.baidu.com/" onclick="javascript:location.href='https://www.baidu.com/'"><input type="checkbox"/><b>只看直播</b></a></li>
         <li class="stu-term-select">
           <a href="###" class="stu-term-select-title">全部学期<i class="fa fa-angle-down"></i></a>
-          <div class="stu-term-select-content"></div>
-        </li>
-      </ul>
-      <div class="panel panel-default ">
-        <div class="panel-body pd0">
-         <link rel="import" href="../../widget/Public.Module/course04.tpl?__inline">
-         <link rel="import" href="../../widget/Public.Module/course04.tpl?__inline">
-       </div>
+          <div class="stu-term-select-content">
+           <a href="http://www.wangxiao.com/xiao6-0-3-0-0-0-0-0-0-0-0-0-0-1-1/">全部</a>
+           <a href="http://www.wangxiao.com/xiao6-0-3-0-0-0-0-0-0-0-0-1-0-1-1/">春季班</a>
+           <a href="http://www.wangxiao.com/xiao6-0-3-0-0-0-0-0-0-0-0-2-0-1-1/">暑假班</a>
+         </div>
+       </li>
+     </ul>
+     <div class="panel panel-default ">
+      <div class="panel-body pd0">
+       <link rel="import" href="../../widget/Public.Module/course04.tpl?__inline">
+       <link rel="import" href="../../widget/Public.Module/course04.tpl?__inline">
      </div>
-
-     <!-- *********************** 内容区域结束 *********************** -->
    </div>
-   <div class="col-md-2 col-sm-2 wrap-side wrap-mall pull-right">
-    <div class="panel panel-default ">
-      <div class="panel-body sideright-body pd0">
-       <div class="sideright-ad">
-        <a href="###"><img src="http://x04.xesimg.com/web/2015/11/19/14479235823994.jpg" ></a>
-      </div>
-      <div class="sideright-ad">
-        <a href="###"><img src="http://x04.xesimg.com/web/2015/11/19/14479235823994.jpg" ></a>
-      </div>
-      <div class="sideright-hotcourse">
-        <h3>热门专题课</h3>
-        <link rel="import" href="../../widget/Public.Module/hot-course.tpl?__inline">
-      </div>
-      <div class="sideright-hotcourse">
-        <h3>热门新鲜事</h3>
-        <link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
-      </div>
+
+   <!-- *********************** 内容区域结束 *********************** -->
+ </div>
+ <div class="col-md-2 col-sm-2 wrap-side wrap-mall pull-right">
+  <div class="panel panel-default ">
+    <div class="panel-body sideright-body pd0">
+     <div class="sideright-ad">
+      <a href="###"><img src="http://x04.xesimg.com/web/2015/11/19/14479235823994.jpg" ></a>
+    </div>
+    <div class="sideright-ad">
+      <a href="###"><img src="http://x04.xesimg.com/web/2015/11/19/14479235823994.jpg" ></a>
+    </div>
+    <div class="sideright-hotcourse">
+      <h3>热门专题课</h3>
+      <link rel="import" href="../../widget/Public.Module/hot-course.tpl?__inline">
+    </div>
+    <div class="sideright-hotcourse">
+      <h3>热门新鲜事</h3>
+      <link rel="import" href="../../widget/Public.Dynamic/dynPopular.tpl?__inline">
     </div>
   </div>
+</div>
 </div>
 <!--    左右分栏结束    -->
 
