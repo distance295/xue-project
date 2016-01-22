@@ -1,3 +1,9 @@
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2015-10-29 10:40:12
+ * @version $Id$
+ */
 @red: #e74c3c;
 @borderColor: #eaeaea;
 @fontSize: 12px;
@@ -84,12 +90,12 @@ body{
 	border-radius: 4px;
 }
 .wrap-body .alert-warning{
-//	height: 42px;
-//	overflow: hidden;
-//	text-overflow:ellipsis;
-//	white-space: nowrap;
-//	padding: 0 15px 0 0;
-//	line-height: 42px;
+	height: 42px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	padding: 0 15px;
+	line-height: 42px;
 }
 .courselayout-list{
 
@@ -114,7 +120,6 @@ body{
 	}
 }
 .courseList-wrap{
-	margin-top: 20px;
 	clear: both;
 	position: relative;
 	.mark{
@@ -646,6 +651,14 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 			}
 		}
 	}
+	.tab-program-content{
+		.tab-program-content-general{
+			display: none;
+		}
+		.active{
+			display: block;
+		}
+	}
 	.tab-record-content{
 		border-radius: 5px;
 		display: block;
@@ -842,8 +855,8 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 	}
 }
 // 直播课程列表	
-.teacher-tab{
-	border-bottom: 1px solid @blueColor;
+.program-tab{
+	border-bottom: 1px solid #3bafda;
 	overflow: hidden;
 	margin-bottom: 22px;
 	margin-left: 0;
@@ -860,14 +873,53 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 		}
 	}
 	li.current{
-		background: #3bafda;
 		color: #fff;
+		background: #3bafda;
 		border-radius: 4px 4px 0 0;
 		a{
 			outline: none;
 			color: #fff;
 			&:hover{
 				color: #fff;
+			}
+		}
+	}
+}
+.teacher-tab{
+	background: #fcfcfc none repeat scroll 0 0;
+	border: 1px solid #eaeaea;
+	height: 38px;
+	line-height: 38px;
+	margin: 0;
+	overflow: hidden;
+	padding-left: 0;
+	margin-bottom: 20px;
+	li{
+		border-left: 1px solid #fcfcfc;
+		border-right: 1px solid #fcfcfc;
+		cursor: pointer;
+		float: left;
+		font-size: 12px;
+		list-style: outside none none;
+		padding: 0 13px;
+		color: #333;
+		a{
+			outline: none;
+		}
+	}
+	li:first-child.current{
+		border-left: 1px solid #fcfcfc;
+	}
+	li.current{
+		color: #3bafda;
+		background: #fff;
+		border-left: 1px solid #eaeaea;
+		border-right: 1px solid #eaeaea;
+		a{
+			outline: none;
+			color: #3bafda;
+			&:hover{
+				color: #3bafda;
 			}
 		}
 	}
@@ -899,11 +951,13 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 		margin-top: -13px;
 	}
 }
-// 进度条
+// 学习中心进度条
 .processingbar {
 	text-align: center;
 	margin: 3px 0 0 5px;
 	position: relative;
+	width: 138px;
+	height: 117px;
 }
 .processingbar font {
 	color: #999;
@@ -986,74 +1040,4 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 		}
 	}
 
-}
-@blueColor: #1e89e0;
-.screen-rank {
-	border: 1px solid #eaeaea;
-	height: 38px;
-	line-height: 38px;
-	margin: 0;
-	overflow: hidden;
-	padding-left: 0;
-	background: #fcfcfc;
-	li {
-		cursor: pointer;
-		float: left;
-		font-size: 12px;
-		list-style: outside none none;
-		padding: 0 13px;
-		border-right: 1px solid #fcfcfc;
-		border-left: 1px solid #fcfcfc;
-		a{
-			i{
-				color: #a1a2a1;
-				margin-left: 5px;
-			}
-		}
-	}
-	li.popular-rank.active {
-		border-left: 1px solid #fcfcfc
-	}
-	li.active{
-		border-right: 1px solid #eaeaea;
-		border-left: 1px solid #eaeaea;
-		background: #fff;
-		a{
-			color: @blueColor;
-			&:focus{
-				outline: none;
-			}
-		}
-	}
-	.Onlylive-select {
-		color: #999999;
-		float: right;
-		margin-right: 15px;
-		input{
-			float: left;
-			margin-top: 12px;
-			margin-right: 5px;
-		}
-		b{
-			font-style: normal;
-			float: left;
-			font-weight: normal;
-		}
-	}
-	.screen-look-grades{
-		background: url('img/glory-grade.png') no-repeat;
-		height: 36px;
-		width: 150px;
-		margin-right: -1px;
-		padding: 0;
-		a{
-			display: inline-block;
-			width: 150px;
-			height: 36px;
-			text-indent: -99999px;
-			&:focus{
-				outline: none;
-			}
-		}
-	}
 }
