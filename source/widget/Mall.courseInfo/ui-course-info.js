@@ -286,6 +286,8 @@ $(function () {
         var con ='';
         if(tpl === '暂时不可报名'){
             con = '抱歉，您不具备本课程的报名资格，详情请咨询<strong style="color:#cc0000;">4008002211</strong>'
+        }else if(tpl === '报满'){
+            con = '抱歉，本课程已经报满，暂时无法报名';
         }else{
             con = '抱歉，当前没有正在进行的课程排期';
         }
