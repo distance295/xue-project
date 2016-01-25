@@ -37,15 +37,14 @@
   width: 1274px;
 }
 .live-scroll-box-container {
-  position: absolute;
   width: 100%;
 }
 .live-scroll-container {
   position: relative;
   width: 100%;
-  margin-bottom: 30px;
-  height: 588px;
+  max-height: 588px;
   overflow: hidden;
+  margin-bottom: 30px;
 }
 .live-list {
   overflow: hidden;
