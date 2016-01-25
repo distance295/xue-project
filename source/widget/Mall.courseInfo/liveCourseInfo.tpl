@@ -70,7 +70,7 @@
         </div>
         <div class="course-button-list">
             <span class="f-left">
-				<button class="btn btn-danger button_apply">立即报名</button>
+				<button class="btn btn-danger do_not_sign_up">暂时不可报名</button>
 			</span>
             <span class="collect collect_current f-left">
 				<a id="collectId" onclick="collect(11323)" href="javascript:void(0);">已收藏</a>
