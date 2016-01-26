@@ -19,7 +19,7 @@ fCheck.clearTips = function(select){
 $(function() {
     $(".btn-certificate").click(function() {
         if ($(".serialNo").val() == '') {
-            fCheck.setTips(".serialNo-warning",'请输入听课证卡号');
+            fCheck.setTips(".serialNo-warning",'请输入听课证编号');
             $(".serialNo").focus(function() {
               fCheck.clearTips(".serialNo-warning");
             });
@@ -27,7 +27,7 @@ $(function() {
         }
 
         if ($(".serialPass").val() == '') {
-            fCheck.setTips(".serialPass-warning",'请输入听课证密码');
+            fCheck.setTips(".serialPass-warning",'请输入听课证激活码');
             $(".serialPass").focus(function() {
               fCheck.clearTips(".serialPass-warning");
             });
