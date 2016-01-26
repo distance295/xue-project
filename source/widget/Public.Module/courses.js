@@ -168,35 +168,11 @@ function showStuterm(){
     $('.stu-term-select-title i').removeClass('fa-angle-down').addClass('fa-angle-up');
 };
 function hideStuterm(){
-    $('.stu-term-select').css('height','36px').find('.stu-term-select-content').css('display','none');
+    $('.stu-term-select').css('height','37px').find('.stu-term-select-content').css('display','none');
     $('.stu-term-select-title i').removeClass('fa-angle-up').addClass('fa-angle-down');
 }
 $('body').on('mouseenter','.stu-term-select', function(){
-    var _html = $('.stu-term-select-content').html();
-    if (_html) {
-        $('.stu-term-select-content').html(_html);
-        showStuterm();
-        return false;
-    }
-      var url = '/CourseSearch/ajaxGetTerm';
-        var params = $('.stu-term-select-title').data('url');
-        $.ajax({
-            url: url,
-            data: params,
-            type: "get",
-            dataType: 'html',
-            success: function(d) {
-                var resData = xue.ajaxCheck.html(d);
-                if (resData) {
-                    $('.stu-term-select-content').html(d);
-                    showStuterm();
-                }
-
-            },
-            error: function() {
-                //alert('数据读取错误..');
-            }
-        });
+      showStuterm();
     }).on('mouseleave','.stu-term-select',function(){
-        hideStuterm()
+        hideStuterm();
     });
