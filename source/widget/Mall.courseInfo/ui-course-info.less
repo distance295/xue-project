@@ -108,7 +108,10 @@
 	.course-left-player {
 		overflow: hidden;margin-left:5px;
 		.video-images-player {
-			width: 340px;height: 340px;
+			width: 340px;height: 340px;position: relative;
+            span.video-icon {
+                width:85px;height: 85px;background: url(img/video-icon.png) no-repeat;position: absolute;left:128px;top:128px;z-index: 1;cursor: pointer;
+            }
 		}
 		.video-player {
 			width: 590px;height: 400px;
