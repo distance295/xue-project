@@ -108,7 +108,10 @@
 	.course-left-player {
 		overflow: hidden;margin-left:5px;
 		.video-images-player {
-			width: 340px;height: 340px;
+			width: 340px;height: 340px;position: relative;
+            span.video-icon {
+                width:85px;height: 85px;background: url(img/video-icon.png) no-repeat;position: absolute;left:128px;top:128px;z-index: 1;cursor: pointer;
+            }
 		}
 		.video-player {
 			width: 590px;height: 400px;
@@ -211,6 +214,9 @@
 	   		}
            .disabled {
                background: #bfbfbf;
+           }
+           .do_not_sign_up {
+              width: 160px;height: 40px;font-size: 18px;border-radius: 2px;background: #bfbfbf; 
            }
 			.collect {
 				 display: inline-block;background: url(img/icon_star.png) 0 2px no-repeat;padding-left:16px;margin:10px 0 0 20px;
@@ -547,6 +553,12 @@
     .dialog_content {
         overflow: hidden;padding:5px 10px 10px 10px;
     }
+}
+#xuebox_DoNotSignUp {
+    position: absolute;
+   .dialog_content {
+        overflow: hidden;padding:10px;
+    } 
 }
 .rightResearch {
 	width: 67px;

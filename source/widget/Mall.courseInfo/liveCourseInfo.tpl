@@ -7,6 +7,7 @@
         <div class="video-images-player">
             <a href="#" target="_blank">
                 <img src="pic/xiangqing_03.jpg" height="340" width="340" alt=""></a>
+                <span class="video-icon"></span>
         </div>
     </div>
     <div class="course-center-list f-left">
@@ -70,7 +71,7 @@
         </div>
         <div class="course-button-list">
             <span class="f-left">
-				<button class="btn btn-danger button_apply">立即报名</button>
+				<button class="btn btn-danger do_not_sign_up">暂时不可报名</button>
 			</span>
             <span class="collect collect_current f-left">
 				<a id="collectId" onclick="collect(11323)" href="javascript:void(0);">已收藏</a>

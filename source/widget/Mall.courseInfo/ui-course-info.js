@@ -279,4 +279,43 @@ $(function () {
             }
         });
     });
+     //暂时不可报名
+    $('body').on('mouseenter','.do_not_sign_up', function(){
+        var that = $(this);
+        var tpl = that.text();
+        var con ='';
+        if(tpl === '暂时不可报名'){
+            con = '抱歉，您不具备本课程的报名资格，详情请咨询<strong style="color:#cc0000;">4008002211</strong>'
+        }else if(tpl === '报满'){
+            con = '抱歉，本课程已经报满，暂时无法报名';
+        }else{
+            con = '抱歉，当前没有正在进行的课程排期';
+        }
+        xue.win({
+            id: 'DoNotSignUp',
+             title : false,
+             arrow : 'bc',
+             follow : that,
+             content : con,
+             lock : false,
+             close : false,
+             submit : false,
+             cancel : false
+        });
+         var box = $('#xuebox_DoNotSignUp'),
+             size = xue.win('DoNotSignUp').getSize(),
+             o = {
+             left : that.offset().left + (that.outerWidth() / 2) - (size.outerWidth / 2),
+             top : that.offset().top + that.height() - 73
+         };
+         xue.win('DoNotSignUp').position(o.left, o.top);
+         $(this).on('mouseleave', function(e){
+             if($(e.relatedTarget).attr('id') != 'xuebox_DoNotSignUp' && $(e.relatedTarget).parents('#xuebox_DoNotSignUp').length === 0){
+                 xue.win('DoNotSignUp').close();
+             }
+         });
+         $('#xuebox_DoNotSignUp').on('mouseleave', function(){
+             xue.win('DoNotSignUp').close();
+         });
+    });
 });
