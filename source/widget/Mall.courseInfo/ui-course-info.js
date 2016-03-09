@@ -125,6 +125,12 @@ courseInfor.videoPlaySwitch = function (u, w, h, t) {
             submit: false,
             cancel: false
         });
+        if($('#xuebox_videoPlayWrap').length == 1){
+            $('body').css('overflow-y','hidden');
+        }
+        $('#xuebox_videoPlayWrap .dialog_close').on('click',function(){
+             $('body').css('overflow-y','scroll');
+        });
     }
     //课程大纲切换方法
 courseInfor.courseTab = function (tabTit, on, tabCon) {
