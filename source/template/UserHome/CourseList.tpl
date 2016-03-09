@@ -89,6 +89,7 @@ $(function  () {
     });
     testLive('.listTest-btn');
     liveHelp('.liveHelp-btn');
+    QrCodeInstructor('.QR-code-hover');
 })
 // 更多服务
 function moreService (){

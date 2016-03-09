@@ -146,7 +146,19 @@ function liveHelp(dom){
         }
     }); 
 }
-
+//辅导导师头像弹层
+function QrCodeInstructor(dom){
+    $(dom).popover({
+        placement: 'top',
+        html: true,
+        trigger: 'hover',
+        title: '',
+        content: function() {
+            var listTest_html = $(this).parents('.avatar-photo').children('.QR-code-instructor').html();
+            return listTest_html;
+        }
+    }); 
+} 
 // 讲义资料弹框tab事件
 $('body').on('click','.material-wrap .material-tab li',function(){
     var index = $(this).index();

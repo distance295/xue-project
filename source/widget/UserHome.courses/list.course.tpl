@@ -64,7 +64,18 @@
             <div class="courseList-teacher">
                 <div class=" teacher-main teacher-main-border">
                     <div class="avatar-photo">
-                        <img src="img/default_photo.png">
+                        <a href="###" class="QR-code-hover" data-container="body">
+                            <img src="img/default_photo.png">
+                        </a>
+                        <div class="QR-code-instructor hide">
+                           <div class="QR-code-inner">
+                               <div class="QR-code">
+                                    <img src="img/QR-code.png">
+                               </div>
+                               <p class="QR-code-prompt">用微信扫一扫上面二维码</br>或直接搜索微信号</p>
+                               <p class="Prompt-qq">15800798@qq.com</p>
+                           </div>
+                        </div>
                     </div>
                     <div class="coach-con">
                         <p class="teacher-coach">张三</p>
