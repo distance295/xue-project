@@ -4,10 +4,11 @@
 -->
 <div class="ui-course-infor-wrap">
     <div class="course-left-player f-left">
-        <div class="video-images-player">
-            <a href="#" target="_blank">
-                <img src="pic/xiangqing_03.jpg" height="340" width="340" alt=""></a>
-                <span class="video-icon"></span>
+         <div class="video-images-player">
+            <a href="javascript:void(0);" onclick="courseInfor.videoPlaySwitch('http://video.xueersi.com/view/getCouAudioVideo/29009/', '800', '450', '2016年春季幼升小十项全能直播班');">
+                <img src="http://r04.xesimg.com/web/2016/01/14/14527615273530.jpg" height="340" width="340" alt="">
+            </a>
+            <span class="video-icon" onclick="courseInfor.videoPlaySwitch('http://video.xueersi.com/view/getCouAudioVideo/29009/', '800', '450', '2016年春季幼升小十项全能直播班');"></span>
         </div>
     </div>
     <div class="course-center-list f-left">
@@ -37,6 +38,21 @@
                 </li>
                 <li>3次阶段考试</li>
             </ul>
+        </div>
+         <div class="course-coach-teacher">
+            <span class="f-left">辅导老师：</span>
+            <div class="coach-teacher-wrap f-left"> 
+                <div class="avatar">
+                    <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="">
+                </div>
+                <div class="coach-teacher-name">
+                    <p class="name">达务力江老师</p>
+                    <p class="info">剩余<strong>3</strong>个名额</p>
+                </div>
+                 <div class="coach-teacher-info">
+                    毕业于北京外国语大学，5年教龄<br/>没有教不会的学生，只有不会教的老师
+                </div>
+            </div>
         </div>
         <div class="course-favorable-list">
             课程优惠：
