@@ -69,7 +69,26 @@ function delayDate(){
         },
     });
 }
-
+// 续报
+function ContinueCourse(){
+    $.ajax({
+        type: "get",
+        url: "/data/courses/continuecourse.html",
+        dataType: "html",
+        success: function(result) {
+            if(result){
+                createModal.show({
+                    id : 'delayDate',
+                    title : '原班续报课程',
+                    cls : 'continuecourse',
+                    width: 730,
+                    content : result
+                });
+                $('#delayDate').modal('show')
+            }
+        },
+    });
+}
 $(function  () {
     progressBar();
 
@@ -78,6 +97,10 @@ $(function  () {
     // 延期课程
     $('.label-delay').on('click',function(){
         delayDate();
+    });
+    // 续报课程
+    $('.label-continun').on('click',function(){
+        ContinueCourse();
     });
     // 更多服务的资料弹框
     $('.more-list li.courseList-material').on('click',function(){
