@@ -89,6 +89,22 @@ function ContinueCourse(){
         },
     });
 }
+// 续报课程立即报名按钮
+function immediateSign(){
+    var courseID = ,
+        URL = ;
+    $.ajax({
+        type: "get",
+        url: "",
+        data: {courseID:courseID},
+        dataType: "html",
+        success: function(result) {
+            if(result){
+                window.location.href = URL;
+            }
+        },
+    });
+}
 $(function  () {
     progressBar();
 
@@ -101,6 +117,10 @@ $(function  () {
     // 续报课程
     $('.label-continun').on('click',function(){
         ContinueCourse();
+    });
+    // 续报课程的立即报名按钮
+    $('.immediateSign').on('click',function(){
+        immediateSign();
     });
     // 更多服务的资料弹框
     $('.more-list li.courseList-material').on('click',function(){
