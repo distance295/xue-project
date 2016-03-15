@@ -91,12 +91,12 @@ function ContinueCourse(){
 }
 // 续报课程立即报名按钮
 function immediateSign(){
-    var courseID = ,
-        URL = ;
+    // var courseID = ;
+    // var    URL = ;
     $.ajax({
         type: "get",
         url: "",
-        data: {courseID:courseID},
+        // data: {courseID:courseID},
         dataType: "html",
         success: function(result) {
             if(result){
