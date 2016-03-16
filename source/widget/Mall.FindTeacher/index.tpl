@@ -13,7 +13,9 @@
                 <div class="find-teacher-hover-container">
                     <img src="../../widget/Mall.FindTeacher/img/teacher-photo.png" class="find-teacher-photo"/>
                     <div class="find-teacher-hover">
-                        <div class='find-teacher-photo-hover'></div>
+                        <a href="wwww.baidu.com">
+                            <img src="/static/img/find-teacher-hover.png" class="find-teacher-hover-a">
+                        </a>
                         <div class="ui_follow" data-type="2" data-state="1" data-params="urlStr=840&amp;urlKey=af0030c654f79b371438ebdf40d4bead" data-url="/teachers/follow/" data-value="840">
                             <a href="#" class="btn btn-warning follow_add find-teacher-follow">＋关注</a>
                         </div>
@@ -40,7 +42,7 @@
                 <div class="find-teacher-hover-container">
                     <img src="../../widget/Mall.FindTeacher/img/teacher-photo.png" class="find-teacher-teacher-photo"/>
                     <div class="find-teacher-hover">
-                        <a href="#"><div class='find-teacher-photo-hover'></div></a>
+                        <a href="wwww.baidu.com" class="find-teacher-hover-a"><div class='find-teacher-photo-hover'></div></a>
                         <span class="find-teacher-follow">＋关注</span>
                     </div>
                 </div>
