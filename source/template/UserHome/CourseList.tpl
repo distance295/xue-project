@@ -69,7 +69,42 @@ function delayDate(){
         },
     });
 }
-
+// 续报
+function ContinueCourse(){
+    $.ajax({
+        type: "get",
+        url: "/data/courses/continuecourse.html",
+        dataType: "html",
+        success: function(result) {
+            if(result){
+                createModal.show({
+                    id : 'delayDate',
+                    title : '原班续报课程',
+                    cls : 'continuecourse',
+                    width: 730,
+                    content : result
+                });
+                $('#delayDate').modal('show')
+            }
+        },
+    });
+}
+// 续报课程立即报名按钮
+function immediateSign(){
+    // var courseID = ;
+    // var    URL = ;
+    $.ajax({
+        type: "get",
+        url: "",
+        // data: {courseID:courseID},
+        dataType: "html",
+        success: function(result) {
+            if(result){
+                window.location.href = URL;
+            }
+        },
+    });
+}
 $(function  () {
     progressBar();
 
@@ -78,6 +113,14 @@ $(function  () {
     // 延期课程
     $('.label-delay').on('click',function(){
         delayDate();
+    });
+    // 续报课程
+    $('.label-continun').on('click',function(){
+        ContinueCourse();
+    });
+    // 续报课程的立即报名按钮
+    $('.immediateSign').on('click',function(){
+        immediateSign();
     });
     // 更多服务的资料弹框
     $('.more-list li.courseList-material').on('click',function(){
@@ -89,6 +132,7 @@ $(function  () {
     });
     testLive('.listTest-btn');
     liveHelp('.liveHelp-btn');
+    QrCodeInstructor('.QR-code-hover');
 })
 // 更多服务
 function moreService (){

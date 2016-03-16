@@ -125,62 +125,77 @@ homeWork.url = '/data/homework/';
                   return false;
 				}
 
-			  	setTimeout(function(){
-			  	    var time = _audio.duration;
-			  	    //分钟
-			        var minute = time / 60;
-			        var minutes = parseInt(minute);
-			        if (minutes < 10) {
-			            minutes = "0" + minutes;
-			        }
-			        //秒
-			        var second = time % 60;
-			        var seconds = Math.round(second);
-			        if (seconds < 10) {
-			            seconds = "0" + seconds;
-			        }
+				//默认的时候让所有的音频加载，否则在火狐ie等浏览器下由于jquery插件的存在导致onloadedmetadata事件不响应
+                _audio.load();
 
-			        //总共时长的秒数
-			        var allTime = parseInt(minutes*60 + seconds);
-			      
-		            //给语音按钮赋值时长
-		            _audioBg.find('em').text(allTime + ' "');
+                //音频加载完成后的一系列操作
+				function duration(){
+						if( _ReviewsBox.hasClass('homework-audio-loading') ){
+							return false;
+						}
+						var time = _audio.duration;
+				  	    //分钟
+				        var minute = time / 60;
+				        var minutes = parseInt(minute);
+				        if (minutes < 10) {
+				            minutes = "0" + minutes;
+				        }
+				        //秒
+				        var second = time % 60;
+				        var seconds = Math.round(second);
+				        if (seconds < 10) {
+				            seconds = "0" + seconds;
+				        }
 
-		            _audioTime = parseFloat(_audioBg.find('em').text());
+				        //总共时长的秒数
+				        var allTime = parseInt(minutes*60 + seconds);
+				      
+			            //给语音按钮赋值时长
+			            _audioBg.find('em').text(allTime + ' "');
+
+			            _audioTime = parseFloat(_audioBg.find('em').text());
+
+			            /**
+			            * 判断语音按钮的宽度
+			            * 1-5秒宽度100  5-10秒宽度150  >10S的200
+			            */
+			            if( _audioTime>0 && _audioTime <=5 ){
+		                    _audioBg.width('100');
+			            } else if ( _audioTime>5 && _audioTime <=10 ){
+		                    _audioBg.width('150');
+			            } else {
+		                    _audioBg.width('200');
+			            }
+
+			            //判断语音的播放和停止
+			           $(that).off('click', '.homework-audio-box').on('click','.homework-audio-box', function(){
+		                    var  _Playing = _ReviewsBox.hasClass('homework-audio-playing');
+		                    if( !_Playing){
+		                    	$('body').find('.homework-Reviews').removeClass('homework-audio-playing').addClass('homework-audio-loading');
+		                    	//播放时其他的音频都要重新加载停止
+		                    	$('body').find('.homework-audio-btn-box').each(function(index){
+		                    		$('body').find('.homework-audio-btn-box')[index].load();
+		                    	})
+		                        _ReviewsBox.addClass('homework-audio-playing')
+		                        _audio.play();
+		                    }else{
+		                    	_ReviewsBox.removeClass('homework-audio-playing').addClass('homework-audio-loading');
+		                    	_audio.load();//重新加载和暂停是不同的
+		                    }
+		                    setTimeout(function(){
+								_ReviewsBox.removeClass('homework-audio-playing');
+							}, _audioTime +'000');
+			           })
+
+				}
+
+				_audio.onloadedmetadata = duration;
+
+			  	/*setTimeout(function(){
+			  	    
 		         
-	           }, 1000)
+	           }, 1000)*/
 	          
-	          /**
-	           * 判断语音按钮的宽度
-	           * 1-5秒宽度100  5-10秒宽度150  >10S的200
-	           */
-	          if( _audioTime>0 && _audioTime <=5 ){
-                  _audioBg.width('100');
-	          } else if ( _audioTime>5 && _audioTime <=10 ){
-                  _audioBg.width('150');
-	          } else {
-                  _audioBg.width('200');
-	          }
-
-	          //判断语音的播放和停止
-	          $(this).off('click', '.homework-audio-box').on('click','.homework-audio-box', function(){
-                    var  _Playing = _ReviewsBox.hasClass('homework-audio-playing');
-                    if( !_Playing){
-                    	$('body').find('.homework-Reviews').removeClass('homework-audio-playing');
-                    	//播放时其他的音频都要重新加载停止
-                    	$('body').find('.homework-audio-btn-box').each(function(index){
-                    		$('body').find('.homework-audio-btn-box')[index].load();
-                    	})
-                        _ReviewsBox.addClass('homework-audio-playing')
-                        _audio.play();
-                    }else{
-                    	_ReviewsBox.removeClass('homework-audio-playing');
-                    	_audio.load();//重新加载和暂停是不同的
-                    }
-                    setTimeout(function(){
-						_ReviewsBox.removeClass('homework-audio-playing');
-					}, _audioTime +'000');
-	          })
 		  })
 	}
 

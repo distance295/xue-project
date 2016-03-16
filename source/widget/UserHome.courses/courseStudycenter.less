@@ -4,88 +4,94 @@
  * @date    2015-10-29 10:40:12
  * @version $Id$
  */
-@red: #e74c3c;
-@borderColor: #eaeaea;
-@fontSize: 12px;
-@dark333: #333;
-@blueColor: #1e89e0;
-body{
-	background: #f1f2f6;
-}
-.border-radius(@amount: 5px){
-	-moz-border-radius: @amount;
-	-webkit-border-radius: @amount;
-	-ms-border-radius: @amount;
-	border-radius: @amount;
-}
-.course-label{
-	font-family: "SimSun";
-	display: inline-block;
-	padding: 2px 8px;
-	font-size: @fontSize;
-	line-height: 18px;
-	color: #fff;
-	.border-radius(2px);
-	margin-bottom: 0;
-}
-.course-blue-label{
-	background: #5abdeb;
-}
-.course-green-label{
-	background: #37bc9b;
-}
-
-.icon-will-red{
-	background: url("img/icon-will-red.png") no-repeat scroll left center;
-	height: 10px;
-}
-.icon-just-white{
-	background: url("img/white-arrow.png") no-repeat scroll left center;
-	height: 10px;
-}
-.label-study-wrap{
-	position: absolute;
-	right: -25px;
-	width: 25px;
-	top: 19px;
-	z-index: 1;
-}
-.label-study{
-	width: 25px;
-	height: 60px;
-	text-align: center;
-	display: inline-block;
-	color: #fff;
-	font-size: 14px;
-	font-style: normal;
-	cursor: pointer;
-	font-weight: normal;
-	padding: 0 2px;
-	line-height: 17px;
-	margin-bottom: 1px;
-}
-.label-delay{
-	background: #3bafda;
-	padding-top: 12px;
-}
-.label-delayed{
-	background: #ccd1d9;
-	padding-top: 5px;
-	cursor: default;
-}
-.label-continun{
-	background: #37bc9b;
-	padding-top: 12px;
-}
-.label-sheng{
-	padding-top: 12px;
-	background: #ffaa09;
-}
-.courseList-label{
-	padding-right: 25px;
-	padding: 15px 0px 15px 15px;
-	margin-bottom: 20px;
-	background: #fff;
+ @red: #e74c3c;
+ @borderColor: #eaeaea;
+ @fontSize: 12px;
+ @dark333: #333;
+ @blueColor: #1e89e0;
+ @gray999: #999;
+ body{
+ 	background: #f1f2f6;
+ }
+ .border-radius(@amount: 5px){
+ 	-moz-border-radius: @amount;
+ 	-webkit-border-radius: @amount;
+ 	-ms-border-radius: @amount;
+ 	border-radius: @amount;
+ }
+ .course-label{
+ 	font-family: "SimSun";
+ 	display: inline-block;
+ 	padding: 2px 8px;
+ 	font-size: @fontSize;
+ 	line-height: 18px;
+ 	color: #fff;
+ 	.border-radius(2px);
+ 	margin-bottom: 0;
+ }
+ .course-blue-label{
+ 	background: #5abdeb;
+ }
+ .course-green-label{
+ 	background: #37bc9b;
+ }
+ .course-yellow-label{
+ 	background: #ffbc3c;
+ }
+ .course-red-label{
+ 	background: #e60100;
+ }
+ .icon-will-red{
+ 	background: url("img/icon-will-red.png") no-repeat scroll left center;
+ 	height: 10px;
+ }
+ .icon-just-white{
+ 	background: url("img/white-arrow.png") no-repeat scroll left center;
+ 	height: 10px;
+ }
+ .label-study-wrap{
+ 	position: absolute;
+ 	right: -25px;
+ 	width: 25px;
+ 	top: 19px;
+ 	z-index: 1;
+ }
+ .label-study{
+ 	width: 25px;
+ 	height: 60px;
+ 	text-align: center;
+ 	display: inline-block;
+ 	color: #fff;
+ 	font-size: 14px;
+ 	font-style: normal;
+ 	cursor: pointer;
+ 	font-weight: normal;
+ 	padding: 0 2px;
+ 	line-height: 17px;
+ 	margin-bottom: 1px;
+ }
+ .label-delay{
+ 	background: #3bafda;
+ 	padding-top: 12px;
+ }
+ .label-delayed{
+ 	background: #ccd1d9;
+ 	padding-top: 5px;
+ 	cursor: default;
+ }
+ .label-continun{
+ 	background: #37bc9b;
+ 	padding-top: 12px;
+ }
+ .label-sheng{
+ 	padding-top: 12px;
+ 	background: #ffaa09;
+ }
+ .courseList-label{
+ 	padding-right: 25px;
+ 	padding: 15px 0px 15px 15px;
+ 	margin-bottom: 20px;
+ 	background: #fff;
 	// height: 215px;
 	border-radius: 4px;
 }
@@ -346,6 +352,9 @@ body{
 					width: 60px;
 					height: 60px;
 					border-radius: 50%;
+				}
+				.QR-code-hover{
+					display: inline-block;
 				}
 			}
 			.coach-con{
@@ -1040,4 +1049,199 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 		}
 	}
 
+}
+//辅导老师悬浮框
+.QR-code-inner{
+	text-align: center;
+	.QR-code{
+		margin-bottom: 8px;
+	}
+	p{
+		font-size: 12px;
+		text-align: center;
+		line-height: 18px;
+		margin-bottom: 0px;
+	}
+	p.Prompt-qq{
+		color: #e74c3c;
+		font-size: 14px;
+	}
+}
+.popover{
+	box-shadow: none;
+}
+// 续报课程列表
+.course-list.continue-course{
+	font-family: "SimSun";
+	border-bottom: 1px solid @borderColor;
+	width: 100%;
+	padding: 10px 0;
+	overflow: hidden;
+	.ui-avatar{
+		width: 60px;
+		text-align: center;
+		float: left;
+		display: inline;
+		margin-right: 14px;
+		.ui_follow{
+			a,span{
+				font-size: 12px;
+			}
+		}
+		span.ui-user-name{
+			font-size: 14px;
+		}
+		.ui-userinfo{
+			.userpic{
+				display: block;
+				width: 60px;
+				height: 60px;
+			}
+		}
+		.avatar-photo{
+			margin-bottom: 4px;
+			display: inline-block;
+			width: 60px;
+			overflow: hidden;
+			padding-left: 0;
+			margin-top: 8px;
+			img{
+				border-radius: 50%;
+				width: 60px;
+				height: 60px;
+			}
+			ul{
+				overflow: hidden;
+				width: 800px;
+				height: 60px;
+				margin-left: 0;
+				margin-bottom: 9px;
+				padding-left: 0;
+				li{
+					overflow: hidden;
+					float: left;
+					width: 60px;
+				}
+			}
+			.avatar-roll{
+				a{
+					outline: none;
+					em{
+						display: inline-block;
+						height: 17px;
+						line-height: 17px;
+						text-align: center;
+						text-indent: -9999em;
+						vertical-align: top;
+						width: 17px;
+					}
+					.icon-chevron-left{
+						background: url('img/icon_chevron_left.png') no-repeat 0 0;
+					}
+					.icon-chevron-right{
+						background: url('img/icon_chevron_right.png') no-repeat 0 0;
+					}
+				}
+				a.none{
+					.icon-chevron-left{
+						background: url('img/icon_chevron_left_none.png') no-repeat 0 0;
+					}
+					.icon-chevron-right{
+						background: url('img/icon_chevron_right_none.png') no-repeat 0 0;
+					}
+				}
+			}
+		}
+	}
+	.course-detail-wrap{
+		overflow: hidden;
+		.course-detail{
+			width: 83%;
+		}
+	}
+	.course-detail{
+		display: block;
+		overflow: hidden;
+		margin-bottom: 0;
+		p{
+			line-height: 30px;
+			overflow: hidden;
+			font-size: 12px;
+			margin: 0;
+		}
+		.avatar-name{
+			.ui-username{
+				color: #666;
+				font-size: 12px;
+				line-height: 30px;
+			}
+			.avatar-name{
+				color: #666;
+				font-size: 12px;
+				line-height: 30px;
+			}
+		}
+		.ui-username{
+			color: #333;
+			font-size: 26px;
+			line-height: 34px;
+			float: left;
+		}
+		.course-title{
+			font-size: 16px;
+			margin-top: 0;
+			span.course-tip{
+				display: inline-block;
+				color: @gray999;
+				font-size: @fontSize;
+			}
+			.title-detail{
+				font-family: 'Microsoft YaHei'
+			}
+		}
+		.continue-course-detail{
+			color: @gray999;
+			.continue-course-detail-tname{
+				color: @dark333;
+				margin-right: 15px;
+			}
+			.continue-course-detail-date{
+				color: #e74c3c;
+				margin-right: 5px;
+			}
+		}
+	}
+	.course-num{
+		width: 98px;
+		float: right;
+		font-family: 'Microsoft YaHei';
+		text-align: center;
+		padding-left: 0;
+		margin-top: 40px;
+		.btn-default{
+			width: 98px;
+			font-size: 14px;
+			border-radius: 2px;
+			font-family: "SimSun";
+			font-size: 14px;
+			height: 32px;
+			line-height: 30px;
+			margin-bottom: 0;
+			outline: medium none;
+			padding: 0;
+		}
+		.disableSign{
+			background: #ccd1d9;
+			border: 1px solid #ccd1d9;
+			color: #fff;
+			cursor: default;
+		}
+	}
+}
+.continuecourse{
+	.modal-body{
+		height: 280px;
+		overflow-y: auto;
+		padding: 0 15px;
+	}
 }

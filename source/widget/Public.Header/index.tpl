@@ -3,13 +3,11 @@
     @require header.js
 -->
 <div class="modele-header-pic">
-    <img src="http://file.xueersi.com/web/2016/01/25/14537065408790.png" alt="下半年卡9折优惠倒计时" usemap="#Map" border="0">
+    <img src="pic/banner.png" alt="下半年卡9折优惠倒计时" usemap="#Map" border="0">
       <map name="Map" id="Map">
-      <area shape="rect" coords="905,22,995,59" href="http://www.xueersi.com/1" target="_blank"/>
-      <area shape="rect" coords="1002,22,1090,58" href="http://www.xueersi.com/2" target="_blank"/>
-      <area shape="rect" coords="1093,22,1186,57" href="http://www.xueersi.com/3" target="_blank"/>
+      <area shape="rect" coords="980,17,1143,64" href="http://zt.xueersi.com/book/" target="_blank"/>
     </map>
-    <p class="settime" endtime="2016-1-29 23:59:59"></p>
+    <p class="settime" endtime="2016-3-20 23:59:59" style="right:249px;"></p>
     <script type="text/javascript">
 			$(function(){
 			   xue.updateEndTime('.settime');//执行倒计时函数
