@@ -17,7 +17,7 @@
     <li><a href="###" data-target=".gold-exchange-container">我兑换的</a></li>
 </ul>
 <!-- 金币明细 -->
-<div class="gold-detail-container gold-detail-block-change" style="display: block">
+<div class="gold-detail-container gold-detail-block-change" >
     <!-- 金币总数 -->
     <div class="gold-detail-account">
         <span class="gold-detail-account-title">目前您的金币数:</span><em>9786</em>
@@ -67,14 +67,14 @@
     </div>
 </div>
 <!-- 金币商城 -->
-<div class="gold-store-container gold-detail-block-change" >
+<div class="gold-store-container gold-detail-block-change" style="display: block">
     <ul class="gold-store-title-container">
         <li class="gold-store-title-on" store-target=".gold-store-card-box">魔法卡</li>
         <li store-target=".gold-store-present-box">实物礼品</li>
     </ul>
 
     <!-- 魔法卡 -->
-    <div class="gold-store-card-box gold-store-block-change" style="display: block" >
+    <div class="gold-store-card-box gold-store-block-change" >
         <div class="gold-store-card-box-over">
             <div class="gold-store-card" id="11">
                 <div class="gold-store-card-img-box">
@@ -185,7 +185,7 @@
         </div>
     </div>
     <!-- 实物礼品 -->
-    <div class="gold-store-present-box gold-store-block-change" >
+    <div class="gold-store-present-box gold-store-block-change" style="display: block">
         <div class="gold-store-present-rank">
             <span class="gold-store-present-rank-by">排序 :
                 <a href="#" class="gold-store-present-rank-focus"><em class="gold-store-rank-by-gold gold-store-present-rank-gold">金币</em><i class="gold-store-gold-arrow glyphicon glyphicon-arrow-up"></i></a>
@@ -198,7 +198,7 @@
                     <div class="gold-store-present-img-box">
                         <img src="../../widget/UserHome.gold/img/present-img.png" />
                     </div>
-                    <span class="gold-store-present-card-name">清华大学扑克牌</span>
+                    <span class="gold-store-present-card-name">清华大学扑克牌啊啊啊啊啊啊啊啊啊啊啊啊</span>
                     <span class="gold-store-present-card-stock">库存还剩347套</span>
                     <span class="gold-store-present-card-gold">260金币</span>
                     <div class="gold-store-present-btn">

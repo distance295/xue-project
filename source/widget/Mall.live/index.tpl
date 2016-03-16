@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <div class="live-enter-box">
-                        <a href = "#"><span class="live-enter">直播中,立即进入</span></a>
+                        <a href = "#"><span class="live-enter live-order">直播中,立即进入</span></a>
                     </div>
                 </div>
                 <div class="live-card">
