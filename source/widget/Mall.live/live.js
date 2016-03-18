@@ -38,4 +38,42 @@ $(function(){
         }
 
     });
+
+    $('body').on('click', '.live-order', function () {
+        //var presentid = $(this).closest('.gold-store-present-card').attr('id');
+        //$.ajax({
+        //    url: '/GoldShop/realAwardDetail',
+        //    //url:'/data/gold/gold-present-modal.html',
+        //    type: 'post',
+        //    //type:'get',
+        //    dataType: 'html',
+        //    data: {
+        //        id: presentid
+        //    },
+        //    success: function (result) {
+        //        if (result.substr(0, 4) == 'http' || result.substr(0, 1) == '/') {
+        //            window.location.href = result;
+        //            return;
+        //        }
+        //        liveOrderModal.showModal(result);
+        //    }
+        //})
+        liveOrderModal.showModal();
+
+    });
+
+    var liveOrderModal = liveOrderModal || {};
+
+    liveOrderModal.showModal = function(con){
+        var that = $(this), data = that.data();
+        var con = "<img src='img/orderSuccess.png'>";
+        //console.log(data);
+        createModal.show({
+            id : 'liveOrderModal',
+            width : '530',
+            title : "预约直播",
+            cls : "liveOrderModal aaa ccc",
+            content : con
+        });
+    };
 });

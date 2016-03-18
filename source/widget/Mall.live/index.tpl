@@ -3,6 +3,7 @@
     @require live.less
     @require live.js
     @require ../Module.Pagination/paginations.js
+    @require ../Module.Modal/Modal.js
 -->
     <!--今日直播标题 -->
     <div class="live-title">
@@ -36,7 +37,7 @@
                         </div>
                     </div>
                     <div class="live-enter-box">
-                        <a href = "#"><span class="live-enter">直播中,立即进入</span></a>
+                        <a><span class="live-enter live-order" data-toggle="modal" data-target="#liveOrderModal">直播中,立即进入</span></a>
                     </div>
                 </div>
                 <div class="live-card">
