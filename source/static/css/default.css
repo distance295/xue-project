@@ -208,11 +208,13 @@ button.active,
 .grade-course-title a.more {
   float: right;
   font-size: 14px;
+  color: #3bafda;
 }
 .grade-course-title ul.live-list-tabs {
-  float: right;
+  float: left;
   margin-right: 5px;
   overflow: hidden;
+  padding-left: 155px;
 }
 .grade-course-title ul.live-list-tabs li {
   float: left;
@@ -243,6 +245,12 @@ button.active,
 .grade-course-title ul.grade-list li.active {
   border-bottom: 2px solid #3bafda;
   color: #1e89e0;
+}
+.grade-course-title ul.grade-list li.active a {
+  color: #3bafda;
+}
+.grade-course-title ul.grade-list.grade-list-live li {
+  width: 65px;
 }
 .wrap-side-right .fresh-list {
   padding: 12px 0;
@@ -278,6 +286,9 @@ button.active,
 .row-page-turn .live-content-action {
   width: 110%;
   overflow: hidden;
+}
+.row-page-turn .live-content-action .live-card {
+  margin-bottom: 20px;
 }
 .row-page-turn .live-content-action .live-teacher-photo {
   margin-top: 0;
