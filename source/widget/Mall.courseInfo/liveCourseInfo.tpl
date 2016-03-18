@@ -50,7 +50,7 @@
                     <p class="info">剩余<strong>3</strong>个名额</p>
                 </div>
                  <div class="coach-teacher-info">
-                    毕业于北京外国语大学，5年教龄<br/>没有教不会的学生，只有不会教的老师
+                    毕业于北京外国语大学，5年教龄<br/>一二三四五六七八九十一二三四五六七八九十
                 </div>
             </div>
         </div>
