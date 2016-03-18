@@ -246,11 +246,13 @@ a,button,.btn{
 a.more {
     float: right;
     font-size: 14px;
+    color: @link-hover;
 }
 ul.live-list-tabs {
-    float: right;
+    float: left;
     margin-right: 5px;
     overflow: hidden;
+    padding-left: 155px;
     li {
         float: left;
         display: inline;
@@ -280,8 +282,16 @@ ul.grade-list {
         &.active {
            border-bottom:2px solid @link-hover;
            color: @btn-primary;
+            a {
+               color: @link-hover;  
+            }
        }
    }
+    &.grade-list-live {
+        li {
+            width:65px;
+        }
+    }
 }
 }
 .wrap-side-right {
@@ -323,6 +333,9 @@ overflow: hidden;
 .live-content-action {
     width: 110%;
     overflow: hidden;
+    .live-card {
+        margin-bottom: 20px;
+    }
     .live-teacher-photo {
         margin-top:0;
     }
