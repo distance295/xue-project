@@ -8,7 +8,16 @@
 	<div class="grade-course-title">
 		<div>
 			<h6 class="live-title">直播进行中</h6>
-			<a href="#" class="more">更多</a>
+			<a href="#" class="more">发现更多直播&gt;&gt;</a>
+			<ul class="grade-list grade-list-live" role="tablist">
+				<li class="active" role="presentation" class="active">
+					<a href="#live1" aria-controls="live1" role="tab" data-toggle="tab">即将开始</a>
+				</li>
+				<li role="presentation" >
+					<a href="#live2" aria-controls="live2" role="tab" data-toggle="tab">精彩回放</a>
+				</li>
+			</ul>
+<!--
 			<ul class="live-list-tabs" role="tablist">
 				<li role="presentation" class="active"> <i class="fa fa-circle" aria-controls="live1" role="tab" data-toggle="tab" href="#live1" ></i>
 				</li>
@@ -18,6 +27,7 @@
 					<i class="fa fa-circle" aria-controls="live3" role="tab" data-toggle="tab" href="#live3" ></i>
 				</li>
 			</ul>
+-->
 		</div>
 	</div>
 	<div class="row row-page-turn tab-content">
@@ -25,14 +35,21 @@
 			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
 			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
 			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
-			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline"></div>
+			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
+			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
+			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
+			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
+			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
+			</div>
 		<div class="live-content-action tab-pane fade" role="tabpanel" id="live2">
 			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
 			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
 			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline"></div>
+<!--
 		<div class="live-content-action tab-pane fade" role="tabpanel" id="live3">
 			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline">
 			<link rel="import" href="../../widget/Mall.live/live-card.tpl?__inline"></div>
+-->
 	</div>
 	<!-- 为你推荐 -->
 	<div class="grade-course-title">
@@ -422,6 +439,9 @@
 	<!--   高中课程结束    -->
 </div>
 <!-- 页面配置 -->
+<!-- WPA Button Begin -->
+<script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzkzODA0NTAwOF8zNzcxNjVfNDAwODAwMjIxMV8"></script>
+<!-- WPA Button End -->
 <script>
     var PAGE_CONFIG = {
         ID: 'Index',

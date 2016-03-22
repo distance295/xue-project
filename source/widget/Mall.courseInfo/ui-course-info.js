@@ -233,7 +233,13 @@ courseInfor.lookTimeList = function () {
 //})();
 
 $(function () {
-   // xue.feedback.append();
+//   // xue.feedback.append();
+//    var liveHtml ='<div style="width:140px;height:174px;position:fixed;right:7px;top:196px;z-index:100;">'
+//        +' <a href="http://www.xueersi.com/index/visit">'
+//            +'<img src="/static/img/live-pic.jpg">'
+//        +'</a>'
+//    +'</div>';
+//    $("body").append(liveHtml);
     courseInfor.courseTab('.ui-nav-link', 'current', '.course-info-box'); //课程详情页--课程大纲切换
     var ouline = $('#open-outline'); //免费试听详情页------试听节超过规定节数出现滚动条
     if (ouline.length != 0) { //当id:ouline的值不等于零的时候执行
