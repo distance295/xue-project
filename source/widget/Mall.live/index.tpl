@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div class="live-enter-box">
-                        <a><span class="live-enter live-order" data-toggle="modal" data-target="#liveOrderModal">直播中,立即进入</span></a>
+                        <a><span class="live-enter live-order" data-toggle="modal" data-target="">直播中,立即进入</span></a>
                     </div>
                 </div>
                 <div class="live-card">
@@ -119,7 +119,7 @@
                         </div>
                     </div>
                     <div class="live-enter-box">
-                        <span class="live-enter">直播中,立即进入</span>
+                        <span class="live-enter live-have-order">直播中,立即进入</span>
                     </div>
                 </div>
                 <div class="live-card">

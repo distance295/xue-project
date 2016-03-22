@@ -150,6 +150,7 @@
 .live-blue {
   background-color: #3bafda;
 }
+.live-have-order,
 .live-grey {
   background-color: #bfbfbf;
 }
@@ -158,4 +159,20 @@
 }
 .choice .row {
   margin: 0;
+}
+.live-order {
+  background-color: #ffbc3c;
+}
+.liveOrderFailModal .modal-body,
+.liveOrderSuccessModal .modal-body {
+  text-align: center;
+  height: 420px;
+}
+.orderFailTip,
+.orderSuccessTip {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  margin-bottom: 10px;
+  color: #999;
 }
