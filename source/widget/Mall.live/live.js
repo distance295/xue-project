@@ -58,11 +58,11 @@ $(function(){
                     alert('您已预约过此课程');
                 }
                 if(msg.sign == 1){
-                    $(this).find('.live-order').attr({'data-target':'#liveOrderSuccessModal'});
+                    $(this).attr("data-target","#liveOrderSuccessModal");
                     liveOrderSuccessModal.showModal();
                 }
                 if(msg.sign == 3){
-                    $(this).find('.live-order').attr({'data-target':'#liveOrderFailModal'});
+                    $(this).attr("data-target","#liveOrderFailModal");
                     liveOrderFailModal.showModal();
                 }
             }
