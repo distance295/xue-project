@@ -42,6 +42,7 @@ $(function(){
 
     $body.on('click', '.live-order', function () {
         var liveOrderId = $(this).closest('.live-card').attr('id');
+        var t = $(this);
         $.ajax({
             url : '/Lecture/ajaxFollow/',
             type : 'post',
@@ -55,16 +56,20 @@ $(function(){
                     return;
                 }
                 if(msg.sign == 0){
-                    alert('您已预约过此课程');
+                    alert('您已预约过此课程或无此直播');
                 }
                 if(msg.sign == 1){
-                    $(this).attr("data-target","#liveOrderSuccessModal");
+                    t.attr("data-target","#liveOrderSuccessModal");
                     liveOrderSuccessModal.showModal();
-                    $(this).attr("class","live-grey")
+                    setTimeout(function(){$("#liveOrderSuccessModal").modal("hide")},5000);
+                    t.attr("class","live-grey");
+                    t.html("已预约，请耐心等待")
                 }
                 if(msg.sign == 3){
-                    $(this).attr("data-target","#liveOrderFailModal");
+                    t.attr("data-target","#liveOrderFailModal");
                     liveOrderFailModal.showModal();
+                    liveOrderSuccessModal.showModal();
+                    setTimeout(function(){$("#liveOrderFailModal").modal("hide")},5000);
                 }
             }
         });
@@ -83,6 +88,7 @@ $(function(){
             cls : "liveOrderSuccessModal aaa ccc",
             content : con
         });
+        $('#liveOrderSuccessModal').modal({backdrop: 'static', keyboard: false});
     };
 
     var liveOrderFailModal = liveOrderFailModal || {};
@@ -98,5 +104,6 @@ $(function(){
             cls : "liveOrderFailModal aaa ccc",
             content : con
         });
+        $('#liveOrderFailModal').modal({backdrop: 'static', keyboard: false});
     }
 });
