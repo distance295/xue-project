@@ -61,12 +61,15 @@ $(function(){
                 if(msg.sign == 1){
                     t.attr("data-target","#liveOrderSuccessModal");
                     liveOrderSuccessModal.showModal();
+                    setTimeout(function(){$("#liveOrderSuccessModal").modal("hide")},5000);
                     t.attr("class","live-grey");
                     t.html("已预约，请耐心等待")
                 }
                 if(msg.sign == 3){
                     t.attr("data-target","#liveOrderFailModal");
                     liveOrderFailModal.showModal();
+                    liveOrderSuccessModal.showModal();
+                    setTimeout(function(){$("#liveOrderFailModal").modal("hide")},5000);
                 }
             }
         });
