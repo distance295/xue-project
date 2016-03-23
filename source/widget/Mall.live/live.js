@@ -52,7 +52,7 @@ $(function(){
             },
             success : function(msg,event){
                 if(msg.sign == 2){
-                    window.location.href = msg.url;
+                    window.location.href = msg.msg;
                     return;
                 }
                 if(msg.sign == 0){
