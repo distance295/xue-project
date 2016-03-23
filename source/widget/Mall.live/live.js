@@ -60,6 +60,7 @@ $(function(){
                 if(msg.sign == 1){
                     $(this).attr("data-target","#liveOrderSuccessModal");
                     liveOrderSuccessModal.showModal();
+                    $(this).attr("class","live-grey")
                 }
                 if(msg.sign == 3){
                     $(this).attr("data-target","#liveOrderFailModal");
