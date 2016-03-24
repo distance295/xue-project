@@ -71,7 +71,6 @@ $(function(){
                 if(msg.sign == 3){
                     t.attr("data-target","#liveOrderFailModal");
                     liveOrderFailModal.showModal();
-                    liveOrderSuccessModal.showModal();
                     setTimeout(function(){$("#liveOrderFailModal").modal("hide")},5000);
                 }
             }
