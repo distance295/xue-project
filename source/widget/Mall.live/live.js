@@ -41,18 +41,21 @@ $(function(){
     });
 
     $body.on('click', '.live-order', function () {
-        var liveOrderId = $(this).closest('.live-card').attr('id');
+        var liveOrderId = $(this).closest('.live-card').attr('id'),
+            url = $(this).closest('.live-card').attr('data-url');
+
         var t = $(this);
         $.ajax({
             url : '/Lecture/ajaxFollow/',
             type : 'post',
             dataType : 'json',
             data : {
-                liveId: liveOrderId
+                liveId: liveOrderId,
+                url: url
             },
             success : function(msg,event){
                 if(msg.sign == 2){
-                    window.location.href = msg.url;
+                    window.location.href = msg.msg;
                     return;
                 }
                 if(msg.sign == 0){
