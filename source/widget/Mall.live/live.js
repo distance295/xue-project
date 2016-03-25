@@ -42,9 +42,11 @@ $(function(){
 
     $body.on('click', '.live-order', function () {
         var liveOrderId = $(this).closest('.live-card').attr('id'),
-            url = $(this).closest('.live-card').attr('data-url');
+            url = $(this).closest('.live-card').attr('data-url'),
+            timer = null;
 
         var t = $(this);
+
         $.ajax({
             url : '/Lecture/ajaxFollow/',
             type : 'post',
@@ -64,14 +66,14 @@ $(function(){
                 if(msg.sign == 1){
                     t.attr("data-target","#liveOrderSuccessModal");
                     liveOrderSuccessModal.showModal();
-                    setTimeout(function(){$("#liveOrderSuccessModal").modal("hide")},5000);
+                    timer = setTimeout(function(){$("#liveOrderSuccessModal").modal("hide")},5000);
                     t.attr("class","live-grey");
                     t.html("已预约，请耐心等待")
                 }
                 if(msg.sign == 3){
                     t.attr("data-target","#liveOrderFailModal");
-                    liveOrderFailModal.showModal();
-                    setTimeout(function(){$("#liveOrderFailModal").modal("hide")},5000);
+                    timer = setTimeout(function(){$("#liveOrderFailModal").modal("hide")},5000);
+                    liveOrderFailModal.showModal(timer);
                 }
             }
         });
@@ -90,12 +92,13 @@ $(function(){
             cls : "liveOrderSuccessModal aaa ccc",
             content : con
         });
-        $('#liveOrderSuccessModal').modal({backdrop: 'static', keyboard: false});
+        $('#liveOrderSuccessModal').modal({backdrop: 'static', keyboard: false})
+
     };
 
     var liveOrderFailModal = liveOrderFailModal || {};
 
-    liveOrderFailModal.showModal = function(con){
+    liveOrderFailModal.showModal = function(timer){
         var that = $(this), data = that.data();
         var con = "<img src='/static/img/orderFail.png'><span class='orderFailTip'>5秒钟后关闭</span>";
         //console.log(data);
@@ -106,6 +109,9 @@ $(function(){
             cls : "liveOrderFailModal aaa ccc",
             content : con
         });
-        $('#liveOrderFailModal').modal({backdrop: 'static', keyboard: false});
+        $('#liveOrderFailModal').modal({backdrop: 'static', keyboard: false})
+            .on('hidden.bs.modal', function () {
+            clearTimeout(timer);
+        })
     }
 });
