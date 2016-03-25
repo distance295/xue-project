@@ -42,9 +42,11 @@ $(function(){
 
     $body.on('click', '.live-order', function () {
         var liveOrderId = $(this).closest('.live-card').attr('id'),
-            url = $(this).closest('.live-card').attr('data-url');
+            url = $(this).closest('.live-card').attr('data-url'),
+            timer;
 
         var t = $(this);
+
         $.ajax({
             url : '/Lecture/ajaxFollow/',
             type : 'post',
@@ -64,14 +66,33 @@ $(function(){
                 if(msg.sign == 1){
                     t.attr("data-target","#liveOrderSuccessModal");
                     liveOrderSuccessModal.showModal();
-                    setTimeout(function(){$("#liveOrderSuccessModal").modal("hide")},5000);
+                    var tim = 5;
+                    timer = setInterval(function(){
+                        tim --;
+                        $('.orderSuccessTip span').html(tim);
+                        if(tim == 0){
+                            $("#liveOrderSuccessModal").modal("hide");
+                            clearInterval(timer);
+                        }
+                    },1000);
                     t.attr("class","live-grey");
                     t.html("已预约，请耐心等待")
                 }
                 if(msg.sign == 3){
                     t.attr("data-target","#liveOrderFailModal");
                     liveOrderFailModal.showModal();
-                    setTimeout(function(){$("#liveOrderFailModal").modal("hide")},5000);
+                    var tim = 5;
+                    timer = setInterval(function(){
+                        tim --;
+                        $('.orderFailTip span').html(tim);
+                        if(tim == 0){
+                            $("#liveOrderFailModal").modal("hide");
+                            clearInterval(timer);
+                        }
+                        $('#liveOrderFailModal').on('hidden.bs.modal',function(){
+                            clearInterval(timer);
+                        });
+                    },1000);
                 }
             }
         });
@@ -81,7 +102,7 @@ $(function(){
 
     liveOrderSuccessModal.showModal = function(con){
         var that = $(this), data = that.data();
-        var con = "<img src='/static/img/orderSuccess.png'><span class='orderSuccessTip'>5秒钟后关闭</span>";
+        var con = "<img src='/static/img/orderSuccess.png'><span class='orderSuccessTip'><span>5</span>秒钟后关闭</span>";
         //console.log(data);
         createModal.show({
             id : 'liveOrderSuccessModal',
@@ -90,14 +111,15 @@ $(function(){
             cls : "liveOrderSuccessModal aaa ccc",
             content : con
         });
-        $('#liveOrderSuccessModal').modal({backdrop: 'static', keyboard: false});
+        $('#liveOrderSuccessModal').modal({backdrop: 'static', keyboard: false})
+
     };
 
     var liveOrderFailModal = liveOrderFailModal || {};
 
-    liveOrderFailModal.showModal = function(con){
+    liveOrderFailModal.showModal = function(timer){
         var that = $(this), data = that.data();
-        var con = "<img src='/static/img/orderFail.png'><span class='orderFailTip'>5秒钟后关闭</span>";
+        var con = "<img src='/static/img/orderFail.png'><span class='orderFailTip'><span>5</span>秒钟后关闭</span>";
         //console.log(data);
         createModal.show({
             id : 'liveOrderFailModal',
@@ -106,6 +128,7 @@ $(function(){
             cls : "liveOrderFailModal aaa ccc",
             content : con
         });
-        $('#liveOrderFailModal').modal({backdrop: 'static', keyboard: false});
+        $('#liveOrderFailModal').modal({backdrop: 'static', keyboard: false})
+
     }
 });
