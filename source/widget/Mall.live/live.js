@@ -43,7 +43,7 @@ $(function(){
     $body.on('click', '.live-order', function () {
         var liveOrderId = $(this).closest('.live-card').attr('id'),
             url = $(this).closest('.live-card').attr('data-url'),
-            timer = null;
+            timer;
 
         var t = $(this);
 
@@ -89,6 +89,9 @@ $(function(){
                             $("#liveOrderFailModal").modal("hide");
                             clearInterval(timer);
                         }
+                        $('#liveOrderFailModal').on('hidden.bs.modal',function(){
+                            clearInterval(timer);
+                        });
                     },1000);
                 }
             }
@@ -126,5 +129,6 @@ $(function(){
             content : con
         });
         $('#liveOrderFailModal').modal({backdrop: 'static', keyboard: false})
+
     }
 });
