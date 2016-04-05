@@ -1,19 +1,19 @@
-.none-content {
+.bill-none-content {
   width: 440px;
   height: 100px;
-  margin: 0 auto;
+  margin: 150px auto 0;
 }
-.none-content img {
+.bill-none-content img {
   _float: left;
 }
-.none-content p {
+.bill-none-content p {
   float: right;
   margin: 22px 0 0 0;
   line-height: 35px;
   font-family: "Microsoft YaHei";
   font-size: 16px;
 }
-.none-content p em {
+.bill-none-content p em {
   font-style: normal;
   color: #e74c3c;
 }
