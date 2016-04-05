@@ -1162,3 +1162,69 @@
 .bill-apply-check-detail .bill-sum-button {
   float: right;
 }
+.new_consignee_items {
+  overflow: hidden;
+  margin-top: 10px;
+  position: relative;
+}
+.new_consignee_items .info_from {
+  overflow: hidden;
+  padding: 20px 20px 0;
+}
+.new_consignee_items .info_from p {
+  overflow: hidden;
+  height: 50px;
+}
+.new_consignee_items .info_from p label {
+  float: left;
+  display: inline;
+  width: 70px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.new_consignee_items .info_from p input {
+  float: left;
+  display: inline;
+  width: 250px;
+  height: 26px;
+  color: #999;
+  outline: none;
+  border: 1px solid #d2d2d2;
+  padding: 5px;
+}
+.new_consignee_items .info_from p .input_360 {
+  width: 360px;
+}
+.new_consignee_items .info_from p span {
+  float: left;
+  display: inline;
+  margin-right: 5px;
+}
+.new_consignee_items .info_from p span.text {
+  line-height: 35px;
+}
+.new_consignee_items .info_from p .select {
+  display: inline;
+  margin-right: 10px;
+  height: 36px;
+  border: 1px solid #d2d2d2;
+}
+.new_consignee_items .info_from p .btn {
+  width: 172px;
+  color: #FFF;
+  line-height: 35px;
+  text-decoration: none;
+  font-size: 16px;
+  background: #3bafda;
+}
+.new_consignee_items .info_from p .error_tips_address {
+  float: none;
+  padding-left: 10px;
+  display: inline-block;
+}
+.new_consignee_items .info_from p .error {
+  border: 1px solid #c00;
+}
+.new_consignee_items .info_from p.error_tips_address {
+  color: #cc0000;
+}

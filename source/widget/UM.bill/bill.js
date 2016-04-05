@@ -22,6 +22,8 @@ $(function(){
                 $(this).val("选填,请填写备注信息")
             }
         });
+
+
     $("input[type='checkbox']").click(function() {
         var num = $body.find("input[type='checkbox']:checked").length;
         $('.bill-sum-num em').html(num);
@@ -152,6 +154,75 @@ $(function(){
         //    }
         //});
     }
+    // 保存收货地址
+    $body.on('click','#address_submit_btn',function() {
+        var inputs = $(addressInput),
+            errorbox = $('.error_tips_address');
+
+        var ids = {
+            realname: '收货人姓名',
+            province: '省份',
+            city: '城市',
+            country: '地区',
+            address: '详细地址',
+            zipcode: '邮政编码',
+            phone: '手机',
+            add_province: '省份',
+            add_city: '城市',
+            add_country: '地区'
+        };
+        var _reg = {
+            phone: (/^(13|15|18|14|17)[0-9]{9}$/.test($('#phone').val()) ? true : false),
+            zipcode: (/^[0-9][0-9]{5}$/.test($('#zipcode').val()) ? true : false)
+        };
+        //邮编
+        var id, error = [],
+            error_text = '',
+            tpl = '$input$ 不能为空',
+            error_reg = [],
+            reg_text = '';
+        inputs.each(function() {
+            id = this.id;
+            if ($(this).val().trim() === '') {
+                error.push(ids[id]);
+                $(this).addClass('error');
+            } else {
+                // 判断手机号与邮编格式
+                if (id == 'phone' || id == 'zipcode') {
+                    if (!_reg[id]) {
+                        error_reg.push(ids[id]);
+                        reg_text += ids[id];
+                        $(this).addClass('error');
+                    } else {
+                        $(this).removeClass('error');
+                    }
+                } else {
+                    $(this).removeClass('error');
+                }
+
+            }
+        });
+        var temp_text = '';
+        if (error.length > 0) {
+            error_text = error.toString();
+            temp_text = tpl.replace('$input$', error_text);
+        }
+        // 判断手机号与邮编格式
+        if (error_reg.length > 0) {
+            reg_text = error_reg.toString() + '格式不正确';
+            if (error.length > 0) {
+                temp_text += ', ';
+            }
+            temp_text += reg_text;
+        }
+        if (temp_text != '') {
+            errorbox.text(temp_text);
+            return;
+        }
+        errorbox.empty();
+        saveNewAddress(inputs);
+
+    });
     //编辑收货人地址
     function updateAddress(id){
         $(addressInput).removeClass('error');
@@ -248,8 +319,9 @@ $(function(){
                 //    window.location.href = result;
                 //    return;
                 //}
-                console.log(result)
+                //console.log(result)
                 billAddressModal.showModal(result);
+
             }
         })
     });
@@ -259,10 +331,9 @@ $(function(){
     billAddressModal.showModal = function(con){
         var that = $(this), data = that.data();
         var con = con;
-        console.log(con);
         createModal.show({
             id : 'billAddressModal',
-            width : '740',
+            width : '600',
             title : "新增收货地址",
             cls : "billAddressModal aaa ccc",
             content : con
