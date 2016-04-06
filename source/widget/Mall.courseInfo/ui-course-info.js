@@ -330,4 +330,34 @@ $(function () {
              xue.win('DoNotSignUp').close();
          });
     });
+       //参加考试
+    $('body').on('mouseenter','.btn-join-exam', function(){
+        var that = $(this);
+        xue.win({
+            id: 'btnJoinExam',
+             title : false,
+             arrow : 'bc',
+             follow : that,
+             content : '通过入学考试才能报名此课程',
+             lock : false,
+             close : false,
+             submit : false,
+             cancel : false
+        });
+         var box = $('#xuebox_btnJoinExam'),
+             size = xue.win('btnJoinExam').getSize(),
+             o = {
+             left : that.offset().left + (that.outerWidth() / 2) - (size.outerWidth / 2),
+             top : that.offset().top + that.height() - 73
+         };
+         xue.win('btnJoinExam').position(o.left, o.top);
+         $(this).on('mouseleave', function(e){
+             if($(e.relatedTarget).attr('id') != 'xuebox_btnJoinExam' && $(e.relatedTarget).parents('#xuebox_btnJoinExam').length === 0){
+                 xue.win('btnJoinExam').close();
+             }
+         });
+         $('#xuebox_btnJoinExam').on('mouseleave', function(){
+             xue.win('btnJoinExam').close();
+         });
+    });
 });
