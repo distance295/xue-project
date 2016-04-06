@@ -136,8 +136,8 @@
          padding: 30px;
          margin-top:20px; 
          .border-radius(6px); 
-         overflow: hidden;
          display: block;
+         position: relative;
     }
     .homework-image-area{
         width: 100%;
@@ -255,6 +255,7 @@
           display: block;
           overflow: hidden;
           height: 536px;
+          position: relative;
           background: #eeeeee;
           .homework-rightMeun{
               width: 54px;
@@ -387,36 +388,57 @@
             font-weight: normal;
         }
         .homework-audio-box{
-            float: left;
-            height: 36px;
-            line-height: 36px;
-            width: 100px;
-            margin-left: 22px;
-            .border-radius(18px);
-            background: #3bafda;
-            overflow: hidden;
-            cursor: pointer;
-            color: #fff;
-            &:hover{
-               background: #2392ba;
-            }
-            em{
-               .font-size(18px);
-               .font-family("Microsoft YaHei");
-            }
+              float: left;
+              background: #fff;
+              border: 1px solid #3bafda;
+              .border-radius(2px);
+              text-align: center;
+              color: #3bafda;
+              margin: 0;
+              padding: 8px 15px;
+              line-height: 16px;
+              margin-left: 0;
+              .font-family;
+              .font-size(14px);
+              line-height: normal;
+              cursor: pointer;
+              &:hover{
+                  background: #fff;
+              }
+              em {
+                  font-family: "Microsoft YaHei";
+                  font-size: 14px;
+              }
+              .homework-icoAudio{
+                   float: left;
+                   width: 12px;
+                   height: 12px;
+                   background: url('img/hm_audio_default.png') no-repeat;
+                   margin: 3px 2px 0 0;
+              }
+              &.homework-audio-btn-playing{
+                      background: #3bafda;
+                      color: #fff;
+                      &:hover{
+                          background: #2392ba;
+                      }
+                      .homework-icoAudio{
+                           background: url('img/hm_audio.png') no-repeat;
+                      }
+              }
         }
-        .homework-icoAudio{
+        /* .homework-icoAudio{
              float: left;
-             width: 18px;
-             height: 22px;
-             background: url('img/homeWork-iconAudio.png') no-repeat;
-             margin: 8px 20px 0 17px;
+             width: 12px;
+             height: 12px;
+             background: url('img/hm_audio.png') no-repeat;
+             margin: 3px 2px 0 0;
         }
         &.homework-audio-playing{
            .homework-icoAudio{
                background: url('img/homeWork-audio.gif') no-repeat;
            }
-        }
+        } */
 
     }
 
@@ -693,5 +715,74 @@
 } */
 
 
+/**多个音频**/
+
+.homework-audio-list-box{
+    position: absolute;
+    right: 84px;
+    background:rgba(0, 0, 0, 0.6) !important;/*实现FF背景透明，文字不透明*/
+    background: #000;
+    filter: Alpha(opacity=60);
+    padding: 10px;
+    width: 144px;
+    max-height: 534px;
+    overflow-y: auto;
+    z-index: 999;
+    display: none;
+    &.homework-audio-list-box-display{
+       display: block;
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        li{
+            float: left;
+            width: 100%;
+            text-align: center;
+            background: #fff;
+            border: none;
+            .border-radius(2px);
+            text-align: center;
+            color: #333;
+            line-height: 32px;
+            .font-family;
+            .font-size(14px);
+            position: relative;
+            cursor: pointer;
+            margin: 10px 0;
+            em {
+                font-family: "Microsoft YaHei";
+                font-size: 14px;
+            }
+           .audio-icon{
+               position: absolute;
+               left: 5px;
+               top: 10px;
+               width: 12px;
+               height: 12px;
+               background: url('img/hm_audio.png') no-repeat;
+               display: none;
+           }
+           &.homework-audio-btn-playing{
+              color: #fff;
+              background: #3bafda;
+              .audio-icon{
+                display: block;
+              }
+           }
+        }
+    }
+}
+
+.homework-audio-btn-style{
+   position: absolute;
+   left: 0;
+   max-height: 55px;
+   right: 0;
+   bottom: 0;
+   width: 100%;
+   z-index: 9999999;
+   padding: 15px 54px 0 0;
+}
 
 
