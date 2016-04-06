@@ -672,59 +672,92 @@
                     background-color: #ffbc3c;
                 }
                 .order-teacher{
+                    width: 100%;
                     height: 115px;
-                    .teacher-head{
+                    .teacher-main{
                         float: left;
+                        overflow: hidden;
                         width: 60px;
-                        height: 60px;
+                        height: 90px;
                         margin: 20px 15px 0 12px;
-                        border-radius: 50%;
+                        .avatar-photo{
+                            float: left;
+                            margin-right: 10px;
+                            img{
+                                width: 60px;
+                                height: 60px;
+                                border-radius: 50%;
+                            }
+                        }
                     }
-                    .drop-class-tip{
-                        float: right;
-                        width: 100px;
-                        text-align: center;
-                        margin: 0;
-                        height: 115px;
-                        line-height: 115px;
+                    .majar-items{
+                        position: relative;
+                        ul{
+                            overflow: hidden;
+                            width: 800px;
+                            height: 60px;
+                            li{
+                                overflow: hidden;
+                                float: left;
+                                width: 158px;
+                            }
+                        }
+                        .avatar-roll{
+                            position: absolute;
+                            right: 6px;
+                            bottom: 4px;
+                            a{
+                                outline: none;
+                                em{
+                                    display: inline-block;
+                                    height: 17px;
+                                    line-height: 17px;
+                                    text-align: center;
+                                    text-indent: -9999em;
+                                    vertical-align: top;
+                                    width: 17px;
+                                }
+                                .icon-chevron-left{
+                                    background: url('img/icon_chevron_left.png') no-repeat 0 0;
+                                }
+                                .icon-chevron-right{
+                                    background: url('img/icon_chevron_right.png') no-repeat 0 0;
+                                }
+                            }
+                            a.none{
+                                .icon-chevron-left{
+                                    background: url('img/icon_chevron_left_none.png') no-repeat 0 0;
+                                }
+                                .icon-chevron-right{
+                                    background: url('img/icon_chevron_right_none.png') no-repeat 0 0;
+                                }
+                            }
+                        }
                     }
                     em{
                         float: left;
+                        margin: 28px 5px 0 0;
+                        padding: 1px 8px;
+                        border-radius: 3px;
                         font-style: normal;
-                        font-size: 12px;
-                    }
-                    p{
-                        float: left;
-                        width: 140px;
-                        font-size: 12px;
-                        img{
-                            float: left;
-
-                            margin: 3px 5px 0 0;
-                        }
-                    }
-                    .bill-teacher-name{
-                        margin: 55px 0 0 -373px;
-                    }
-                    .bill-look{
-                        margin: 55px 0 0 -310px;
-                        color: #999;
+                        color: #fff;
+                        background-color: #ffbc3c;
                     }
                     span{
                         float: left;
                         width: 330px;
                         height: 18px;
-                        margin-top: 24px;
+                        margin-top: 27px;
                         font-size: 14px;
                         overflow: hidden;
                     }
-                    .bill-gifts{
+                    p{
                         float: left;
+                        width: 350px;
                         height: 18px;
-                        width: 380px;
                         line-height: 22px;
                         font-size: 12px;
-                        margin: 78px 0 0 -374px;
+                        margin: 10px 0 0 -43px;
                     }
                 }
                 .ot-first{
@@ -1080,6 +1113,22 @@
             &.error_tips_address {
                 color: #cc0000;
             }
+        }
+    }
+}
+.teacher-main{
+    float: left;
+    overflow: hidden;
+    width: 60px;
+    height: 90px;
+    margin: 20px 15px 0 12px;
+    .avatar-photo{
+        float: left;
+        margin-right: 10px;
+        img{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
         }
     }
 }
