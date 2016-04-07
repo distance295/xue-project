@@ -23,6 +23,7 @@ $(function(){
             }
         });
 
+    var $bsb = $('.bill-sum-button')
 
     $("input[type='checkbox']").click(function() {
         var num = $body.find("input[type='checkbox']:checked").length;
@@ -32,6 +33,11 @@ $(function(){
             sum += ($(v).text().match(/\d+/g)[0] * 1);
         });
         $('.bill-sum-price em').html(sum)
+        if($("input[type='checkbox']:checked").length == 0){
+            $bsb.css({'background-color':'#a0a0a0'});
+        }else{
+            $bsb.css({'background-color':'#3bafda'});
+        }
     });
 
     $body.on('click','.bill-apply-check',function(){
@@ -39,120 +45,107 @@ $(function(){
         $('.bill-apply-check-detail').css({'display':'block'});
     });
 
-    var addressInput = '#realname, #add_province, #add_city,#add_country, #address, #zipcode, #phone';
+    var addressInput = '#realname, #add_province, #add_city, #add_country, #address, #zipcode,#phone, #recipientphone';
 
-    function saveNewAddress(addInput){
+    function saveNewAddress(addInput) {
         if($('#address_submit_btn').hasClass('submit_in_use')){//提交时，检测是否有标识的类名
             return false;
         }
         $('#address_submit_btn').addClass('submit_in_use');//增加类名，用来防止ajax提交过程中用户重复点击
         var input = $(addInput);
-        var data = { id : 0 };
+        var data = {
+            id: 0
+        };
         data.id = $('#add_id').val();
-
         var id;
-        input.each(function(){
+        input.each(function() {
             id = this.id;
             id = id.replace('add_', '');
             data[id] = $(this).val();
         });
-
         data['province_text'] = $('#add_province option:checked').text();
         data['city_text'] = $('#add_city option:checked').text();
         data['country_text'] = $('#add_country option:checked').text();
-
-        var _tpl =  '  <input type="radio" '
-            +'      style="display:none;"'
-            +'      data-phone="$phone$" '
-            +'      data-zipcode="$zipcode$" '
-            +'      data-address="$address$" '
-            +'      data-county="$country$" '
-            +'      data-city="$city$" '
-            +'      data-province="$province$" '
-            +'      data-realname="$realname$" '
-            +'      value="$id$" '
-            +'      name="data[addId]" '
-            +'      id="addid_$id$"'
-            +'      autocomplete="off"  checked=""'
-            +'  />'
-            +'<label class="consignee_item current" for="addid_$id$">'
-            +'	<span>$realname$</span>'
-            +'</label>'
-            +'<div class="addr_detail">'
-            +'	<span class="addr_name" title="$realname$">$realname$</span>'
-            +'	<span class="addr_info" title="$province_text$ $city_text$ $country_text$ $address$">$province_text$ $city_text$ $country_text$ $address$</span>'
-            +'	<span class="addr_tel">$phone$</span>'
-            +'</div>'
-            +'<div class="ship_btns">'
-            +'	<a class="edit_consignee" href="javascript:updateAddress($id$);">编辑</a>'
-            +'	<a class="del_consignee" href="#none" onclick="delAddress($id$)">删除</a>'
-            +'</div>';
-
+        var _tpl = '  <input type="hidden" '
+            + '      data-recipientphone="$phone$" '
+            + '      data-zipcode="$zipcode$" '
+            + '      data-address="$address$" '
+            + '      data-area="$province_text$ $city_text$ $country_text$" '
+            + '      data-county="$country$" '
+            + '      data-city="$city$" '
+            + '      data-province="$province$" '
+            + '      data-realname="$realname$" '
+            + '      value="$id$" '
+            + '      name="data[addid]" '
+            + '      id="addid_$id$"'
+            + '  />'
+            + '<div class="addr_detail">'
+            + '  <span class="addr_name" title="$realname$">$realname$</span>'
+            + '  <span class="addr_info" title="$province_text$ $city_text$ $country_text$ $address$">$province_text$ $city_text$ $country_text$ $address$</span>'
+            + '  <span class="addr_tel">$phone$</span>'
+            + '</div>'
+            + '<div class="ship_btns">'
+            + '  <a class="setdefault_consignee" href="/MyInfos/setDefaultAddress/$addId$">设为默认地址</a>'
+            + '  <a class="edit_consignee" href="javascript:updateAddress($id$);">编辑</a>'
+            + '  <a class="del_consignee" href="#none" onclick="delAddress($id$)">删除</a>'
+            + '</div>';
         var o = {
-            id : data.id,
-            realname : data.realname,
-            province_id : data.province,
-            city_id : data.city,
-            country_id : data.country,
-            address : data.address,
-            zipcode : data.zipcode,
-            phone : data.phone
+            id: data.id,
+            recipient: data.realname,
+            province: data.province,
+            city: data.city,
+            county: data.country,
+            address: data.address,
+            zipcode: data.zipcode,
+            phone: data.recipientphone
+
         };
-        $('<li id="'+_id+'">'+ tp + '</li>').prependTo('ul.shipadd_list');
-        var _li = $('.shipadd_list li');
-        var _index = _li.eq(0);
-        _li.not(_index).find('.consignee_item').removeClass('current');
-        _li.not(_index).addClass('f_detailAddress');
-        _li.show();
-        $('.addr_switch').addClass('switch_off');
-        $('.addr_switch span').text('收起地址');
-        pay.adderss();
-        //$.ajax({
-        //    url : '/MyInfo/saveStuAdds/',
-        //    type: 'POST',
-        //    dataType:'json',
-        //    data : o,
-        //    success:function(result){
-        //        $('#address_submit_btn').removeClass('submit_in_use');
-        //        xue.ajaxCheck.JSON(result);
-        //        if(!result.sign){
-        //            return;
-        //        }
-        //        var _id = result.addId;
-        //        var tp = _tpl;
-        //        tp = tp.replace(/\$id\$/g, _id);
-        //        tp = tp.replace(/\$phone\$/g, data.phone);
-        //        tp = tp.replace(/\$zipcode\$/g, data.zipcode);
-        //        tp = tp.replace(/\$address\$/g, data.address);
-        //        tp = tp.replace(/\$country\$/g, data.country);
-        //        tp = tp.replace(/\$city\$/g, data.city);
-        //        tp = tp.replace(/\$province\$/g, data.province);
-        //        tp = tp.replace(/\$realname\$/g, data.realname);
-        //        tp = tp.replace(/\$province_text\$/g, data.province_text);
-        //        tp = tp.replace(/\$city_text\$/g, data.city_text)
-        //        tp = tp.replace(/\$country_text\$/g, data.country_text);
-        //
-        //        if(result.type === 1){
-        //            $('<li id="'+_id+'">'+ tp + '</li>').prependTo('ul.shipadd_list');
-        //            var _li = $('.shipadd_list li');
-        //            var _index = _li.eq(0);
-        //            _li.not(_index).find('.consignee_item').removeClass('current');
-        //            _li.not(_index).addClass('f_detailAddress');
-        //            _li.show();
-        //            $('.addr_switch').addClass('switch_off');
-        //            $('.addr_switch span').text('收起地址');
-        //            pay.adderss();
-        //        }else if(result.type === 2){
-        //            $('#addid_'+data.id).parent().html(tp);
-        //            $('#addid_'+data.id).parent().find('.consignee_item').addClass('current').parent().siblings().find('.consignee_item').removeClass('current');
-        //        }
-        //        $('.info_from').hide();
-        //    },
-        //    error:function(){
-        //        alert('数据加载失败！');
-        //        $('#address_submit_btn').removeClass('submit_in_use');
-        //    }
-        //});
+        $.ajax({
+            url: '/MyInfos/editAddressInfo',
+            type: 'POST',
+            dataType: 'json',
+            data: o,
+            success: function(result) {
+                $('#address_submit_btn').removeClass('submit_in_use');
+                if (!result.sign) {
+                    alert(result.msg);
+                    return false;
+                }
+                var _id = result.addId;
+                var tp = _tpl;
+                tp = tp.replace(/\$id\$/g, _id);
+                tp = tp.replace(/\$phone\$/g, data.recipientphone);
+                tp = tp.replace(/\$zipcode\$/g, data.zipcode);
+                tp = tp.replace(/\$address\$/g, data.address);
+                tp = tp.replace(/\$country\$/g, data.country);
+                tp = tp.replace(/\$city\$/g, data.city);
+                tp = tp.replace(/\$province\$/g, data.province);
+                tp = tp.replace(/\$realname\$/g, data.realname);
+                tp = tp.replace(/\$province_text\$/g, data.province_text);
+                tp = tp.replace(/\$city_text\$/g, data.city_text)
+                tp = tp.replace(/\$country_text\$/g, data.country_text);
+                tp = tp.replace(/\$addId\$/g, _id);
+                var _addid = $('#addid_' + data.id).parent();
+                if (result.type === 1) {
+                    $('<li id="' + _id + '">' + tp + '</li>').prependTo('ul#shopAdderTo');
+                    $('#numberAddress').text(result.rows);
+                }
+                if (result.type === 2) {
+                    _addid.html(tp);
+                    $('#numberAddress').text(result.rows);
+                }
+                if (result.isDefault == 1) {
+                    _addid.html(tp);
+                    _addid.find('.addr_detail').append('<span class="default_addr">默认地址</span>');
+                    _addid.find('.setdefault_consignee').remove();
+                }
+                $('.info_from').hide();
+            },
+            error:function(){
+                alert('数据加载失败！');
+                $('#address_submit_btn').removeClass('submit_in_use');
+            }
+        });
     }
     // 保存收货地址
     $body.on('click','#address_submit_btn',function() {
@@ -224,28 +217,30 @@ $(function(){
 
     });
     //编辑收货人地址
-    function updateAddress(id){
+    function updateAddress(id) {
         $(addressInput).removeClass('error');
         $('.error_tips_address').empty();
         var box = $('#addid_' + id);
-        if(box.length == 0){ return ; }
+        if (box.length == 0) {
+            return;
+        }
         var data = box.data();
         var inputs = $(addressInput);
-        inputs.each(function(){
+        inputs.each(function() {
             var _id = this.id;
-            _id = _id.replace('add_','');
-            if(this.id == 'add_province' || this.id == 'add_city' || this.id == 'add_country'){
+            _id = _id.replace('add_', '');
+            if (this.id == 'add_province' || this.id == 'add_city' || this.id == 'add_country') {
                 $(this).find('option[value="' + data[_id] + '"]').prop('selected', true);
                 $('#' + _id).val(data[_id]);
-            }else{
+            } else {
                 $(this).val(data[_id]);
+
             }
         });
         renderAreaSelect();
         $('#add_id').val(id);
         var newAddress = $('#details_form');
         newAddress.show();
-
     }
     //删除收货人地址
     function delAddress(id) {
@@ -297,52 +292,15 @@ $(function(){
     var $usi = $('.user_site_info');
 
     // 新增收货人地址显示或隐藏
-    $('.extra_r a').on('click', function(){
-        //var newAddress = $('#details_form');
-        //$(addressInput).val('');
-        //$('#add_id').val('0');
-        //if(newAddress.is(':hidden')){
-        //    newAddress.show();
-        //    pay.browserScroll();//重新计算.form_order_btn区域的offset.top()的值
-        //}
-        $.ajax({
-            //url: '/GoldShop/realAwardDetail',
-            url:'/data/UM.bill/bill-modal.html',
-            //type: 'post',
-            type:'get',
-            dataType: 'html',
-            data: {
-                //id: presentid
-            },
-            success: function (result) {
-                //if (result.substr(0, 4) == 'http' || result.substr(0, 1) == '/') {
-                //    window.location.href = result;
-                //    return;
-                //}
-                //console.log(result)
-                billAddressModal.showModal(result);
-
-            }
-        })
+    $('.extra_r a').on('click', function() {
+        var newAddress = $('#details_form');
+        var number = Number($('#numberAddress').text());
+        $(addressInput).val('');
+        $('#add_id').val('');
+        if (newAddress.is(':hidden') && number < 10) {
+            newAddress.show();
+        }
     });
-
-    var billAddressModal = billAddressModal || {};
-
-    billAddressModal.showModal = function(con){
-        var that = $(this), data = that.data();
-        var con = con;
-        createModal.show({
-            id : 'billAddressModal',
-            width : '600',
-            title : "新增收货地址",
-            cls : "billAddressModal aaa ccc",
-            content : con
-        });
-
-        //$('#billAddressModal').modal('show')
-
-        $('#billAddressModal').modal({backdrop: 'static', keyboard: false});
-    };
 
     //鼠标进入时增加样式
     $usi.on('mouseenter', '.shipadd_list li', function(event) {
@@ -476,4 +434,47 @@ $(function(){
             courses.avatar.toggle(that)
         }
     });
-})
+
+
+    //Form表单提交
+    $bsb.on('click',function(event){
+        if($("input[type='checkbox']:checked").length == 0){
+            event.preventDefault();
+        }else{
+            $(this).css({'cursor':'pointer'});
+            if($('.bill-title-input').val()){
+
+            }
+        }
+    })
+
+
+    $body.on('click', '.find-more', function() {
+        var params = $('#url').val();
+        var curpage = $('#page').val();
+        var url = "/TeacherSearch/ajaxGetTeacherList/" + params + "/" + curpage;
+        $('.load_container').remove();
+        var loading ='<div class="loading_div"><i class="fa fa-spinner fa-spin fa-4"></i><span>加载中</span></div>';
+        $(loading).appendTo('.bill-details-list');
+        $.ajax({
+            url : url,
+            type: 'GET',
+            dataType: 'html',
+            success: function(d){
+                var resDat =d;
+                if(resDat){
+                    $('.loading_div').remove();
+                    $(resDat).appendTo('.bill-details-list');
+                }
+                else{
+                    $('.loading_div').remove();
+                    var pm='<div class="media" style="height: 270px;text-align:center;line-height:90px;color:#666;">该年级下没有老师</div>';
+                    $('.bill-details-list').append(pm);
+                }
+            }
+        });
+    });
+
+});
+
+

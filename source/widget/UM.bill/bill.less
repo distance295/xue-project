@@ -65,7 +65,7 @@
     line-height: 40px;
     text-align: center;
     border-radius: 3px;
-    background-color: #3baeda;
+    background-color: #a0a0a0;
     color: #fff;
 }
 .bill-details{
@@ -584,17 +584,6 @@
     color: #656565;
     cursor: pointer;
 }
-.bill-sum-button{
-    float: left;
-    width: 135px;
-    height: 40px;
-    margin-left: 24px;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 3px;
-    background-color: #3baeda;
-    color: #fff;
-}
 .bill-details{
     margin-bottom: 20px;
     overflow: hidden;
@@ -1089,7 +1078,11 @@
 .new_consignee_items {
     overflow: hidden;margin-top: 10px; position: relative;
     .info_from {
-        overflow: hidden;padding:20px 20px 0;
+        overflow: hidden;
+        background: #fcfcfc;
+        padding: 20px 20px 0;
+        display: none;
+        position: relative;
         p {
             overflow: hidden;height:50px;
             label {float:left;display: inline;width: 70px;line-height:30px;margin-bottom: 10px;}
@@ -1131,4 +1124,14 @@
             border-radius: 50%;
         }
     }
+}
+.close_address {
+    width: 15px;
+    height: 15px;
+    background: url('img/close_address.png') no-repeat;
+    position: absolute;
+    right:10px;
+    top:10px;
+    z-index: 1;
+    cursor: pointer;
 }
