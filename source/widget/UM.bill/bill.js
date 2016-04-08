@@ -1,7 +1,7 @@
 /**
  * Created by yangmengyuan on 16/4/5.
  */
-$(function(){
+//$(function(){
     var $remarkFocus = $("#remarkFocus"),
         $body = $('body'),
         $blli = $(".bill-list li");
@@ -10,14 +10,20 @@ $(function(){
         var that = $(this);
         page = that.data('pages');
         that.addClass("bill-tab").siblings().removeClass("bill-tab");
-        billList(page);
+        var url = that.attr('data-url');
+        if(url == '/MyOrders/ajaxInvoiceOrder'){
+            billList(url,page);
+        }else{
+            billTab();
+        }
     });
     $('.bill-list li:first').click();
 
-    function billList(page){
+    function billList(url,page){
+
         $.ajax({
             type: "get",
-            url: "/MyOrders/ajaxInvoiceOrder",
+            url: url,
             dataType: "html",
             data:'curpage=' + page,
             success: function(list){
@@ -25,6 +31,31 @@ $(function(){
                 if(list.substr(0,1)=='<'){
                     var box = $('.bill-details-list');
                     box.html(list);
+                }else{
+                    if(list.substr(0,4)=='http' || list.substr(0,1)=='/'){
+                        window.location.href = list;
+                        return false;
+                    }
+                }
+            },
+            error:function(){
+                alert("异步失败");
+            }
+        });
+    }
+
+    function billTab(){
+        $.ajax({
+            type: "get",
+            url: "ajaxInvoiceApplyList",
+            dataType: "html",
+            data:{},
+            success: function(list){
+                var list = $.trim(list);
+                if(list.substr(0,1)=='<'){
+                    var box = $('.bill-content');
+                    box.html(list).show();
+
                 }else{
                     if(list.substr(0,4)=='http' || list.substr(0,1)=='/'){
                         window.location.href = list;
@@ -504,6 +535,6 @@ $(function(){
         });
     });
 
-});
+//});
 
 
