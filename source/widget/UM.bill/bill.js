@@ -106,7 +106,7 @@ $(function(){
         $('.bill-apply-check-detail').css({'display':'block'});
     });
 
-    var addressInput = '#realname, #add_province, #add_city, #add_country, #address, #zipcode,#phone, #recipientphone';
+    var addressInput = '#realname, #add_province, #add_city, #add_country, #address, #zipcode, #phone';
 
     function saveNewAddress(addInput) {
         if($('#address_submit_btn').hasClass('submit_in_use')){//提交时，检测是否有标识的类名
@@ -128,7 +128,7 @@ $(function(){
         data['city_text'] = $('#add_city option:checked').text();
         data['country_text'] = $('#add_country option:checked').text();
         var _tpl = '  <input type="hidden" '
-            + '      data-recipientphone="$phone$" '
+            + '      data-phone="$phone$" '
             + '      data-zipcode="$zipcode$" '
             + '      data-address="$address$" '
             + '      data-area="$province_text$ $city_text$ $country_text$" '
@@ -158,7 +158,7 @@ $(function(){
             county: data.country,
             address: data.address,
             zipcode: data.zipcode,
-            phone: data.recipientphone
+            phone: data.phone
 
         };
         $.ajax({
@@ -175,7 +175,7 @@ $(function(){
                 var _id = result.addId;
                 var tp = _tpl;
                 tp = tp.replace(/\$id\$/g, _id);
-                tp = tp.replace(/\$phone\$/g, data.recipientphone);
+                tp = tp.replace(/\$phone\$/g, data.phone);
                 tp = tp.replace(/\$zipcode\$/g, data.zipcode);
                 tp = tp.replace(/\$address\$/g, data.address);
                 tp = tp.replace(/\$country\$/g, data.country);
@@ -506,9 +506,12 @@ $(function(){
         }else {
             if (select == '请选择') {
                 alert('请选择发票类型')
+                //console.log(event)
+                return false;
             } else {
                 if (text == '') {
                     alert('请填写发票抬头')
+                    return false;
                 }
             }
             $(this).css({'cursor': 'pointer'});
