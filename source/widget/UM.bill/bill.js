@@ -10,6 +10,7 @@
         var that = $(this);
         page = that.data('pages');
         that.addClass("bill-tab").siblings().removeClass("bill-tab");
+        $(".bill-hidden").hide().eq($(this).index()).show();
         var url = that.attr('data-url');
         if(url == '/MyOrders/ajaxInvoiceOrder'){
             billList(url,page);
