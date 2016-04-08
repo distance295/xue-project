@@ -6,8 +6,8 @@
     @require areadata_function.js
 -->
 <ul class="bill-list">
-    <li class="bill-tab">可申请开发票订单</li>
-    <li class="bill-apply-tab">开发票申请</li>
+    <li class="bill-tab" data-url="/MyOrders/ajaxInvoiceOrder">可申请开发票订单</li>
+    <li class="bill-apply-tab" data-url="ajaxInvoiceApplyList">开发票申请</li>
 </ul>
 <div class="bill-content bill-hidden" style="display: block">
     <div class="some-bill">
