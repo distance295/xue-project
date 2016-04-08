@@ -505,9 +505,8 @@ $(function(){
 
 
     $body.on('click', '.bill-check-more', function() {
-        var params = $('#url').val();
         var curpage = $('#page').val();
-        var url = "/MyOrders/ajaxInvoiceOrder" + params + "/" + curpage;
+        var url = "/MyOrders/ajaxInvoiceOrder/";
         $('.load_container').remove();
         var loading ='<div class="loading_div"><i class="fa fa-spinner fa-spin fa-4"></i><span>加载中</span></div>';
         $(loading).appendTo('.bill-details-list');
@@ -515,6 +514,9 @@ $(function(){
             url : url,
             type: 'GET',
             dataType: 'html',
+            data:{
+                curpage:curpage
+            },
             success: function(d){
                 var resDat =d;
                 if(resDat){
