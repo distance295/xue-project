@@ -4,32 +4,22 @@
 $(function(){
     var $remarkFocus = $("#remarkFocus"),
         $body = $('body'),
-        $blli = $(".bill-list li"),
-        $btab = $('.bill-tab'),
-        $batab = $('.bill-apply-tab');
+        $blli = $(".bill-list li");
 
     $blli.on('click', function(){
         var that = $(this);
-        that.addClass("current").siblings().removeClass("current");
-
-    });
-    $btab.on('click',function(){
-        var that = $(this),
-            ordertype = that.data('params');
         page = that.data('pages');
-        billList(ordertype,page);
-    });
-    $batab.on('click',function(){
-        billTab();
+        that.addClass("bill-tab").siblings().removeClass("bill-tab");
+        billList(page);
     });
     $('.bill-list li:first').click();
 
-    function billList(ordertype,page){
+    function billList(page){
         $.ajax({
             type: "get",
             url: "/MyOrders/ajaxInvoiceOrder",
             dataType: "html",
-            data:'type=' + ordertype + '&curpage=' + page,
+            data:'curpage=' + page,
             success: function(list){
                 var list = $.trim(list);
                 if(list.substr(0,1)=='<'){
@@ -40,24 +30,6 @@ $(function(){
                         window.location.href = list;
                         return false;
                     }
-                }
-            },
-            error:function(){
-                alert("异步失败");
-            }
-        });
-    }
-
-    function billTab(){
-        $.ajax({
-            type: "get",
-            url: "ajaxInvoiceApplyList",
-            dataType: "html",
-            data:{},
-            success: function(){
-                if(list.substr(0,4)=='http' || list.substr(0,1)=='/'){
-                    window.location.href = list;
-                    return false;
                 }
             },
             error:function(){
