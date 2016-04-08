@@ -1,7 +1,7 @@
 /**
  * Created by yangmengyuan on 16/4/5.
  */
-//$(function(){
+$(function(){
     var $remarkFocus = $("#remarkFocus"),
         $body = $('body'),
         $blli = $(".bill-list li");
@@ -99,6 +99,7 @@
             $bsb.css({'background-color':'#3bafda'});
         }
     });
+
 
     $body.on('click','.bill-apply-check',function(){
         $('.bill-hidden').css({'display':'none'});
@@ -498,13 +499,20 @@
 
     //Form表单提交
     $bsb.on('click',function(event){
+        var select = $('#bill-title-select').val(),
+            text = $('.bill-title-input').val();
         if($("input[type='checkbox']:checked").length == 0){
             event.preventDefault();
-        }else{
-            $(this).css({'cursor':'pointer'});
-            if($('.bill-title-input').val()){
-
+        }else {
+            if (select == '请选择') {
+                alert('请选择发票类型')
+            } else {
+                if (text == '') {
+                    alert('请填写发票抬头')
+                }
             }
+            $(this).css({'cursor': 'pointer'});
+            $('#bill-form').submit();
         }
     })
 
@@ -536,7 +544,6 @@
             }
         });
     });
-
-//});
+});
 
 

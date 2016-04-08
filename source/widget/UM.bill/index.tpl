@@ -212,7 +212,7 @@
             <h3>发票信息</h3>
             <label for="">发票类型</label>
             <div class="select-div">
-                <select name="" id="">
+                <select name="bill-title-select" id="bill-title-select">
                     <option value="请选择">请选择</option>
                     <option value="服务费">服务费</option>
                     <option value="服务费">服务费</option>
