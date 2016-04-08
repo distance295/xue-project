@@ -53,9 +53,10 @@
             success: function(list){
                 var list = $.trim(list);
                 if(list.substr(0,1)=='<'){
-                    var box = $('.bill-content');
+                    var box = $('.bill-apply'),
+                        content = $('.bill-content');
                     box.html(list).show();
-
+                    content.css({'display':'none'});
                 }else{
                     if(list.substr(0,4)=='http' || list.substr(0,1)=='/'){
                         window.location.href = list;
