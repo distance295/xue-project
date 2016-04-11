@@ -1,7 +1,7 @@
 /**
  * Created by yangmengyuan on 16/4/5.
  */
-$(function(){
+//$(function(){
     var $remarkFocus = $("#remarkFocus"),
         $body = $('body'),
         $blli = $(".bill-list li");
@@ -19,6 +19,8 @@ $(function(){
         }
     });
     $('.bill-list li:first').click();
+
+    var $bsb = $('.bill-sum-button');
 
     function billList(url,page){
 
@@ -38,9 +40,27 @@ $(function(){
                         return false;
                     }
                 }
+                checkBox();
             },
             error:function(){
                 alert("异步失败");
+            }
+        });
+    };
+
+    function checkBox(){
+        $("input[type='checkbox']").click(function() {
+            var num = $body.find("input[type='checkbox']:checked").length;
+            $('.bill-sum-num em').html(num);
+            var sum = 0;
+            $body.find("input[type='checkbox']:checked").parents('.bill-details').find('.bill-li em').each(function(k,v){
+                sum += ($(v).text().match(/\d+/g)[0] * 1);
+            });
+            $('.bill-sum-price em').html(sum)
+            if($("input[type='checkbox']:checked").length == 0){
+                $bsb.css({'background-color':'#a0a0a0'});
+            }else{
+                $bsb.css({'background-color':'#3bafda'});
             }
         });
     }
@@ -89,6 +109,7 @@ $(function(){
                 if(resDat){
                     $('.loading_div').remove();
                     $(resDat).appendTo('.bill-details-list');
+                    checkBox()
                 }
                 else{
                     $('.loading_div').remove();
@@ -110,24 +131,6 @@ $(function(){
                 $(this).val("选填,请填写备注信息")
             }
         });
-
-    var $bsb = $('.bill-sum-button')
-
-    $("input[type='checkbox']").click(function() {
-        var num = $body.find("input[type='checkbox']:checked").length;
-        $('.bill-sum-num em').html(num);
-        var sum = 0;
-        $body.find("input[type='checkbox']:checked").parents('.bill-details').find('.bill-li em').each(function(k,v){
-            sum += ($(v).text().match(/\d+/g)[0] * 1);
-        });
-        $('.bill-sum-price em').html(sum)
-        if($("input[type='checkbox']:checked").length == 0){
-            $bsb.css({'background-color':'#a0a0a0'});
-        }else{
-            $bsb.css({'background-color':'#3bafda'});
-        }
-    });
-
 
     $body.on('click','.bill-apply-check',function(){
         $('.bill-hidden').css({'display':'none'});
@@ -528,7 +531,7 @@ $(function(){
     //提交按钮
     $bsb.on('click',function(event){
         var checkInput = $body.find("input[type='checkbox']:checked");
-        var addId = $('input[type="radio"]:checked').attr('id'),
+        var addId = $('input[type="radio"]:checked').attr('id').match(/\d+$/)[0],
             billType = $('#bill-title-select').val(),
             billTitle = $('.bill-title-input').val(),
             billTip = $('#remarkFocus').val();
@@ -541,21 +544,21 @@ $(function(){
         if(checkInput.length == 0){
             event.preventDefault();
         }else {
-            if (select == '请选择') {
+            if (billType == '请选择') {
                 alert('请选择发票类型')
                 //console.log(event)
                 return false;
             } else {
-                if (text == '') {
+                if (billTitle == '') {
                     alert('请填写发票抬头')
                     return false;
                 }
             }
             $(this).css({'cursor': 'pointer'});
             $.ajax({
-                url : url,
-                type: 'GET',
-                dataType: 'html',
+                url : '/MyOrders/ajaxInvoiceAdd',
+                type: 'post',
+                dataType: 'json',
                 data:{
                     send_id : addId,
                     order_nums : arr,
@@ -564,24 +567,21 @@ $(function(){
                     invoice_note : billTip
                 },
                 success: function(d){
-                    var resDat = d,
-                        $detail = $('.bill-details');
+                    var resDat = d;
                     if(resDat){
                         checkInput.parents('.bill-details').remove();
-                        if(!$detail){
-                            $('.bill-check-more').remove();
-                        }
                     }
                     else{
                         $('.bill-check-more').remove();
                         var pm='<div class="media" style="height: 270px;text-align:center;line-height:90px;color:#666;">该年级下没有老师</div>';
                         $('.bill-details-list').append(pm);
                     }
+                    window.location.href = '/MyOrders/invoice';
                 }
             });
         }
     })
-
-});
+//
+//});
 
 
