@@ -14,6 +14,7 @@
         var url = that.attr('data-url');
         if(url == '/MyOrders/ajaxInvoiceOrder'){
             billList(url,page);
+            noneAddress()
         }else{
             billTab();
         }
@@ -63,6 +64,14 @@
                 $bsb.css({'background-color':'#3bafda'});
             }
         });
+    }
+
+    function noneAddress(){
+        var addr = $('.shipadd_list').text();
+        if(addr == ''){
+            $('.addr_switch span').hide();
+            $('.info_from').show();
+        }
     }
 
     function billTab(){
