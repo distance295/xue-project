@@ -71,6 +71,34 @@ $(function(){
         });
     }
 
+    $body.on('click', '.bill-check-more', function() {
+        var curpage = $('#page').val();
+        var url = "/MyOrders/ajaxInvoiceOrder/";
+        $('.load_container').remove();
+        var loading ='<div class="loading_div"><i class="fa fa-spinner fa-spin fa-4"></i><span>加载中</span></div>';
+        $(loading).appendTo('.bill-details-list');
+        $.ajax({
+            url : url,
+            type: 'GET',
+            dataType: 'html',
+            data:{
+                curpage:curpage
+            },
+            success: function(d){
+                var resDat =d;
+                if(resDat){
+                    $('.loading_div').remove();
+                    $(resDat).appendTo('.bill-details-list');
+                }
+                else{
+                    $('.loading_div').remove();
+                    var pm='<div class="media" style="height: 270px;text-align:center;line-height:90px;color:#666;">该年级下没有老师</div>';
+                    $('.bill-details-list').append(pm);
+                }
+            }
+        });
+    });
+
     $remarkFocus
         .focus(function(){
             if($(this).val() == '选填,请填写备注信息'){
@@ -497,11 +525,20 @@ $(function(){
     });
 
 
-    //Form表单提交
+    //提交按钮
     $bsb.on('click',function(event){
-        var select = $('#bill-title-select').val(),
-            text = $('.bill-title-input').val();
-        if($("input[type='checkbox']:checked").length == 0){
+        var checkInput = $body.find("input[type='checkbox']:checked");
+        var addId = $('input[type="radio"]:checked').attr('id'),
+            billType = $('#bill-title-select').val(),
+            billTitle = $('.bill-title-input').val(),
+            billTip = $('#remarkFocus').val();
+        var arr = [],
+            textNum;
+        checkInput.parents('.bill-details').find('.bill-order-num em').each(function (k,v) {
+            textNum = $(this).text();
+            arr.push(textNum)
+        });
+        if(checkInput.length == 0){
             event.preventDefault();
         }else {
             if (select == '请选择') {
@@ -515,38 +552,36 @@ $(function(){
                 }
             }
             $(this).css({'cursor': 'pointer'});
-            $('#bill-form').submit();
+            $.ajax({
+                url : url,
+                type: 'GET',
+                dataType: 'html',
+                data:{
+                    send_id : addId,
+                    order_nums : arr,
+                    invoice_type : billType,
+                    invoice_title : billTitle,
+                    invoice_note : billTip
+                },
+                success: function(d){
+                    var resDat = d,
+                        $detail = $('.bill-details');
+                    if(resDat){
+                        checkInput.parents('.bill-details').remove();
+                        if(!$detail){
+                            $('.bill-check-more').remove();
+                        }
+                    }
+                    else{
+                        $('.bill-check-more').remove();
+                        var pm='<div class="media" style="height: 270px;text-align:center;line-height:90px;color:#666;">该年级下没有老师</div>';
+                        $('.bill-details-list').append(pm);
+                    }
+                }
+            });
         }
     })
 
-
-    $body.on('click', '.bill-check-more', function() {
-        var curpage = $('#page').val();
-        var url = "/MyOrders/ajaxInvoiceOrder/";
-        $('.load_container').remove();
-        var loading ='<div class="loading_div"><i class="fa fa-spinner fa-spin fa-4"></i><span>加载中</span></div>';
-        $(loading).appendTo('.bill-details-list');
-        $.ajax({
-            url : url,
-            type: 'GET',
-            dataType: 'html',
-            data:{
-                curpage:curpage
-            },
-            success: function(d){
-                var resDat =d;
-                if(resDat){
-                    $('.loading_div').remove();
-                    $(resDat).appendTo('.bill-details-list');
-                }
-                else{
-                    $('.loading_div').remove();
-                    var pm='<div class="media" style="height: 270px;text-align:center;line-height:90px;color:#666;">该年级下没有老师</div>';
-                    $('.bill-details-list').append(pm);
-                }
-            }
-        });
-    });
 });
 
 
