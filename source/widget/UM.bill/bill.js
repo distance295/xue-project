@@ -567,19 +567,16 @@
                     invoice_note : billTip
                 },
                 success: function(d){
-                    var resDat = d,
-                        $detail = $('.bill-details');
+                    var resDat = d;
                     if(resDat){
                         checkInput.parents('.bill-details').remove();
-                        if(!$detail){
-                            $('.bill-check-more').remove();
-                        }
                     }
                     else{
                         $('.bill-check-more').remove();
                         var pm='<div class="media" style="height: 270px;text-align:center;line-height:90px;color:#666;">该年级下没有老师</div>';
                         $('.bill-details-list').append(pm);
                     }
+                    window.location.href = '/MyOrders/invoice';
                 }
             });
         }
