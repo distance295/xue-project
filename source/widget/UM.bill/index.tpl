@@ -20,7 +20,7 @@
             <div class="bill-details">
                 <div class="bill-number">
                     <span class="bill-number-time">2015-08-02  14:32:12</span>
-                    <span>订单号：201508021432120909</span>
+                    <span class="bill-order-num">订单号：<em>201508021432120910</em></span>
                 </div>
                 <ul>
                     <li class="bill-select">
@@ -74,7 +74,7 @@
             <div class="bill-details">
                 <div class="bill-number">
                     <span class="bill-number-time">2015-08-02  14:32:12</span>
-                    <span>订单号：201508021432120909</span>
+                    <span class="bill-order-num">订单号：<em>201508021432120911</em></span>
                 </div>
                 <ul>
                     <li class="bill-select">
