@@ -123,11 +123,11 @@ $(function  () {
         immediateSign();
     });
     // 更多服务的资料弹框
-    $('.more-list li.courseList-material').on('click',function(){
+    $('.courseList-material').on('click',function(){
         materialForm();
     });
     // 更多服务的考试弹框
-    $('.more-list li.courseList-exam').on('click',function(){
+    $('.courseList-exam').on('click',function(){
         examTable();
     });
     testLive('.listTest-btn');
