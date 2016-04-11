@@ -4,7 +4,7 @@
 -->
 <div class="ui-course-infor-wrap">
     <div class="course-left-player f-left">
-         <div class="video-images-player">
+        <div class="video-images-player">
             <a href="javascript:void(0);" onclick="courseInfor.videoPlaySwitch('http://video.xueersi.com/view/getCouAudioVideo/29009/', '800', '450', '2016年春季幼升小十项全能直播班');">
                 <img src="http://r04.xesimg.com/web/2016/01/14/14527615273530.jpg" height="340" width="340" alt="">
             </a>
@@ -39,9 +39,9 @@
                 <li>3次阶段考试</li>
             </ul>
         </div>
-         <div class="course-coach-teacher">
+        <div class="course-coach-teacher">
             <span class="f-left">辅导老师：</span>
-            <div class="coach-teacher-wrap f-left"> 
+            <div class="coach-teacher-wrap f-left">
                 <div class="avatar">
                     <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="">
                 </div>
@@ -49,8 +49,9 @@
                     <p class="name">达务力江老师</p>
                     <p class="info">剩余<strong>3</strong>个名额</p>
                 </div>
-                 <div class="coach-teacher-info">
-                    毕业于北京外国语大学，5年教龄<br/>一二三四五六七八九十一二三四五六七八九十
+                <div class="coach-teacher-info">
+                    毕业于北京外国语大学，5年教龄
+                    <br/>一二三四五六七八九十一二三四五六七八九十
                 </div>
             </div>
         </div>
@@ -88,6 +89,9 @@
         <div class="course-button-list">
             <span class="f-left">
 				<button class="btn btn-danger do_not_sign_up">暂时不可报名</button>
+			</span>
+           <span class="f-left">
+				<a class="btn btn-danger btn-join-exam" href="#">参加考试</a>
 			</span>
             <span class="collect collect_current f-left">
 				<a id="collectId" onclick="collect(11323)" href="javascript:void(0);">已收藏</a>

@@ -366,6 +366,113 @@ homeWork.url = '/data/homework/';
         })   	
     }
 
+    /**
+	 * 老师评语音播放的相关业务方法
+	 * @param  {Object} dom 任意子节点
+	 */
+	hm.audioPlay =function(dom){
+
+		if(!dom){
+            return false;
+		}
+
+        //存在多个的情况下
+		$(dom).each(function(){
+			var that = this;
+			var _audio = null;//$(that).find('.homework-audio-btn-style')[0];
+			var hasVideo = !!(document.createElement('audio').canPlayType);
+			var audio_val = null;
+
+            //点击音频评语按钮效果
+			$(that).find('.homework-audio-btn-click').click(function(){
+
+				 //点击的时候右侧的音频列表消失
+				 $(that).find('.homework-audio-list-box').hide('fast');
+				 $(that).find('.homework-audio').attr('flag','0');
+
+				 //右侧音频列表消失之后删除homework-audio-list-box-display
+				 
+				 if( $(that).find('.homework-audio-list-box').hasClass('homework-audio-list-box-display') ){
+				 	$(that).find('.homework-audio-list-box').removeClass('homework-audio-list-box-display');
+				 }
+                 
+                 //判断是否正在播放
+				 var  _Playing = $(this).hasClass('homework-audio-btn-playing');
+		         if( !_Playing){
+		         	    audio_val = $.trim($(this).data('val'));
+		         	    var audio_url = $(this).data('audio');
+		         	    $(that).find('.homework-audio-btn-click').removeClass('homework-audio-btn-playing');
+
+		         	    //判断是否有相同的音频按钮
+                        $(that).find('.homework-audio-btn-click').each(function(){
+                        	var current_audio_val = $.trim($(this).data('val'));
+                        	if( current_audio_val == audio_val){
+                        		$(this).addClass('homework-audio-btn-playing');
+                        	}
+                        })
+
+			        	//判断是否支持音频
+			        	if(hasVideo){
+			        		var audio_url = $(this).data('audio');
+							var html = [
+			                            '<audio class="homework-audio-btn-style" controls="controls" Autoplay="Autoplay"src="'+audio_url+'"> </audio>'
+			                           ]
+			                $(that).find('.homework-audio-btn-style').remove();
+				            $(that).find('.homework-bigImg-box').prepend(html.join(''));
+
+				             _audio = $(that).find('.homework-audio-btn-style')[0];
+
+				             //播放结束
+					         _audio.addEventListener('ended', function () { 
+					            //判断当前播放的是哪个按钮点击事件
+				                $(that).find('.homework-audio-btn-click').each(function(){
+				                	var current_audio_val = $.trim($(this).data('val'));
+				                	if( current_audio_val == audio_val){
+				                		$(this).removeClass('homework-audio-btn-playing');
+				                	}
+				                })
+				                _audio.pause();
+							}, false);
+				            
+				             //播放状态
+					        _audio.addEventListener('playing', function () {  
+					        	//判断当前播放的是哪个按钮点击事件
+				                $(that).find('.homework-audio-btn-click').each(function(){
+				                	var current_audio_val = $.trim($(this).data('val'));
+				                	if( current_audio_val == audio_val){
+				                		if( !$(this).hasClass('homework-audio-btn-playing') ){
+				                             $(this).addClass('homework-audio-btn-playing');
+				                		}
+				                	}
+				                })
+							}, false);
+
+						}else{
+							alert("当前浏览器版本过低，不支持语音播放。请更换浏览器或者升级至IE8以上的版本。");
+						}
+		         }else{
+                       //console.log(2)
+                       //已经在播放的情况下再次点击否可以暂停
+		         }
+
+	        })
+
+
+	        //音频列表展开收缩效果
+			$(that).find('.homework-audio').click(function(){
+				 var flag = $(this).attr('flag');
+				 if( flag == 0){
+	                $(that).find('.homework-audio-list-box').show('fast');
+	                $(this).attr('flag','1');
+				 }else if(flag == 1){
+	                $(that).find('.homework-audio-list-box').hide('fast');
+	                $(this).attr('flag','0');
+				 }
+			})
+
+		})
+	}
+
 
 
 })(homeWork)
@@ -404,7 +511,7 @@ $.fn.imagePage = function(params){
 	$(this).find(params.smallPic).find('ul').height(picsmall_num*picsmall_h);
 
 	//判断作业反馈是否存在
-	var Feedback_flag = $(this).find(params.smallPic).find('li').eq(picsmall_num-1).find('.homework-MaskLayer').length;
+	var Feedback_flag = $(this).find(params.smallPic).find('li').eq(0).find('.homework-MaskLayer').length;
 	var pictime;
 	var tpqhnum=0;//当前选中图片的个数
 	var xtqhnum=0;
@@ -431,7 +538,28 @@ $.fn.imagePage = function(params){
 
     //大图切换过程
 	function show(tpqhnum){
-		if( tpqhnum == picsmall_num -1 && Feedback_flag == 0 ){
+
+		//判断是否存在音频，如果存在音频在切换图片的时候就要停止音频的一系列操作，存在音频就存在homework-Reviews
+		  
+	    if( $(_this).find('.homework-Reviews') ){
+
+	  	   //删除所有播放按钮播放样式
+           $(_this).find('.homework-audio-btn-click').removeClass('homework-audio-btn-playing');
+
+           //audio音频停止播放，重新加载
+           $(_this).find('.homework-audio-btn-style').remove();
+
+           //右侧的音频列表消失
+           if( tpqhnum == 0 && ($(_this).find('.homework-audio-list-box').hasClass('homework-audio-list-box-display')) ){
+           	    
+           }else{
+           	   $(_this).find('.homework-audio-list-box').hide('fast');
+		       $(_this).find('.homework-audio').attr('flag','0');
+           }
+           
+	    }
+
+		if( tpqhnum == 0 && Feedback_flag == 0 ){
 		  $(_this).find('.homework-Feedback').show();
 		  $(_this).find('.ImageTransformJs').hide();
 		}else{
@@ -556,4 +684,6 @@ $.fn.imagePage = function(params){
 		})
 	}	
 }
+
+
 
