@@ -6,8 +6,8 @@
     @require areadata_function.js
 -->
 <ul class="bill-list">
-    <li class="bill-tab">可申请开发票订单</li>
-    <li>开发票申请</li>
+    <li class="bill-tab" data-url="/MyOrders/ajaxInvoiceOrder">可申请开发票订单</li>
+    <li class="bill-apply-tab" data-url="ajaxInvoiceApplyList">开发票申请</li>
 </ul>
 <div class="bill-content bill-hidden" style="display: block">
     <div class="some-bill">
@@ -16,98 +16,106 @@
             <li class="bill-second">发票详情</li>
             <li class="bill-third">可开发票总金额</li>
         </ul>
-        <div class="bill-details">
-            <div class="bill-number">
-                <span class="bill-number-time">2015-08-02  14:32:12</span>
-                <span>订单号：201508021432120909</span>
-            </div>
-            <ul>
-                <li class="bill-select">
-                    <input type="checkbox">
-                </li>
-                <li class="bd-lif">
-                    <div class="bill-subtitle-left">
-                        <div class="order-teacher ot-first">
-                            <div class=" teacher-main teacher-main-border majar-items">
-                                <ul class="avatar-items">
-                                    <li>
-                                        <a class="avatar-photo">
-                                            <img src="img/order-teacher.png">
+        <div class="bill-details-list">
+            <div class="bill-details">
+                <div class="bill-number">
+                    <span class="bill-number-time">2015-08-02  14:32:12</span>
+                    <span class="bill-order-num">订单号：<em>201508021432120910</em></span>
+                </div>
+                <ul>
+                    <li class="bill-select">
+                        <input type="checkbox">
+                    </li>
+                    <li class="bd-lif">
+                        <div class="bill-subtitle-left">
+                            <div class="order-teacher ot-first">
+                                <div class=" teacher-main teacher-main-border majar-items">
+                                    <ul class="avatar-items">
+                                        <li>
+                                            <a class="avatar-photo">
+                                                <img src="img/order-teacher.png">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="avatar-photo">
+                                                <img src="img/order-teacher.png">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="avatar-roll">
+                                        <a href="javascript:void(0);" class="prev none">
+                                            <em class="icon-chevron-left">左</em>
                                         </a>
-                                    </li>
-                                    <li>
-                                        <a class="avatar-photo">
-                                            <img src="img/order-teacher.png">
+                                        <a href="javascript:void(0);" class="next">
+                                            <em class="icon-chevron-right">右</em>
                                         </a>
-                                    </li>
-                                </ul>
-                                <div class="avatar-roll">
-                                    <a href="javascript:void(0);" class="prev none">
-                                        <em class="icon-chevron-left">左</em>
-                                    </a>
-                                    <a href="javascript:void(0);" class="next">
-                                        <em class="icon-chevron-right">右</em>
-                                    </a>
+                                    </div>
                                 </div>
+                                <em class="course-icon">语文</em>
+                                <span>[课程升级] 2015学年五升六年级奥数年卡（竞赛班）</span>
+                                <p class="bill-teacher-name"><img src="img/teacher-name.png" alt="">顾斐</p>
+                                <p class="bill-look"><img src="img/bill-look.png" alt="">4612453</p>
+                                <p class="bill-gifts">赠品：奥数思维训练汇编六年级</p>
                             </div>
-                            <em class="course-icon">语文</em>
-                            <span>[课程升级] 2015学年五升六年级奥数年卡（竞赛班）</span>
-                            <p class="bill-teacher-name"><img src="img/teacher-name.png" alt="">顾斐</p>
-                            <p class="bill-look"><img src="img/bill-look.png" alt="">4612453</p>
-                            <p class="bill-gifts">赠品：奥数思维训练汇编六年级</p>
+                            <div class="order-teacher drop-class">
+                                <img class="teacher-head" src="img/order-teacher.png" alt="">
+                                <em class="course-icon">语文</em>
+                                <span>[课程升级] 2015学年五升六年级奥数年卡（竞赛班）</span>
+                                <p class="bill-teacher-name"><img src="img/teacher-name.png" alt="">顾斐</p>
+                                <p class="bill-look"><img src="img/bill-look.png" alt="">4612453</p>
+                                <p class="bill-gifts">赠品：奥数思维训练汇编六年级</p>
+                                <span class="drop-class-tip">已退课</span>
+                            </div>
                         </div>
-                        <div class="order-teacher drop-class">
-                            <img class="teacher-head" src="img/order-teacher.png" alt="">
-                            <em class="course-icon">语文</em>
-                            <span>[课程升级] 2015学年五升六年级奥数年卡（竞赛班）</span>
-                            <p class="bill-teacher-name"><img src="img/teacher-name.png" alt="">顾斐</p>
-                            <p class="bill-look"><img src="img/bill-look.png" alt="">4612453</p>
-                            <p class="bill-gifts">赠品：奥数思维训练汇编六年级</p>
-                            <span class="drop-class-tip">已退课</span>
-                        </div>
-                    </div>
-                </li>
-                <li class="bill-li">￥<em>1389.00</em></li>
-            </ul>
-        </div>
-        <div class="bill-details">
-            <div class="bill-number">
-                <span class="bill-number-time">2015-08-02  14:32:12</span>
-                <span>订单号：201508021432120909</span>
+                    </li>
+                    <li class="bill-li">￥<em>1389.00</em></li>
+                </ul>
             </div>
-            <ul>
-                <li class="bill-select">
-                    <input type="checkbox">
-                </li>
-                <li class="bd-lif">
-                    <div class="bill-subtitle-left">
-                        <div class="order-teacher ot-first">
-                            <img class="teacher-head" src="img/order-teacher.png" alt="">
-                            <em class="course-icon">语文</em>
-                            <span>[课程升级] 2015学年五升六年级奥数年卡（竞赛班）</span>
-                            <p class="bill-teacher-name"><img src="img/teacher-name.png" alt="">顾斐</p>
-                            <p class="bill-look"><img src="img/bill-look.png" alt="">4612453</p>
-                            <p class="bill-gifts">赠品：奥数思维训练汇编六年级</p>
+            <div class="bill-details">
+                <div class="bill-number">
+                    <span class="bill-number-time">2015-08-02  14:32:12</span>
+                    <span class="bill-order-num">订单号：<em>201508021432120911</em></span>
+                </div>
+                <ul>
+                    <li class="bill-select">
+                        <input type="checkbox">
+                    </li>
+                    <li class="bd-lif">
+                        <div class="bill-subtitle-left">
+                            <div class="order-teacher ot-first">
+                                <img class="teacher-head" src="img/order-teacher.png" alt="">
+                                <em class="course-icon">语文</em>
+                                <span>[课程升级] 2015学年五升六年级奥数年卡（竞赛班）</span>
+                                <p class="bill-teacher-name"><img src="img/teacher-name.png" alt="">顾斐</p>
+                                <p class="bill-look"><img src="img/bill-look.png" alt="">4612453</p>
+                                <p class="bill-gifts">赠品：奥数思维训练汇编六年级</p>
+                            </div>
+                            <div class="order-teacher">
+                                <img class="teacher-head" src="img/order-teacher.png" alt="">
+                                <em class="course-icon">语文</em>
+                                <span>[课程升级] 2015学年五升六年级奥数年卡（竞赛班）</span>
+                                <p class="bill-teacher-name"><img src="img/teacher-name.png" alt="">顾斐</p>
+                                <p class="bill-look"><img src="img/bill-look.png" alt="">4612453</p>
+                                <p class="bill-gifts">赠品：奥数思维训练汇编六年级</p>
+                            </div>
                         </div>
-                        <div class="order-teacher">
-                            <img class="teacher-head" src="img/order-teacher.png" alt="">
-                            <em class="course-icon">语文</em>
-                            <span>[课程升级] 2015学年五升六年级奥数年卡（竞赛班）</span>
-                            <p class="bill-teacher-name"><img src="img/teacher-name.png" alt="">顾斐</p>
-                            <p class="bill-look"><img src="img/bill-look.png" alt="">4612453</p>
-                            <p class="bill-gifts">赠品：奥数思维训练汇编六年级</p>
-                        </div>
-                    </div>
-                </li>
-                <li class="bill-li">￥<em>1389.00</em></li>
-            </ul>
+                    </li>
+                    <li class="bill-li">￥<em>1389.00</em></li>
+                </ul>
+            </div>
         </div>
-        <div class="bill-check-more">查看更多</div>
+        <div class="load_container">
+            <input type="hidden" id="url" value="chu1-0-1-1">
+            <input type="hidden" id="page" value="2">
+
+            <div class="bill-check-more">查看更多</div>
+
+        </div>
         <div class="user_site_info">
             <div class="site_title">
                 <h3>收货地址</h3>
                 <div class="extra_r">
-                    <a href="#none" data-toggle="modal" data-target="#billAddressModal">新增收货地址</a>
+                    <a href="#none">新增收货地址</a>
                 </div>
             </div>
             <div class="ui_ship_addr">
@@ -147,12 +155,64 @@
             <div class="addr_switch">
                 <span>更多地址</span><em></em>
             </div>
+
+            <div class="new_consignee_items">
+                                    <div class="info_from" id="details_form" style="display:none;">
+                                        <p>
+                                            <label for="">收货人</label>
+                                            <span class="add-opt">
+                                                <input type="text" autocomplete="off" id="realname" name="realname" value=""></span>
+                                            <span class="text">请准确填写真实姓名</span>
+                                        </p>
+                                        <p>
+                                            <label for="">所在地区</label>
+                                            <span class="add-opt">
+                                                <input type="hidden" autocomplete="off" id="province" value="0">
+                                                <input type="hidden" autocomplete="off" id="city" value="0">
+                                                <input type="hidden" autocomplete="off" id="country" value="0">
+                                                <select id="add_province" name="province" class="select" style="display: inline-block;"><option value="">省份</option></select>
+                                                &nbsp;
+                                                <select id="add_city" name="city" class="select"><option value="">城市</option></select>
+                                                &nbsp;
+                                                <select id="add_country" name="country" class="select"><option value="">区县</option></select>
+                                            </span>
+                                            <span></span>
+                                        </p>
+                                        <p>
+                                            <label for="">详细地址</label>
+                                            <span class="add-opt">
+                                                <input type="text" autocomplete="off" id="address" name="address" class="add-input"></span>
+                                            <span class="text">请填写详细路名及门牌号</span>
+                                        </p>
+
+                                        <p>
+                                            <label for="">手机号码</label>
+                                            <span class="add-opt">
+                                                <input type="text" autocomplete="off" id="recipientphone" name="recipientphone" value=""></span>
+                                            <span class="text">用于接收发货通知短信和送货前通知</span>
+                                        </p>
+                                        <p>
+                                            <label for="">邮政编码</label>
+                                            <span class="add-opt">
+                                                <input type="text" autocomplete="off" id="zipcode" name="zipcode" value=""></span>
+                                            <span class="text">用于快递确定送货地址</span>
+                                        </p>
+                                        <p>
+                                            <label></label>
+                                            <input type="hidden" autocomplete="off" id="add_id" value="0">
+                                            <a href="javascript:void(0);" id="address_submit_btn" class="btn btn_red">保存收货人信息</a>
+                                        </p>
+                                        <p class="error_tips_address"></p>
+                                        <span class="close_address"></span>
+                                    </div>
+                                </div>
         </div>
+
         <div class="bill-type">
             <h3>发票信息</h3>
             <label for="">发票类型</label>
             <div class="select-div">
-                <select name="" id="">
+                <select name="bill-title-select" id="bill-title-select">
                     <option value="请选择">请选择</option>
                     <option value="服务费">服务费</option>
                     <option value="服务费">服务费</option>
@@ -160,7 +220,7 @@
                 </select>
             </div>
             <label for="">发票抬头</label>
-            <input type="text">
+            <input type="text" class="bill-title-input">
         </div>
         <div class="bill-remark">
             <h3>备注信息</h3>
