@@ -112,33 +112,32 @@
                         <!-- 永久调课成功 -->
                         <div class="permanent-adjust-wrap hide">
                             <div class="drop-course-success-inner permanent-course-success-inner">
-                             <p class="permanent-course-success-inner-tip01">调课成功！</p>
-                             <p class="permanent-course-success-inner-tip02">请牢记调整后的上课时间：<span>每周六上午9:00-11:30</span></p>
-                             <p class="permanent-course-success-inner-tip03">
-                                 <span>温馨提示：</span>如果排期授课进度领先于调整后的排期，调课会在两个排期进度一致后正式生效，在此之前您可以观看已进行的直播课程的回放，但无法参与原排期的后续课程
-                             </p>
-                             <p class="permanent-adjust-course-btn">
-                                 <a href="###">关闭</a>
-                             </p>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-             <p class="amount-show">
+                               <p class="permanent-course-success-inner-tip01">调课成功！</p>
+                               <p class="permanent-course-success-inner-tip02">请牢记调整后的上课时间：<span>每周六上午9:00-11:30</span></p>
+                               <p class="permanent-course-success-inner-tip03">
+                                   <span>温馨提示：</span>如果排期授课进度领先于调整后的排期，调课会在两个排期进度一致后正式生效，在此之前您可以观看已进行的直播课程的回放，但无法参与原排期的后续课程
+                               </p>
+                               <p class="permanent-adjust-course-btn">
+                                   <a href="###">关闭</a>
+                               </p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <p class="amount-show">
                 <a href="##" class="btn-danger btn "><em class="button-icon icon-just-white"></em>立即听课</a>
                 <a href="##" class="btn btn-default liveHelp-btn" data-original-title="" title="">课程大纲<label class="newLabel">5</label></a>
                 <a href="##" class="btn btn-default last listTest-btn" data-original-title="" title="">随堂测<label class="newLabel homeworkLabel">10</label></a>
                 <a href="##" class="btn btn-default ">录播视频</a>
                 <a href="##" class="btn btn-default courseList-material">讲义/资料</a>
-                <a href="##" class="btn btn-default courseList-exam">考试</a>
-                <div class="list-help-pop hide"><p>你有<span>N</span>场直播未完成，赶紧去看回放吧</p></div>
-                <ul class="listTest-pop hide">
-                    <li><span>5</span>份作业已批改完成</li>
-                    <li><span>2</span>份作业已驳回</li>
-                    <li><span>3</span>份作业待提交</li>
-                </ul>
+                <a href="##" class="btn btn-default courseList-exam">考试</a>    
             </p>
-
+            <div class="list-help-pop hide"><p>你有<span>N</span>场直播未完成，赶紧去看回放吧</p></div>
+            <ul class="listTest-pop hide">
+                <li><span>5</span>份作业已批改完成</li>
+                <li><span>2</span>份作业已驳回</li>
+                <li><span>3</span>份作业待提交</li>
+            </ul>
         </div>
         <div class="courseList-teacher">
             <div class=" teacher-main teacher-main-border">
@@ -147,8 +146,8 @@
                         <img src="img/default_photo.png">
                     </a>
                     <div class="QR-code-instructor hide">
-                       <div class="QR-code-inner">
-                           <div class="QR-code">
+                     <div class="QR-code-inner">
+                         <div class="QR-code">
                             <img src="img/QR-code.png">
                         </div>
                         <p class="QR-code-prompt">用微信扫一扫上面二维码</br>或直接搜索微信号</p>
@@ -211,9 +210,10 @@
                 </p>
                 <p class="amount-show">
                     <a class="btn-danger btn " href="##"><em class="button-icon icon-just-white"></em>立即听课</a>
-                    <a class="btn btn-default " href="##" >课程大纲<label class="newLabel">5</label></a>
+                    <a class="btn btn-default liveHelp-btn" href="##" >课程大纲<label class="newLabel">5</label></a>
                     <a class="btn btn-default last listTest-btn" href="##">随堂测<label class="newLabel homeworkLabel">10</label></a>
                 </p>
+                <div class="list-help-pop hide"><p>你有<span>N</span>场直播未完成，赶紧去看回放吧</p></div>
                 <ul class="listTest-pop hide">
                     <li><span>5</span>份作业已批改完成</li>
                     <li><span>2</span>份作业已驳回</li>
