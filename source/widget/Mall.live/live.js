@@ -136,7 +136,7 @@ $(function(){
         var gradeId = $(".department .active a").attr('id');
         var subjectId = $(".subject .active a").attr('id');
         var curpage = $('#page').val();
-        var url = "ajaxLectureList";
+        var url = "/Lecture/ajaxLectureList";
         $('.load_container').remove();
         var loading ='<div class="loading_div"><i class="fa fa-spinner fa-spin fa-4"></i><span>加载中</span></div>';
         $(loading).appendTo('.live-list-container');
