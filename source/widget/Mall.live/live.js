@@ -131,4 +131,31 @@ $(function(){
         $('#liveOrderFailModal').modal({backdrop: 'static', keyboard: false})
 
     }
+
+    $body.on('click', '.live-check-more', function() {
+        var curpage = $('#page').val();
+        var url = "/MyOrders/ajaxInvoiceOrder/";
+        $('.load_container').remove();
+        var loading ='<div class="loading_div"><i class="fa fa-spinner fa-spin fa-4"></i><span>加载中</span></div>';
+        $(loading).appendTo('.live-list-container');
+        $.ajax({
+            url : url,
+            type: 'GET',
+            dataType: 'html',
+            data:{
+                curpage:curpage
+            },
+            success: function(d){
+                var resDat =d;
+                if(resDat){
+                    $('.loading_div').remove();
+                    $(resDat).appendTo('.live-list-container');
+                    checkBox()
+                }
+                else{
+                    $('.loading_div').remove();
+                }
+            }
+        });
+    });
 });
