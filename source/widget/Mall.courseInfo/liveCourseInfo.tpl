@@ -10,6 +10,11 @@
             </a>
             <span class="video-icon" onclick="courseInfor.videoPlaySwitch('http://video.xueersi.com/view/getCouAudioVideo/29009/', '800', '450', '2016年春季幼升小十项全能直播班');"></span>
         </div>
+         <div class="collect-warp">
+             <span class="collect">
+				<a id="collectId" onclick="collect(11323)" href="javascript:void(0);">收藏课程</a>
+			</span>
+         </div>
     </div>
     <div class="course-center-list f-left">
         <h2 class="coures-name-title">人教版四升五年级上下全册数学满分班</h2>
@@ -24,24 +29,27 @@
                 <a href="#lookTime" id="lookTimeList">点击查看详细时间表</a>
             </div>
         </div>
-        <div class="course-content-text">
-            <span class="f-left">课程内容：</span>
-            <ul class="f-left">
-                <li>
-                    20场直播课程+作业反馈
-                    <a href="#" target="_blank">立即试听</a>
-                </li>
+        <div class="course-content-teacher">
+				<span class="f-left">主讲老师：</span>
 
-                <li>
-                    20讲视频课程
-                    <a href="#" target="_blank">立即试听</a>
-                </li>
-                <li>3次阶段考试</li>
-            </ul>
-        </div>
+<!--多个老师头像左右切换-->
+                <div class="ui_avatar_con">
+                    <div class="ui_avatar">
+                        <ul class="avatar_items" style="margin-left: 0px;">
+                            <li>
+                                <a href="http://www.xueersi.com/t/zhutao/" class="userpic" target="_blank">
+                                    <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="">
+                                </a>
+                                <span>达务力江老师</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+<!--多个老师头像左右切换-->
+			</div>
         <div class="course-coach-teacher">
-            <span class="f-left">辅导老师：</span>
-            <div class="coach-teacher-wrap f-left">
+            <span class="f-left ">辅导老师：</span>
+            <div class="coach-teacher-wrap">
                 <div class="avatar">
                     <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="">
                 </div>
@@ -91,88 +99,24 @@
 				<button class="btn btn-danger do_not_sign_up">暂时不可报名</button>
 			</span>
            <span class="f-left">
-				<a class="btn btn-danger btn-join-exam" href="#">参加考试</a>
+				<a class="btn btn-danger btn-join-exam" href="#">预约试听</a>
 			</span>
-            <span class="collect collect_current f-left">
-				<a id="collectId" onclick="collect(11323)" href="javascript:void(0);">已收藏</a>
-			</span>
+           
         </div>
     </div>
     <div class="course-right-teacher f-right">
-        <h5 class="main-teacher-title red">主讲老师</h5>
-        <div class="main-teacher-list">
-            <!--多个老师头像左右切换-->
-            <div class="ui_avatar_con main_teacher">
-                <div class="ui_avatar">
-                    <ul class="avatar_items" style="margin-left: 0px;">
-                        <li>
-                            <div class="avatar_pic">
-                                <a href="http://www.xueersi.com/t/zhutao/" class="userpic" target="_blank">
-                                    <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="teacher_avatar_infor">
-                                <p>达务力江老师</p>
-                                <p class="info">主讲老师将为您提供课程讲授您提供课程讲授您提供课程讲授</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="avatar_pic">
-                                <a href="http://www.xueersi.com/t/zhutao/" class="userpic" target="_blank">
-                                    <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="teacher_avatar_infor">
-                                <p>达务力江老师2</p>
-                                <p class="info">主讲老师将为您提供课程讲授您提供课程讲授您提供课程讲授</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <a href="javascript:void(0);" class="prev none">
-                    <em class="icon icon-chevron-left">左</em>
-                </a>
-                <a href="javascript:void(0);" class="next">
-                    <em class="icon icon-chevron-right">右</em>
-                </a>
-            </div>
-            <!--多个老师头像左右切换-->
-        </div>
-        <h5 class="main-teacher-title">辅导老师</h5>
-        <div class="main-teacher-list noBorder">
-            <!--多个老师头像左右切换-->
-            <div class="ui_avatar_con main_teacher">
-                <div class="ui_avatar">
-                    <ul class="avatar_items" style="margin-left: 0px;">
-                        <li>
-                            <div class="avatar_pic">
-                                <a href="http://www.xueersi.com/t/zhutao/" class="userpic" target="_blank">
-                                    <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="teacher_avatar_infor">
-                                <p>达务力江老师</p>
-                                <p class="info">主讲老师将为您提供课程讲授您提供课程讲授您提供课程讲授</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!--多个老师头像左右切换-->
-            <!--
-			<div class="main-teacher">
-				//<div class="ui-avatar f-left">
-					<img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt=""></div>
-				<div class="teacher-avatar-infor f-left">
-					<p>朱韬老师</p>
-					<p>
-						教学满意度
-						<span>92.71</span>
-					</p>
-				</div>
-			</div>
--->
-            <!--			<div class="teacher-infor">主讲老师将为您提供课程讲授／知识点强化服务</div>-->
-        </div>
+        <h5 class="main-teacher-title">课程提供以下服务</h5>
+          <ul class="xes-serve-list">
+              <li><a href="#" target="_blank">直播课程</a></li>
+              <li><a href="#" target="_blank">24小时答疑</a></li>
+              <li><a href="#" target="_blank">考试检测</a></li>
+              <li class="disabled"><a href="#" target="_blank">1对1作业批改</a></li>
+              <li><a href="#" target="_blank">学期家长会</a></li>
+              <li><a href="#" target="_blank">彩色纸质讲义</a></li>
+              <li><a href="#" target="_blank">随时退款</a></li>
+              <li class="disabled"><a href="#" target="_blank">彩色纸质练习册</a></li>
+              <li><a href="#" target="_blank">随时观看回放</a></li>
+              <li><a href="#" target="_blank">手机看课</a></li>
+          </ul>
     </div>
 </div>
