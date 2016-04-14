@@ -142,7 +142,7 @@ $(function(){
         $(loading).appendTo('.live-list-container');
         $.ajax({
             url : url,
-            type: 'GET',
+            type: 'post',
             dataType: 'html',
             data:{
                 curpage:curpage,
