@@ -2,7 +2,6 @@
    直播频道页
     @require live.less
     @require live.js
-    @require ../Module.Pagination/paginations.js
     @require ../Module.Modal/Modal.js
 -->
     <!--今日直播标题 -->
@@ -437,4 +436,8 @@
             </div>
         </div>
         </div>
+    </div>
+    <div class="load_container">
+        <input type="hidden" id="page" value="2">
+        <div class="live-check-more">点击查看更多<i class="glyphicon glyphicon-chevron-down"></i></div>
     </div>
