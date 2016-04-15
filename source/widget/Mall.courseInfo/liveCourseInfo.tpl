@@ -30,23 +30,27 @@
             </div>
         </div>
         <div class="course-content-teacher">
-				<span class="f-left">主讲老师：</span>
-
-<!--多个老师头像左右切换-->
-                <div class="ui_avatar_con">
-                    <div class="ui_avatar">
-                        <ul class="avatar_items" style="margin-left: 0px;">
-                            <li>
-                                <a href="http://www.xueersi.com/t/zhutao/" class="userpic" target="_blank">
-                                    <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="">
-                                </a>
-                                <span>达务力江老师</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-<!--多个老师头像左右切换-->
+				<div class="main-teacher f-left">
+				    <span class="main-m">主讲老师：</span>
+				     <span class="avatar-m">
+				          <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="">
+				      </span>
+				       <span class="name-m">达务力江老师</span>
+				</div>
+				<div class="coach-teacher f-left">
+				    <span class="coach-c">辅导老师：</span>
+				     <span class="avatar-c">
+				          <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="" class="coach-avatar-info">
+				      </span>
+				       <span class="name-c">达务力江老师</span>
+				       <span class="info-c">剩余<strong>3</strong>个名额</span>
+				       <span class="coachAvatarInfo">
+				           一二三四五六七八九十一二三四五六七八九十<br/>
+				           毕业于北京外国语大学，5年教龄
+				       </span>
+				</div>
 			</div>
+<!--
         <div class="course-coach-teacher">
             <span class="f-left ">辅导老师：</span>
             <div class="coach-teacher-wrap">
@@ -63,6 +67,7 @@
                 </div>
             </div>
         </div>
+-->
         <div class="course-favorable-list">
             课程优惠：
             <span>续报9折</span>
@@ -101,13 +106,13 @@
            <span class="f-left">
 				<a class="btn btn-danger btn-join-exam" href="#">预约试听</a>
 			</span>
-           
+           <span class="surplusPlaces">本班还剩<strong>1</strong>个名额</span>
         </div>
     </div>
     <div class="course-right-teacher f-right">
         <h5 class="main-teacher-title">课程提供以下服务</h5>
           <ul class="xes-serve-list">
-              <li><a href="#" target="_blank">直播课程</a></li>
+              <li>直播课程</li>
               <li><a href="#" target="_blank">24小时答疑</a></li>
               <li><a href="#" target="_blank">考试检测</a></li>
               <li class="disabled"><a href="#" target="_blank">1对1作业批改</a></li>
