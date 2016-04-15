@@ -3,7 +3,7 @@
     @require live.less
     @require live.js
     @require ../Module.Modal/Modal.js
-    @require ../Module.Pagination.js
+    @require ../Module.Pagination/Pagination.js
 -->
     <!--即将开始卡片 -->
     <div class="live-begin live-hidden" id="live_begin" style="display:block;">
