@@ -111,7 +111,7 @@
 		.video-images-player {
 			width: 340px;height: 340px;position: relative;
             span.video-icon {
-                width:85px;height: 85px;background: url(img/video-icon.png) no-repeat;position: absolute;left:128px;top:128px;z-index: 1;cursor: pointer;
+                width:115px;height: 115px;background: url(img/video-icon.png) no-repeat;position: absolute;left:108px;top:108px;z-index: 1;cursor: pointer;
             }
 		}
 		.video-player {
@@ -172,12 +172,45 @@
 	   		}
 	   }
         .course-content-teacher {
-				height: 80px; overflow: hidden;
+				height: 50px; overflow: hidden;margin:10px 0;
 				span.f-left {
 					 width: 75px;font-size: 12px;line-height: 25px; padding-left: 10px;padding-top:20px;color: #666;
 				}
                 span.open-listen-num {
                     width: 70px;font-size: 18px;padding-left: 20px;padding-top:0;
+                }
+                .main-teacher {
+                    margin-right: 15px;
+                    span {
+                        float: left;display: inline;
+                        &.main-m {line-height: 40px;padding-left: 10px;color: #666;}
+                        &.avatar-m {
+                            height: 40px;width: 40px;overflow: hidden;margin-right: 10px;margin-left:5px;
+                            img {width:40px;height: 40px;border-radius: 50%;}
+                        }
+                        &.name-m {
+                            line-height: 40px;font-size: 14px;
+                        }
+                    }
+                }
+                .coach-teacher {
+                    border-left:1px solid #dcdcdc;padding:0 15px;
+                   span {
+                        float: left;display: inline;
+                        &.coach-c {line-height: 40px;padding-left: 10px;color: #666;}
+                        &.avatar-c {
+                            height: 40px;width: 40px;overflow: hidden;margin-right: 10px;margin-left:5px;
+                            img {width:40px;height: 40px;border-radius: 50%;}
+                        }
+                        &.name-c {
+                            line-height: 40px;font-size: 14px;margin-right: 10px;
+                        }
+                       &.info-c {
+                            line-height: 40px;font-size: 14px;color: #999;
+                           strong{color: #e74c3c;font-size: 12px;}
+                        }
+                       &.coachAvatarInfo {display: none;}
+                    } 
                 }
 			}
 	   .course-favorable-list {
@@ -251,6 +284,10 @@
             span.open-listen-num {
             	width: 70px;font-size: 18px;color: #e74c3c;background: url(img/icon_eye.png) 0 8px no-repeat;padding-left: 20px;margin-top:8px;
             }
+           span.surplusPlaces {
+               float:right;width:150px;line-height: 40px; font-size: 14px;text-align: right;
+               strong{color: #e74c3c;font-size: 28px;font-weight: normal;}
+           }
 	   }
 	   //直播回放样式
 	   &.course-video-back {
@@ -315,7 +352,7 @@
         ul.xes-serve-list {
             overflow: hidden;border-top: 1px dotted #eaeaea;width:110%;
             li {
-                float: left;display: inline;width: 108px;height: 25px;line-height: 25px;background: #50c2e9;margin:15px 10px 0 0 ;text-align: center;
+                float: left;display: inline;width: 108px;height: 25px;line-height: 25px;background: #50c2e9;margin:15px 10px 0 0 ;text-align: center; color: #fff;  
                 a {
                   color: #fff;  
                 }
@@ -599,6 +636,12 @@
     position: absolute;
    .dialog_content {
         overflow: hidden;padding:10px;
+    } 
+}
+#xuebox_coachAvatar {
+     position: absolute;
+   .dialog_content {
+        overflow: hidden;padding:10px;text-align: center;line-height: 180%;
     } 
 }
 .rightResearch {
