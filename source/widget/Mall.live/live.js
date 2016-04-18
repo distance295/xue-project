@@ -130,36 +130,98 @@ $(function(){
         });
         $('#liveOrderFailModal').modal({backdrop: 'static', keyboard: false})
 
-    }
+    };
 
-    $body.on('click', '.live-check-more', function() {
-        var gradeId = $(".department .active a").attr('id');
-        var subjectId = $(".subject .active a").attr('id');
-        var curpage = $('#page').val();
-        var url = "/Lecture/ajaxLectureList";
-        $('.load_container').remove();
-        var loading ='<div class="loading_div"><i class="fa fa-spinner fa-spin fa-4"></i><span>加载中</span></div>';
-        $(loading).appendTo('.live-list-container');
+    var $lrtli = $(".live-rank-title li");
+
+    $lrtli.on('click', function(){
+        var that = $(this);
+        that.addClass("current").siblings().removeClass("current");
+        $(".live-hidden").hide().eq($(this).index()).show();
+        var url = that.attr('data-url');
+        if(url == '/MyOrders/ajaxInvoiceOrder'){
+            liveList(url);
+        }else{
+            liveTab();
+        }
+    });
+    $('.live-rank-title li:first').click();
+
+    function liveList(url){
+
         $.ajax({
-            url : url,
-            type: 'post',
-            dataType: 'html',
-            data:{
-                curpage:curpage,
-                gradeId:gradeId,
-                subjectId:subjectId
+            type: "get",
+            url: url,
+            dataType: "html",
+            data:{},
+            success: function(list){
+                var list = $.trim(list);
+                if(list.substr(0,1)=='<'){
+                    var box = $('.live-begin');
+                    box.html(list);
+                }else{
+                    if(list.substr(0,4)=='http' || list.substr(0,1)=='/'){
+                        window.location.href = list;
+                        return false;
+                    }
+                }
             },
-            success: function(d){
-                var resDat =d;
-                if(resDat){
-                    $('.loading_div').remove();
-                    $(resDat).appendTo('.live-list-container');
-                    checkBox()
-                }
-                else{
-                    $('.loading_div').remove();
-                }
+            error:function(){
+                alert("异步失败");
             }
         });
+    };
+
+    function liveTab(){
+        $.ajax({
+            type: "get",
+            url: "ajaxInvoiceApplyList",
+            dataType: "html",
+            data:{},
+            success: function(list){
+                var list = $.trim(list);
+                if(list.substr(0,1)=='<'){
+                    var box = $('.live-playback'),
+                        content = $('.live-begin');
+                    box.html(list).show();
+                    content.css({'display':'none'});
+                }else{
+                    if(list.substr(0,4)=='http' || list.substr(0,1)=='/'){
+                        window.location.href = list;
+                        return false;
+                    }
+                }
+            },
+            error:function(){
+                alert("异步失败");
+            }
+        });
+    };
+
+
+    $('.ui-pages').pages({
+        total: 16, // 总记录数
+        size: 16, // 每页显示记录数
+        index: 1, // 当前页
+        // 点击分页时的回调，返回被点击的页数
+        click: function (index) {
+            $.ajax({
+                type: "POST",
+                url: "/MyOrders/ajaxInvoiceApplyList",
+                dataType: "html",
+                data: 'curpage=' + index,
+                success: function (objects) {
+                    if (objects.sign === 2) {
+                        window.location.href = objects.msg;
+                    }
+                    var box = $('#invoiceTable');
+                    box.html(objects);
+                },
+                error: function () {
+                    alert("异步失败");
+                }
+            });
+        }
     });
+
 });
