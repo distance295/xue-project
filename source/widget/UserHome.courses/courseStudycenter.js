@@ -187,7 +187,7 @@ $(function(){
     // 退课
     $('body').on('click','.drop-course', function(){
 
-        var result = $('.drop-course-detail').html();
+        var result = $('.drop-course-wrap').html();
         createModal.show({
             id : 'dropCourse',
             title : '退课',
@@ -198,27 +198,15 @@ $(function(){
         $('#dropCourse').modal('show')
     });
     // 退课成功
-    $('body').on('click','.drop-course-detail-inner .drop-course-btn', function(){
-        var result =  ' <div class="drop-course-success-inner">\
-                            退课成功！<span>(<b class="setTimeNum">3</b>秒后消失)</span>\
-                        </div>';
+    $('body').on('click','.drop-course-detail-inner .drop-charge', function(){
+        var result =  $('.drop-course-detail').html();
         $('#dropCourse .modal-body').html(result);
-        countDown(countDownTime);
-
+    }); 
+    // 退课成功
+    $('body').on('click','.drop-course-detail-inner .drop-course-btn', function(){
+        var result =  $('.dropCourse-success-wrap').html();
+        $('#dropCourse .modal-body').html(result);
     });  
-    var countDownTime=parseInt(3);    //在这里设置时长
-    function countDown(countDownTime){
-        var timer=setInterval(function(){
-            if(countDownTime>1){
-                countDownTime--;
-                $('.setTimeNum').text(countDownTime);
-            }else{
-                clearInterval(timer);
-                $('#dropCourse').modal('hide'); 
-                $('#temporaryAdjustCourse').modal('hide')
-            }
-        },1000);
-    }
     // 临时调课
     $('body').on('click','.temporary-adjustCourse', function(){
 
@@ -233,32 +221,36 @@ $(function(){
         $('#temporaryAdjustCourse').modal('show')
     });
     $('body').on('click','.temporary-adjust-course-detail-inner .drop-course-btn', function(){
-        var result =  ' <div class="drop-course-success-inner">\
-                            调课成功！<span>(<b class="setTimeNum">3</b>秒后消失)</span>\
-                        </div>';
+        var result =  $('.temporary-adjust-wrap').html();
         $('#temporaryAdjustCourse .modal-body').html(result);
-        countDown(countDownTime);
-
     }); 
     // 永久调课
     $('body').on('click','.permanent-adjustCourse', function(){
-
+        // 永久调课有课程
         var result = $('.permanent-adjust-course-detail').html();
+        // 永久调课无课程
+        // var result = $('.permanent-adjust-nocourse').html();
         createModal.show({
             id : 'permanentAdjustCourse',
             title : '永久调课',
             cls : 'permanentAdjustCourse',
-            width: 750,
+            width: 752,
             content : result
         });
         $('#permanentAdjustCourse').modal('show')
     });
+    // 永久调课确认按钮点击
     $('body').on('click','.permanent-adjust-course-detail-inner .drop-course-btn', function(){
         var result =  $('.permanent-adjust-wrap').html();
         $('#permanentAdjustCourse .modal-body').html(result);
 
     });  
-     $('body').on('click','.permanent-adjust-course-btn a', function(){
-       $('#permanentAdjustCourse').modal('hide') 
+    // 永久调课无课状态下确认按钮点击
+     $('body').on('click','.permanent-adjust-nocourse-detail .drop-course-btn', function(){
+        $('#permanentAdjustCourse').modal('hide')
     });  
+     // 永久调课场次调整点击事件
+     $('body').on('click','.adjust-course-select li a',function(){
+        $(this).parent('li').addClass('active').siblings('li').removeClass('active');
+     })
 });
