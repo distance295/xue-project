@@ -3,14 +3,14 @@
     @require ../Public.Video/vide.js
     @require ui-course-info.less
 -->
-<ul class="ui-nav-link">
+<ul class="ui-nav-link"  id="lookTime">
 	<li class="current">直播大纲(10)</li>
 	<li>点播大纲(10)</li>
 	<li>课程介绍</li>
 	<li class="last">课程评价</li>
 </ul>
 <div class="course-info-box">
-	<div class="course-detail" style="display:block;" id="lookTime">
+	<div class="course-detail" style="display:block;">
 		<table class="table table_outline">
 			<tbody>
 				<tr>
@@ -74,7 +74,7 @@
 				</tr>
 				<tr>
 					<td>
-						<span class="goline">已上线</span>
+						<span class="goline">已上线123</span>
 					</td>
 					<td>第一讲：</td>
 					<td class="t-left">圆初步（一）</td>
@@ -103,7 +103,7 @@
 		<table class="table table_outline">
 			<tbody>
 				<tr>
-					<th class="t-left">讲名称</th>
+					<th class="t-left">讲名称123456</th>
 					<th>上课日期</th>
 					<th>学习状态</th>
 				</tr>

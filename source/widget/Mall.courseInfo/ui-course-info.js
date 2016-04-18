@@ -147,8 +147,8 @@ courseInfor.courseTab = function (tabTit, on, tabCon) {
 courseInfor.lookTimeList = function () {
     var that = $('#lookTimeList');
     that.on('click', function (event) {
-        $('.ui-nav-link li:eq(0)').addClass('current').siblings().removeClass('current');
-        $('.course-info-box .course-detail:eq(0)').show().siblings().hide();
+        $('.ui-nav-link li:eq(1)').addClass('current').siblings().removeClass('current');
+        $('.course-info-box .course-detail:eq(1)').show().siblings().hide();
     });
 }
 
