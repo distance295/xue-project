@@ -42,11 +42,10 @@
   top: -20px;
 }
 #carousel-example-generic .focus-num-wrap ol.focus-num {
-  width: 100%;
-  left: 408px;
+  width: 712px;
+  left: 388px;
 }
 #carousel-example-generic .focus-num-wrap ol.focus-num li {
-  float: left;
   width: 66px;
   height: 26px;
   line-height: 26px;
