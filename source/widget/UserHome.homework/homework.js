@@ -462,7 +462,7 @@ homeWork.url = '/data/homework/';
 			$(that).find('.homework-audio').click(function(){
 				 var flag = $(this).attr('flag');
 				 if( flag == 0){
-	                $(that).find('.homework-audio-list-box').show('fast');
+	                $(that).find('.homework-audio-list-box').show();
 	                $(this).attr('flag','1');
 				 }else if(flag == 1){
 	                $(that).find('.homework-audio-list-box').hide('fast');
@@ -561,9 +561,11 @@ $.fn.imagePage = function(params){
 
 		if( tpqhnum == 0 && Feedback_flag == 0 ){
 		  $(_this).find('.homework-Feedback').show();
+		  $(_this).find('.homework-Feedback-describe').show();
 		  $(_this).find('.ImageTransformJs').hide();
 		}else{
 		  $(_this).find('.homework-Feedback').hide();
+		  $(_this).find('.homework-Feedback-describe').hide();
 		  $(_this).find('.ImageTransformJs').show();
 		  _src = $(_this).find(params.bigPic).find('li').eq(tpqhnum).find('img').attr('src');
 
