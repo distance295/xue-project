@@ -199,7 +199,8 @@ $(function(){
             }else{
                 clearInterval(timer);
                 $('#dropCourse').modal('hide'); 
-                $('#temporaryAdjustCourse').modal('hide')
+                $('#temporaryAdjustCourse').modal('hide');
+                $("#course_lists_label li.active").click();
             }
         },1000);
     }
