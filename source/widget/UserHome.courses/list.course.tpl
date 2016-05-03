@@ -118,17 +118,19 @@
                         <!-- 临时调课成功 -->
                         <div class="temporary-adjust-wrap hide">
                             <div class="drop-course-success-inner temporary-course-success-inner">
-                               <p class="temporary-course-success-inner-tip01">调课成功！</p>
-                               <p class="temporary-course-success-inner-tip02">已调场次：</p>
-                               <p class="temporary-course-success-inner-tip03">第一场：记叙文的是手形结构</p>
-                               <p class="temporary-course-success-inner-tip04">2月14号周六早9:00-11:30<span>调至</span>2月15号周六晚19:00-21:00</p>
-                           </div>
-                       </div>
-                       <!-- 永久调课无课可调 -->
-                       <div class="hide permanent-adjust-nocourse">
+                             <p class="temporary-course-success-inner-tip01">调课成功！</p>
+                             <p class="temporary-course-success-inner-tip02">已调场次：</p>
+                             <p class="temporary-course-success-inner-tip03">第一场：记叙文的是手形结构</p>
+                             <p class="temporary-course-success-inner-tip04">2月14号周六早9:00-11:30<span>调至</span>2月15号周六晚19:00-21:00</p>
+                         </div>
+                     </div>
+                     <!-- 永久调课无课可调 -->
+                     <div class="hide permanent-adjust-nocourse">
                         <div class='permanent-adjust-nocourse-detail'>
                             <p>当期为续报期，暂时无法永久调课</p>
                             <p>续报期将于<span>2016年9月16日</span>结束，请于续报期结束后调整上课时间，感谢谅解！</p>
+                            
+                            <span>(<b class="setTimeNum">3</b>秒后消失)</span>
                             <p class="drop-course-btn-wrap"><a href="###" class="drop-course-btn ajust-course-btn">确定</a></p>
                         </div>
                     </div>
@@ -153,14 +155,14 @@
                     <!-- 永久调课成功 -->
                     <div class="permanent-adjust-wrap hide">
                         <div class="drop-course-success-inner permanent-course-success-inner">
-                           <p class="permanent-course-success-inner-tip01">调课成功！</p>
-                           <p class="permanent-course-success-inner-tip02">请牢记调整后的上课时间：<span>一期：7月01日-8月30日9:00-11:30</span></p>
-                           <span>(<b class="setTimeNum">3</b>秒后消失)</span>
-                       </div>
-                   </div>
-               </div>
-           </div>
-           <p class="amount-show">
+                         <p class="permanent-course-success-inner-tip01">调课成功！</p>
+                         <p class="permanent-course-success-inner-tip02">请牢记调整后的上课时间：<span>一期：7月01日-8月30日9:00-11:30</span></p>
+                         <span>(<b class="setTimeNum">3</b>秒后消失)</span>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <p class="amount-show">
             <a href="##" class="btn-danger btn "><em class="button-icon icon-just-white"></em>立即听课</a>
             <a href="##" class="btn btn-default liveHelp-btn" data-original-title="" title="">课程大纲<label class="newLabel">5</label></a>
             <a href="##" class="btn btn-default last listTest-btn" data-original-title="" title="">随堂测<label class="newLabel homeworkLabel">10</label></a>
@@ -182,8 +184,8 @@
                     <img src="img/default_photo.png">
                 </a>
                 <div class="QR-code-instructor hide">
-                 <div class="QR-code-inner">
-                     <div class="QR-code">
+                   <div class="QR-code-inner">
+                       <div class="QR-code">
                         <img src="img/QR-code.png">
                     </div>
                     <p class="QR-code-prompt">用微信扫一扫上面二维码</br>或直接搜索微信号</p>
