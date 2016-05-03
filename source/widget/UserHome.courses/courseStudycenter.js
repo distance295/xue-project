@@ -188,18 +188,18 @@ $(function(){
     $('body').on('click','.drop-course-detail-inner .drop-course-btn', function(){
         var result =  $('.dropCourse-success-wrap').html();
         $('#dropCourse .modal-body').html(result);
-        countDown(countDownTime);
+        countDown(3,'#dropCourse');
     });  
-     var countDownTime=parseInt(3);    //在这里设置时长
-    function countDown(countDownTime){
+    // var countDownTime=parseInt(3);    //在这里设置时长
+    function countDown(countDownTime,courseDownTimeId){
+        $('.setTimeNum').text(countDownTime);
         var timer=setInterval(function(){
             if(countDownTime>1){
                 countDownTime--;
                 $('.setTimeNum').text(countDownTime);
             }else{
                 clearInterval(timer);
-                $('#dropCourse').modal('hide'); 
-                $('#temporaryAdjustCourse').modal('hide');
+                $(courseDownTimeId).modal('hide'); 
                 $("#course_lists_label li.active").click();
             }
         },1000);
@@ -218,6 +218,7 @@ $(function(){
     $('body').on('click','.permanent-adjust-course-detail-inner .drop-course-btn', function(){
         var result =  $('.permanent-adjust-wrap').html();
         $('#permanentAdjustCourse .modal-body').html(result);
+        countDown(3,'#permanentAdjustCourse');
 
     });  
     // 永久调课无课状态下确认按钮点击

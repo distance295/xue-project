@@ -155,6 +155,7 @@
                         <div class="drop-course-success-inner permanent-course-success-inner">
                            <p class="permanent-course-success-inner-tip01">调课成功！</p>
                            <p class="permanent-course-success-inner-tip02">请牢记调整后的上课时间：<span>一期：7月01日-8月30日9:00-11:30</span></p>
+                           <span>(<b class="setTimeNum">3</b>秒后消失)</span>
                        </div>
                    </div>
                </div>
