@@ -115,9 +115,9 @@ $(function(){
         if (that.hasClass('none')) {
             return false;
         } else {
-         courses.avatar.toggle(that)     
-     }
- });
+           courses.avatar.toggle(that)     
+       }
+   });
 })
 
 // 随堂测试弹框
@@ -205,14 +205,14 @@ $(function(){
         },1000);
         // 手动关闭弹层时清除计时器
         $(courseDownTimeId).on('hide.bs.modal', function (e) {
-           clearInterval(timer);
-       });
+         clearInterval(timer);
+        });
     }
 
      // 退课成功
      $('body').on('click','.drop-course-detail-inner .drop-charge', function(){
-         $('.drop-charge-explain-wrap').toggleClass('dropCharge-hide');
-     }); 
+       $('.drop-charge-explain-wrap').toggleClass('dropCharge-hide');
+   }); 
     // 临时调课成功
     $('body').on('click','.temporary-adjust-course-detail-inner .drop-course-btn', function(){
         var result =  $('.temporary-adjust-wrap').html();
@@ -221,7 +221,7 @@ $(function(){
     
     // 永久调课确认按钮点击
     $('body').on('click','.permanent-adjust-course-detail-inner .drop-course-btn', function(){
-        var result =  $('.permanent-adjust-nocourse').html();
+        var result =  $('.permanent-adjust-wrap').html();
         $('#permanentAdjustCourse .modal-body').html(result);
         countDown(3,'#permanentAdjustCourse');
 
@@ -230,8 +230,8 @@ $(function(){
     $('body').on('click','.permanent-adjust-nocourse-detail .drop-course-btn', function(){
         $('#permanentAdjustCourse').modal('hide');
     });  
-    // 永久调课场次调整点击事件
-    $('body').off('click','.adjust-course-select li a').on('click','.adjust-course-select li a',function(){
+     // 永久调课场次调整点击事件
+     $('body').off('click','.adjust-course-select li a').on('click','.adjust-course-select li a',function(){
         if( $(this).parent('li').hasClass("adjustActive")){
             $(this).parent('li').removeClass('adjustActive'); 
             $('.permanent-adjust-course-detail-inner .ajust-course-btn').attr('disabled',true);
@@ -240,4 +240,4 @@ $(function(){
             $('.permanent-adjust-course-detail-inner .ajust-course-btn').attr('disabled',false);
         }
     })
-});
+ });
