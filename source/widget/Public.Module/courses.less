@@ -879,12 +879,15 @@ ul,li{list-style: none;}
 			}
 		}
 	}
+    li.popular-price {
+        width:70px;
+    }
 	.stu-term-select{
 		position: absolute;
 		background: red;
 		width: 75px;
 		top: 0;
-		right: 105px;
+		left: 200px;
 		border: 1px solid #eaeaea;
 		border-top: none;
 		background: #fff;
@@ -909,18 +912,13 @@ ul,li{list-style: none;}
 		}
 	}
 	.Onlylive-select {
-		color: #999999;
+		color: #333;
 		float: right;
-		margin-right: 15px;
-		input{
-			float: left;
-			margin-top: 12px;
-			margin-right: 5px;
-		}
-		b{
+		margin-right: 5px;
+		strong{
 			font-style: normal;
-			float: left;
 			font-weight: normal;
+            color: #e74c3c;
 		}
 	}
 	.screen-look-grades{
@@ -942,6 +940,7 @@ ul,li{list-style: none;}
 }
 .preletive{
 	position: relative;
+    z-index: 2;
 }
 .mt0{
 	margin-top: 0;
@@ -999,3 +998,136 @@ ul,li{list-style: none;}
 		}
 	}
 }
+//最新改版样增加样式2016-0505 alexliu
+.wd110 {width:110%;}
+.course-test-select {
+    padding:5px 10px;
+    float:left;
+    width:389px;
+    height: 156px;
+    border:1px solid #ededed;
+    margin-right:10px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+    .ui-avatar {
+        .avatar-photo {
+            .bottom0 {margin-bottom: 0;}
+        } 
+    }
+    .course-detail-wrap {
+        .course-detail {
+            width:100%;
+            p.course-title{
+                line-height: 25px;
+            }
+            p.tip-for {
+                line-height: 25px;
+                color: #666;
+                &.tip-for-list {
+                    line-height: 180%;
+                }
+            }
+            p.tip-statistics {
+                span {float:left;}
+                span.icon-stat {
+                   background: url(/static/img/ic_heart.png) 0 8px no-repeat;
+                    padding-left:23px;
+                    color: #e74c3c;
+                }
+                span.money {
+                    float:right;
+                    font-size: 18px;
+                    color: #333;
+                    font-family: 'Microsoft YaHei';
+                }
+            }
+            .course-teacher {
+                .ui-username {font-size: 16px;font-family: 'Microsoft YaHei';} 
+            }
+            p.tip-fans-list {
+                color: #666;
+                span {padding-right:10px;}
+            }
+        }
+    }
+    .course-detail-info {
+         width:389px;
+        height: 40px;
+        line-height: 40px;
+        background: #fcfcfc;
+        position: absolute;
+        left:0;
+        bottom:0;
+        z-index: 10;
+        padding-left:15px;
+        color: #666;
+        border-top:1px solid #ededed;
+        .left {
+            float:left;
+        }
+        .right{
+            float:right;
+            margin-right:15px;
+        }
+        strong{
+            font-size: 18px;
+            color: #e74c3c;
+            font-family: 'Microsoft YaHei';
+        }
+        :after{
+            position: absolute;
+            display: inline-block;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-bottom: 7px solid #fcfcfc;
+            left: 33px;
+            top: -6px;
+            content: '';
+        }
+        :before{
+            position: absolute;
+            display: inline-block;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-bottom: 7px solid #ededed;
+            left: 33px;
+            top: -7px;
+            content: '';
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
