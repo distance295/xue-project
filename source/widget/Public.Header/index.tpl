@@ -2,6 +2,7 @@
     @require header.less
     @require header.js
 -->
+<!--
 <div class="modele-header-pic">
     <img src="http://r01.xesimg.com/web/2016/04/20/14611181672040.jpg" alt="暑假班抢福利倒计时" usemap="#Map" border="0">
       <map name="Map" id="Map">
@@ -16,6 +17,7 @@
 			});
 	</script>
 </div>
+-->
 <div id="module-header">
     <div class="h-logo"><a herf="#">学而思网校</a></div>
     <div class="h-search">
