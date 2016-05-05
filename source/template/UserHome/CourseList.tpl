@@ -133,6 +133,48 @@ $(function  () {
     testLive('.listTest-btn');
     liveHelp('.liveHelp-btn');
     QrCodeInstructor('.QR-code-hover');
+
+    // 退课
+    $('body').on('click','.drop-course', function(){
+
+        var result = $('.drop-course-wrap').html();
+        createModal.show({
+            id : 'dropCourse',
+            title : '退课',
+            cls : 'dropCourse',
+            width: 532,
+            content : result
+        });
+        $('#dropCourse').modal({backdrop: 'static', keyboard: false,show: true});
+    });
+    // 临时调课
+    $('body').on('click','.temporary-adjustCourse', function(){
+
+        var result = $('.temporary-adjust-course-detail').html();
+        createModal.show({
+            id : 'temporaryAdjustCourse',
+            title : '临时调课',
+            cls : 'temporaryAdjustCourse',
+            width: 750,
+            content : result
+        });
+        $('#temporaryAdjustCourse').modal({backdrop: 'static', keyboard: false,show: true});
+    });
+    // 永久调课
+    $('body').on('click','.permanent-adjustCourse', function(){
+        // 永久调课有课程
+        var result = $('.permanent-adjust-course-detail').html();
+        // 永久调课无课程
+        // var result = $('.permanent-adjust-nocourse').html();
+        createModal.show({
+            id : 'permanentAdjustCourse',
+            title : '永久调课',
+            cls : 'permanentAdjustCourse',
+            width: 752,
+            content : result
+        });
+        $('#permanentAdjustCourse').modal({backdrop: 'static', keyboard: false,show: true});
+    });
 })
 // 更多服务
 function moreService (){

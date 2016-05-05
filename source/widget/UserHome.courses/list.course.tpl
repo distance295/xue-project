@@ -54,16 +54,11 @@
                         <!-- 退课-->
                         <div class="hide drop-course-wrap">
                             <div class="drop-course-detail-inner">
-                                <p class="drop-charge-tip">课程将退<span class="drop-charge">400元</span>到您的账户余额中。</p>
-                                <p class="drop-course-btn-wrap"><a href="###" class="drop-course-btn ajust-course-btn">确定</a></p>
-                            </div>
-                        </div>
-                        <!-- 退课详情 -->
-                        <div class="hide drop-course-detail">
-                            <div class="drop-course-detail-inner">
-                                <p class="drop-charge-tip">课程将退<span class="drop-charge">400元</span>到您的账户余额中。</p>
-                                <p class="drop-charge-explain">退费说明：</p>
-                                <p>直播课剩余场次<span>5</span>，总场次<span>10</span>，退费额=用户实际消费（1000）*（5/10）=<span>500</span>元（使用代金券<span>1</span>张共<span>100</span>元不再返还），如有疑问请拨打客服电话后再进行操作。</p>
+                                <p class="drop-charge-tip">课程将退<span class="drop-charge-num">400元</span><span class="drop-charge"></span>到您的账户余额中。</p>
+                                <div class="dropCharge-hide drop-charge-explain-wrap">
+                                    <p class="drop-charge-explain">退费说明：</p>
+                                    <p>直播课剩余场次<span>5</span>，总场次<span>10</span>，退费额=用户实际消费（1000）*（5/10）=<span>500</span>元（使用代金券<span>1</span>张共<span>100</span>元不再返还），如有疑问请拨打客服电话后再进行操作。</p>
+                                </div>
                                 <p class="drop-course-btn-wrap"><a href="###" class="drop-course-btn ajust-course-btn">确定</a></p>
                             </div>
                         </div>
@@ -71,6 +66,7 @@
                         <div class="dropCourse-success-wrap hide">
                             <div class="dropCourse-success-inner">
                                 退课成功！
+                                <span>(<b class="setTimeNum">3</b>秒后消失)</span>
                             </div>
                         </div>
                         <!-- 临时调课 -->
@@ -133,6 +129,8 @@
                         <div class='permanent-adjust-nocourse-detail'>
                             <p>当期为续报期，暂时无法永久调课</p>
                             <p>续报期将于<span>2016年9月16日</span>结束，请于续报期结束后调整上课时间，感谢谅解！</p>
+                            
+                            <span>(<b class="setTimeNum">3</b>秒后消失)</span>
                             <p class="drop-course-btn-wrap"><a href="###" class="drop-course-btn ajust-course-btn">确定</a></p>
                         </div>
                     </div>
@@ -151,7 +149,7 @@
                                 <li><a href="###">一期：7月01-8月30日9:00-11:30</a></li>
                                 <li><a href="###">一期：7月01-8月30日9:00-11:30</a></li>
                             </ul>
-                            <p class="drop-course-btn-wrap"><a href="###" class="drop-course-btn ajust-course-btn">确定</a></p>
+                            <p class="drop-course-btn-wrap"><button class="drop-course-btn ajust-course-btn" disabled>确定</button></p>
                         </div>
                     </div>
                     <!-- 永久调课成功 -->
@@ -159,6 +157,7 @@
                         <div class="drop-course-success-inner permanent-course-success-inner">
                          <p class="permanent-course-success-inner-tip01">调课成功！</p>
                          <p class="permanent-course-success-inner-tip02">请牢记调整后的上课时间：<span>一期：7月01日-8月30日9:00-11:30</span></p>
+                         <span>(<b class="setTimeNum">3</b>秒后消失)</span>
                      </div>
                  </div>
              </div>
