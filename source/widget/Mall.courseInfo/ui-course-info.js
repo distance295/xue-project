@@ -144,13 +144,13 @@ courseInfor.courseTab = function (tabTit, on, tabCon) {
         });
     }
     //直播课程详情页---查看直播时间列表
-courseInfor.lookTimeList = function () {
-    var that = $('#lookTimeList');
-    that.on('click', function (event) {
-        $('.ui-nav-link li:eq(1)').addClass('current').siblings().removeClass('current');
-        $('.course-info-box .course-detail:eq(1)').show().siblings().hide();
-    });
-}
+//courseInfor.lookTimeList = function () {
+//    var that = $('#lookTimeList');
+//    that.on('click', function (event) {
+//        $('.ui-nav-link li:eq(1)').addClass('current').siblings().removeClass('current');
+//        $('.course-info-box .course-detail:eq(1)').show().siblings().hide();
+//    });
+//}
 
 //返回顶部
 //2016-01-11-18：00
@@ -396,4 +396,19 @@ $(function () {
              xue.win('coachAvatar').close();
          });
     });
+    //随屏滚动
+         var rollStart = $('.scroll-box-wrap'); 
+         var offset = rollStart.offset();
+         var rollBox = rollStart.prev();
+	     $(window).scroll(function() {
+	            if ($(window).scrollTop() > offset.top){
+	                    rollStart.addClass("rollbox");
+                        rollStart.find('.scroll-btn').show();
+                        rollBox.stop().animate({top:0,paddingTop:10},0);
+	            } else {
+	                    rollStart.removeClass("rollbox");
+                        rollStart.find('.scroll-btn').hide();
+                        rollBox.stop().animate({top:0},0);
+	            }
+	    });
 });
