@@ -2,7 +2,6 @@
 <link rel="import" href="../Layer/layer.Mall.head.tpl?__inline">
 
 <!-- 学习中心区域 -->
-<div class="container-body">
 <div class="container">
   <ol id="module-breadcrumb" class="breadcrumb">
     <li><a href="#">课程分类</a></li>
@@ -16,7 +15,10 @@
      <div class="col-md-12">
          <div class="add-selector-pic">
             <img src="http://r01.xesimg.com/web/2016/04/20/14611181672040.jpg" />
-        </div> 
+        </div>
+        <div class="add-selector-seo">
+               <img src="http://r01.xesimg.com/web/2016/04/20/14611181672040.jpg"/>
+          </div>   
     </div>
     <!--   12栏结束    -->
     <!--   左右分栏的用这个    -->
@@ -50,7 +52,6 @@
     <!-- row end -->
 
 <div class="ui-pages text-center"></div>
-</div>
 </div>
 <!-- 公共底部 -->
 <link rel="import" href="../Layer/layer.Mall.foot.tpl?__inline">
