@@ -18,6 +18,14 @@
 		<ol class="carousel-indicators focus-num">
 			<li data-target="#carousel-example-generic" data-slide-to="0" class="active">学霸节免费直播</li>
 			<li data-target="#carousel-example-generic" data-slide-to="1">2学霸节免费直播学霸节免费直播</li>
+			<li data-target="#carousel-example-generic" data-slide-to="0" class="">学霸节免费直播</li>
+			<li data-target="#carousel-example-generic" data-slide-to="1">2学霸节免费直播学霸节免费直播</li>
+			<li data-target="#carousel-example-generic" data-slide-to="0" class="">学霸节免费直播</li>
+			<li data-target="#carousel-example-generic" data-slide-to="1">2学霸节免费直播学霸节免费直播</li>
+			<li data-target="#carousel-example-generic" data-slide-to="0" class="">学霸节免费直播</li>
+			<li data-target="#carousel-example-generic" data-slide-to="1">2学霸节免费直播学霸节免费直播</li>
+			<li data-target="#carousel-example-generic" data-slide-to="0" class="">学霸节免费直播</li>
+			<li data-target="#carousel-example-generic" data-slide-to="1">2学霸节免费直播学霸节免费直播</li>
 		</ol>
 	</div>
 </div>

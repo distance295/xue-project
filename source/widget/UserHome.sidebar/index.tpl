@@ -19,12 +19,10 @@
         <i class="fa fa-book"></i>
         <span>错题本</span>
     </a>
-<!--
     <a href="" class="btn btn-primary" data-id="TestPapers">
         <i class="fa fa-map-o"></i>
         <span>试卷集</span>
     </a>
--->
     <a href="GoldIndex.html" class="btn btn-primary" data-id="Gold">
         <i class="fa fa-rmb"></i>
         <span>金币</span>

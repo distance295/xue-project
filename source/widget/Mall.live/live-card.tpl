@@ -7,7 +7,7 @@
 
 <div class="live-card">
     <div class="live-course-box">
-        <img src="../../widget/Mall.live/img/live-teacher-photo1.png" class="live-teacher-photo"/>
+        <img src="../../widget/Mall.live/img/live-teacher-photo6.png" class="live-teacher-photo"/>
         <div class="live-course-hover">
             <div class="live-course-title"></div>
             <span class="live-course-show-title">韬哥认为你一定 会的小学知识点</span>

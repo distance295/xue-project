@@ -47,7 +47,7 @@ $(function(){
     }
 });
    tabRecord();
-
+   tabProgram();
 });
 </script>
 

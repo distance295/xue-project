@@ -1,6 +1,7 @@
 <!--
     @require homework.less
     @require ../Module.popover/xue.popover.js
+    @require homework.nicescroll.min.js
     @require homework.ImageSet.min.js
     @require homework.ImageTrans.min.js
     @require homework.js
@@ -27,6 +28,30 @@
 
 	<!--交作业正文开始-->
 	<div class="homework-image-box" id="homework-Image-box-1" data-zoom="true">
+		
+		<!--音频的位置,第一次进入页面显示默认的音频列表添加homework-audio-list-box-display-->
+		<div class="homework-audio-list-box homework-audio-list-box-display">
+			<ul>
+				<li class="homework-audio-btn-click" data-audio ="http://x03.xesimg.com/homework/audio/2016/03/11/14576902531928.mp3" data-val="老师总评"><i class="audio-icon"></i><em>老师总评</em></li>
+				<li class="homework-audio-btn-click" data-audio = "http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3" data-val="测试1精讲"><i class="audio-icon"></i><em>测试1精讲</em></li>
+				<li class="homework-audio-btn-click" data-audio ="/data/homework/我的好兄弟.mp3" data-val="测试2精讲"><i class="audio-icon"></i><em>测试2精讲</em></li>
+				<li class="homework-audio-btn-click" data-audio = "http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3" data-val="测试3精讲"><i class="audio-icon"></i><em>测试3精讲</em></li>
+				<li class="homework-audio-btn-click" data-audio ="/data/homework/我的好兄弟.mp3" data-val="测试4精讲"><i class="audio-icon"></i><em>测试4精讲</em></li>
+				<li class="homework-audio-btn-click" data-audio = "http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3" data-val="测试5精讲"><i class="audio-icon"></i><em>测试5精讲</em></li>
+				<li class="homework-audio-btn-click" data-audio ="/data/homework/我的好兄弟.mp3" data-val="测试6精讲"><i class="audio-icon"></i><em>测试6精讲</em></li>
+				<li class="homework-audio-btn-click" data-audio = "http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3" data-val="测试7精讲"><i class="audio-icon"></i><em>测试7精讲</em></li>
+				<li class="homework-audio-btn-click" data-audio = "http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3" data-val="测试3精讲"><i class="audio-icon"></i><em>测试3精讲</em></li>
+				<li class="homework-audio-btn-click" data-audio ="/data/homework/我的好兄弟.mp3" data-val="测试4精讲"><i class="audio-icon"></i><em>测试4精讲</em></li>
+				<li class="homework-audio-btn-click" data-audio = "http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3" data-val="测试5精讲"><i class="audio-icon"></i><em>测试5精讲</em></li>
+				<li class="homework-audio-btn-click" data-audio ="/data/homework/我的好兄弟.mp3" data-val="测试6精讲"><i class="audio-icon"></i><em>测试6精讲</em></li>
+				<li class="homework-audio-btn-click" data-audio = "http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3" data-val="测试7精讲"><i class="audio-icon"></i><em>测试7精讲</em></li>
+				<li class="homework-audio-btn-click" data-audio = "http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3" data-val="测试3精讲"><i class="audio-icon"></i><em>测试3精讲</em></li>
+				<li class="homework-audio-btn-click" data-audio ="/data/homework/我的好兄弟.mp3" data-val="测试4精讲"><i class="audio-icon"></i><em>测试4精讲</em></li>
+				<li class="homework-audio-btn-click" data-audio = "http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3" data-val="测试5精讲"><i class="audio-icon"></i><em>测试5精讲</em></li>
+				<li class="homework-audio-btn-click" data-audio ="/data/homework/我的好兄弟.mp3" data-val="测试6精讲"><i class="audio-icon"></i><em>测试6精讲</em></li>
+				<li class="homework-audio-btn-click" data-audio = "http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3" data-val="测试7精讲"><i class="audio-icon"></i><em>测试7精讲</em></li>
+			</ul>
+		</div>
 		<div class="homework-image-area">
 			<div class="homework-Thumbnails-box pull-left">
 				<div class="homework-page-btn">
@@ -34,6 +59,7 @@
 				</div>
 				<div class="homework-Thumbnails-img-list" id="Thumbnails">
 					<ul>
+						<li><img src="img/small1.png" class="homework-Feedback-small-img"/><i></i></li>
 						<li>
 							<span class="homework-MaskLayer"></span>
 							<span class="homework-MaskLayer-num">1</span>
@@ -65,7 +91,7 @@
 							<span class="homework-MaskLayer-num">6</span>
 							<img src="img/small2.png" /><i></i>
 						</li>
-						<li><img src="img/small1.png" class="homework-Feedback-small-img"/><i></i></li>
+						
 					</ul>
 			    </div>
 				<div class="homework-page-btn">
@@ -73,9 +99,12 @@
 					</div>
 			</div>
 			<div class="homework-bigImg-box">
+				<!--语音audio按钮开始-->
+		        <!-- <audio class="homework-audio-btn-style hiding" controls="controls" src=""> </audio> -->
 				<div class="homework-rightMeun pull-right">
 					<ul>
-						<!-- <li><a href="javascript:void(0)" class="homework-audio"></a></li> -->
+						<!--音频的位置,第一次进入页面显示默认的音频列表添加flag = '1'-->
+						<li><a href="javascript:void(0)" class="homework-audio" flag = '1'></a></li>
 						<li><a href="javascript:void(0)" class="homework-leftRotate-btn"></a></li>
 						<li><a href="javascript:void(0)" class="homework-rightRotate-btn"></a></li>
 						<li><a href="javascript:void(0)" class="homework-zoom-btn"></a></li>
@@ -83,14 +112,18 @@
 					</ul>
 				</div>
 				<div id="homework-ImageTransform-box-1" class="homework-ImageTransform">
+
+					
+					
 					<ul style="display:none">
+						<li><img src="img/small1.png" /></li>
 						<li><img src="img/small3.png" /></li>
 						<li><img src="http://7sbrvo.com2.z0.glb.qiniucdn.com/homework/img/2015/11/05/14467099031310.png" /></li>
 						<li><img src="img/small3.png" /></li>
 						<li><img src="img/small2.png" /></li>
 						<li><img src="img/small3.png" /></li>
 						<li><img src="img/small2.png" /></li>
-						<!-- <li><img src="img/small1.png" /></li> -->
+						
 					</ul>
 					<!--作业反馈开始-->
 					<div class="homework-Feedback hiding">
@@ -106,17 +139,14 @@
 								</div>
 							</div>
 							<div class="homework-Reviews">
-								<h3 class="homework-teacher">老师评语</h3>
-								<!--语音audio按钮开始-->
-								<audio class="homework-audio-btn homework-audio-btn-box hiding" controls="controls" src="/data/homework/我的好兄弟.mp3"> </audio>
 							    <!--语音audio按钮结束-->
-								<div class="homework-audio-box">
+								<div class="homework-audio-box homework-audio-btn-click" data-audio ="http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3" data-val="老师总评">
 									 <i class="homework-icoAudio"></i>
-									 <em>20</em>
+									 <em>老师总评</em>
 								</div>
 							</div>
 							<p class="homework-Feedback-describe">
-									32分，满分是50，还是有点偏低。错了一道逻辑推理的题目，和一道零点分段法的题目，这部分要好好再看看课程哦，要学会对题目归纳总结。但是其他题目做得都不错，看得出来暑假还是用心预习了的，字也写得很漂亮，很棒！但是老师还是要小小提醒你一下，看看老师帮你写了多少个解啊，咱们做题的时候一定要规范作答，上了初中，这一点非常重要哦~加油，下一次老师期待你提交上来完美的试卷！
+									32分，满分是50，还是有点偏低。错了一道逻辑推理的题目，和一道零点分段法的题目，这部分要好好再看看课程哦，要学会对题目归纳总结。但是其他题目做得都不错，看得出来暑假还是用心预习了的，字也写得很漂亮，很棒！但是老师还是要小小提醒你一下，看看老师帮你写了多少个解啊，咱们做题的时候一定要规范作答，上了初中，这一点非常重要哦~加油，下一次老师期待你提交上来完美的试卷32分，满分是50，还是有点偏低。错了一道逻辑推理的题目，和一道零点分段法的题目，这部分要好好再看看课程哦，要学会对题目归纳总结。但是其他题目做得都不错，看得出来暑假还是用心预习了的，字也写得很漂亮，很棒！但是老师还是要小小提醒你一下，看看老师帮你写了多少个解啊，咱们做题的时候一定要规范作答，上了初中，这一点非常重要哦~加油，下一次老师期待你提交上来完美的试卷！
 							</p>
 							<div class="homework-Feedback-video pull-left">
 								<h3>老师推荐你观看以下视频</h3>
@@ -184,7 +214,7 @@
 		    //缩略图等比例缩放
             //homeWork.imageRate('.homework-image-box');
             //语音存在的情况下
-            homeWork.audio('.homework-image-box');
+            homeWork.audioPlay('.homework-image-box');
             //点击提醒按钮
             homeWork.remind();
             //判断是否存在缩放图片
@@ -233,6 +263,27 @@
 	       	       homeWork.submitComment(_dom);
 	       	   }
 	       })
+
+	       //滚动条样式修改
+	        $('.homework-audio-list-box').niceScroll({
+                cursorcolor: "#333",//#CC0071 光标颜色
+                cursoropacitymax: 1, //改变不透明度非常光标处于活动状态（scrollabar“可见”状态），范围从1到0
+                touchbehavior: false, //使光标拖动滚动像在台式电脑触摸设备
+                cursorwidth: "6px", //像素光标的宽度
+                cursorborder: "0", // 	游标边框css定义
+                cursorborderradius: "10px",//以像素为光标边界半径
+                autohidemode: false //是否隐藏滚动条
+            });
+
+            $('.homework-Feedback-describe').niceScroll({
+                cursorcolor: "#666",//#CC0071 光标颜色
+                cursoropacitymax: 1, //改变不透明度非常光标处于活动状态（scrollabar“可见”状态），范围从1到0
+                touchbehavior: false, //使光标拖动滚动像在台式电脑触摸设备
+                cursorwidth: "6px", //像素光标的宽度
+                cursorborder: "0", // 	游标边框css定义
+                cursorborderradius: "10px",//以像素为光标边界半径
+                autohidemode: false //是否隐藏滚动条
+            });
 	       
 	})
 	

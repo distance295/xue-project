@@ -1,3 +1,12 @@
+@width:100%;
+@borderea:1px solid #eaeaea;
+@borderf6:1px solid #f6f6f6;
+@fs12:12px;
+@fs26:26px;
+@pt:11px;
+@c9:#999;
+@margin:0 17px;
+
 .live-title{color: #999;font-size: 18px;position: relative;margin-bottom: 20px;}
 .live-title span{display: inline-block;margin-right: 15px;float: left;}
 .live-title div{height: 22px;margin-left: 87px;border-bottom: 1px solid #eaeaea;}
@@ -5,18 +14,19 @@
 .live-scroll-btn-container li{float: left;margin-left: 5px;width: 10px;height: 10px;border: 1px solid #e5e7ec;border-radius: 10px;}
 .live-scroll-btn-on{background-color: #1e89e0}
 .live-scroll-box,.live-list-container{overflow: hidden;width: 1274px;}
-.live-scroll-box-container{position: absolute;width: 100%;}
-.live-scroll-container{position: relative;width: 100%;margin-bottom: 30px;height: 291px;overflow: hidden}
-.live-list{overflow: hidden;width: 100%;margin-bottom: 90px;}
+.live-scroll-box-container{width: 100%;}
+.live-scroll-container{position: relative;width: 100%;max-height: 588px;overflow: hidden;margin-bottom: 30px;}
+.live-list{overflow: hidden;width: 100%;margin-bottom: 20px;}
 .live-card{float: left;width: 271px;margin-right: 35px;}
+.live-card:nth-child(4n){margin-right:0;}
 .live-course-hover{position: absolute;bottom: 0;height: 80px;}
-.live-course-content{width: 237px;position: absolute;top:12px;left: 10px;color: #fff;font-size: 14px;text-overflow: ellipsis}
+.live-course-content{width: 260px;position: absolute;top:12px;left: 10px;color: #fff;font-size: 14px;text-overflow: ellipsis}
 .live-course-box{position: relative;display: inline-block;}
 .live-course-box img{width: 271px;height: 198px;}
-.live-teacher-photo{margin-top: 11px;}
-.live-course-title{height: 30px;width: 245px;position: absolute;bottom: 0;background-color: #000;opacity: 0.5;filter:alpha(opacity=50);}
-.live-course-show-title{height: 30px;width: 245px;position: absolute;bottom: 0;color: #fff;font-size: 14px;text-align: center;line-height: 30px;overflow: hidden;}
-.live-time-tip{width: 245px;background-color: #f9f9f9;color: #ed5565;}
+.live-teacher-photo{margin-top: 20px;}
+.live-course-title{height: 30px;width: 271px;position: absolute;bottom: 0;background-color: #000;opacity: 0.5;filter:alpha(opacity=50);}
+.live-course-show-title{height: 30px;width: 271px;position: absolute;bottom: 0;color: #fff;font-size: 14px;text-align: center;line-height: 30px;overflow: hidden;}
+.live-time-tip{width: 271px;background-color: #f9f9f9;color: #ed5565;}
 .live-time-tip-container{line-height: 30px;}
 .live-time-tip-container span{font-size: 16px;margin-left: 10px;}
 .live-time-tip-container img{margin-right: 9px;}
@@ -31,8 +41,39 @@
 .live-enter{width: 150px;height: 36px;display: inline-block;background-color: #e74c3c;color: #fff;font-size: 14px;text-align: center;line-height: 36px;border-radius: 1px;cursor: pointer;}
 .live-enter-box{display: inline-block;width: 245px;height: 50px;text-align: center;line-height: 50px;}
 .live-blue{background-color: #3bafda;}
-.live-grey{background-color: #bfbfbf;}
+.live-have-order,.live-grey{background-color: #bfbfbf;width: 150px;height: 36px;display: inline-block;color: #fff;font-size: 14px;text-align: center;line-height: 36px;border-radius: 1px;}
 .liveBreadCrumb{margin-top: 17px;}
 .choice .row{margin: 0;}
-
-
+.live-order{background-color: #ffbc3c;}
+.liveOrderFailModal .modal-body,.liveOrderSuccessModal .modal-body{text-align: center;height: 420px}
+.orderFailTip,.orderSuccessTip{position: absolute;bottom: 0;right: 10px;margin-bottom: 10px;color: #999;}
+.live-check-more{
+    height: 50px;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #fcfcfc;
+    border: 1px solid #eaeaea;
+    text-align: center;
+    line-height: 50px;
+    color: #1e89e0;
+    cursor: pointer;
+    i{
+        top: 2px;
+        margin-left: 4px;
+    }
+}
+.live-rank-title{width: @width;height: 38px;font-size: @fs12;border: @borderea;background-color: #fcfcfc;
+.current{
+    background-color: #fff;
+    color: #1e89e0;
+    border-right: 1px solid #eaeaea;
+}
+}
+.live-rank-focus {color: #1e89e0;}
+.live-rank-title .glyphicon{top: 2px;}
+.live-rank-title li{float: left;width: 65px;height: 36px;text-align: center;line-height:36px;list-style: none;cursor: pointer;}
+.live-rank-num{display: inline-block;width: 65px;height: 36px;margin-left:-1px;text-align: center;line-height: 36px;border-left: 1px solid #eaeaea;}
+.live-hidden{
+    display: none;
+}
+.text-center{text-align: center;}

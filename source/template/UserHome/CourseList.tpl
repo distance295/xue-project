@@ -18,6 +18,17 @@
                 <li><a href="#">录播</a></li>
                 <li><a href="#">已过期课程</a></li>
             </ul>
+            <div class="filter-public-tab">
+                <span class="filter-text-style">筛选：</span>
+                <div class="filter-nav-list">
+                    <ul id="fresh-filter-nav">
+                        <li data-type="0" class="current"><a href="javascript:void(0)">全部</a></li>
+                        <li data-type="20" class=""><a href="javascript:void(0)">题目</a></li>
+                        <li data-type="2"><a href="javascript:void(0)">图文</a></li>
+                        <li data-type="21"><a href="javascript:void(0)">视频</a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="course-main-wrap">
                 <link rel="import" href="../../widget/UserHome.courses/list.course.tpl?__inline">
             </div>
@@ -58,7 +69,42 @@ function delayDate(){
         },
     });
 }
-
+// 续报
+function ContinueCourse(){
+    $.ajax({
+        type: "get",
+        url: "/data/courses/continuecourse.html",
+        dataType: "html",
+        success: function(result) {
+            if(result){
+                createModal.show({
+                    id : 'delayDate',
+                    title : '原班续报课程',
+                    cls : 'continuecourse',
+                    width: 730,
+                    content : result
+                });
+                $('#delayDate').modal('show')
+            }
+        },
+    });
+}
+// 续报课程立即报名按钮
+function immediateSign(){
+    // var courseID = ;
+    // var    URL = ;
+    $.ajax({
+        type: "get",
+        url: "",
+        // data: {courseID:courseID},
+        dataType: "html",
+        success: function(result) {
+            if(result){
+                window.location.href = URL;
+            }
+        },
+    });
+}
 $(function  () {
     progressBar();
 
@@ -68,16 +114,67 @@ $(function  () {
     $('.label-delay').on('click',function(){
         delayDate();
     });
+    // 续报课程
+    $('.label-continun').on('click',function(){
+        ContinueCourse();
+    });
+    // 续报课程的立即报名按钮
+    $('.immediateSign').on('click',function(){
+        immediateSign();
+    });
     // 更多服务的资料弹框
-    $('.more-list li.courseList-material').on('click',function(){
+    $('.courseList-material').on('click',function(){
         materialForm();
     });
     // 更多服务的考试弹框
-    $('.more-list li.courseList-exam').on('click',function(){
+    $('.courseList-exam').on('click',function(){
         examTable();
     });
     testLive('.listTest-btn');
     liveHelp('.liveHelp-btn');
+    QrCodeInstructor('.QR-code-hover');
+
+    // 退课
+    $('body').on('click','.drop-course', function(){
+
+        var result = $('.drop-course-wrap').html();
+        createModal.show({
+            id : 'dropCourse',
+            title : '退课',
+            cls : 'dropCourse',
+            width: 532,
+            content : result
+        });
+        $('#dropCourse').modal({backdrop: 'static', keyboard: false,show: true});
+    });
+    // 临时调课
+    $('body').on('click','.temporary-adjustCourse', function(){
+
+        var result = $('.temporary-adjust-course-detail').html();
+        createModal.show({
+            id : 'temporaryAdjustCourse',
+            title : '临时调课',
+            cls : 'temporaryAdjustCourse',
+            width: 750,
+            content : result
+        });
+        $('#temporaryAdjustCourse').modal({backdrop: 'static', keyboard: false,show: true});
+    });
+    // 永久调课
+    $('body').on('click','.permanent-adjustCourse', function(){
+        // 永久调课有课程
+        var result = $('.permanent-adjust-course-detail').html();
+        // 永久调课无课程
+        // var result = $('.permanent-adjust-nocourse').html();
+        createModal.show({
+            id : 'permanentAdjustCourse',
+            title : '永久调课',
+            cls : 'permanentAdjustCourse',
+            width: 752,
+            content : result
+        });
+        $('#permanentAdjustCourse').modal({backdrop: 'static', keyboard: false,show: true});
+    });
 })
 // 更多服务
 function moreService (){
@@ -107,17 +204,17 @@ function materialForm(){
         dataType: "html",
         success: function(result) {
             if(result){
-               createModal.show({
+             createModal.show({
                 id : 'materialForm',
                 title : '讲义资料',
                 cls : 'material-exam',
                 width: 770,
                 content : result
             });
-               $('#materialForm').modal('show');
-           }
-       },
-   });
+             $('#materialForm').modal('show');
+         }
+     },
+ });
 }
 // 讲义资料弹框tab事件
 $('body').on('click','.material-wrap .material-tab li',function(){
@@ -133,17 +230,17 @@ function examTable(){
         dataType: "html",
         success: function(result) {
             if(result){
-               createModal.show({
+             createModal.show({
                 id : 'examTable',
                 title : '本课考试',
                 cls : 'material-exam',
                 width: 770,
                 content : result
             });
-               $('#examTable').modal('show')
-           }
-       },
-   });
+             $('#examTable').modal('show')
+         }
+     },
+ });
 }
 $('.ui-pages').pages({
     total : 29, // 总记录数
