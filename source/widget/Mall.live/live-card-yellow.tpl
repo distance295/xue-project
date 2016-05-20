@@ -7,14 +7,16 @@
 
 <div class="live-card">
     <div class="live-course-box">
-        <img src="/static/img/zhibo_message.png" class="live-teacher-photo"/>
+        <img src="../../widget/Mall.live/img/zhibo_message.png" class="live-teacher-photo"/>
         <!-- <div class="live-course-hover">
             <div class="live-course-title"></div>
             <span class="live-course-show-title">韬哥认为你一定 会的小学知识点</span>
             <span class="live-course-content" style="display: none">啊啊啊啊啊啊啊啊啊啊啊啊啊</span>
         </div> -->
          <div class="live-course-title"></div>
-         <a  href="#" class="join-live bg-blue"></a>
+         <a href="#" class="join-live bg-yellow">
+             
+         </a>
 
     </div>
     <div class="live-time-tip">
