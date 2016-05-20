@@ -49,7 +49,7 @@
           <link rel="import" href="../../widget/Public.Module/course08.tpl?__inline">
           <link rel="import" href="../../widget/Public.Module/course08.tpl?__inline">
           <link rel="import" href="../../widget/Public.Module/course08.tpl?__inline">
-           <link rel="import" href="../../widget/Public.Module/course08.tpl?__inline">
+           <link rel="import" href="../../widget/Public.Module/course13.tpl?__inline">
           <link rel="import" href="../../widget/Public.Module/course10.tpl?__inline">
           <link rel="import" href="../../widget/Public.Module/course09.tpl?__inline">
      </div>

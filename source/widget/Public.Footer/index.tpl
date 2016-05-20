@@ -38,10 +38,10 @@
             </p>
             <p>
                 客服电话： <strong class="text-danger">400-800-2211</strong>
-                （免长途话费） Copyright &copy; 2009-2015 www.xueersi.com All Rights Reserved
+                （免长途话费） 010-52867461 Copyright &copy; 2009-2015 www.xueersi.com All Rights Reserved
             </p>
             <p>
-                北京学而思教育科技有限公司
+                北京学而思教育科技有限公司 地址：北京市海淀区丹棱街16号海兴大厦B座3层
                 <a target="_blank" href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action">京ICP备09032638号</a>
                 京公网安备:1101082103
             </p>
