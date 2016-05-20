@@ -14,7 +14,9 @@
             <span class="live-course-content" style="display: none">啊啊啊啊啊啊啊啊啊啊啊啊啊</span>
         </div> -->
          <div class="live-course-title"></div>
-         <a  href="#" class="join-live bg-blue"></a>
+         <a href="#" class="join-live bg-red">
+             
+         </a>
 
     </div>
     <div class="live-time-tip">
