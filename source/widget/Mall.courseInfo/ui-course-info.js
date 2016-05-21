@@ -396,19 +396,5 @@ $(function () {
 //             xue.win('coachAvatar').close();
 //         });
 //    });
-    //随屏滚动
-         var rollStart = $('.scroll-box-wrap'); 
-         var offset = rollStart.offset();
-         var rollBox = rollStart.prev();
-	     $(window).scroll(function() {
-	            if ($(window).scrollTop() > offset.top){
-	                    rollStart.addClass("rollbox");
-                        rollStart.find('.scroll-btn').show();
-                        rollBox.stop().animate({top:0,paddingTop:10},0);
-	            } else {
-	                    rollStart.removeClass("rollbox");
-                        rollStart.find('.scroll-btn').hide();
-                        rollBox.stop().animate({top:0},0);
-	            }
-	    });
+ 
 });
