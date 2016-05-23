@@ -17,8 +17,21 @@
         </div>
     </div>
 </div>
-<div class="course-info-box">
+<div class="course-info-box" style="height:1000px;">
     <div class="course-detail" style="display:block;">
+        <ul class="feedBackAnchor">
+            <li class="current"><a href="#id001">适合对象</a></li>
+            <li><a href="">培养目标</a></li>
+            <li><a href="#">课程摘要</a></li>
+              <li><a href="#">适合对象</a></li>
+            <li><a href="#">培养目标</a></li>
+            <li><a href="#">课程摘要</a></li>
+              <li><a href="#">适合对象</a></li>
+            <li><a href="#">培养目标</a></li>
+            <li><a href="#">课程摘要</a></li>
+            <li><a href="javascript:scroll(0,0);"><i class="fa fa-chevron-up"></i>返回顶部</a></li>
+        </ul>
+        
         <table class="table table_outline">
             <tbody>
                 <tr>
@@ -101,6 +114,7 @@
                 </tr>
             </tbody>
         </table>
+        <a name="id001" id="id001" >1234这里是锚点</a>
     </div>
     <!-- 直播大纲 -->
     <div class="course-detail">

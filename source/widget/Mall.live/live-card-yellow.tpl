@@ -5,7 +5,11 @@
 -->
 
 
+<<<<<<< HEAD
 <div class="live-card"  id='6018'>
+=======
+<div class="live-card">
+>>>>>>> origin/master
     <div class="live-course-box">
         <img src="../../widget/Mall.live/img/zhibo_message.png" class="live-teacher-photo"/>
         <!-- <div class="live-course-hover">
@@ -14,14 +18,20 @@
             <span class="live-course-content" style="display: none">啊啊啊啊啊啊啊啊啊啊啊啊啊</span>
         </div> -->
          <div class="live-course-title"></div>
+<<<<<<< HEAD
          <a href="#" class="live-order join-live bg-yellow">
              立即预约直播
+=======
+         <a href="#" class="join-live bg-yellow">
+             
+>>>>>>> origin/master
          </a>
 
     </div>
     <div class="live-time-tip">
         <div class="live-time-tip-container">
             <span>暑假预初数学直播目标满分班 </span>
+<<<<<<< HEAD
          <p>
              <span >
                 <span>今天</span>
@@ -33,5 +43,16 @@
              <img src="../../widget/Mall.live/img/ic_views.png" />
          </p>
         </div>
+=======
+            <p>第3讲</p>
+            <span class="teacher">授课老师：张新刚</span>
+         <p>
+             <img src="../../widget/Mall.live/img/ic_views.png" />
+             <span class="watchNum">666</span>
+         </p>
+
+        </div>
+
+>>>>>>> origin/master
     </div>
 </div>

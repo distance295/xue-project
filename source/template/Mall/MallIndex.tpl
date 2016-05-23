@@ -8,7 +8,11 @@
 	<div class="grade-course-title">
 		<div>
 			<h6 class="live-title">直播讲座</h6>
+<<<<<<< HEAD
 			<a href="#" class="more"><span">更多讲座</span><i class="fa fa-angle-right fa-lg"></i><i class="fa fa-angle-right fa-lg"></i></a>
+=======
+			<a href="#" class="more">更多讲座&gt;&gt;</a>
+>>>>>>> origin/master
 			<!-- <ul class="grade-list grade-list-live" role="tablist">
 				<li class="active" role="presentation" class="active">
 					<a href="#live1" aria-controls="live1" role="tab" data-toggle="tab">即将开始</a>
