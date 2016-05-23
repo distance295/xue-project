@@ -3,7 +3,7 @@
     @require ui-course-info.less
 -->
 <div class="ui-course-infor-wrap">
-    	<h2 class="coures-name-title">人教版四升五年级上下全册数学满分班<em>目标满分班</em></h2>
+    	<h2 class="coures-name-title">人教人教教教教教人教版四升五年级上下全册数学满分班<em>目标满分班</em></h2>
 		<div class="course-left-player f-left">
 			<div class="video-player" data-url="/data/Mall.courseInfo/video.html" data-params="a=1&b=2">
 				<img src="pic/lb-xiangqing_03.png" height="400" width="590" alt="">
