@@ -188,27 +188,39 @@ button.active,
 .grade-course-title div {
   height: 35px;
   line-height: 35px;
-  border-bottom: 1px solid #3bafda;
+  border-bottom: 1px solid transparent;
   margin-bottom: 20px;
 }
 .grade-course-title h6 {
   position: relative;
   float: left;
-  width: 90px;
+  // width: 90px;
   height: 35px;
   background: #fff;
   top: 9px;
   z-index: 1;
-  font-size: 18px;
-  color: #999;
+  font-size: 20px;
+  color: #333333;
 }
 .grade-course-title h6.live-title {
   width: 90px;
 }
 .grade-course-title a.more {
-  float: right;
-  font-size: 14px;
-  color: #3bafda;
+  float: left;
+  font-size: 12px;
+  color: #666666;
+  position: relative;
+  top: 15px;
+  span{
+    margin-right: 9px;
+  }
+}
+.grade-course-title a.more i{
+  font-size: 16px;
+  margin-left: 5px;
+}
+.grade-course-title a.more i:last-child{
+  margin-left: 2px;
 }
 .grade-course-title ul.live-list-tabs {
   float: left;
@@ -281,7 +293,7 @@ button.active,
 .row-page-turn {
   margin-bottom: 20px;
   margin-left: 0;
-  overflow: hidden;
+  // overflow: hidden;
 }
 .row-page-turn .live-content-action {
   width: 110%;
@@ -294,26 +306,38 @@ button.active,
   margin-top: 0;
 }
 .row-page-turn .page-turn {
-  width: 45px;
-  height: 115px;
-  cursor: pointer;
-  text-indent: -9999em;
+    font-size: 18px;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    color: #bdbdbd;
+    border: 1px solid #bdbdbd;
+    position: absolute;
+    text-align: center;
+    line-height: 20px;
+    top: -30px;
+    transition:all .5s;
 }
+.row-page-turn .page-turn:hover{
+  color:#3bafda !important;
+  
+}
+
 .row-page-turn .page-turn.page-up {
-  background: url(../../static/img/page-up-default.png?__inline) 0 no-repeat;
+    right:29px;
 }
 .row-page-turn .page-turn.page-down {
-  background: url(../../static/img/page-down-default.png?__inline) 0 no-repeat;
+    right: 0px;
 }
 .row-page-turn .page-turn-box {
   float: left;
-  width: 1100px;
+  width: 1190px;
   overflow: hidden;
 }
 .row-page-turn .page-turn-box .course-small-list {
   float: left;
   display: inline;
-  margin: 0 36px 0 15px;
+  // margin: 0 36px 0 15px;
 }
 /*首页公用标题样式和一些重构样式 结束位置*/
 .paginationjs-pages .pagination > .disabled > span,

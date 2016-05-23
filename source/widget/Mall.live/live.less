@@ -19,29 +19,71 @@
 .live-list{overflow: hidden;width: 100%;margin-bottom: 20px;}
 .live-card{float: left;width: 271px;margin-right: 35px;}
 .live-card:nth-child(4n){margin-right:0;}
-.live-course-hover{position: absolute;bottom: 0;height: 80px;}
+.live-course-hover{
+    position: absolute;bottom: 0;height: 80px;
+}
 .live-course-content{width: 260px;position: absolute;top:12px;left: 10px;color: #fff;font-size: 14px;text-overflow: ellipsis}
 .live-course-box{position: relative;display: inline-block;}
+.live-course-box:hover .live-course-title{
+    height: 198px;
+}
+.bg-red{
+    background: #e74c3c;
+};
+.bg-yellow{
+    background: #ffa700;
+};
+.bg-blue{
+    background: #3bafda;
+}
+.live-card .join-live{
+    cursor: pointer;
+    transition:all .3s;
+    color: transparent;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    width:271px;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+}
+.live-course-box:hover .join-live{
+    top: 80px;
+    bottom: 80px;
+    width: 150px;
+    margin: 0 60px;
+    line-height: 38px;
+    color: #fff;
+}
 .live-course-box img{width: 271px;height: 198px;}
 .live-teacher-photo{margin-top: 20px;}
-.live-course-title{height: 30px;width: 271px;position: absolute;bottom: 0;background-color: #000;opacity: 0.5;filter:alpha(opacity=50);}
+.live-course-title{transition: all .15s;height: 0px;width: 271px;position: absolute;top: 0;background-color: #000;opacity: 0.7;filter:alpha(opacity=50);}
 .live-course-show-title{height: 30px;width: 271px;position: absolute;bottom: 0;color: #fff;font-size: 14px;text-align: center;line-height: 30px;overflow: hidden;}
 .live-time-tip{width: 271px;background-color: #f9f9f9;color: #ed5565;}
+.live-time-tip span.teacher{ font-size: 14px;color: #a0a0a0;margin-left: 10px};
 .live-time-tip-container{line-height: 30px;}
-.live-time-tip-container span{font-size: 16px;margin-left: 10px;}
-.live-time-tip-container img{margin-right: 9px;}
-.live-time-tip-container p{
-    display: inline-block;font-size: 12px;color: #666;margin-right: 5px;float: right;
+.live-time-tip-container span{ color:#333;font-size: 16px;margin-left: 0px;}
+.live-time-tip-container span.time{margin-left: 8px;}
+.live-time-tip-container span.watchNum{float:right;font-size: 12px;color: #666}
+.live-time-tip-container img{margin-right: 6px;float: right;position: relative;top: 10px;}
+.live-time-tip-container p{margin-bottom: 0;
+   width: 100%;font-size: 12px;color: #333;margin-right: 5px;
     .fa {
         margin-right: 5px;
         color: #ddd;
         font-size: 16px;
     }
+    span{
+        color: red;
+    }
 }
+
 .live-enter{width: 150px;height: 36px;display: inline-block;background-color: #e74c3c;color: #fff;font-size: 14px;text-align: center;line-height: 36px;border-radius: 1px;cursor: pointer;}
 .live-enter-box{display: inline-block;width: 245px;height: 50px;text-align: center;line-height: 50px;}
 .live-blue{background-color: #3bafda;}
-.live-have-order,.live-grey{background-color: #bfbfbf;width: 150px;height: 36px;display: inline-block;color: #fff;font-size: 14px;text-align: center;line-height: 36px;border-radius: 1px;}
+.live-have-order,.live-grey{background-color: #bfbfbf}
+.live-grey{background-color: #bfbfbf !important;}
 .liveBreadCrumb{margin-top: 17px;}
 .choice .row{margin: 0;}
 .live-order{background-color: #ffbc3c;}

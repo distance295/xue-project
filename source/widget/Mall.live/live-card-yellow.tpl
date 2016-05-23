@@ -5,7 +5,7 @@
 -->
 
 
-<div class="live-card">
+<div class="live-card"  id='6018'>
     <div class="live-course-box">
         <img src="../../widget/Mall.live/img/zhibo_message.png" class="live-teacher-photo"/>
         <!-- <div class="live-course-hover">
@@ -14,8 +14,8 @@
             <span class="live-course-content" style="display: none">啊啊啊啊啊啊啊啊啊啊啊啊啊</span>
         </div> -->
          <div class="live-course-title"></div>
-         <a  href="#" class="join-live bg-blue">
-             观看直播回放
+         <a href="#" class="live-order join-live bg-yellow">
+             立即预约直播
          </a>
 
     </div>

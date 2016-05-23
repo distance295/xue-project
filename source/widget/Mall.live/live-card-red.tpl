@@ -14,12 +14,12 @@
             <span class="live-course-content" style="display: none">啊啊啊啊啊啊啊啊啊啊啊啊啊</span>
         </div> -->
          <div class="live-course-title"></div>
-         <a  href="#" class="join-live bg-blue">
-             观看直播回放
+         <a href="#" class="join-live bg-red">
+             直播中,立即进入
          </a>
 
     </div>
-    <div class="live-time-tip">
+   <div class="live-time-tip">
         <div class="live-time-tip-container">
             <span>暑假预初数学直播目标满分班 </span>
          <p>
