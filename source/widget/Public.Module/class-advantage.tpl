@@ -4,20 +4,12 @@
     @require live.js      
 -->
 
-<<<<<<< HEAD
 <div class="grade-course-title">
-=======
-<div class="grade-course-title" >
->>>>>>> origin/master
     <div>
         <h6>课程优势</h6>
     </div>
 </div>
-<<<<<<< HEAD
 <div class="advantage-box">
-=======
-<div class="advantage-box" style="height: 250px">
->>>>>>> origin/master
     <img   src="../../static/img/advantage.png" alt="">
     <div class="zhezhao">
         <div class="advantage-img"></div>
