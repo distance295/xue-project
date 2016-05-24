@@ -8,12 +8,12 @@
 }
 .index-new-trends {
 	width: 280px;
-	height: 380px;
+	height: 260px;
 	overflow: hidden;
-	background:#fff;
+	background:rgba(255,255,255,0.7);
 	position: absolute;
 	right: 0;
-	top:0;
+	top:60px;
 	z-index: 1;
 	.trends-title {
 		width: 260px;
@@ -48,8 +48,7 @@
 		}
 	}
 	.index-login-items {
-		height: 160px;
-		background:#f9f9f9;
+		height: 140px;
 		overflow: hidden;
 		.media-info-text {
 			line-height: 180%;
@@ -59,11 +58,67 @@
 			}
 		}
 		.media {
-			height: 110px;
+			height: 100px;
 			padding:20px  0 15px 40px;
 			.media-body {
 				.user-name {
 					overflow: hidden;margin: 10px 0 5px;
+				}
+				.QRcode{
+					position: absolute;
+					top: 140px;
+					height: 110px;
+					width: 100%;
+					left:0px;
+					box-sizing: border-box;
+					padding:0 30px;
+					
+				}
+				.QRcode_icon{
+					position: absolute;
+					bottom: -4px;
+					width: 100%;
+					left:0px;
+					box-sizing: border-box;
+					padding:0 34px;
+					p{
+						margin-top: 10px
+					};
+					div:first-child{
+						li{
+							width: 80px;
+							height: 87px;
+							background: url('/static/img/weixin_icon.png') no-repeat center;
+							background-size: 51px 50px;
+
+						};
+						li:hover{
+							background: url('/static/img/weixin.png') no-repeat center;
+							background-size: 100% 100%;
+						}
+					};
+					div:last-child{
+						li{
+							width: 80px;
+							height: 87px;
+							background: url('/static/img/app_icon.png') no-repeat center;
+							background-size: 51px 50px;
+
+						};
+						li:hover{
+							background: url('/static/img/app.png') no-repeat center;
+							background-size: 100% 100%;
+						}
+					}
+					
+				}
+				.loginImg{
+					    width: 60px;
+					    height: 60px;
+					    position: absolute;
+					    border-radius: 50%;
+					    box-shadow: 0px 0px 1px 1px #cccccc;
+					    left: 110px;
 				}
 				.user-info {
 					.user-sex {

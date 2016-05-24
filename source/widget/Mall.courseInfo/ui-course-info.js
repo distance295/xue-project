@@ -144,13 +144,13 @@ courseInfor.courseTab = function (tabTit, on, tabCon) {
         });
     }
     //直播课程详情页---查看直播时间列表
-courseInfor.lookTimeList = function () {
-    var that = $('#lookTimeList');
-    that.on('click', function (event) {
-        $('.ui-nav-link li:eq(1)').addClass('current').siblings().removeClass('current');
-        $('.course-info-box .course-detail:eq(1)').show().siblings().hide();
-    });
-}
+//courseInfor.lookTimeList = function () {
+//    var that = $('#lookTimeList');
+//    that.on('click', function (event) {
+//        $('.ui-nav-link li:eq(1)').addClass('current').siblings().removeClass('current');
+//        $('.course-info-box .course-detail:eq(1)').show().siblings().hide();
+//    });
+//}
 
 //返回顶部
 //2016-01-11-18：00
@@ -245,7 +245,7 @@ $(function () {
     if (ouline.length != 0) { //当id:ouline的值不等于零的时候执行
         ouline.jScrollPane();
     }
-    courseInfor.lookTimeList(); //直播课程详情页---查看直播时间列表
+    //courseInfor.lookTimeList(); //直播课程详情页---查看直播时间列表
     // 绑定老师头像切换事件
     $('body').on('click', '.ui_avatar_con .prev ,  .ui_avatar_con .next', function () {
         var that = $(this);
@@ -366,34 +366,35 @@ $(function () {
          });
     });
     //辅导老师介绍
-    $('body').on('mouseenter','.coach-avatar-info', function(){
-        var that = $(this);
-        var con = $('.coachAvatarInfo').html();
-        xue.win({
-            id: 'coachAvatar',
-             title : false,
-             arrow : 'bc',
-             follow : that,
-             content : con,
-             lock : false,
-             close : false,
-             submit : false,
-             cancel : false
-        });
-         var box = $('#xuebox_coachAvatar'),
-             size = xue.win('coachAvatar').getSize(),
-             o = {
-             left : that.offset().left + (that.outerWidth() / 2) - (size.outerWidth / 2),
-             top : that.offset().top + that.height() - 111
-         };
-         xue.win('coachAvatar').position(o.left, o.top);
-         $(this).on('mouseleave', function(e){
-             if($(e.relatedTarget).attr('id') != 'xuebox_coachAvatar' && $(e.relatedTarget).parents('#xuebox_coachAvatar').length === 0){
-                 xue.win('coachAvatar').close();
-             }
-         });
-         $('#xuebox_coachAvatar').on('mouseleave', function(){
-             xue.win('coachAvatar').close();
-         });
-    });
+//    $('body').on('mouseenter','.coach-avatar-info', function(){
+//        var that = $(this);
+//        var con = $('.coachAvatarInfo').html();
+//        xue.win({
+//            id: 'coachAvatar',
+//             title : false,
+//             arrow : 'bc',
+//             follow : that,
+//             content : con,
+//             lock : false,
+//             close : false,
+//             submit : false,
+//             cancel : false
+//        });
+//         var box = $('#xuebox_coachAvatar'),
+//             size = xue.win('coachAvatar').getSize(),
+//             o = {
+//             left : that.offset().left + (that.outerWidth() / 2) - (size.outerWidth / 2),
+//             top : that.offset().top + that.height() - 111
+//         };
+//         xue.win('coachAvatar').position(o.left, o.top);
+//         $(this).on('mouseleave', function(e){
+//             if($(e.relatedTarget).attr('id') != 'xuebox_coachAvatar' && $(e.relatedTarget).parents('#xuebox_coachAvatar').length === 0){
+//                 xue.win('coachAvatar').close();
+//             }
+//         });
+//         $('#xuebox_coachAvatar').on('mouseleave', function(){
+//             xue.win('coachAvatar').close();
+//         });
+//    });
+ 
 });

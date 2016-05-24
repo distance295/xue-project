@@ -1283,10 +1283,14 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 		font-size: 14px;
 		span.drop-charge{
 			font-size: 24px;
-			margin: 0 5px;
-			background: url('../Public.Module/img/answer.png') no-repeat right center;
+			margin: 0 2px;
+			background: url('../Public.Module/img/answer.png') no-repeat center center;
 			padding-right: 20px;
 			cursor: pointer;
+		}
+		span.drop-charge-num{
+			font-size: 24px;
+			margin-right: 3px;
 		}
 		span{
 			color: #e74c3c;
@@ -1300,6 +1304,9 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 		margin-top: 35px;
 	}
 }
+.dropCharge-hide{
+	display: none;
+}
 .ajust-course-btn{
 	width: 140px;
 	height: 46px;
@@ -1310,11 +1317,15 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 	display: inline-block;
 	color: #fff;
 	border-radius: 2px;
+	border: none;
 	&:hover,&:active,&:focus{
 		color: #fff;
 		background: #d62c1a;
 	}
-}	
+}
+button.ajust-course-btn[disabled]{
+	background: #ccd1d9;
+}
 .drop-course-success-inner{
 	background: url('img/success.png') no-repeat left center;
 	height: 246px;
@@ -1329,13 +1340,47 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 }
 .dropCourse-success-inner{
 	background: url('img/success.png') no-repeat left center;
-	width: 500px;
+	width: 402px;
 	height: 246px;
-	line-height: 220px;
 	font-size: 24px;
 	color: #e74c3c;
 	padding-left: 270px;
 	margin: 0 auto;
+	padding-top: 87px;
+}
+.dropCourse{
+	.dropCourse-success-inner{
+		span{
+			color: #999;
+			font-size: 12px;
+			b{
+				font-style: normal;
+				font-weight: normal;
+			}
+		}
+	}
+}
+.permanentAdjustCourse{
+	.drop-course-success-inner{
+		span{
+			color: #999;
+			font-size: 12px;
+			b{
+				font-style: normal;
+				font-weight: normal;
+			}
+		}
+	}
+}
+.permanent-adjust-nocourse-detail{
+	span{
+		color: #999;
+		font-size: 12px;
+		b{
+			font-style: normal;
+			font-weight: normal;
+		}
+	}
 }
 .drop-course-success-inner{
 	text-align: left;
@@ -1501,9 +1546,15 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 				float: left;
 				line-height: 30px;
 				text-align: center;
+				overflow: hidden;
+				ttext-overflow: ellipsis;
+				white-space: nowrap;
+				&:focus,&:hover{
+					color: #333;
+				}
 			}
 		}
-		li.active a{
+		li.adjustActive a{
 			border: 2px solid #1e89e0;
 			background: url('img/icon_infor.png') no-repeat scroll right bottom;
 		}
@@ -1525,22 +1576,22 @@ table tr.even, table tr.alt, table tr:nth-of-type(2n){
 .permanent-adjust-nocourse-detail{
 	background: url('img/password_end.png') no-repeat left center;
 	height: 309px;
-    line-height: 24px;
-    padding: 85px 0 46px 280px;
-    text-align: left;
-    width: 700px;
-    padding-right: 36px;
+	line-height: 24px;
+	padding: 85px 0 46px 280px;
+	text-align: left;
+	width: 700px;
+	padding-right: 36px;
 
-    p{
-    	font-size: 16px;
-    	margin-bottom: 0;
-    	line-height: 28px;
-    	span{
-    		color: #e74c3c;
-    	}
-    }
-    p.drop-course-btn-wrap{
-    	margin-top: 40px;
-    	text-align: center;
-    }
+	p{
+		font-size: 16px;
+		margin-bottom: 0;
+		line-height: 28px;
+		span{
+			color: #e74c3c;
+		}
+	}
+	p.drop-course-btn-wrap{
+		margin-top: 40px;
+		text-align: center;
+	}
 }

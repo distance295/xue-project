@@ -5,6 +5,112 @@
 @dark333: #333;
 @blueColor: #1e89e0;
 ul,li{list-style: none;}
+
+.advantage-box{
+	img{position: absolute;}
+	.zhezhao{
+
+		position: absolute;
+		z-index: 9999;
+		.advantage-img{
+		float: left;
+		width: 290px;
+		height: 250px;
+		background-color: transparent;
+		}
+	}
+	.text-box {
+		position: relative;
+		.text{
+			position: absolute;
+			width: 290px;
+			height: 250px;
+			background-color: #3399cc;
+			top: 250px;
+			opacity: 0;
+			color:#fff;
+			padding: 70px 0 0 20px;
+			.title{
+				font-size: 16px;
+			}
+			.content{
+				a{
+					display: block;
+					color: #fff;
+					line-height: 20px;
+				}
+			}
+		}
+	}
+}
+.class-box{
+	float: left;
+}
+.class-info{
+	width: 390px;
+	height: 400px;
+	position: relative;
+	.class-name{
+		position: absolute;
+		top: 0;
+		display: block;
+		font-size: 16px;
+		color: #fff;
+		background: rgba(98,191,225,0.8);
+		left: 105px;
+		padding: 12px 38px;
+		border-radius: 3px;
+	}
+}
+.class-container{
+	padding: 0 20px;
+	.message{
+		font-size: 12px;
+		line-height: 24px;
+		color:#666;
+	}
+	.highSchool{
+		    width: 50px;
+		    height: 50px;
+		    float: left;
+		    border-radius: 50%;
+		    border: 1px solid rgba(51,51,51,0.5);
+		    line-height: 50px;
+		    text-align: center;
+		    margin-right: 50px;
+		    color: #3bafda;
+	}
+	.highSchool:hover{
+		color:#fff;
+		background: #3bafda;
+		border-color: #fff;
+	}
+	i{
+		font-size: 18px;
+		opacity: 0.8;
+		margin-right: 5px;
+	}
+	.subject{
+
+		margin-right: 95px;
+		text-align: center;
+		float: left;
+		width: 50px;
+		height: 50px;
+		span{
+			display: block;
+			width: 50px;
+			height: 50px;
+			background: url('/static/img/class.png');
+			margin-bottom: 12px;
+			
+		}
+	}
+	.marginR_0{
+		margin-right: 0 !important;
+	}
+}
+
 .border-radius(@amount: 5px){
 	-moz-border-radius: @amount;
 	-webkit-border-radius: @amount;
@@ -53,10 +159,51 @@ ul,li{list-style: none;}
 }
 .course-list {
 	font-family: "SimSun";
-	border-bottom: 1px solid @borderColor;
+	// border-bottom: 1px solid @borderColor;
 	width: 100%;
-	padding: 12px 12px 20px;
+	// padding: 12px 12px 20px;
 	overflow: hidden;
+	.ui-author{
+		background: #3bafda;
+		height: 250px;
+		width:150px;
+		position: relative;
+		color: #fff;
+		text-align: center;
+		.ui-name{
+				font-size: 14px;
+			};
+		.ui-more{
+			
+			border: 1px solid #fff;
+			padding: 6px 12px;
+			border-radius: 3px;
+		}
+		p:last-child{
+			margin-top: 24px;
+		}
+		img{
+			margin: 30px 0 12px 0px;
+			position: relative;
+		}
+		a{
+			font-size: 12px;
+			color:#fff;
+			margin-bottom: 8px;
+			
+		}
+		i{
+			 display:block;
+		    width:0;
+		    height:0;
+		    border-width:10px 0 10px 12px;
+		    border-style:solid;
+		    border-color:transparent transparent transparent #fff;/*透明 透明 透明 黄*/
+		    position:absolute;
+		    top:55px;
+		    left:0px;
+		}
+	}
 	.ui_follow {
 		.btn-default {
 			background-color: #ccd1d9;
@@ -173,15 +320,17 @@ ul,li{list-style: none;}
 		display: block;
 		overflow: hidden;
 		margin-bottom: 0;
+
 		p{
 			line-height: 30px;
 			overflow: hidden;
 			font-size: 12px;
 			margin: 0;
 		}
-		p.tip-for{
+		a.tip-for{
+			display: block;
 			font-size: 12px;
-			color: #999;
+			color: #666;
 			margin: 0;
 			span{
 				margin-right: 15px;
@@ -239,7 +388,7 @@ ul,li{list-style: none;}
 			line-height: 34px;
 		}
 		.course-title{
-			font-size: 16px;
+			font-size: 14px;
 			margin-top: 0;
 			span.course-tip{
 				display: inline-block;
@@ -321,7 +470,7 @@ ul,li{list-style: none;}
 	.cancel-courseList{
 		float: right;
 		font-size: 12px;
-		padding-right: 14px;
+		// padding-right: 14px;
 		a{
 			color: @blueColor;
 		}
@@ -563,10 +712,9 @@ ul,li{list-style: none;}
 	cursor: pointer;
 }
 .course-small-list{
-	width: 315px;
-	height: 115px;
+	width: 396px;
+	height: 310px;
 	padding: 12px 3px 13px 12px;
-	border: 1px solid #eaeaea;
 	position: relative;
 	overflow: visible;
 	background: #fcfcfc;
@@ -612,6 +760,7 @@ ul,li{list-style: none;}
 		}
 		p.tip-for{
 			margin: 3px 0;
+			line-height: 20px;
 			span{
 				margin-right: 10px;
 			}
@@ -623,7 +772,9 @@ ul,li{list-style: none;}
 			}
 		}
 		p.course-title{
-			margin: 3px 0;
+			margin: 3px 0 16px;
+			padding-bottom: 16px;
+			border-bottom: 1px solid #cccccc;
 		}
 	}
 }
@@ -822,6 +973,21 @@ ul,li{list-style: none;}
 			}
 		}
 	}
+    &.teacher-coach-bomb {
+        .dialog-down-wrap {
+            .dialog-border {
+                height: 80px;
+                .dialog-down {
+                    height: 80px;line-height: 80px;
+                    ul {
+                        li {
+                            img {width:60px;height: 60px;margin:0 5px;}
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 // 课程筛选页右边广告位
 .sideright-body{
@@ -849,7 +1015,6 @@ ul,li{list-style: none;}
 	padding-left: 0;
 	background: #fcfcfc;
 	li {
-		cursor: pointer;
 		float: left;
 		font-size: 12px;
 		list-style: outside none none;
@@ -879,12 +1044,15 @@ ul,li{list-style: none;}
 			}
 		}
 	}
+    li.popular-price {
+        width:70px;
+    }
 	.stu-term-select{
 		position: absolute;
 		background: red;
 		width: 75px;
 		top: 0;
-		right: 105px;
+		left: 200px;
 		border: 1px solid #eaeaea;
 		border-top: none;
 		background: #fff;
@@ -909,18 +1077,13 @@ ul,li{list-style: none;}
 		}
 	}
 	.Onlylive-select {
-		color: #999999;
+		color: #333;
 		float: right;
-		margin-right: 15px;
-		input{
-			float: left;
-			margin-top: 12px;
-			margin-right: 5px;
-		}
-		b{
+		margin-right: 5px;
+		strong{
 			font-style: normal;
-			float: left;
 			font-weight: normal;
+            color: #e74c3c;
 		}
 	}
 	.screen-look-grades{
@@ -942,6 +1105,7 @@ ul,li{list-style: none;}
 }
 .preletive{
 	position: relative;
+    z-index: 2;
 }
 .mt0{
 	margin-top: 0;
@@ -953,6 +1117,7 @@ ul,li{list-style: none;}
 	font-size: 12px;
 	color: #999999;
 	font-family: "SimSun";
+    margin-bottom: 10px;
 	p{
 		font-size: 12px;
 		line-height: 42px;	
@@ -999,3 +1164,263 @@ ul,li{list-style: none;}
 		}
 	}
 }
+//最新改版样增加样式2016-0505 alexliu
+.wd110 {width:110%;}
+.course-test-select {
+    padding:5px 10px;
+    float:left;
+    width:389px;
+    height: 180px;
+    border:1px solid #ededed;
+    margin-right:10px;
+    margin-bottom:20px;
+    position: relative;
+    z-index: 1;
+    .ui-avatar {
+        .avatar-photo {
+            .bottom0 {margin-bottom: 0;}
+        } 
+    }
+    .course-detail-wrap {
+        .course-detail {
+            width:100%;
+            p.course-title{
+                line-height: 25px;
+            }
+            p.tip-for {
+                line-height: 40px;
+                color: #666;
+                &.tip-for-list {
+                    line-height: 180%;
+                }
+            }
+            p.tip-free {
+                 line-height: 50px;
+                font-size: 16px;
+                font-family: 'Microsoft YaHei';
+                span {
+                      color: #666;
+                }
+                strong {
+                   color: #e74c3c;  
+                }
+            }
+            p.tip-statistics {
+                span {float:left;}
+                span.icon-stat {
+                   background: url(/static/img/ic_heart.png) 0 8px no-repeat;
+                    padding-left:23px;
+                    color: #e74c3c;
+                }
+                span.money {
+                    float:right;
+                    font-size: 18px;
+                    color: #333;
+                    font-family: 'Microsoft YaHei';
+                }
+            }
+            .course-teacher {
+                .ui-username {font-size: 16px;font-family: 'Microsoft YaHei';} 
+            }
+            p.tip-fans-list {
+                color: #666;line-height: 40px;
+                span {padding-right:10px;}
+            }
+        }
+    }
+    .course-detail-info {
+         width:389px;
+        height: 40px;
+        line-height: 40px;
+        background: #fcfcfc;
+        position: absolute;
+        left:0;
+        bottom:0;
+        z-index: 10;
+        padding-left:15px;
+        color: #666;
+        border-top:1px solid #ededed;
+        .left {
+            float:left;
+        }
+        .right{
+            float:right;
+            margin-right:15px;
+        }
+        strong{
+            font-size: 18px;
+            color: #e74c3c;
+            font-family: 'Microsoft YaHei';
+        }
+        :after{
+            position: absolute;
+            display: inline-block;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-bottom: 7px solid #fcfcfc;
+            left: 33px;
+            top: -6px;
+            content: '';
+        }
+        :before{
+            position: absolute;
+            display: inline-block;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-bottom: 7px solid #ededed;
+            left: 33px;
+            top: -7px;
+            content: '';
+        }
+    }
+}
+
+//直播筛选
+.container {
+    .col-md-12 {
+      overflow: hidden;
+        .add-selector-pic {width:1050px;overflow: hidden;float:left;}
+        .add-selector-seo {width:120px;overflow: hidden;float:right;}
+    }
+    .mb10 {margin-bottom: 20px;}
+}
+.col-course-title {
+    width:100%;
+    height: 70px;
+    line-height: 70px;
+    background: #1e89e0;
+    text-align: center;
+    font-family: 'Microsoft YaHei';
+    position: relative;
+    .course-sort-label {
+        display: block;width:110px;height:36px;line-height: 36px; background: #fff;border-radius: 18px;font-size: 14px;color: #1e89e0;position: absolute;left:10px;top:17px;
+        span.icon-fa {
+             float: left;width: 25px;height: 25px;background: #1e89e0;border-radius:50%;margin:5px;position: relative;
+            i.fa-angle-left,i.fa-angle-right {width:32px;color: #fff;font-size: 20px;font-weight: bold;position: absolute;left:-4px;top:2px;z-index: 1;}
+        }
+        span.txt {float: left;}
+        &.l-right {
+            left:1070px;
+            span.icon-fa {
+                float: right;
+                i.fa-angle-right {left:-2px;}
+            }
+             span.txt {margin-left: 17px;}
+        }
+    }
+    span.title {
+       font-size: 30px; color: #fff;
+    }
+}
+.select-subject-list {
+   height: 42px;background: #f9f9f9;border-bottom: 1px solid #ededed;
+    li {
+        float: left;width:196px;height:40px;line-height: 40px;text-align: center;font-size: 16px;font-family: 'Microsoft YaHei';margin-top:1px;
+        a {
+            display: block;
+            img {padding-right:5px;}
+        }
+        &.current {
+            background: #3bafda;
+            a {color: #fff; }
+        }
+    }
+}
+
+.live-course-rank-list {
+    height: 90px;border-bottom: 1px solid #ededed;overflow: hidden;
+    div {float: left;font-family:  'Microsoft YaHei';font-size: 14px;}
+    .rank-time {
+        width:350px;overflow: hidden;
+        p.time {
+            font-size: 20px;padding:12px 0 0 15px;
+            strong{padding-left:10px;color: #e74c3c;font-weight: normal;}
+        }
+        p.difficulty {
+            height:25px;line-height: 25px; overflow: hidden;padding-left:15px;
+            span {color: #999;}
+            a {padding-right:10px;}
+        }
+    }
+    .rank-satisfy {
+        width:150px;line-height: 90px;color: #999;overflow: hidden;
+        strong{color: #e74c3c;padding-left:10px;}
+    }
+    .rank-coach {
+        width:225px;line-height: 90px;color: #999;overflow: hidden;
+         a {padding-right: 10px;}
+        img {
+            width:60px;height: 60px;border-radius: 50%;overflow: hidden; margin-left:6px;float:right;margin:15px 10px 0 0;
+        }
+    }
+    .rank-places {
+        width:140px;height: 40px;color: #999;padding-top:25px;
+        strong {
+            display: inline-block;width:46px;height: 40px;line-height: 40px;background:url(img/icon-rank.png) no-repeat;color: #fff;text-align: center;font-size: 20px;margin-left:10px;padding-left: 5px;
+        }
+    }
+    .rank-money {
+        width:80px;line-height: 90px;color: #999;overflow: hidden;
+        strong{color: #666;}
+    }
+    .rank-btn {
+        width:128px;padding-top: 29px;
+        .btn {
+            background: #e74c3c;color: #fff;width:98px;height: 32px;text-align: center;
+            &.btn-gray {background: #bfbfbf;}
+        }
+    }
+}
+.problem{
+	margin-bottom: 40px;
+	img{
+		margin-right: 10px;
+	}
+	.content{
+		.title{
+			display: inline-block;
+			margin-right: 30px;
+			font-size: 14px;
+		}
+	}
+	.answer{
+		display: none;
+		margin-bottom: 40px;
+		padding-top: 20px;
+		div{
+			display: inline-block;
+		}
+		.text{
+			border:1px solid rgba(102,102,102,0.5); 
+			box-sizing: border-box;
+			width: 1110px;
+			padding: 20px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
