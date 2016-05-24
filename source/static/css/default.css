@@ -212,6 +212,13 @@ button.active,
   position: relative;
   top: 15px
 }
+.grade-course-title a.more i{
+  font-size: 16px;
+  margin-left: 5px;
+}
+.grade-course-title a.more i:last-child{
+  margin-left: 2px;
+}
 .grade-course-title ul.live-list-tabs {
   float: left;
   margin-right: 5px;
@@ -306,10 +313,13 @@ button.active,
     text-align: center;
     line-height: 20px;
     top: -30px;
+    transition:all .5s;
 }
-.color-blue{
+.row-page-turn .page-turn:hover{
   color:#3bafda !important;
+  
 }
+
 .row-page-turn .page-turn.page-up {
     right:29px;
 }

@@ -226,7 +226,7 @@ a,button,.btn{
     div {
      height: 35px;
      line-height: 35px;
-     border-bottom: 1px solid #3bafda;
+     border-bottom: 1px solid transparent;
      margin-bottom: 20px;  
  }
  h6 {
@@ -237,16 +237,18 @@ a,button,.btn{
     background:#fff;
     top:9px;
     z-index: 1;
-    font-size: 18px;
-    color: #999;
+    font-size: 20px;
+    color: #333;
     &.live-title {
         width: 90px;
     }
 }
 a.more {
-    float: right;
-    font-size: 14px;
-    color: @link-hover;
+        float: left;
+        font-size: 12px;
+        color: #666666;
+        position: relative;
+        top: 15px
 }
 ul.live-list-tabs {
     float: left;
@@ -360,12 +362,11 @@ overflow: hidden;
     }
     .page-turn-box {
         float: left;
-        width: 1100px;
+        width: 1190px;
         overflow: hidden;
         .course-small-list {
             float: left;
             display: inline;
-            margin:0 36px 0 15px;
         }
     }
 }

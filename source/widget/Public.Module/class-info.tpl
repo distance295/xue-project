@@ -30,6 +30,17 @@
                 </p>
 
                 <div class="subject">
+<<<<<<< HEAD
+                   <a href="#"></a>
+                    <p>语文</p>
+                </div>
+                <div class="subject">
+                     <a href="#"></a>
+                    <p>数学</p>
+                </div>
+                <div class="subject marginR_0 ">
+                     <a href="#"></a>
+=======
                     <span></span>
 
                     <p>语文</p>
@@ -42,6 +53,7 @@
                 <div class="subject marginR_0 ">
                     <span></span>
 
+>>>>>>> origin/master
                     <p>英语</p>
                 </div>
             </div>
@@ -51,7 +63,11 @@
         <div class="class-info">
             <div>
                 <a href="#">
+<<<<<<< HEAD
+                    <img src="../../static/img/middle_school.png" alt="">
+=======
                     <img src="../../static/img/primary_school.png" alt="">
+>>>>>>> origin/master
                 </a>
                 <a href="#" class="class-name">初中课程体系</a>
             </div>
@@ -64,6 +80,25 @@
                     <i class="fa fa-quote-right"></i>
                 </p>
                 <div class="subject">
+<<<<<<< HEAD
+                    <a href="#"></a>
+                    <p>语文</p>
+                </div>
+                <div class="subject">
+                   <a href="#"></a>
+                   <p>数学</p>
+                </div>
+                <div class="subject">
+                    <a href="#"></a>
+                    <p>英语</p>
+                </div>
+                <div class="subject">
+                     <a href="#"></a>
+                    <p>物理</p>
+                </div>
+                <div class="subject marginR_0 ">
+                    <a href="#"></a>
+=======
                     <span></span>
                     <p>语文</p>
                 </div>
@@ -81,6 +116,7 @@
                 </div>
                 <div class="subject marginR_0 ">
                     <span></span>
+>>>>>>> origin/master
                     <p>化学</p>
                 </div>
             </div>
@@ -90,7 +126,11 @@
         <div class="class-info">
             <div>
                 <a href="#">
+<<<<<<< HEAD
+                    <img src="../../static/img/high_school.png" alt="">
+=======
                     <img src="../../static/img/primary_school.png" alt="">
+>>>>>>> origin/master
                 </a>
                 <a href="#" class="class-name">高中课程体系</a>
             </div>
@@ -103,6 +143,20 @@
                     <i class="fa fa-quote-right"></i>
                 </p>
 
+<<<<<<< HEAD
+                <a href="#" class="highSchool">
+                    <span>概述</span>
+                </a>
+                <a  href="#" class="highSchool">
+                    <span>高一</span>
+                </a>
+                <a  href="#" class="highSchool">
+                    <span>高二</span>
+                </a>
+                <a  href="#" class="highSchool marginR_0 ">
+                    <span>高三</span>
+                </a>
+=======
                 <div class="highSchool">
                     <span>概述</span>
                 </div>
@@ -115,6 +169,7 @@
                 <div class="highSchool marginR_0 ">
                     <span>高三</span>
                 </div>
+>>>>>>> origin/master
             </div>
         </div>
     </div>
