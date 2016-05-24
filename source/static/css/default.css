@@ -210,11 +210,7 @@ button.active,
   font-size: 12px;
   color: #666666;
   position: relative;
-<<<<<<< HEAD
-  top: 15px;
-  span{
-    margin-right: 9px;
-  }
+  top: 15px
 }
 .grade-course-title a.more i{
   font-size: 16px;
@@ -222,9 +218,6 @@ button.active,
 }
 .grade-course-title a.more i:last-child{
   margin-left: 2px;
-=======
-  top: 15px
->>>>>>> origin/master
 }
 .grade-course-title ul.live-list-tabs {
   float: left;
@@ -320,7 +313,6 @@ button.active,
     text-align: center;
     line-height: 20px;
     top: -30px;
-<<<<<<< HEAD
     transition:all .5s;
 }
 .row-page-turn .page-turn:hover{
@@ -328,12 +320,6 @@ button.active,
   
 }
 
-=======
-}
-.color-blue{
-  color:#3bafda !important;
-}
->>>>>>> origin/master
 .row-page-turn .page-turn.page-up {
     right:29px;
 }

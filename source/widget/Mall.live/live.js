@@ -10,24 +10,22 @@ $(function(){
         $liveScrollBtn.removeClass('live-scroll-btn-on').eq(index).addClass('live-scroll-btn-on');
         $('.live-scroll-box-container').animate({top:(-1*291*index) + 'px'},300)
     });
-<<<<<<< HEAD
+
     $('.problem .answer').eq(0).css({display:'block'});
-=======
->>>>>>> origin/master
+
+
     $('.problem .title').each(function(index){
         $(this).bind('mouseenter',function(){
             $('.answer').css({display:'none'})
             .eq(index).css({display:'block'})
-<<<<<<< HEAD
+
         })
     })
     
     $('.class-box').each(function(i){
         if(i==2){
             return ;
-=======
-            console.info(index)
-        })
+        }
     })
     $('.page-turn').bind('click',function(event){
         $('.page-turn').removeClass('color-blue');
@@ -84,7 +82,7 @@ $(function(){
             // $(this).find('.live-course-title').stop().animate({"height":30},300);
             // $(this).find('.live-course-show-title').stop().fadeIn(300);
             // $(this).find('.live-course-content').stop().fadeOut(300);
->>>>>>> origin/master
+
         }
         $(this).find('.subject a').each(function(index){
             $(this).css({
@@ -290,15 +288,15 @@ $(function(){
             }
         });
     };
-<<<<<<< HEAD
+
     
    
-=======
+
 
     $('.bg-red').html('直播中,立即进入');
     $('.bg-yellow').html('立即预约直播');
     $('.bg-blue').html('观看直播回放');
->>>>>>> origin/master
+
     $('.ui-pages').pages({
         total: 16, // 总记录数
         size: 16, // 每页显示记录数
