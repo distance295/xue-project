@@ -59,34 +59,34 @@
 				</div>
 				<div class="homework-Thumbnails-img-list" id="Thumbnails">
 					<ul>
-						<li><img src="img/small1.png" class="homework-Feedback-small-img"/><i></i></li>
-						<li>
+						<li data-audio =""><img src="img/small1.png" class="homework-Feedback-small-img"/><i></i></li>
+						<li data-audio = "http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3">
 							<span class="homework-MaskLayer"></span>
 							<span class="homework-MaskLayer-num">1</span>
 							<img src="img/small3.png" />
 							<i></i>
 						</li>
-						<li>
+						<li data-audio ="/data/homework/我的好兄弟.mp3">
 							<span class="homework-MaskLayer"></span>
 							<span class="homework-MaskLayer-num">2</span>
 							<img src="http://7sbrvo.com2.z0.glb.qiniucdn.com/homework/img/2015/11/05/14467099031310.png" /><i></i>
 						</li>
-						<li>
+						<li data-audio ="">
 							<span class="homework-MaskLayer"></span>
 							<span class="homework-MaskLayer-num">3</span>
 							<img src="img/small3.png" /><i></i>
 						</li>
-						<li>
+						<li data-audio ="http://x03.xesimg.com/homework/audio/2016/03/11/14576902531928.mp3">
 							<span class="homework-MaskLayer"></span>
 							<span class="homework-MaskLayer-num">4</span>
 							<img src="img/small2.png" /><i></i>
 						</li>
-						<li>
+						<li data-audio ="">
 							<span class="homework-MaskLayer"></span>
 							<span class="homework-MaskLayer-num">5</span>
 							<img src="img/small3.png" /><i></i>
 						</li>
-						<li>
+						<li data-audio ="/data/homework/我的好兄弟.mp3">
 							<span class="homework-MaskLayer"></span>
 							<span class="homework-MaskLayer-num">6</span>
 							<img src="img/small2.png" /><i></i>
