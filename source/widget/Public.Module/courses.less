@@ -981,7 +981,7 @@ ul,li{list-style: none;}
                     height: 80px;line-height: 80px;
                     ul {
                         li {
-                            img {width:60px;height: 60px;}
+                            img {width:60px;height: 60px;margin:0 5px;}
                         }
                     }
                 }
@@ -1291,15 +1291,16 @@ ul,li{list-style: none;}
     background: #1e89e0;
     text-align: center;
     font-family: 'Microsoft YaHei';
+    position: relative;
     .course-sort-label {
-         float:left;width:110px;height:36px;line-height: 36px; background: #fff;border-radius: 18px;font-size: 14px;color: #1e89e0;margin-top:17px;margin-left:10px;
+        display: block;width:110px;height:36px;line-height: 36px; background: #fff;border-radius: 18px;font-size: 14px;color: #1e89e0;position: absolute;left:10px;top:17px;
         span.icon-fa {
              float: left;width: 25px;height: 25px;background: #1e89e0;border-radius:50%;margin:5px;position: relative;
             i.fa-angle-left,i.fa-angle-right {width:32px;color: #fff;font-size: 20px;font-weight: bold;position: absolute;left:-4px;top:2px;z-index: 1;}
         }
         span.txt {float: left;}
         &.l-right {
-            float: right;margin-right: 10px;
+            left:1070px;
             span.icon-fa {
                 float: right;
                 i.fa-angle-right {left:-2px;}
@@ -1364,7 +1365,7 @@ ul,li{list-style: none;}
     }
     .rank-btn {
         width:128px;padding-top: 29px;
-        a.btn {
+        .btn {
             background: #e74c3c;color: #fff;width:98px;height: 32px;text-align: center;
             &.btn-gray {background: #bfbfbf;}
         }
