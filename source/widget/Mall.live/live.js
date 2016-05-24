@@ -10,12 +10,22 @@ $(function(){
         $liveScrollBtn.removeClass('live-scroll-btn-on').eq(index).addClass('live-scroll-btn-on');
         $('.live-scroll-box-container').animate({top:(-1*291*index) + 'px'},300)
     });
+
+    $('.problem .answer').eq(0).css({display:'block'});
+
+
     $('.problem .title').each(function(index){
         $(this).bind('mouseenter',function(){
             $('.answer').css({display:'none'})
             .eq(index).css({display:'block'})
-            console.info(index)
+
         })
+    })
+    
+    $('.class-box').each(function(i){
+        if(i==2){
+            return ;
+        }
     })
     $('.page-turn').bind('click',function(event){
         $('.page-turn').removeClass('color-blue');
@@ -72,8 +82,39 @@ $(function(){
             // $(this).find('.live-course-title').stop().animate({"height":30},300);
             // $(this).find('.live-course-show-title').stop().fadeIn(300);
             // $(this).find('.live-course-content').stop().fadeOut(300);
+
         }
-    },'.live-course-hover');
+        $(this).find('.subject a').each(function(index){
+            $(this).css({
+                backgroundPosition:-50*index+'px '+ 0+'px',
+            })
+            .bind('mouseenter',function(){
+                $(this).css({
+                    backgroundPosition:-50*index+'px '+ -60+'px'
+                })
+            })
+            .bind('mouseleave',function(){
+                $(this).css({
+                    backgroundPosition:-50*index+'px '+ 0+'px',
+                })
+            })
+        })
+        if(i==1){
+            $(this).find('.class-container .subject').css({
+                marginRight:24+'px',
+            })
+        }
+
+    })
+    $('.advantage-img').each(function(index){
+        var i=index;
+        $('.text-box .text').eq(i).css({left:i*290+'px'})
+        $(this).bind('mouseenter',function(){
+            $('.text-box .text').eq(i).stop().animate({'top':0,opacity:1},500)
+        }).bind('mouseleave',function(){
+            $('.text-box .text').eq(i).stop().animate({'top':250,opacity:0},500)
+        })
+    })
     var $livecourseshowtitle = $('.live-course-show-title');
     $livecourseshowtitle.each(function(){
         var maxwidth=16;
@@ -92,13 +133,11 @@ $(function(){
 
     });
 
-    $body.on('click', '.live-order', function () {
+    $('body').on('click', '.live-order', function () {
         var liveOrderId = $(this).closest('.live-card').attr('id'),
             url = $(this).closest('.live-card').attr('data-url'),
             timer;
-
         var t = $(this);
-
         $.ajax({
             url : '/Lecture/ajaxFollow/',
             type : 'post',
@@ -250,9 +289,14 @@ $(function(){
         });
     };
 
+    
+   
+
+
     $('.bg-red').html('直播中,立即进入');
     $('.bg-yellow').html('立即预约直播');
     $('.bg-blue').html('观看直播回放');
+
     $('.ui-pages').pages({
         total: 16, // 总记录数
         size: 16, // 每页显示记录数
