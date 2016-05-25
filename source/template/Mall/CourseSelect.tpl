@@ -18,6 +18,9 @@
     <div class="col-md-12 top m10">
           <div class="add-selector-pic">
                 <img src="http://r01.xesimg.com/web/2016/04/20/14611181672040.jpg"/>
+          </div>
+          <div class="add-selector-seo">
+               <img src="http://r01.xesimg.com/web/2016/04/20/14611181672040.jpg"/>
           </div>        
     </div>
     <!--   12栏结束    -->
