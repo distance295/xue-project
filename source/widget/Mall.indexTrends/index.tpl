@@ -11,14 +11,16 @@
 		<div class="index-login-items">
 			<div class="media">
 				<!-- 已登录 -->
-				<!-- <div class="media-left">
+
+				<div class="media-left">
 					<a href="#">
 						<img class="media-object" src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="..."></a>
-				</div> -->
+				</div>
 				<!-- 已登录 -->
 				<div class="media-body">
 					<!-- 已登录 -->
-					<!-- <div class="user-name">
+					<div class="user-name">
+
 						<h4 class="media-heading pull-left">快乐的小鸟</h4>
 						<a class="user-v pull-left" href="">
 							<img src="img/v2.png" alt=""></a>
@@ -30,32 +32,36 @@
 					</div>
 					<div class="QRcode">
 						<div class="pull-left">
-							<img src="img/weixin.png" alt="">
+
+							<img src="/static/img/weixin.png" alt="">
 							<p class="text-center">微信公众号</p>
 						</div>
 						<div class="pull-right">
-							<img src="img/app.png" alt="">
+							<img src="/static/img/app.png" alt="">
 							<p class="text-center">APP下载</p>
 						</div>
-					</div> -->
+					</div>
 					<!-- 已登录 end-->
 					 <!-- 未登录 -->
-					<div class="loginImg">
+					<!-- <div class="loginImg">
 						<a href="#">
-						<img  src="/static/img/loginImg.png" alt="..."></a>
+						<img  src="img/loginImg.png" alt="..."></a>
 					</div>
 					<div class="QRcode_icon">
 						<div class="pull-left">
-							<!-- <img src="img/weixin_icon.png" alt=""> -->
+							<img src="img/weixin_icon.png" alt="">
+
 							<li></li>
 							<p class="text-center">微信公众号</p>
 						</div>
 						<div class="pull-right">
-							<!-- <img src="img/app_icon.png" alt=""> -->
+
+							<img src="img/app_icon.png" alt="">
 							<li></li>
 							<p class="text-center">APP下载</p>
 						</div>
-					</div> 
+					</div>  -->
+
 			</div>
 		</div>
 		<div class="index-btn-wrap">
