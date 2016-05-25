@@ -15,7 +15,7 @@ Helvetica,
 sans-serif;
 html,
 body {
-    font-family: "微软雅黑", Helvetica, 'Source Sans Pro', sans-serif;background: #EFD2D2;
+    font-family: "微软雅黑", Helvetica, 'Source Sans Pro', sans-serif;background: #f8f8f8;
 }
 body{
     overflow-y: scroll;
@@ -223,8 +223,11 @@ a,button,.btn{
 .grade-course-title {
     height: 60px;
     overflow: hidden;
- 
-     h6 {
+    margin-top: 20px;
+    &:nth-child(3){
+        margin-top: 0;
+    }
+    h6 {
         position: relative;
         float: left;
         height: 35px;
@@ -234,7 +237,7 @@ a,button,.btn{
         color: #333;
         line-height: 18px;
         }
-a.more {
+    a.more {
           float: left;
           font-size: 12px;
           color: #666666;
@@ -329,7 +332,6 @@ ul.grade-list {
 }
 }
 .row-page-turn {
-    margin-bottom: 20px;
     margin-left: 0;
     position: relative;
     .live-content-action {
@@ -371,7 +373,7 @@ ul.grade-list {
                                 font-size: 12px;
                                 color: #999;
                                 position: relative;
-                                top: 6px;
+                                top: 3px;
                                 font-size: 14px;
                             }
                         }
@@ -379,7 +381,7 @@ ul.grade-list {
                             margin-right: 6px;
                             float: right;
                             position: relative;
-                            top: 10px;
+                            top: 6px;
                         }
                     }
                 }

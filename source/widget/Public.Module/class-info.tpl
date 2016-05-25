@@ -18,13 +18,13 @@
                 <a href="#">
                     <img src="../../static/img/primary_school.png" alt="">
                 </a>
-                <a href="#" class="class-name">小学课程体系</a>
+                <p href="#" class="class-name">小学课程体系</p>
             </div>
             <div class="class-container">
                 <p class="message">
                     <i class="fa fa-quote-left"></i>
                 <span>
-                    很多家长认为，新学年起始于9月份。但殊不知一天之计在于晨，一年之计在于“暑”。新学年规划和过渡的重任就就就就就就落在了暑假的身上。
+                    小学数学结合奥数独创“十二级体系”；英语从剑桥少儿英语起步，中段结合新概念英语教材，高年级进行综合复习；语文重在培养兴趣、品质养成开阔视野。“直播+辅导”，即直播教学结合辅导老师个性化作业和点评服务，让学习更有效！
                 </span>
                     <i class="fa fa-quote-right"></i>
                 </p>
@@ -54,18 +54,17 @@
                     <img src="../../static/img/middle_school.png" alt="">
 
                 </a>
-                <a href="#" class="class-name">初中课程体系</a>
+                <p href="#" class="class-name">初中课程体系</p>
             </div>
             <div class="class-container">
                 <p class="message">
                     <i class="fa fa-quote-left"></i>
                 <span>
-                    很多家长认为，新学年起始于9月份。但殊不知一天之计在于晨，一年之计在于“暑”。新学年规划和过渡的重任就就就就就就落在了暑假的身上。
+                   十二年教学积淀，结合对课标和教材的深入调研，形成数、语、英、物、化五大学科完善的直播课程体系，覆盖高频考点、易错点，把握中考动向。根据学员差异，各科根据实际需要分设满分、尖端、联赛、学霸、素养等不同难度班型。
                 </span>
                     <i class="fa fa-quote-right"></i>
                 </p>
                 <div class="subject">
-
                     <a href="#"></a>
                     <p>语文</p>
                 </div>
@@ -83,7 +82,6 @@
                 </div>
                 <div class="subject marginR_0 ">
                     <a href="#"></a>
-
                     <p>化学</p>
                 </div>
             </div>
@@ -97,29 +95,32 @@
                     <img src="../../static/img/high_school.png" alt="">
 
                 </a>
-                <a href="#" class="class-name">高中课程体系</a>
+                <p href="#" class="class-name">高中课程体系</p>
             </div>
             <div class="class-container">
                 <p class="message">
                     <i class="fa fa-quote-left"></i>
                 <span>
-                    很多家长认为，新学年起始于9月份。但殊不知一天之计在于晨，一年之计在于“暑”。新学年规划和过渡的重任就就就就就就落在了暑假的身上。
+                    高中课程体系由【教材同步】与【高考总复习】组成，覆盖全国16个版本。假期预习，学期中同步与拓展拔高。课程结合定时的直播辅导、在线测评、答疑等服务，使学习习惯与成绩在学霸老师的言传身教中得到锻炼与提升。
                 </span>
                     <i class="fa fa-quote-right"></i>
                 </p>
-                <a href="#" class="highSchool">
-                    <span>概述</span>
-                </a>
-                <a  href="#" class="highSchool">
-                    <span>高一</span>
-                </a>
-                <a  href="#" class="highSchool">
-                    <span>高二</span>
-                </a>
-                <a  href="#" class="highSchool marginR_0 ">
-                    <span>高三</span>
-                </a>
-
+                <div class="subject">
+                    <a href="#"></a>
+                    <p>概述</p>
+                </div>
+                <div class="subject">
+                   <a href="#"></a>
+                   <p>高一</p>
+                </div>
+                <div class="subject">
+                    <a href="#"></a>
+                    <p>高二</p>
+                </div>
+                <div class="subject">
+                     <a href="#"></a>
+                    <p>高三</p>
+                </div>
             </div>
         </div>
     </div>
