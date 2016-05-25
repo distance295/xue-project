@@ -8,7 +8,7 @@
 
 <div class="grade-course-title">
     <div>
-        <h6>课程介绍</h6>
+        <h6>课程体系</h6>
     </div>
 </div>
 <div class="carousel-inner">
