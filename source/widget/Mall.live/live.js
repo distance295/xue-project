@@ -10,18 +10,13 @@ $(function(){
         $liveScrollBtn.removeClass('live-scroll-btn-on').eq(index).addClass('live-scroll-btn-on');
         $('.live-scroll-box-container').animate({top:(-1*291*index) + 'px'},300)
     });
-    $body.on({
-        mouseenter:function(){
-            $(this).find('.live-course-title').stop().animate({"height":80},300);
-            $(this).find('.live-course-show-title').stop().fadeOut(300);
-            $(this).find('.live-course-content').stop().fadeIn(300);
-        },
-        mouseleave:function(){
-            $(this).find('.live-course-title').stop().animate({"height":30},300);
-            $(this).find('.live-course-show-title').stop().fadeIn(300);
-            $(this).find('.live-course-content').stop().fadeOut(300);
-        }
-    },'.live-course-hover');
+    $('.problem .answer').eq(0).css({display:'block'});
+    $('.problem .title').each(function(index){
+        $(this).bind('mouseenter',function(){
+            $('.answer').css({display:'none'})
+            .eq(index).css({display:'block'})
+        })
+    })
     var $livecourseshowtitle = $('.live-course-show-title');
     $livecourseshowtitle.each(function(){
         var maxwidth=16;
@@ -40,13 +35,11 @@ $(function(){
 
     });
 
-    $body.on('click', '.live-order', function () {
+    $('body').on('click', '.live-order', function () {
         var liveOrderId = $(this).closest('.live-card').attr('id'),
             url = $(this).closest('.live-card').attr('data-url'),
             timer;
-
         var t = $(this);
-
         $.ajax({
             url : '/Lecture/ajaxFollow/',
             type : 'post',
@@ -60,9 +53,6 @@ $(function(){
                     window.location.href = msg.msg;
                     return;
                 }
-                if(msg.sign == 0){
-                    alert('您已预约过此课程或无此直播');
-                }
                 if(msg.sign == 1){
                     t.attr("data-target","#liveOrderSuccessModal");
                     liveOrderSuccessModal.showModal();
@@ -75,10 +65,10 @@ $(function(){
                             clearInterval(timer);
                         }
                     },1000);
-                    t.attr("class","live-grey");
+                    t.closest('."live-course-title').addClass('success_join')
                     t.html("已预约，请耐心等待")
                 }
-                if(msg.sign == 3){
+                if(msg.sign == 3 || msg.sign==0){
                     t.attr("data-target","#liveOrderFailModal");
                     liveOrderFailModal.showModal();
                     var tim = 5;
@@ -198,6 +188,13 @@ $(function(){
         });
     };
 
+    
+   
+
+
+    $('.bg-red').html('直播中,立即进入');
+    $('.bg-yellow').html('立即预约直播');
+    $('.bg-blue').html('观看直播回放');
 
     $('.ui-pages').pages({
         total: 16, // 总记录数

@@ -5,6 +5,285 @@
 @dark333: #333;
 @blueColor: #1e89e0;
 ul,li{list-style: none;}
+
+.advantage-box{
+	height: 100px;
+	.advantage-item{
+		padding: 25px 44px 0px 102px;
+		background: url(../../static/img/advantage.png);
+		width:290px;
+		margin-right: 10px;
+		height: 100px;
+		float: left;
+		&>p:first-child{
+			font-size: 14px;
+			line-height: 22px;
+			margin-bottom: 0;
+		}
+		&>p:last-child{
+			line-height: 20px;
+		}
+		&:hover{
+			color:#3bafda;
+		}
+		&:nth-child(1){
+			&:hover{
+			background-position: 0  -149px;
+			}
+		}
+		&:nth-child(2){
+			background-position: -300px 0;
+			&:hover{
+			background-position: -300px  -149px;
+			}
+		}
+		&:nth-child(3){
+			background-position: -600px 0;
+			&:hover{
+			background-position: -600px  -149px;
+			}
+		}
+		&:nth-child(4){
+			background-position: -900px 0;
+			margin-right: 0;
+			&:hover{
+			background-position: -900px -149px;
+			}
+		}
+	}
+}
+.class-box{
+	&:nth-child(1){
+		.class-info{
+			.class-container{
+				.subject{
+					&:nth-child(2) a{
+						&:hover {
+							background-position: 0px -60px;
+							&+p{
+								color:#3bafda;
+							}
+						}
+					}
+					&:nth-child(3) a{
+						background-position: -50px 0;
+						&:hover {
+							background-position: -50px -60px;
+							&+p{
+								color:#3bafda;
+							}
+						}
+					}
+				}
+				.subject{
+					&:nth-child(4) a{
+						background-position: -100px 0;
+						&:hover {
+							background-position: -100px -60px;
+							&+p{
+								color:#3bafda;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&:nth-child(2){
+		.class-info{
+			.class-container{
+				.subject{
+					margin-right: 24px;
+					&:last-child{
+						margin-right: 0;
+					}
+					&:nth-child(2) a{
+						&:hover {
+							background-position: 0px -60px;
+							&+p{
+								color:#3bafda;
+							}
+						}
+					}
+					&:nth-child(3) a{
+						background-position: -50px 0;
+						&:hover {
+							background-position: -50px -60px;
+							&+p{
+								color:#3bafda;
+							}
+						}
+					}
+				}
+				.subject{
+					&:nth-child(4) a{
+						background-position: -100px 0;
+						&:hover {
+							background-position: -100px -60px;
+							&+p{
+								color:#3bafda;
+							}
+						}
+					}
+				}
+				.subject{
+					&:nth-child(5) a{
+						background-position: -150px 0;
+						&:hover {
+							background-position: -150px -60px;
+							&+p{
+								color:#3bafda;
+							}
+						}
+					}
+				}
+				.subject{
+					&:nth-child(6) a{
+						background-position: -200px 0;
+						&:hover {
+							background-position: -200px -60px;
+							&+p{
+								color:#3bafda;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&:nth-child(3){
+		.class-info{
+			.class-container{
+				.subject{
+					margin-right: 50px;
+					a{
+						background: url('/static/img/high_school_icon.png');
+					}
+					&:last-child{
+						margin-right: 0;
+					}
+					&:nth-child(2) a{
+						&:hover {
+							background-position: 0px -60px;
+							&+p{
+								color:#3bafda;
+							}
+						}
+					}
+					&:nth-child(3) a{
+						background-position: -50px 0;
+						&:hover {
+							background-position: -50px -60px;
+							&+p{
+								color:#3bafda;
+							}
+						}
+					}
+				}
+				.subject{
+					&:nth-child(4) a{
+						background-position: -100px 0;
+						&:hover {
+							background-position: -100px -60px;
+							&+p{
+								color:#3bafda;
+							}
+						}
+					}
+				}
+				.subject{
+					&:nth-child(5) a{
+						background-position: -150px 0;
+						&:hover {
+							background-position: -150px -60px;
+							&+p{
+								color:#3bafda;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	float: left;
+	margin-right: 10px;
+	background: #fff;
+	&:last-child{
+		margin-right: 0;
+	}
+	.class-info{
+		width: 390px;
+		height: 400px;
+		position: relative;
+		.class-name{
+			position: absolute;
+			top: 0;
+			display: block;
+			font-size: 16px;
+			color: #fff;
+			background: rgba(98,191,225,0.8);
+			left: 105px;
+			padding: 12px 38px;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+		.class-container{
+			padding: 0 20px;
+    		margin-top: 26px;
+			.message{
+				font-size: 12px;
+			    line-height: 24px;
+			    color: #666;
+			    margin-bottom: 14px;
+			    position: relative
+			}
+			.highSchool{
+				    width: 50px;
+				    height: 50px;
+				    float: left;
+				    border-radius: 50%;
+				    border: 1px solid rgba(51,51,51,0.5);
+				    line-height: 50px;
+				    text-align: center;
+				    margin-right: 50px;
+				    color: #3bafda;
+			}
+			.highSchool:hover{
+				color:#fff;
+				background: #3bafda;
+				border-color: #fff;
+			}
+			i{
+				font-size: 18px;
+			    margin-right: 5px;
+			    color: #dcdcdc;
+			    &:last-child{
+			    	position: absolute;
+    				right: 0;
+			    }
+			}
+			.subject{
+				margin-right: 95px;
+			    text-align: center;
+			    float: left;
+			    width: 50px;
+			    height: 50px;
+				a{
+					display: block;
+				    width: 50px;
+				    height: 50px;
+				    background: url('/static/img/class.png');
+				    margin-bottom: 12px;
+				}
+			}
+			.marginR_0{
+				margin-right: 0 !important;
+			}
+		}
+	}
+}
+
+
 .border-radius(@amount: 5px){
 	-moz-border-radius: @amount;
 	-webkit-border-radius: @amount;
@@ -53,10 +332,53 @@ ul,li{list-style: none;}
 }
 .course-list {
 	font-family: "SimSun";
-	border-bottom: 1px solid @borderColor;
+	// border-bottom: 1px solid @borderColor;
 	width: 100%;
-	padding: 12px 12px 20px;
+	// padding: 12px 12px 20px;
 	overflow: hidden;
+	.ui-author{
+		background: #3bafda;
+		height: 250px;
+		width:150px;
+		position: relative;
+		color: #fff;
+		text-align: center;
+		.ui-name{
+				font-size: 14px;
+			};
+		.ui-more{
+			&:hover{
+				text-decoration: underline;
+			}
+			border: 1px solid #fff;
+			padding: 6px 12px;
+			border-radius: 3px;
+		}
+		p:last-child{
+			margin-top: 24px;
+		}
+		img{
+			margin: 30px 0 12px 0px;
+			position: relative;
+		}
+		a{
+			font-size: 12px;
+			color:#fff;
+			margin-bottom: 8px;
+			
+		}
+		i{
+			 display:block;
+		    width:0;
+		    height:0;
+		    border-width:10px 0 10px 12px;
+		    border-style:solid;
+		    border-color:transparent transparent transparent #fff;/*透明 透明 透明 黄*/
+		    position:absolute;
+		    top:55px;
+		    left:0px;
+		}
+	}
 	.ui_follow {
 		.btn-default {
 			background-color: #ccd1d9;
@@ -173,15 +495,17 @@ ul,li{list-style: none;}
 		display: block;
 		overflow: hidden;
 		margin-bottom: 0;
+
 		p{
 			line-height: 30px;
 			overflow: hidden;
 			font-size: 12px;
 			margin: 0;
 		}
-		p.tip-for{
+		a.tip-for{
+			display: block;
 			font-size: 12px;
-			color: #999;
+			color: #666;
 			margin: 0;
 			span{
 				margin-right: 15px;
@@ -239,7 +563,7 @@ ul,li{list-style: none;}
 			line-height: 34px;
 		}
 		.course-title{
-			font-size: 16px;
+			font-size: 14px;
 			margin-top: 0;
 			span.course-tip{
 				display: inline-block;
@@ -321,7 +645,7 @@ ul,li{list-style: none;}
 	.cancel-courseList{
 		float: right;
 		font-size: 12px;
-		padding-right: 14px;
+		// padding-right: 14px;
 		a{
 			color: @blueColor;
 		}
@@ -563,13 +887,19 @@ ul,li{list-style: none;}
 	cursor: pointer;
 }
 .course-small-list{
-	width: 315px;
-	height: 115px;
-	padding: 12px 3px 13px 12px;
-	border: 1px solid #eaeaea;
-	position: relative;
-	overflow: visible;
-	background: #fcfcfc;
+	width: 390px;
+    height: 250px;
+    padding: 0px 0px 0px 10px;
+    position: relative;
+    overflow: visible;
+    background: #fcfcfc;
+    margin-right: 10px;
+    a:hover{
+    	text-decoration: underline;
+    }
+    &:last-child{
+    	margin-right: 0;
+    }
 	.label-course{
 		width: 25px;
 		height: 47px;
@@ -596,7 +926,11 @@ ul,li{list-style: none;}
 		top: 47px;
 	}
 	.course-detail{
+		padding-top: 18px;
 		width: 224px;
+		display: block;
+	    overflow: hidden;
+	    margin-bottom: 0;
 		p.tip-video{
 			margin: 3px 0;
 			.tip-video-con{
@@ -612,6 +946,7 @@ ul,li{list-style: none;}
 		}
 		p.tip-for{
 			margin: 3px 0;
+			line-height: 20px;
 			span{
 				margin-right: 10px;
 			}
@@ -622,8 +957,21 @@ ul,li{list-style: none;}
 				margin-right: 0
 			}
 		}
+		a.tip-for{
+			display: block;
+		    font-size: 12px;
+		    color: #666;
+		    margin: 0;
+		    line-height: 22px;
+		    &:hover{
+		    	text-decoration: underline;
+		    }
+		}
 		p.course-title{
-			margin: 3px 0;
+			line-height: 18px;
+		    margin-bottom: 16px;
+		    padding-bottom: 12px;
+		    border-bottom: 1px solid #cccccc;
 		}
 	}
 }
@@ -822,6 +1170,21 @@ ul,li{list-style: none;}
 			}
 		}
 	}
+    &.teacher-coach-bomb {
+        .dialog-down-wrap {
+            .dialog-border {
+                height: 80px;
+                .dialog-down {
+                    height: 80px;line-height: 80px;
+                    ul {
+                        li {
+                            img {width:60px;height: 60px;margin:0 5px;}
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 // 课程筛选页右边广告位
 .sideright-body{
@@ -849,7 +1212,6 @@ ul,li{list-style: none;}
 	padding-left: 0;
 	background: #fcfcfc;
 	li {
-		cursor: pointer;
 		float: left;
 		font-size: 12px;
 		list-style: outside none none;
@@ -952,6 +1314,7 @@ ul,li{list-style: none;}
 	font-size: 12px;
 	color: #999999;
 	font-family: "SimSun";
+    margin-bottom: 10px;
 	p{
 		font-size: 12px;
 		line-height: 42px;	
@@ -1004,10 +1367,10 @@ ul,li{list-style: none;}
     padding:5px 10px;
     float:left;
     width:389px;
-    height: 156px;
+    height: 180px;
     border:1px solid #ededed;
     margin-right:10px;
-    margin-bottom: 10px;
+    margin-bottom:20px;
     position: relative;
     z-index: 1;
     .ui-avatar {
@@ -1022,10 +1385,21 @@ ul,li{list-style: none;}
                 line-height: 25px;
             }
             p.tip-for {
-                line-height: 25px;
+                line-height: 40px;
                 color: #666;
                 &.tip-for-list {
                     line-height: 180%;
+                }
+            }
+            p.tip-free {
+                 line-height: 50px;
+                font-size: 16px;
+                font-family: 'Microsoft YaHei';
+                span {
+                      color: #666;
+                }
+                strong {
+                   color: #e74c3c;  
                 }
             }
             p.tip-statistics {
@@ -1046,7 +1420,7 @@ ul,li{list-style: none;}
                 .ui-username {font-size: 16px;font-family: 'Microsoft YaHei';} 
             }
             p.tip-fans-list {
-                color: #666;
+                color: #666;line-height: 40px;
                 span {padding-right:10px;}
             }
         }
@@ -1101,7 +1475,7 @@ ul,li{list-style: none;}
 //直播筛选
 .container {
     .col-md-12 {
-       width:1190px; overflow: hidden;
+      overflow: hidden;
         .add-selector-pic {width:1050px;overflow: hidden;float:left;}
         .add-selector-seo {width:120px;overflow: hidden;float:right;}
     }
@@ -1114,15 +1488,16 @@ ul,li{list-style: none;}
     background: #1e89e0;
     text-align: center;
     font-family: 'Microsoft YaHei';
+    position: relative;
     .course-sort-label {
-         float:left;width:110px;height:36px;line-height: 36px; background: #fff;border-radius: 18px;font-size: 14px;color: #1e89e0;margin-top:17px;margin-left:10px;
+        display: block;width:110px;height:36px;line-height: 36px; background: #fff;border-radius: 18px;font-size: 14px;color: #1e89e0;position: absolute;left:10px;top:17px;
         span.icon-fa {
              float: left;width: 25px;height: 25px;background: #1e89e0;border-radius:50%;margin:5px;position: relative;
             i.fa-angle-left,i.fa-angle-right {width:32px;color: #fff;font-size: 20px;font-weight: bold;position: absolute;left:-4px;top:2px;z-index: 1;}
         }
         span.txt {float: left;}
         &.l-right {
-            float: right;margin-right: 10px;
+            left:1070px;
             span.icon-fa {
                 float: right;
                 i.fa-angle-right {left:-2px;}
@@ -1135,7 +1510,7 @@ ul,li{list-style: none;}
     }
 }
 .select-subject-list {
-   height: 42px;background: #f9f9f9;
+   height: 42px;background: #f9f9f9;border-bottom: 1px solid #ededed;
     li {
         float: left;width:196px;height:40px;line-height: 40px;text-align: center;font-size: 16px;font-family: 'Microsoft YaHei';margin-top:1px;
         a {
@@ -1150,47 +1525,78 @@ ul,li{list-style: none;}
 }
 
 .live-course-rank-list {
-    height: 90px;border-bottom: 1px solid #ededed;
-    div {float: left;font-family:  'Microsoft YaHei';font-size: 14px;}
+    width:1190px;height: 90px;overflow: hidden;margin-bottom: 10px;background: #f9f9f9;
+    div {float: left;font-family:  'Microsoft YaHei';font-size: 12px;}
     .rank-time {
-        width:400px;
+        width:500px;overflow: hidden;
         p.time {
-            font-size: 22px;padding:12px 0 0 15px;
+            font-size: 18px;padding-left:15px;
             strong{padding-left:10px;color: #e74c3c;font-weight: normal;}
+            span {
+                display: inline-block;padding-right:5px;
+            }
+            .satisfy {color: #999;font-size: 12px;}
         }
         p.difficulty {
-            padding-left:15px;
-            span {color: #999;}
-            a {padding-right:10px;}
+            height:35px;line-height: 50px; overflow: hidden;padding-left:15px;color: #666;
+            a {padding-right:10px;color: #666;}
         }
     }
     .rank-satisfy {
-        width:165px;line-height: 90px;color: #999;
+        width:150px;line-height: 90px;color: #999;overflow: hidden;
         strong{color: #e74c3c;padding-left:10px;}
     }
     .rank-coach {
-        width:185px;line-height: 90px;color: #999;
+        width:225px;line-height: 90px;color: #999;overflow: hidden;
          a {padding-right: 10px;}
         img {
-            width:60px;height: 60px;border-radius: 50%;overflow: hidden;
+            width:60px;height: 60px;border-radius: 50%;overflow: hidden; margin-left:6px;float:right;margin:15px 10px 0 0;
         }
     }
     .rank-places {
-        width:180px;height: 40px;color: #999;padding-top:25px;
+        width:140px;height: 40px;color: #999;padding-top:22px;
         strong {
-            display: inline-block;width:46px;height: 40px;line-height: 40px;background:url(img/icon-rank.png) no-repeat;color: #fff;text-align: center;font-size: 20px;margin-left:10px;padding-left: 5px;
+            display: inline-block;width:46px;height: 40px;line-height: 40px;background:url(img/icon-rank.png) no-repeat;color: #fff;text-align: center;font-size: 20px;padding-left: 5px;
         }
     }
     .rank-money {
-        width:150px;line-height: 90px;color: #999;
+        width:70px;line-height: 90px;color: #999;overflow: hidden;
         strong{color: #666;}
     }
     .rank-btn {
-        width:128px;padding-top: 29px;
-        a.btn {
+        width:98px;padding-top: 29px;
+        .btn {
             background: #e74c3c;color: #fff;width:98px;height: 32px;text-align: center;
+            &.btn-gray {background: #bfbfbf;}
         }
     }
+}
+.problem{
+	margin-bottom: 40px;
+	img{
+		margin-right: 10px;
+	}
+	.content{
+		.title{
+			display: inline-block;
+			margin-right: 30px;
+			font-size: 14px;
+		}
+	}
+	.answer{
+		display: none;
+		margin-bottom: 40px;
+		padding-top: 20px;
+		div{
+			display: inline-block;
+		}
+		.text{
+			border:1px solid rgba(102,102,102,0.5); 
+			box-sizing: border-box;
+			width: 1110px;
+			padding: 20px;
+		}
+	}
 }
 
 

@@ -415,7 +415,7 @@ homeWork.url = '/data/homework/';
 			        	if(hasVideo){
 			        		var audio_url = $(this).data('audio');
 							var html = [
-			                            '<audio class="homework-audio-btn-style" controls="controls" Autoplay="Autoplay"src="'+audio_url+'"> </audio>'
+			                            '<audio class="homework-audio-btn-style" controls="controls" Autoplay="Autoplay" src="'+audio_url+'"> </audio>'
 			                           ]
 			                $(that).find('.homework-audio-btn-style').remove();
 				            $(that).find('.homework-bigImg-box').prepend(html.join(''));
@@ -534,6 +534,7 @@ $.fn.imagePage = function(params){
 	    tpqhnum = $(_this).find(params.smallPic).find('li').index(this);
 	    show(tpqhnum);
 		minshow(tpqhnum);
+		audioPage(tpqhnum);
     }).eq(params.order).trigger("click");
 
     //大图切换过程
@@ -633,6 +634,28 @@ $.fn.imagePage = function(params){
 		}
 	}
 
+	//每个缩略图试卷对应一个音频，音频默认显示，但是不播放
+	function audioPage(tpqhnum){ 
+		//判断是否存在音频
+		var audioUrl = $(_this).find(params.smallPic).find('li').eq(tpqhnum).data('audio');
+		var hasVideo = !!(document.createElement('audio').canPlayType);
+
+		//判断是否支持音频
+		if( hasVideo ){
+           if( audioUrl ){
+	           var audioHtml = [
+		                    '<audio class="homework-audio-btn-style" controls="controls" src="'+audioUrl+'"> </audio>'
+		                   ]
+		        $(_this).find('.homework-audio-btn-style').remove();
+		        $(_this).find('.homework-bigImg-box').prepend(audioHtml.join(''));
+			}else{
+				$(_this).find('.homework-audio-btn-style').remove();
+			} 
+		}else{
+			alert("当前浏览器版本过低，不支持语音播放。请更换浏览器或者升级至IE8以上的版本。");
+		}
+	}  
+
 	//大图左右切换	
 	$(this).find(params.prev_btn).click(function(){
 		if( picsmall_num > params.min_picnum ){
@@ -643,6 +666,7 @@ $.fn.imagePage = function(params){
 			tpqhnum--;
 			show(tpqhnum);
 			minshow(tpqhnum);
+			audioPage(tpqhnum);
 		}else{
 			return false;
 		}		
@@ -656,6 +680,7 @@ $.fn.imagePage = function(params){
 			tpqhnum++;
 			minshow(tpqhnum)
 			show(tpqhnum);
+			audioPage(tpqhnum);
 		}else{
 			return false;
 		}	

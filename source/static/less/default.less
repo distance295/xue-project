@@ -15,7 +15,7 @@ Helvetica,
 sans-serif;
 html,
 body {
-    font-family: "微软雅黑", Helvetica, 'Source Sans Pro', sans-serif;
+    font-family: "微软雅黑", Helvetica, 'Source Sans Pro', sans-serif;background: #f8f8f8;
 }
 body{
     overflow-y: scroll;
@@ -221,32 +221,38 @@ a,button,.btn{
 }
 /*首页公用标题样式和一些重构样式*/ 
 .grade-course-title {
-    height: 55px;
+    height: 60px;
     overflow: hidden;
-    div {
-     height: 35px;
-     line-height: 35px;
-     border-bottom: 1px solid #3bafda;
-     margin-bottom: 20px;  
- }
- h6 {
-    position: relative;
-    float: left;
-    width: 90px;
-    height: 35px;
-    background:#fff;
-    top:9px;
-    z-index: 1;
-    font-size: 18px;
-    color: #999;
-    &.live-title {
-        width: 90px;
+    margin-top: 20px;
+    &:nth-child(3){
+        margin-top: 0;
     }
-}
-a.more {
-    float: right;
-    font-size: 14px;
-    color: @link-hover;
+    h6 {
+        position: relative;
+        float: left;
+        height: 35px;
+        top: 11px;
+        z-index: 1;
+        font-size: 20px;
+        color: #333;
+        line-height: 18px;
+        }
+    a.more {
+          float: left;
+          font-size: 12px;
+          color: #666666;
+          position: relative;
+          top: 24px;
+          margin-left:10px;
+          i{
+            font-size: 16px;
+            &:first-child{
+                margin-left: 6px;
+            }
+            &:last-child{
+                margin-right: -5px;
+            }
+          }
 }
 ul.live-list-tabs {
     float: left;
@@ -326,31 +332,115 @@ ul.grade-list {
 }
 }
 .row-page-turn {
-//    padding:0 5px;
-margin-bottom: 20px;
-margin-left: 0;
-overflow: hidden;
-.live-content-action {
-    width: 110%;
-    overflow: hidden;
-    .live-card {
-        margin-bottom: 20px;
-    }
-    .live-teacher-photo {
-        margin-top:0;
-    }
+    margin-left: 0;
+    position: relative;
+    .live-content-action {
+        width: 110%;
+        overflow: hidden;
+        .live-card {
+            width: 290px;
+            background: #fff;
+            margin-bottom: 20px;
+            float: left;
+            margin-right: 10px;
+            .live-time-tip{
+                .live-time-tip-container{
+                    line-height: 22px;
+                    height: 80px;
+                    box-sizing: border-box;
+                    padding: 16px 10px;
+                    margin-right: 10px;
+                    span{
+                        color: #333;
+                        font-size: 16px;
+                        line-height: 16px;
+                    }
+                    p{
+                        margin-bottom: 0;
+                        width: 100%;
+                        font-size: 12px;
+                        color: #333;
+                        margin-right: 5px;
+                        margin-top: 8px;
+                        span{
+                            &.time{
+                                color:#ed5565;
+                            }
+                            &.teacher{
+                                color:#a0a0a0;
+                                font-size: 14px;
+                            }
+                            &.watchNum{
+                                float: right;
+                                font-size: 12px;
+                                color: #999;
+                                position: relative;
+                                top: 3px;
+                                font-size: 14px;
+                            }
+                        }
+                        img{
+                            margin-right: 6px;
+                            float: right;
+                            position: relative;
+                            top: 6px;
+                        }
+                    }
+                }
+            }
+            .live-course-box{
+                overflow: hidden;
+                position: relative;
+                div.success_join{
+                    top:0;
+                    a{
+                        background: #bfbfbf;
+                    }
+                }
+                .live-course-title{
+                    position: absolute;
+                    top: -198px;
+                    height: 198px;
+                    background: rgba(0,0,0,0.6);
+                    width: 100%;
+                    transition:top .3s linear;
+                    text-align: center;
+                    line-height: 198px;
+                    a{
+                        padding: 12px 20px;
+                        border-radius: 3px;
+                        color:#fff;
+                    }
+                }
+                &:hover{
+                   .live-course-title{
+                    top:0;
+                   }
+                }
+            }
+        }
+        .live-teacher-photo {
+            margin-top:0;
+        }
 }
 .page-turn {
-    width: 45px;
-    height: 115px;
+    position: absolute;
+    top: -40px;
+    width: 30px;
+    height: 22px;
+    line-height: 16px;
     cursor: pointer;
-    text-indent: -9999em;
+    text-align: center;
+    border: 1px solid #dcdcdc;
+    color:#999;
+    font-size: 18px;
     &.page-up {
-        background: url(../../static/img/page-up-default.png?__inline) 0 no-repeat;
+        right: 34px;
     }
     &.page-down {
-        background: url(../../static/img/page-down-default.png?__inline) 0 no-repeat;
+         right: 5px;
     }
+    &:hover{color:#3bafda}
         // &.page-up-disable {切到头以后的禁用按钮
         //         background: url(../../widget/Public.Module/img/page-up-disable.png) 0 no-repeat;
         // }
@@ -360,12 +450,11 @@ overflow: hidden;
     }
     .page-turn-box {
         float: left;
-        width: 1100px;
+        width: 1190px;
         overflow: hidden;
         .course-small-list {
             float: left;
             display: inline;
-            margin:0 36px 0 15px;
         }
     }
 }
