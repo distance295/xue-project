@@ -10,109 +10,11 @@ $(function(){
         $liveScrollBtn.removeClass('live-scroll-btn-on').eq(index).addClass('live-scroll-btn-on');
         $('.live-scroll-box-container').animate({top:(-1*291*index) + 'px'},300)
     });
-
     $('.problem .answer').eq(0).css({display:'block'});
-
-
     $('.problem .title').each(function(index){
         $(this).bind('mouseenter',function(){
             $('.answer').css({display:'none'})
             .eq(index).css({display:'block'})
-
-        })
-    })
-    
-    $('.class-box').each(function(i){
-        if(i==2){
-            return ;
-        }
-    })
-    $('.page-turn').bind('click',function(event){
-        $('.page-turn').removeClass('color-blue');
-        $(this).addClass('color-blue');
-    })
-    $('.class-box').each(function(i){
-        if(i==2){
-            return ;
-        }
-        $(this).find('.subject span').each(function(index){
-            $(this).css({
-                backgroundPosition:-50*index+'px '+ 0+'px',
-            })
-            .bind('mouseenter',function(){
-                $(this).css({
-                    backgroundPosition:-50*index+'px '+ -60+'px'
-                })
-            })
-            .bind('mouseleave',function(){
-                $(this).css({
-                    backgroundPosition:-50*index+'px '+ 0+'px',
-                })
-            })
-        })
-        if(i==1){
-            $(this).find('.class-container .subject').css({
-                marginRight:24+'px',
-            })
-        }
-
-    })
-    $('.advantage-img').each(function(index){
-        var i=index;
-        $('.text-box .text').eq(i).css({left:i*290+'px'})
-        $(this).bind('mouseenter',function(){
-            $('.text-box .text').eq(i).animate({'top':0,opacity:1},500)
-        }).bind('mouseleave',function(){
-            $('.text-box .text').eq(i).animate({'top':250,opacity:0},500)
-
-        })
-    })
-    $('.subject span')
-    console.log()
-    $body.on({
-
-
-        mouseenter:function(){
-            // $(this).find('.live-course-title').stop().animate({"height":80},300);
-            // $(this).find('.live-course-show-title').stop().fadeOut(300);
-            // $(this).find('.live-course-content').stop().fadeIn(300);
-
-        },
-        mouseleave:function(){
-            // $(this).find('.live-course-title').stop().animate({"height":30},300);
-            // $(this).find('.live-course-show-title').stop().fadeIn(300);
-            // $(this).find('.live-course-content').stop().fadeOut(300);
-
-        }
-        $(this).find('.subject a').each(function(index){
-            $(this).css({
-                backgroundPosition:-50*index+'px '+ 0+'px',
-            })
-            .bind('mouseenter',function(){
-                $(this).css({
-                    backgroundPosition:-50*index+'px '+ -60+'px'
-                })
-            })
-            .bind('mouseleave',function(){
-                $(this).css({
-                    backgroundPosition:-50*index+'px '+ 0+'px',
-                })
-            })
-        })
-        if(i==1){
-            $(this).find('.class-container .subject').css({
-                marginRight:24+'px',
-            })
-        }
-
-    })
-    $('.advantage-img').each(function(index){
-        var i=index;
-        $('.text-box .text').eq(i).css({left:i*290+'px'})
-        $(this).bind('mouseenter',function(){
-            $('.text-box .text').eq(i).stop().animate({'top':0,opacity:1},500)
-        }).bind('mouseleave',function(){
-            $('.text-box .text').eq(i).stop().animate({'top':250,opacity:0},500)
         })
     })
     var $livecourseshowtitle = $('.live-course-show-title');
