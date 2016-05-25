@@ -53,9 +53,6 @@ $(function(){
                     window.location.href = msg.msg;
                     return;
                 }
-                if(msg.sign == 0){
-                    alert('您已预约过此课程或无此直播');
-                }
                 if(msg.sign == 1){
                     t.attr("data-target","#liveOrderSuccessModal");
                     liveOrderSuccessModal.showModal();
@@ -68,10 +65,10 @@ $(function(){
                             clearInterval(timer);
                         }
                     },1000);
-                    t.attr("class","live-grey");
+                    t.closest('."live-course-title').addClass('success_join')
                     t.html("已预约，请耐心等待")
                 }
-                if(msg.sign == 3){
+                if(msg.sign == 3 || msg.sign==0){
                     t.attr("data-target","#liveOrderFailModal");
                     liveOrderFailModal.showModal();
                     var tim = 5;
