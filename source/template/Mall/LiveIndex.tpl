@@ -11,8 +11,8 @@
 
 <!--   12栏的用这个    -->
        <div class="col-md-12">
-       <link rel="import" href="../../widget/Mall.live/live-rank.tpl?__inline">
-           <link rel="import" href="../../widget/Mall.live/index.tpl?__inline">
+          <link rel="import" href="../../widget/Mall.live/live-rank.tpl?__inline">
+          <link rel="import" href="../../widget/Mall.live/index.tpl?__inline">
        </div>
 <!--   12栏结束    -->
 
