@@ -7,7 +7,15 @@
     <div class="course-left-player f-left">
         <div class="video-player" data-url="/data/Mall.courseInfo/video.html" data-params="a=1&b=2">
             <img src="pic/lb-xiangqing_03.png" height="400" width="590" alt="">
+            <span class="video-icon"></span>
         </div>
+         <div class="main-teacher">
+                <span class="avatar-m">
+				          <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="">
+				      </span>
+                <span class="name-m">达务力江老师</span>
+                <span class="name-r">课程满意度<strong>92.55</strong></span>
+            </div>
     </div>
     <div class="course-center-list f-left">
         <div class="course-favorable-money">
@@ -26,24 +34,21 @@
             <span>实物礼品</span>
         </div>
         <div class="course-content-teacher">
-            <div class="main-teacher f-left">
-                <span class="main-m">主讲老师：</span>
-                <span class="avatar-m">
-				          <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="">
-				      </span>
-                <span class="name-m"><i>达务力江老师</i><br/>课程满意度  <strong>92.55</strong></span>
-            </div>
-            <div class="coach-teacher f-left">
+           <div class="coach-teacher">
                 <span class="coach-c">辅导老师：</span>
                 <span class="avatar-c">
 				          <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="" class="coach-avatar-info">
 				      </span>
                 <span class="name-c">王海丰老师</span>
-                <span class="info-c"><strong>3</strong><br/>剩余名额</span>
-                <span class="coachAvatarInfo">
-				           一二三四五六七八九十一二三四五六七八九十<br/>
-				           毕业于北京外国语大学，5年教龄
-				       </span>
+               <span class="app-dimension-code">
+                   <img class="line" src="img/icon-line.png" alt="">
+                   <img src="img/app.png" alt="">
+                   <em>
+                       微信扫码<br/>
+                       咨询辅导老师
+                   </em>
+               </span>
+                <span class="info-c "><strong class="c-disable">已满</strong><br/>剩余名额</span>
             </div>
         </div>
         <div class="course-serve-list">
