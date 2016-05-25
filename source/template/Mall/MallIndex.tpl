@@ -3,7 +3,7 @@
 <link rel="import" href="../../widget/Mall.indexTrends/index.tpl?__inline">
 <link rel="import" href="../../widget/Public.FocusPic/index.tpl?__inline">
 <!-- 学习中心区域 -->
-<div class="container top m20">
+<div class="container">
 	<!-- 直播进行中 -->
 	<div class="grade-course-title">
 		<div>
