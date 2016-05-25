@@ -18,7 +18,7 @@
 		<div class="carousel-inner page-turn-box pull-left" role="listbox">
 			<div class="item active">
 				<div class="row row-page-turn tab-content">
-					<div class="live-content-action tab-pane fade active in" role="tabpanel" id="live1">
+					<div class="live-content-action tab-pane fade active in" role="tabpanel" >
 						<link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
 						<link rel="import" href="../../widget/Mall.live/live-card-red.tpl?__inline">
 						<link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
@@ -28,7 +28,7 @@
 			</div>	
 			<div class="item ">
 				<div class="row row-page-turn tab-content">
-					<div class="live-content-action tab-pane fade active in" role="tabpanel" id="live1">
+					<div class="live-content-action tab-pane fade active in" role="tabpanel" >
 						<link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
 						<link rel="import" href="../../widget/Mall.live/live-card-red.tpl?__inline">
 						<link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
@@ -38,7 +38,7 @@
 			</div>	
 			<div class="item ">
 				<div class="row row-page-turn tab-content">
-					<div class="live-content-action tab-pane fade active in" role="tabpanel" id="live1">
+					<div class="live-content-action tab-pane fade active in" role="tabpanel" >
 						<link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
 						<link rel="import" href="../../widget/Mall.live/live-card-red.tpl?__inline">
 						<link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
@@ -63,7 +63,7 @@
 		<div class="carousel-inner page-turn-box pull-left" role="listbox">
 			<div class="item active">
 				<div class="row row-page-turn tab-content">
-					<div class="live-content-action tab-pane fade active in" role="tabpanel" id="live2">
+					<div class="live-content-action tab-pane fade active in" role="tabpanel" >
 						<link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
 						<link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
 						<link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
@@ -73,7 +73,7 @@
 			</div>	
 			<div class="item ">
 				<div class="row row-page-turn tab-content">
-					<div class="live-content-action tab-pane fade active in" role="tabpanel" id="live2">
+					<div class="live-content-action tab-pane fade active in" role="tabpanel" >
 						<link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
 						<link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
 						<link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
@@ -83,7 +83,7 @@
 			</div>	
 			<div class="item ">
 				<div class="row row-page-turn tab-content">
-					<div class="live-content-action tab-pane fade active in" role="tabpanel" id="live2">
+					<div class="live-content-action tab-pane fade active in" role="tabpanel" >
 						<link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
 						<link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
 						<link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
