@@ -18,7 +18,7 @@
                 <a href="#">
                     <img src="../../static/img/primary_school.png" alt="">
                 </a>
-                <p href="#" class="class-name">小学课程体系</p>
+                <p class="class-name">小学课程体系</p>
             </div>
             <div class="class-container">
                 <p class="message">
@@ -54,7 +54,7 @@
                     <img src="../../static/img/middle_school.png" alt="">
 
                 </a>
-                <p href="#" class="class-name">初中课程体系</p>
+                <p  class="class-name">初中课程体系</p>
             </div>
             <div class="class-container">
                 <p class="message">
@@ -95,7 +95,7 @@
                     <img src="../../static/img/high_school.png" alt="">
 
                 </a>
-                <p href="#" class="class-name">高中课程体系</p>
+                <p  class="class-name">高中课程体系</p>
             </div>
             <div class="class-container">
                 <p class="message">
