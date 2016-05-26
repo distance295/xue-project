@@ -9,7 +9,7 @@
     <div class="live-course-box">
         <img src="/static/img/zhibo_message.png" class="live-teacher-photo"/>
          <a href="#" class="live-course-title">
-            <span href="#" class="join-live bg-red">
+            <span  class="join-live bg-red">
              直播中,立即进入
             </span>
          </a>
