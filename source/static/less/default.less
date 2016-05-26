@@ -344,6 +344,11 @@ ul.grade-list {
             background: #fff;
             float: left;
             margin-right: 10px;
+            &:hover{
+               .live-course-title{
+                top:0 !important;
+               }
+            }
             .live-time-tip{
                 .live-time-tip-container{
                     line-height: 22px;
@@ -351,18 +356,6 @@ ul.grade-list {
                     box-sizing: border-box;
                     padding: 16px 10px;
                     margin-right: 10px;
-                    a{
-                        color: #333;
-                        font-size: 16px;
-                        line-height: 16px;
-                        &:hover{
-                            text-decoration: underline;
-                        }
-                    }
-                    &>span{
-                        font-size: 14px;
-                        float: right;
-                    }
                     p{
                         margin-bottom: 0;
                         width: 100%;
@@ -393,6 +386,17 @@ ul.grade-list {
                             top: 6px;
                         }
                     }
+                    &>p:nth-child(1){
+                       color: #333;
+                        font-size: 16px;
+                        line-height: 16px;
+                        margin-top: 0;
+                        margin-bottom: 16px;
+                        span{
+                            font-size: 14px;
+                            float: right;
+                        }
+                    }
                 }
             }
             .live-course-box{
@@ -419,11 +423,6 @@ ul.grade-list {
                         border-radius: 3px;
                         color:#fff;
                     }
-                }
-                &:hover{
-                   .live-course-title{
-                    top:0;
-                   }
                 }
             }
         }
