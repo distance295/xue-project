@@ -42,7 +42,7 @@
                 <span class="name-c">王海丰老师</span>
                <span class="app-dimension-code">
                    <img class="line" src="img/icon-line.png" alt="">
-                   <img src="img/app.png" alt="">
+                   <img src="img/app-code.png" alt="">
                    <em>
                        微信扫码<br/>
                        咨询辅导老师
