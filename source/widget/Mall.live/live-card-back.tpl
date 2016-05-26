@@ -17,8 +17,7 @@
     </div>
     <div class="live-time-tip">
         <div class="live-time-tip-container">
-            <a href="#">暑假预初数学直播目标满分班</a>
-            <span>第3讲</span>
+            <p>暑假预初数学直播目标满分班 <span>第3讲</span></p>
          <p>
             <span class="teacher">授课老师：张新刚</span>
             <span class="watchNum">666</span>    
