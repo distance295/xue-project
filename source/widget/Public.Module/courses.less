@@ -1546,12 +1546,12 @@ ul,li{list-style: none;}
 }
 
 .live-course-rank-list {
-    width:1190px;height: 90px;overflow: hidden;margin-bottom: 10px;background: #f9f9f9;
+    width:1190px;height: 90px;overflow: hidden;margin-bottom: 10px;background: #fff;
     div {float: left;font-family:  'Microsoft YaHei';font-size: 12px;}
     .rank-time {
-        width:500px;overflow: hidden;
+        width:600px;overflow: hidden;
         p.time {
-            font-size: 18px;padding-left:15px;
+            font-size: 20px;padding:15px 0 0 15px;
             strong{padding-left:10px;color: #e74c3c;font-weight: normal;}
             span {
                 display: inline-block;padding-right:5px;
@@ -1559,7 +1559,7 @@ ul,li{list-style: none;}
             .satisfy {color: #999;font-size: 12px;}
         }
         p.difficulty {
-            height:35px;line-height: 50px; overflow: hidden;padding-left:15px;color: #666;
+            height:30px; overflow: hidden;padding-left:15px;color: #666;font-size: 14px;
             a {padding-right:10px;color: #666;}
         }
     }
@@ -1568,10 +1568,14 @@ ul,li{list-style: none;}
         strong{color: #e74c3c;padding-left:10px;}
     }
     .rank-coach {
-        width:225px;line-height: 90px;color: #999;overflow: hidden;
+        width:270px;line-height: 90px;overflow: hidden;
+        span {color: #999;}
          a {padding-right: 10px;}
-        img {
-            width:60px;height: 60px;border-radius: 50%;overflow: hidden; margin-left:6px;float:right;margin:15px 10px 0 0;
+        img.img-left {
+            width:60px;height: 60px;border-radius: 50%;overflow: hidden; margin-left:6px;float:left;margin:15px 10px 0 0;
+        }
+        img.img-weixin {
+            padding-left: 10px;
         }
     }
     .rank-places {
