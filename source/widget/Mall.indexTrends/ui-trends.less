@@ -83,48 +83,54 @@
 					padding:0 34px;
 					p{
 						font-size: 14px;
+						margin-top: 3px;
 					};
 					div:first-child{
+						&:hover{
+							li{
+
+								background: url('img/weixin.png') no-repeat center;
+
+								background: url('/static/img/weixin.png') no-repeat center;
+
+								background-size: 100% 100%;
+							}
+						}
 						li{
 							width: 80px;
 							height: 87px;
 
-							background: url('img/weixin_icon.png') no-repeat center;
+							background: url('img/weixin_icon.png') no-repeat center 30px;
 
-							background: url('/static/img/weixin_icon.png') no-repeat center;
+							background: url('/static/img/weixin_icon.png') no-repeat  center 30px;
 
 							background-size: 51px 50px;
 
 						};
-						li:hover{
-
-							background: url('img/weixin.png') no-repeat center;
-
-							background: url('/static/img/weixin.png') no-repeat center;
-
-							background-size: 100% 100%;
-						}
 					};
 					div:last-child{
 						li{
 							width: 80px;
 							height: 87px;
 
-							background: url('img/app_icon.png') no-repeat center;
+							background: url('img/app_icon.png') no-repeat center 30px;
 
-							background: url('/static/img/app_icon.png') no-repeat center;
+							background: url('/static/img/app_icon.png') no-repeat center 30px;
 
 							background-size: 51px 50px;
 
 						};
-						li:hover{
+						&:hover{
+							li{
 
-							background: url('img/app.png') no-repeat center;
+								background: url('img/app.png') no-repeat center;
 
-							background: url('/static/img/app.png') no-repeat center;
+								background: url('/static/img/app.png') no-repeat center;
 
-							background-size: 100% 100%;
+								background-size: 100% 100%;
+							}
 						}
+						
 					}
 					
 				}

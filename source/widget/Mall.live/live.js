@@ -67,7 +67,7 @@ $(function(){
                         }
                     },1000);
                     t.closest('.live-course-title').addClass('success_join')
-                    t.html("已预约，请耐心等待")
+                    t.find('span').html("已预约，请耐心等待")
                 }
                 if(msg.sign == 3 || msg.sign==0){
                     t.attr("data-target","#liveOrderFailModal");
