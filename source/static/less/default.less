@@ -244,6 +244,9 @@ a,button,.btn{
           position: relative;
           top: 24px;
           margin-left:10px;
+          &:hover{
+            color:#1e89e0;
+          }
           i{
             font-size: 16px;
             &:first-child{
@@ -366,6 +369,8 @@ ul.grade-list {
                         span{
                             &.time{
                                 color:#ed5565;
+                                font-size: 16px;
+                                line-height: 14px;
                             }
                             &.teacher{
                                 color:#a0a0a0;
@@ -402,12 +407,7 @@ ul.grade-list {
             .live-course-box{
                 overflow: hidden;
                 position: relative;
-                div.success_join{
-                    top:0;
-                    a{
-                        background: #bfbfbf;
-                    }
-                }
+                
                 .live-course-title{
                     display: block;
                     position: absolute;
@@ -422,6 +422,12 @@ ul.grade-list {
                         padding: 12px 20px;
                         border-radius: 3px;
                         color:#fff;
+                    }
+                }
+                a.success_join{
+                    top:0 ;
+                    span{
+                        background: #bfbfbf ;
                     }
                 }
             }
@@ -501,4 +507,7 @@ ul.grade-list {
     &.tab-gao{
         width: 1190px;
     }
+}
+.font-blue{
+    color:#1e89e0;
 }
