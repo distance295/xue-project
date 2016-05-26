@@ -8,6 +8,7 @@ ul,li{list-style: none;}
 
 .advantage-box{
 	height: 100px;
+	margin-bottom: 20px;
 	.advantage-item{
 		padding: 25px 44px 0px 102px;
 		background: url(../../static/img/advantage.png);
@@ -214,7 +215,7 @@ ul,li{list-style: none;}
 	}
 	.class-info{
 		width: 390px;
-		height: 400px;
+		height: 420px;
 		position: relative;
 		.class-name{
 			position: absolute;
@@ -230,12 +231,12 @@ ul,li{list-style: none;}
 		}
 		.class-container{
 			padding: 0 20px;
-    		margin-top: 26px;
+    		margin-top: 20px;
 			.message{
 				font-size: 12px;
 			    line-height: 24px;
 			    color: #666;
-			    margin-bottom: 14px;
+			    margin-bottom: 16px;
 			    position: relative
 			}
 			.highSchool{
@@ -275,7 +276,7 @@ ul,li{list-style: none;}
 				    width: 50px;
 				    height: 50px;
 				    background: url('/static/img/class.png');
-				    margin-bottom: 12px;
+				    margin-bottom: 6px;
 				}
 			}
 			.marginR_0{
@@ -1598,7 +1599,12 @@ ul,li{list-style: none;}
 }
 .problem{
 	background: #fff;
-	padding-bottom: 34px;
+	&:nth-child(12){
+		padding-bottom: 20px;
+	}
+	.content{
+		padding: 30px 10px 0 10px;
+	}
 	img{
 		margin-right: 10px;
 	}
