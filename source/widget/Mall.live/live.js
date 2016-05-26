@@ -50,6 +50,9 @@ $(function(){
                 url: url
             },
             success : function(msg,event){
+                if(msg.sign == 0){
+                   alert('您已预约过此类课程或无此直播');
+                }
                 if(msg.sign == 2){
                     window.location.href = msg.msg;
                     return;
@@ -69,7 +72,7 @@ $(function(){
                     t.closest('.live-course-title').addClass('success_join')
                     t.find('span').html("已预约，请耐心等待")
                 }
-                if(msg.sign == 3 || msg.sign==0){
+                if(msg.sign == 3){
                     t.attr("data-target","#liveOrderFailModal");
                     liveOrderFailModal.showModal();
                     var tim = 5;
