@@ -13,7 +13,29 @@
        <div class="col-md-12">
           <link rel="import" href="../../widget/Mall.live/live-rank.tpl?__inline">
           <div class="row row-page-turn tab-content">
-            <div class="live-content-action tab-pane fade active in" role="tabpanel" id="live2">
+            <div class="live-hidden live-content-action tab-pane fade active in" role="tabpanel">
+              <link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
+            </div>
+            <div class="live-hidden live-content-action tab-pane fade active in" role="tabpanel">
+              <link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
               <link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
               <link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
               <link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">

@@ -6,8 +6,8 @@
     <div class="live-card">
         <div class="live-course-box">
             <img src="../../widget/Mall.live/img/zhibo_message.png" class="live-teacher-photo"/>
-             <a href="#" class="live-course-title">
-                <span href="#" class="live-order join-live bg-yellow">
+             <a href="#" class="live-course-title live-order">
+                <span class=" join-live bg-yellow">
                  立即预约直播
                 </span>
              </a>
