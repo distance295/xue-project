@@ -36,7 +36,7 @@ $(function(){
 
     });
 
-    $('body').on('click', '.live-order', function () {
+    $('body').off('click', '.live-order').on('click', '.live-order', function () {
         var liveOrderId = $(this).closest('.live-card').attr('id'),
             url = $(this).closest('.live-card').attr('data-url'),
             timer;
