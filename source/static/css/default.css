@@ -209,6 +209,7 @@ button.active,
 }
 .grade-course-title a.more:hover {
   color: #1e89e0;
+  text-decoration: underline;
 }
 .grade-course-title a.more i {
   font-size: 16px;
