@@ -1539,7 +1539,10 @@ ul,li{list-style: none;}
     }
 }
 .select-subject-list {
-   height: 42px;background: #f9f9f9;border-bottom: 1px solid #ededed;
+   height: 42px;background: #fff;
+    &.select-edition-list{
+        background: #f9f9f9;
+    }
     li {
         float: left;width:196px;height:40px;line-height: 40px;text-align: center;font-size: 16px;font-family: 'Microsoft YaHei';margin-top:1px;
         a {
@@ -1577,13 +1580,16 @@ ul,li{list-style: none;}
     }
     .rank-coach {
         width:270px;line-height: 90px;overflow: hidden;
-        span {color: #999;}
+        span {
+           float: left; display: inline-block;min-width:135px;overflow: hidden;color: #999;
+            em {color:#333;}
+        }
          a {padding-right: 10px;}
         img.img-left {
-            width:60px;height: 60px;border-radius: 50%;overflow: hidden; margin-left:6px;float:left;margin:15px 10px 0 0;
+           float: left; width:60px;height: 60px;border-radius: 50%;overflow: hidden; margin-left:6px;float:left;margin:15px 10px 0 0;
         }
         img.img-weixin {
-            padding-left: 10px;
+           float: left; padding-left: 10px;margin-top:35px;
         }
     }
     .rank-places {
