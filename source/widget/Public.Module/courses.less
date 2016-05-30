@@ -1242,8 +1242,8 @@ ul,li{list-style: none;}
 		font-size: 12px;
 		list-style: outside none none;
 		padding: 0 13px;
-		border-right: 1px solid #fcfcfc;
-		border-left: 1px solid #fcfcfc;
+		//border-right: 1px solid #fcfcfc;
+		//border-left: 1px solid #fcfcfc;
 		height: 36px;
 		line-height: 36px;
 		a{
@@ -1254,11 +1254,11 @@ ul,li{list-style: none;}
 		}
 	}
 	li.popular-rank.active {
-		border-left: 1px solid #fcfcfc
+		//border-left: 1px solid #fcfcfc
 	}
 	li.active{
-		border-right: 1px solid #eaeaea;
-		border-left: 1px solid #eaeaea;
+		//border-right: 1px solid #eaeaea;
+		//border-left: 1px solid #eaeaea;
 		background: #fff;
 		a{
 			color: @blueColor;
@@ -1399,6 +1399,9 @@ ul,li{list-style: none;}
     margin-bottom:20px;
     position: relative;
     z-index: 1;
+    &.course-teacher-select {
+        border:1px solid #1e89e0;
+    }
     .ui-avatar {
         .avatar-photo {
             .bottom0 {margin-bottom: 0;}
