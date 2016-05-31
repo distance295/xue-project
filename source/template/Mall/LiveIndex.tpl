@@ -1,6 +1,6 @@
 <!-- 公共头部 -->
 <link rel="import" href="../Layer/layer.Mall.head.tpl?__inline">
-
+<div class="wrap">
 <!-- 学习中心区域 -->
 <div class="container">
     <ol id="module-breadcrumb" class="breadcrumb">
@@ -46,6 +46,7 @@
 <!--   12栏结束    -->
 
     </div><!-- row end -->
+</div>
 </div>
 <!-- 页面配置 -->
 <script>
