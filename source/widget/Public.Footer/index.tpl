@@ -48,5 +48,12 @@
             <p class="link">
                 <a target="_blank" href="https://search.szfw.org/cert/l/CX20120925001738002003" id="___szfw_logo___"><img src="http://x04.xesimg.com/web/201209/13487953879693.png"></a>
             </p>
+            <div style="width:140px;height:174px;position:fixed;right:7px;top:196px;z-index:100;">
+        <a href="/LivePlayBack/index/2-1143-6049/2a544c64c66702e453b38703bf3f5e07" target="_blank">
+            <img src="http://x02.xesimg.com/web/2016/04/20/14611348842109.png">
+        </a>
+        <i class="fa fa-remove closeH"></i>
         </div>
+
+    </div>
     </div>
