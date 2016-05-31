@@ -49,4 +49,9 @@
                 <a target="_blank" href="https://search.szfw.org/cert/l/CX20120925001738002003" id="___szfw_logo___"><img src="http://x04.xesimg.com/web/201209/13487953879693.png"></a>
             </p>
         </div>
+        <div style="width:140px;height:174px;position:fixed;right:7px;top:196px;z-index:100;">
+        <a href="/LivePlayBack/index/2-1143-6378/3e2f1c5f8d55be6124475d3fe89ef32c" target="_blank">
+            <img src="http://x02.xesimg.com/web/2016/04/20/14611348842109.png">
+        </a>
+    </div>
     </div>
