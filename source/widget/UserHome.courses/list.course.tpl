@@ -169,6 +169,7 @@
             <a href="##" class="btn btn-default ">录播视频</a>
             <a href="##" class="btn btn-default courseList-material">讲义/资料</a>
             <a href="##" class="btn btn-default courseList-exam">考试</a>    
+            <a href="###" class="btn btn-default courseList-homework">在线作业</a>    
         </p>
         <div class="list-help-pop hide"><p>你有<span>N</span>场直播未完成，赶紧去看回放吧</p></div>
         <ul class="listTest-pop hide">
@@ -178,11 +179,9 @@
         </ul>
     </div>
     <div class="courseList-teacher">
-        <div class=" teacher-main teacher-main-border">
+        <div class=" teacher-main teacher-main-border QR-code-hover" data-container="body">
             <div class="avatar-photo">
-                <a href="###" class="QR-code-hover" data-container="body">
                     <img src="img/default_photo.png">
-                </a>
                 <div class="QR-code-instructor hide">
                    <div class="QR-code-inner">
                        <div class="QR-code">
@@ -195,7 +194,7 @@
         </div>
         <div class="coach-con">
             <p class="teacher-coach">张三</p>
-            <p class="teacher-majar"><a href="##" class="phone_icon">找辅导老师</a></p>
+            <p class="teacher-majar phone_icon">找辅导老师</p>
         </div>
     </div>
 
