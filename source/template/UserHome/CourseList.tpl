@@ -130,6 +130,11 @@ $(function  () {
     $('.courseList-exam').on('click',function(){
         examTable();
     });
+    // 在线作业弹窗
+    $('.courseList-homework').on('click',function(){
+        // courseListHomewok();
+        HomewokResolution();
+    });
     testLive('.listTest-btn');
     liveHelp('.liveHelp-btn');
     QrCodeInstructor('.QR-code-hover');
