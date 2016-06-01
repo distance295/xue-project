@@ -99,8 +99,7 @@
 	
 	<!-- 课程介绍 -->
 	<link rel="import" href="../../widget/Public.Module/class-info.tpl?__inline">
-	<!-- 课程优势 -->
-	<link rel="import" href="../../widget/Public.Module/class-advantage.tpl?__inline">
+	
 	<!-- 学员这样说 -->
 	<div class="grade-course-title">
 		<div>
@@ -118,6 +117,8 @@
 	</div>
 	<!-- 常见问题 -->
 	<link rel="import" href="../../widget/Public.Module/common-problem.tpl?__inline">
+	<!-- 课程优势 -->
+	<link rel="import" href="../../widget/Public.Module/class-advantage.tpl?__inline">
 </div>
 </div>
 <!-- 页面配置 -->

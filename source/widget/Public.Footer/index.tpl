@@ -3,7 +3,7 @@
 -->
    <!-- 这是页脚部分代码  -->
     <div id="module-footer">
-        <div class="foot-service">
+        <!-- <div class="foot-service">
             <div class="service-share" href="http://www.xueersi.com/article/detail/1825">
                 <span>名师</span>
                 <p>38%清华毕业平均教龄5.1年100%面授S级老师</p>
@@ -20,7 +20,7 @@
                 <span>有效</span>
                 <p>在线练习及时反馈已累计培养39名中高考状元</p>
             </div>
-        </div>
+        </div> -->
 
         <div class="foot-area">
             <p>
@@ -49,4 +49,9 @@
                 <a target="_blank" href="https://search.szfw.org/cert/l/CX20120925001738002003" id="___szfw_logo___"><img src="http://x04.xesimg.com/web/201209/13487953879693.png"></a>
             </p>
         </div>
+        <div style="width:140px;height:174px;position:fixed;right:7px;top:196px;z-index:100;">
+        <a href="/LivePlayBack/index/2-1143-6378/3e2f1c5f8d55be6124475d3fe89ef32c" target="_blank">
+            <img src="http://x02.xesimg.com/web/2016/04/20/14611348842109.png">
+        </a>
+    </div>
     </div>

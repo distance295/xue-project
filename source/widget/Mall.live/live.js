@@ -3,6 +3,15 @@
  */
 $(function(){
     var $body = $('body');
+    $('.carousel').eq(1).carousel({
+        interval:'10000'
+    });
+    $('.carousel').eq(2).carousel({
+        interval:'10000'
+    })
+    $('.carousel').eq(2).carousel({
+        interval:'10000'
+    })
     var $liveScrollBtn = $('.live-scroll-btn-container li');
     $liveScrollBtn.on('click',function(e){
         var $target = $(e.target);
@@ -13,8 +22,9 @@ $(function(){
     $('.problem .answer').eq(0).css({display:'block'});
     $('.problem .title').each(function(index){
         $(this).bind('mouseenter',function(){
-            $('.answer').css({display:'none'})
-            .eq(index).css({display:'block'})
+            $('.answer').css({display:'none'}).eq(index).css({display:'block'});
+            $('.problem .title a').removeClass('font-blue');       
+            $(this).find('a').addClass('font-blue');
         })
     })
     var $livecourseshowtitle = $('.live-course-show-title');
@@ -35,7 +45,7 @@ $(function(){
 
     });
 
-    $('body').on('click', '.live-order', function () {
+    $('body').off('click', '.live-order').on('click', '.live-order', function () {
         var liveOrderId = $(this).closest('.live-card').attr('id'),
             url = $(this).closest('.live-card').attr('data-url'),
             timer;
@@ -49,6 +59,9 @@ $(function(){
                 url: url
             },
             success : function(msg,event){
+                if(msg.sign == 0){
+                   alert('您已预约过此类课程或无此直播');
+                }
                 if(msg.sign == 2){
                     window.location.href = msg.msg;
                     return;
@@ -66,9 +79,9 @@ $(function(){
                         }
                     },1000);
                     t.closest('.live-course-title').addClass('success_join')
-                    t.html("已预约，请耐心等待")
+                    t.find('span').html("已预约，请耐心等待")
                 }
-                if(msg.sign == 3 || msg.sign==0){
+                if(msg.sign == 3){
                     t.attr("data-target","#liveOrderFailModal");
                     liveOrderFailModal.showModal();
                     var tim = 5;
@@ -121,104 +134,4 @@ $(function(){
         $('#liveOrderFailModal').modal({backdrop: 'static', keyboard: false})
 
     };
-
-    var $lrtli = $(".live-rank-title li");
-
-    $lrtli.on('click', function(){
-        var that = $(this);
-        that.addClass("current").siblings().removeClass("current");
-        $(".live-hidden").hide().eq($(this).index()).show();
-        var url = that.attr('data-url');
-        if(url == '/MyOrders/ajaxInvoiceOrder'){
-            liveList(url);
-        }else{
-            liveTab();
-        }
-    });
-    $('.live-rank-title li:first').click();
-
-    function liveList(url){
-
-        $.ajax({
-            type: "get",
-            url: url,
-            dataType: "html",
-            data:{},
-            success: function(list){
-                var list = $.trim(list);
-                if(list.substr(0,1)=='<'){
-                    var box = $('.live-begin');
-                    box.html(list);
-                }else{
-                    if(list.substr(0,4)=='http' || list.substr(0,1)=='/'){
-                        window.location.href = list;
-                        return false;
-                    }
-                }
-            },
-            error:function(){
-                alert("异步失败");
-            }
-        });
-    };
-
-    function liveTab(){
-        $.ajax({
-            type: "get",
-            url: "ajaxInvoiceApplyList",
-            dataType: "html",
-            data:{},
-            success: function(list){
-                var list = $.trim(list);
-                if(list.substr(0,1)=='<'){
-                    var box = $('.live-playback'),
-                        content = $('.live-begin');
-                    box.html(list).show();
-                    content.css({'display':'none'});
-                }else{
-                    if(list.substr(0,4)=='http' || list.substr(0,1)=='/'){
-                        window.location.href = list;
-                        return false;
-                    }
-                }
-            },
-            error:function(){
-                alert("异步失败");
-            }
-        });
-    };
-
-    
-   
-
-
-    $('.bg-red').html('直播中,立即进入');
-    $('.bg-yellow').html('立即预约直播');
-    $('.bg-blue').html('观看直播回放');
-
-    $('.ui-pages').pages({
-        total: 16, // 总记录数
-        size: 16, // 每页显示记录数
-        index: 1, // 当前页
-        // 点击分页时的回调，返回被点击的页数
-        click: function (index) {
-            $.ajax({
-                type: "POST",
-                url: "/MyOrders/ajaxInvoiceApplyList",
-                dataType: "html",
-                data: 'curpage=' + index,
-                success: function (objects) {
-                    if (objects.sign === 2) {
-                        window.location.href = objects.msg;
-                    }
-                    var box = $('#invoiceTable');
-                    box.html(objects);
-                },
-                error: function () {
-                    alert("异步失败");
-                }
-            });
-        }
-    });
-
 });

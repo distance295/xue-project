@@ -9,6 +9,7 @@
 #carousel-example-generic {
   height: 380px;
   overflow: hidden;
+  background: #f8f8f8;
   /*=================/图片轮播大图/============================*/
   /*=================/图片轮播缩小图/============================*/
 }
@@ -60,7 +61,18 @@
   text-indent: 0;
   border: 0;
 }
+#carousel-example-generic .focus-num-wrap ol.focus-num li a {
+  float: left;
+  width: 100%;
+  color: #333;
+}
+#carousel-example-generic .focus-num-wrap ol.focus-num li a:hvoer {
+  color: #333;
+}
 #carousel-example-generic .focus-num-wrap ol.focus-num li.active {
   background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+#carousel-example-generic .focus-num-wrap ol.focus-num li.active a {
   color: #fff;
 }

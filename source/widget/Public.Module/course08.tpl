@@ -44,7 +44,7 @@
         </div>
        
     </div>
-    <div class="course-detail-info"><span class="left">授课老师：贺赓帆</span>  <span class="right">辅导老师：贺赓帆 剩余名额：<strong>50</strong></span> </div>
+    <div class="course-detail-info"><span class="left">授课老师：贺赓帆</span>  <span class="right">辅导老师：<em>贺赓帆</em> 剩余名额：<strong>50</strong></span> </div>
 </div>
 
 

@@ -8,6 +8,7 @@ ul,li{list-style: none;}
 
 .advantage-box{
 	height: 100px;
+	margin-bottom: 20px;
 	.advantage-item{
 		padding: 25px 44px 0px 102px;
 		background: url(../../static/img/advantage.png);
@@ -22,6 +23,7 @@ ul,li{list-style: none;}
 		}
 		&>p:last-child{
 			line-height: 20px;
+            
 		}
 		&:hover{
 			color:#3bafda;
@@ -213,7 +215,7 @@ ul,li{list-style: none;}
 	}
 	.class-info{
 		width: 390px;
-		height: 400px;
+		height: 420px;
 		position: relative;
 		.class-name{
 			position: absolute;
@@ -229,12 +231,12 @@ ul,li{list-style: none;}
 		}
 		.class-container{
 			padding: 0 20px;
-    		margin-top: 26px;
+    		margin-top: 20px;
 			.message{
 				font-size: 12px;
 			    line-height: 24px;
 			    color: #666;
-			    margin-bottom: 14px;
+			    margin-bottom: 16px;
 			    position: relative
 			}
 			.highSchool{
@@ -274,7 +276,7 @@ ul,li{list-style: none;}
 				    width: 50px;
 				    height: 50px;
 				    background: url('/static/img/class.png');
-				    margin-bottom: 12px;
+				    margin-bottom: 6px;
 				}
 			}
 			.marginR_0{
@@ -292,7 +294,7 @@ ul,li{list-style: none;}
 	border-radius: @amount;
 }
 .course-label{
-	font-family: "SimSun";
+	
 	display: inline-block;
 	padding: 2px 8px;
 	font-size: @fontSize;
@@ -332,7 +334,6 @@ ul,li{list-style: none;}
 	background: url("img/icon-record.png") no-repeat left center;
 }
 .course-list {
-	font-family: "SimSun";
 	// border-bottom: 1px solid @borderColor;
 	width: 100%;
 	// padding: 12px 12px 20px;
@@ -355,11 +356,17 @@ ul,li{list-style: none;}
 			padding: 6px 12px;
 			border-radius: 3px;
 		}
+		p{
+			margin-bottom: 4px;
+		}
+		p:first-child{
+			margin-bottom: 8.5px;
+		}
 		p:last-child{
-			margin-top: 24px;
+			margin-top: 40px;
 		}
 		img{
-			margin: 30px 0 12px 0px;
+			margin: 30px 0 0px 0px;
 			position: relative;
 		}
 		a{
@@ -829,7 +836,6 @@ ul,li{list-style: none;}
 		p.course-title{
 			.title-detail{
 				font-size: 12px;
-				font-family: "SimSun";
 			}
 		}
 		.course-teacher{
@@ -972,7 +978,7 @@ ul,li{list-style: none;}
 			line-height: 18px;
 		    margin-bottom: 16px;
 		    padding-bottom: 12px;
-		    border-bottom: 1px solid #cccccc;
+		    border-bottom: 1px solid #dcdcdc;
 		}
 	}
 }
@@ -1015,7 +1021,7 @@ ul,li{list-style: none;}
 				color: #fff;
 				a {
 					color: #fff;
-					font-family: "SimSun";
+					
 					font-size: 14px;
 				}
 				img{
@@ -1061,7 +1067,7 @@ ul,li{list-style: none;}
 			p{
 				margin-bottom: 0;
 				line-height: 55px;
-				font-size: 14px;
+				font-size: 12px;
 				text-align: center;
 				padding: 0 5px;
 				margin-top: 0;
@@ -1127,7 +1133,7 @@ ul,li{list-style: none;}
 					color: #666666;
 					display: inline;
 					float: left;
-					font-family: "SimSun";
+					
 					font-size: 12px;
 					span {
 						color: #333333;
@@ -1172,18 +1178,37 @@ ul,li{list-style: none;}
 		}
 	}
     &.teacher-coach-bomb {
-        .dialog-down-wrap {
-            .dialog-border {
-                height: 80px;
-                .dialog-down {
-                    height: 80px;line-height: 80px;
-                    ul {
-                        li {
-                            img {width:60px;height: 60px;margin:0 5px;}
-                        }
+         .dialog-second {
+            height:195px;
+            .dialog-top {
+                height:105px;margin-top:35px;
+             }
+        }
+    }
+    &.teacher-coach-bomb-app {
+        .dialog-second {
+            height:195px;
+            .dialog-top {
+                height:130px;position: relative;
+                dt {
+                    width:100px;position: absolute;left:10px;top:25px;z-index: 1;
+                }
+                dd.app-name {
+                    width:130px;position: absolute;left:4px;top:90px;z-index: 1;
+                }
+                dd.app-text {
+                    width:130px;height:55px;line-height:25px; position: absolute;left:140px;top:67px;z-index: 2;
+                }
+                dd.app-code {
+                    width:116px;height: 121px;position: absolute;right:10px;top:-3px;z-index: 1;
+                    img {
+                        width:110px;height: 110px;border:3px solid #fff;margin-top:5px;
                     }
                 }
             }
+        }
+        .dialog-center {
+            p {text-align: left;padding-left:10px;}
         }
     }
 }
@@ -1217,8 +1242,8 @@ ul,li{list-style: none;}
 		font-size: 12px;
 		list-style: outside none none;
 		padding: 0 13px;
-		border-right: 1px solid #fcfcfc;
-		border-left: 1px solid #fcfcfc;
+		//border-right: 1px solid #fcfcfc;
+		//border-left: 1px solid #fcfcfc;
 		height: 36px;
 		line-height: 36px;
 		a{
@@ -1314,7 +1339,7 @@ ul,li{list-style: none;}
 	line-height: 42px;
 	font-size: 12px;
 	color: #999999;
-	font-family: "SimSun";
+	
     margin-bottom: 10px;
 	p{
 		font-size: 12px;
@@ -1333,7 +1358,7 @@ ul,li{list-style: none;}
 	//height: 220px;
 	padding: 10px 5px 10px 5px;
 	background: #fcfcfc;
-	font-family: "SimSun";
+	
 	font-size: 14px;
 	color: #333;
 	overflow: hidden;
@@ -1374,6 +1399,9 @@ ul,li{list-style: none;}
     margin-bottom:20px;
     position: relative;
     z-index: 1;
+    &.course-teacher-select {
+        border:1px solid #1e89e0;
+    }
     .ui-avatar {
         .avatar-photo {
             .bottom0 {margin-bottom: 0;}
@@ -1511,7 +1539,10 @@ ul,li{list-style: none;}
     }
 }
 .select-subject-list {
-   height: 42px;background: #f9f9f9;border-bottom: 1px solid #ededed;
+   height: 42px;background: #fff;
+    &.select-edition-list{
+        background: #f9f9f9;
+    }
     li {
         float: left;width:196px;height:40px;line-height: 40px;text-align: center;font-size: 16px;font-family: 'Microsoft YaHei';margin-top:1px;
         a {
@@ -1526,12 +1557,12 @@ ul,li{list-style: none;}
 }
 
 .live-course-rank-list {
-    width:1190px;height: 90px;overflow: hidden;margin-bottom: 10px;background: #f9f9f9;
+    width:1190px;height: 90px;overflow: hidden;margin-bottom: 10px;background: #fff;
     div {float: left;font-family:  'Microsoft YaHei';font-size: 12px;}
     .rank-time {
-        width:500px;overflow: hidden;
+        width:600px;overflow: hidden;
         p.time {
-            font-size: 18px;padding-left:15px;
+            font-size: 20px;padding:15px 0 0 15px;
             strong{padding-left:10px;color: #e74c3c;font-weight: normal;}
             span {
                 display: inline-block;padding-right:5px;
@@ -1539,8 +1570,8 @@ ul,li{list-style: none;}
             .satisfy {color: #999;font-size: 12px;}
         }
         p.difficulty {
-            height:35px;line-height: 50px; overflow: hidden;padding-left:15px;color: #666;
-            a {padding-right:10px;color: #666;}
+            height:30px; overflow: hidden;padding-left:15px;color: #666;font-size: 14px;
+            a {padding-right:10px;}
         }
     }
     .rank-satisfy {
@@ -1548,10 +1579,17 @@ ul,li{list-style: none;}
         strong{color: #e74c3c;padding-left:10px;}
     }
     .rank-coach {
-        width:225px;line-height: 90px;color: #999;overflow: hidden;
+        width:270px;line-height: 90px;overflow: hidden;
+        span {
+           float: left; display: inline-block;min-width:135px;overflow: hidden;color: #999;
+            em {color:#333;}
+        }
          a {padding-right: 10px;}
-        img {
-            width:60px;height: 60px;border-radius: 50%;overflow: hidden; margin-left:6px;float:right;margin:15px 10px 0 0;
+        img.img-left {
+           float: left; width:60px;height: 60px;border-radius: 50%;overflow: hidden; margin-left:6px;float:left;margin:15px 10px 0 0;
+        }
+        img.img-weixin {
+           float: left; padding-left: 10px;margin-top:35px;
         }
     }
     .rank-places {
@@ -1573,7 +1611,13 @@ ul,li{list-style: none;}
     }
 }
 .problem{
-	margin-bottom: 40px;
+	background: #fff;
+	&:nth-child(12){
+		padding-bottom: 20px;
+	}
+	.content{
+		padding: 30px 10px 0 10px;
+	}
 	img{
 		margin-right: 10px;
 	}
@@ -1586,13 +1630,12 @@ ul,li{list-style: none;}
 	}
 	.answer{
 		display: none;
-		margin-bottom: 40px;
 		padding-top: 20px;
 		div{
 			display: inline-block;
 		}
 		.text{
-			border:1px solid rgba(102,102,102,0.5); 
+			border:1px solid #dcdcdc; 
 			box-sizing: border-box;
 			width: 1110px;
 			padding: 20px;
