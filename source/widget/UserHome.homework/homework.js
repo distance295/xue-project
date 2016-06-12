@@ -582,11 +582,11 @@ $.fn.imagePage = function(params){
 		if( params.isZoom ){
 		   _ImageTransform.load(url);
 		}else{
-			  $(_this).find(params.bigPic).find('.ImageTransformJs').remove();
-			  var _imgHtml = '<img style="position: absolute; border: 0px none; padding: 0px; margin: 0px;" src="'+url+'" class="ImageTransformJs" />';
-			  $(_this).find(params.bigPic).append(_imgHtml);
+		  $(_this).find(params.bigPic).find('.ImageTransformJs').remove();
+		  var _imgHtml = '<img style="position: absolute; border: 0px none; padding: 0px; margin: 0px;" src="'+url+'" class="ImageTransformJs" />';
+		  $(_this).find(params.bigPic).append(_imgHtml);
 
-			  /*
+		  /*
 		   *图片缩放居中
 		   */
 		  var maxWidth =  $(_this).find(params.bigPic).width();
