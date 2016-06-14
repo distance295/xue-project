@@ -1188,8 +1188,8 @@ $('body').off('mouseout', '.dialog_userinfo').on('mouseout', '.dialog_userinfo',
         var over_url = location.href;
         var out_time = Date.now();
         var o_time = out_time - time_all;
-        var src_img = $(this).find('.app-code img').attr('src');
-        utrack('xueersi','key=user_tab&value=times:' + o_time + ';userid:' + src_img + ';url:'+ over_url);
+        var src_img = $(this).find('.app-code img').attr('src') || '';
+        utrack('xueersi','key=user_tab&value=times:' + o_time + ';userid:0;url:'+ over_url+';weixin_code_img_url:'+ src_img);
 });
 
 
