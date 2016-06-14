@@ -6,9 +6,6 @@ body {
 body {
   overflow-y: scroll;
 }
-.wrap {
-  background: #f8f8f8;
-}
 ul,
 ol {
   margin: 0;
