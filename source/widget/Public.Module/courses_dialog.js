@@ -1066,7 +1066,7 @@ var userinfo_temp = false,
 userinfo_dom = null,
 userinfo_show = null,
 userinfo_interval = false;
-
+var time_all = '';
     // 绑定所有V用户的鼠标滑过事件：弹出用户信息
     $('body').off('mouseover', '.ui-userinfo').on('mouseover', '.ui-userinfo', function(ev) {
         var d = $(this).data();
@@ -1076,6 +1076,7 @@ userinfo_interval = false;
         }
         var over_url = location.href;
         var over_time = Date.now();
+        time_all = over_time;
         // var ra = ev; ra.relatedTarget;
         // userinfo_show = null;
         userinfo_show = true;
@@ -1184,12 +1185,15 @@ $('body').off('mouseout', '.dialog_userinfo').on('mouseout', '.dialog_userinfo',
             }
         }, 500);
     }
+        var over_url = location.href;
+        var out_time = Date.now();
+        var o_time = out_time - time_all;
+        var src_img = $(this).find('.app-code img').attr('src');
+        utrack('xueersi','key=user_tab&value=times:' + o_time + ';userid:' + src_img + ';url:'+ over_url);
 });
 
 
 // 结束
-
-
 
 
 });
