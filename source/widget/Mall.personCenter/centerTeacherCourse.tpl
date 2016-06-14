@@ -49,8 +49,11 @@
             </div>
             <!--新鲜事筛选tab标签结束--> 
             <div class="center-teacher-course">
-              <link rel="import" href="../../widget/Public.Module/course04.tpl?__inline">
-              <link rel="import" href="../../widget/Public.Module/course05.tpl?__inline">
+              <link rel="import" href="../../widget/Public.Module/course08.tpl?__inline">
+              <link rel="import" href="../../widget/Public.Module/course08.tpl?__inline">
+               <link rel="import" href="../../widget/Public.Module/course08.tpl?__inline">
+                <link rel="import" href="../../widget/Public.Module/course08.tpl?__inline">
+                 <link rel="import" href="../../widget/Public.Module/course08.tpl?__inline">
             </div>
         </div>
         <div class="center-right top m20">
