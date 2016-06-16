@@ -122,7 +122,7 @@
             }
 		}
         .main-teacher {
-            width:590px;height: 50px;line-height: 50px; position: absolute;bottom: 0;left:0;z-index: 1;background: #5e6364;
+            width:590px;height: 50px;line-height: 50px; position: absolute;bottom: 0;left:0;z-index: 1;background-color: hsla(254,100%,0%,0.6);
             span {
                         float: left;display: inline;color: #fff;
                         &.avatar-m {
@@ -145,7 +145,7 @@
 		// 课程信息汇总----中间
 
 	.course-center-list {
-	   width: 590px;height: 400px; overflow: hidden;margin-left: 10px;position: relative;
+	   width: 590px;height: 400px; margin-left: 10px;position: relative;
 	   
 	   .attend-class-time {
 	   	overflow: hidden;
@@ -873,6 +873,15 @@
         }
     }
 }
+.qq-layer-item {
+    width:100%;position: fixed;bottom: 0;left:0;z-index: 999;background-color: hsla(254,100%,0%,0.6);
+}
+.course-teacher-qq {
+    width: 253px;height: 214px; position: absolute;right: 99px;top:-13px;z-index: 9999; background: url(img/qq-layer.png) no-repeat;
+    span {width:24px;height: 25px;position: absolute;right:5px;top:0;z-index: 0;cursor: pointer;}
+    a {width:140px;height:44px;position: absolute;left:40px;top:133px;z-index: 0;}
+}
+
 /*
  * CSS Styles that are needed by jScrollPane for it to operate correctly.
  *模拟听课页---讲节列表过多时的滚动条

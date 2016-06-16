@@ -18,6 +18,11 @@
             </div>
     </div>
     <div class="course-center-list f-left">
+       <div class="course-teacher-qq">
+          <span><img src="img/close-qq-layer.png" alt=""></span>
+           <a href="#"><img src="img/qq_jiaru_layer.png" alt=""></a>
+       </div>
+       <div class="qq-layer-item"></div>
         <div class="course-favorable-money">
             <div class="favrble-money f-left">
                 <span>
@@ -80,4 +85,14 @@
     </div>
 
 </div>
-
+<script>
+    function qqteacher(){
+        var h = $(window).height();
+        $('.qq-layer-item').css('height', h);
+    }
+    qqteacher();
+    $('body').on('click','.course-teacher-qq span',function(){
+        $(this).parent().remove();
+         $('.qq-layer-item').remove();
+    });
+</script>
