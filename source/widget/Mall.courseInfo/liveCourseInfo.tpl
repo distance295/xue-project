@@ -18,6 +18,11 @@
             </div>
     </div>
     <div class="course-center-list f-left">
+       <div class="course-teacher-qq">
+          <span><img src="img/close-qq-layer.png" alt=""></span>
+           <a href="#"><img src="img/qq_jiaru_layer.png" alt=""></a>
+       </div>
+       <div class="qq-layer-item"></div>
         <div class="course-favorable-money">
             <div class="favrble-money f-left">
                 <span>
@@ -42,11 +47,7 @@
                 <span class="name-c">王海丰老师</span>
                <span class="app-dimension-code">
                    <img class="line" src="img/icon-line.png" alt="">
-                   <img src="img/app-code.png" alt="">
-                   <em>
-                       微信扫码<br/>
-                       咨询辅导老师
-                   </em>
+                   <img class="qq-jiaru" src="img/qq_jiaru.png" alt="qq">
                </span>
                 <span class="info-c "><strong class="c-disable">已满</strong><br/>剩余名额</span>
             </div>
@@ -84,4 +85,14 @@
     </div>
 
 </div>
-
+<script>
+    function qqteacher(){
+        var h = $(window).height();
+        $('.qq-layer-item').css('height', h);
+    }
+    qqteacher();
+    $('body').on('click','.course-teacher-qq span',function(){
+        $(this).parent().remove();
+         $('.qq-layer-item').remove();
+    });
+</script>

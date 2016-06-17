@@ -60,33 +60,37 @@
 				<div class="homework-Thumbnails-img-list" id="Thumbnails">
 					<ul>
 						<li data-audio =""><img src="img/small1.png" class="homework-Feedback-small-img"/><i></i></li>
-						<li data-audio = "http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3">
+						<li data-audio = "http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3" data-url="/static/img/hm_big1.png,/data/homework/我的好兄弟.mp3|/static/img/small2.png,http://x03.xesimg.com/homework/audio/2016/03/11/14576902531928.mp3|/static/img/small1.png,http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3">
 							<span class="homework-MaskLayer"></span>
 							<span class="homework-MaskLayer-num">1</span>
 							<img src="img/small3.png" />
 							<i></i>
+							<!--试卷答对-->
+							<span class="homework-rightIcon"></span>
+							<!--已改完和已改对-->
+							<span class="homework-markStatus">已改完</span>
 						</li>
-						<li data-audio ="/data/homework/我的好兄弟.mp3">
+						<li data-audio ="/data/homework/我的好兄弟.mp3" data-url="/static/img/small2.png,http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3|/static/img/small1.png,''">
 							<span class="homework-MaskLayer"></span>
 							<span class="homework-MaskLayer-num">2</span>
 							<img src="http://7sbrvo.com2.z0.glb.qiniucdn.com/homework/img/2015/11/05/14467099031310.png" /><i></i>
 						</li>
-						<li data-audio ="">
+						<li data-audio ="" data-url="">
 							<span class="homework-MaskLayer"></span>
 							<span class="homework-MaskLayer-num">3</span>
 							<img src="img/small3.png" /><i></i>
 						</li>
-						<li data-audio ="http://x03.xesimg.com/homework/audio/2016/03/11/14576902531928.mp3">
+						<li data-audio ="http://x03.xesimg.com/homework/audio/2016/03/11/14576902531928.mp3" data-url="/static/img/small1.png,''|/static/img/small2.png,/data/homework/我的好兄弟.mp3">
 							<span class="homework-MaskLayer"></span>
 							<span class="homework-MaskLayer-num">4</span>
 							<img src="img/small2.png" /><i></i>
 						</li>
-						<li data-audio ="">
+						<li data-audio ="" data-url="">
 							<span class="homework-MaskLayer"></span>
 							<span class="homework-MaskLayer-num">5</span>
 							<img src="img/small3.png" /><i></i>
 						</li>
-						<li data-audio ="/data/homework/我的好兄弟.mp3">
+						<li data-audio ="/data/homework/我的好兄弟.mp3" data-url="/static/img/small1.png,''|/static/img/small2.png,http://x03.xesimg.com/homework/audio/2016/03/11/14576902531928.mp3|/static/img/small1.png,''|/static/img/small2.png,''">
 							<span class="homework-MaskLayer"></span>
 							<span class="homework-MaskLayer-num">6</span>
 							<img src="img/small2.png" /><i></i>
@@ -103,6 +107,7 @@
 		        <!-- <audio class="homework-audio-btn-style hiding" controls="controls" src=""> </audio> -->
 				<div class="homework-rightMeun pull-right">
 					<ul>
+						<li><a href="javascript:void(0)" class="homework-disable-edit-btn"></a></li>
 						<!--音频的位置,第一次进入页面显示默认的音频列表添加flag = '1'-->
 						<li><a href="javascript:void(0)" class="homework-audio" flag = '1'></a></li>
 						<li><a href="javascript:void(0)" class="homework-leftRotate-btn"></a></li>
@@ -112,8 +117,6 @@
 					</ul>
 				</div>
 				<div id="homework-ImageTransform-box-1" class="homework-ImageTransform">
-
-					
 					
 					<ul style="display:none">
 						<li><img src="img/small1.png" /></li>
@@ -241,7 +244,8 @@
 					leftRotate:".homework-leftRotate-btn",//向左旋转按钮
 					rightRotate:".homework-rightRotate-btn",//向右旋转按钮
 					min_picnum:4,//小图默认显示个数
-					isZoom:_homeZoom//是否存在旋转缩放 false不存在，true存在
+					isZoom:_homeZoom,//是否存在旋转缩放 false不存在，true存在
+					lookEdit:".homework-disable-edit-btn"//查看改正中图片按钮
 				});
 
             })
