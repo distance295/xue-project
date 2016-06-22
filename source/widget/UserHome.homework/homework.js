@@ -618,6 +618,11 @@ $.fn.imagePage = function(params){
 		    //改正过程中的图片存在查看按钮为可编辑，反之相反
 		    if(dataUrl){
 		    	$(_this).find(params.lookEdit).addClass('homework-edit-btn');
+
+		    	//查看订正之前如果存在homework-edit-two-click,先删除homework-edit-two-click，homework-edit-two-click是为了判断可编辑按钮是否已经展开订正图片
+	        	if( $(_this).find('.homework-edit-btn').hasClass('homework-edit-two-click') ){
+	        	      $(_this).find('.homework-edit-btn').removeClass('homework-edit-two-click');
+	        	}
                 
                 //滑过提示弹层效果
 		    	$(_this).closest('.homework-wrapper-container').find('.lookEditImg-popover').remove();
@@ -632,6 +637,10 @@ $.fn.imagePage = function(params){
 
 		    	//滑过提示弹层效果
 		    	$(_this).off('mouseover ','.homework-edit-btn').on('mouseover','.homework-edit-btn',function(){
+		    		//判断可编辑按钮是否是二次点击，当展开了订正图片后在滑过编辑按钮没有弹层提示
+		        	if( $(this).hasClass('homework-edit-two-click') ){
+		        	      return false;
+		        	}
 		    		var lookEditImg_popover_w = $(_this).closest('.homework-wrapper-container').find('.lookEditImg-popover').width();
 		    		var container_w = $(_this).closest('.homework-wrapper-container').width();
                     var popover_left = container_w -lookEditImg_popover_w/2 - 30 - 54/2 ;
@@ -647,6 +656,13 @@ $.fn.imagePage = function(params){
 		    	})
 		        //点击可编辑查看按钮
 		        $(_this).off('click','.homework-edit-btn').on('click','.homework-edit-btn',function(){
+		        	//判断可编辑按钮是否是二次点击，当展开了订正图片后在点击编辑按钮收缩订正图片，显示初始化的最后一张缩略图的图片
+		        	if( $(this).hasClass('homework-edit-two-click') ){
+		        	      $(_this).find(params.smallPic).find('li').eq(tpqhnum).trigger("click");
+		        	      return false;
+		        	}
+
+		        	$(this).addClass('homework-edit-two-click');
 		        	var lookEditNum = 0;
 		            var arr_dataUrl = dataUrl.split('|');
 		            var dataUrl_Num = arr_dataUrl.length;
