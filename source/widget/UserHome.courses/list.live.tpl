@@ -26,6 +26,7 @@
                 <span class="text-style yellow-mark span-w3"><a href="###" class="mark">未完成</a></span>
                 <span class="text-style span-w4">
                     <a class="btn btn-primary" href="##"><em class="button-icon icon-will-red"></em>立即回看</a>
+                    <a class="btn btn-success" href="##">学习报告</a>
                 </span>
             </li>
             <li>
@@ -34,6 +35,7 @@
                 <span class="text-style studied-end span-w3"><a href="###" class="">已开始</a></span>
                 <span class="text-style span-w4">
                     <a class="btn-danger btn" href="##"><em class="button-icon icon-will-red"></em>立即上课</a>
+                    <a class="btn course-btn-gray" href="##" disabled>学习报告</a>
                 </span>
             </li>
             <li>
@@ -42,6 +44,7 @@
                 <span class="text-style studied span-w3"><a href="###" class="">已参加</a></span>
                 <span class="text-style span-w4">
                     <a class="btn btn-primary" href="##"><em class="button-icon icon-will-red"></em>立即回看</a>
+                    <a class="btn btn-success" href="##">学习报告</a>
                 </span>
             </li>
             <li>
@@ -50,6 +53,7 @@
                 <span class="text-style studied span-w3"><a href="###" class="">已回看</a></span>
                 <span class="text-style span-w4">
                     <a class="btn btn-primary" href="##"><em class="button-icon icon-will-red"></em>立即回看</a>
+                    <a class="btn btn-success" href="##">学习报告</a>
                 </span>
             </li>
             <li>
@@ -57,7 +61,8 @@
                 <span class="static-gray span-w2">第1讲 初一数学目标满分班人教版 第一场直播</span>
                 <span class="text-style studied static-gray span-w3">未开始</span>
                 <span class="text-style span-w4">
-                    
+                    <button class="btn course-btn-gray" disabled>等待回看</button>
+                    <a class="btn btn-success" href="##">学习报告</a>
                 </span>
             </li>
             <li>
@@ -66,6 +71,7 @@
                 <span class="text-style studied span-w3"><a href="###" class="">已参加</a></span>
                 <span class="text-style span-w4">
                     <button class="btn course-btn-gray" disabled>等待回看</button>
+                    <a class="btn btn-success" href="##">学习报告</a>
                 </span>
             </li>
             <li>
@@ -74,6 +80,7 @@
                 <span class="text-style yellow-mark span-w3"><a href="###" class="mark">未完成</a></span>
                 <span class="text-style span-w4">
                     <button class="btn course-btn-gray" disabled>等待回看</button>
+                    <a class="btn btn-success" href="##">学习报告</a>
                 </span>
             </li>
     </ul>
