@@ -78,16 +78,16 @@
     			</p>
     		</div>
     		<div class="item bg-4">
-    			<p class="clearfix">
-	    			<span class=" process">订正</span>
-	    			<span><b class="name">xx</b>同学，谢谢你认真完成了测试X的订正，也完成了咱们这次课的全部学习环节，点亮了整个知识图谱！这个感觉是不是特别棒？！XX老师希望在今后的学习中，你继续
-                    保持这种不遗留问题、持之以恒的精神，老师会一直陪伴你哒。</span>
-	    		</p>
-    			<p class="text">xx同学，谢谢</br>
-                你认真完成了测试X的订正，也完成了咱们这次课的全部学习环节，点亮了整个知识图谱！这个感</br>觉是不是特别棒？！XX</br>
-                老师希望在今后的学习中，你继续保持这种不遗留问题、持之以恒的精神，老师会一直陪伴你哒</br>。
-    			</p>
-    		</div>
+                <p class="clearfix">
+                                <span class=" process">订正</span>
+                                <span><b class="name">xx</b>同学，谢谢你认真完成了测试X的订正，也完成了咱们这次课的全部学习环节，点亮了整个知识图谱！这个感觉是不是特别棒？！XX老师希望在今后的学习中，你继续
+                                保持这种不遗留问题、持之以恒的精神，老师会一直陪伴你哒。</span>
+                            </p>
+                <p class="text">xx同学，谢谢</br>
+                            你认真完成了测试X的订正，也完成了咱们这次课的全部学习环节，点亮了整个知识图谱！这个感</br>觉是不是特别棒？！XX</br>
+                            老师希望在今后的学习中，你继续保持这种不遗留问题、持之以恒的精神，老师会一直陪伴你哒</br>。
+                </p>
+            </div>
     	</div>
     	<div class="teacherInfo">
     		<div class="teacherImg triangle">
@@ -252,5 +252,5 @@
     	<img src="img/logo_share.png" class="logo" alt="">
     </div>
 </div>
-<input type="hidden" id="pieData" value='{"process":"4","pieData":[{"name":"浮力应用1","complete":"0.8","total":"0.05"},{"name":"浮力应用2","complete":"0.7","total":"0.15"},{"name":"浮力应用3","complete":"0.6","total":"0.25"},{"name":"浮力应用4","complete":"0.4","total":"0.25"},{"name":"浮力应用5","complete":"0.5","total":"0.1"},{"name":"浮力应用6","complete":"0.75","total":"0.05"},{"name":"浮力应用7","complete":"0.85","total":"0.05"},{"name":"浮力应用...应用","complete":"0.35","total":"0.05"},{"name":"浮力应用9","complete":"0.5","total":"0.05"}]}'>
+<input type="hidden" id="pieData" value='{"process":"3","pieData":[{"name":"浮力应用1","complete":"0.8","total":"0.05"},{"name":"浮力应用2","complete":"0.7","total":"0.15"},{"name":"浮力应用3","complete":"0.6","total":"0.25"},{"name":"浮力应用4","complete":"0.4","total":"0.25"},{"name":"浮力应用5","complete":"0.5","total":"0.1"},{"name":"浮力应用6","complete":"0.75","total":"0.05"},{"name":"浮力应用7","complete":"0.85","total":"0.05"},{"name":"浮力应用...应用","complete":"0.35","total":"0.05"},{"name":"浮力应用9","complete":"0.5","total":"0.05"}]}'>
 

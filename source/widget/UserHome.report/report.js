@@ -21,11 +21,6 @@
                 })
                 $('.arrow-animation').eq(index-2).hide()
                 switch(index){
-                    case 2:
-                        if(json.process==3){
-                            toLeft();
-                        }
-                        break;
                     case 3:
                         tabIn()
                         break;   
@@ -129,32 +124,29 @@
         /* 第三屏页卡切换函数 */
         function tabClick(){
             $('.section-3 .item').each(function(index){
-                // $('.section-3 .item').stop().css({height:200});
-                $(this).css({transform:'translate(0,'+(40*index)+'px)'+ '  rotateX(-30deg)',zIndex:index})
+                $(this).css({transform:'translate(0,'+(40*(4-l+index))+'px)'+ '  rotateX(-30deg)',zIndex:index})
             })
             $('.section-3 .item').find('span:last-child').show();
-            $('.section-3 .item').eq(l-1).css({transform:'translate(0,'+(40*(l-1)-8)+'px)'+ '  rotateX(-30deg)'}).find('span:last-child').hide();
+            $('.section-3 .item').eq(l-1).find('span:last-child').hide();
         };  
         
 
         /* 第三屏页卡动画效果 */
         function tabOut(){
-            $('.section-3 .item').css({height:200})
             $('.section-3 .item').each(function(index){
                 if(index%2==0){
-                    $(this).css({transform:'translate('+bodyWidth+'px,'+(40*index)+'px)'+'  rotateX(-30deg)'})    
+                    $(this).css({transform:'translate('+bodyWidth+'px,'+(40*(4-l+index))+'px)'+'  rotateX(-30deg)'})    
                 }
                 else{
-                    $(this).css({transform:'translate('+(-bodyWidth)+'px,'+(40*index)+'px)'+'  rotateX(-30deg)'})    
+                    $(this).css({transform:'translate('+(-bodyWidth)+'px,'+(40*(4-l+index))+'px)'+'  rotateX(-30deg)'})    
                 }
             })
         }
 
         function tabIn(){
             $('.section-3 .item').each(function(index){
-                    $(this).css({transform:'translate(0px,'+(40*index)+'px)'+'  rotateX(-30deg)'})    
-            })
-            $('.section-3 .item').eq(l-1).css({transform:'translate(0px,'+(40*(l-1)-8)+'px)'+'  rotateX(-30deg)'})    
+                    $(this).css({transform:'translate(0px,'+(40*(4-l+index))+'px)'+'rotateX(-30deg)'})    
+            })   
         }
 
         /* 扇形绘制函数 */
