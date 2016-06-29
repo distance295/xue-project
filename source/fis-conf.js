@@ -128,7 +128,8 @@ var __module = {
         'UserHome.notice',
         'UserHome.perfection',
         'UserHome.sidebar',
-        'UserHome.wrongQues'
+        'UserHome.wrongQues',
+        'UserHome.report'
     ],
     mall : [
         'Mall.courseInfo',
@@ -178,7 +179,8 @@ var __ignore = {
         'UserHome.notice',
         'UserHome.perfection',
         'UserHome.sidebar',
-        'UserHome.wrongQues'
+        'UserHome.wrongQues',
+        'UserHome.report'
     ].toString(),
     home : [
         'Mall.courseInfo',
@@ -242,7 +244,8 @@ var __ignore = {
         'UserHome.notice',
         'UserHome.perfection',
         'UserHome.sidebar',
-        'UserHome.wrongQues'
+        'UserHome.wrongQues',
+        'UserHome.report'
     ].toString()
 };
 
