@@ -2,22 +2,18 @@
     @require header.less
     @require header.js
 -->
-<!--
 <div class="modele-header-pic">
-    <img src="http://r01.xesimg.com/web/2016/04/20/14611181672040.jpg" alt="暑假班抢福利倒计时" usemap="#Map" border="0">
+    <img src="http://file.xueersi.com/web/2016/06/29/14671698514847.jpg" alt="暑假班抢福利倒计时" usemap="#Map" border="0">
       <map name="Map" id="Map">
-        <area shape="rect" coords="792,7,912,72" href="http://zt.xueersi.com/2016xxsjlive/" target="_blank"/>
-        <area shape="rect" coords="920,7,1040,74" href="http://zt.xueersi.com/2016czsjlive/" target="_blank"/>
-        <area shape="rect" coords="1047,8,1166,75" href="http://zt.xueersi.com/2016gzsj/"  target="_blank"/>
+        <area shape="rect" coords="991,18,1158,65" href="http://zt.xueersi.com/2016xxsjlive/" target="_blank"/>
   </map>
-    <p class="settime" endtime="2016-4-26 23:59:59" style="right:449px;color:#000;"></p>
+    <p class="settime" endtime="2016-7-01 19:15:59" style="right:235px;color:#e74c3c;"></p>
     <script type="text/javascript">
 			$(function(){
 			   xue.updateEndTime('.settime');//执行倒计时函数
 			});
 	</script>
 </div>
--->
 <div id="module-header">
     <div class="h-logo"><a herf="#">学而思网校</a></div>
     <div class="h-search">

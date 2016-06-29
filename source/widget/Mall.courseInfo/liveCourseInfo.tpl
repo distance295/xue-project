@@ -18,11 +18,8 @@
             </div>
     </div>
     <div class="course-center-list f-left">
-       <div class="course-teacher-qq">
-          <span><img src="img/close-qq-layer.png" alt=""></span>
-           <a href="#"><img src="img/qq_jiaru_layer.png" alt=""></a>
-       </div>
-       <div class="qq-layer-item"></div>
+       
+<!--       <div class="qq-layer-item"></div>-->
         <div class="course-favorable-money">
             <div class="favrble-money f-left">
                 <span>
@@ -47,10 +44,20 @@
                 <span class="name-c">王海丰老师</span>
                <span class="app-dimension-code">
                    <img class="line" src="img/icon-line.png" alt="">
-                   <img class="qq-jiaru" src="img/qq_jiaru.png" alt="qq">
+                   <img class="qq-jiaru" src="img/qq_90.png" alt="qq" width="45">
+                    <em>
+                       加入QQ群咨询<br/>
+                       <i style="color:#e74c3c;font-style:normal;">4324134566</i><a href="#" style="float:right;margin:3px 5px 0;"><img src="img/icon-mon.png"/></a>
+                   </em>
                </span>
                 <span class="info-c "><strong class="c-disable">已满</strong><br/>剩余名额</span>
             </div>
+  <!--          <div class="course-teacher-qq">
+
+                   <span><img src="img/close-qq-layer.png" alt=""></span>
+                   <a href="#"><img src="img/qq_jiaru_layer.png" alt=""></a>
+
+           </div>-->
         </div>
         <div class="course-serve-list">
             <span class="f-left">课程服务：</span>
