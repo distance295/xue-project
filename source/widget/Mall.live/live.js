@@ -3,14 +3,11 @@
  */
 $(function(){
     var $body = $('body');
-    $('.carousel').eq(1).carousel({
+    $('.carousel:gt(0)').carousel({
         interval:'10000'
     });
-    $('.carousel').eq(2).carousel({
-        interval:'10000'
-    })
-    $('.carousel').eq(2).carousel({
-        interval:'10000'
+    $('.closeH').bind('click',function(){
+        $('.closeH').parent().css({display:'none'})
     })
     var $liveScrollBtn = $('.live-scroll-btn-container li');
     $liveScrollBtn.on('click',function(e){
