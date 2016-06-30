@@ -62,12 +62,12 @@
     line-height: 1.42857143;
     color: #fff;
 	font-family: Tahoma, Arial, "Heiti SC", "Helvetica", "Helvetica Neue", "Droidsansfallback", "Droid Sans", "Dengxian", "Segoe";
-	// background: url('img/section-1-bg.png');
 	background-size: 100% 100%;
 	background: #27294f;
     background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#35285d), to(#27294f));
     background: -moz-linear-gradient(top, #35285d,#27294f);
 	background: -ms-linear-gradient(top, #35285d,#27294f); 
+
 	padding: 0;
 	margin:0;
 	box-sizing: border-box;
@@ -97,13 +97,23 @@
 
 .section{
 	position: relative;
-	// background: url('img/section-1-bg.png');
 	background-image: url('img/star_m.png');
 	background-size: 100% 100%;
 	text-align: center;
 	max-width: 980px;
 	margin: 0 auto;
 	opacity: 0;
+	.shadow{
+		background: transparent;
+		background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0,0,0,0)), to(rgba(0,0,0,0.5)));
+        background: -moz-linear-gradient(top, rgba(0,0,0,0),rgba(0,0,0,0.5));
+	    background: -ms-linear-gradient(top, rgba(0,0,0,0),rgba(0,0,0,0.5)); 
+		position: absolute;
+	    width:  calc(~"80% - 10px");
+	    height: 50px;
+	    left: 10%;
+    	padding:0 10px;
+	}
 	h4{
 		text-align: center;
 		margin-top:24px;
@@ -119,6 +129,7 @@
 			max-width: 750px;
 		}
 	}
+
 	&.section-2{
 		.state{
 			font-size: 0.75em;
@@ -129,34 +140,81 @@
 			border-top:1px solid #fff;
 			max-width: 980px;
 			left: 0;
-
 			.process{
 				transition:all 2s;
 				top: -42px;
 				position: absolute;
 				right:-250px;
-				// &.liveBefore{
-				// 	left:5%
-				// }
-				// &.liveAfter{
-				// 	left:30%
-				// }
-				// &.test{
-				// 	left:60%
-				// }
-				// &.correction{
-				// 	left:80%
-				// }
 				.time{
 					padding: 8px 4px;
 					border: 1px solid #fff;
 					border-radius: 5px;
-					&:before,&:after{
+					&.triangle{
 						bottom:7px;
-						transform: rotate(180deg) translateY(-32px)
+   	 					transform: rotate(180deg) translateY(-37px) ;
 					}
 					&:before{
 						top:-9px;
+					}
+					&.triangle_IE{
+						&:before{
+							content: '';
+						    z-index: 2;
+						    position: absolute;
+						    top: -7px;
+						    left: 50%;
+						    margin-left: -8px;
+						    width: 0;
+						    height: 0;
+						    border-left: 8px solid transparent;
+						    border-right: 8px solid transparent;
+						    border-top: 8px solid #fff;
+						    top:28px;
+						}
+						&:after{
+							content: '';
+						    z-index: 3;
+						    position: absolute;
+						    top: -7px;
+						    left: 50%;
+						    margin-left: -8px;
+						    width: 0;
+						    height: 0;
+						    border-left: 8px solid transparent;
+						    border-right: 8px solid transparent;
+						    border-top: 8px solid  #27294f;
+						    top:27px;
+						}
+					}
+					&.triangle_FF{
+						&:before{
+							content: '';
+						    z-index: 2;
+						    position: absolute;
+						    top: -7px;
+						    left: 50%;
+						    margin-left: -8px;
+						    width: 0;
+						    height: 0;
+						    border-left: 8px solid transparent;
+						    border-right: 8px solid transparent;
+						    border-top: 8px solid #fff;
+						    top:30px;
+						}
+						&:after{
+							content: '';
+						    z-index: 3;
+						    position: absolute;
+						    top: -7px;
+						    left: 50%;
+						    margin-left: -8px;
+						    width: 0;
+						    height: 0;
+						    border-left: 8px solid transparent;
+						    border-right: 8px solid transparent;
+						    border-top: 8px solid  #27294f;
+						    top:29px;
+						}
 					}
 				}
 				.spot{
@@ -251,13 +309,14 @@
 				cursor: pointer;
 				border-radius: 10px;
 				padding: 20px;
-				transform:rotateX(32deg);
+				transform:rotateX(32deg) ;
 				height: 200px;
 				overflow: hidden;
 				position: absolute;
 				top: 0;
 				z-index: 1;
 				transition:all .5s;
+
 				&.bg-1{
 					background: url('img/bg-1.png');
 					background-size: 100% 100%;
@@ -265,18 +324,15 @@
 				&.bg-2{
 					background: url('img/bg-2.png') ;
 					background-size: 100% 100%;
-
 				}
 				&.bg-3{
 					background: url('img/bg-3.png') ;
 					background-size: 100% 100%;
-
 					
 				}
 				&.bg-4{
 					background: url('img/bg-4.png');
 					background-size: 100% 100%;
-					
 				}
 				&:last-child{
 					p span:last-child{
@@ -286,8 +342,21 @@
 				p{
 					&.text{
 						text-align: left;
-						overflow: hidden;
+						overflow-y: auto;
 						height: 135px;
+						&::-webkit-scrollbar{width:10px;}
+						&::-webkit-scrollbar-track{background-color:rgba(0,0,0,0.3);}
+						&::-webkit-scrollbar-thumb{background-color:#000;}
+						&::-webkit-scrollbar-thumb:hover {background-color:#66d6ff}
+						&::-webkit-scrollbar-thumb:active {background-color:rgba(0,0,0,0.8)}
+						scrollbar-arrow-color: #000; /*三角箭头的颜色*/
+						scrollbar-face-color:  #000; /*立体滚动条的颜色（包括箭头部分的背景色）*/
+						scrollbar-3dlight-color:  #000; /*立体滚动条亮边的颜色*/
+						scrollbar-highlight-color:  #000; /*滚动条的高亮颜色（左阴影？）*/
+						scrollbar-shadow-color:  #000; /*立体滚动条阴影的颜色*/
+						scrollbar-darkshadow-color:  #000; /*立体滚动条外阴影的颜色*/
+						scrollbar-track-color:  #000; /*立体滚动条背景颜色*/
+						scrollbar-base-color: #000; /*滚动条的基色*/
 					}
 					span:first-child{
 						float: left;
@@ -370,6 +439,13 @@
 		}
 	}
 	&.section-5{
+		.allRight{
+			width: 80vw;
+			height: 80vw !important;
+			max-width: 500px;
+			max-height: 500px;
+			display: none;
+		}
 		.correctRate{
 			.my{
 				margin-top: 50px;
@@ -378,45 +454,59 @@
 		.wrong{
 			text-align: left;
 			margin-top: 20px;
-			padding: 0 10% 20px;
+			padding: 0 10% ;
 			overflow-y: auto;
-			height: 50%;
+			height: 40%;
 			position: relative;
-			&::-webkit-scrollbar{width:14px;}
-			&::-webkit-scrollbar-track{background-color:#bee1eb;}
-			&::-webkit-scrollbar-thumb{background-color:#00aff0;}
-			&::-webkit-scrollbar-thumb:hover {background-color:#9c3}
-			&::-webkit-scrollbar-thumb:active {background-color:#00aff0}
+			&::-webkit-scrollbar{width:10px;}
+			&::-webkit-scrollbar-track{background-color:rgba(0,0,0,0.3);}
+			&::-webkit-scrollbar-thumb{background-color:#000;}
+			&::-webkit-scrollbar-thumb:hover {background-color:#66d6ff}
+			&::-webkit-scrollbar-thumb:active {background-color:rgba(0,0,0,0.8)}
+			
 			p:first-child{
 				margin-bottom: 16px;
+				position: relative;
+				
 			}
 			.item{
 				padding: 10px;
 				border:1px solid #fff;
 				margin-bottom: 10px;
+				&:last-child{
+					margin-bottom: 0;
+				}
 			}
-			&:after{
-				display: block;
-				content: "";
-				width: 80%;
-				height: 50px;
-				position: absolute;
-				bottom: 0;
-				background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0,0,0,0)), to(rgba(0, 0, 0, 0.5)));
-			}
+			
 		}
 	}
 	&.section-6,&.section-7{
 		display: block !important;
-		text-align: left;
-		padding:0 10%;
+		
+		h4{
+			margin-bottom: 40px;
+		}
+		text-align: center;
+		p{
+			text-align: left;
+		}
+		.liveWrong{
+			height: 80%;
+			overflow-y:auto;
+			width: 100%;
+			padding:0 10%;
+			&::-webkit-scrollbar{width:10px;}
+			&::-webkit-scrollbar-track{background-color:rgba(0,0,0,0.3);}
+			&::-webkit-scrollbar-thumb{background-color:#000;}
+			&::-webkit-scrollbar-thumb:hover {background-color:#66d6ff}
+			&::-webkit-scrollbar-thumb:active {background-color:rgba(0,0,0,0.8)}
+		}
 		.item{
-			&:first-child{
-				margin-top: 40px;
-			}
-			margin-bottom: 20px;
+			margin-bottom: 10px;
+			width: 100%;
 			img{
 				width: 100%;
+				border-radius: 10px;
 			}
 			p{
 				margin-bottom: 10px;
@@ -437,9 +527,6 @@
 		    left: 0;
 		    height: 100%;
 		    background: #000;
-		 //    background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#35285d), to(#27294f));
-		 //    background: -moz-linear-gradient(top, #35285d,#27294f);
-			// background: -ms-linear-gradient(top, #35285d,#27294f); 
 		    top: 0;
 		    opacity: 1;
 		    vertical-align: middle;
@@ -461,6 +548,7 @@
 		    	position: absolute;
 		    	margin-top: -25%;
 		    	top: 50%;
+		    	left: 0;
 		    }
 		}
 		
@@ -597,16 +685,30 @@
    		p span:last-child{
    			line-height: 20px;
    		}
-   }
-   .section.section-2 .state{
-   	.process{
-   		top: -47px;
-   	}
-   	 font-size: 1em;
-   	 .triangle{
-   	 	&:before,&:after{
-   	 		transform: rotate(180deg) translateY(-37px) !important;
+    }
+    .section.section-2 .state{
+   		.process{
+   			top: -47px;
+   		}
+   	 	font-size: 15px;
+   	 	.triangle{
+   	 		&:before,&:after{
+   	 			transform: rotate(180deg) translateY(-36px) ;
+   	 		}
    	 	}
-   	 }
-   }
+	}
+}
+@media screen and(max-width:767px) {
+	.section.section-2 .state .process{
+		.time{
+		   	&.triangle_IE{
+			   	&:before{
+					top:24px;
+				}
+				&:after{
+					top:23px;
+				}
+			}
+		}
+	}
 }

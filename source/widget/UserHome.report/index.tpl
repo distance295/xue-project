@@ -21,12 +21,12 @@
         <h4 class="title">本讲知识图谱</h4>
         <div class="state">
             <div class="liveAfter process">
-                <span class="time triangle">6月7日 9:30进入 11:00退出</span>
+                <span class="time triangle">2016-06-30 10:03:30进入</span>
                 <div class="spot"></div>
                 <div class="ball ">直播</div>
             </div>
             <div class="test process">
-                <span class="time triangle">6月8日 11:00提交</span>
+                <span class="time triangle">2016-06-30 10:43:30提交</span>
                 <div class="spot"></div>
                 <div class="ball">随堂测</div> 
             </div>
@@ -119,11 +119,13 @@
     </div>
     <div class="section section-5">
     	<h4 class="title">随堂测正确率</h4>
-    	<div class="correctRate">
-    		<p class="my">90<small>分</small></p>
-    		<p class="text"></p>
-    		<p class="average">班级平均分<span>80</span></p>
-    	</div>
+        <div class="correctRate">
+            <p class="my">90<small>分</small></p>
+            <p class="text"></p>
+            <p class="average">班级平均分<span>80</span></p>
+        </div>
+        <img src="img/monkey.png" class="allRight" alt="">
+        <div class="shadow"></div>
     	<div class="wrong">
     		<p>随堂测错题</p>
     		<div class="item">
@@ -203,7 +205,7 @@
     </div>
     <div class="section section-6">
     	<h4 class="title">直播错题</h4>
-    	<div class="liveWrong">
+        <div class="liveWrong">
     		<div class="item">
     			<p>
     				<span class="subjectName">互动题1</span>
@@ -218,14 +220,35 @@
     			</p>
     			<img src="img/subject.png" alt="">
     		</div>
+            <div class="item">
+                <p>
+                    <span class="subjectName">互动题2</span>
+                    <span class="notComplete">未</span>
+                </p>
+                <img src="img/subject.png" alt="">
+            </div>
+             <div class="item">
+                <p>
+                    <span class="subjectName">互动题2</span>
+                    <span class="notComplete">未</span>
+                </p>
+                <img src="img/subject.png" alt="">
+            </div>
+             <div class="item">
+                <p>
+                    <span class="subjectName">互动题2</span>
+                    <span class="notComplete">未</span>
+                </p>
+                <img src="img/subject.png" alt="">
+            </div>
     	</div>
     	<div class="cover">
     	</div>
 		<div class="arrow-animation"></div>
     </div>
     <div class="section section-7">
-	    <h4 class="title">随堂测错题</h4>
-    	<div class="liveWrong">
+        <h4 class="title">随堂测错题</h4>
+        <div class="liveWrong">
     		<div class="item">
     			<p>
     				<span class="subjectName">互动题1</span>
@@ -240,6 +263,20 @@
     			</p>
     			<img src="img/subject.png" alt="">
     		</div>
+            <div class="item">
+                <p>
+                    <span class="subjectName">互动题2</span>
+                    <span class="notComplete">未</span>
+                </p>
+                <img src="img/bg-1.png" alt="">
+            </div>
+            <div class="item">
+                <p>
+                    <span class="subjectName">互动题2</span>
+                    <span class="notComplete">未</span>
+                </p>
+                <img src="img/subject.png" alt="">
+            </div>
     	</div>
     	<div class="cover">
     		
@@ -252,5 +289,5 @@
     	<img src="img/logo_share.png" class="logo" alt="">
     </div>
 </div>
-<input type="hidden" id="pieData" value='{"process":"3","pieData":[{"name":"浮力应用1","complete":"0.8","total":"0.05"},{"name":"浮力应用2","complete":"0.7","total":"0.15"},{"name":"浮力应用3","complete":"0.6","total":"0.25"},{"name":"浮力应用4","complete":"0.4","total":"0.25"},{"name":"浮力应用5","complete":"0.5","total":"0.1"},{"name":"浮力应用6","complete":"0.75","total":"0.05"},{"name":"浮力应用7","complete":"0.85","total":"0.05"},{"name":"浮力应用...应用","complete":"0.35","total":"0.05"},{"name":"浮力应用9","complete":"0.5","total":"0.05"}]}'>
+<input type="hidden" id="pieData" value='{"process":4,"pieData":[{"name":"\u6295\u5165\u548c","complete":0.875,"total":"0.27"},{"name":"\u6570\u7ec4","complete":0.625,"total":"0.73"}]}'>
 
