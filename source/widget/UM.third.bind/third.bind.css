@@ -27,12 +27,6 @@
   color: #333;
   background: url("img/app-logo.png") no-repeat;
 }
-.tb-content ul li .btn-info {
-  float: right;
-  width: 100px;
-  margin: 13px 20px 0 0;
-  font-size: 14px;
-}
 .tb-content ul li span {
   float: left;
   width: 15%;
@@ -42,6 +36,12 @@
 .tb-content ul .unbounded span {
   font-size: 14px;
   color: #e74c3c;
+}
+.tb-content ul .unbounded .btn-info {
+  float: right;
+  width: 100px;
+  margin: 13px 20px 0 0;
+  color: #fff;
 }
 .tb-content ul .bounded span {
   font-size: 14px;
@@ -72,4 +72,32 @@
 }
 .tb-content ul .app-jia h5 {
   background-position: 0 -240px;
+}
+.tb-content .prompt-box {
+  width: 1000px;
+  margin: 0 auto;
+  clear: both;
+}
+.tb-content .prompt-box img.prompt {
+  position: relative;
+  width: 100px;
+  height: 84px;
+  top: 30px;
+  left: 50px;
+}
+.tb-content .prompt-box .cb-prompt-box {
+  background: #fff8eb;
+  border-radius: 5px;
+  padding: 10px 0 0 20px;
+}
+.tb-content .prompt-box .cb-prompt-box h3 {
+  font-size: 14px;
+  font-family: "Microsoft YaHei";
+  color: #666;
+  margin: 6px 0 6px 5px;
+}
+.tb-content .prompt-box .cb-prompt-box p {
+  padding: 0 10px 10px 5px;
+  font-size: 12px;
+  line-height: 23px;
 }
