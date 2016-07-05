@@ -15,7 +15,7 @@
 	</script>
 </div>
 <div id="module-header">
-    <div class="h-logo"><a herf="#">学而思网校</a></div>
+    <div class="h-logo"><a href="#">学而思网校</a></div>
     <div class="h-search">
         <input type="text" class="h-text pull-left" placeholder="搜索:秋季满分冲刺班" autocomplete="on">
         <button type="button" class="btn btn-primary btn-search pull-left">搜索</button>
@@ -31,3 +31,4 @@
     <!-- 头部购物车ui部分调用 -->
     <link rel="import" href="../Public.MiniCart/index.tpl?__inline">
 </div>
+;

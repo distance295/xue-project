@@ -5,13 +5,13 @@ body {
 }
 #module-myheader {
   padding: 10px 0;
-  background-color: #3bafda;
+  background: url(img/i_header_bg.png?20160704) no-repeat center top;
   height: 80px;
   min-width: 600px;
 }
 #module-myheader .userHome-header {
-  height: 64px;
-  width: 64px;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
 }
 #module-myheader .user-avatar {
@@ -28,7 +28,7 @@ body {
   line-height: 18px;
   margin-top: 9px;
   margin-bottom: 5px;
-  max-width: 110px;
+  max-width: 180px;
   height: 20px;
   overflow: hidden;
 }
@@ -52,6 +52,9 @@ body {
   content: "|\00a0";
   padding-right: 5px;
   color: #2599c4;
+}
+#module-myheader .user-info .popover-content {
+  color: #333;
 }
 #module-myheader .user-sex {
   padding: 4px 7px;
