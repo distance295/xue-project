@@ -1,11 +1,26 @@
 .bi-content {
-  width: 880px;
-  height: 100%;
-  overflow: hidden;
-  margin: 20px 0 30px 100px;
+  height: 590px;
+  padding: 0 85px;
+  margin-top: 40px;
 }
 .bi-content .bi-left {
   float: left;
+  position: relative;
+  width: 415px;
+}
+.bi-content .bi-left .message-error {
+  display: none;
+  position: absolute;
+  top: -40px;
+  width: 325px;
+  border: 1px solid #e74c3c;
+  background-color: #fef6f5;
+}
+.bi-content .bi-left .message-error span {
+  display: inline-block;
+  padding: 6px 0 6px 30px;
+  color: #e74c3c;
+  background: url("img/warning.png") 5px 4px no-repeat;
 }
 .bi-content .bi-left div {
   position: relative;
@@ -29,14 +44,17 @@
 .bi-content .bi-left div select {
   position: relative;
   top: -8px;
-  width: 80px;
+  width: 73px;
   height: 34px;
   padding-left: 7px;
+  padding: 6px 0 6px 6px\9;
   color: #a0a0a0;
-  border: 1px solid #dcdcdc;
+  border: 1px solid #d2d2d2;
 }
-.bi-content .bi-left div select:focus {
-  border: 1px solid #3bafda;
+@media screen and (min-width: 0px) {
+  .bi-content .bi-left div select {
+    padding: 0 0 0 7px;
+  }
 }
 .bi-content .bi-left div span {
   color: #333;
@@ -80,27 +98,25 @@
   width: 260px;
   margin: 0 0 1px 0;
   padding: 8px 5px;
-  border: 1px solid #dcdcdc;
-}
-.bi-content .bi-left div .nickname:focus,
-.bi-content .bi-left div .school:focus {
-  border: 1px solid #3bafda;
+  border: 1px solid #d2d2d2;
 }
 .bi-content .bi-left .btn-submit {
   width: 100px;
-  height: 35px;
   margin-top: 25px;
   font-size: 14px;
 }
+.bi-content .bi-left .btn-submit:focus {
+  outline: none;
+}
 .bi-content .bi-right {
   float: right;
-  width: 295px;
-  height: 140px;
+  width: 293px;
+  height: 160px;
   background: url('img/basic-bg.png') no-repeat;
 }
 .bi-content .bi-right span {
   display: inline-block;
-  padding: 80px 13px 0 13px;
+  padding: 105px 13px 0 13px;
   font-family: 'Microsoft Yahei';
   font-size: 14px;
   color: #666;
