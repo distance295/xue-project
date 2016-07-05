@@ -135,7 +135,7 @@ function inforCheckform () {
         alert('您没有修改或新增任何资料');
         return false;
     }else{
-        $.fn.nickname();
+        setTimeout($.fn.nickname(),200);
         $.fn.school();
     }
     if ($('.nickname-warning').is(":empty") && $('.school-warning').is(":empty") && $('.date-warning').is(":empty")) {
