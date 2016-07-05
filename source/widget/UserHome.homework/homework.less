@@ -137,7 +137,7 @@
          margin-top:20px; 
          .border-radius(6px); 
          display: block;
-         position: relative;
+         /* position: relative; */
     }
     .homework-image-area{
         width: 100%;
@@ -198,6 +198,26 @@
                         cursor: pointer;
                         text-align: center;
                         box-sizing: content-box;
+                        .homework-rightIcon{
+                            position: absolute;
+                            background: url("img/hm_right.png") no-repeat;
+                            width: 50px;
+                            height: 50px;
+                            right: 0px;
+                            top: 0px;
+                            display: inline-block;
+
+                        }
+                        .homework-markStatus{
+                            position: absolute;
+                            right: 6px;
+                            bottom: 0;
+                            text-align: right;
+                            .font-family("Microsoft YaHei");
+                            .font-size(14px);
+                            line-height: 30px;
+                            color: #fff;
+                        }
                         .homework-MaskLayer{
                             position: absolute;
                             left: 0;
@@ -295,6 +315,12 @@
                           }
                           &.homework-zoom-btn{
                              background-position: -136px 0;
+                          }
+                          &.homework-disable-edit-btn{
+                             background-position: -0px -90px;
+                             &.homework-edit-btn{
+                                 background-position: -22px -90px;
+                             }
                           }
                       }
                   }
@@ -790,3 +816,48 @@
 }
 
 
+/**查看订正过程中的图片效果style**/
+.homework-ImageTransform{
+  .homework-lookEdit-btn{
+     position: absolute;
+     top: 247px;
+     z-index: 99999;
+     cursor: pointer;
+     &.homework-lookEdit-prev-btn{
+        left: 0;
+        background: url('img/hm_left_disable_btn.png') no-repeat;
+        width: 40px;
+        height: 80px;
+        &.homework-lookEdit-prev-active-btn{
+            background: url('img/hm_left_btn.png') no-repeat;
+            width: 40px;
+            height: 80px;
+        }
+     }
+     &.homework-lookEdit-next-btn{
+        right: 0;
+        background: url('img/hm_right_disable_btn.png') no-repeat;
+        width: 40px;
+        height: 80px;
+        &.homework-lookEdit-next-active-btn{
+            background: url('img/hm_right_btn.png') no-repeat;
+            width: 40px;
+            height: 80px;
+        }
+     }
+  }
+}
+.lookEditImg-popover{
+  display:none;
+  top: 43px;
+  left: 880px;
+  max-width: 600px;
+  .lookEditImg-tips-box{
+      width: 200px;
+      .font-family("SimSun");
+      .font-size(14px);
+      line-height: 30px;
+      color: #333; 
+      text-align: center;
+  }
+}

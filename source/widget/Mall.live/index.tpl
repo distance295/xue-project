@@ -10,7 +10,7 @@
         <div class="live-list">
             <div class="live-card">
                 <div class="live-course-box">
-                    <img src="../../widget/Mall.live/img/live-teacher-photo1.png" class="live-teacher-photo"/>
+                    <img src="/static/img/zhibo_message.png" class="live-teacher-photo"/>
                     <div class="live-course-hover">
                         <div class="live-course-title"></div>
                         <span class="live-course-show-title">韬哥认为你一定 会的小学知识点</span>
@@ -30,7 +30,7 @@
             </div>
             <div class="live-card">
                 <div class="live-course-box">
-                    <img src="../../widget/Mall.live/img/live-teacher-photo2.png" class="live-teacher-photo"/>
+                    <img src="/static/img/zhibo_message.png" class="live-teacher-photo"/>
                     <div class="live-course-hover">
                         <div class="live-course-title"></div>
                         <span class="live-course-show-title">攻克电磁学 章鱼军团逆袭计划之路</span>
@@ -50,7 +50,7 @@
             </div>
             <div class="live-card">
                 <div class="live-course-box">
-                    <img src="../../widget/Mall.live/img/live-teacher-photo3.png" class="live-teacher-photo"/>
+                    <img src="/static/img/zhibo_message.png" class="live-teacher-photo"/>
                     <div class="live-course-hover">
                         <div class="live-course-title"></div>
                         <span class="live-course-show-title">［轻松写作］初中必考亲情作文</span>
@@ -70,7 +70,7 @@
             </div>
             <div class="live-card">
                 <div class="live-course-box">
-                    <img src="../../widget/Mall.live/img/live-teacher-photo4.png" class="live-teacher-photo"/>
+                    <img src="/static/img/zhibo_message.png" class="live-teacher-photo"/>
                     <div class="live-course-hover">
                         <div class="live-course-title"></div>
                         <span class="live-course-show-title">［老杜物理］理科学霸征集令第一讲</span>
@@ -90,7 +90,7 @@
             </div>
             <div class="live-card">
                 <div class="live-course-box">
-                    <img src="../../widget/Mall.live/img/live-teacher-photo1.png" class="live-teacher-photo"/>
+                    <img src="/static/img/zhibo_message.png" class="live-teacher-photo"/>
                     <div class="live-course-hover">
                         <div class="live-course-title"></div>
                         <span class="live-course-show-title">韬哥认为你一定 会的小学知识点</span>
@@ -110,7 +110,7 @@
             </div>
             <div class="live-card">
                 <div class="live-course-box">
-                    <img src="../../widget/Mall.live/img/live-teacher-photo2.png" class="live-teacher-photo"/>
+                    <img src="/static/img/zhibo_message.png" class="live-teacher-photo"/>
                     <div class="live-course-hover">
                         <div class="live-course-title"></div>
                         <span class="live-course-show-title">攻克电磁学 章鱼军团逆袭计划之路</span>
@@ -130,7 +130,7 @@
             </div>
             <div class="live-card">
                 <div class="live-course-box">
-                    <img src="../../widget/Mall.live/img/live-teacher-photo3.png" class="live-teacher-photo"/>
+                    <img src="/static/img/zhibo_message.png" class="live-teacher-photo"/>
                     <div class="live-course-hover">
                         <div class="live-course-title"></div>
                         <span class="live-course-show-title">［轻松写作］初中必考亲情作文</span>
@@ -150,7 +150,7 @@
             </div>
             <div class="live-card">
                 <div class="live-course-box">
-                    <img src="../../widget/Mall.live/img/live-teacher-photo4.png" class="live-teacher-photo"/>
+                    <img src="/static/img/zhibo_message.png" class="live-teacher-photo"/>
                     <div class="live-course-hover">
                         <div class="live-course-title"></div>
                         <span class="live-course-show-title">［老杜物理］理科学霸征集令第一讲</span>

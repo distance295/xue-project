@@ -6,6 +6,9 @@
  * @date    2015-10-29 10:40:12
  * @version $Id$
  */
+.wrap {
+  background: #f8f8f8;
+}
 .ui-head-nav {
   height: 45px;
   margin: 0 auto;

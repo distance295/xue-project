@@ -7,7 +7,7 @@
     @require xue.userinfo.min.js    @require ../Module.Pagination/paginations.js    
 -->
 
-<div class="course-list course-test course-test-select">
+<div class="course-list course-test course-test-select course-teacher-select">
     <div class="ui-avatar">
         <div class="avatar-photo">
             <ul class="avatar-items bottom0">

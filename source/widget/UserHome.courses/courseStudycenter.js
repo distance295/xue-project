@@ -115,9 +115,9 @@ $(function(){
         if (that.hasClass('none')) {
             return false;
         } else {
-           courses.avatar.toggle(that)     
-       }
-   });
+         courses.avatar.toggle(that)     
+     }
+ });
 })
 
 // 随堂测试弹框
@@ -154,7 +154,7 @@ function QrCodeInstructor(dom){
         trigger: 'hover',
         title: '',
         content: function() {
-            var listTest_html = $(this).parents('.avatar-photo').children('.QR-code-instructor').html();
+            var listTest_html = $(this).find('.QR-code-instructor').html();
             return listTest_html;
         }
     }); 
@@ -205,14 +205,14 @@ $(function(){
         },1000);
         // 手动关闭弹层时清除计时器
         $(courseDownTimeId).on('hide.bs.modal', function (e) {
-         clearInterval(timer);
-        });
+           clearInterval(timer);
+       });
     }
 
      // 退课成功
      $('body').on('click','.drop-course-detail-inner .drop-charge', function(){
-       $('.drop-charge-explain-wrap').toggleClass('dropCharge-hide');
-   }); 
+         $('.drop-charge-explain-wrap').toggleClass('dropCharge-hide');
+     }); 
     // 临时调课成功
     $('body').on('click','.temporary-adjust-course-detail-inner .drop-course-btn', function(){
         var result =  $('.temporary-adjust-wrap').html();

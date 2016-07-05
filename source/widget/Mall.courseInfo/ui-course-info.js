@@ -143,109 +143,13 @@ courseInfor.courseTab = function (tabTit, on, tabCon) {
             con.eq(index).show().siblings().hide();
         });
     }
-    //直播课程详情页---查看直播时间列表
-//courseInfor.lookTimeList = function () {
-//    var that = $('#lookTimeList');
-//    that.on('click', function (event) {
-//        $('.ui-nav-link li:eq(1)').addClass('current').siblings().removeClass('current');
-//        $('.course-info-box .course-detail:eq(1)').show().siblings().hide();
-//    });
-//}
-
-//返回顶部
-//2016-01-11-18：00
-//xue.feedback = xue.feedback || {};
-//
-//(function () {
-//    var f = xue.feedback;
-//            f._tpl='<div class="rightResearch" id="FeedBack">'
-//					+'		<ul>'
-//					+'			<li><a xes_id="side_QQ" id="r_copyright" href="http://bbs.xueersi.com/thread-280270-1-1.html" target="_blank"></a></li>'
-//					+'			<li><a xes_id="side_feedback" id="r_feedBack" target="_blank" href="http://bbs.xueersi.com/thread-362132-1-1.html"></a></li>'
-//					+'			<li><a id="r_toTop" href="javascript:scroll(0,0);" style="display:none;"></a></li>'
-//					+'			<li id="copy_notice" style="width:170px;">'
-//					+'			</li>'
-//					+'		</ul>'
-//					+'	</div>';
-//
-//    f.append = function () {
-//        if ($('#FeedBack').length == 0) {
-//            $('body').append(f._tpl);
-//        } else {
-//            $('#FeedBack').show();
-//        }
-//
-//        f.listener();
-//
-//        return this;
-//    };
-//
-//    f.listener = function () {
-//        $('#r_copyright').on('mouseenter', function () {
-//            f.hover(this);
-//        });
-//        $(window).scroll(function () {
-//            f.gotop();
-//        });
-//    };
-//
-//    f.gotop = function () {
-//        var _scrollTop = $(window).scrollTop();
-//
-//        if (_scrollTop > $(window).height()) {
-//            $('#r_toTop').show();
-//        } else {
-//            $('#r_toTop').hide();
-//        }
-//    };
-//
-//    f.hover = function (d) {
-//        var that = $(d);
-//        $.ajax('/index/ajaxGetQqGroupInfo', {
-//            type: 'post',
-//            dataType: 'json',
-//            success: function (v) {
-//                if (v.sign > 0) {
-//                    var tpl = '<div style="height:72px;overflow:hidden;">' + '<p class="group_name">' + v.msg.group_name + '</p>' + '<p class="group_num copy_notice_num">' + v.msg.group_num + '</p>' + '</div>' + '<p style="font-size:12px;color:#999; font-weight:normal;font-family: 宋体;"><span style="color:#cc0000;">提示：</span>复制上面群号，打开QQ，在找群中查找并加入网校官方群</p>';
-//                    $('#copy_notice').html(tpl);
-//                    $('#copy_notice').show();
-//                }
-//            }
-//        })
-//        that.on('mouseleave', function (e) {
-//            var tar = $(e.relatedTarget);
-//            if (tar.attr('id') == 'copy_notice' || $(tar).parents('#copy_notice').length > 0) {
-//                that.addClass('current');
-//                $('#copy_notice').on('mouseleave', function () {
-//                    var that = $(this);
-//                    setTimeout(function () {
-//                        that.hide();
-//                        $('#r_copyright').removeClass('current');
-//                    }, 5000);
-//                });
-//            } else {
-//                $('#copy_notice').hide();
-//                that.removeClass('current');
-//            }
-//        });
-//    };
-//
-//})();
-
 $(function () {
-//   // xue.feedback.append();
-//    var liveHtml ='<div style="width:140px;height:174px;position:fixed;right:7px;top:196px;z-index:100;">'
-//        +' <a href="http://www.xueersi.com/index/visit">'
-//            +'<img src="/static/img/live-pic.jpg">'
-//        +'</a>'
-//    +'</div>';
-//    $("body").append(liveHtml);
     courseInfor.courseTab('.ui-nav-link', 'current', '.course-info-box'); //课程详情页--课程大纲切换
     var ouline = $('#open-outline'); //免费试听详情页------试听节超过规定节数出现滚动条
     if (ouline.length != 0) { //当id:ouline的值不等于零的时候执行
         ouline.jScrollPane();
     }
-    courseInfor.lookTimeList(); //直播课程详情页---查看直播时间列表
+    //courseInfor.lookTimeList(); //直播课程详情页---查看直播时间列表
     // 绑定老师头像切换事件
     $('body').on('click', '.ui_avatar_con .prev ,  .ui_avatar_con .next', function () {
         var that = $(this);
@@ -365,50 +269,4 @@ $(function () {
              xue.win('btnJoinExam').close();
          });
     });
-    //辅导老师介绍
-    $('body').on('mouseenter','.coach-avatar-info', function(){
-        var that = $(this);
-        var con = $('.coachAvatarInfo').html();
-        xue.win({
-            id: 'coachAvatar',
-             title : false,
-             arrow : 'bc',
-             follow : that,
-             content : con,
-             lock : false,
-             close : false,
-             submit : false,
-             cancel : false
-        });
-         var box = $('#xuebox_coachAvatar'),
-             size = xue.win('coachAvatar').getSize(),
-             o = {
-             left : that.offset().left + (that.outerWidth() / 2) - (size.outerWidth / 2),
-             top : that.offset().top + that.height() - 111
-         };
-         xue.win('coachAvatar').position(o.left, o.top);
-         $(this).on('mouseleave', function(e){
-             if($(e.relatedTarget).attr('id') != 'xuebox_coachAvatar' && $(e.relatedTarget).parents('#xuebox_coachAvatar').length === 0){
-                 xue.win('coachAvatar').close();
-             }
-         });
-         $('#xuebox_coachAvatar').on('mouseleave', function(){
-             xue.win('coachAvatar').close();
-         });
-    });
-    //随屏滚动
-         var rollStart = $('.scroll-box-wrap'); 
-         var offset = rollStart.offset();
-         var rollBox = rollStart.prev();
-	     $(window).scroll(function() {
-	            if ($(window).scrollTop() > offset.top){
-	                    rollStart.addClass("rollbox");
-                        rollStart.find('.scroll-btn').show();
-                        rollBox.stop().animate({top:0,paddingTop:10},0);
-	            } else {
-	                    rollStart.removeClass("rollbox");
-                        rollStart.find('.scroll-btn').hide();
-                        rollBox.stop().animate({top:0},0);
-	            }
-	    });
 });

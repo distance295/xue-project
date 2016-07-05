@@ -182,33 +182,40 @@ button.active,
 }
 /*首页公用标题样式和一些重构样式*/
 .grade-course-title {
-  height: 55px;
+  height: 60px;
   overflow: hidden;
-}
-.grade-course-title div {
-  height: 35px;
-  line-height: 35px;
-  border-bottom: 1px solid #3bafda;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .grade-course-title h6 {
   position: relative;
   float: left;
-  width: 90px;
   height: 35px;
-  background: #fff;
-  top: 9px;
+  top: 11px;
   z-index: 1;
-  font-size: 18px;
-  color: #999;
-}
-.grade-course-title h6.live-title {
-  width: 90px;
+  font-size: 20px;
+  color: #333;
+  line-height: 18px;
 }
 .grade-course-title a.more {
-  float: right;
-  font-size: 14px;
-  color: #3bafda;
+  float: left;
+  font-size: 12px;
+  color: #666666;
+  position: relative;
+  top: 24px;
+  margin-left: 10px;
+}
+.grade-course-title a.more:hover {
+  color: #1e89e0;
+  text-decoration: underline;
+}
+.grade-course-title a.more i {
+  font-size: 16px;
+}
+.grade-course-title a.more i:first-child {
+  margin-left: 6px;
+}
+.grade-course-title a.more i:last-child {
+  margin-right: -5px;
 }
 .grade-course-title ul.live-list-tabs {
   float: left;
@@ -279,41 +286,135 @@ button.active,
   margin-left: 0;
 }
 .row-page-turn {
-  margin-bottom: 20px;
   margin-left: 0;
-  overflow: hidden;
+  position: relative;
 }
 .row-page-turn .live-content-action {
   width: 110%;
   overflow: hidden;
 }
-.row-page-turn .live-content-action .live-card {
-  margin-bottom: 20px;
+.row-page-turn .live-card {
+  width: 290px;
+  background: #fff;
+  float: left;
+  margin-right: 10px;
 }
-.row-page-turn .live-content-action .live-teacher-photo {
+.row-page-turn .live-card:hover .live-course-title {
+  top: 0 !important;
+}
+.row-page-turn .live-card .live-time-tip .live-time-tip-container {
+  line-height: 22px;
+  height: 70px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-right: 10px;
+}
+.row-page-turn .live-card .live-time-tip .live-time-tip-container p {
+  margin-bottom: 0;
+  width: 100%;
+  font-size: 12px;
+  color: #333;
+  margin-right: 5px;
+  margin-top: 8px;
+}
+.row-page-turn .live-card .live-time-tip .live-time-tip-container p span.time {
+  color: #ed5565;
+  font-size: 16px;
+  line-height: 14px;
+}
+.row-page-turn .live-card .live-time-tip .live-time-tip-container p span.teacher {
+  color: #a0a0a0;
+  font-size: 14px;
+}
+.row-page-turn .live-card .live-time-tip .live-time-tip-container p span.watchNum {
+  float: right;
+  font-size: 12px;
+  color: #999;
+  position: relative;
+  font-size: 14px;
+}
+.row-page-turn .live-card .live-time-tip .live-time-tip-container p img {
+  margin-right: 6px;
+  float: right;
+  position: relative;
+  top: 6px;
+}
+.row-page-turn .live-card .live-time-tip .live-time-tip-container > p:nth-child(1) {
+  color: #333;
+  font-size: 16px;
+  line-height: 20px;
   margin-top: 0;
+  margin-bottom: 15px;
+  height: 20px;
+  overflow: hidden;
+}
+.row-page-turn .live-card .live-time-tip .live-time-tip-container > p:nth-child(1) span {
+  font-size: 14px;
+  float: right;
+}
+.row-page-turn .live-card .live-course-box {
+  overflow: hidden;
+  position: relative;
+  width: 290px;
+}
+.row-page-turn .live-card .live-course-box .live-course-title {
+  display: block;
+  position: absolute;
+  top: -198px;
+  height: 198px;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  transition: top .3s linear;
+  text-align: center;
+  line-height: 198px;
+}
+.row-page-turn .live-card .live-course-box .live-course-title span {
+  padding: 12px 20px;
+  border-radius: 3px;
+  color: #fff;
+}
+.row-page-turn .live-card .live-course-box a.success_join {
+  top: 0 ;
+  cursor: default;
+}
+.row-page-turn .live-card .live-course-box a.success_join span {
+  background: #bfbfbf !important;
+  cursor: default;
+}
+.row-page-turn .live-teacher-photo {
+  margin-top: 0;
+  width: 290px;
+  height: 198px;
 }
 .row-page-turn .page-turn {
-  width: 45px;
-  height: 115px;
+  position: absolute;
+  top: -40px;
+  width: 30px;
+  height: 22px;
+  line-height: 16px;
   cursor: pointer;
-  text-indent: -9999em;
+  text-align: center;
+  border: 1px solid #dcdcdc;
+  color: #999;
+  font-size: 18px;
 }
 .row-page-turn .page-turn.page-up {
-  background: url(../../static/img/page-up-default.png?__inline) 0 no-repeat;
+  right: 34px;
 }
 .row-page-turn .page-turn.page-down {
-  background: url(../../static/img/page-down-default.png?__inline) 0 no-repeat;
+  right: 5px;
+}
+.row-page-turn .page-turn:hover {
+  color: #3bafda;
 }
 .row-page-turn .page-turn-box {
   float: left;
-  width: 1100px;
+  width: 1190px;
   overflow: hidden;
 }
 .row-page-turn .page-turn-box .course-small-list {
   float: left;
   display: inline;
-  margin: 0 36px 0 15px;
 }
 /*首页公用标题样式和一些重构样式 结束位置*/
 .paginationjs-pages .pagination > .disabled > span,
@@ -353,4 +454,7 @@ html {
 .tab-content.tab-chu,
 .tab-content.tab-gao {
   width: 1190px;
+}
+.font-blue {
+  color: #1e89e0;
 }

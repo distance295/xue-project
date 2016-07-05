@@ -24,7 +24,7 @@
     <li><a href="#"><img src="img/shengwu.png"/>生物</a></li>
     <li><a href="#"><img src="img/wuli.png"/>物理</a></li>
 </ul>
-<ul class="select-subject-list">
+<ul class="select-subject-list select-edition-list">
     <li class="current"><a href="#">人教版</a></li>
     <li><a href="#">沪科版</a></li>
     <li><a href="#">北师版</a></li>

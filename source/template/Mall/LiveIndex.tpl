@@ -1,6 +1,6 @@
 <!-- 公共头部 -->
 <link rel="import" href="../Layer/layer.Mall.head.tpl?__inline">
-
+<div class="wrap">
 <!-- 学习中心区域 -->
 <div class="container">
     <ol id="module-breadcrumb" class="breadcrumb">
@@ -11,12 +11,42 @@
 
 <!--   12栏的用这个    -->
        <div class="col-md-12">
-       <link rel="import" href="../../widget/Mall.live/live-rank.tpl?__inline">
-           <link rel="import" href="../../widget/Mall.live/index.tpl?__inline">
+          <link rel="import" href="../../widget/Mall.live/live-rank.tpl?__inline">
+          <div class="row row-page-turn tab-content">
+            <div class="live-hidden live-content-action tab-pane fade active in" role="tabpanel">
+              <link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-yellow.tpl?__inline">
+            </div>
+            <div class="live-hidden live-content-action tab-pane fade active in" role="tabpanel">
+              <link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
+              <link rel="import" href="../../widget/Mall.live/live-card-back.tpl?__inline">
+            </div>
+        </div>
        </div>
 <!--   12栏结束    -->
 
     </div><!-- row end -->
+</div>
 </div>
 <!-- 页面配置 -->
 <script>

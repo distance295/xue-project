@@ -4,6 +4,17 @@
     @require selector.js
 -->    
     <div class="choice">
+        <div class="row">
+            <dl class="choice-dl clearfix">
+                <dt class="choice-title col-xs-2 col-sm-2 col-md-1 course-type">课程类型</dt>
+                <dd class="choice-items col-xs-10 col-sm-10 col-md-11 ">
+                  <ul class="nav nav-course-list">
+                    <li role="presentation" class="course-type current"><a class="choice-item-each">学期同步</a></li>
+                    <li role="presentation" class="course-type"><a class="choice-item-each">专题强化</a></li>
+                  </ul>
+                </dd>
+            </dl>
+        </div>
       <div class="row">
         <dl class="choice-dl clearfix">
             <dt class="choice-title col-xs-2 col-sm-2 clo-md-1 ">所在年级</dt>
@@ -39,18 +50,7 @@
             </dd>
         </dl>
       </div>
-      <div class="row">
-        <dl class="choice-dl clearfix">
-            <dt class="choice-title col-xs-2 col-sm-2 col-md-1 ">课程类型</dt>
-            <dd class="choice-items col-xs-10 col-sm-10 col-md-11 ">
-              <ul class="nav nav-pills">
-                <li role="presentation" class="active"><a class="choice-item-each">全部</a></li>
-                <li role="presentation"><a class="choice-item-each">学期同步</a></li>
-                <li role="presentation"><a class="choice-item-each">专题强化</a></li>
-              </ul>
-            </dd>
-        </dl>
-      </div>
+   
           <div class="row">
         <dl class="choice-dl clearfix">
             <dt class="choice-title col-xs-2 col-sm-2 col-md-1 ">课程版本</dt>
