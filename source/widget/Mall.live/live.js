@@ -102,7 +102,7 @@ $(function(){
 
     liveOrderSuccessModal.showModal = function(con){
         var that = $(this), data = that.data();
-        var con = "<img src='/static/img/orderSuccess.png'><span class='orderSuccessTip'><span>5</span>秒钟后关闭</span>";
+        var con = "<img src='/static/img/orderSuccess_A.png'><span class='orderSuccessTip'><span>5</span>秒钟后关闭</span>";
         //console.log(data);
         createModal.show({
             id : 'liveOrderSuccessModal',
@@ -119,7 +119,7 @@ $(function(){
 
     liveOrderFailModal.showModal = function(timer){
         var that = $(this), data = that.data();
-        var con = "<img src='/static/img/orderFail.png'><span class='orderFailTip'><span>5</span>秒钟后关闭</span>";
+        var con = "<img src='/static/img/orderFail_A.png'><span class='orderFailTip'><span>5</span>秒钟后关闭</span>";
         //console.log(data);
         createModal.show({
             id : 'liveOrderFailModal',
