@@ -125,7 +125,6 @@
             <p class="average">班级平均分<span>80</span></p>
         </div>
         <img src="img/monkey.png" class="allRight" alt="">
-        <div class="shadow"></div>
     	<div class="wrong">
     		<p>随堂测错题</p>
     		<div class="item">
