@@ -31,4 +31,3 @@
     <!-- 头部购物车ui部分调用 -->
     <link rel="import" href="../Public.MiniCart/index.tpl?__inline">
 </div>
-;
