@@ -67,11 +67,11 @@
 .ui-categorys .category-dt a {
   color: #fff;
   display: block;
-  font: 400 15px/44px "microsoft yahei";
+  font: 400 16px/44px "microsoft yahei";
   height: 45px;
   padding: 0 10px;
   margin: 0;
-  background: #1e89e0;
+  background: url(img/headNav.png) no-repeat;
 }
 .ui-categorys .category-dt a .ci-right {
   top: 20px;
