@@ -125,62 +125,77 @@ homeWork.url = '/data/homework/';
                   return false;
 				}
 
-			  	setTimeout(function(){
-			  	    var time = _audio.duration;
-			  	    //分钟
-			        var minute = time / 60;
-			        var minutes = parseInt(minute);
-			        if (minutes < 10) {
-			            minutes = "0" + minutes;
-			        }
-			        //秒
-			        var second = time % 60;
-			        var seconds = Math.round(second);
-			        if (seconds < 10) {
-			            seconds = "0" + seconds;
-			        }
+				//默认的时候让所有的音频加载，否则在火狐ie等浏览器下由于jquery插件的存在导致onloadedmetadata事件不响应
+                _audio.load();
 
-			        //总共时长的秒数
-			        var allTime = parseInt(minutes*60 + seconds);
-			      
-		            //给语音按钮赋值时长
-		            _audioBg.find('em').text(allTime + ' "');
+                //音频加载完成后的一系列操作
+				function duration(){
+						if( _ReviewsBox.hasClass('homework-audio-loading') ){
+							return false;
+						}
+						var time = _audio.duration;
+				  	    //分钟
+				        var minute = time / 60;
+				        var minutes = parseInt(minute);
+				        if (minutes < 10) {
+				            minutes = "0" + minutes;
+				        }
+				        //秒
+				        var second = time % 60;
+				        var seconds = Math.round(second);
+				        if (seconds < 10) {
+				            seconds = "0" + seconds;
+				        }
 
-		            _audioTime = parseFloat(_audioBg.find('em').text());
+				        //总共时长的秒数
+				        var allTime = parseInt(minutes*60 + seconds);
+				      
+			            //给语音按钮赋值时长
+			            _audioBg.find('em').text(allTime + ' "');
+
+			            _audioTime = parseFloat(_audioBg.find('em').text());
+
+			            /**
+			            * 判断语音按钮的宽度
+			            * 1-5秒宽度100  5-10秒宽度150  >10S的200
+			            */
+			            if( _audioTime>0 && _audioTime <=5 ){
+		                    _audioBg.width('100');
+			            } else if ( _audioTime>5 && _audioTime <=10 ){
+		                    _audioBg.width('150');
+			            } else {
+		                    _audioBg.width('200');
+			            }
+
+			            //判断语音的播放和停止
+			           $(that).off('click', '.homework-audio-box').on('click','.homework-audio-box', function(){
+		                    var  _Playing = _ReviewsBox.hasClass('homework-audio-playing');
+		                    if( !_Playing){
+		                    	$('body').find('.homework-Reviews').removeClass('homework-audio-playing').addClass('homework-audio-loading');
+		                    	//播放时其他的音频都要重新加载停止
+		                    	$('body').find('.homework-audio-btn-box').each(function(index){
+		                    		$('body').find('.homework-audio-btn-box')[index].load();
+		                    	})
+		                        _ReviewsBox.addClass('homework-audio-playing')
+		                        _audio.play();
+		                    }else{
+		                    	_ReviewsBox.removeClass('homework-audio-playing').addClass('homework-audio-loading');
+		                    	_audio.load();//重新加载和暂停是不同的
+		                    }
+		                    setTimeout(function(){
+								_ReviewsBox.removeClass('homework-audio-playing');
+							}, _audioTime +'000');
+			           })
+
+				}
+
+				_audio.onloadedmetadata = duration;
+
+			  	/*setTimeout(function(){
+			  	    
 		         
-	           }, 1000)
+	           }, 1000)*/
 	          
-	          /**
-	           * 判断语音按钮的宽度
-	           * 1-5秒宽度100  5-10秒宽度150  >10S的200
-	           */
-	          if( _audioTime>0 && _audioTime <=5 ){
-                  _audioBg.width('100');
-	          } else if ( _audioTime>5 && _audioTime <=10 ){
-                  _audioBg.width('150');
-	          } else {
-                  _audioBg.width('200');
-	          }
-
-	          //判断语音的播放和停止
-	          $(this).off('click', '.homework-audio-box').on('click','.homework-audio-box', function(){
-                    var  _Playing = _ReviewsBox.hasClass('homework-audio-playing');
-                    if( !_Playing){
-                    	$('body').find('.homework-Reviews').removeClass('homework-audio-playing');
-                    	//播放时其他的音频都要重新加载停止
-                    	$('body').find('.homework-audio-btn-box').each(function(index){
-                    		$('body').find('.homework-audio-btn-box')[index].load();
-                    	})
-                        _ReviewsBox.addClass('homework-audio-playing')
-                        _audio.play();
-                    }else{
-                    	_ReviewsBox.removeClass('homework-audio-playing');
-                    	_audio.load();//重新加载和暂停是不同的
-                    }
-                    setTimeout(function(){
-						_ReviewsBox.removeClass('homework-audio-playing');
-					}, _audioTime +'000');
-	          })
 		  })
 	}
 
@@ -351,6 +366,113 @@ homeWork.url = '/data/homework/';
         })   	
     }
 
+    /**
+	 * 老师评语音播放的相关业务方法
+	 * @param  {Object} dom 任意子节点
+	 */
+	hm.audioPlay =function(dom){
+
+		if(!dom){
+            return false;
+		}
+
+        //存在多个的情况下
+		$(dom).each(function(){
+			var that = this;
+			var _audio = null;//$(that).find('.homework-audio-btn-style')[0];
+			var hasVideo = !!(document.createElement('audio').canPlayType);
+			var audio_val = null;
+
+            //点击音频评语按钮效果
+			$(that).find('.homework-audio-btn-click').click(function(){
+
+				 //点击的时候右侧的音频列表消失
+				 $(that).find('.homework-audio-list-box').hide('fast');
+				 $(that).find('.homework-audio').attr('flag','0');
+
+				 //右侧音频列表消失之后删除homework-audio-list-box-display
+				 
+				 if( $(that).find('.homework-audio-list-box').hasClass('homework-audio-list-box-display') ){
+				 	$(that).find('.homework-audio-list-box').removeClass('homework-audio-list-box-display');
+				 }
+                 
+                 //判断是否正在播放
+				 var  _Playing = $(this).hasClass('homework-audio-btn-playing');
+		         if( !_Playing){
+		         	    audio_val = $.trim($(this).data('val'));
+		         	    var audio_url = $(this).data('audio');
+		         	    $(that).find('.homework-audio-btn-click').removeClass('homework-audio-btn-playing');
+
+		         	    //判断是否有相同的音频按钮
+                        $(that).find('.homework-audio-btn-click').each(function(){
+                        	var current_audio_val = $.trim($(this).data('val'));
+                        	if( current_audio_val == audio_val){
+                        		$(this).addClass('homework-audio-btn-playing');
+                        	}
+                        })
+
+			        	//判断是否支持音频
+			        	if(hasVideo){
+			        		var audio_url = $(this).data('audio');
+							var html = [
+			                            '<audio class="homework-audio-btn-style" controls="controls" Autoplay="Autoplay" src="'+audio_url+'"> </audio>'
+			                           ]
+			                $(that).find('.homework-audio-btn-style').remove();
+				            $(that).find('.homework-bigImg-box').prepend(html.join(''));
+
+				             _audio = $(that).find('.homework-audio-btn-style')[0];
+
+				             //播放结束
+					         _audio.addEventListener('ended', function () { 
+					            //判断当前播放的是哪个按钮点击事件
+				                $(that).find('.homework-audio-btn-click').each(function(){
+				                	var current_audio_val = $.trim($(this).data('val'));
+				                	if( current_audio_val == audio_val){
+				                		$(this).removeClass('homework-audio-btn-playing');
+				                	}
+				                })
+				                _audio.pause();
+							}, false);
+				            
+				             //播放状态
+					        _audio.addEventListener('playing', function () {  
+					        	//判断当前播放的是哪个按钮点击事件
+				                $(that).find('.homework-audio-btn-click').each(function(){
+				                	var current_audio_val = $.trim($(this).data('val'));
+				                	if( current_audio_val == audio_val){
+				                		if( !$(this).hasClass('homework-audio-btn-playing') ){
+				                             $(this).addClass('homework-audio-btn-playing');
+				                		}
+				                	}
+				                })
+							}, false);
+
+						}else{
+							alert("当前浏览器版本过低，不支持语音播放。请更换浏览器或者升级至IE8以上的版本。");
+						}
+		         }else{
+                       //console.log(2)
+                       //已经在播放的情况下再次点击否可以暂停
+		         }
+
+	        })
+
+
+	        //音频列表展开收缩效果
+			$(that).find('.homework-audio').click(function(){
+				 var flag = $(this).attr('flag');
+				 if( flag == 0){
+	                $(that).find('.homework-audio-list-box').show();
+	                $(this).attr('flag','1');
+				 }else if(flag == 1){
+	                $(that).find('.homework-audio-list-box').hide('fast');
+	                $(this).attr('flag','0');
+				 }
+			})
+
+		})
+	}
+
 
 
 })(homeWork)
@@ -380,7 +502,8 @@ $.fn.imagePage = function(params){
 					leftRotate:null,//向左旋转按钮
 				    rightRotate:null,//向右旋转按钮
 					min_picnum:null,//小图显示数量
-					isZoom:true//是否存在旋转缩放
+					isZoom:true,//是否存在旋转缩放
+					lookEdit:null//查看改正中图片按钮
 				}, params || {});
 	var _this = this;
 	var picsmall_num = $(this).find(params.smallPic).find('ul li').length;
@@ -389,7 +512,7 @@ $.fn.imagePage = function(params){
 	$(this).find(params.smallPic).find('ul').height(picsmall_num*picsmall_h);
 
 	//判断作业反馈是否存在
-	var Feedback_flag = $(this).find(params.smallPic).find('li').eq(picsmall_num-1).find('.homework-MaskLayer').length;
+	var Feedback_flag = $(this).find(params.smallPic).find('li').eq(0).find('.homework-MaskLayer').length;
 	var pictime;
 	var tpqhnum=0;//当前选中图片的个数
 	var xtqhnum=0;
@@ -410,49 +533,197 @@ $.fn.imagePage = function(params){
 	//点击小图切换大图
     $(this).find(params.smallPic).find('li').click(function () {
 	    tpqhnum = $(_this).find(params.smallPic).find('li').index(this);
+	    var audio_url = $(this).data('audio');
 	    show(tpqhnum);
 		minshow(tpqhnum);
+		audioPage(audio_url);
+		lookEditImg(tpqhnum);
     }).eq(params.order).trigger("click");
 
     //大图切换过程
 	function show(tpqhnum){
-		if( tpqhnum == picsmall_num -1 && Feedback_flag == 0 ){
+
+		//判断是否存在音频，如果存在音频在切换图片的时候就要停止音频的一系列操作，存在音频就存在homework-Reviews
+		  
+	    if( $(_this).find('.homework-Reviews') ){
+
+	  	   //删除所有播放按钮播放样式
+           $(_this).find('.homework-audio-btn-click').removeClass('homework-audio-btn-playing');
+
+           //audio音频停止播放，重新加载
+           $(_this).find('.homework-audio-btn-style').remove();
+
+           //右侧的音频列表消失
+           if( tpqhnum == 0 && ($(_this).find('.homework-audio-list-box').hasClass('homework-audio-list-box-display')) ){
+           	    
+           }else{
+           	   $(_this).find('.homework-audio-list-box').hide('fast');
+		       $(_this).find('.homework-audio').attr('flag','0');
+           }
+           
+	    }
+
+		if( tpqhnum == 0 && Feedback_flag == 0 ){
 		  $(_this).find('.homework-Feedback').show();
+		  $(_this).find('.homework-Feedback-describe').show();
 		  $(_this).find('.ImageTransformJs').hide();
 		}else{
 		  $(_this).find('.homework-Feedback').hide();
+		  $(_this).find('.homework-Feedback-describe').hide();
 		  $(_this).find('.ImageTransformJs').show();
 		  _src = $(_this).find(params.bigPic).find('li').eq(tpqhnum).find('img').attr('src');
-
-		  //判断是否存在缩放功能
-		  if( params.isZoom ){
-               _ImageTransform.load(_src);
-		  }else{
-		  	  $(_this).find(params.bigPic).find('.ImageTransformJs').remove();
-		  	  var _imgHtml = '<img style="position: absolute; border: 0px none; padding: 0px; margin: 0px;" src="'+_src+'" class="ImageTransformJs" />';
-		  	  $(_this).find(params.bigPic).append(_imgHtml);
-
-		  	  /*
-			   *图片缩放居中
-			   */
-			  var maxWidth =  $(_this).find(params.bigPic).width();
-			  var maxHeight = $(_this).find(params.bigPic).height();
-			  var imgWidth = $(_this).find(params.bigPic).find('.ImageTransformJs').width();
-			  var imgHeight = $(_this).find(params.bigPic).find('.ImageTransformJs').height();
-
-			  var rate=(maxHeight/imgHeight>maxWidth/imgWidth?maxWidth/imgWidth:maxHeight/imgHeight);
-              $(_this).find(params.bigPic).find('.ImageTransformJs').attr('_imgW',imgWidth).attr('_imgH',imgHeight);
-
-			  $(_this).find(params.bigPic).find('.ImageTransformJs').css({
-			  	  'width':imgWidth*rate,
-			  	  'height':imgHeight*rate,
-			  	  'left': ( maxWidth - imgWidth*rate ) / 2 + "px",
-				  'top': ( maxHeight - imgHeight*rate ) / 2 + "px"
-			  })
-		  }
+		  bigShow(_src);
 		}
 		$(_this).find(params.smallPic).find('li').eq(tpqhnum).addClass('homework-current').siblings(this).removeClass("homework-current");
 	};
+
+	//大图图片显示的效果
+	function bigShow(url){
+		//判断是否存在缩放功能
+		if( params.isZoom ){
+		   _ImageTransform.load(url);
+		}else{
+		  $(_this).find(params.bigPic).find('.ImageTransformJs').remove();
+		  var _imgHtml = '<img style="position: absolute; border: 0px none; padding: 0px; margin: 0px;" src="'+url+'" class="ImageTransformJs" />';
+		  $(_this).find(params.bigPic).append(_imgHtml);
+
+		  /*
+		   *图片缩放居中
+		   */
+		  var maxWidth =  $(_this).find(params.bigPic).width();
+		  var maxHeight = $(_this).find(params.bigPic).height();
+		  var imgWidth = $(_this).find(params.bigPic).find('.ImageTransformJs').width();
+		  var imgHeight = $(_this).find(params.bigPic).find('.ImageTransformJs').height();
+
+		  var rate=(maxHeight/imgHeight>maxWidth/imgWidth?maxWidth/imgWidth:maxHeight/imgHeight);
+		  $(_this).find(params.bigPic).find('.ImageTransformJs').attr('_imgW',imgWidth).attr('_imgH',imgHeight);
+
+		  $(_this).find(params.bigPic).find('.ImageTransformJs').css({
+		  	  'width':imgWidth*rate,
+		  	  'height':imgHeight*rate,
+		  	  'left': ( maxWidth - imgWidth*rate ) / 2 + "px",
+			  'top': ( maxHeight - imgHeight*rate ) / 2 + "px"
+		  })
+		}
+	}
+
+	//查看订正过程中的图片效果
+	function lookEditImg(tpqhnum){
+        //查看是否有订正图片效果
+ 		if( $(_this).find(params.lookEdit) ){
+		    //查看是否存在订正图片
+		    var dataUrl = $(_this).find(params.smallPic).find('li').eq(tpqhnum).data('url');
+		    //先清空要创建的html上一张下一张按钮
+		    $(_this).find(params.bigPic).find('.homework-lookEdit-btn').remove();
+		    //改正过程中的图片存在查看按钮为可编辑，反之相反
+		    if(dataUrl){
+		    	$(_this).find(params.lookEdit).addClass('homework-edit-btn');
+
+		    	//查看订正之前如果存在homework-edit-two-click,先删除homework-edit-two-click，homework-edit-two-click是为了判断可编辑按钮是否已经展开订正图片
+	        	if( $(_this).find('.homework-edit-btn').hasClass('homework-edit-two-click') ){
+	        	      $(_this).find('.homework-edit-btn').removeClass('homework-edit-two-click');
+	        	}
+                
+                //滑过提示弹层效果
+		    	$(_this).closest('.homework-wrapper-container').find('.lookEditImg-popover').remove();
+	    		var html = ['<div role="tooltip" class="popover fade top in lookEditImg-popover">',
+		    		         '<div class="arrow" style="left: 50%;"></div>',
+				    		 '<div class="popover-content">',
+				    		    '<div class="lookEditImg-tips-box">点我查看订正过程中的图片</div>',
+				    		 '</div>',
+				    	  '</div>']
+
+	    		$(_this).closest('.homework-wrapper-container').append(html.join(''));
+
+		    	//滑过提示弹层效果
+		    	$(_this).off('mouseover ','.homework-edit-btn').on('mouseover','.homework-edit-btn',function(){
+		    		//判断可编辑按钮是否是二次点击，当展开了订正图片后在滑过编辑按钮没有弹层提示
+		        	if( $(this).hasClass('homework-edit-two-click') ){
+		        	      return false;
+		        	}
+		    		var lookEditImg_popover_w = $(_this).closest('.homework-wrapper-container').find('.lookEditImg-popover').width();
+		    		var container_w = $(_this).closest('.homework-wrapper-container').width();
+                    var popover_left = container_w -lookEditImg_popover_w/2 - 30 - 54/2 ;
+                    if(popover_left<0){
+                       popover_left = 0;
+                    }
+                    $(_this).closest('.homework-wrapper-container').find('.lookEditImg-popover').css('left',popover_left);
+		    		$(_this).closest('.homework-wrapper-container').find('.lookEditImg-popover').show();
+		    	})
+
+		    	$(_this).off('mouseout ','.homework-edit-btn').on('mouseout','.homework-edit-btn',function(){
+		    		$(_this).closest('.homework-wrapper-container').find('.lookEditImg-popover').hide();
+		    	})
+		        //点击可编辑查看按钮
+		        $(_this).off('click','.homework-edit-btn').on('click','.homework-edit-btn',function(){
+		        	//判断可编辑按钮是否是二次点击，当展开了订正图片后在点击编辑按钮收缩订正图片，显示初始化的最后一张缩略图的图片
+		        	if( $(this).hasClass('homework-edit-two-click') ){
+		        	      $(_this).find(params.smallPic).find('li').eq(tpqhnum).trigger("click");
+		        	      return false;
+		        	}
+
+		        	$(this).addClass('homework-edit-two-click');
+		        	var lookEditNum = 0;
+		            var arr_dataUrl = dataUrl.split('|');
+		            var dataUrl_Num = arr_dataUrl.length;
+		            //点击查看订正图片按钮，默认显示第一张图片
+		            var arr_data_url_audio = arr_dataUrl[lookEditNum].split(',');
+		            var imgUrl = arr_data_url_audio[0];
+		            var imgAudio = arr_data_url_audio[1];
+		            audioPage(imgAudio);
+		            bigShow(imgUrl);
+		            //显示上一张下一张点击按钮
+		            $(_this).find(params.bigPic).find('.homework-lookEdit-btn').remove();
+		            var lookEdit_html = '';
+		            lookEdit_html += '<a href="javascript:void(0)" class="homework-lookEdit-btn homework-lookEdit-prev-btn"></a><a href="javascript:void(0)" class="homework-lookEdit-btn homework-lookEdit-next-btn"></a>';
+		            $(_this).find(params.bigPic).append(lookEdit_html);
+		            //判断上一张下一张是否可点击
+		            if(dataUrl_Num>1){
+		               $(_this).find(params.bigPic).find('.homework-lookEdit-next-btn').addClass('homework-lookEdit-next-active-btn');
+		                
+		                //下一张点击按钮
+		                $(_this).find(params.bigPic).find('.homework-lookEdit-next-btn').click(function(){
+		                	  if(lookEditNum == dataUrl_Num-1){
+								  lookEditNum = dataUrl_Num-1;
+								  return false;
+							  };
+							  lookEditNum++;
+							  if(lookEditNum == dataUrl_Num-1){
+							  	$(_this).find(params.bigPic).find('.homework-lookEdit-next-btn').removeClass('homework-lookEdit-next-active-btn');
+							  }
+							  $(_this).find(params.bigPic).find('.homework-lookEdit-prev-btn').addClass('homework-lookEdit-prev-active-btn');
+							  
+							  var arr_data_url_audio_next = arr_dataUrl[lookEditNum].split(',');
+					          var imgUrl_next = arr_data_url_audio_next[0];
+					          var imgAudio_next = arr_data_url_audio_next[1];
+							  audioPage(imgAudio_next);
+							  bigShow(imgUrl_next);
+		                })
+		                
+		                //上一张点击按钮
+		                $(_this).find(params.bigPic).find('.homework-lookEdit-prev-btn').click(function(){
+		                	  if(lookEditNum == 0){
+								  lookEditNum = 0;
+								  return false;
+							  };
+							  lookEditNum--;
+							  if(lookEditNum == 0){
+							  	$(_this).find(params.bigPic).find('.homework-lookEdit-prev-btn').removeClass('homework-lookEdit-prev-active-btn');
+							  }
+							  $(_this).find(params.bigPic).find('.homework-lookEdit-next-btn').addClass('homework-lookEdit-next-active-btn');
+							  var arr_data_url_audio_prev = arr_dataUrl[lookEditNum].split(',');
+					          var imgUrl_prev = arr_data_url_audio_prev[0];
+					          var imgAudio_prev = arr_data_url_audio_prev[1];
+					          audioPage(imgAudio_prev);
+							  bigShow(imgUrl_prev);
+		                })
+		            }
+		        })
+			}else{
+			    $(_this).find(params.lookEdit).removeClass('homework-edit-btn');
+		    }
+		}
+	}
 
 	//小图切换过程
 	function minshow(tpqhnum){
@@ -488,6 +759,32 @@ $.fn.imagePage = function(params){
 		}
 	}
 
+	//每个缩略图试卷对应一个音频，音频默认显示，但是不播放
+	function audioPage(audio){ 
+		//判断是否存在音频
+		var audioUrl = audio;
+		var hasVideo = !!(document.createElement('audio').canPlayType);
+		//改正图片中的音频为空时传过来的是''值不是空，所有必须重新判断
+		if( audioUrl == "''" ){
+            audioUrl = null;
+		}
+
+		//判断是否支持音频
+		if( hasVideo ){
+           if( audioUrl ){
+	           var audioHtml = [
+		                    '<audio class="homework-audio-btn-style" controls="controls" src="'+audioUrl+'"> </audio>'
+		                   ]
+		        $(_this).find('.homework-audio-btn-style').remove();
+		        $(_this).find('.homework-bigImg-box').prepend(audioHtml.join(''));
+			}else{
+				$(_this).find('.homework-audio-btn-style').remove();
+			} 
+		}else{
+			alert("当前浏览器版本过低，不支持语音播放。请更换浏览器或者升级至IE8以上的版本。");
+		}
+	}  
+
 	//大图左右切换	
 	$(this).find(params.prev_btn).click(function(){
 		if( picsmall_num > params.min_picnum ){
@@ -496,8 +793,11 @@ $.fn.imagePage = function(params){
 				return false;
 			};
 			tpqhnum--;
+			var audio_url = $(_this).find(params.smallPic).find('li').eq(tpqhnum).data('audio');
 			show(tpqhnum);
 			minshow(tpqhnum);
+			audioPage(audio_url);
+			lookEditImg(tpqhnum);
 		}else{
 			return false;
 		}		
@@ -509,8 +809,11 @@ $.fn.imagePage = function(params){
 				return false;
 			};
 			tpqhnum++;
+			var audio_url = $(_this).find(params.smallPic).find('li').eq(tpqhnum).data('audio');
 			minshow(tpqhnum)
 			show(tpqhnum);
+			audioPage(audio_url);
+			lookEditImg(tpqhnum);
 		}else{
 			return false;
 		}	
@@ -539,6 +842,8 @@ $.fn.imagePage = function(params){
 		$(this).find(params.rightRotate).click(function(){ 
 			_ImageTransform.right(); 
 		})
-	}	
+	}
 }
+
+
 

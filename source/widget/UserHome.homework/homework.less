@@ -136,8 +136,8 @@
          padding: 30px;
          margin-top:20px; 
          .border-radius(6px); 
-         overflow: hidden;
          display: block;
+         /* position: relative; */
     }
     .homework-image-area{
         width: 100%;
@@ -198,6 +198,26 @@
                         cursor: pointer;
                         text-align: center;
                         box-sizing: content-box;
+                        .homework-rightIcon{
+                            position: absolute;
+                            background: url("img/hm_right.png") no-repeat;
+                            width: 50px;
+                            height: 50px;
+                            right: 0px;
+                            top: 0px;
+                            display: inline-block;
+
+                        }
+                        .homework-markStatus{
+                            position: absolute;
+                            right: 6px;
+                            bottom: 0;
+                            text-align: right;
+                            .font-family("Microsoft YaHei");
+                            .font-size(14px);
+                            line-height: 30px;
+                            color: #fff;
+                        }
                         .homework-MaskLayer{
                             position: absolute;
                             left: 0;
@@ -255,6 +275,7 @@
           display: block;
           overflow: hidden;
           height: 536px;
+          position: relative;
           background: #eeeeee;
           .homework-rightMeun{
               width: 54px;
@@ -294,6 +315,12 @@
                           }
                           &.homework-zoom-btn{
                              background-position: -136px 0;
+                          }
+                          &.homework-disable-edit-btn{
+                             background-position: -0px -90px;
+                             &.homework-edit-btn{
+                                 background-position: -22px -90px;
+                             }
                           }
                       }
                   }
@@ -387,36 +414,57 @@
             font-weight: normal;
         }
         .homework-audio-box{
-            float: left;
-            height: 36px;
-            line-height: 36px;
-            width: 100px;
-            margin-left: 22px;
-            .border-radius(18px);
-            background: #3bafda;
-            overflow: hidden;
-            cursor: pointer;
-            color: #fff;
-            &:hover{
-               background: #2392ba;
-            }
-            em{
-               .font-size(18px);
-               .font-family("Microsoft YaHei");
-            }
+              float: left;
+              background: #fff;
+              border: 1px solid #3bafda;
+              .border-radius(2px);
+              text-align: center;
+              color: #3bafda;
+              margin: 0;
+              padding: 8px 15px;
+              line-height: 16px;
+              margin-left: 0;
+              .font-family;
+              .font-size(14px);
+              line-height: normal;
+              cursor: pointer;
+              &:hover{
+                  background: #fff;
+              }
+              em {
+                  font-family: "Microsoft YaHei";
+                  font-size: 14px;
+              }
+              .homework-icoAudio{
+                   float: left;
+                   width: 12px;
+                   height: 12px;
+                   background: url('img/hm_audio_default.png') no-repeat;
+                   margin: 3px 2px 0 0;
+              }
+              &.homework-audio-btn-playing{
+                      background: #3bafda;
+                      color: #fff;
+                      &:hover{
+                          background: #2392ba;
+                      }
+                      .homework-icoAudio{
+                           background: url('img/hm_audio.png') no-repeat;
+                      }
+              }
         }
-        .homework-icoAudio{
+        /* .homework-icoAudio{
              float: left;
-             width: 18px;
-             height: 22px;
-             background: url('img/homeWork-iconAudio.png') no-repeat;
-             margin: 8px 20px 0 17px;
+             width: 12px;
+             height: 12px;
+             background: url('img/hm_audio.png') no-repeat;
+             margin: 3px 2px 0 0;
         }
         &.homework-audio-playing{
            .homework-icoAudio{
                background: url('img/homeWork-audio.gif') no-repeat;
            }
-        }
+        } */
 
     }
 
@@ -425,14 +473,15 @@
         &.homework-Feedback-describe{
             float: left;
             width: 480px;
+            padding-right: 10px;
             color: #333;
             .font-size(12px);
             .font-family;
             line-height: 24px;
             height: 140px;
             margin: 15px 0 0 0;
-            overflow-y: auto;
-            overflow-x: hidden;
+            display: none;
+            overflow: hidden;
             word-break:break-all; 
           　word-wrap:break-word;
         }
@@ -693,5 +742,122 @@
 } */
 
 
+/**多个音频**/
+
+.homework-audio-list-box{
+    position: absolute;
+    right: 84px;
+    background:rgba(0, 0, 0, 0.6) !important;/*实现FF背景透明，文字不透明*/
+    background: #000;
+    filter: Alpha(opacity=60);
+    padding: 10px;
+    width: 124px;
+    max-height: 493px;
+    overflow-y: auto;
+    z-index: 999;
+    display: none;
+    &.homework-audio-list-box-display{
+       display: block;
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        li{
+            float: left;
+            width: 100%;
+            text-align: center;
+            background: #fff;
+            border: none;
+            .border-radius(2px);
+            text-align: center;
+            color: #333;
+            line-height: 32px;
+            .font-family;
+            .font-size(14px);
+            position: relative;
+            cursor: pointer;
+            margin: 10px 0;
+            em {
+                font-family: "Microsoft YaHei";
+                font-size: 14px;
+            }
+           .audio-icon{
+               position: absolute;
+               left: 5px;
+               top: 10px;
+               width: 12px;
+               height: 12px;
+               background: url('img/hm_audio.png') no-repeat;
+               display: none;
+           }
+           &.homework-audio-btn-playing{
+              color: #fff;
+              background: #3bafda;
+              .audio-icon{
+                display: block;
+              }
+           }
+        }
+    }
+}
+
+.homework-audio-btn-style{
+   position: absolute;
+   left: 0;
+   max-height: 55px;
+   right: 0;
+   bottom: 0;
+   width: 100%;
+   z-index: 9999999;
+   padding-top: 15px;
+   padding-top: 0\9;
+   padding-right: 54px;
+
+}
 
 
+/**查看订正过程中的图片效果style**/
+.homework-ImageTransform{
+  .homework-lookEdit-btn{
+     position: absolute;
+     top: 247px;
+     z-index: 99999;
+     cursor: pointer;
+     &.homework-lookEdit-prev-btn{
+        left: 0;
+        background: url('img/hm_left_disable_btn.png') no-repeat;
+        width: 40px;
+        height: 80px;
+        &.homework-lookEdit-prev-active-btn{
+            background: url('img/hm_left_btn.png') no-repeat;
+            width: 40px;
+            height: 80px;
+        }
+     }
+     &.homework-lookEdit-next-btn{
+        right: 0;
+        background: url('img/hm_right_disable_btn.png') no-repeat;
+        width: 40px;
+        height: 80px;
+        &.homework-lookEdit-next-active-btn{
+            background: url('img/hm_right_btn.png') no-repeat;
+            width: 40px;
+            height: 80px;
+        }
+     }
+  }
+}
+.lookEditImg-popover{
+  display:none;
+  top: 43px;
+  left: 880px;
+  max-width: 600px;
+  .lookEditImg-tips-box{
+      width: 200px;
+      .font-family("SimSun");
+      .font-size(14px);
+      line-height: 30px;
+      color: #333; 
+      text-align: center;
+  }
+}

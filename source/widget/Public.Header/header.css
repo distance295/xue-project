@@ -15,15 +15,16 @@
 }
 #module-header .h-logo {
   float: left;
-  width: 350px;
-  line-height: 55px;
-  padding: 22px 0;
+  width: 340px;
+  line-height: 99px;
+  margin-right: 10px;
+  overflow: hidden;
 }
 #module-header .h-logo a {
   display: block;
-  width: 280px;
-  height: 55px;
-  background: url(img/logo.png?__inline) no-repeat left center;
+  width: 350px;
+  height: 99px;
+  background: url(img/logo.png?20160707) no-repeat left center;
   color: transparent;
 }
 #module-header .h-search {
@@ -64,4 +65,27 @@
 }
 #module-header #module-minicart {
   top: -35px !important;
+}
+/* ======================首页头部广告位 */
+.modele-header-pic {
+  width: 1190px;
+  height: 80px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  outline: none;
+}
+.modele-header-pic .settime {
+  width: 240px;
+  height: 30px;
+  position: absolute;
+  right: 305px;
+  top: 20px;
+  z-index: 1;
+  color: #fff;
+  font-size: 26px;
+  font-family: '微软雅黑';
+}
+.modele-header-pic area {
+  outline: none;
 }

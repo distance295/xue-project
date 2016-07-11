@@ -6,6 +6,9 @@
  * @date    2015-10-29 10:40:12
  * @version $Id$
  */
+.wrap {
+  background: #f8f8f8;
+}
 .ui-head-nav {
   height: 45px;
   margin: 0 auto;
@@ -64,11 +67,11 @@
 .ui-categorys .category-dt a {
   color: #fff;
   display: block;
-  font: 400 15px/44px "microsoft yahei";
+  font: 400 16px/44px "microsoft yahei";
   height: 45px;
   padding: 0 10px;
   margin: 0;
-  background: #1e89e0;
+  background: url(img/headNav.png) no-repeat;
 }
 .ui-categorys .category-dt a .ci-right {
   top: 20px;
@@ -88,12 +91,14 @@
 .ui-categorys .category-dd {
   display: none;
   height: 380px;
-  background-color: rgba(30, 137, 224, 0.9);
+  background-color: #1E89E0;
+  background-color: rgba(30, 137, 224, 0.9) !important;
 }
 .ui-categorys .category-dd .category-item {
-  height: 75px;
+  height: 76px;
   padding: 18px 10px 18px 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid #3A98E4;
+  border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
 }
 .ui-categorys .category-dd .category-item h3 {
   margin: 0;
@@ -110,7 +115,8 @@
   padding: 0;
 }
 .ui-categorys .category-dd .category-item.hover {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #2F6FA2;
+  background-color: rgba(0, 0, 0, 0.2) !important;
 }
 .ui-categorys .category-dd .category-item:nth-last-child(1) {
   border-bottom: 0 none;
@@ -122,11 +128,12 @@
   left: 200px;
   top: 45px;
   height: 380px;
-  border: 1px rgba(30, 137, 224, 0.9) solid;
+  border: 1px solid #1E89E0;
+  border-color: rgba(30, 137, 224, 0.9) !important;
   border-left: 0;
   background-color: #f5f5f5;
   color: #333;
-  padding: 10px 20px;
+  padding: 10px 15px;
   font-size: 12px;
   line-height: 30px;
 }
@@ -137,6 +144,9 @@
   zoom: 1;
   overflow: hidden;
   display: none;
+}
+.ui-categorys .category-dd .category-layer .category-subject .subitem {
+  margin-bottom: 12px;
 }
 .ui-categorys .category-dd .category-layer .category-subject.hover {
   display: block;

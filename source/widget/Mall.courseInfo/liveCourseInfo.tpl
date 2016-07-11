@@ -3,153 +3,103 @@
     @require ui-course-info.less
 -->
 <div class="ui-course-infor-wrap">
-	<div class="course-left-player f-left">
-		<div class="video-images-player">
-			<a href="#" target="_blank">
-				<img src="pic/xiangqing_03.jpg" height="340" width="340" alt=""></a>
-		</div>
-	</div>
-	<div class="course-center-list f-left">
-		<h2 class="coures-name-title">人教版四升五年级上下全册数学满分班</h2>
-		<div class="attend-class-time">
-			<span class="f-left">上课时间：</span>
-			<ul class="time-list f-left">
-				<li class="current">07月01日-08月20日 每天19:00-20:00</li>
-				<li>07月01日-08月20日 每天19:00-20:00</li>
-			</ul>
-			<div class="time-list-tips f-left">
-				以上时间为参考时间，实际上课时间可能会有些许出入。
-				<a href="#lookTime" id="lookTimeList">点击查看详细时间表</a>
-			</div>
-		</div>
-		<div class="course-content-text">
-			<span class="f-left">课程内容：</span>
-			<ul class="f-left">
-				<li>
-					20场直播课程+作业反馈
-					<a href="#" target="_blank">立即试听</a>
-				</li>
-				
-				<li>
-					20讲视频课程
-					<a href="#" target="_blank">立即试听</a>
-				</li>
-				<li>3次阶段考试</li>
-			</ul>
-		</div>
-		<div class="course-favorable-list">
-			课程优惠：
-			<span>续报9折</span>
-			<span>送u盘</span>
-			<span>送练习册</span>
-			<span>实物礼品</span>
-		</div>
-		<div class="course-favorable-money  course-favorable">
-			<div class="favrble-money f-left">
-				<span>
-					课程优惠价: <em class="red">￥660</em>
-				</span> <del>原价: <em>￥825</em></del> 
-			</div>
-			<ul class="f-right">
-				<li class="line">
-					已购买
-					<br/>
-					<em class="red">23000</em>
-				</li>
-				<li>
-					课程满意度
-					<br/>
-					<em class="red">92.99</em>
-				</li>
-			</ul>
-			<div class="time-list-tips">
-				    本期已开课，您将从第二讲开始学习
-			</div>
-		</div>
-		<div class="course-button-list">
-			<span class="f-left">
-				<button class="btn btn-danger button_apply">立即报名</button>
+    <h2 class="coures-name-title">人教版四升五年级上下全册数学满分班<em>目标满分班</em></h2>
+    <div class="course-left-player f-left">
+        <div class="video-player" data-url="/data/Mall.courseInfo/video.html" data-params="a=1&b=2">
+            <img src="pic/lb-xiangqing_03.png" height="400" width="590" alt="">
+            <span class="video-icon"></span>
+        </div>
+         <div class="main-teacher">
+                <span class="avatar-m">
+				          <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="">
+				      </span>
+                <span class="name-m">达务力江老师</span>
+                <span class="name-r">课程满意度<strong>92.55</strong></span>
+            </div>
+    </div>
+    <div class="course-center-list f-left">
+       
+<!--       <div class="qq-layer-item"></div>-->
+        <div class="course-favorable-money">
+            <div class="favrble-money f-left">
+                <span>
+						优惠价格: <em class="red">￥6600</em>
+					</span> <del>原价:<em>￥825</em></del>
+                   <span class="tips" title="本期已开课，您将从第二讲开始学习"><img src="img/icon-mon.png"/></span>
+            </div>
+        </div>
+        <div class="course-favorable-list">
+            优惠活动：
+            <span>续报9折</span>
+            <span>送u盘</span>
+            <span>送练习册</span>
+            <span>实物礼品</span>
+        </div>
+        <div class="course-content-teacher">
+           <div class="coach-teacher">
+                <span class="coach-c">辅导老师：</span>
+                <span class="avatar-c">
+				          <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="" class="coach-avatar-info">
+				      </span>
+                <span class="name-c">王海丰老师</span>
+               <span class="app-dimension-code">
+                   <img class="line" src="img/icon-line.png" alt="">
+                   <img class="qq-jiaru" src="img/qq_90.png" alt="qq" width="45">
+                    <em>
+                       加入QQ群咨询<br/>
+                       <i style="color:#e74c3c;font-style:normal;">4324134566</i><a href="#" style="float:right;margin:3px 5px 0;"><img src="img/icon-mon.png"/></a>
+                   </em>
+               </span>
+                <span class="info-c "><strong class="c-disable">已满</strong><br/>剩余名额</span>
+            </div>
+  <!--          <div class="course-teacher-qq">
+
+                   <span><img src="img/close-qq-layer.png" alt=""></span>
+                   <a href="#"><img src="img/qq_jiaru_layer.png" alt=""></a>
+
+           </div>-->
+        </div>
+        <div class="course-serve-list">
+            <span class="f-left">课程服务：</span>
+            <ul class="xes-serve-list">
+                <li>直播课程</li>
+                <li><a href="#" target="_blank">24小时答疑</a></li>
+                <li><a href="#" target="_blank">考试检测</a></li>
+                <li class="disabled"><a href="#" target="_blank">1对1作业批改</a></li>
+                <li><a href="#" target="_blank">学期家长会</a></li>
+                <li><a href="#" target="_blank">彩色纸质讲义</a></li>
+                <li><a href="#" target="_blank">随时退款</a></li>
+                <li class="disabled"><a href="#" target="_blank">彩色纸质练习册</a></li>
+                <li><a href="#" target="_blank">随时观看回放</a></li>
+                <li><a href="#" target="_blank">手机看课</a></li>
+            </ul>
+        </div>
+        <div class="course-end-time">
+            <span>07月01日-08月30日每天9:00-11:00上课 </span>
+        </div>
+
+        <div class="course-button-list">
+            <span class="f-left">
+				<button class="btn btn-danger do_not_sign_up">暂时不可报名</button>
 			</span>
-			<span class="collect collect_current f-left">
-				<a id="collectId" onclick="collect(11323)" href="javascript:void(0);">已收藏</a>
+            <span class="f-left">
+				<a class="btn btn-danger btn-join-exam" href="#">预约试听</a>
 			</span>
-		</div>
-	</div>
-	<div class="course-right-teacher f-right">
-		<h5 class="main-teacher-title red">主讲老师</h5>
-		<div class="main-teacher-list">
-			<!--多个老师头像左右切换-->
-                <div class="ui_avatar_con main_teacher">
-                    <div class="ui_avatar">
-                        <ul class="avatar_items" style="margin-left: 0px;">
-                            <li>
-                                <div class="avatar_pic">
-                                    <a href="http://www.xueersi.com/t/zhutao/" class="userpic" target="_blank">
-                                    <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="teacher_avatar_infor">
-                                    <p>达务力江老师</p>
-                                    <p class="info">主讲老师将为您提供课程讲授您提供课程讲授您提供课程讲授</p>
-                                </div>
-                            </li>
-                             <li>
-                                <div class="avatar_pic">
-                                    <a href="http://www.xueersi.com/t/zhutao/" class="userpic" target="_blank">
-                                    <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="teacher_avatar_infor">
-                                    <p>达务力江老师2</p>
-                                    <p class="info">主讲老师将为您提供课程讲授您提供课程讲授您提供课程讲授</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                        <a href="javascript:void(0);" class="prev none">
-                            <em class="icon icon-chevron-left">左</em>
-                        </a>
-                        <a href="javascript:void(0);" class="next">
-                            <em class="icon icon-chevron-right">右</em>
-                        </a>
-                </div>
-<!--多个老师头像左右切换-->
-		</div>
-		<h5 class="main-teacher-title">辅导老师</h5>
-		<div class="main-teacher-list noBorder">
-		<!--多个老师头像左右切换-->
-                <div class="ui_avatar_con main_teacher">
-                    <div class="ui_avatar">
-                        <ul class="avatar_items" style="margin-left: 0px;">
-                            <li>
-                                <div class="avatar_pic">
-                                    <a href="http://www.xueersi.com/t/zhutao/" class="userpic" target="_blank">
-                                    <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="teacher_avatar_infor">
-                                    <p>达务力江老师</p>
-                                    <p class="info">主讲老师将为您提供课程讲授您提供课程讲授您提供课程讲授</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-<!--多个老师头像左右切换-->
-<!--
-			<div class="main-teacher">
-				//<div class="ui-avatar f-left">
-					<img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt=""></div>
-				<div class="teacher-avatar-infor f-left">
-					<p>朱韬老师</p>
-					<p>
-						教学满意度
-						<span>92.71</span>
-					</p>
-				</div>
-			</div>
--->
-<!--			<div class="teacher-infor">主讲老师将为您提供课程讲授／知识点强化服务</div>-->
-		</div>
-	</div>
+            <span class="collect f-left">
+					<a id="collectId" onclick="collect(11323)" href="javascript:void(0);">收藏课程</a>
+				</span>
+        </div>
+    </div>
+
 </div>
+<script>
+    function qqteacher(){
+        var h = $(window).height();
+        $('.qq-layer-item').css('height', h);
+    }
+    qqteacher();
+    $('body').on('click','.course-teacher-qq span',function(){
+        $(this).parent().remove();
+         $('.qq-layer-item').remove();
+    });
+</script>

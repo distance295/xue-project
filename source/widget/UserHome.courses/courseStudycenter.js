@@ -5,6 +5,7 @@
  * @version $Id$
  */
 
+
 // 头像切换封装函数
 var courses = courses || {};
 
@@ -114,9 +115,9 @@ $(function(){
         if (that.hasClass('none')) {
             return false;
         } else {
-           courses.avatar.toggle(that)     
-       }
-   });
+         courses.avatar.toggle(that)     
+     }
+ });
 })
 
 // 随堂测试弹框
@@ -145,7 +146,19 @@ function liveHelp(dom){
         }
     }); 
 }
-
+//辅导导师头像弹层
+function QrCodeInstructor(dom){
+    $(dom).popover({
+        placement: 'top',
+        html: true,
+        trigger: 'hover',
+        title: '',
+        content: function() {
+            var listTest_html = $(this).find('.QR-code-instructor').html();
+            return listTest_html;
+        }
+    }); 
+} 
 // 讲义资料弹框tab事件
 $('body').on('click','.material-wrap .material-tab li',function(){
     var index = $(this).index();
@@ -158,6 +171,73 @@ function tabRecord(){
     $('.teacher-tab li').on('click',function(){ 
         index = $(this).index();
         $(this).addClass('current').siblings().removeClass('current');
-        $('.tab-record-content .tab-pane').eq(index).addClass('active').siblings().removeClass('active');
+        $(this).parents('.teacher-tab').siblings('.tab-record-content').find('.tab-pane').eq(index).addClass('active').siblings().removeClass('active');
     });
 };
+// 大纲tab切换
+function tabProgram(){
+
+    $('.program-tab li').on('click',function(){ 
+        index = $(this).index();
+        $(this).addClass('current').siblings().removeClass('current');
+        $('.tab-program-content .tab-program-content-general').eq(index).addClass('active').siblings().removeClass('active');
+    });
+};
+$(function(){
+    // 退课成功
+    $('body').on('click','.drop-course-detail-inner .drop-course-btn', function(){
+        var result =  $('.dropCourse-success-wrap').html();
+        $('#dropCourse .modal-body').html(result);
+        countDown(3,'#dropCourse');
+    });  
+    // var countDownTime=parseInt(3);    //在这里设置时长
+    function countDown(countDownTime,courseDownTimeId){
+        $('.setTimeNum').text(countDownTime);
+        var timer=setInterval(function(){
+            if(countDownTime>1){
+                countDownTime--;
+                $('.setTimeNum').text(countDownTime);
+            }else{
+                clearInterval(timer);
+                $(courseDownTimeId).modal('hide'); 
+                $("#course_lists_label li.active").click();
+            }
+        },1000);
+        // 手动关闭弹层时清除计时器
+        $(courseDownTimeId).on('hide.bs.modal', function (e) {
+           clearInterval(timer);
+       });
+    }
+
+     // 退课成功
+     $('body').on('click','.drop-course-detail-inner .drop-charge', function(){
+         $('.drop-charge-explain-wrap').toggleClass('dropCharge-hide');
+     }); 
+    // 临时调课成功
+    $('body').on('click','.temporary-adjust-course-detail-inner .drop-course-btn', function(){
+        var result =  $('.temporary-adjust-wrap').html();
+        $('#temporaryAdjustCourse .modal-body').html(result);
+    }); 
+    
+    // 永久调课确认按钮点击
+    $('body').on('click','.permanent-adjust-course-detail-inner .drop-course-btn', function(){
+        var result =  $('.permanent-adjust-wrap').html();
+        $('#permanentAdjustCourse .modal-body').html(result);
+        countDown(3,'#permanentAdjustCourse');
+
+    });  
+    // 永久调课无课状态下确认按钮点击
+    $('body').on('click','.permanent-adjust-nocourse-detail .drop-course-btn', function(){
+        $('#permanentAdjustCourse').modal('hide');
+    });  
+     // 永久调课场次调整点击事件
+     $('body').off('click','.adjust-course-select li a').on('click','.adjust-course-select li a',function(){
+        if( $(this).parent('li').hasClass("adjustActive")){
+            $(this).parent('li').removeClass('adjustActive'); 
+            $('.permanent-adjust-course-detail-inner .ajust-course-btn').attr('disabled',true);
+        }else{
+            $(this).parent('li').addClass('adjustActive').siblings('li').removeClass('adjustActive'); 
+            $('.permanent-adjust-course-detail-inner .ajust-course-btn').attr('disabled',false);
+        }
+    })
+ });

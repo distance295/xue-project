@@ -1066,7 +1066,7 @@ var userinfo_temp = false,
 userinfo_dom = null,
 userinfo_show = null,
 userinfo_interval = false;
-
+var time_all = '';
     // 绑定所有V用户的鼠标滑过事件：弹出用户信息
     $('body').off('mouseover', '.ui-userinfo').on('mouseover', '.ui-userinfo', function(ev) {
         var d = $(this).data();
@@ -1074,7 +1074,9 @@ userinfo_interval = false;
         if (!d.params) {
             return;
         }
-
+        var over_url = location.href;
+        var over_time = Date.now();
+        time_all = over_time;
         // var ra = ev; ra.relatedTarget;
         // userinfo_show = null;
         userinfo_show = true;
@@ -1143,7 +1145,7 @@ that.off('mouseout').on('mouseout', function(a, b, c, d) {
     userinfo_temp = false;
     userinfo_show = false;
     userinfo_dom = null;
-
+    
     var re = $(a.relatedTarget);
     var _c = $('.dialog_userinfo').find(re);
 
@@ -1155,9 +1157,14 @@ that.off('mouseout').on('mouseout', function(a, b, c, d) {
                     // 关闭窗口的时候传入要关闭窗口的ID，防止关闭正在激活的窗口（非用户信息窗口）
                     xue.win('userinfo').close('userinfo');
                     that.removeClass('info_open');
+                    
                 }
                 that = null;
             }, 500);
+        var out_time = Date.now();
+        var o_time = out_time - over_time;
+         utrack('xueersi','key=user_tab&value=times:' + o_time + ';userid:' + that.data('params') + ';url:'+ over_url);
+
 });
 
 });
@@ -1178,12 +1185,15 @@ $('body').off('mouseout', '.dialog_userinfo').on('mouseout', '.dialog_userinfo',
             }
         }, 500);
     }
+        var over_url = location.href;
+        var out_time = Date.now();
+        var o_time = out_time - time_all;
+        var src_img = $(this).find('.app-code img').attr('src') || '';
+        utrack('xueersi','key=user_tab&value=times:' + o_time + ';userid:0;url:'+ over_url+';weixin_code_img_url:'+ src_img);
 });
 
 
 // 结束
-
-
 
 
 });

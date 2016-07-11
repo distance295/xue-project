@@ -29,7 +29,7 @@
             <div class="panel panel-default">
                 <div class="panel-body pd0 sideright-body">
                     <div class="sideright-ad">
-                        <a href="###"><img src="http://x04.xesimg.com/web/2015/11/19/14479235823994.jpg"></a>
+                        <a href="###"><img src="/static/img/14479235823994_01.png"></a>
                     </div>
                     <div class="sideright-ad">
                         <a href="###"><img src="http://x04.xesimg.com/web/2015/11/19/14479235823994.jpg"></a>
