@@ -1,5 +1,5 @@
  $(function() {
-     /* 全屏滚动效果配置项 */
+
      // var browser=navigator.appName 
      // var b_version=navigator.appVersion 
      // var version=b_version.split(";"); 
@@ -22,6 +22,7 @@
          return;
      }
      tabOut();
+     /* 全屏滚动效果配置项 */
      var json = JSON.parse($('#pieData').val())
      var bodyWidth = $('body').width();
      var data = json.pieData;
@@ -60,6 +61,7 @@
              }
          }
      });
+
      $('ul li').each(function(index) {
          $(this).on('click', function() {
              $.fn.fullpage.moveTo(index + 1);
@@ -79,6 +81,10 @@
      var canvas = document.getElementById('pie');
      var cxt = canvas.getContext("2d");
      canvas.height = canvas.width = bodyWidth * 0.8 > 400 ? 400 : bodyWidth * 0.8;
+     if ($('body').height() <= 480) {
+         canvas.height = canvas.width = bodyWidth * 0.6;
+
+     }
      var w = canvas.width,
          h = canvas.height;
      var deg = Math.PI / 180;
@@ -94,10 +100,10 @@
      cxt.closePath();
 
      $('.wrap ').css({
-         height: $('.wrap').width() + 2,
-         marginLeft: -1 - $('.wrap ').width() / 2
+         height: $('.wrap').width()>=400?420:$('.wrap').width() + 2,
+         width: $('.wrap').width()>=400?420:$('.wrap').width() + 2,
+         marginLeft:$('.wrap').width()>=400?-210: -1 - $('.wrap ').width() / 2
      })
-
      if (json.process == 1) {
          drawPie(1);
          $('.section-2 .process').hide().eq(json.process - 1).show().css({
@@ -284,7 +290,7 @@
          cxt.fillStyle = '#27294f';
          cxt.rotate((eDeg - sDeg) / 2 + 360 * deg);
          if (bodyWidth < 360) {
-             cxt.fillText(textCut(text), 60, 5)
+             cxt.fillText(textCut(text), $('body').height()>480?60:40, 5)
          } else {
              bodyWidth >= 500 ? cxt.fillText(textCut(text), 80, 5) : cxt.fillText(textCut(text), 70, 5)
          }
@@ -328,11 +334,15 @@
          color = ["#ffc709", "#f7941e", "#c4d600", "#77c043", "#3bafda", "#4f2560", "#732282", "#a62451", "#f05327", "#c74126", "#dabc55", "#65da55", "#b4bf3a", "#288aaf", "#3b7bda", "#724186", "#9d69b2", "#b32136", "#e3233e", "#55c3da"]
          var startDeg = 0;
          var all = 1;
+         var blankR = 50;
+         if ($('body').height() <= 480) {
+             blankR = 30;
+         }
          for (var i = 0; i < data.length; i++) {
              var iDeg = data[i].total * 360;
              var e = 0;
              cxt.fillStyle = '#fff';
-             var r = (data[i].complete * (w / 2 - 50)) + 50;
+             var r = (data[i].complete * (w / 2 - blankR)) + blankR;
              if (data.length > 1) {
                  drawBg(cxt, w / 2, h / 2, w / 2 - 5, startDeg * deg, (startDeg + 1) * deg, iDeg, data[i].name, '#fff');
                  draw(cxt, w / 2, h / 2, r > (w / 2 - 5) ? (w / 2 - 5) : r, (startDeg + 1) * deg, (startDeg + iDeg) * deg, iDeg, data[i].name, color[i]);

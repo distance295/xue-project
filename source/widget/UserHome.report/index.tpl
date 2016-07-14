@@ -26,7 +26,7 @@
                 <div class="ball ">直播</div>
             </div>
             <div class="test process">
-                <span class="time triangle">2016-06-30 10:43:30提交</span>
+                <span class="time triangle">2016-06-30 10:43提交</span>
                 <div class="spot"></div>
                 <div class="ball">随堂测</div> 
             </div>
@@ -288,5 +288,5 @@
     	<img src="img/logo_share.png" class="logo" alt="">
     </div>
 </div>
-<input type="hidden" id="pieData" value='{"process":4,"pieData":[{"name":"\u6295\u5165\u548c","complete":0.875,"total":"0.27"},{"name":"\u6570\u7ec4","complete":0.625,"total":"0.73"}]}'>
+<input type="hidden" id="pieData" value='{"process":4,"pieData":[{"name":"\u6295\u5165\u548c","complete":0.5,"total":"0.27"},{"name":"\u6570\u7ec4","complete":0.625,"total":"0.73"}]}'>
 

@@ -343,15 +343,19 @@ ul.grade-list {
 }
 .live-card{
             width: 290px;
+            // height: 198px;
             background: #fff;
             float: left;
             margin-right: 10px;
+            perspective:800px;
+            position: relative;
             &:hover{
                .live-course-title{
                 top:0 !important;
                }
             }
             .live-time-tip{
+                margin-top: 198px;
                 .live-time-tip-container{
                     line-height: 22px;
                     height: 70px;
@@ -405,18 +409,36 @@ ul.grade-list {
                     }
                 }
             }
+             &:hover .live-course-box{
+                transform:rotateY(180deg);
+            }
             .live-course-box{
-                overflow: hidden;
-                position: relative;
+                cursor: pointer;
+                left:0;
+                top:0;
+                transform-style:preserve-3d;
+                position: absolute;
                 width: 290px;
-                .live-course-title{
+                height: 198px;
+                transition:all .5s;
+               
+                img{
+                    z-index: 2;
+                }
+                a,img{
                     display: block;
-                    position: absolute;
-                    top: -198px;
+                    width:100%;
+                    height:100%;
+                    backface-visibility:hidden;
+                    position:absolute;
+                    top:0;
+                    left:0;
+                }
+                .live-course-title{
+                    transform:rotateY(180deg);
                     height: 198px;
                     background: rgba(0,0,0,0.6);
                     width: 100%;
-                    transition:top .3s linear;
                     text-align: center;
                     line-height: 198px;
                     span{
@@ -425,12 +447,12 @@ ul.grade-list {
                         color:#fff;
                     }
                 }
-                a.success_join{
-                    top:0 ;cursor: default;
+                 a.success_join{
+                    cursor: default;
                     span{
                         background: #bfbfbf !important;cursor: default;
                     }
-                }
+                } 
             }
         }
         .live-teacher-photo {
