@@ -10,7 +10,7 @@
     <div class="ui-header-menu">
         <ul class="topleft-bar pull-left list-unstyled breadcrumb">
             <li class="">
-                <em class="text-danger">你好，圣诞老人圣诞老人圣诞老人圣诞老人圣诞老人圣诞老人</em>
+                <em class="text-danger">你好，人</em>
                 <a href="#">退出</a>
             </li>
             <li class="ui-dropdown">

@@ -51,8 +51,9 @@ button.active,
 .icon.icon-arrow-right {
   width: 4px;
   height: 14px;
-  font: 400 9px/14px consolas;
+  font: 400 14px/14px consolas;
   padding-top: 4px;
+  color: rgba(255, 255, 255, 0.3);
 }
 .header-layer {
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -182,7 +183,7 @@ button.active,
 }
 /*首页公用标题样式和一些重构样式*/
 .grade-course-title {
-  height: 60px;
+  height: 59px;
   overflow: hidden;
   margin-top: 20px;
 }
