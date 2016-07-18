@@ -17,8 +17,11 @@
                 <p>暑假预初数学直播目标满分班 </p>
                 <p>
                     <span class="time">今天&nbsp;&nbsp;15:30-16:30</span>
+                     <span class="teacher pull-right">授课老师：张新刚</span>
+<!--
                     <span class="watchNum">666</span>    
                     <img src="../../widget/Mall.live/img/ic_views.png" />
+-->
                 </p>
             </div>
         </div>
