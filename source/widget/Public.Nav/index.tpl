@@ -23,13 +23,13 @@
             <a href="#"><img src="img/index-live-info.png" alt=""></a>
         </div>
     </div>
-    <!--  直播课程介绍  -->
+    <!--  直播课程介绍
     <div class="live-course-help">
         <div class="course-help-pic">
             <a href="#" target="_blank" class="help-btn"></a>
             <span class="help-end-time">关闭剩余时间：<em>10</em>秒</span>
             <span class="help-close"></span>
         </div>
-    </div>
+    </div>  -->
 </div>
 
