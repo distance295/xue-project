@@ -211,7 +211,7 @@
 </div>
 </div>
 <div class="label-study-wrap">
-    <label class="label-study label-delay label-delayed">已延期</label>
+    <label class="label-study label-delayed">已延期</label>
     <label class="label-study label-continun">续报</label>
     <label class="label-study label-sheng">升级</label>
 </div>
@@ -290,7 +290,8 @@
         </div>
     </div>
     <div class="label-study-wrap">
-        <label class="label-study label-delay">延期</label>
+    <label class="label-study label-Notdelay" data-container="body" data-content="课程有效期少于30天后，您可以点击这里延期45天哦。" data-placement="top" data-toggle="popover" data-trigger="hover">延期</label>
+
         <label class="label-study label-continun">续报</label>
         <label class="label-study label-sheng">升级</label>
     </div>
