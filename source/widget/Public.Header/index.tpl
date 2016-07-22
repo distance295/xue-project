@@ -1,8 +1,10 @@
 <!--
     @require header.less
-    @require header.js
+    @require he ader.js
 -->
+<!--
 <div class="modele-header-pic">
+   
     <img src="http://file.xueersi.com/web/2016/06/29/14671698514847.jpg" alt="暑假班抢福利倒计时" usemap="#Map" border="0">
       <map name="Map" id="Map">
         <area shape="rect" coords="991,18,1158,65" href="http://zt.xueersi.com/2016xxsjlive/" target="_blank"/>
@@ -14,6 +16,7 @@
 			});
 	</script>
 </div>
+-->
 <div id="module-header">
     <div class="h-logo"><a href="#">学而思网校</a></div>
     <div class="h-search">
@@ -31,4 +34,3 @@
     <!-- 头部购物车ui部分调用 -->
     <link rel="import" href="../Public.MiniCart/index.tpl?__inline">
 </div>
-;
