@@ -24,17 +24,37 @@
   overflow: hidden;
   margin: 0;
   padding: 0;
-  padding-left: 230px;
+  padding-left: 220px;
   font-size: 16px;
 }
 .ui-head-nav .container ul.head-nav li {
   float: left;
-  width: 70px;
+  width: 80px;
   line-height: 50px;
   text-align: center;
   list-style: none;
 }
 .ui-head-nav .container ul.head-nav li a:hover {
+  color: #1e89e0;
+}
+.ui-head-nav .container ul.head-nav li.find-course {
+  width: 115px;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.ui-head-nav .container ul.head-nav li.find-course:before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 20px;
+  float: right;
+  background: #dcdcdc;
+  margin-top: 16px;
+}
+.ui-head-nav .container ul.head-nav li.find-course a {
+  color: #e94c3e;
+}
+.ui-head-nav .container ul.head-nav li.find-course a:hover {
   color: #1e89e0;
 }
 .ui-head-nav .container ul.head-nav li.current a {

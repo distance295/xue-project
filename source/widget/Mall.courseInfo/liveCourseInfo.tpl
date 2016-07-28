@@ -18,7 +18,15 @@
             </div>
     </div>
     <div class="course-center-list f-left">
-       
+       <div class="course-endtime">
+           <span>报名截止还剩:</span>
+           <em class="settime" endtime="2016-7-25 19:15:59"></em>
+           <script type="text/javascript">
+                $(function(){
+                   xue.updateEndTime('.settime');//执行倒计时函数
+                });
+	       </script>
+       </div>
 <!--       <div class="qq-layer-item"></div>-->
         <div class="course-favorable-money">
             <div class="favrble-money f-left">
@@ -50,7 +58,7 @@
                        <i style="color:#e74c3c;font-style:normal;">4324134566</i><a href="#" style="float:right;margin:3px 5px 0;"><img src="img/icon-mon.png"/></a>
                    </em>
                </span>
-                <span class="info-c "><strong class="c-disable">已满</strong><br/>剩余名额</span>
+                <span class="info-c "><strong class="hotReport">已满</strong><br/>剩余名额</span>
             </div>
   <!--          <div class="course-teacher-qq">
 
@@ -76,6 +84,7 @@
         </div>
         <div class="course-end-time">
             <span>07月01日-08月30日每天9:00-11:00上课 </span>
+            <span class="time-icon">有效期至2015-07-07</span>
         </div>
 
         <div class="course-button-list">

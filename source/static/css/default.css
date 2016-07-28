@@ -159,7 +159,9 @@ button.active,
 }
 #module-breadcrumb {
   background-color: transparent;
-  margin-bottom: 9px;
+  margin: 5px 0;
+  padding: 8px;
+  font-size: 14px;
 }
 #module-breadcrumb > .active {
   color: #1e89e0;
