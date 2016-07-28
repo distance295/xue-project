@@ -12,7 +12,7 @@
             </div>
         </div>
         <ul class="head-nav pull-left">
-            <li class="current"><a href="">找老师</a></li>
+           <li class="find-course "><a href="#">选课程</a></li>
             <li><a href="">免费课</a></li>
             <li><a href="">看学霸</a></li>
             <li><a href="">新鲜事</a></li>

@@ -36,6 +36,7 @@
 
                     } else{
                         $(this).html("优惠已经结束啦！");
+                        $(this).parents('.course-endtime').hide();
                     }
             }
         });
