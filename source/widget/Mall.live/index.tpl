@@ -8,7 +8,7 @@
     <!--即将开始卡片 -->
     <div class="live-begin live-hidden" id="live_begin" style="display:block;">
         <div class="live-list">
-            <div class="live-card">
+            <div class="live-card" id="111" data-url="www.baidu.com">
                 <div class="live-course-box">
                     <img src="/static/img/zhibo_message.png" class="live-teacher-photo"/>
                     <div class="live-course-hover">
