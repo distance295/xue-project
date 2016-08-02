@@ -21,12 +21,12 @@
         <h4 class="title">本讲知识图谱</h4>
         <div class="state">
             <div class="liveAfter process">
-                <span class="time triangle">2016-06-30 10:03:30进入</span>
+                <span class="time triangle">06-30 10:03进入</span>
                 <div class="spot"></div>
                 <div class="ball ">直播</div>
             </div>
             <div class="test process">
-                <span class="time triangle">2016-06-30 10:43提交</span>
+                <span class="time triangle">06-30 10:43提交</span>
                 <div class="spot"></div>
                 <div class="ball">随堂测</div> 
             </div>
@@ -38,7 +38,7 @@
         </div>
         <div class="wrap triangle">
         	<canvas id="pie" ></canvas>
-            <p>33%</p>
+            <p></p>
         </div>
         <div class="arrow-animation"></div>
     </div>
@@ -104,15 +104,46 @@
     		<p class="text">我的正确率</p>
     		<p class="average">班级平均正确率<span>80%</span></p>
     	</div>
-    	<div class="sReward">
-            <p>老师奖励你</p>
-            <div>
-                <p>50</p>
-                <p>金币</p>
+        <div class="timeline clearfix">
+            <div class="headBall"></div>
+            <div class="item clearfix">
+                <span class="time">09:00</span>
+                <div class="line">
+                    <div class="ball"></div>
+                </div>
+                <p class="message">
+                    进入直播间
+                </p>
             </div>
-            <div>
-                <p>1500</p>
-                <p>学力</p>
+            <div class="item clearfix">
+                <span class="time">09:00</span>
+                <div class="line">
+                    <div class="ball"></div>
+                </div>
+                <p class="message">
+                    <span class="right">对</span>
+                    互动题1，用时30min，班内其他同学平均用时50min
+                </p>
+            </div>
+            <div class="item clearfix">
+                <span class="time">09:00</span>
+                <div class="line">
+                    <div class="ball"></div>
+                </div>
+                <p class="message">
+                    <span class="wrong">错</span>
+                    互动题1，用时30min，班内其他同学平均用时50min
+                </p>
+            </div>
+             <div class="item  clearfix">
+                <span class="time">09:00</span>
+                <div class="line">
+                    <div class="ball"></div>
+                </div>
+                <p class="message">
+                    <span class="not">未</span>
+                    互动题1，用时30min，班内其他同学平均用时50min
+                </p>
             </div>
         </div>
 		<div class="arrow-animation"></div>
@@ -120,9 +151,15 @@
     <div class="section section-5">
     	<h4 class="title">随堂测正确率</h4>
         <div class="correctRate">
-            <p class="my">90<small>分</small></p>
+            <p class="my">
+                90
+                <small>分</small>
+            </p>
             <p class="text"></p>
-            <p class="average">班级平均分<span>80</span></p>
+            <p class="average">
+                班级平均分
+                <span>80</span>
+            </p>
         </div>
         <img src="img/monkey.png" class="allRight" alt="">
     	<div class="wrong">
@@ -288,5 +325,5 @@
     	<img src="img/logo_share.png" class="logo" alt="">
     </div>
 </div>
-<input type="hidden" id="pieData" value='{"process":4,"pieData":[{"name":"\u6295\u5165\u548c","complete":0.5,"total":"0.27"},{"name":"\u6570\u7ec4","complete":0.625,"total":"0.73"}]}'>
+<input type="hidden" id="pieData" value='{"process":4,"pieData":[{"name":"\u6295\u5165\u548c","complete":{"1":0,"2":0,"3":1,"4":1},"total":"0.2"},{"name":"\u633a\u597d","complete":{"1":0,"2":0,"3":1,"4":1},"total":"0.2"},{"name":"\u6570\u7ec4","complete":{"1":0,"2":0,"3":1,"4":1},"total":"0.2"},{"name":"\u6570\u5b66-\u6570","complete":{"1":0,"2":0,"3":1,"4":1},"total":"0.2"},{"name":"\u5927","complete":{"1":0,"2":0,"3":1,"4":1},"total":"0.2"}],"totalComplete":{"1":0,"2":0,"3":100,"4":100}}'>
 
