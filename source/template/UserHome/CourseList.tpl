@@ -107,7 +107,9 @@ function immediateSign(){
 }
 $(function  () {
     progressBar();
-
+    $('[data-toggle="popover"]').popover({
+        content: 1111
+    });
     // 更多服务
     moreService ();
     // 延期课程

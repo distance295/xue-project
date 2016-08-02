@@ -146,6 +146,11 @@
 
 	.course-center-list {
 	   width: 590px;height: 400px; margin-left: 10px;position: relative;
+        .course-endtime {
+           width:270px;height: 40px;line-height: 40px;border:1px solid #e74c37;border-radius: 5px; text-align: center;position: absolute;right:0;top:10px;z-index: 1;
+            span {color: #666;}
+            em {font-size: 16px;color: #000;}
+        }
 	   .attend-class-time {
             overflow: hidden;
 	   	  span {
@@ -184,9 +189,12 @@
 	   }
          //课程时间
         .course-end-time {
-            height: 40px;line-height: 40px; background: #f9f9f9;
+            height: 50px;line-height: 50px; background: #f9f9f9;
             span {
-                display: inline-block;background: url(img/icon-time.png) 15px 13px no-repeat;padding-left: 40px;
+                display: inline-block;padding-left: 40px;font-size: 16px; background: url(img/icon-time.png) 15px 17px no-repeat; 
+                &.time-icon {
+                  background: none;padding-left:20px;
+                }
             }
         }
         //课程服务
@@ -247,6 +255,12 @@
                                 display: inline-block;width:46px;height: 40px;line-height: 40px;background:url(/static/img/icon-rank.png) no-repeat;color: #fff;text-align: center;font-size: 20px;padding-left: 5px;
                                 &.hotcourse {font-size: 12px;font-weight: normal;}
                                 &.c-disable {background:url(/static/img/icon-rank-disable.png) no-repeat;font-size: 14px;font-weight: normal;}
+                                &.hotReport {
+                                    background:url(../Public.Module/img/icon-rank-hotReport.png) no-repeat;font-size: 14px;font-weight: normal;
+                                }
+                                 &.addReport {
+                                    background:url(../Public.Module/img/icon-rank-add.png) no-repeat;font-size: 14px;font-weight: normal;
+                                }
                             }
                         }
                        &.app-dimension-code {
@@ -309,24 +323,23 @@
 	   }
 	   .course-button-list {
 	   	     overflow: hidden;position: absolute;left:0;bottom:0;z-index: 1;
-            .btn {margin-right:10px;}
+            .btn {width: 160px;height: 40px;line-height: 25px;margin-right:10px;font-size: 20px;border-radius: 2px;}
 	   		.button_apply {
-	   			width: 160px;height: 40px;font-size: 18px;border-radius: 2px;
 	   		}
 	   		.button_shop-cart {
-	   			width: 160px;height: 40px;font-size: 18px;border-radius: 2px;margin-right: 10px;outline: none;background: #fdeeeb;border:1px solid #e84c3d;color:#e84c3d;
+	   			outline: none;background: #fdeeeb;border:1px solid #e84c3d;color:#e84c3d;
 	   		}
            .disabled {
-               width: 160px;height: 40px;border-radius: 2px;background: #bfbfbf;border:0;color: #fff;font-size: 18px;
+               background: #bfbfbf;border:0;color: #fff;
            }
            .do_not_sign_up {
-              width: 160px;height: 40px;font-size: 18px;border-radius: 2px;background: #bfbfbf;
+              background: #bfbfbf;
            }
            .btn-join-exam {
-               width: 160px;height: 40px;font-size: 18px;border-radius: 2px;background: #ffe4d0; border:1px solid #f0cab6;color: #eb711d;
+               background: #ffe4d0; border:1px solid #f0cab6;color: #eb711d;
            }
            .btn-live-block {
-               width: 160px;height: 40px;font-size: 18px;border-radius: 2px;background: #ffe4d0; border:1px solid #f0cab6;color: #eb711d;
+              background: #ffe4d0; border:1px solid #f0cab6;color: #eb711d;
            }
 			.collect {
 				 display: inline-block;background: url(img/icon_star.png) 0 2px no-repeat;padding-left:16px;margin:10px 0 0 20px;
