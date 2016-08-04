@@ -26,11 +26,11 @@
             overflow: hidden;
             margin: 0;
             padding: 0;
-            padding-left: 230px;
+            padding-left: 220px;
             font-size: 16px;
             li {
                 float: left;
-                width: 70px;
+                width: 80px;
                 line-height: 50px;
                 text-align: center;
                 list-style: none;
@@ -38,6 +38,22 @@
                     &:hover {
                         color: #1e89e0;
                     }
+                }
+                &.find-course {
+                    width:115px;font-size: 20px;margin-right:10px;
+                    &:before {
+                       content: "";
+                        display: block;
+                        width: 1px;
+                        height: 20px;
+                        float: right;
+                        background: #dcdcdc;
+                        margin-top: 16px;  
+                    }
+                    a {
+                        color: #e94c3e;
+                        &:hover{ color: #1e89e0;}
+                    }  
                 }
                 &.current {
                     a {
