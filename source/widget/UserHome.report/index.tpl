@@ -5,6 +5,8 @@
 	@require report.less
     @require ../../lib/jQuery/1.11.1/jquery.min.js
     @require ../../lib/fullPage/jquery.fullPage.js
+    @require ../../lib/jQuery/1.11.1/jquery.slimscroll.min.js
+
     @require report.js
 -->
 
@@ -19,26 +21,28 @@
 
     <div class="section section-2 small">
         <h4 class="title">本讲知识图谱</h4>
-        <div class="state">
+        <div class="stateWrap">
+        <div class="state ">
+            <span class="time triangle">直播未开始</span>
+
             <div class="liveAfter process">
-                <span class="time triangle">2016-06-30 10:03:30进入</span>
                 <div class="spot"></div>
                 <div class="ball ">直播</div>
             </div>
             <div class="test process">
-                <span class="time triangle">2016-06-30 10:43:30提交</span>
                 <div class="spot"></div>
                 <div class="ball">随堂测</div> 
             </div>
         	<div class="correction  process">
-        		<span class="time triangle">6月7日 9:30完成</span>
         		<div class="spot"></div>
 				<div class="ball ">订正</div>
         	</div>
         </div>
+        </div>
+
         <div class="wrap triangle">
         	<canvas id="pie" ></canvas>
-            <p>33%</p>
+            <p></p>
         </div>
         <div class="arrow-animation"></div>
     </div>
@@ -104,27 +108,69 @@
     		<p class="text">我的正确率</p>
     		<p class="average">班级平均正确率<span>80%</span></p>
     	</div>
-    	<div class="sReward">
-            <p>老师奖励你</p>
-            <div>
-                <p>50</p>
-                <p>金币</p>
+        <div class="timeline clearfix">
+            <div class="headBall"></div>
+            <div class="item clearfix">
+                <span class="time">09:00</span>
+                <div class="line">
+                    <div class="ball"></div>
+                </div>
+                <p class="message">
+                    进入直播间
+                </p>
             </div>
-            <div>
-                <p>1500</p>
-                <p>学力</p>
+            <div class="item clearfix">
+                <span class="time">09:00</span>
+                <div class="line">
+                    <div class="ball"></div>
+                </div>
+                <p class="message">
+                    <span class="right">对</span>
+                    互动题1，用时30min，班内其他同学平均用时50min
+                </p>
+            </div>
+            <div class="item clearfix">
+                <span class="time">09:00</span>
+                <div class="line">
+                    <div class="ball"></div>
+                </div>
+                <p class="message">
+                    <span class="wrong">错</span>
+                    互动题1，用时30min，班内其他同学平均用时50min
+                </p>
+            </div>
+             <div class="item  clearfix">
+                <span class="time">09:00</span>
+                <div class="line">
+                    <div class="ball"></div>
+                </div>
+                <p class="message">
+                    <span class="not">未</span>
+                    互动题1，用时30min，班内其他同学平均用时50min
+                </p>
             </div>
         </div>
+        <div class="absent">
+            <h3>下次记得按时上课哦~</h3>
+            <img src="img/monkey-2.png" class="monkey" alt="">
+        </div>
+
 		<div class="arrow-animation"></div>
     </div>
     <div class="section section-5">
     	<h4 class="title">随堂测正确率</h4>
         <div class="correctRate">
-            <p class="my">90<small>分</small></p>
+            <p class="my">
+                90
+                <small>分</small>
+            </p>
             <p class="text"></p>
-            <p class="average">班级平均分<span>80</span></p>
+            <p class="average">
+                班级平均分
+                <span>80</span>
+            </p>
         </div>
-        <img src="img/monkey.png" class="allRight" alt="">
+        <img src="img/monkey.png" class="monkey" alt="">
     	<div class="wrong">
     		<p>随堂测错题</p>
     		<div class="item">
@@ -288,5 +334,5 @@
     	<img src="img/logo_share.png" class="logo" alt="">
     </div>
 </div>
-<input type="hidden" id="pieData" value='{"process":4,"pieData":[{"name":"\u6295\u5165\u548c","complete":0.875,"total":"0.27"},{"name":"\u6570\u7ec4","complete":0.625,"total":"0.73"}]}'>
+<input type="hidden" id="pieData" value='{"process":4,"pieData":[{"name":"\u6295\u5165\u548c","complete":{"1":0,"2":0,"3":1,"4":1},"total":"0.2"},{"name":"\u633a\u597d","complete":{"1":0,"2":0,"3":1,"4":1},"total":"0.2"},{"name":"\u6570\u7ec4","complete":{"1":0,"2":0,"3":1,"4":1},"total":"0.2"},{"name":"\u6570\u5b66-\u6570","complete":{"1":0,"2":0,"3":1,"4":1},"total":"0.2"},{"name":"\u5927","complete":{"1":0,"2":0,"3":1,"4":1},"total":"0.2"}],"totalComplete":{"1":0,"2":25,"3":50,"4":100},"statusTime":{"liveJoinTime":"7\u670819\u65e5 10:40\u8fdb\u5165 17:22\u9000\u51fa","homeworksTime":"1\u67081\u65e5 8:00\u63d0\u4ea4"}}'>
 
