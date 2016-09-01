@@ -40,7 +40,7 @@
                 <a href="##" class="title-detail">【飞遍化学】炸开你的化学世界大门(第三季)——大揭秘 </a>
             </p>
             <p class="tip-for">07月01日-08月30日每天9:00-11:00上课  共 12 讲</p>
-            <p class="tip-statistics"><span class="icon-stat">92.52</span><span class="money">￥ 495</span></p>
+            <p class="tip-statistics"><span class="icon-stat">92.52</span><span class="money"><del>1500</del>￥495</span></p>
         </div>
        
     </div>
