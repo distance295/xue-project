@@ -146,10 +146,25 @@
 
 	.course-center-list {
 	   width: 590px;height: 400px; margin-left: 10px;position: relative;
+     .course-info-limit {
+      width: 100%;height: 40px;line-height: 40px;background: #e74c3c;overflow: hidden;margin-bottom: 15px;
+      span {
+        float: left;color: #fff;font-size: 16px;
+        &.limit-course {
+          padding-left: 15px;
+          i.fa-clock-o {font-size: 18px;font-weight: normal;}
+        }
+        &.right {
+          float: right;padding-right: 15px;
+          i.red {font-style: normal;color: #ffff00;font-size: 16px;}
+        }
+      }
+    }
         .course-endtime {
            width:270px;height: 40px;line-height: 40px;border:1px solid #e74c37;border-radius: 5px; text-align: center;position: absolute;right:0;top:10px;z-index: 1;
             span {color: #666;}
             em {font-size: 16px;color: #000;}
+            &.course-endtime-limit {top:67px;}
         }
 	   .attend-class-time {
             overflow: hidden;
