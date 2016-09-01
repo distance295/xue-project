@@ -1434,8 +1434,11 @@ ul,li{list-style: none;}
 				span.money {
 					float:right;
 					font-size: 18px;
-					color: #333;
+					color: #e74c3c;
 					font-family: 'Microsoft YaHei';
+                    del {
+                        font-size: 12px;color: #999;padding-right:5px;
+                    }
 				}
 			}
 			.course-teacher {
@@ -1467,9 +1470,10 @@ ul,li{list-style: none;}
 			margin-right:15px;
 		}
 		strong{
-			font-size: 18px;
+			font-size: 14px;
 			color: #e74c3c;
 			font-family: 'Microsoft YaHei';
+            padding-left: 10px;
 		}
 		:after{
 			position: absolute;
@@ -1511,19 +1515,19 @@ ul,li{list-style: none;}
 	font-family: 'Microsoft YaHei';
 	position: relative;
 	.course-sort-label {
-		display: block;width:220px;height:70px;line-height: 70px; background: #1e89e0;font-size: 30px;color: #fff;position: absolute;left:0px;top:0px;border-right:1px solid #fff;
+		display: block;width:393px;height:70px;line-height: 70px; background: #1e89e0;font-size: 30px;color: #fff;position: absolute;left:0px;top:0px;border-right:1px solid #fff;text-align: center;
 		span.icon-fa {
-			float: left;width: 50px;height: 70px;position: relative;background: url(img/fa-left.png) 20px 22px no-repeat;
+			float: left;width: 85px;height: 70px;background: url(img/fa-left.png) 20px 22px no-repeat;
 			i.fa-angle-left,i.fa-angle-right {display: none; width:32px;color: #fff;font-size: 40px;font-weight: normal;position: absolute;left:5px;top:15px;z-index: 1;}
 		}
 		span.txt {float: left;}
 		&.l-right {
-			left:969px;border-right:0;border-left:1px solid #fff;
+			left:797px;border-right:0;border-left:1px solid #fff;
 			span.icon-fa {
-				float: right;background: url(img/fa-right.png) 20px 22px no-repeat;
+				float: right;background: url(img/fa-right.png) 50px 22px no-repeat;
 				i.fa-angle-right {left:15px;}
 			}
-			span.txt {margin-left: 45px;}
+			span.txt {margin-left: 65px;}
 		}
 	}
 	span.title {
@@ -1531,12 +1535,12 @@ ul,li{list-style: none;}
 	}
 }
 .select-subject-list {
-	height: 42px;background: #fff;
+	height: 40px;background: #fff;margin-top:10px;
 	&.select-edition-list{
-		background: #f9f9f9;
+		background: #fff;margin-bottom: 10px;
 	}
 	li {
-		float: left;width:196px;height:40px;line-height: 40px;text-align: center;font-size: 14px;font-family: 'Microsoft YaHei';margin-top:1px;
+		float: left;width:212px;height:40px;line-height: 40px;text-align: center;font-size: 18px;font-family: 'Microsoft YaHei';overflow: hidden;
 		a {
 			display: block;
 			img {padding-right:5px;}
@@ -1545,6 +1549,11 @@ ul,li{list-style: none;}
 			background: #3bafda;
 			a {color: #fff; }
 		}
+         &.select-title {
+          width: 130px;
+          color: #999;
+          font-size: 14px;
+        }
 	}
 }
 
@@ -1707,29 +1716,3 @@ ul,li{list-style: none;}
         } 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
