@@ -16,7 +16,7 @@
 	<div class="section section-1">
 		<img src="img/section1.png" alt="">
 		<h4 class="title">第7讲 浮力及物体的密度</h4>
-		<div class="arrow-animation"></div>    
+		<div class="arrow-animation arrow"></div>    
 	</div> 
 
     <div class="section section-2 small">
@@ -43,6 +43,28 @@
         <div class="wrap triangle">
         	<canvas id="pie" ></canvas>
             <p></p>
+        </div>
+        <div >
+            <div class="clearfix">
+                <span class="subjectColor">课程一：</span>
+                <p>小升初加强练习小升初加强练习小升初加强练习小升初加强练习</p>
+            </div>
+            <div class="clearfix">
+                <span class="subjectColor">课程二：</span>
+                <p>小升初加强练习小升初加强练习小升初加强练习小升初加强练习</p>
+            </div>
+            <div class="clearfix">
+                <span class="subjectColor">课程三：</span>
+                <p>小升初加强练习小升初加强练习小升初加强练习小升初加强练习</p>
+            </div>
+            <div class="clearfix">
+                <span class="subjectColor">课程四：</span>
+                <p>小升初加强练习小升初加强练习小升初加强练习小升初加强练习</p>
+            </div>
+            <div class="clearfix">
+                <span class="subjectColor">课程五：</span>
+                <p>小升初加强练习小升初加强练习小升初加强练习小升初加强练习</p>
+            </div>
         </div>
         <div class="arrow-animation"></div>
     </div>
@@ -99,7 +121,7 @@
     		</div>
     		<p class="teacherName">某某老师</p>
     	</div>
-		<div class="arrow-animation"></div>
+		<div class="arrow-animation arrow"></div>
     </div>
     <div class="section section-4">
     	<h4 class="title">互动题正确率</h4>
@@ -287,8 +309,7 @@
                 <img src="img/subject.png" alt="">
             </div>
     	</div>
-    	<div class="cover">
-    	</div>
+    	
 		<div class="arrow-animation"></div>
     </div>
     <div class="section section-7">
@@ -323,9 +344,7 @@
                 <img src="img/subject.png" alt="">
             </div>
     	</div>
-    	<div class="cover">
-    		
-    	</div>
+    	
 		<div class="arrow-animation"></div>
     </div>
     <div class="section-8 section">
@@ -334,5 +353,7 @@
     	<img src="img/logo_share.png" class="logo" alt="">
     </div>
 </div>
-<input type="hidden" id="pieData" value='{"process":4,"pieData":[{"name":"\u6295\u5165\u548c","complete":{"1":0,"2":0,"3":1,"4":1},"total":"0.2"},{"name":"\u633a\u597d","complete":{"1":0,"2":0,"3":1,"4":1},"total":"0.2"},{"name":"\u6570\u7ec4","complete":{"1":0,"2":0,"3":1,"4":1},"total":"0.2"},{"name":"\u6570\u5b66-\u6570","complete":{"1":0,"2":0,"3":1,"4":1},"total":"0.2"},{"name":"\u5927","complete":{"1":0,"2":0,"3":1,"4":1},"total":"0.2"}],"totalComplete":{"1":0,"2":25,"3":50,"4":100},"statusTime":{"liveJoinTime":"7\u670819\u65e5 10:40\u8fdb\u5165 17:22\u9000\u51fa","homeworksTime":"1\u67081\u65e5 8:00\u63d0\u4ea4"}}'>
+<div class="cover"></div>
+
+<input type="hidden" id="pieData" value='{"process":3,"pieData":[{"name":"\u6295\u5165\u548c","complete":{"1":0,"2":0.2,"3":1,"4":1},"total":"0.2"},{"name":"\u633a\u597d","complete":{"1":0,"2":0.3,"3":1,"4":1},"total":"0.2"},{"name":"\u6570\u7ec4","complete":{"1":0,"2":0.1,"3":1,"4":1},"total":"0.2"},{"name":"\u6570\u5b66-\u6570","complete":{"1":0,"2":0.2,"3":1,"4":1},"total":"0.2"},{"name":"\u5927","complete":{"1":0,"2":0.3,"3":1,"4":1},"total":"0.2"}],"totalComplete":{"1":0,"2":25,"3":50,"4":100},"statusTime":{"liveJoinTime":"7\u670819\u65e5 10:40\u8fdb\u5165 17:22\u9000\u51fa","homeworksTime":"1\u67081\u65e5 8:00\u63d0\u4ea4"},"isOnLive":1}'>
 
