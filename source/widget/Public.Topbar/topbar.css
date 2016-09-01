@@ -43,6 +43,13 @@
   padding-left: 12px;
   color: #666;
 }
+#module-topbar .ui-dropdown .dropdown-body-widen {
+  min-width: 200px;
+}
+#module-topbar .ui-dropdown .dropdown-body-widen .inline-block {
+  display: inline-block;
+  width: 60px;
+}
 #module-topbar .ui-dropdown.hover {
   position: relative;
   z-index: 10;
