@@ -374,6 +374,20 @@ ul.grade-list {
                         margin-right: 5px;
                         margin-top: 8px;
                         span{
+                            &.title {
+                                float:left;
+                                display: inline;
+                                width: 200px;
+                                 line-height: 18px;
+                                 font-size: 14px;
+                            }
+                            &.name {
+                                float: right;
+                                width: 50px;
+                                 line-height: 18px;
+                                 text-align: right;
+                                  font-size: 12px;
+                            }
                             &.time{
                                 color:#ed5565;
                                 font-size: 14px;
@@ -407,8 +421,10 @@ ul.grade-list {
                         height: 20px;
                         overflow: hidden;
                         span{
-                            font-size: 14px;
-                            float: right;
+                             font-size: 16px;
+                            &.name {
+                                font-size: 12px;
+                            }
                         }
                     }
                 }
