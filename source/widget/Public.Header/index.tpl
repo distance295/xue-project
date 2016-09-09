@@ -3,18 +3,18 @@
     @require he ader.js
 -->
 
-<div class="modele-header-pic">
+<!-- <div class="modele-header-pic">
     <img src="http://file.xueersi.com/web/2016/08/04/14703101042088.jpg" alt="暑假班抢福利倒计时" usemap="#Map" border="0">
       <map name="Map" id="Map">
         <area shape="rect" coords="991,18,1158,65" href="http://zt.xueersi.com/2016xxsjlive/" target="_blank"/>
   </map>
     <p class="settime" endtime="2016-8-7 19:15:59" style="right:245px;color:#e74c3c;"></p>
     <script type="text/javascript">
-			$(function(){
-			   xue.updateEndTime('.settime');//执行倒计时函数
-			});
-	</script>
-</div>
+            $(function(){
+               xue.updateEndTime('.settime');//执行倒计时函数
+            });
+    </script>
+</div> -->
 <div id="module-header">
     <div class="h-logo"><a href="#">学而思网校</a></div>
     <div class="h-search">

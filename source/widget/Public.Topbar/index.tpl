@@ -42,12 +42,12 @@
             </li>
         </ul>
         <ul class="topright-bar pull-right pull-right breadcrumb">
-            <li class="ui-dropdown">
+            <li class="ui-dropdown hoverHideTips">
                 <span class="dropdown-handle">你正在访问：<em class="text-danger">选择</em><i class="fa fa-angle-down dropdown-icon"></i></span>
                 <div class="selGradeTips">
                     <img src="http://res14.xesimg.com/www/img/selClass.png">
                 </div>
-                <ul style="display: none;" class="dropdown-body dropdown-body-widen">
+                <ul class="dropdown-body dropdown-body-widen">
                     <li>其他年级</li>
                     <li class="inline-block"><a data-grade="1" class="" href="javascript:void(0)">幼升小</a></li>
                     <li class="inline-block"><a data-grade="2" class="" href="javascript:void(0)">一年级</a></li>
@@ -66,7 +66,6 @@
             </li>
             <li><a href="#">网校首页</a></li>
             <li><a href="#">个人中心</a></li>
-            <li><a href="#">我的主页</a></li>
             <li><a href="#">购物车 <em class="text-danger">2</em></a></li>
             <li><a href="#">订单</a></li>
             <li class="ui-dropdown">
@@ -77,8 +76,6 @@
                     <li><a href="#">课程绑定卡</a></li>
                 </ul>
             </li>
-            <li><a href="#">收藏夹</a></li>
-            <li><a href="#">设置</a></li>
             <li class="ui-dropdown">
                     <span class="dropdown-handle">更多<i class="fa fa-angle-down dropdown-icon"></i></span>
                     <ul class="dropdown-body">
@@ -88,9 +85,27 @@
             </li>
             <li class="phone-400 active">400-800-2211</li>
         </ul>
-
     </div>
 </div>
+
+<script type = "text/javascript">  
+    setTimeout(function(){
+       $('.selGradeTips').css('display' , 'none');
+    },5000);
+    $('.hoverHideTips').on('mouseover' , function() {
+        $('.selGradeTips').css('display' , 'none');
+    });
+    $('body').on('click', '.inline-block a', function() {
+        var that = $(this);
+        var grade = that.data('grade');
+        var defaultGrade = $.cookie('defaultGrade');
+        var rzt = defaultGrade.match(/(\d{1,2})-/);
+        defaultGrade = defaultGrade.replace(new RegExp(rzt[1]), grade);
+        $.cookie('defaultGrade', defaultGrade, {path: '/', domain: '.xueersi.com'});
+        window.location.reload();
+    });
+</script>
+
 <!-- 登录前 -->
 
 
