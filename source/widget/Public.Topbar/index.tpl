@@ -47,7 +47,7 @@
                 <div class="selGradeTips">
                     <img src="http://res14.xesimg.com/www/img/selClass.png">
                 </div>
-                <ul class="dropdown-body dropdown-body-widen">
+                <ul class="dropdown-body dropdown-body-widen">   
                     <li>其他年级</li>
                     <li class="inline-block"><a data-grade="1" class="" href="javascript:void(0)">幼升小</a></li>
                     <li class="inline-block"><a data-grade="2" class="" href="javascript:void(0)">一年级</a></li>
