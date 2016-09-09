@@ -18,7 +18,24 @@
             </div>
     </div>
     <div class="course-center-list f-left">
-       
+        <div class="course-info-limit">
+          <span class="limit-course"> <i class="fa fa-clock-o" aria-hidden="true"></i>
+            限额抢购
+          </span>
+          <span class="right">
+            名额仅剩: <i class="red">50</i>
+            人
+          </span>
+        </div>
+       <div class="course-endtime course-endtime-limit">
+           <span>报名截止还剩:</span>
+           <em class="settime" endtime="2016-7-25 19:15:59"></em>
+           <script type="text/javascript">
+                $(function(){
+                   xue.updateEndTime('.settime');//执行倒计时函数
+                });
+	       </script>
+       </div>
 <!--       <div class="qq-layer-item"></div>-->
         <div class="course-favorable-money">
             <div class="favrble-money f-left">
@@ -35,7 +52,7 @@
             <span>送练习册</span>
             <span>实物礼品</span>
         </div>
-        <div class="course-content-teacher">
+         <!-- <div class="course-content-teacher">
            <div class="coach-teacher">
                 <span class="coach-c">辅导老师：</span>
                 <span class="avatar-c">
@@ -50,15 +67,15 @@
                        <i style="color:#e74c3c;font-style:normal;">4324134566</i><a href="#" style="float:right;margin:3px 5px 0;"><img src="img/icon-mon.png"/></a>
                    </em>
                </span>
-                <span class="info-c "><strong class="c-disable">已满</strong><br/>剩余名额</span>
+                <span class="info-c "><strong class="hotReport">已满</strong><br/>剩余名额</span>
             </div>
-  <!--          <div class="course-teacher-qq">
+          <div class="course-teacher-qq">
 
                    <span><img src="img/close-qq-layer.png" alt=""></span>
                    <a href="#"><img src="img/qq_jiaru_layer.png" alt=""></a>
 
-           </div>-->
-        </div>
+           </div>
+        </div>-->
         <div class="course-serve-list">
             <span class="f-left">课程服务：</span>
             <ul class="xes-serve-list">
@@ -76,6 +93,7 @@
         </div>
         <div class="course-end-time">
             <span>07月01日-08月30日每天9:00-11:00上课 </span>
+            <span class="time-icon">有效期至2015-07-07</span>
         </div>
 
         <div class="course-button-list">

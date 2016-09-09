@@ -72,7 +72,7 @@ nav.get = function (url, callback) {
         type: 'GET',
         dataType: 'json',
         success: function (result) {
-            console.log(result);
+            //console.log(result);
             if (result.data.length <= 0) {
                 return;
             }
@@ -146,3 +146,22 @@ nav.init = function(o){
         nav.hide();
     });
 };
+nav.timesEnd = function(){
+    var tim = 20;
+    var timer;
+        timer = setInterval(function(){
+            tim --;
+             $('.help-end-time em').html(tim);
+            if(tim == 0){
+                $(".live-course-help").hide();
+                $('.nav-live-course-info').removeClass('hidden');
+                clearInterval(timer);
+            }
+        },1000); 
+    $('body').on('click','.live-course-help .help-close',function(){
+        var that = $(this);
+        that.parents('.live-course-help').remove();
+        $('.nav-live-course-info').removeClass('hidden');
+    });
+};
+nav.timesEnd(); 

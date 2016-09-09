@@ -24,7 +24,10 @@
                 <div class="col-md-10 wrap w930">
                     <div class="panel panel-default">
                         <div class="panel-body CollectCourse-main-wrapper">
-                            <link rel="import" href="../../widget/Public.Module/course06.tpl?__inline">
+                            <link rel="import" href="../../widget/Public.Module/course10-collect.tpl?__inline">
+                            <link rel="import" href="../../widget/Public.Module/course10-collect02.tpl?__inline">
+                            <link rel="import" href="../../widget/Public.Module/course10-collect.tpl?__inline">
+                            <link rel="import" href="../../widget/Public.Module/course10-collect02.tpl?__inline">
                         </div>
                         
                         <div class="ui-pages text-center"></div>
@@ -101,6 +104,39 @@ $('.ui-pages').pages({
         });
     }
 });
+
+$('.course-test .cancel-courseList').on('click', function () {
+        var id = $(this).data('id');
+        if ($(this).hasClass('cancel-courseList-disabled')) {
+            return false;
+        }
+        var dom = $(this);
+        $.ajax({
+            url: '/data/Dynamic/ajaxDelDynamic.json',
+            data: 'courseId=' + id + '&type=' + 1,
+            type: "get",
+            dataType: 'json',
+            success: function (d) {
+                if (d.sign == 1) {
+                    // 这里写返回成功的回调内容
+                    popoverTips.show({
+                        dom: dom,
+                        placement: 'top',
+                        trigger: 'click',
+                        con: '取消收藏成功'
+                    });
+                    $(dom).addClass('cancel-courseList-disabled').children('a').text('已取消收藏');
+                    setTimeout(function () {
+                        popoverTips.destroy($(dom));
+                    }, 1000)
+                } else if (d.sign == 2) {
+                    window.location.href = 'http://login.xueersi.com/login/';
+                } else {
+                    popoverTips.destroy($(dom));
+                }
+            }
+        });
+    });
 </script>
 
 <!-- 公共底部 -->

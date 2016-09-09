@@ -4,7 +4,7 @@
 <!-- 学习中心区域 -->
 <div class="container">
    <div class="center-block text-center">
-    <img src="../../static/img/404.png" class="img-responsive" alt="">
+    <img src="../../static/img/404_A.png" class="img-responsive" alt="">
     </div>
 </div>
 <!-- 页面配置 -->

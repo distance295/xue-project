@@ -40,7 +40,7 @@
                 <a href="##" class="title-detail">【飞遍化学】炸开你的化学世界大门(第三季)——大揭秘 </a>
             </p>
             <p class="tip-for">随到随学，有效期 60 天 | 共 80 讲</p>
-            <p class="tip-statistics"><span class="icon-stat">92.52</span><span class="money">￥ 465</span></p>
+            <p class="tip-statistics"><span class="icon-stat">92.52</span><span class="money"><del>1200</del>￥465</span></p>
         </div>
        
     </div>

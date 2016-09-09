@@ -1,13 +1,14 @@
 <!--
     @require header.less
-    @require header.js
+    @require he ader.js
 -->
+
 <div class="modele-header-pic">
-    <img src="http://file.xueersi.com/web/2016/06/29/14671698514847.jpg" alt="暑假班抢福利倒计时" usemap="#Map" border="0">
+    <img src="http://file.xueersi.com/web/2016/08/04/14703101042088.jpg" alt="暑假班抢福利倒计时" usemap="#Map" border="0">
       <map name="Map" id="Map">
         <area shape="rect" coords="991,18,1158,65" href="http://zt.xueersi.com/2016xxsjlive/" target="_blank"/>
   </map>
-    <p class="settime" endtime="2016-7-01 19:15:59" style="right:235px;color:#e74c3c;"></p>
+    <p class="settime" endtime="2016-8-7 19:15:59" style="right:245px;color:#e74c3c;"></p>
     <script type="text/javascript">
 			$(function(){
 			   xue.updateEndTime('.settime');//执行倒计时函数
@@ -31,4 +32,3 @@
     <!-- 头部购物车ui部分调用 -->
     <link rel="import" href="../Public.MiniCart/index.tpl?__inline">
 </div>
-;
