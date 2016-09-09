@@ -42,6 +42,28 @@
             </li>
         </ul>
         <ul class="topright-bar pull-right pull-right breadcrumb">
+            <li class="ui-dropdown">
+                <span class="dropdown-handle">你正在访问：<em class="text-danger">选择</em><i class="fa fa-angle-down dropdown-icon"></i></span>
+                <div class="selGradeTips">
+                    <img src="http://res14.xesimg.com/www/img/selClass.png">
+                </div>
+                <ul style="display: none;" class="dropdown-body dropdown-body-widen">
+                    <li>其他年级</li>
+                    <li class="inline-block"><a data-grade="1" class="" href="javascript:void(0)">幼升小</a></li>
+                    <li class="inline-block"><a data-grade="2" class="" href="javascript:void(0)">一年级</a></li>
+                    <li class="inline-block"><a data-grade="3" class="" href="javascript:void(0)">二年级</a></li>
+                    <li class="inline-block"><a data-grade="4" class="" href="javascript:void(0)">三年级</a></li>
+                    <li class="inline-block"><a data-grade="5" class="" href="javascript:void(0)">四年级</a></li>
+                    <li class="inline-block"><a data-grade="6" class="" href="javascript:void(0)">五年级</a></li>
+                    <li class="inline-block"><a data-grade="7" class="" href="javascript:void(0)">六年级</a></li>
+                    <li class="inline-block"><a data-grade="8" class="" href="javascript:void(0)">初一</a></li>
+                    <li class="inline-block"><a data-grade="9" class="" href="javascript:void(0)">初二</a></li>
+                    <li class="inline-block"><a data-grade="10" class="" href="javascript:void(0)">初三</a></li>
+                    <li class="inline-block"><a data-grade="11" class="" href="javascript:void(0)">高一</a></li>
+                    <li class="inline-block"><a data-grade="12" class="" href="javascript:void(0)">高二</a></li>
+                    <li class="inline-block"><a data-grade="13" class="" href="javascript:void(0)">高三</a></li>
+                </ul>
+            </li>
             <li><a href="#">网校首页</a></li>
             <li><a href="#">个人中心</a></li>
             <li><a href="#">我的主页</a></li>
