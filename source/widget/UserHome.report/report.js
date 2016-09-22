@@ -1,6 +1,5 @@
 $(function() {
     if ($('.studyReport').length == 1) {
-
         var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
         var bodyWidth = $('body').width();
         var flag = true;
@@ -45,14 +44,8 @@ $(function() {
         window.requestAnimationFrame = requestAnimationFrame;
         window.cancelAnimationFrame = cancelAnimationFrame;
 
+        // $('.section-4 .timeline .item').height((window.innerHeight - 128)/10)
 
-        var line = $('.headBall .line');
-        var lineH = line.height();
-        var speed = 500;
-        var interval = 90;
-        if ($('body').width() == 320) {
-            interval = 80;
-        }
         function myAnimate_Mob() {
             id = requestAnimationFrame(myAnimate_Mob);
             line.css({
@@ -136,7 +129,7 @@ $(function() {
 
         function stopAnimation(stop) {
             animateFlag = false;
-            if(stop){
+            if (stop) {
                 cancelAnimationFrame(id);
             }
 
@@ -161,25 +154,23 @@ $(function() {
             css3: true,
             continuousVertical: false,
             controlArrow: false,
-            loopBottom: true,
+            loopBottom: false,
             touchSensitivity: 1,
-            navigation: bodyWidth < 768 ? false : true,
+            navigation: bodyWidth < 980 ? false : true,
             navigationColor: '#fff',
             scrollOverflow: true,
             afterLoad: function(anchorLink, index) {
-                if ($('body').width() >= 768) {
-                    $('.arrow-animation').hide()
-                }
+
                 switch (index) {
-                    case 1 :
+                    case 1:
                         stopAnimation(false)
                         break;
                     case 2:
                         myAnimate_Mob();
                         break;
-                    case 3 :
+                    case 3:
                         stopAnimation(false)
-                        break;    
+                        break;
                 }
             },
             onLeave: function(index) {
@@ -190,9 +181,21 @@ $(function() {
                 }
             }
         });
+        // setTimeout(function() {
+        //     console.debug($('.slimScrollBar'));
+        //     $('.slimScrollBar').css({
+        //         background:'red'
+        //     });
+        // }, 200)
 
-        
 
+        var line = $('.headBall .line');
+        var lineH = line.height();
+        var speed = 500;
+        var interval = 90;
+        if ($('.fp-tableCell').height() <= 568) {
+            interval = 80;
+        }
         $('.section-6 img,.section-7 img').css({
             height: $('body').height() * 0.23
         })
