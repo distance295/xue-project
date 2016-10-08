@@ -37,7 +37,7 @@
                 </div>
                 <div class="pull-right">
                     <p>
-                        <span>80%</span>
+                        <span>直播课已结束</span>
                         <br/>        
                         <span>直播课互动题正确率</span>
                     </p>
@@ -173,10 +173,6 @@
             
 
         </div>
-        <!-- <div class="absent">
-            <h3>下次记得按时上课哦~</h3>
-            <img src="img/monkey-2.png" class="monkey" alt="">
-        </div> -->
 
 		<div class="arrow-animation">
             <div class="arrow"></div>
@@ -196,7 +192,6 @@
                 <span>80</span>
             </p>
         </div>
-        <img src="img/monkey.png" class="monkey" alt="">
 
         <div class="wrap">
             <div class="teacherReviews clearfix">
@@ -222,24 +217,29 @@
             <div class="item">
                 <p>
                     <span class="subjectName">互动题1</span>
+                    <span class="notComplete">未</span>
                 </p>
                 <img src="img/subject.png" alt="">
             </div>
             <div class="item">
                 <p>
                     <span class="subjectName">互动题2</span>
+                    <span class="mistake">错</span>
                 </p>
                 <img src="img/subject.png" alt="">
             </div>
             <div class="item">
                 <p>
                     <span class="subjectName">互动题1</span>
+                    <span class="mistake">错</span>
                 </p>
                 <img src="img/subject.png" alt="">
             </div>
             <div class="item">
                 <p>
                     <span class="subjectName">互动题2</span>
+                    <span class="notComplete">未</span>
+                    
                 </p>
                 <img src="img/subject.png" alt="">
             </div>
@@ -252,8 +252,7 @@
     </div>
     <div class="section section-7">
         <h4 class="title">随堂测错题</h4>
-        <div class="liveWrong">
-            <div class="item">
+        <div class="liveWrong"> <div class="item">
                 <p>
                     <span class="subjectName">互动题1</span>
                     <span class="mistake">待改错</span>
@@ -271,7 +270,7 @@
             </div>
             <div class="item">
                 <p>
-                    <span class="subjectName">互动题1</span>
+                    <span class="subjectName">互动题3</span>
                     <span class="mistake">待改错</span>
                 </p>
                 <p class="knowledge">考察知识点：三角函数的性质 三角函数的概念</p>
@@ -279,7 +278,71 @@
             </div>
             <div class="item">
                 <p>
-                    <span class="subjectName">互动题2</span>
+                    <span class="subjectName">互动题4</span>
+                    <span class="complete">已订正</span>
+                </p>
+                <p class="knowledge">考察知识点：三角函数的性质 三角函数的概念</p>
+                <img src="img/subject.png" alt="">
+            </div>
+             <div class="item">
+                <p>
+                    <span class="subjectName">互动题51</span>
+                    <span class="mistake">待改错</span>
+                </p>
+                <p class="knowledge">考察知识点：三角函数的性质 三角函数的概念</p>
+                <img src="img/subject.png" alt="">
+            </div>
+            <div class="item">
+                <p>
+                    <span class="subjectName">互动题6</span>
+                    <span class="complete">已订正</span>
+                </p>
+                <p class="knowledge">考察知识点：三角函数的性质 三角函数的概念</p>
+                <img src="img/subject.png" alt="">
+            </div>
+            <div class="item">
+                <p>
+                    <span class="subjectName">互动题11</span>
+                    <span class="mistake">待改错</span>
+                </p>
+                <p class="knowledge">考察知识点：三角函数的性质 三角函数的概念</p>
+                <img src="img/subject.png" alt="">
+            </div>
+            <div class="item">
+                <p>
+                    <span class="subjectName">互动题22</span>
+                    <span class="complete">已订正</span>
+                </p>
+                <p class="knowledge">考察知识点：三角函数的性质 三角函数的概念</p>
+                <img src="img/subject.png" alt="">
+            </div>
+            <div class="item">
+                <p>
+                    <span class="subjectName">互动题13</span>
+                    <span class="mistake">待改错</span>
+                </p>
+                <p class="knowledge">考察知识点：三角函数的性质 三角函数的概念</p>
+                <img src="img/subject.png" alt="">
+            </div>
+            <div class="item">
+                <p>
+                    <span class="subjectName">互动题42</span>
+                    <span class="complete">已订正</span>
+                </p>
+                <p class="knowledge">考察知识点：三角函数的性质 三角函数的概念</p>
+                <img src="img/subject.png" alt="">
+            </div>
+            <div class="item">
+                <p>
+                    <span class="subjectName">互动题511</span>
+                    <span class="mistake">待改错</span>
+                </p>
+                <p class="knowledge">考察知识点：三角函数的性质 三角函数的概念</p>
+                <img src="img/subject.png" alt="">
+            </div>
+            <div class="item">
+                <p>
+                    <span class="subjectName">互动题62</span>
                     <span class="complete">已订正</span>
                 </p>
                 <p class="knowledge">考察知识点：三角函数的性质 三角函数的概念</p>

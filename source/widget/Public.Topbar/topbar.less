@@ -17,12 +17,17 @@
     position: relative;
     .ui-dropdown {
         width: auto !important;
+        position: relative;
         .dropdown-handle {
             display: inline-block;
             cursor: pointer;
             padding: 0 10px;
             border-left: 1px solid transparent;
             border-right: 1px solid transparent;
+        }
+        .selGradeTips{
+            position: absolute;
+            left: -25px;
         }
         .dropdown-body {
             display: none;
@@ -108,7 +113,7 @@
         width: 1190px;
         margin: 0 auto;
         .topleft-bar {
-            width: 410px;
+            width: 390px;
             &>li:first-child{
                 float: left;
                 em.text-danger {
@@ -120,7 +125,7 @@
             }
         }
         .topright-bar {
-            width: 780px;
+            width: 800px;
             height: 30px;
             text-align: right;
         }
