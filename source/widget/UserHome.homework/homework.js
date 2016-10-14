@@ -25,7 +25,8 @@ homeWork.url = '/data/homework/';
     	if( !dom ){
            return false;
 		}
-    	//判断多个的情况下
+
+    	//判断多个的情况下---
     	/*$(dom).each(function(){
 	    		var samllBox_W = $(this).find('.homework-Thumbnails-img-list li').width();
 		   	    var samllBox_H = $(this).find('.homework-Thumbnails-img-list li').height();
