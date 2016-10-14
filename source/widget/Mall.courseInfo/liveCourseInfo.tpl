@@ -52,30 +52,24 @@
             <span>送练习册</span>
             <span>实物礼品</span>
         </div>
-         <!-- <div class="course-content-teacher">
+          <div class="course-content-teacher">
            <div class="coach-teacher">
                 <span class="coach-c">辅导老师：</span>
                 <span class="avatar-c">
 				          <img src="http://s02.xesimg.com/teacher/2013/08/26/13774956202468.jpg" alt="" class="coach-avatar-info">
 				      </span>
                 <span class="name-c">王海丰老师</span>
-               <span class="app-dimension-code">
+               <!-- <span class="app-dimension-code">
                    <img class="line" src="img/icon-line.png" alt="">
                    <img class="qq-jiaru" src="img/qq_90.png" alt="qq" width="45">
                     <em>
                        加入QQ群咨询<br/>
                        <i style="color:#e74c3c;font-style:normal;">4324134566</i><a href="#" style="float:right;margin:3px 5px 0;"><img src="img/icon-mon.png"/></a>
                    </em>
-               </span>
+               </span> -->
                 <span class="info-c "><strong class="hotReport">已满</strong><br/>剩余名额</span>
             </div>
-          <div class="course-teacher-qq">
-
-                   <span><img src="img/close-qq-layer.png" alt=""></span>
-                   <a href="#"><img src="img/qq_jiaru_layer.png" alt=""></a>
-
-           </div>
-        </div>-->
+        </div>
         <div class="course-serve-list">
             <span class="f-left">课程服务：</span>
             <ul class="xes-serve-list">
