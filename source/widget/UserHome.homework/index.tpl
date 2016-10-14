@@ -32,24 +32,8 @@
 		<!--音频的位置,第一次进入页面显示默认的音频列表添加homework-audio-list-box-display-->
 		<div class="homework-audio-list-box homework-audio-list-box-display">
 			<ul>
-				<li class="homework-audio-btn-click" data-audio ="http://x03.xesimg.com/homework/audio/2016/03/11/14576902531928.mp3" data-val="老师总评"><i class="audio-icon"></i><em>老师总评</em></li>
-				<li class="homework-audio-btn-click" data-audio = "http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3" data-val="测试1精讲"><i class="audio-icon"></i><em>测试1精讲</em></li>
-				<li class="homework-audio-btn-click" data-audio ="/data/homework/我的好兄弟.mp3" data-val="测试2精讲"><i class="audio-icon"></i><em>测试2精讲</em></li>
-				<li class="homework-audio-btn-click" data-audio = "http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3" data-val="测试3精讲"><i class="audio-icon"></i><em>测试3精讲</em></li>
-				<li class="homework-audio-btn-click" data-audio ="/data/homework/我的好兄弟.mp3" data-val="测试4精讲"><i class="audio-icon"></i><em>测试4精讲</em></li>
-				<li class="homework-audio-btn-click" data-audio = "http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3" data-val="测试5精讲"><i class="audio-icon"></i><em>测试5精讲</em></li>
-				<li class="homework-audio-btn-click" data-audio ="/data/homework/我的好兄弟.mp3" data-val="测试6精讲"><i class="audio-icon"></i><em>测试6精讲</em></li>
-				<li class="homework-audio-btn-click" data-audio = "http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3" data-val="测试7精讲"><i class="audio-icon"></i><em>测试7精讲</em></li>
-				<li class="homework-audio-btn-click" data-audio = "http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3" data-val="测试3精讲"><i class="audio-icon"></i><em>测试3精讲</em></li>
-				<li class="homework-audio-btn-click" data-audio ="/data/homework/我的好兄弟.mp3" data-val="测试4精讲"><i class="audio-icon"></i><em>测试4精讲</em></li>
-				<li class="homework-audio-btn-click" data-audio = "http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3" data-val="测试5精讲"><i class="audio-icon"></i><em>测试5精讲</em></li>
-				<li class="homework-audio-btn-click" data-audio ="/data/homework/我的好兄弟.mp3" data-val="测试6精讲"><i class="audio-icon"></i><em>测试6精讲</em></li>
-				<li class="homework-audio-btn-click" data-audio = "http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3" data-val="测试7精讲"><i class="audio-icon"></i><em>测试7精讲</em></li>
-				<li class="homework-audio-btn-click" data-audio = "http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3" data-val="测试3精讲"><i class="audio-icon"></i><em>测试3精讲</em></li>
-				<li class="homework-audio-btn-click" data-audio ="/data/homework/我的好兄弟.mp3" data-val="测试4精讲"><i class="audio-icon"></i><em>测试4精讲</em></li>
-				<li class="homework-audio-btn-click" data-audio = "http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3" data-val="测试5精讲"><i class="audio-icon"></i><em>测试5精讲</em></li>
-				<li class="homework-audio-btn-click" data-audio ="/data/homework/我的好兄弟.mp3" data-val="测试6精讲"><i class="audio-icon"></i><em>测试6精讲</em></li>
-				<li class="homework-audio-btn-click" data-audio = "http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3" data-val="测试7精讲"><i class="audio-icon"></i><em>测试7精讲</em></li>
+				<!-- <li class="homework-audio-btn-click" data-audio = "http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3" data-val="测试7精讲"><i class="audio-icon"></i><em>测试7精讲</em></li>  -->
+				
 			</ul>
 		</div>
 		<div class="homework-image-area">
@@ -57,40 +41,43 @@
 				<div class="homework-page-btn">
 					<a href="javascript:void(0)" class="homework-prev_btn homework-prev-active"></a>
 				</div>
+
 				<div class="homework-Thumbnails-img-list" id="Thumbnails">
+				<!-- 	<li data-audio = "http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3" data-url="/static/img/hm_big1.png,/data/homework/我的好兄弟.mp3,/data/homework/我的好兄弟.mp3|/static/img/small2.png,http://x03.xesimg.com/homework/audio/2016/03/11/14576902531928.mp3|/static/img/small1.png,http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3,http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3,/data/homework/我的好兄弟.mp3"> -->
 					<ul>
-						<li data-audio =""><img src="img/small1.png" class="homework-Feedback-small-img"/><i></i></li>
-						<li data-audio = "http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3" data-url="/static/img/hm_big1.png,/data/homework/我的好兄弟.mp3|/static/img/small2.png,http://x03.xesimg.com/homework/audio/2016/03/11/14576902531928.mp3|/static/img/small1.png,http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3">
+						<li  class="homework-feedback-all" data-url=""><img src="img/small1.png" class="homework-Feedback-small-img"/><i></i></li>
+						<li data-url="http://r03.xesimg.com/homework/imgs/2016/10/13/1476353794805853696774.jpeg,http://x01.xesimg.com/homework/audio/2016/10/13/1476353796662034029642.mp3|http://x01.xesimg.com/homework/imgs/2016/10/13/1476353851699216915635.jpeg|http://s04.xesimg.com/homework/imgs/2016/10/13/1476354141368064124586.jpeg,http://x03.xesimg.com/homework/audio/2016/10/13/1476354141811484931029.mp3,http://s01.xesimg.com/homework/audio/2016/10/13/1476354142187250157007.mp3">
 							<span class="homework-MaskLayer"></span>
 							<span class="homework-MaskLayer-num">1</span>
 							<img src="img/small3.png" />
+
 							<i></i>
 							<!--试卷答对-->
 							<span class="homework-rightIcon"></span>
 							<!--已改完和已改对-->
 							<span class="homework-markStatus">已改完</span>
 						</li>
-						<li data-audio ="/data/homework/我的好兄弟.mp3" data-url="/static/img/small2.png,http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3|/static/img/small1.png,''">
+						<li  data-url="/static/img/small2.png,http://s04.xesimg.com/homework/audio/2016/03/11/14576666206991.mp3|/static/img/small1.png">
 							<span class="homework-MaskLayer"></span>
 							<span class="homework-MaskLayer-num">2</span>
 							<img src="http://7sbrvo.com2.z0.glb.qiniucdn.com/homework/img/2015/11/05/14467099031310.png" /><i></i>
 						</li>
-						<li data-audio ="" data-url="">
+						<li  data-url="">
 							<span class="homework-MaskLayer"></span>
 							<span class="homework-MaskLayer-num">3</span>
 							<img src="img/small3.png" /><i></i>
 						</li>
-						<li data-audio ="http://x03.xesimg.com/homework/audio/2016/03/11/14576902531928.mp3" data-url="/static/img/small1.png,''|/static/img/small2.png,/data/homework/我的好兄弟.mp3">
+						<li  data-url="/static/img/small1.png|/static/img/small2.png,/data/homework/我的好兄弟.mp3">
 							<span class="homework-MaskLayer"></span>
 							<span class="homework-MaskLayer-num">4</span>
 							<img src="img/small2.png" /><i></i>
 						</li>
-						<li data-audio ="" data-url="">
+						<li  data-url="">
 							<span class="homework-MaskLayer"></span>
 							<span class="homework-MaskLayer-num">5</span>
 							<img src="img/small3.png" /><i></i>
 						</li>
-						<li data-audio ="/data/homework/我的好兄弟.mp3" data-url="/static/img/small1.png,''|/static/img/small2.png,http://x03.xesimg.com/homework/audio/2016/03/11/14576902531928.mp3|/static/img/small1.png,''|/static/img/small2.png,''">
+						<li  data-url="/static/img/small1.png|/static/img/small2.png,http://x03.xesimg.com/homework/audio/2016/03/11/14576902531928.mp3|/static/img/small1.png|/static/img/small2.png">
 							<span class="homework-MaskLayer"></span>
 							<span class="homework-MaskLayer-num">6</span>
 							<img src="img/small2.png" /><i></i>
@@ -109,7 +96,7 @@
 					<ul>
 						<li><a href="javascript:void(0)" class="homework-disable-edit-btn"></a></li>
 						<!--音频的位置,第一次进入页面显示默认的音频列表添加flag = '1'-->
-						<li><a href="javascript:void(0)" class="homework-audio" flag = '1'></a></li>
+						<li><a href="javascript:void(0)" class="homework-audio homework-audio-disabled" flag = '1'></a></li>
 						<li><a href="javascript:void(0)" class="homework-leftRotate-btn"></a></li>
 						<li><a href="javascript:void(0)" class="homework-rightRotate-btn"></a></li>
 						<li><a href="javascript:void(0)" class="homework-zoom-btn"></a></li>
@@ -128,6 +115,7 @@
 						<li><img src="img/small2.png" /></li>
 						
 					</ul>
+
 					<!--作业反馈开始-->
 					<div class="homework-Feedback hiding">
 						<div class="homework-Feedback-cont">
@@ -163,6 +151,7 @@
 						</div>
 					</div>
 					<!--作业反馈结束-->
+
 				</div>
 			</div>
 		</div>
