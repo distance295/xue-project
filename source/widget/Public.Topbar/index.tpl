@@ -10,7 +10,7 @@
     <div class="ui-header-menu">
         <ul class="topleft-bar pull-left list-unstyled breadcrumb">
             <li class="">
-                <em class="text-danger">你好，人</em>
+                <em class="text-danger">你好，<a href="#">人</a></em>
                 <a href="#">退出</a>
             </li>
             <li class="ui-dropdown">
@@ -33,12 +33,9 @@
                     </li>
                 </ul>
             </li>
-            <li class="ui-dropdown">
-                <span class="dropdown-handle">移动网校<i class="fa fa-angle-down dropdown-icon"></i></span>
-                <ul class="dropdown-body">
-                    <li><a href="#">手机版</a></li>
-                    <li><a href="#">IPAD版</a></li>
-                </ul>
+            <li>
+                <a  href="#">移动网校</a>
+               
             </li>
         </ul>
         <ul class="topright-bar pull-right pull-right breadcrumb">
@@ -76,7 +73,7 @@
                     <li><a href="#">课程绑定卡</a></li>
                 </ul>
             </li>
-            <li class="ui-dropdown">
+            <li class="ui-dropdown ui-dropdown-more hover">
                     <span class="dropdown-handle">更多<i class="fa fa-angle-down dropdown-icon"></i></span>
                     <ul class="dropdown-body">
                             <li><a href="#">线下小班</a></li>

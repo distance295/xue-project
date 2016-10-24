@@ -16,7 +16,7 @@
     </script>
 </div> -->
 <div id="module-header">
-    <div class="h-logo"><a href="#">学而思网校</a></div>
+    <div class="h-logo"><a href="#"><img src="img/logo.png" alt=""></a></div>
     <div class="h-search">
         <input type="text" class="h-text pull-left" placeholder="搜索:秋季满分冲刺班" autocomplete="on">
         <button type="button" class="btn btn-primary btn-search pull-left">搜索</button>
