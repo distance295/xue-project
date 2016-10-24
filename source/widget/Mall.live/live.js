@@ -64,17 +64,14 @@ var liveOrderAjax = liveOrderAjax || {};
                     return;
                 }
                 if(msg.sign == 1){
-                    t.attr("data-target","#liveOrderSuccessModal");
-                    liveOrderSuccessModal.showModal();
-                    var tim = 5;
-                    timer = setInterval(function(){
-                        tim --;
-                        $('.orderSuccessTip span').html(tim);
-                        if(tim == 0){
-                            $("#liveOrderSuccessModal").modal("hide");
-                            clearInterval(timer);
-                        }
-                    },1000);
+                    if (msg.type == 1) {
+                        var m_url = msg.url;
+                        t.attr("data-target","#liveOrderSuccessModal");
+                        liveOrderSuccessModal.showModal(m_url);
+                    }else{
+                        t.attr("data-target","#liveSuccessModal");
+                        liveSuccessModal.showModal(); 
+                    }
                     t.closest('.live-course-title').addClass('success_join');
                     t.find('span').html("已预约，请耐心等待");
                 }
@@ -97,13 +94,30 @@ var liveOrderAjax = liveOrderAjax || {};
             }
         });
     };
-   
-    var liveOrderSuccessModal = liveOrderSuccessModal || {};
-
-    liveOrderSuccessModal.showModal = function(con){
+    var liveSuccessModal = liveSuccessModal || {};
+    liveSuccessModal.showModal = function(con){
         var that = $(this), data = that.data();
-        var con = "<img src='/static/img/orderSuccess_A.png'><span class='orderSuccessTip'><span>5</span>秒钟后关闭</span>";
-        //console.log(data);
+        var con = "<img src='http://res18.xesimg.com/www/img/orderSuccess_A.png'><span class='orderSuccessTip'><span>5</span>秒钟后关闭</span>";
+        createModal.show({
+            id : 'liveSuccessModal',
+            width : '560',
+            title : "预约直播",
+            cls : "liveSuccessModal aaa ccc",
+            content : con
+        });
+        $('#liveSuccessModal').modal({backdrop: 'static', keyboard: false})
+
+    };
+    var liveOrderSuccessModal = liveOrderSuccessModal || {};
+    liveOrderSuccessModal.showModal = function(mUrl){
+        var that = $(this), data = that.data();
+        var con ='<div class="live-fail-modal">'
+                  +'<p class="success-title">恭喜您预约成功</p>'
+                  +'<p class="success-pic"><img src="'+mUrl+'"></p>'
+                  +'<p class="success-txt">扫描上方微信二维码</p>'
+                  +'<p class="success-txt">直播前<span>30</span>分钟您会在微信上收到直播提醒和直播链接！</p>' 
+                  +'<p class="success-o">(首次关注赠送100金币！)</p>'     
+                  +'</div>';
         createModal.show({
             id : 'liveOrderSuccessModal',
             width : '560',
@@ -116,11 +130,9 @@ var liveOrderAjax = liveOrderAjax || {};
     };
 
     var liveOrderFailModal = liveOrderFailModal || {};
-
     liveOrderFailModal.showModal = function(timer){
         var that = $(this), data = that.data();
         var con = "<img src='/static/img/orderFail_A.png'><span class='orderFailTip'><span>5</span>秒钟后关闭</span>";
-        //console.log(data);
         createModal.show({
             id : 'liveOrderFailModal',
             width : '560',
