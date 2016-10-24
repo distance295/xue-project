@@ -41,8 +41,7 @@
         </div>
     </div>
 </div>
-
-<!-- 页面配置 -->
+<!-- 页面配置 s-->
 <script>
 var PAGE_CONFIG = {
     ID: 'Courses',
