@@ -2,6 +2,7 @@
 <link rel="import" href="../Layer/layer.Mall.head.tpl?__inline">
 
 <!-- 学习中心区域 -->
+<a class= 'course-select-btn-htlp' onclick="doyoo.util.openChat('g=10065762');return false;"><img src="http://file.xueersi.com/web/2016/10/19/14768636915583.png" alt=""></a>
 <div class="wrap">
     <div class="container">
         <ol id="module-breadcrumb" class="breadcrumb">
@@ -34,6 +35,7 @@
                 </ul>
                 <div class="panel-default top m10">
                     <div class="panel-body pd0 wd110">
+                        
                         <link rel="import" href="../../widget/Public.Module/course12.tpl?__inline">
                         <link rel="import" href="../../widget/Public.Module/course12.tpl?__inline">
                         <link rel="import" href="../../widget/Public.Module/course12.tpl?__inline">
@@ -51,9 +53,10 @@
             </div>
         </div>
         <!-- row end -->
-
+        
         <div class="ui-pages text-center"></div>
     </div>
 </div>
 <!-- 公共底部 -->
+<script type="text/javascript" charset="utf-8" src="http://lead.soperson.com/20002039/10066500.js"></script>
 <link rel="import" href="../Layer/layer.Mall.foot.tpl?__inline">
