@@ -25,7 +25,8 @@ homeWork.url = '/data/homework/';
     	if( !dom ){
            return false;
 		}
-    	//判断多个的情况下
+
+    	//判断多个的情况下---
     	/*$(dom).each(function(){
 	    		var samllBox_W = $(this).find('.homework-Thumbnails-img-list li').width();
 		   	    var samllBox_H = $(this).find('.homework-Thumbnails-img-list li').height();
@@ -98,7 +99,7 @@ homeWork.url = '/data/homework/';
 			   var _scoreArr = _score.split('');
 			   var _scoreHtml = '';
 			   $.each(_scoreArr, function(k, v) {
-			       _scoreHtml += '<img src="' + homeWork.path + '/' + v + '.png" alt="" />';
+			       _scoreHtml += '<img src="' + 'http://i.xueersi.com/static/img/'  + v + '.png" alt="" />';
 			   });
 			   $(this).html(_scoreHtml) 
 		})
@@ -460,14 +461,16 @@ homeWork.url = '/data/homework/';
 
 	        //音频列表展开收缩效果
 			$(that).find('.homework-audio').click(function(){
-				 var flag = $(this).attr('flag');
-				 if( flag == 0){
-	                $(that).find('.homework-audio-list-box').show();
-	                $(this).attr('flag','1');
-				 }else if(flag == 1){
-	                $(that).find('.homework-audio-list-box').hide('fast');
-	                $(this).attr('flag','0');
-				 }
+				if ($(this).hasClass('homework-audio')) {
+					var flag = $(this).attr('flag');
+					if (flag == 0) {
+						$(that).find('.homework-audio-list-box').show();
+						$(this).attr('flag', '1');
+					} else if (flag == 1) {
+						$(that).find('.homework-audio-list-box').hide('fast');
+						$(this).attr('flag', '0');
+					}
+				}
 			})
 
 		})
@@ -519,6 +522,9 @@ $.fn.imagePage = function(params){
 	var popnum=0;
 	var _tabnum = 0;
 	var _src;
+	$('.homework-feedback-all').click(function(){
+		creatAudioList($(this).data('url').split(','))
+	})
 	if( params.isZoom ){
 		var _ImageTransform ='';
 		var _container = $$(params.ImageTransform);
@@ -533,11 +539,12 @@ $.fn.imagePage = function(params){
 	//点击小图切换大图
     $(this).find(params.smallPic).find('li').click(function () {
 	    tpqhnum = $(_this).find(params.smallPic).find('li').index(this);
-	    var audio_url = $(this).data('audio');
+	    var audio_url = $(this).data('url').split('|')[$(this).data('url').split('|').length-1].split(',');
 	    show(tpqhnum);
 		minshow(tpqhnum);
-		audioPage(audio_url);
+		creatAudioList(audio_url);
 		lookEditImg(tpqhnum);
+		
     }).eq(params.order).trigger("click");
 
     //大图切换过程
@@ -551,31 +558,90 @@ $.fn.imagePage = function(params){
            $(_this).find('.homework-audio-btn-click').removeClass('homework-audio-btn-playing');
 
            //audio音频停止播放，重新加载
-           $(_this).find('.homework-audio-btn-style').remove();
+           // $(_this).find('.homework-audio-btn-style').remove();
 
-           //右侧的音频列表消失
+           /*//右侧的音频列表消失
+
            if( tpqhnum == 0 && ($(_this).find('.homework-audio-list-box').hasClass('homework-audio-list-box-display')) ){
            	    
            }else{
-           	   $(_this).find('.homework-audio-list-box').hide('fast');
-		       $(_this).find('.homework-audio').attr('flag','0');
-           }
+				if ($('.homework-audio').length>1) {
+					$('.homework-audio-list-box').show('fast');
+					$('.homework-audio').attr('flag', '1');
+				}
+				else{
+	           	   $(_this).find('.homework-audio-list-box').hide('fast');
+			       $(_this).find('.homework-audio').attr('flag','0');
+				}
+           }*/
            
 	    }
 
-		if( tpqhnum == 0 && Feedback_flag == 0 ){
-		  $(_this).find('.homework-Feedback').show();
-		  $(_this).find('.homework-Feedback-describe').show();
-		  $(_this).find('.ImageTransformJs').hide();
-		}else{
-		  $(_this).find('.homework-Feedback').hide();
-		  $(_this).find('.homework-Feedback-describe').hide();
-		  $(_this).find('.ImageTransformJs').show();
-		  _src = $(_this).find(params.bigPic).find('li').eq(tpqhnum).find('img').attr('src');
-		  bigShow(_src);
+		if (tpqhnum == 0 && Feedback_flag == 0) {
+			$(_this).find('.homework-Feedback').show();
+			$(_this).find('.homework-Feedback-describe').show();
+			$(_this).find('.ImageTransformJs').hide();
+		} else {
+			$(_this).find('.homework-Feedback').hide();
+			$(_this).find('.homework-Feedback-describe').hide();
+			$(_this).find('.ImageTransformJs').show();
+			_src = $(_this).find(params.bigPic).find('li').eq(tpqhnum).find('img').attr('src');
+
+
+			var dataUrl = $(_this).find(params.smallPic).find('li').eq(tpqhnum).data('url');
+			var arr_Url = dataUrl.split('|');
+			var arr_audio = arr_Url[arr_Url.length - 1].split(',');
+			creatAudioList(arr_audio)
+			bigShow(_src)
 		}
 		$(_this).find(params.smallPic).find('li').eq(tpqhnum).addClass('homework-current').siblings(this).removeClass("homework-current");
 	};
+
+	//生成语音列表
+	function creatAudioList(arr_audio) {
+		//判断是否正在播放语音,正在播放时移除自动播放属性并重载语音数据
+		if($('.homework-audio-btn-style').hasClass('homework-audio-playing')){
+			$('.homework-audio-btn-style').removeAttr('Autoplay').load();
+		}
+
+		var audio_ul = $('.homework-audio-list-box ul');
+
+		audio_ul.html(' ');//语音列表置空
+
+		for (var i = 1; i < arr_audio.length; i++) {
+			var _html = '<li class="homework-audio-btn-click" data-audio ="' + arr_audio[i] + '" data-val="语音"' + i + '><i class="audio-icon"></i><em>语音' + i + '</em></li>'
+			audio_ul.html(audio_ul.html() + _html)
+		};
+		//点击语音列表播放语音
+		audio_ul.find('li').each(function() {
+			$(this).click(function() {
+				$('.homework-audio-btn-style').attr('src', $(this).data('audio')).attr('Autoplay', 'Autoplay').addClass('homework-audio-playing');
+			})
+		});
+
+		//arr_audio数组第一个元素为图片信息,后续都是音频信息,若音频数量大于等于一个,将第一个音频写入audio标签;若大于2个,则显示列表,小喇叭按钮点亮
+		if (arr_audio.length >=2) {
+			if($('.homework-audio-btn-style').length>0){
+				$('.homework-audio-btn-style').attr('src', audio_ul.find('li').eq(0).data('audio'))
+			}else{
+				$('.homework-bigImg-box').prepend('<audio class="homework-audio-btn-style" controls="controls" src="'+audio_ul.find('li').eq(0).data('audio')+'"> </audio>')
+			}
+			$('.homework-audio-btn-style').show();
+			if (arr_audio.length == 2) {
+				$('.homework-audio-list-box').hide();
+				$('.homework-audio-disabled').removeClass('homework-audio');
+			}
+			if(arr_audio.length>=3){
+				$('.homework-audio-list-box').show();
+				$('.homework-audio-disabled').addClass('homework-audio');
+			}
+		} else {
+			$('.homework-audio-btn-style').remove();
+			$('.homework-audio-list-box').hide();
+			$('.homework-audio-disabled').removeClass('homework-audio');
+		}
+
+	}
 
 	//大图图片显示的效果
 	function bigShow(url){
@@ -586,7 +652,6 @@ $.fn.imagePage = function(params){
 		  $(_this).find(params.bigPic).find('.ImageTransformJs').remove();
 		  var _imgHtml = '<img style="position: absolute; border: 0px none; padding: 0px; margin: 0px;" src="'+url+'" class="ImageTransformJs" />';
 		  $(_this).find(params.bigPic).append(_imgHtml);
-
 		  /*
 		   *图片缩放居中
 		   */
@@ -670,7 +735,7 @@ $.fn.imagePage = function(params){
 		            var arr_data_url_audio = arr_dataUrl[lookEditNum].split(',');
 		            var imgUrl = arr_data_url_audio[0];
 		            var imgAudio = arr_data_url_audio[1];
-		            audioPage(imgAudio);
+		            creatAudioList(arr_data_url_audio);
 		            bigShow(imgUrl);
 		            //显示上一张下一张点击按钮
 		            $(_this).find(params.bigPic).find('.homework-lookEdit-btn').remove();
@@ -696,7 +761,7 @@ $.fn.imagePage = function(params){
 							  var arr_data_url_audio_next = arr_dataUrl[lookEditNum].split(',');
 					          var imgUrl_next = arr_data_url_audio_next[0];
 					          var imgAudio_next = arr_data_url_audio_next[1];
-							  audioPage(imgAudio_next);
+		            		  creatAudioList(arr_data_url_audio_next);
 							  bigShow(imgUrl_next);
 		                })
 		                
@@ -714,7 +779,7 @@ $.fn.imagePage = function(params){
 							  var arr_data_url_audio_prev = arr_dataUrl[lookEditNum].split(',');
 					          var imgUrl_prev = arr_data_url_audio_prev[0];
 					          var imgAudio_prev = arr_data_url_audio_prev[1];
-					          audioPage(imgAudio_prev);
+					          creatAudioList(arr_data_url_audio_prev);
 							  bigShow(imgUrl_prev);
 		                })
 		            }
@@ -760,7 +825,7 @@ $.fn.imagePage = function(params){
 	}
 
 	//每个缩略图试卷对应一个音频，音频默认显示，但是不播放
-	function audioPage(audio){ 
+	/*function audioPage(audio){ 
 		//判断是否存在音频
 		var audioUrl = audio;
 		var hasVideo = !!(document.createElement('audio').canPlayType);
@@ -775,18 +840,19 @@ $.fn.imagePage = function(params){
 	           var audioHtml = [
 		                    '<audio class="homework-audio-btn-style" controls="controls" src="'+audioUrl+'"> </audio>'
 		                   ]
-		        $(_this).find('.homework-audio-btn-style').remove();
+		        $(_this).find('.homework-audio-btn-style').hide();
 		        $(_this).find('.homework-bigImg-box').prepend(audioHtml.join(''));
+		        $(_this).find('.homework-audio-btn-style').show();
 			}else{
-				$(_this).find('.homework-audio-btn-style').remove();
+				$(_this).find('.homework-audio-btn-style').hide();
 			} 
 		}else{
 			alert("当前浏览器版本过低，不支持语音播放。请更换浏览器或者升级至IE8以上的版本。");
 		}
-	}  
+	}  */
 
 	//大图左右切换	
-	$(this).find(params.prev_btn).click(function(){
+	/*$(this).find(params.prev_btn).click(function(){
 		if( picsmall_num > params.min_picnum ){
 			if(tpqhnum == 0){
 				tpqhnum = 0;
@@ -817,7 +883,7 @@ $.fn.imagePage = function(params){
 		}else{
 			return false;
 		}	
-	})
+	})*/
 	
 	/**
 	 * (1)点击放大按钮放大大图
