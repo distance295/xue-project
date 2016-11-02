@@ -49,13 +49,24 @@
             total : 11, // 总记录数
             size: 10, // 每页显示记录数
             index : 1, // 当前页
-            url : '#!{page}', // 非ajax情况下分类的链接地址
+            input: true,//页码跳转输入框
+            button: true,//页码跳转按钮
+            //url : '#!{page}', // 非ajax情况下分类的链接地址
             // 点击分页时的回调，返回被点击的页数
             click : function(e){
                 console.log(e);
             }
         });
     </script>
+    <style>
+        /*增加go样式---应用在题库项目*/
+        .paginationjs-pages,.paginationjs-go-input,.paginationjs-go-button {
+            float: left;
+        }
+        .paginationjs-go-input,.paginationjs-go-button {margin:17px 2px;}
+        .paginationjs-go-input input, .J-paginationjs-go-button {width: 30px;height: 30px;border:1px solid #ddd;border-radius: 4px;text-align: center;}
+        
+    </style>
 </body>
 
 </html>

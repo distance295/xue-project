@@ -18,6 +18,8 @@
         'size': 10, // 每页的条目数
         'index': 1,// 初始化时选定的页数
         'cls' : '', // 分页容器ul上面的出class名
+        'input': false,//页码跳转输入框
+        'button': false,//页码跳转按钮
         'range': 2, // 可见的页码范围，即当前页码两边的页码数量。比如当前是第 6 页，设置 pageRange 为 2，则页码条显示为 '1... 4 5 6 7 8'
         'handle': '.pagination-handle' , // 加载分页的容器
         'click' : null, // 点击分页后事件绑定
@@ -53,6 +55,8 @@
                 totalNumber: settings.total,   // 条目总数，异步分页时必填，模拟分页时为数组的长度
                 pageNumber: settings.index,  // 指定初始化时加载哪一页的数据
                 pageSize: settings.size, // 每页的条目数
+                showGoInput:settings.input,
+                showGoButton:settings.button,
                 pageRange: settings.range, // 可见的页码范围，即当前页码两边的页码数量。比如当前是第 6 页，设置 pageRange 为 2，则页码条显示为 '1... 4 5 6 7 8'
                 ulClassName: 'pagination ' + settings.cls,
                 callback: function(data, pagination){
