@@ -37,15 +37,7 @@
                     <div class="panel-body pd0 wd110">
                         
                         <link rel="import" href="../../widget/Public.Module/course12.tpl?__inline">
-                        <link rel="import" href="../../widget/Public.Module/course12.tpl?__inline">
-                        <link rel="import" href="../../widget/Public.Module/course12.tpl?__inline">
-                        <link rel="import" href="../../widget/Public.Module/course12.tpl?__inline">
-                        <link rel="import" href="../../widget/Public.Module/course12.tpl?__inline">
-                        <link rel="import" href="../../widget/Public.Module/course12.tpl?__inline">
-                        <link rel="import" href="../../widget/Public.Module/course12.tpl?__inline">
-                        <link rel="import" href="../../widget/Public.Module/course12.tpl?__inline">
-                        <link rel="import" href="../../widget/Public.Module/course12.tpl?__inline">
-                        <link rel="import" href="../../widget/Public.Module/course12.tpl?__inline">
+               
                     </div>
                 </div>
 
