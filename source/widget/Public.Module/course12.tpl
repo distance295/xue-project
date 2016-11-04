@@ -11,11 +11,8 @@
     <div class="rank-time">
       <p class="time">
            <span class="every-time">
-             <a href="http://www.xueersi.com/kc/32445-368.html" target="_blank">每周五13:30-15:15
+             <a href="http://www.xueersi.com/kc/32445-368.html" target="_blank">每周五13:30-15:15 07月13日-07月23日
              </a>
-           </span>
-           <span class="every-day">
-             <a href="">07月13日-07月23日</a>
            </span>
         </p>
     </div>
