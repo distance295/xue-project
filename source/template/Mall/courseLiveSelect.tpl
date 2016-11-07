@@ -29,6 +29,7 @@
                 <ul class="screen-rank preletive">
                     <li class="popular-rank active"><a href="##">上课时间</a></li>
                     <li><a href="##">课程满意度</a></li>
+                    <li class="attend-course-time"><span>上课时段：</span><a href="#"  class="current">周五</a><a href="#">周六</a><a href="#">周日</a></li>
                     <li class="Onlylive-select">
                         共 <strong>12</strong> 个课程，已有 <strong>2000</strong> 名学员报名
                     </li>
