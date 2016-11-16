@@ -9,11 +9,11 @@
 
 <div class="col-course-title">
     <a class="course-sort-label" href="#">
-        <span class="icon-fa"><i class="fa fa-angle-left"></i></span><span class="txt"> 选择秋季课程</span>
+        <span class="icon-fa"><i class="fa fa-angle-left"></i></span><span class="txt">秋季课程</span>
     </a>
     <span class="title">初一数学暑期课程</span>
     <a class="course-sort-label l-right" href="#">
-        <span class="icon-fa"><i class="fa fa-angle-right"></i></span> <span class="txt"> 选择秋季课程</span>
+        <span class="icon-fa"><i class="fa fa-angle-right"></i></span> <span class="txt">秋季课程</span>
     </a>
 </div>
 <ul class="select-subject-list">
