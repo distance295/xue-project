@@ -10,6 +10,9 @@
   <img src="../Mall.courseInfo/img/select-error-tips.png" alt="">
   <span>对不起，当前时段暂时没有课程~</span>
 </div> -->
+<div class="courseConsult">
+        <buttom class="zhiCustomBtn" id="btn">选课咨询</buttom>
+ </div>
 <div class="live-course-rank-list">
     <div class="rank-time">
       <p class="time">
@@ -34,7 +37,7 @@
    <div class="rank-places">
     <strong class="">50</strong>
    </div>
-   <div class="rank-money"> <strong class="former">￥1300</strong>
+   <div class="rank-money"> <strong class="former"> ￥1300</strong>
      <br/> <del>￥9000</del>
    </div>
     <div class="rank-btn"><a href="#" class="btn">去报名</a></div>
