@@ -6,7 +6,10 @@
     @require courses_dialog.js   
     @require xue.userinfo.min.js    @require ../Module.Pagination/paginations.js  
 -->
-
+<!-- <div class="live-course-list-null">
+  <img src="../Mall.courseInfo/img/select-error-tips.png" alt="">
+  <span>对不起，当前时段暂时没有课程~</span>
+</div> -->
 <div class="live-course-rank-list">
     <div class="rank-time">
       <p class="time">
@@ -157,6 +160,7 @@
     </div>
    <div class="rank-limit-places">
     <img src="../Mall.courseInfo/img/limit-icon.png" alt="">
+    <strong>仅剩50人</strong>
    </div>
    <div class="rank-money"> <strong class="former">￥1300</strong>
      <br/> <del>￥9000</del>
