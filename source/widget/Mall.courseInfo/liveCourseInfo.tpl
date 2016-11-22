@@ -44,10 +44,13 @@
 					</span> <del>原价:<em>￥825</em></del>
                    <span class="tips" title="本期已开课，您将从第二讲开始学习"><img src="img/icon-mon.png"/></span>
             </div>
-            <a class="info-btn-help" href="javascript:void(0)" style="font-size: 15px;color: #1c88e0;float: right;border: 1px solid #1c88e0;padding:8px 15px; border-radius: 3px;">
+            <div class="courseConsult_info">
+                <buttom class="zhiCustomBtn" id="btn">选课咨询</buttom>
+            </div>
+            <!-- <a class="info-btn-help" href="javascript:void(0)" style="font-size: 15px;color: #1c88e0;float: right;border: 1px solid #1c88e0;padding:8px 15px; border-radius: 3px;">
             <img src="/static/img/help.jpg" alt="" style="position: relative;top:-2px;">
             买课咨询
-            </a>
+            </a> -->
         </div>
         <div class="course-favorable-list">
             优惠活动：
