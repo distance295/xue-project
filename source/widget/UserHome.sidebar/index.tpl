@@ -32,3 +32,9 @@
         <span>收藏</span>
     </a> -->
 </div>
+<div id="module-sidebar-ask" class="btn-group-vertical pull-right" role="group" aria-label="...">
+    <a href="CourseList.html" class="btn btn-primary" data-id="Courses">
+        <i class="fa fa-play-circle-phone"></i>
+        <span>售后咨询</span>
+    </a>
+</div>
