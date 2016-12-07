@@ -4,6 +4,10 @@
 @gray999:#999;
 @dark333:#333;
 @blueColor: #1e89e0;
+@font-face{
+    font-family: myFirstFont;
+    src: url('img/time.ttf');
+}
 .live-course-list-null {
   padding:20px;
   overflow: hidden;
@@ -1816,35 +1820,49 @@ ul, li {
     font-size: 12px;
   }
   .rank-time {
-    width: 185px;
+    width: 210px;
     overflow: hidden;
     p.time {
       font-size: 16px;
-      padding: 10px 0 0 15px;
+      padding: 10px 0 0 40px;
+      position: relative;
       span {
         display:block;
         text-align: center;
         &.every-time {
-          padding:10px 5px;
           a {
              color: #e74c3c;
+             font-size: 32px;
+             font-family:myFirstFont;
           }
         }
         &.every-day {
            font-size: 14px;
+           color: #333;
+           a {color: #333;}
+        }
+        &.every-week {
+          width: 26px;
+          padding:5px 0;
+          border:1px solid #e74c3c;
+          border-radius: 3px;
+          color: #e74c3c;
+          font-size: 14px;
+          position: absolute;
+          left: 20px;
+          top:20px;
+          z-index: 1;
         }
       }
-      
-      
     }
     
   }
   .rank-satisfy {
-    width: 400px;
+    width: 370px;
     height: 56px;
     color: #999;
     overflow: hidden;
-    border-left: 1px solid #dbdbdb;
+    border-left: 1px solid #dcdcdc;
     padding-left: 15px;
     margin-top:17px;
     padding-right: 30px;
@@ -1968,6 +1986,14 @@ ul, li {
         background: #bfbfbf;
       }
       &.btn-orange {background: #ffa700;}
+    }
+  }
+  .quota-full {
+    float: right;
+    width: 120px;
+    margin-right: 10px;
+    img {
+      margin-top:27px;
     }
   }
   .rank-limit-places {

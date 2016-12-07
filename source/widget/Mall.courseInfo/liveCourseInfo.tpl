@@ -98,15 +98,15 @@
         </div>
 
         <div class="course-button-list">
+            <span class="course-sale-time">
+				        停售<em>开售时间：2016.12.06</em>
+			       </span>
             <span class="f-left">
-				<button class="btn btn-danger do_not_sign_up">暂时不可报名</button>
-			</span>
-            <span class="f-left">
-				<a class="btn btn-danger btn-join-exam" href="#">预约试听</a>
-			</span>
+              <a class="btn btn-danger btn-join-exam" href="#">预约试听</a>
+            </span>
             <span class="collect f-left">
-					<a id="collectId" onclick="collect(11323)" href="javascript:void(0);">收藏课程</a>
-				</span>
+              <a id="collectId" onclick="collect(11323)" href="javascript:void(0);">收藏课程</a>
+            </span>
         </div>
     </div>
 
