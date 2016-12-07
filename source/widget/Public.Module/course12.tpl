@@ -16,9 +16,13 @@
 <div class="live-course-rank-list">
     <div class="rank-time">
       <p class="time">
+            <span class="every-week">周五</span>
            <span class="every-time">
-             <a href="http://www.xueersi.com/kc/32445-368.html" target="_blank">每周五13:30-15:15 07月13日-07月23日
+              <a href="http://www.xueersi.com/kc/32445-368.html" target="_blank">13:30-15:15 
              </a>
+           </span>
+           <span class="every-day">
+              <a href="http://www.xueersi.com/kc/32445-368.html" target="_blank"> 07月13日-07月23日</a>
            </span>
         </p>
     </div>
@@ -45,13 +49,14 @@
 </div>
 <div class="live-course-rank-list">
     <div class="rank-time">
-      <p class="time">
+       <p class="time">
+            <span class="every-week">周五</span>
            <span class="every-time">
-             <a href="http://www.xueersi.com/kc/32445-368.html" target="_blank">每周五13:30-15:15
+              <a href="http://www.xueersi.com/kc/32445-368.html" target="_blank">13:30-15:15 
              </a>
            </span>
            <span class="every-day">
-             <a href="">07月13日-07月23日</a>
+              <a href="http://www.xueersi.com/kc/32445-368.html" target="_blank"> 07月13日-07月23日</a>
            </span>
         </p>
     </div>
@@ -78,13 +83,14 @@
 </div>
 <div class="live-course-rank-list">
     <div class="rank-time">
-      <p class="time">
+       <p class="time">
+            <span class="every-week">周五</span>
            <span class="every-time">
-             <a href="http://www.xueersi.com/kc/32445-368.html" target="_blank">每周五13:30-15:15
+              <a href="http://www.xueersi.com/kc/32445-368.html" target="_blank">13:30-15:15 
              </a>
            </span>
            <span class="every-day">
-             <a href="">07月13日-07月23日</a>
+              <a href="http://www.xueersi.com/kc/32445-368.html" target="_blank"> 07月13日-07月23日</a>
            </span>
         </p>
     </div>
@@ -111,13 +117,14 @@
 </div>
 <div class="live-course-rank-list">
     <div class="rank-time">
-      <p class="time">
+       <p class="time">
+            <span class="every-week">周五</span>
            <span class="every-time">
-             <a href="http://www.xueersi.com/kc/32445-368.html" target="_blank">每周五13:30-15:15
+              <a href="http://www.xueersi.com/kc/32445-368.html" target="_blank">13:30-15:15 
              </a>
            </span>
            <span class="every-day">
-             <a href="">07月13日-07月23日</a>
+              <a href="http://www.xueersi.com/kc/32445-368.html" target="_blank"> 07月13日-07月23日</a>
            </span>
         </p>
     </div>
@@ -144,13 +151,14 @@
 </div>
 <div class="live-course-rank-list">
     <div class="rank-time">
-      <p class="time">
+       <p class="time">
+            <span class="every-week">周五</span>
            <span class="every-time">
-             <a href="http://www.xueersi.com/kc/32445-368.html" target="_blank">每周五13:30-15:15
+              <a href="http://www.xueersi.com/kc/32445-368.html" target="_blank">13:30-15:15 
              </a>
            </span>
            <span class="every-day">
-             <a href="">07月13日-07月23日</a>
+              <a href="http://www.xueersi.com/kc/32445-368.html" target="_blank"> 07月13日-07月23日</a>
            </span>
         </p>
     </div>
@@ -169,6 +177,32 @@
      <br/> <del>￥9000</del>
    </div>
     <div class="rank-btn"><a href="#" class="btn">去报名</a></div>
+</div>
+<div class="live-course-rank-list">
+    <div class="rank-time">
+       <p class="time">
+            <span class="every-week">周五</span>
+           <span class="every-time">
+              <a href="http://www.xueersi.com/kc/32445-368.html" target="_blank">13:30-15:15 
+             </a>
+           </span>
+           <span class="every-day">
+              <a href="http://www.xueersi.com/kc/32445-368.html" target="_blank"> 07月13日-07月23日</a>
+           </span>
+        </p>
+    </div>
+    <div class="rank-satisfy">
+        <p class="difficulty"><a href="#">课程满意度课程满意度课程满意度课程满意度课程满意度课程满意度课程满意度</a> </p> 
+        <p>
+            <span class="satisfy">授课老师：<a href="http://www.xueersi.com/t/hongran/">洪然</a></span>
+             <span class="satisfy">课程满意度：<a target="_blank" href="http://www.xueersi.com/article/detail/1910">99.99</a></span> 
+        </p>
+    </div>
+   <div class="rank-limit-places">&nbsp;</div>
+   <div class="rank-money"> <strong class="former">￥1300</strong>
+     <br/> <del>￥9000</del>
+   </div>
+    <div class="quota-full"><img src="img/quota-full.png"/></div>
 </div>
 <script>
 $('.live-course-rank-list').hover(function() {
