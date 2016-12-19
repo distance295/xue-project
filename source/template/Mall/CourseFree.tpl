@@ -59,17 +59,17 @@ var PAGE_CONFIG = {
     ID: 'Index',
     MODULE: 'Mall',
     TITLE: '二级-免费课',
-        NAV_FIXED: false // 如果想要头部分类展开的话，设为true，如果不想直接展开设为false
-    };
-    $('.ui-pages').pages({
-            total : 29, // 总记录数
-            size: 10, // 每页显示记录数
-            index : 1, // 当前页
-            // 点击分页时的回调，返回被点击的页数
-            click : function(e){
-             
-            }
-        });
+    NAV_FIXED: false // 如果想要头部分类展开的话，设为true，如果不想直接展开设为false
+};
+$('.ui-pages').pages({
+    total : 29, // 总记录数
+    size: 10, // 每页显示记录数
+    index : 1, // 当前页
+    // 点击分页时的回调，返回被点击的页数
+    click : function(e){
+     
+    }
+});
     </script>
 
 
