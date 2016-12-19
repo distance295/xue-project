@@ -1,5 +1,5 @@
 <!-- 公共头部 -->
-<link rel="import" href="../Layer/layer.Mall.head.tpl?__inline">
+<link rel="import" href="../Layer/layer.Mall.head.tpl?__inline"><!-- 未来的HTML模板引入方式 -->
 
 <!-- 学习中心区域 -->
 <div class="container top m20">

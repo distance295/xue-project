@@ -12,6 +12,7 @@
         TITLE: '学习中心',
     };
  **/
+ 
 var PAGE_CONFIG = PAGE_CONFIG || {};
 
 PAGE_CONFIG.NAV_URL = __uri('/data/Public.Nav/nav.json');
@@ -21,8 +22,8 @@ $(function(){
     dropdown.init();
     try{
         nav.init({
-            dataUrl : PAGE_CONFIG.NAV_URL
-            ,fixed : PAGE_CONFIG.NAV_FIXED || false
+            dataUrl : PAGE_CONFIG.NAV_URL,
+            fixed : PAGE_CONFIG.NAV_FIXED || false
         });
     }catch(e){}
     try{
