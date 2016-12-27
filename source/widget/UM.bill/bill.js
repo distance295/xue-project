@@ -1,7 +1,6 @@
 /**
- * Created by yangmengyuan on 16/4/5.
+ * on 16/12/27.
  */
-//$(function(){
     var $body = $('body');
 
     $body.on('click', '.bill-check-more', function() {
@@ -31,11 +30,6 @@
             }
         });
     });
-
-    // $body.on('click','.bill-apply-check',function(){
-    //     $('.bill-hidden').css({'display':'none'});
-    //     $('.bill-apply-check-detail').css({'display':'block'});
-    // });
 
     var courses = courses || {};
 
@@ -240,62 +234,4 @@
             });
         });
     });
-    
-    // var $bsb = $('.bill-sum-button');
-    // //提交按钮
-    // $bsb.on('click',function(event){
-    //     var checkInput = $body.find("input[type='checkbox']:checked");
-    //     var addId = $('input[type="radio"]:checked').attr('id').match(/\d+$/)[0],
-    //         billType = $('#bill-title-select').val(),
-    //         billTitle = $('.bill-title-input').val(),
-    //         billTip = $('#remarkFocus').val();
-    //     var arr = [],
-    //         textNum;
-    //     checkInput.parents('.bill-details').find('.bill-order-num em').each(function (k,v) {
-    //         textNum = $(this).text();
-    //         arr.push(textNum)
-    //     });
-    //     if(checkInput.length == 0){
-    //         event.preventDefault();
-    //     }else {
-    //         if (billType == '请选择') {
-    //             alert('请选择发票类型')
-    //             //console.log(event)
-    //             return false;
-    //         } else {
-    //             if (billTitle == '') {
-    //                 alert('请填写发票抬头')
-    //                 return false;
-    //             }
-    //         }
-    //         $(this).css({'cursor': 'pointer'});
-    //         $.ajax({
-    //             url : '/MyOrders/ajaxInvoiceAdd',
-    //             type: 'post',
-    //             dataType: 'json',
-    //             data:{
-    //                 send_id : addId,
-    //                 order_nums : arr,
-    //                 invoice_type : billType,
-    //                 invoice_title : billTitle,
-    //                 invoice_note : billTip
-    //             },
-    //             success: function(d){
-    //                 var resDat = d;
-    //                 if(resDat){
-    //                     checkInput.parents('.bill-details').remove();
-    //                 }
-    //                 else{
-    //                     $('.bill-check-more').remove();
-    //                     var pm='<div class="media" style="height: 270px;text-align:center;line-height:90px;color:#666;">该年级下没有老师</div>';
-    //                     $('.bill-details-list').append(pm);
-    //                 }
-    //                 window.location.href = '/MyOrders/invoice';
-    //             }
-    //         });
-    //     }
-    // })
-//
-//});
-
 
