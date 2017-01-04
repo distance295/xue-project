@@ -20,16 +20,31 @@
 }
 .courseConsult {
   position: fixed;
-  width: 102px;
-  height: 106px;
+  width: 70px;
+  height: 114px;
   right:0;
   top:30%;
   z-index: 1;
   .zhiCustomBtn {
     display: block;
-    height: 106px;
+    height: 114px;
     text-indent: -999999em;
      background: url(../Mall.courseInfo/img/headphones_select.png) no-repeat;
+     cursor: pointer;
+  }
+}
+.after-courseConsult {
+  position: fixed;
+  width: 64px;
+  height: 100px;
+  right:0;
+  top:43%;
+  z-index: 1;
+  .after-zhiCustomBtn {
+    display: block;
+    height: 100px;
+    text-indent: -999999em;
+     background: url(../Mall.courseInfo/img/headphones_s.png) no-repeat;
      cursor: pointer;
   }
 }
@@ -1478,6 +1493,9 @@ ul, li {
         margin-right: 15px;
         &.current {background: url(img/checked.png) 2px 11px no-repeat;}
       }
+      &.attend-course-grade {
+        left:200px;
+      }
     }
 }
 .preletive {
@@ -1774,6 +1792,9 @@ ul, li {
     padding-top: 0;
     margin-bottom: 10px;
   }
+  &.select-special-list {
+     padding-top: 0;
+  }
   li {
     float: left;
     width: 140px;
@@ -1785,7 +1806,7 @@ ul, li {
     overflow: hidden;
     border:1px solid #dbdbdb;
     border-radius: 3px;
-    margin-right: 20px;
+    margin-right: 17px;
     a {
       display: block;
       img {
@@ -1853,9 +1874,18 @@ ul, li {
           top:20px;
           z-index: 1;
         }
+        
       }
+      &.special-time {
+           padding: 18px 0 0 3px;
+           span.everyTimeDay {
+              font-size: 16px;
+              a {
+                color: #e74c3c;
+              }
+          }
+       } 
     }
-    
   }
   .rank-satisfy {
     width: 370px;
