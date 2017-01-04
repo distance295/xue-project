@@ -12,12 +12,13 @@
         <div class="col-md-10 col-sm-9 user-manage-body">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3>我的发票</h3></div>
+                    <h3>我的发票</h3>
+                    <span>网校课程开发票的有效期是180天，需要发票的童鞋抓点紧哦！</span>
+                </div>
                 <div class="panel-body row">
-                    <!-- *********************** 内容区域开始 *********************** -->
+                    <!-- *********************** 内容区域0  开始 *********************** -->
                     <link rel="import" href="../../widget/UM.bill/index.tpl?__inline">
                     <!-- *********************** 内容区域结束 *********************** -->
-
                 </div>
             </div>
         </div>

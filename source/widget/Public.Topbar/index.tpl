@@ -95,8 +95,8 @@
     $('body').on('click', '.inline-block a', function() {
         var that = $(this);
         var grade = that.data('grade');
-        var defaultGrade = $.cookie('defaultGrade');
-        var rzt = defaultGrade.match(/(\d{1,2})-/);
+        var defaultGrade = $.cookie('defaultGrade');//defaultGrade
+        var rzt = defaultGrade.match(/(\d{1,2})-/);//rzt得到的应该是1到2位的任意一个数字+'-',比如1-,5-或者12-,那rzt[1]表示的是什么
         defaultGrade = defaultGrade.replace(new RegExp(rzt[1]), grade);
         $.cookie('defaultGrade', defaultGrade, {path: '/', domain: '.xueersi.com'});
         window.location.reload();
