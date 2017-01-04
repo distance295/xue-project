@@ -106,10 +106,6 @@
                     <i class="fa fa-quote-right"></i>
                 </p>
                 <div class="subject">
-                    <a href="#"></a>
-                    <p>概述</p>
-                </div>
-                <div class="subject">
                    <a href="#"></a>
                    <p>高一</p>
                 </div>
