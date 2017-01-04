@@ -13,16 +13,15 @@
 <div class="courseConsult">
         <buttom class="zhiCustomBtn" id="btn">选课咨询</buttom>
  </div>
+ <div class="after-courseConsult">
+        <buttom class="after-zhiCustomBtn" id="btn">售后咨询</buttom>
+ </div>
 <div class="live-course-rank-list">
     <div class="rank-time">
-      <p class="time">
-            <span class="every-week">周五</span>
-           <span class="every-time">
-              <a href="http://www.xueersi.com/kc/32445-368.html" target="_blank">13:30-15:15 
+      <p class="time special-time">
+           <span class="everyTimeDay">
+              <a href="http://www.xueersi.com/kc/32445-368.html" target="_blank">13:30-15:15 07月13日-07月23日
              </a>
-           </span>
-           <span class="every-day">
-              <a href="http://www.xueersi.com/kc/32445-368.html" target="_blank"> 07月13日-07月23日</a>
            </span>
         </p>
     </div>
