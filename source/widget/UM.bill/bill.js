@@ -70,7 +70,7 @@
 
             this.left = Number(left.replace('px',''));
 
-            if(btn.hasClass('prev')){
+            if(btn.hasClass('prev')){ 
                 a.prev();
             }else{
                 a.next();
@@ -152,15 +152,19 @@
                                 + '<span>请选择发票类型</span>'
                                 + '<select name="bill-title-select" id="bill-title-select">'
                                     + '<option value="0">请选择</option>'
-                                    + '<option value="1">培训费</option>'
-                                    + '<option value="2">资料费</option>'
+                                    + '<option value="1">服务费</option>'
                                 + '</select>'
                             + '</div>'
                             + '<div class="invoice-title">'
                                 + '<span>发票抬头</span>'
-                                + '<input type="text" class="bill-title-input" placeholder="详细填写发票公司名称">'
+                                + '<input type="text" class="bill-title-input" value="个人" readOnly="true">'
                             + '</div>'
-                            + '<p class="bill-tips">注：网校现仅支持电子发票，发票开具后请自行下载打印！</p>'
+                            + '<div class="bill-tips">'
+                                + '<div>注：</div>'
+                                + '<div>'
+                                    + '<p>网校课程发票抬头只能开个人，不能开公司；开具的是电子发票，请开具后自行下载打印！</p>'
+                                + '</div>'
+                            + '</div>'
                             + '<p class="bill-tips-error"></p>'
                             + '<div class="invoice-btn">'
                                 + '<input type="button" class="btn-confirm" value="确认">'
@@ -208,10 +212,9 @@
             $(this).attr('disabled',true);
             $(this).addClass('btn-confirm-disable');
             $.ajax({
-                url : 'http://myapache.com/xingzhenli/Test.php?param=1',
+                url : '/MyOrders/ajaxInvoiceAdd',
                 type: 'post',
-                dataType: 'jsonp',
-                jsonp: 'jsonCallBack',
+                dataType: 'json',
                 data:{
                     id : id,
                     invoice_type : billType,
