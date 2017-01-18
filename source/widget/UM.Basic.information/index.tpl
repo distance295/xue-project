@@ -19,11 +19,16 @@
                 <div class="error-box">
                     <span class="nickname-warning error"></span>
                 </div>
-                <span class="prompt-empty"></span>
+                <span class="prompt-empty-nick"></span>
             </div>
             <div>
                 <label for="">真实姓名：</label>
-                <span>龚海滨</span>
+                <input class="realname" name="realname" type="text" maxlength="4" autocomplete="off" value="四喜丸子呀">
+                <em>仅有一次修改机会哦，请珍惜！</em>
+                <div class="error-box">
+                    <span class="realname-warning error"></span>
+                </div>
+                <span class="prompt-empty-real"></span>
             </div>
             <div>
                 <label for="">性别：</label>
