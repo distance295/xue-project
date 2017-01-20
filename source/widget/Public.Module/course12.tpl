@@ -75,7 +75,7 @@
     <strong class="hotReport">热报</strong>
    </div>
    <div class="rank-money"> <strong class="former">￥1300</strong>
-     <br/> <del>￥9000</del>
+     <br/> <span class="stop-shop-times">距离停售<em>3</em>天</span>
    </div>
     <div class="rank-btn"><a href="#" class="btn">去报名</a></div>
      <div class="rank-btn"><a href="#" class="btn btn-orange">去试听</a></div>
