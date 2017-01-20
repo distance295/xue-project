@@ -95,8 +95,8 @@
                             float: left;
                             margin-right: 10px;
                             img{
-                                width: 60px;
-                                height: 60px;
+                                // width: 60px;
+                                // height: 60px;
                                 border-radius: 50%;
                             }
                         }
@@ -362,14 +362,26 @@
             }
         }
         .bill-tips{
+            width: 320px;
             color: #666;
             margin-left: 135px;
-            margin-bottom: 15px;
+            margin-bottom: 0;
+            overflow: hidden;
+            div {
+                float: left;
+            }
+            div:first-child {
+                width: 25px;
+            }
+            div:last-child {
+                width: 295px;
+            }
         }
         .bill-tips-error{
             color: #f00;
+            height: 17px;
             margin-left: 135px;
-            margin-bottom: 15px;
+            margin-bottom: 7px;
         }
         .invoice-btn{
             margin-left: 135px;
