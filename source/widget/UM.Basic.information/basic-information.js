@@ -27,6 +27,7 @@ fCheck.bordercss = function(argument) {
 $(function(){
     var nickname = $('.nickname');
     var realname = $('.bi-content .realname');
+    var englishname = $('.englishName');
     $(nickname).on('focus',function(){
         nickname.data('lastVal', $.trim(nickname.val()));
         $('.prompt-empty-nick').html('请输入不超过6个汉字、18个字母或18个数字').css({
@@ -83,12 +84,41 @@ $(function(){
             }
         }
     });
+    $(englishname).on('focus',function(){
+        englishname.data('lastVal', $.trim(englishname.val()));
+        $('.prompt-empty-english').html('请输入不超过12个英文字母').css({
+            color: '#999',
+            display: 'block'
+        });
+        $(".englishname-warning").css({
+            display: 'none',
+        });
+    });
+    $(englishname).on('blur',function(){
+        fCheck.clearTips(".prompt-empty-english");
+        if (englishname.val() == '') {            
+            $(".englishname-warning").html('请输入英文名').css({
+                display: 'block',
+            });
+        }else{
+            if(englishname.data('lastVal') != $.trim(englishname.val())) {
+                $(".englishName").css('border','1px solid #d2d2d2');
+                fCheck.clearTips(".englishname-warning");
+                $.fn.englishname();
+            }else{
+                $(".englishname-warning").css({
+                    display: 'block',
+                });
+            }
+        }
+    });
 });
 
 var boxs = {
     nickname: '.nickname',
     realname: '.bi-content .realname',
     school:'.school'
+   
 }
 
 $.fn.nickname = function(){
@@ -102,6 +132,19 @@ $.fn.nickname = function(){
             $.fn.nicknameajax();
         }else{
             fCheck.setTips(".nickname-warning",'只能输入数字、汉字和字母');
+        }
+    }
+};
+$.fn.englishname = function(){
+    var _val = $('.englishName').val();
+    if (_val == '') {
+        fCheck.setTips(".englishname-warning",'请输入英文名');
+    }else {
+        var reg = /^[a-zA-Z]{1,12}$/;
+        if(reg.test(_val)){
+           $('.englishName').css('border','1px solid rgb(104, 192, 74)');
+        }else{
+            fCheck.setTips(".englishname-warning",'只能输入英文字母');
         }
     }
 };

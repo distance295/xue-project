@@ -23,12 +23,20 @@
             </div>
             <div>
                 <label for="">真实姓名：</label>
-                <input class="realname" name="realname" type="text" maxlength="4" autocomplete="off" value="四喜丸子呀">
+                <input class="realname" name="realname" type="text" maxlength="" autocomplete="off" value="四喜丸子呀">
                 <em>仅有一次修改机会哦，请珍惜！</em>
                 <div class="error-box">
                     <span class="realname-warning error"></span>
                 </div>
                 <span class="prompt-empty-real"></span>
+            </div>
+            <div>
+                <label for="">英文名：</label>
+                <input class="englishName" type="text" name="englishName" maxlength="12" data-nickname="" value="" autocomplete="off"/>
+                <div class="error-box">
+                    <span class="englishname-warning error"></span>
+                </div>
+                <span class="prompt-empty-english"></span>
             </div>
             <div>
                 <label for="">性别：</label>
