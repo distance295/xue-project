@@ -32,7 +32,7 @@
             </div>
             <div>
                 <label for="">英文名：</label>
-                <input class="englishName" type="text" name="englishName" maxlength="12" data-nickname="" value="" autocomplete="off"/>
+                <input class="englishName" type="text" name="englishName" maxlength="12" data-englishname="www" value="www" autocomplete="off"/>
                 <div class="error-box">
                     <span class="englishname-warning error"></span>
                 </div>

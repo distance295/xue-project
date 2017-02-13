@@ -97,8 +97,8 @@ $(function(){
     $(englishname).on('blur',function(){
         fCheck.clearTips(".prompt-empty-english");
         if (englishname.val() == '') {            
-            $(".englishname-warning").html('请输入英文名').css({
-                display: 'block',
+            $(".englishname-warning").css({
+                display: 'none',
             });
         }else{
             if(englishname.data('lastVal') != $.trim(englishname.val())) {
@@ -136,11 +136,9 @@ $.fn.nickname = function(){
     }
 };
 $.fn.englishname = function(){
-    var _val = $('.englishName').val();
-    if (_val == '') {
-        fCheck.setTips(".englishname-warning",'请输入英文名');
-    }else {
-        var reg = /^[a-zA-Z]{1,12}$/;
+    var _val = $.trim($('.englishName').val());
+    if (_val !== '') {
+        var reg = /^[a-zA-Z ]{1,12}$/;
         if(reg.test(_val)){
            $('.englishName').css('border','1px solid rgb(104, 192, 74)');
         }else{
@@ -246,7 +244,7 @@ $('.school').on('blur',function(){
 });
 /* 点击提交按钮验证 */
 function inforCheckform () {
-    if ($(".nickname").val() == $(".nickname").data("nickname") && $(".school").val() == $(".school").data("school") && $("#year").find("option:selected").text() == $("#year").attr("rel") && $("#month").find("option:selected").text() == $("#month").attr("rel") && $("#day").find("option:selected").text() == $("#day").attr("rel")) {
+    if ($(".englishName").val() == $(".englishName").data("englishname") && $(".school").val() == $(".school").data("school") && $("#year").find("option:selected").text() == $("#year").attr("rel") && $("#month").find("option:selected").text() == $("#month").attr("rel") && $("#day").find("option:selected").text() == $("#day").attr("rel")) {
         alert('您没有修改或新增任何资料');
         return false;
     }else{
