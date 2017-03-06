@@ -36,8 +36,7 @@
 						</ul>
 					</div>
 					<div title="导数的概念与基本运算（上）" class="coures-label-info">
-						<span>第2讲</span>
-						导数的概念与基本运算（上）
+						<span>第2讲</span>导数的概念与基本运算（上）
 					</div>
 					<div class="scrolls-content">
 						<ul class="select-list">
