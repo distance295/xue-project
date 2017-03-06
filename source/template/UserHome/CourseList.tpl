@@ -1,11 +1,33 @@
 <!-- 公共头部 -->
 <link rel="import" href="../Layer/layer.UserHome.head.tpl?__inline">
+ <div class="row-home-slide top m10">
+    <div class="home-slide-wrap carousel slide" id="carousel-example-home" data-ride="carousel">
+        <ul class="carousel-inner" role="listbox">
+            <li class="item active">
+                <a target="_blank" href="http://www.xueersi.com/" style="background: url(http://img04.xesimg.com/skin/helloWeen_2015.jpg) no-repeat top center;" title="1">
+                </a>
+            </li>
+            <li class="item">
+                <a target="_blank" href="http://www.baidu.com/" style="background: url(http://img04.xesimg.com/skin/Mid_Autumn.png) no-repeat top center;" title="2">
+                </a>
+            </li>
+        </ul>
+        <div class="focus-num-wrap">
+            <ol class="carousel-indicators">
+                <li class="active" data-target="#carousel-example-home" data-slide-to="0">1</li>
+                <li data-target="#carousel-example-home" data-slide-to="1">2</li>
+
+            </ol>
+        </div>
+    </div>
+</div>
 <!-- 学习中心区域 -->
-<div class="container top m20">
+<div class="container top m10">
     <div class="row">
         <div class="col-md-10 wrap-body">
             <!-- *********************** 内容区域开始 *********************** -->
             
+         
             <div class="alert alert-warning alert-dismissible" role="alert">
                 <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
                 <i class="fa fa-exclamation-circle"></i>
