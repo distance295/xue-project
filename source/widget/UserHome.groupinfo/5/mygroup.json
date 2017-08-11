@@ -1,0 +1,74 @@
+{
+    "sign": 1,
+    "data": {
+        "classGroupList": [{
+            "term": [0, 1, 0, 0],
+            "teacherInfo": [{
+                "id": "",
+                "name": "LiBo",
+                "imgUrl": "http://r04.xesimg.com/web/2015/12/21/14506863061774.png?v1?40x40"
+            }, {
+                "id": "",
+                "name": "",
+                "imgUrl": ""
+            }],
+            "classId": 11111,
+            "courseId": 11111,
+            "classGroupId": 0,
+            "classGroupNum": "11111",
+            "classGroupName": "初一语文目标满分班（人教版）满分班-李博555555",
+            "detailUrl": "0"
+        }, {
+            "term": [1, 1, 1, 1],
+            "teacherInfo": [{
+                "id": "",
+                "name": "WuDan",
+                "imgUrl": "http://r04.xesimg.com/web/2015/12/21/14506863061774.png?v1?40x40"
+            }, {
+                "id": "",
+                "name": "",
+                "imgUrl": ""
+            }],
+            "classId": 11111,
+            "courseId": 11111,
+            "classGroupId": 1,
+            "classGroupNum": 11111,
+            "classGroupName": "初一语文目标满分班（人教版）满分班-李博555555",
+            "detailUrl": "1"
+        }, {
+            "term": [0, 0, 1, 1],
+            "teacherInfo": [{
+                "id": "",
+                "name": "WuDan",
+                "imgUrl": "http://r04.xesimg.com/web/2015/12/21/14506863061774.png?v1?40x40"
+            }, {
+                "id": "",
+                "name": "",
+                "imgUrl": ""
+            }],
+            "classId": 11111,
+            "courseId": 11111,
+            "classGroupId": 2,
+            "classGroupNum": 11111,
+            "classGroupName": "初一语文目标满分班（人教版）满分班-李博555555",
+            "detailUrl": "2"
+        }, {
+            "term": [1, 1, 1, 0],
+            "teacherInfo": [{
+                "id": "",
+                "name": "WuDan",
+                "imgUrl": "http://r04.xesimg.com/web/2015/12/21/14506863061774.png?v1?40x40"
+            }, {
+                "id": "",
+                "name": "",
+                "imgUrl": ""
+            }],
+            "classId": 11111,
+            "courseId": 11111,
+            "classGroupId": 3,
+            "classGroupNum": 11111,
+            "classGroupName": "初一英语目标满分班（人教版）满分班-李博555555",
+            "detailUrl": "3"
+        }]
+    }
+}

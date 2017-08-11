@@ -1,0 +1,116 @@
+{
+    "sign": 1,
+    "data": {
+        "teacherInfo": [{
+            "id": "",
+            "name": "李博",
+            "imgUrl": "http://r04.xesimg.com/web/2015/12/21/14506863061774.png?v1?40x40"
+        }, {
+            "id": "",
+            "name": "",
+            "imgUrl": "http://r04.xesimg.com/web/2015/12/21/14506863061774.png?v1?40x40"
+        }],
+        "tutoringTeacher": {
+            "id": "",
+            "name": "吴丹",
+            "imgUrl": "http://r04.xesimg.com/web/2015/12/21/14506863061774.png?v1?40x40"
+        },
+        "classGroupName": "初一语文目标满分班（人教版）满分班-李博",
+        "isHaveClassGroupSpace": 1,
+        "classGroupSpaceMsg": "",
+        "classGroupSpace": [{
+            "creator": "李博",
+            "dataName": "物理课的实验三：物态变化过程",
+            "publishTime": "2017-05-05",
+            "dataIntroduction": "2017-05-05物理学是研究物质运动最一般规律和物质基本结构的学科。作为自然科学的带头学科，物理学研究大至宇宙，小至基本粒子等一切物质最基本的运动形式和规律，因此成为其他各自然科学学科的研究基础。它的理论结构充分地运用数学作为自己的工作语言，以实验作为检验理论正确性的唯一标准，它是当今最精密的一门自然科学学科。",
+            "attachment": [{
+                "type": "1",
+                "title": "随堂课第三讲对应练习随堂课第三讲对应练习.pdf",
+                "size": "12M",
+                "url": "http://testwm.xesimg.com/CORRECTED_ASSIGNMENT_MSGS/2017/04/20/1492680078816025963029.jpg"
+            }, {
+                "type": "2",
+                "title": "随堂课第三讲对应练习随堂课第三讲对应练习.pdf",
+                "size": "12M",
+                "url": "http://www.xueersi.com"
+            }, {
+                "type": "2",
+                "title": "随堂课第三讲对应练习随堂课第三讲对应练习.pdf",
+                "size": "12M",
+                "url": "http://www.xueersi.com"
+            }, {
+                "type": "2",
+                "title": "随堂课第三讲对应练习随堂课第三讲对应练习.pdf",
+                "size": "12M",
+                "url": "http://www.xueersi.com"
+            }, {
+                "type": "2",
+                "title": "随堂课第三讲对应练习随堂课第三讲对应练习.pdf",
+                "size": "12M",
+                "url": "http://www.xueersi.com"
+            }]
+        }, {
+            "creator": "李博",
+            "dataName": "物理课的实验四：物态变化过程",
+            "publishTime": "2017-05-05",
+            "dataIntroduction": "2017-05-05物理学是研究物质运动最一般规律和物质基本结构的学科。作为自然科学的带头学科，物理学研究大至宇宙，小至基本粒子等一切物质最基本的运动形式和规律，因此成为其他各自然科学学科的研究基础。它的理论结构充分地运用数学作为自己的工作语言，以实验作为检验理论正确性的唯一标准，它是当今最精密的一门自然科学学科。",
+            "attachment": [{
+                "type": "下载类型",
+                "title": "随堂课第三讲对应练习随堂课第三讲对应练习.pdf",
+                "size": "12M",
+                "url": "http://www.xueersi.com"
+            }]
+        }],
+        "isHaveClassGroupTask": 1,
+        "classGroupTaskMsg": "",
+        "classGroupTask": [{
+            "creator": "李博",
+            "dataName": "物理课的实验三：物态变化过程",
+            "publishTime": "2017-05-05",
+            "dataIntroduction": "2017-05-05物理学是研究物质运动最一般规律和物质基本结构的学科。作为自然科学的带头学科，物理学研究大至宇宙，小至基本粒子等一切物质最基本的运动形式和规律，因此成为其他各自然科学学科的研究基础。它的理论结构充分地运用数学作为自己的工作语言，以实验作为检验理论正确性的唯一标准，它是当今最精密的一门自然科学学科。",
+            "attachment": []
+        }, {
+            "creator": "李博",
+            "dataName": "物理课的实验四：物态变化过程",
+            "publishTime": "2017-05-05",
+            "dataIntroduction": "2017-05-05物理学是研究物质运动最一般规律和物质基本结构的学科。作为自然科学的带头学科，物理学研究大至宇宙，小至基本粒子等一切物质最基本的运动形式和规律，因此成为其他各自然科学学科的研究基础。它的理论结构充分地运用数学作为自己的工作语言，以实验作为检验理论正确性的唯一标准，它是当今最精密的一门自然科学学科。",
+            "attachment": [{
+                "type": "下载类型",
+                "title": "随堂课第三讲对应练习随堂课第三讲对应练习.pdf",
+                "size": "12M",
+                "url": "http://www.xueersi.com"
+            }, {
+                "type": "下载类型",
+                "title": "随堂课第三讲对应练习随堂课第三讲对应练习.pdf",
+                "size": "12M",
+                "url": "http://www.xueersi.com"
+            }, {
+                "type": "下载类型",
+                "title": "随堂课第三讲对应练习随堂课第三讲对应练习.pdf",
+                "size": "12M",
+                "url": "http://www.xueersi.com"
+            }]
+        }, {
+            "creator": "李博",
+            "dataName": "物理课的实验五：物态变化过程",
+            "publishTime": "2017-05-05",
+            "dataIntroduction": "2017-05-05物理学是研究物质运动最一般规律和物质基本结构的学科。作为自然科学的带头学科，物理学研究大至宇宙，小至基本粒子等一切物质最基本的运动形式和规律，因此成为其他各自然科学学科的研究基础。它的理论结构充分地运用数学作为自己的工作语言，以实验作为检验理论正确性的唯一标准，它是当今最精密的一门自然科学学科。",
+            "attachment": [{
+                "type": "下载类型",
+                "title": "随堂课第三讲对应练习随堂课第三讲对应练习.pdf",
+                "size": "12M",
+                "url": "http://www.xueersi.com"
+            }, {
+                "type": "下载类型",
+                "title": "随堂课第三讲对应练习随堂课第三讲对应练习.pdf",
+                "size": "12M",
+                "url": "http://www.xueersi.com"
+            }, {
+                "type": "下载类型",
+                "title": "随堂课第三讲对应练习随堂课第三讲对应练习.pdf",
+                "size": "12M",
+                "url": "http://www.xueersi.com"
+            }]
+        }]
+    }
+}

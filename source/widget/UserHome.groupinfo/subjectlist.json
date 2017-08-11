@@ -1,0 +1,24 @@
+{
+    "sign": 1,
+    "data": {
+        "subjectList": [{
+            "id": 0,
+            "name": "全部",
+            "class": "all",
+            "urlStr": "0",
+            "urlKey": "mygroup.json"
+        }, {
+            "id": 1,
+            "name": "语文",
+            "class": "chinese",
+            "urlStr": "1",
+            "urlKey": "mygroup.json"
+        }, {
+            "id": 5,
+            "name": "英语",
+            "class": "english",
+            "urlStr": "5",
+            "urlKey": "mygroup.json"
+        }]
+    }
+}

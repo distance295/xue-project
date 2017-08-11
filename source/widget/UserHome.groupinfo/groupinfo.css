@@ -1,0 +1,297 @@
+.filter-public-tab .filter-nav-list ul li.active {
+    border-left: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
+}
+
+.filter-public-tab {
+    display: block;
+    overflow: hidden;
+    background: #fff;
+    line-height: 30px;
+    padding: 0px;
+    font-size: 12px;
+    font-family: "SimSun";
+    color: #333333;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.filter-public-tab a {
+    outline: none;
+}
+
+.filter-public-tab a:focus {
+    outline: none;
+}
+
+.filter-public-tab .filter-text-style {
+    float: left;
+    color: #999999;
+    margin-right: 3px;
+}
+
+.filter-public-tab .filter-nav-list {
+    display: block;
+    overflow: hidden;
+}
+
+.filter-public-tab .filter-nav-list ul {
+    margin: 0;
+    padding: 0;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.filter-public-tab .filter-nav-list ul li {
+    float: left;
+    margin-right: 0px;
+    padding: 4px 20px;
+    list-style: none;
+}
+
+.filter-public-tab .filter-nav-list ul li a {
+    font-size: 12px;
+    font-family: "SimSun";
+    color: #333333;
+}
+
+.filter-public-tab .filter-nav-list ul li a:hover {
+    color: #2599c4;
+}
+
+.filter-public-tab .filter-nav-list ul li.active a {
+    color: #2599c4;
+}
+
+.fresh-main-wrapper .none-content {
+    padding: 15px;
+}
+
+.fresh-red-circle {
+    width: 6px;
+    height: 6px;
+    margin-left: 2px;
+    background: url('../img/fresh-red-circle.png');
+}
+
+.myCourse {
+    width: 1070px;
+    padding: 0 10px;
+    margin: 0 auto;
+    position: relative;
+    left: -10px;
+    padding-top: 10px;
+}
+
+.clearfix {
+    overflow: hidden;
+}
+
+.myCourse .item:nth-child(odd),
+.myCourse .living_item:nth-child(odd) {
+    margin-right: 8px;
+}
+
+.myCourse .item,
+.userhome_new .myCourse .living_item {
+    background: #fff;
+    float: left;
+    width: calc(50% - 4px);
+    border: 1px solid #c9d6e6;
+    padding: 8px 10px 22px 12px;
+    margin-bottom: 20px;
+    height: 90px;
+    position: relative;
+    transition: all .5s;
+    overflow: hidden;
+}
+
+.myCourse .living_item .row {
+    padding-top: 15px;
+    padding-left: 12px;
+}
+
+.myCourse .item .row img,
+.myCourse .living_item .row img {
+    top: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 50%;
+}
+.living_item .teacherimg{
+    width: 40px;
+    height: 40px;
+}
+.myCourse .item .row .season {
+    border: 0px !important;
+    margin-left: -9px;
+    float: left;
+}
+
+.hiden {
+    display: none;
+}
+
+.living_item .titlep {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+.living_item .main {
+    width: 345px;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.living_item .floatleft {
+    float: left;
+}
+
+.living_item .footer {
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 3px;
+    margin-left: 3px
+}
+
+.living_item .link {
+    border-radius: 0px;
+    font-size: 14px;
+}
+
+.qzonetask .title {
+    background: #fff;
+    border-radius: 5px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 14px;
+    color: gray;
+}
+
+.qzonetask .item {
+    background: #fff;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 14px;
+    margin-top: 2px;
+    border-radius: 5px;
+}
+
+.qzonetask .button {
+    width: 90px;
+    background-color: f8f8fa
+}
+
+.qzonetask .dialog {
+    margin-top: 300px;
+    width: 650px;
+}
+
+.qzonetask .modal-body .row {
+    text-align: center
+}
+
+.qzonetask .modal-body .row .firstp {
+    font-size: 15px;
+}
+
+.qzonetask .modal-body .row .lastp {
+    color: gray;
+    margin-right: 90px;
+}
+
+.qzonetask .modal-body .row .spantime {
+    color: gray
+}
+
+.qzonetask .modal-footer .firstp {
+    font-size: 13px;
+    text-align: left;
+    text-indent: 25px;
+}
+
+.qzonetask .modal-footer .scrollbar {
+    height: 130px;
+    overflow: auto
+}
+
+.qzonetask .modal-footer .scrollbar .row {
+    text-align: left;
+}
+
+.qzonetask .modal-footer .scrollbar .row .main {
+    border: 1px solid #dcdcdc;
+    padding: 14px 8px;
+}
+
+.qzonetask .modal-footer .scrollbar .row .main .firstpp {
+    font-size: 15px;
+    margin: 0px;
+}
+
+.qzonetask .modal-footer .scrollbar .row .main .lastpp {
+    color: gray;
+    font-size: 12px
+}
+
+.qzonetask .modal-footer .scrollbar .row .main .buttonmain {
+    text-align: center
+}
+
+.qzonetask .modal-footer .scrollbar .row .main .buttonmain .button {
+    width: 90px;
+}
+
+.groupdetail .info {
+    background: #fff;
+    float: left;
+    width: 100%;
+    border: 1px solid #c9d6e6;
+    margin-top: 8px;
+    border-radius: 5px;
+    height: 90px;
+    padding: 19px 10px;
+}
+
+.groupdetail .grouptitle {
+    font-size: 18px;
+}
+
+.groupdetail .teacherinfo {
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.groupdetail .tutoringteacher .gray {
+    color: gray
+}
+
+.groupdetail .tutoringteacher .picture {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.groupdetail .tutoringteacher .firstspan {
+    color: gray;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.groupdetail .tutoringteacher .lastspan {
+    font-size: 15px;
+}
+
+.groupdetail .mytab {
+    float: left;
+    width: 100%;
+    margin-top: 18px;
+}
